@@ -1,0 +1,20 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  margin: 0;
+}
+
+body {
+  max-width: 1242px;
+  height: 100vh;
+  margin: auto;
+  background: #1e1e1e;
+}
+
+.App {
+  height: 373rem;
+}

@@ -1,0 +1,54 @@
+.header-container {
+
+    .header {
+        height: 9.125rem;
+        background: #000;
+        border-bottom: 0.1875rem solid #414141;
+        text-align: center;
+        position: relative;
+
+        .country-container {
+            position: absolute;
+            top: 3rem;
+            right: 0;
+
+            .relative {
+                button {
+                    // margin-right: 10rem;
+                    padding: 0;
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+
+.country {
+    position: absolute;
+    right: 2rem;
+    top: -0.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    label {
+        font-size: 2.4rem;
+        margin-left: 0.8rem;
+        margin-right: 0.4rem;
+        margin-top: -0.6rem;
+        color: #ffdfbd;
+        font-family: 'SpoqaHanSansNeoMedium'
+    }
+
+    .arrow {
+        width: 2rem;
+        height: 1.2rem;
+        margin-top: -0.3rem;
+    }
+
+    .flag {
+        width: 5.625rem;
+        height: 3.75rem;
+        margin-top: -0.4rem;
+    }
+}

@@ -1,0 +1,38 @@
+.jackpot-container {
+    height: 12.8rem;
+    background: #000;
+    border-radius: 1rem;
+    margin: 1.1rem 1.3rem;
+    border: 0.1875rem solid #a67c52;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        margin-top: -16.79rem;
+        margin-left: -1.48rem;
+        width: 32.4375rem;
+        height: 38.25rem;
+    }
+
+
+    .jackpot-range {
+        position: absolute;
+        background: url('../../assets/jackpot-range.png');
+        background-repeat: round;
+        width: 43.75rem;
+        height: 8.8125rem;
+        top: 1.931rem;
+        right: 2.29rem;
+
+        p {
+            color: #b89953;
+            font-family: "SpoqaHanSansNeoBold";
+            font-size: 4.5rem;
+            margin: 1.57rem 3.5rem;
+            letter-spacing: 0.23rem;
+            background: -webkit-linear-gradient(#ffbe37, #fef1af 50%, #ffbe37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
