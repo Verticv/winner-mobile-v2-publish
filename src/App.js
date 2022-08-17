@@ -1,7 +1,16 @@
 import './assets/sass/global.scss';
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MainPage from './components/pages/Main';
+import MyPage from './components/pages/MyPage';
+import Header from './components/Header';
+import NavBottom from './components/NavBottom';
+// import img2 from './img2.png';
+// import img from './img3.png';
+import FreeBoardCompose from './components/FreeBoardCompose';
+import HomePageTopBanner from './components/HomePageTopBanner';
+import FreeBoardView from './components/FreeBoardView';
 
 function App() {
   useEffect(() => {
@@ -22,9 +31,65 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <MainPage />
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/main" element={<MainPage />} />
+      </Routes>
+      <Routes>
+        <Route path="/freeboard" element={<MyPage />} />
+      </Routes>
+      <Routes>
+        <Route
+          path="/freeboard/compose"
+          element={
+            <>
+              {/* <img
+                className="img"
+                src={img2}
+                alt=""
+                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
+              /> */}
+              <HomePageTopBanner
+                pageTitle="게시판"
+                toPath={
+                  window.location.pathname.includes('/mypage')
+                    ? '/mypage'
+                    : '/main'
+                }
+                isFreeboard={true}
+              />
+              <FreeBoardCompose />
+            </>
+          }
+        ></Route>
+      </Routes>
+      <Routes>
+        <Route
+          path="/freeboard/view/*"
+          element={
+            <>
+              {/* <img
+                src={img}
+                alt=""
+                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
+              /> */}
+              <HomePageTopBanner
+                pageTitle="게시판"
+                toPath={
+                  window.location.pathname.includes('/mypage')
+                    ? '/mypage'
+                    : '/main'
+                }
+                isFreeboard={true}
+              />
+              <FreeBoardView />
+            </>
+          }
+        />
+      </Routes>
+      <NavBottom />
+    </Router>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Card from './index';
+import Card from '../../components/Card/index';
 
 import bg1 from '../../assets/mainPage/inactive-bg1-card.png'
 import bga1 from '../../assets/mainPage/active-bg1-card.png'

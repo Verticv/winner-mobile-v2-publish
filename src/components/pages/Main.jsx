@@ -1,6 +1,6 @@
 import React from "react";
 import AllCards from "../Card/AllCards";
-import Header from "../Header";
+// import Header from "../Header";
 import Jackpot from "../Jackpot";
 import NavBottom from "../NavBottom";
 import NavButtons from "../NavButtons/NavButtons";
@@ -10,7 +10,7 @@ import Slider from "../SliderImgs/Slider";
 function MainPage() {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <Slider />
             <NoticeBanner />
             <Jackpot />

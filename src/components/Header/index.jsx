@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import logo from "../../assets/logo.png";
 import DropDownControls from '../dropdowns/DropDownControls';
 import CountryDropDown from '../dropdowns/DropDownControls';
@@ -8,6 +9,8 @@ import Koreaflag from '../../assets/Koreaflag.png'
 function Header() {
   const [country, setCountry] = useState("KR")
   const [isCountryOpen, setCountryOpen] = useState()
+  const navigate = useNavigate();
+  
 
   const DropdownArrow = ({ isOpen, isWhite }) => (
     <>
@@ -32,12 +35,13 @@ function Header() {
       <div className="header">
         <img
           style={{
-            marginTop: "2.1rem", width: '20.3rem',
+            marginTop: "2.0625rem", width: '20.3rem',
             height: '5rem'
           }}
           className=" object-contain cursor-pointer"
           src={logo}
           alt="logo"
+          onClick={() => navigate('/')}
         />
 
         <div className="country-container">
