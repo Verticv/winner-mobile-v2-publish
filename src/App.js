@@ -81,7 +81,7 @@ function App() {
                 toPath={
                   window.location.pathname.includes('/mypage')
                     ? '/mypage'
-                    : '/main'
+                    : '/main' 
                 }
                 isFreeboard={true}
               />
