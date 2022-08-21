@@ -8,9 +8,11 @@ import Header from './components/Header';
 import NavBottom from './components/NavBottom';
 // import img2 from './img2.png';
 // import img from './img3.png';
+// import img2 from './img4.png';
 import FreeBoardCompose from './components/FreeBoardCompose';
 import HomePageTopBanner from './components/HomePageTopBanner';
 import FreeBoardView from './components/FreeBoardView';
+import FreeBoardView2 from './components/FreeBoardView2';
 
 function App() {
   useEffect(() => {
@@ -84,6 +86,30 @@ function App() {
                 isFreeboard={true}
               />
               <FreeBoardView />
+            </>
+          }
+        />
+      </Routes>
+      <Routes>
+        <Route
+          path="/freeboard/view2/*"
+          element={
+            <>
+              {/* <img
+                src={img2}
+                alt=""
+                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
+              /> */}
+              <HomePageTopBanner
+                pageTitle="게시판"
+                toPath={
+                  window.location.pathname.includes('/mypage')
+                    ? '/mypage'
+                    : '/main'
+                }
+                isFreeboard={true}
+              />
+              <FreeBoardView2 />
             </>
           }
         />
