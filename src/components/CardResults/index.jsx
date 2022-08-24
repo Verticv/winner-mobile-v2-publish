@@ -117,7 +117,7 @@ const CardResults = ({
     )
 
     return (
-        <div style={{ borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem', display: 'flex', alignItems: 'center', height: '8.8rem', padding: '0.4rem', paddingTop: '1rem' }} className={`flex items-center w-full p-3 pr-0 bg-gray-fefefe shadow-plain11`}>
+        <div style={{ borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem', display: 'flex', alignItems: 'center', height: '8.8rem', padding: '1rem 0.3rem 0.4rem', paddingTop: '1rem' }} className={`flex items-center w-full p-3 pr-0 bg-gray-fefefe shadow-plain11`}>
             <div className="flex" style={{ display: 'flex' }} >
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '25.125rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
@@ -154,7 +154,7 @@ const CardResults = ({
                 </div>
 
                 <div style={{
-                    background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '10rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
+                    background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '10rem' : '10rem', height: '7.4375rem', marginRight: '0.375rem',
                     textShadow: bet === "left" ? "1px 1px 1px #00000070" : "", borderRadius: '0.6rem'
                 }}>
                     <button
