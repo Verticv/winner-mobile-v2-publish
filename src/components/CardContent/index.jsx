@@ -1,6 +1,6 @@
 import React from 'react';
-// import UploadIcon from '../../../images/newImages/upload.png'
-// import CloseIcon from '../../../images/newImages/close-white.png'
+import UploadIcon from '../../assets/myPage/upload.png';
+import CloseIcon from '../../assets/myPage/close-white.png';
 
 const CardContent = ({
     checkedState = null,
@@ -40,11 +40,11 @@ const CardContent = ({
 
     return (
         <>
-            <div style={{ margin: '1.5rem', marginBottom: '0', marginTop: '2.0625rem' }} className={`flex flex-wrap items-center h-full  ${withUploadButton || withCancelButton ? 'justify-between' : ''}`}>
+            <div style={{ margin: '1.5rem', marginBottom: '0', marginTop: '2.0625rem', display: 'flex', justifyContent: withUploadButton || withCancelButton ? 'space-between' : '', alignItems: 'center' }} className={`flex flex-wrap items-center h-full  ${withUploadButton || withCancelButton ? 'justify-between' : ''}`}>
 
-                <div style={{ width: '', background: '', lineHeight: '1.5' }} className='flex items-center'>
+                <div style={{ width: '', background: '', lineHeight: '1.5', display: 'flex', alignItems: 'center' }} className='flex items-center'>
                     {withInput && (
-                        <div style={{ marginRight: "3rem" }} className="relative text-left">
+                        <div style={{ margin: "-0.9rem 2.7rem 0 0.6rem" }} className="relative text-left">
                             <label className="form-control">
                                 <input
                                     key={Math.random()}
@@ -58,7 +58,7 @@ const CardContent = ({
                     )}
                     <div>
                         {showBetNumber && (
-                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }}>베팅번호 :</span> 1891241599</div>)}
+                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }}>베팅번호 :</span> 1891241599</div>)}
                         <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.25rem', fontFamily: 'SpoqaHanSansNeo', color: '#c8c8c8', letterSpacing: '-0.07rem' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>베팅시간 :</span>{time}</div>
                         {hasHistory && (
                             <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>베팅내역 :</span>{hasHistory}</div>
@@ -82,15 +82,19 @@ const CardContent = ({
                     </div>
                 </div>
                 {withUploadButton === true && (
-                    <button
-                        onClick={() => canUpload === true && uploadHandler(id)}
-                        style={{ width: '9rem', height: '9rem', padding: '1px' }}
-                        className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
+                    <div
+                        style={{ width: '9rem', height: '9rem', padding: '0.1875rem', margin: '-1.4rem -0.4rem 0 0', background: 'linear-gradient(to top, #3e4c8e, #6393bb 50%, #528bcc)', borderRadius: '1rem' }}
                     >
-                        <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
-                            {/* <img style={{ width: '3.1875rem', height: '3.25rem' }} className="object-contain" src={UploadIcon} alt="" /> */}
-                        </div>
-                    </button>
+                        <button
+                            onClick={() => canUpload === true && uploadHandler(id)}
+                            style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #3a6185, #4575a8 50%, #528bcc)', borderRadius: '0.7rem' }}
+                            className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
+                        >
+                            <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
+                                <img style={{ width: '3.1875rem', height: '3.25rem', marginTop: '0.1rem' }} className="object-contain" src={UploadIcon} alt="" />
+                            </div>
+                        </button>
+                    </div>
                 )}
                 {withCancelButton && (
                     <button
@@ -101,7 +105,7 @@ const CardContent = ({
                         <div
                             className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
                         >
-                            {/* <img style={{ width: '2.5rem', height: '2.5rem' }} className="object-contain" src={CloseIcon} alt="" /> */}
+                            <img style={{ width: '2.5rem', height: '2.5rem' }} className="object-contain" src={CloseIcon} alt="" />
                         </div>
                     </button>
                 )}

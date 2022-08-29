@@ -1,5 +1,5 @@
-// import BoardViewPanel from 'components/common/cards/BoardViewPanel';
-// import BetHistoryPopup from 'components/popups/BetHistoryPopup';
+import BoardViewPanel from '../BoardViewPanel';
+import BetHistoryPopup from '../BetHistoryPopup';
 import PopupControls from '../popups/PopupControls';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
@@ -8,7 +8,7 @@ const FreeBoardCompose = () => {
 
     const navigate = useNavigate();
     const [isPopupOpen, setPopupOpen] = useState(true)
-    // const [attachedArray, setAttachedArray] = useState([]);
+    const [attachedArray, setAttachedArray] = useState([]);
 
     const AttachButton = (
         <button
@@ -57,16 +57,16 @@ const FreeBoardCompose = () => {
                     <div style={{ height: '9.1875rem', paddingLeft: '2.625rem', borderBottomWidth: '0.1875rem', background: '#2e2e2e', borderBottom: '0.1875rem solid #252525', display: 'flex', justifyContent: 'start' }} className="w-full bg-gray-fafafa border-b border-gray-dddddd flex items-center">
 
                         <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                            {/* <BetHistoryPopup setPopupOpen={setPopupOpen} attachedArray={attachedArray} setAttachedArray={setAttachedArray} /> */}
+                            <BetHistoryPopup setPopupOpen={setPopupOpen} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
                         </PopupControls>
 
                     </div>
 
 
-                    {/* <BoardViewPanel isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray} /> */}
+                    <BoardViewPanel isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
 
 
-                    <div style={{ height: "70.25rem", paddingTop: '2.4rem', paddingLeft: '2.4875rem', fontSize: '2.8125rem', background: '#323232', borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }} className="w-full bg-white">
+                    <div style={{ height: "70.25rem", paddingTop: '2.4rem', paddingLeft: '2.4875rem', fontSize: '2.8125rem', background: '#323232', borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem' }} className="w-full bg-white">
                         <textarea
                             className='textarea'
                             // style={{

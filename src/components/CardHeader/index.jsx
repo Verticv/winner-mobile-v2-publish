@@ -9,7 +9,7 @@ import Icon4 from '../../assets/minigameResults/2.png'
 import Icon5 from '../../assets/minigameResults/3.png'
 import Icon6 from '../../assets/minigameResults/4.png'
 
-const CardHeader = ({ flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMinigame = false, minigameType = "powerball" }) => {
+const CardHeader = ({ flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMinigame = false, minigameType = "powerball", smallCard }) => {
     const flags = {
         us: USFlagIcon,
         uk: UKFlagIcon,
@@ -39,7 +39,7 @@ const CardHeader = ({ flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMi
     )
 
     else return (
-        <div style={{ height: '7.1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 1.6rem', background: 'linear-gradient(to right, #6b543e, #5a483a 50%, #473b35)', borderRadius: 0 }} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-8">
+        <div style={{ height: '7.1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: smallCard ? '0 1.6rem' :  '0px 1.9rem 0 1.5rem', background: 'linear-gradient(to right, #6b543e, #5a483a 50%, #473b35)', borderRadius: 0 }} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-8">
             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <img style={{ width: '3.9375rem', height: '3.9375rem', marginTop: '-0.3rem' }} src={FootballIcon} alt="" />
                 <img style={{ width: '5.625', height: '3.3125rem', marginLeft: '1.0625rem', marginTop: '-0.3rem' }} src={headerFlag} alt="" />

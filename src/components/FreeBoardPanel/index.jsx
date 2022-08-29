@@ -15,10 +15,10 @@ const FreeBoardPanel = ({
             <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)', padding: '0.1875rem', borderRadius: '1.3rem' }}>
                 <div style={{ borderRadius: "1em", paddingBottom: '0.5625rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', background: '#323232' }} className="shadow-subNavbar bg-gray-fafafa">
                     <TableHeader smallCard />
-                    <div style={{ padding: '0 0.65rem' }} className="w-full">
+                    <div style={{ padding: '0.9rem' }} className="w-full">
                         <div className="w-full rounded-lg" style={{ padding: '0.2875rem 0.1875rem' }}>
                             <div className='rounded-lg w-full' style={{ border: '0.375rem solid #473b35', borderRadius: '0.4rem' }}>
-                                <CardHeader flag='us' name='MLS' date='2021-06-29 15:45' />
+                                <CardHeader flag='us' name='MLS' date='2021-06-29 15:45' smallCard />
                                 <CardResults
                                     bet="right"
                                     result="lose"
@@ -46,7 +46,7 @@ const FreeBoardPanel = ({
                     <div style={{ padding: '0 0.65rem' }} className="w-full">
                         <div className="w-full rounded-lg" style={{ padding: '0.2875rem 0.1875rem' }}>
                             <div className='rounded-lg w-full' style={{ background: '', border: '0.375rem solid #473b35', borderRadius: '0.4rem' }}>
-                                <CardHeader flag='uk' name='EPL' date='2021-06-29 15:45' />
+                                <CardHeader flag='uk' name='EPL' date='2021-06-29 15:45' smallCard />
                                 <CardResults
                                     bet="left"
                                     result="cancel"

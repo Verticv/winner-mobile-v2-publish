@@ -1,0 +1,100 @@
+.first-row {
+    margin-top: 1.32rem;
+    margin-bottom: -1.125rem;
+    display: flex;
+
+    input {
+        outline: none;
+        background: #1a1a1a;
+        border: 0;
+        padding: 0;
+        height: 6.7rem;
+        width: 34.06rem;
+        font-size: 2.624375rem;
+        margin-left: 1.875rem;
+        border: 0.1875rem solid #404040;
+        border-radius: 0.5rem;
+        color: #ccc2b6;
+        font-family: 'SpoqaHanSansNeoMedium';
+        padding-left: 1.65rem;
+        letter-spacing: -0.07rem;
+        padding-top: 0.15rem;
+    }
+}
+
+.second-row {
+    display: flex;
+
+    input {
+        outline: none;
+        background: #1a1a1a;
+        border: 0;
+        padding: 0;
+        height: 6.7rem;
+        width: 34.06rem;
+        font-size: 2.624375rem;
+        // margin-left: 1.875rem;
+        border: 0.1875rem solid #404040;
+        border-radius: 0.5rem;
+        color: #ccc2b6;
+        font-family: 'RobotoMedium';
+        padding-left: 1.65rem;
+        letter-spacing: -0.1rem;
+        padding-top: 0.15rem;
+    }
+
+    .date-picker {
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 3.48rem;
+            right: 2rem;
+        }
+    }
+
+    .Signal {
+        color: #8e8780;
+        font-family: 'SpoqaHanSansNeoMedium';
+        font-size: 2.624375rem;
+        margin-top: 3.88rem;
+        margin-left: 0.2rem;
+        margin-right: -1.55rem;
+    }
+
+}
+
+.buttons-container2 {
+    // background: red;
+    display: flex;
+    margin: 0 1.95rem;
+    margin-top: 0.7rem;
+    gap: 0.92rem;
+    color: #ffdfbd;
+    font-family: 'SpoqaHanSansNeoMedium';
+    font-size: 2.624375rem;
+    padding-bottom: 1.8rem;
+
+    .common-button {
+        width: 13.25rem;
+        height: 7.3125rem;  
+        background: linear-gradient(to top, #403e38, #72695d, #a59484);
+        padding: 0.1875rem;
+        border-radius: 0.6rem;
+
+        .text-con {
+            background: linear-gradient(to top, #4c4743, #615952, #776c62);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.4rem;
+            span {
+                margin-top: 0.5rem;
+                letter-spacing: -0.07rem;
+                text-shadow: #00000080 0.3125rem 0.125rem 0.4375rem;
+            }
+        }
+    }
+}

@@ -43,15 +43,15 @@ const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelecti
                 onClick={() => console.log('on click!')}
                 multiple={multiple}
             >
-                <div className="flex w-full items-center justify-between"
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        width: '15rem'
-                    }}
+                <div className="sort-by-div"
+                    // style={{
+                    //     display: 'flex',
+                    //     justifyContent: 'space-between',
+                    //     alignItems: 'center',
+                    //     width: '15rem'
+                    // }}
                 >
-                    <div className={labelClasses} style={labelStyle}><p style={{ marginTop: "1.65rem", marginLeft: '-0.1rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }}>{sortValue}</p></div>
+                    <div  className={`sort-by-p ${labelClasses}`} style={labelStyle}><p>{sortValue}</p></div>
                     {children}
                 </div>
             </SortBy>
