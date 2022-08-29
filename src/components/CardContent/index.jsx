@@ -1,6 +1,6 @@
 import React from 'react';
 import UploadIcon from '../../assets/myPage/upload.png';
-// import CloseIcon from '../../../images/newImages/close-white.png'
+import CloseIcon from '../../assets/myPage/close-white.png';
 
 const CardContent = ({
     checkedState = null,
@@ -105,7 +105,7 @@ const CardContent = ({
                         <div
                             className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
                         >
-                            {/* <img style={{ width: '2.5rem', height: '2.5rem' }} className="object-contain" src={CloseIcon} alt="" /> */}
+                            <img style={{ width: '2.5rem', height: '2.5rem' }} className="object-contain" src={CloseIcon} alt="" />
                         </div>
                     </button>
                 )}

@@ -8,3 +8,17 @@
     max-height: 350px;
     cursor: pointer;
 }
+
+.sort-by-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15rem;
+}
+
+.sort-by-p {
+    margin-top: 1.65rem;
+    margin-left: -0.1rem;
+    font-family: 'SpoqaHanSansNeoMedium';
+    color: #ccc2b6
+}

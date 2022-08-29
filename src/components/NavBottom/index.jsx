@@ -13,7 +13,7 @@ const navInfo = [
         text: '출석부',
         width: '4.3125rem',
         isActive: false,
-        path: '/1'
+        path: '/aa1'
     }, {
         id: 2,
         icon: icon4,
@@ -34,7 +34,7 @@ const navInfo = [
         text: '문의',
         width: '4.3125rem',
         isActive: false,
-        path: '/4'
+        path: '/cscenter/all/contact/all'
     },
     {
         id: 5,
