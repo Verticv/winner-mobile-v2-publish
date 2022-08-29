@@ -118,7 +118,7 @@ const FreeBoardView = () => {
                     <div style={{ paddingTop: '5.625rem' }} className="bg-white pb-8">
 
                         <div style={{ padding: '0 1.7rem' }} className="w-full flex justify-center">
-                            <img src={Sample} alt="" />
+                            <img src={Sample} alt="" style={{width: '70.1875rem', height: 'auto'}} />
                         </div>
 
                         <div style={{ fontSize: '2.8125rem', padding: '1.8125rem 1.875rem' }} className="font-spoqa">

@@ -26,7 +26,7 @@ import Icon5Active from '../../assets/cscenter/leftMenu/icon_5-active.png'
 // import Icon10 from '../../images/cscenter/10.png'
 import HorizontalSubMenu from '../HorizontalSubMenu';
 import HorizontalMenu1 from '../HorizontalMenu1';
-import HomePageTopBanner from '../HomePageTopBanner';
+        import HomePageTopBanner from '../HomePageTopBanner';
 // import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 // import img from '../../img9.png'
 

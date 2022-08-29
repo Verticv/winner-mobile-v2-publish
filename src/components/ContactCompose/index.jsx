@@ -2,14 +2,14 @@ import React from 'react'
 import DownArrowIcon from '../../assets/down-arrow.png';
 import Dropdown from '../Dropdown';
 import HomePageTopBanner from '../HomePageTopBanner';
-import img from '../../img8.png';
+// import img from '../../img8.png';
 
 const ContactCompose = () => {
 
     const carrierOptions = ["라이브카지노", "슬롯게임", "스포츠", "e-스포츠", "미니게임", "키론가상게임", "충전/환전", "베팅관련", "기타"]
     return (
         <>
-            <img src={img} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} />
+            {/* <img src={img} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
             <HomePageTopBanner
                 pageTitle="문의하기"
                 toPath="/cscenter/all/contact/all"

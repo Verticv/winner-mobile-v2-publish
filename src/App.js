@@ -18,6 +18,7 @@ import CSCenterPage from './components/pages/CSCenterPage';
 import ContactViewPage from './components/pages/ContactViewPage';
 import ContactCompose from './components/ContactCompose';
 import Faq from './components/Faq';
+import MinigamePolicy from './components/MinigamePolicy';
 
 function App() {
   // const [isAuthenticated, setAuthenticated] = useState(false);
@@ -160,6 +161,10 @@ function App() {
             </>
           }
         ></Route>
+      </Routes>
+      <Routes>
+        <Route path="/cscenter/all/policy" element={<MinigamePolicy />}>
+        </Route>
       </Routes>
       <NavBottom />
     </Router>
