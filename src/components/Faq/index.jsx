@@ -4,16 +4,16 @@ import parse from 'html-react-parser';
 import ArrowDown from '../../assets/myPage/contact/down-arrow.png'
 import arrowUp from '../../assets/myPage/contact/up-arrow.png'
 import QIcon from '../../assets/myPage/contact/qa.png'
-import Icon1 from '../../assets/cscenter/leftMenu/icon_1.png'
-import Icon2 from '../../assets/cscenter/leftMenu/icon_2.png'
-import Icon3 from '../../assets/cscenter/leftMenu/icon_3.png'
-import Icon4 from '../../assets/cscenter/leftMenu/icon_4.png'
-import Icon5 from '../../assets/cscenter/leftMenu/icon_5.png'
-import Icon1Active from '../../assets/cscenter/leftMenu/icon_1-active.png'
-import Icon2Active from '../../assets/cscenter/leftMenu/icon_2-active.png'
-import Icon3Active from '../../assets/cscenter/leftMenu/icon_3-active.png'
-import Icon4Active from '../../assets/cscenter/leftMenu/icon_4-active.png'
-import Icon5Active from '../../assets/cscenter/leftMenu/icon_5-active.png'
+// import Icon1 from '../../assets/cscenter/leftMenu/icon_1.png'
+// import Icon2 from '../../assets/cscenter/leftMenu/icon_2.png'
+// import Icon3 from '../../assets/cscenter/leftMenu/icon_3.png'
+// import Icon4 from '../../assets/cscenter/leftMenu/icon_4.png'
+// import Icon5 from '../../assets/cscenter/leftMenu/icon_5.png'
+// import Icon1Active from '../../assets/cscenter/leftMenu/icon_1-active.png'
+// import Icon2Active from '../../assets/cscenter/leftMenu/icon_2-active.png'
+// import Icon3Active from '../../assets/cscenter/leftMenu/icon_3-active.png'
+// import Icon4Active from '../../assets/cscenter/leftMenu/icon_4-active.png'
+// import Icon5Active from '../../assets/cscenter/leftMenu/icon_5-active.png'
 // import Icon1 from '../../images/myPage/betHistory/ico_1.png'
 // import Icon2 from '../../images/myPage/betHistory/ico_2.png'
 // import Icon3 from '../../images/myPage/betHistory/ico_3.png'
@@ -25,26 +25,26 @@ import Icon5Active from '../../assets/cscenter/leftMenu/icon_5-active.png'
 // import Icon9 from '../../images/cscenter/9.png'
 // import Icon10 from '../../images/cscenter/10.png'
 import HorizontalSubMenu from '../HorizontalSubMenu';
-import HorizontalMenu1 from '../HorizontalMenu1';
-        import HomePageTopBanner from '../HomePageTopBanner';
+// import HorizontalMenu1 from '../HorizontalMenu1';
+        // import HomePageTopBanner from '../HomePageTopBanner';
 // import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 // import img from '../../img9.png'
 
 const Faq = () => {
 
-    const tabsArray = [
-        { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },
-        { text: "공지사항", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/cscenter/all/announcement", width: '5.625rem', marginLeft: '0.2rem' },
-        { text: "자주묻는질문", icon: Icon3, activeIcon: Icon3Active, id: 2, path: "/cscenter/all/faq", hasSameParent: true, width: '5.375rem', marginLeft: '0.2rem' },
-        { text: "계좌문의", icon: Icon4, activeIcon: Icon4Active, id: 3, path: "#", width: '5.1875rem', marginLeft: '0.1rem' },
-        { text: "베팅규정", icon: Icon5, activeIcon: Icon5Active, id: 4, path: "/cscenter/all/policy/sportsgame/soccer", hasSameParent: true, width: '4.875rem', marginLeft: '0.1rem' },
-    ];
+    // const tabsArray = [
+    //     { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },
+    //     { text: "공지사항", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/cscenter/all/announcement", width: '5.625rem', marginLeft: '0.2rem' },
+    //     { text: "자주묻는질문", icon: Icon3, activeIcon: Icon3Active, id: 2, path: "/cscenter/all/faq", hasSameParent: true, width: '5.375rem', marginLeft: '0.2rem' },
+    //     { text: "계좌문의", icon: Icon4, activeIcon: Icon4Active, id: 3, path: "#", width: '5.1875rem', marginLeft: '0.1rem' },
+    //     { text: "베팅규정", icon: Icon5, activeIcon: Icon5Active, id: 4, path: "/cscenter/all/policy/sportsgame/soccer", hasSameParent: true, width: '4.875rem', marginLeft: '0.1rem' },
+    // ];
     const tabsArray2 = [
         { text: "전체", id: 0, width: '11.5625rem', path: "/cscenter/all/contact/all" },
         { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/contact/all/live-casino" },
         { text: "슬롯", id: 2, width: '11.5625rem', path: "/cscenter/all/contact/all/slot" },
         { text: "스포츠", id: 3, width: '13.4375rem', path: "/cscenter/all/contact/all/sports" },
-        { text: "호텔카지노", id: 4, width: '18.3125rem', path: "/cscenter/all/contact/all/e-sports" },
+        { text: "호텔카지노", id: 10, width: '18.3125rem', path: "/cscenter/all/contact/all/e-sports/1" },
         { text: "e-스포츠", id: 4, width: '15.3125rem', path: "/cscenter/all/contact/all/e-sports" },
         { text: "미니게임", id: 5, width: '15.3125rem', path: "/cscenter/all/contact/all/minigame" },
         { text: "키론가상게임", width: '20.3125rem', id: 6, path: "/cscenter/all/contact/all/ar-game" },
@@ -179,8 +179,8 @@ const Faq = () => {
     return (
         <div>
             {/* <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
-            <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+            {/* <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' /> */}
+            {/* <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} /> */}
             <div style={{ margin: '1rem 1.85rem' }}>
 
                 <HorizontalSubMenu itemsArray={tabsArray2} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />

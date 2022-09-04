@@ -10,10 +10,10 @@ const ContactCompose = () => {
     return (
         <>
             {/* <img src={img} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
-            <HomePageTopBanner
+            {/* <HomePageTopBanner
                 pageTitle="문의하기"
                 toPath="/cscenter/all/contact/all"
-            />
+            /> */}
             <div style={{ margin: '0.0625rem 1.875rem' }} className='contact-compose'>
 
                 <div style={{ background: 'linear-gradient(to top,#1f1f1e, #353534 50%,#4a4a4a)', padding: '0.1875rem', borderRadius: '1rem', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }}>

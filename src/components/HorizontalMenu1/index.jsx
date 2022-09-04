@@ -4,12 +4,15 @@ import { useNavigate } from 'react-router';
 import horizontalsScroll from '../../utils/horizontalsScroll';
 import inactive from '../../assets/cscenter/leftMenu/inactive-btn.png'
 import activeBG from '../../assets/cscenter/leftMenu/active-btn.png'
+import moneyActive from '../../assets/mainPage/icons/active-bg.png';
+import moneyInactive from '../../assets/mainPage/icons/inactive-bg.png';
 
 const HorizontalMenu1 = ({
     itemsArray,
     setSelectedTab,
     setSelectedSubTab = null,
-    withSmallMarginTop = false
+    withSmallMarginTop = false,
+    isMoneyPage
 }) => {
 
     const navigate = useNavigate();
@@ -50,7 +53,9 @@ const HorizontalMenu1 = ({
                     id={`t${index}`}
                     key={item.id}
                     style={{
-                        background: `url(${isSameLink ? activeBG : inactive}) round`,
+                        // {isSameLink ? '' : ''}
+                        background: !isMoneyPage ? `url(${isSameLink ? activeBG : inactive}) round` : `url(${isSameLink ? moneyActive : moneyInactive}) round`,
+                        // backgroundSize: 'cover'
                         // borderRadius: "1.625rem",
                         // width: '60%',
                         // height: '13.18rem',
@@ -58,8 +63,8 @@ const HorizontalMenu1 = ({
                         // padding: '1px'
                     }}
                     className={`${isSameLink
-                        ? "bg-blue-r58baf7"
-                        : "bg-white"
+                        ? "display-active"
+                        : "display-inactive"
                         } overflow-hidden flex items-end w-1/2`}
                     onPointerDown={() => setHover(item.id)}
                     onPointerUp={() => {

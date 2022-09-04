@@ -13,10 +13,10 @@ export default function ContactViewPage() {
                     isAuthenticated={isAuthenticated}
                     setAuth={setAuthenticated}
                 /> */}
-                <HomePageTopBanner
+                {/* <HomePageTopBanner
                     pageTitle="문의하기"
                     toPath="/cscenter/all/contact/all"
-                />
+                /> */}
             </div>
             <ContactView />
         </>
