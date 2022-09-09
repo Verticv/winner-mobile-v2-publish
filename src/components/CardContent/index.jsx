@@ -20,7 +20,9 @@ const CardContent = ({
     time = " 2021-06-29 15:45",
     isPopup = true,
     type,
-    canUpload = false
+    canUpload = false,
+    secondCard,
+    lastElement,
 }) => {
 
     const handleOnChange = () => {
@@ -40,11 +42,11 @@ const CardContent = ({
 
     return (
         <>
-            <div style={{ margin: '1.5rem', marginBottom: '0', marginTop: '2.0625rem', display: 'flex', justifyContent: withUploadButton || withCancelButton ? 'space-between' : '', alignItems: 'center' }} className={`flex flex-wrap items-center h-full  ${withUploadButton || withCancelButton ? 'justify-between' : ''}`}>
+            <div style={{ margin: '1.5rem', marginBottom: '0', marginTop: withInput ? (secondCard ? '2.1rem' : '2.23rem') : '2.0625rem', display: 'flex', justifyContent: withUploadButton || withCancelButton ? 'space-between' : '', alignItems: 'center' }} className={`flex flex-wrap items-center h-full  ${withUploadButton || withCancelButton ? 'justify-between' : ''}`}>
 
                 <div style={{ width: '', background: '', lineHeight: '1.5', display: 'flex', alignItems: 'center' }} className='flex items-center'>
                     {withInput && (
-                        <div style={{ margin: "-0.9rem 2.7rem 0 0.6rem" }} className="relative text-left">
+                        <div style={{ margin: "-0.9rem 2.65rem 0px 0.7rem", marginTop: lastElement ? '-4.9rem' : '-0.9rem' }} className="relative text-left">
                             <label className="form-control">
                                 <input
                                     key={Math.random()}
@@ -70,7 +72,7 @@ const CardContent = ({
                         {isPopup ? (
                             <>
                                 <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginRight: '3.8125rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>예상적중금액 :</span> 20,000</div>
-                                <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem', marginBottom: '0.89rem' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem' }}>당첨금 :</span> <span className={`${winAmount.includes("+") && "text-red-d52e2e"}`} style={{ color: '#e65454' }}>{winAmount}</span></div>
+                                <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem', marginBottom: '0.89rem' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem' }}>당첨금 :</span> <span className={`${winAmount.includes("+") && "text-red-d52e2e"}`} style={{ color: winAmount.includes("+") ? '#e65454' : '#c8c8c8' }}>{winAmount}</span></div>
                             </>
                         ) : (
                             <div className='flex' style={{ display: 'flex', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeo' }}>
@@ -110,7 +112,7 @@ const CardContent = ({
                     </button>
                 )}
             </div>
-            {withButtons && (
+            {/* {withButtons && (
                 <div style={{ margin: '3.75rem 0.875rem', marginTop: '1.875rem', marginBottom: '0' }} className="flex items-center justify-between">
                     <div className="flex w-full">
                         <button
@@ -135,6 +137,30 @@ const CardContent = ({
                             </div>
                         </button>
                     </div>
+                </div>
+            )} */}
+            {withButtons && (
+                <div className="two-buttons-container">
+                    <button style={{ height: '7.3125rem' }}
+                        // onClick={() => navigate("/freeboard")} 
+                        className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-blue-r0070d9">
+                        <div style={{ width: '100%', height: '100%', borderRadius: '1rem', padding: '0.1875rem' }}>
+                            <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #3a6287, #4777ab 50%, #518bcb)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <span style={{ color: '#d6f3ff' }}>내역올리기</span>
+                            </div>
+                        </div>
+                    </button>
+                    <button style={{ background: 'linear-gradient(to top, #4b0923, #e88895)', height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem' }}
+                        // onClick={() => navigate("/freeboard")} 
+                        className="flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">
+                        <div style={{ width: '100%', height: '100%', borderRadius: '1rem' }}>
+                            <div
+                                style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #96341d, #e06446)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                            >
+                                <span style={{ color: '#ffdfbd' }}>내역삭제</span>
+                            </div>
+                        </div>
+                    </button>
                 </div>
             )}
         </>

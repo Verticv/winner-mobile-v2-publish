@@ -237,6 +237,7 @@ const FreeBoardMain = () => {
             >
                 <div className='div-button'
                     style={{
+                        // margin: '0',
                         // padding: '1.75rem 2.2rem',
                         // paddingBottom: "1.5rem",
                         backgroundColor:

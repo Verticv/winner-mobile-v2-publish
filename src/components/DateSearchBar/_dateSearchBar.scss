@@ -77,7 +77,7 @@
 
     .common-button {
         width: 13.25rem;
-        height: 7.3125rem;  
+        height: 7.3125rem;
         background: linear-gradient(to top, #403e38, #72695d, #a59484);
         padding: 0.1875rem;
         border-radius: 0.6rem;
@@ -90,11 +90,16 @@
             justify-content: center;
             align-items: center;
             border-radius: 0.4rem;
+
             span {
                 margin-top: 0.5rem;
                 letter-spacing: -0.07rem;
                 text-shadow: #00000080 0.3125rem 0.125rem 0.4375rem;
             }
         }
+    }
+
+    .date12 {
+        padding-top: 0.7rem;
     }
 }

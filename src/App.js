@@ -1,23 +1,35 @@
 import './assets/sass/global.scss';
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Outlet,
+  Route,
+  Routes,
+} from 'react-router-dom';
 import './App.css';
 import MainPage from './components/pages/Main';
 import MyPage from './components/pages/MyPage';
 import Header from './components/Header';
 import NavBottom from './components/NavBottom';
-// import img2 from './img2.png';
-// import img from './img3.png';
-// import img2 from './img4.png';
-// import img3 from './img6.png';
+import MyPageTest from './components/pages/Test';
+// import img20 from './img20.png';
+// import img14 from './img14.png';
+// import img13 from './img13.png';
+// import img12 from './img12.png';
 import FreeBoardCompose from './components/FreeBoardCompose';
 import HomePageTopBanner from './components/HomePageTopBanner';
 import FreeBoardView from './components/FreeBoardView';
 import FreeBoardView2 from './components/FreeBoardView2';
 import CSCenterPage from './components/pages/CSCenterPage';
-import ContactViewPage from './components/pages/ContactViewPage';
-import ContactCompose from './components/ContactCompose';
-import Faq from './components/Faq';
+// import ContactViewPage from './components/pages/ContactViewPage';
+// import ContactCompose from './components/ContactCompose';
+// import Faq from './components/Faq';
+// import MinigamePolicy from './components/MinigamePolicy';
+import EditInfo from './components/EditInfo';
+import Inbox from './components/Inbox';
+import MoneyPage from './components/MoneyPage';
+import PointsPage from './components/PointsPage';
+import PointsAccumulateHistory from './components/PointsAccumulateHistory';
 
 function App() {
   // const [isAuthenticated, setAuthenticated] = useState(false);
@@ -121,47 +133,30 @@ function App() {
         />
       </Routes>
       <Routes>
-        <Route
-          path="/cscenter/all/contact/all"
-          element={
-            <CSCenterPage
-            // isAuthenticated={isAuthenticated}
-            // setAuthenticated={setAuthenticated}
-            />
-          }
-        />
+        {/* cscenter  page*/}
+        <Route path="/cscenter/*" element={<CSCenterPage />} />
       </Routes>
+      {/* my page */}
       <Routes>
         <Route
-          path="/cscenter/all/contact/view/*"
-          element={<ContactViewPage />}
-        />
-      </Routes>
-      <Routes>
-        <Route
-          path="/cscenter/all/contact/compose"
-          element={<ContactCompose />}
-        />
-      </Routes>
-      <Routes>
-        <Route
-          path="/cscenter/all/faq"
+          path="/mypage/*"
           element={
             <>
-              {/* <HorizontalMenu1
-                withSmallMarginTop={true}
-                itemsArray={tabsArray}
-                setSelectedTab={setSelectedTab}
-                setSelectedSubTab={setSelectedSubTab}
+              {/* <img
+                src={img20}
+                alt=""
+                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
               /> */}
-              <div style={{ marginBottom: '19.625rem' }}>
-                <Faq />
-              </div>
+              <MyPageTest
+              // isAuthenticated={isAuthenticated}
+              // setAuthenticated={setAuthenticated}
+              />
             </>
           }
-        ></Route>
+        />
       </Routes>
       <NavBottom />
+      <Outlet />
     </Router>
   );
 }
