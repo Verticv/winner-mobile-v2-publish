@@ -17,7 +17,9 @@ const DateSearchBar = ({
     isGameResultsSearch = false,
     withBlackButton = false,
     withMargin = true,
-    hasDateSuggestion = true
+    hasDateSuggestion = true,
+    isFreeboard,
+    isPoints
 }) => {
 
     const [startDate, setStartDate] = useState(new Date())
@@ -35,7 +37,7 @@ const DateSearchBar = ({
         )
     }
     return (
-        <div style={{ margin: withMargin ? '1.2rem 1.875rem' : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem', background: '#2e2e2e', paddingTop: '0.7rem', borderRadius: '1.1rem' }} className="bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex flex-wrap items-center justify-center z-50">
+        <div style={{ margin: withMargin ? (!isFreeboard ? '0.9rem 1.875rem' : '1.2rem 1.875rem') : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem', background: '#2e2e2e', borderRadius: '1.1rem', paddingTop: isPoints ? '0' : '0.7rem', marginTop: isPoints ? '1.1rem' : '' }} className="date12">
 
             {isLeagueSearch === true && (
                 <div className="space-x-5px">
@@ -218,7 +220,7 @@ const DateSearchBar = ({
             ) : (<div style={{ margin: '0.45rem' }}></div>)}
 
 
-            <div style={{ margin: '0.75rem 1.875rem', marginBottom: withMargin ? '1.875rem' : '1.375rem', marginTop: '0' }} className="flex w-full h-full items-center justify-between">
+            <div style={{ margin: '0.75rem 1.8rem', marginBottom: withMargin ? '1.8rem' : '1.375rem', marginTop: '0', paddingBottom: '0.1rem' }} className="flex w-full h-full items-center justify-between">
                 {withBlackButton && !withMargin && (
                     <div>
                         <input
@@ -237,9 +239,9 @@ const DateSearchBar = ({
                     </div>
                 )}
                 {withBlackButton && (
-                    <div style={{ minWidth: '27.4375rem', height: '7.3125rem' }} className="common-button flex w-full items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75">
-                        <div className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                            <span style={{ fontSize: '2.625rem', paddingBottom: '2px' }} className="font-spoqaMedium tracking-tight text-white">검색</span>
+                    <div style={{ minWidth: '27.4375rem', height: '7.3125rem', background: 'linear-gradient(to top, #4c3c0a, #9f7e4d 50%, #e6b786)', padding: '0.1875rem', margin: '-1.1rem 0 1.875rem 0', borderRadius: '0.5rem' }} className="common-button flex w-full items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75">
+                        <div style={{ background: 'linear-gradient(to top, #80603f, #946f49 50%, #a57b52)', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '0.5rem' }} className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
+                            <span style={{ fontSize: '2.625rem', color: '#ffdfbd', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.4rem' }} className="font-spoqaMedium tracking-tight text-white">검색</span>
                         </div>
                     </div>
                 )}

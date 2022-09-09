@@ -12,7 +12,8 @@ const HorizontalMenu1 = ({
     setSelectedTab,
     setSelectedSubTab = null,
     withSmallMarginTop = false,
-    isMoneyPage
+    isMoneyPage,
+    isCouponPage
 }) => {
 
     const navigate = useNavigate();
@@ -54,8 +55,8 @@ const HorizontalMenu1 = ({
                     key={item.id}
                     style={{
                         // {isSameLink ? '' : ''}
-                        background: !isMoneyPage ? `url(${isSameLink ? activeBG : inactive}) round` : `url(${isSameLink ? moneyActive : moneyInactive}) round`,
-                        // backgroundSize: 'cover'
+                        background: !isMoneyPage ? `url(${isSameLink ? (item.activeBG ? item.activeBG : activeBG) : inactive}) round` : `url(${isSameLink ? moneyActive : moneyInactive}) round`,
+                        backgroundSize: 'cover'
                         // borderRadius: "1.625rem",
                         // width: '60%',
                         // height: '13.18rem',

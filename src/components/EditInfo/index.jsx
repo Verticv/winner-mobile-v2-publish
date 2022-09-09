@@ -24,7 +24,9 @@ const EditInfo = () => {
             <HomePageTopBanner pageTitle='회원정보수정' />
             {/* </div> */}
 
-            <div className="edit-info-content">
+            <div className="edit-info-content"
+            // style={{background: 'red', width: '10rem', height: '10rem'}}
+            >
 
                 <div style={{ fontSize: '2.625rem' }} className="flex text-gray-r7c7c7c flex-col items-center justify-center font-spoqaMedium edit-info-text">
                     <div className="flex items-center h-14">
@@ -92,7 +94,7 @@ const EditInfo = () => {
                                         onBlur={(e) => {
                                             const menu = document.querySelector('#main-menu');
                                             menu.style.marginBottom = '0'
-                                            setSelectedInput(false)
+                                            setSelectedInput(true)
                                         }}
                                         type="password"
                                     />

@@ -11,7 +11,8 @@ import MainPage from './components/pages/Main';
 import MyPage from './components/pages/MyPage';
 import Header from './components/Header';
 import NavBottom from './components/NavBottom';
-// import img2 from './img2.png';
+import MyPageTest from './components/pages/Test';
+// import img20 from './img20.png';
 // import img14 from './img14.png';
 // import img13 from './img13.png';
 // import img12 from './img12.png';
@@ -27,6 +28,8 @@ import CSCenterPage from './components/pages/CSCenterPage';
 import EditInfo from './components/EditInfo';
 import Inbox from './components/Inbox';
 import MoneyPage from './components/MoneyPage';
+import PointsPage from './components/PointsPage';
+import PointsAccumulateHistory from './components/PointsAccumulateHistory';
 
 function App() {
   // const [isAuthenticated, setAuthenticated] = useState(false);
@@ -133,47 +136,21 @@ function App() {
         {/* cscenter  page*/}
         <Route path="/cscenter/*" element={<CSCenterPage />} />
       </Routes>
+      {/* my page */}
       <Routes>
         <Route
-          path="/mypage/edit-info"
+          path="/mypage/*"
           element={
             <>
               {/* <img
-                src={img12}
+                src={img20}
                 alt=""
                 style={{ position: 'absolute', top: '0', opacity: '0.5' }}
               /> */}
-              <EditInfo />
-            </>
-          }
-        />
-      </Routes>
-      <Routes>
-        <Route
-          path="/mypage/inbox"
-          element={
-            <>
-              {/* <img
-                src={img13}
-                alt=""
-                style={{ opacity: '0.5', position: 'absolute', top: '0' }}
-              /> */}
-              <Inbox />
-            </>
-          }
-        ></Route>
-      </Routes>
-      <Routes>
-        <Route
-          path="mypage/money/*"
-          element={
-            <>
-              {/* <img
-                src={img14}
-                alt=""
-                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
-              /> */}
-              <MoneyPage />
+              <MyPageTest
+              // isAuthenticated={isAuthenticated}
+              // setAuthenticated={setAuthenticated}
+              />
             </>
           }
         />
