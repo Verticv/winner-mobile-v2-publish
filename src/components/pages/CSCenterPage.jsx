@@ -19,7 +19,7 @@ import ContactCompose from "../ContactCompose";
 import Faq from "../Faq";
 import MinigamePolicy from "../MinigamePolicy";
 import SportsGamePolicy from "../SportsGamePolicy";
-import img from '../../img10.png'
+// import img from '../../img10.png'
 
 export default function Test() {
 
@@ -141,7 +141,7 @@ export default function Test() {
                         />
                         <Route path="/policy/sportsgame/*"
                             element={<>
-                                <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0' }} />
+                                {/* <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
                                 <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                 <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                 <SportsGamePolicy setSelectedTab={setSelectedTab} />

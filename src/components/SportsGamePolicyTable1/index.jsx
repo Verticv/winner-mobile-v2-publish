@@ -10,25 +10,29 @@ const SportsGamePolicyTable1 = ({ array }) => {
         overtime,
         ruleText,
         ruleText2 = null,
-        hasMargin
+        hasMargin,
+        rows
     }) => (
         <tr style={{ borderBottom: "0.1875rem solid #252525", textAlign: 'center' }} className={`bg-gray-fefefe font-spoqa tracking-tight text-gray-r585858  w-full border-b border-gray-dddddd`}>
-            <td style={{ width: "14.8125rem", paddingLeft: '0rem', paddingRight: '0rem', color: typeColor, textAlign: 'center' }} className="font-spoqaMedium text-center">
+            <td style={{ width: "14.8125rem", paddingLeft: '0rem', paddingRight: '0rem', color: typeColor, textAlign: 'center', lineHeight: '1.1' }} className="font-spoqaMedium text-center">
                 {type.split('\n').map((item, i) =>
-                    <p style={{ marginRight: '-1.5rem', marginTop: '0.5rem' }} key={i}>{item}</p>
+                    <p style={{ marginRight: '-1.2rem', marginTop: '0.2rem' }} key={i}>{item}</p>
                 )}
             </td>
-            <td style={{ width: "14.1875rem", color: overtime === null ? "#FF0000" : overtime === true ? "#dbae00" : "#585858" }} className="font-spoqaMedium text-center"><p style={{ marginTop: '0.5rem', marginLeft: hasMargin ? '' : '1rem' }}>{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</p></td>
-            <td style={{ WebkitTextStroke: "0.2px", textAlign: 'start' }} className='dada'>
+            {console.log(rows)}
+            <td style={{ width: "14.1875rem", color: overtime === null ? "#FF0000" : overtime === true ? "#dbae00" : "#585858" }} className="font-spoqaMedium text-center">
+                <p style={{ marginTop: '0.5rem', marginLeft: hasMargin ? '' : '1rem' }}>{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</p>
+            </td>
+            <td style={{ WebkitTextStroke: "0.2px", textAlign: 'start', padding: rows === '2' ? '1.529rem 0 1.317rem' : (rows === '3' ? '1.25rem 0px 1.009rem' : (rows === '4' ? '1.2rem 0px 0.7rem' : (rows === '1' ? '1.8rem 0 1.6rem' : (rows === '5' ? '0.767rem 0px 0.45rem' : (rows === 'ss' ? '0.9rem 0px 0.75rem' : '0'))))) }} className=''>
                 <p style={{ marginLeft: '2rem' }}>{parse(ruleText)}</p>
                 <p>{ruleText2}</p>
             </td>
         </tr>
     )
-        
+
     function Cells({ items }) {
         return items.map(item => (
-            <Cell type={item.type} typeColor={item.typeColor} overtime={item.overtime} ruleText={item.ruleText} ruleText2={item.ruleText2} hasMargin={item.hasMargin} />
+            <Cell type={item.type} typeColor={item.typeColor} overtime={item.overtime} ruleText={item.ruleText} ruleText2={item.ruleText2} hasMargin={item.hasMargin} rows={item.rows} />
         )
         )
     }
