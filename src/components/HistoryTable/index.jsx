@@ -22,9 +22,9 @@ const HistoryTable = ({
 
     function Cells({ cards }) {
         const detailButton = (
-            <button style={{ width: '10.875rem', height: '10.875rem' }} className="common-button flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75">
-                <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-2xl p-10 border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                    <span style={{ fontSize: '2.7rem', lineHeight: '1.1' }} className="w-full font-font-spoqaMedium tracking-tight text-white">상세 보기</span>
+            <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: '#826140', position: 'absolute', top: '11.56rem', right: '1.9rem', borderRadius: '1.1rem', boxShadow: '0px 6px 0px 0px rgb(0 0 0 / 60%)' }} className="common-button flex items-center justify-center rounded-2xl hover:opacity-75">
+                <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
+                    <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> 상세 <br /> 보기</span>
                 </div>
             </button>
         )
@@ -57,7 +57,7 @@ const HistoryTable = ({
                 borderRadius: '1rem',
                 position: 'relative'
             }} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
-                <div style={{ borderRadius: '1rem', width: '100%', height: '100%', background: `${containerBackground && index % 2 ? '#2e2e2e' : '#323232'}`, paddingRight: '1.875rem', padding: '2.125rem', paddingLeft: '2.7rem', paddingTop: hasLeftInput ? '3.3rem' : '2rem', display: 'flex', alignItems: 'center' }} className="flex flex-wrap items-center w-full h-full">
+                <div style={{ borderRadius: '1rem', width: '100%', height: '100%', background: `${containerBackground && index % 2 ? '#2e2e2e' : '#323232'}`, paddingRight: '1.875rem', padding: '2.125rem', paddingLeft: '2.7rem', paddingTop: hasLeftInput ? (hasButton ? '2.8rem     ' : '3.3rem') : '2rem', display: 'flex', alignItems: 'center' }} className="flex flex-wrap items-center w-full h-full">
                     {hasLeftInput && (
                         <div style={{ width: '5.8125rem', position: 'relative', marginRight: '-0.15rem', marginTop: '-0.2rem' }} className="relative text-left">
                             <label className="form-control">
@@ -140,7 +140,6 @@ const HistoryTable = ({
                             </div>
                         ) : hasButton &&
                         <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '7.56rem', right: '1.9rem', borderRadius: '1.1rem', boxShadow: '0px 6px 0px 0px rgb(0 0 0 / 60%)' }} className="common-button flex items-center justify-center rounded-2xl hover:opacity-75">
-                            {console.log('aaaaaaa', card[card.length - 1].buttonColor)}
                             <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
                                 <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffd2d2' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length - 1].buttonColor === '#0056a6' ? <div> {card[card.length - 1].buttonText ? card[card.length - 1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length - 1].buttonText || '진행중'} </span>
                             </div>

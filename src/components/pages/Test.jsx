@@ -15,7 +15,7 @@ import CouponUsage from '../CouponUsage';
 import BetHistory from '../BetHistory';
 // import Inbox from 'components/myPage/Inbox'
 // import InboxView from 'components/myPage/InboxView'
-// import GameResultsPage from 'components/myPage/GameResults'
+import GameResultsPage from '../GameResultsPage'
 // import Icon1 from "../images/newImages/mainPage/icons/1.png";
 // import Icon2 from "../images/newImages/mainPage/icons/2.png";
 // import Icon3 from "../images/newImages/mainPage/icons/3.png";
@@ -206,9 +206,12 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             {/* <Route path="/mypage/win-lose-settlement">
                 <WinLoseSettlement isAuthenticated={true} setAuthenticated={setAuthenticated} />
             </Route> */}
-            {/* <Route path="/mypage/gameresults">
-                <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
-            </Route> */}
+            <Route path="/gameresults/*"
+                element={
+                    <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                }
+            >
+            </Route>
             {/* <Route path="/mypage/freeboard">
                 <Freeboard isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
             </Route> */}
