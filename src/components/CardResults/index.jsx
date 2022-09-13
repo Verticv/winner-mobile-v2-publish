@@ -53,7 +53,8 @@ const CardResults = ({
                             // marginRight: '0.375rem',
                             // textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                             background: bet === "left" ? "linear-gradient(to top, rgb(101, 79, 57), rgb(125, 99, 72) 50%, rgb(151, 120, 89))" : "#252525",
-                            borderRadius: '0.6rem'
+                            borderRadius: '0.6rem',
+                            color: bet === "left" ? '#ffdfbd' : '#c8c8c8 '
 
                         }}
                         className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
@@ -65,10 +66,10 @@ const CardResults = ({
                                 : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"} 
                     flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer pr-3.5`
                             }>
-                            <span style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#c8c8c8', marginTop: '0.1rem' }} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{shouldTruncate ? truncate(team1, 10, 7) : team1}</span>
+                            <span style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem' }} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{shouldTruncate ? truncate(team1, 10, 7) : team1}</span>
                             <div className="flex items-center">
                                 {hasUp && <img style={{ marginRight: '0.4375rem', width: '2rem', height: '1.75rem' }} className="object-contain w-8 h-7" src={UpIcon} alt="" />}
-                                <span style={{ fontSize: '2.625rem', fontFamily: 'RobotoMedium', marginRight: '0.8rem', color: '#c8c8c8' }} className="font-roboto tracking-tight text-14px mt-1">{stat1}</span>
+                                <span style={{ fontSize: '2.625rem', fontFamily: 'RobotoMedium', marginRight: '0.8rem' }} className="font-roboto tracking-tight text-14px mt-1">{stat1}</span>
                             </div>
                         </div>
                     </button>
