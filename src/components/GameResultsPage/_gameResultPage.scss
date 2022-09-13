@@ -1,0 +1,92 @@
+.game-result {
+    #container-nav {
+        padding: 0px 1.4rem;
+        margin-top: 0.1rem;
+
+        button {
+            width: 37.4rem;
+            height: 14.1rem;
+
+            &:first-child {
+                margin-right: -0.25rem;
+            }
+        }
+    }
+
+    #container {
+        margin: 1rem 0rem 0 2rem;
+
+        button {
+            // color: rgb(255, 223, 189);
+            // min-width: 11.5625rem;
+            // background: rgb(130, 97, 64);
+            color: rgb(204, 194, 182);
+            min-width: 13.4375rem;
+            background: rgb(30, 30, 30);
+            border: 0.1875rem solid rgb(85, 85, 85);
+            height: 6.375rem;
+            min-width: 11.5625rem;
+            font-size: 2.8125rem;
+            margin-right: 1.125rem;
+            border-radius: 3.2rem;
+            font-family: "SpoqaHanSansNeoMedium";
+        }
+    }
+
+    #scroll-wrapper {
+        padding: 0.875rem 0px 1.875rem 1.875rem !important;
+    }
+
+    .date12 {
+        padding-top: 0.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+
+
+}
+
+.game-result {
+    .test {
+        .date12 {
+            .second-row {
+                display: flex;
+                margin-top: -0.5rem;
+                margin-bottom: 1.7rem;
+            }
+        }
+
+        .sort-by-div {
+            margin-top: 1.9rem;
+            // background: red;
+            width: 34rem;
+            height: 6.6rem;
+            outline: none;
+            background: #1a1a1a;
+            border: 0;
+            padding: 0;
+            height: 6.7rem;
+            width: 34.06rem;
+            font-size: 2.624375rem;
+            border: 0.1875rem solid #404040;
+            border-radius: 0.5rem;
+            color: #ccc2b6;
+            font-family: "RobotoMedium";
+            padding-left: 1.7rem;
+            letter-spacing: -0.07rem;
+            padding-top: 1.15rem;
+            position: relative;
+        }
+
+        .sort-by-p {
+            margin-left: 0 !important;
+        }
+
+        .select-overlay {
+            top: 2rem;
+            left: 2rem;
+            height: 79%;
+            width: 34rem;
+        }
+    }
+}

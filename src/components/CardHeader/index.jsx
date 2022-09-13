@@ -4,8 +4,9 @@ import USFlagIcon from '../../assets/myPage/sports/usaFlag.png'
 import UKFlagIcon from '../../assets/myPage/sports/englandFlag.png'
 import SpainFlagIcon from '../../assets/flag.png'
 import ClockIcon from '../../assets/myPage/sports/clock.png'
-import Icon3 from '../../assets/minigameResults/1.png'
-import Icon4 from '../../assets/minigameResults/2.png'
+import Icon3 from '../../assets/gameresults/mini-icon1.png'
+
+import Icon4 from '../../assets/gameresults/mini-icon2.png'
 import Icon5 from '../../assets/minigameResults/3.png'
 import Icon6 from '../../assets/minigameResults/4.png'
 
@@ -18,16 +19,16 @@ const CardHeader = ({ flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMi
     const headerFlag = flags[flag]
 
     if (isMinigame === true) return (
-        <div style={{ height: '7.5rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', paddingLeft: "1rem" }} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd pr-7">
-            <div className="flex items-center">
-                <img style={{ width: '7rem', height: '7rem' }} className='object-contain' src={minigameType === "powerladder" ? Icon4 : minigameType === "kinoladder" ? Icon6 : minigameType === "powerball" ? Icon3 : Icon5} alt="" />
-                <span style={{ fontSize: '2.625rem', paddingTop: '0.1875rem', marginLeft: '0.6rem' }} className="ml-4 font-spoqaMedium text-20px tracking-tight text-white">{minigameType === "powerladder" ? "파워사다리" : minigameType === "kinoladder" ? "키노사다리" : minigameType === "powerball" ? "파워볼" : "스피드키노"}</span>
+        <div style={{ height: '7.2rem', paddingLeft: "1.4rem", background: 'linear-gradient(to right, #6c553e, #473b35)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '' }} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd pr-7">
+            <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
+                <img style={{ width: minigameType === "powerladder" ? '4.6875rem' : '4.375rem', height: 'auto', marginTop: minigameType === "powerladder" ? '-0.44rem' : '-0.34rem', marginLeft: '' }} className='object-contain' src={minigameType === "powerladder" ? Icon4 : minigameType === "kinoladder" ? Icon6 : minigameType === "powerball" ? Icon3 : Icon5} alt="" />
+                <span style={{ fontSize: '2.625rem', paddingBottom: '0.2rem', marginLeft: '0.7rem', color: '#ffdfbd', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }} className="ml-4 font-spoqaMedium text-20px tracking-tight text-white">{minigameType === "powerladder" ? "파워사다리" : minigameType === "kinoladder" ? "키노사다리" : minigameType === "powerball" ? "파워볼" : "스피드키노"}</span>
             </div>
             {minigameType !== "powerball" && (
-                <div className="flex items-center">
-                    <img style={{ width: '2.875rem', height: '2.875rem' }} src={ClockIcon} alt="" />
+                <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', letterSpacing: '-0.1rem', marginRight: '1.5rem', marginTop: '-0.4rem' }}>
+                    <img style={{ width: '2.374375rem', height: '2.374375rem' }} src={ClockIcon} alt="" />
                     <span
-                        style={{ color: "#dae8f5", fontSize: '2.625rem', marginLeft: '0.5625rem', marginTop: '0.125rem' }}
+                        style={{ color: "#ffdfbd", fontSize: '2.625rem', marginLeft: '0.5625rem', marginTop: '0.125rem', fontFamily: 'RobotoMedium', marginRight: '' }}
                         className="font-spoqa text-16px tracking-tight text-white"
                     >
                         {date}

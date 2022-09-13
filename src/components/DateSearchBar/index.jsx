@@ -123,7 +123,7 @@ const DateSearchBar = ({
                             }
                         }}
                     />
-                    <img src={CalendarIcon} alt="" className="w-14 absolute right-8" />
+                    <img src={CalendarIcon} alt="" style={{ width: '3.5rem' }} className="w-14 absolute right-8" />
                 </div>
                 <span className='Signal'>~</span>
                 <div className="date-picker">

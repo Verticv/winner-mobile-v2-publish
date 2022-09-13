@@ -24,7 +24,7 @@ import icon8Active from '../../assets/icon8-active.png';
 import icon9Active from '../../assets/icon9-active.png';
 // import icon10Active from '../../assets/icon10-active.png';
 import SportsBetHistory from '../SportsBetHistory';
-import img21 from '../../img21.png'
+// import img21 from '../../img21.png'
 
 
 
@@ -33,7 +33,7 @@ import HomePageTopBanner from '../HomePageTopBanner'
 // import LeftMenu from "components/myPage/LeftMenu";
 // import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import Pagination from '../Pagination'
-// import LiveCasinoBetHistory from './betHistory/LiveCasinoBetHistory'
+import LiveCasinoBetHistory from '../LiveCasinoBetHistory'
 // import SportsBetHistory from './betHistory/SportsBetHistory'
 // import AllBetHistory from './betHistory/AllBetHistory'
 // import SlotBetHistory from './betHistory/SlotBetHistory'
@@ -128,7 +128,7 @@ const tabsArray = [
 const BetHistory = ({ isAuthenticated }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
-    // const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
+    const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
     // const [historySelectedSubTab2, setHistorySelectedSubTab2] = useState(0)
     // const [historySelectedSubTab3, setHistorySelectedSubTab3] = useState(0)
 
@@ -145,7 +145,7 @@ const BetHistory = ({ isAuthenticated }) => {
                 <Route index
                     element={
                         <>
-                            hi
+                            {/* hi */}
                         </>
                     }
                 >
@@ -197,7 +197,7 @@ const BetHistory = ({ isAuthenticated }) => {
                                 <Route path="/sports"
                                     element={
                                         <>
-                                            <img src={img21} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} />
+                                            {/* <img src={img21} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
                                             <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
                                             <Pagination page={page} setPage={setPage} />
                                         </>
@@ -210,6 +210,20 @@ const BetHistory = ({ isAuthenticated }) => {
                                         </div> */}
                                         {/* <BottomNavbar /> */}
                                     </>
+                                </Route>
+                                <Route path="/live-casino"
+                                    element={
+                                        <>
+                                            <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                            <div style={{ marginTop: '3.85rem' }}>
+                                                <Pagination page={page} setPage={setPage} />
+                                            </div>
+                                            {/* <BottomNavbar /> */}
+                                            {/* <h1>hi</h1> */}
+                                        </>
+                                    }
+                                >
+
                                 </Route>
                             </Routes>
                         </>
@@ -233,15 +247,19 @@ const BetHistory = ({ isAuthenticated }) => {
                     </>
                     </Route> */}
 
-                    {/* <Route path="/mypage/bet-history/all/live-casino">
-                    <>
-                        <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
-                        <div style={{ marginTop: '1.25rem' }}>
-                            <Pagination page={page} setPage={setPage} />
-                        </div>
-                        <BottomNavbar />
-                    </>
-                </Route> */}
+                    {/* <Route path="/mypage/bet-history/all/live-casino"
+                        element={
+                            <>
+                                <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                <div style={{ marginTop: '1.25rem' }}>
+                                    <Pagination page={page} setPage={setPage} />
+                                </div>
+                                <BottomNavbar />
+                            </>
+                        }
+                    >
+
+                    </Route> */}
 
                     {/* <Route path="/mypage/bet-history/all/slot-game">
                     <>
