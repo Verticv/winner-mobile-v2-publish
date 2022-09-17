@@ -19,7 +19,8 @@ const DateSearchBar = ({
     withMargin = true,
     hasDateSuggestion = true,
     isFreeboard,
-    isPoints
+    isPoints,
+    isDistributorPage
 }) => {
 
     const [startDate, setStartDate] = useState(new Date())
@@ -220,13 +221,13 @@ const DateSearchBar = ({
             ) : (<div style={{ margin: '0.45rem' }}></div>)}
 
 
-            <div style={{ margin: '0.75rem 1.8rem', marginBottom: withMargin ? '1.8rem' : '1.375rem', marginTop: '0', paddingBottom: '0.1rem' }} className="flex w-full h-full items-center justify-between">
+            <div style={{ margin: '0.75rem 1.8rem', marginBottom: withMargin ? '1.8rem' : '1.375rem', marginTop: '0', paddingBottom: '0.1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="flex w-full h-full items-center justify-between distributor-page-btn">
                 {withBlackButton && !withMargin && (
-                    <div>
+                    <div className="first-row">
                         <input
-                            style={{ width: '41.625rem', height: '6.9375rem', fontSize: '2.625rem', paddingLeft: '2.25rem' }}
-                            className="mr-3.5 border border-gray-dddddd place-color-grey rounded-2xl placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"
+                            style={{ marginLeft: '2.05rem' }}
                             placeholder="아이디"
+                            className="place-color-grey placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
                             onFocus={() => {
                                 const menu = document.querySelector('#main-menu');
                                 menu.style.marginBottom = '-14.075rem'
@@ -239,7 +240,7 @@ const DateSearchBar = ({
                     </div>
                 )}
                 {withBlackButton && (
-                    <div style={{ minWidth: '27.4375rem', height: '7.3125rem', background: 'linear-gradient(to top, #4c3c0a, #9f7e4d 50%, #e6b786)', padding: '0.1875rem', margin: '-1.1rem 0 1.875rem 0', borderRadius: '0.5rem' }} className="common-button flex w-full items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75">
+                    <div style={{ minWidth: isDistributorPage ? '27.4375rem' : '70.4375rem', height: '7.3125rem', background: 'linear-gradient(to top, #4c3c0a, #9f7e4d 50%, #e6b786)', padding: '0.1875rem', margin: '-1.1rem 0 1.875rem 0', borderRadius: '0.5rem' }} className="common-button flex w-full items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75 withBlackButton">
                         <div style={{ background: 'linear-gradient(to top, #80603f, #946f49 50%, #a57b52)', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '0.5rem' }} className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                             <span style={{ fontSize: '2.625rem', color: '#ffdfbd', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.4rem' }} className="font-spoqaMedium tracking-tight text-white">검색</span>
                         </div>

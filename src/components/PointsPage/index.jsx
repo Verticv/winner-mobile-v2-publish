@@ -9,7 +9,7 @@ import PointsApply from '../PointsApply'
 import HomePageTopBanner from '../HomePageTopBanner';
 import HorizontalMenu1 from '..//HorizontalMenu1'
 import React, { useState } from 'react'
-import img17 from '../../img17.png';
+// import img17 from '../../img17.png';
 // import { Route } from 'react-router'
 import Icon1 from '../../assets/mainPage/points/1.png';
 import Icon2 from '../../assets/mainPage/points/2.png';
@@ -126,11 +126,11 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
                             <Route path='/points-accumulate-history'
                                 element={
                                     <>
-                                        <img
+                                        {/* <img
                                             src={img17}
                                             alt=""
                                             style={{ position: 'absolute', top: '0', opacity: '0.5' }}
-                                        />
+                                        /> */}
                                         <PointsAccumulateHistory />
                                     </>
                                 }

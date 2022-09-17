@@ -44,14 +44,14 @@ const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelecti
                 multiple={multiple}
             >
                 <div className="sort-by-div"
-                    // style={{
-                    //     display: 'flex',
-                    //     justifyContent: 'space-between',
-                    //     alignItems: 'center',
-                    //     width: '15rem'
-                    // }}
+                    style={{
+                        // display: 'flex',
+                        // justifyContent: 'space-between',
+                        // alignItems: 'center',
+                        width: '15rem'
+                    }}
                 >
-                    <div  className={`sort-by-p ${labelClasses}`} style={labelStyle}><p>{sortValue}</p></div>
+                    <div className={`sort-by-p ${labelClasses}`} style={labelStyle}><p>{sortValue}</p></div>
                     {children}
                 </div>
             </SortBy>
