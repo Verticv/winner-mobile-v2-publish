@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar'
-import SubHorizontalMenu from '../SubHorizontalMenu'
+// import SubHorizontalMenu from '../SubHorizontalMenu'
 import HistoryTable from '../HistoryTable'
-import ScrollButton from '../ScrollButton'
+// import ScrollButton from '../ScrollButton'
 import SelectAllButton from '../SelectAllButton'
 import Icon1 from '../../assets/myPage/second-btns/icon1.png'
 import Icon2 from '../../assets/myPage/second-btns/icon2.png'
@@ -231,7 +231,7 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
 
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
-    const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
+    // const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
 
     return (
         <div className="LiveCasinoBetHistory">

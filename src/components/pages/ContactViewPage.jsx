@@ -1,6 +1,6 @@
 import React from "react";
 // import img from '../../img7.png'
-import HomePageTopBanner from "../HomePageTopBanner";
+// import HomePageTopBanner from "../HomePageTopBanner";
 import ContactView from '../ContactView';
 
 export default function ContactViewPage() {

@@ -6,6 +6,7 @@ const CountryDropDown = ({setCountry, country, isProfilePage}) => {
 
     const [selectedTab, setSelectedTab] = useState(country === "KR" ? 0 : 1)
     const [hoveredTab, setHoveredTab] = useState(null);
+    console.log(hoveredTab)
 
     const countriesArray = [
         { icon: Koreaflag, text: "KR", id: 0 },

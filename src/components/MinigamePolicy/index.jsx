@@ -10,7 +10,7 @@ import PowerladderPolicy from '../../assets/cscenter/minigame/powerladder_policy
 import SpeedKinoPolicy from '../../assets/cscenter/minigame/speedkino_policy.png';
 // import HomePageTopBanner from '../HomePageTopBanner';
 // import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
-import img from '../../img11.png';
+// import img from '../../img11.png';
 
 
 // const HistoryMenu = ({
