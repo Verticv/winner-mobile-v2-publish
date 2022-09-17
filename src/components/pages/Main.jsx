@@ -14,7 +14,7 @@ function MainPage() {
             <Slider />
             <NoticeBanner />
             <Jackpot />
-            <div style={{ display: 'flex' }}>
+            <div style={{ display: 'flex', paddingBottom: '17rem' }}>
                 <NavButtons />
                 <AllCards />
             </div>

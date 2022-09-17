@@ -15,7 +15,7 @@ import MyPageTest from './components/pages/Test';
 // import img20 from './img20.png';
 // import img14 from './img14.png';
 // import img13 from './img13.png';
-// import img12 from './img12.png';
+// import img26 from './img26.png';
 import FreeBoardCompose from './components/FreeBoardCompose';
 import HomePageTopBanner from './components/HomePageTopBanner';
 import FreeBoardView from './components/FreeBoardView';
@@ -25,11 +25,12 @@ import CSCenterPage from './components/pages/CSCenterPage';
 // import ContactCompose from './components/ContactCompose';
 // import Faq from './components/Faq';
 // import MinigamePolicy from './components/MinigamePolicy';
-import EditInfo from './components/EditInfo';
-import Inbox from './components/Inbox';
-import MoneyPage from './components/MoneyPage';
-import PointsPage from './components/PointsPage';
-import PointsAccumulateHistory from './components/PointsAccumulateHistory';
+// import EditInfo from './components/EditInfo';
+// import Inbox from './components/Inbox';
+// import MoneyPage from './components/MoneyPage';
+// import PointsPage from './components/PointsPage';
+// import PointsAccumulateHistory from './components/PointsAccumulateHistory';
+import DistributorPage from './components/DistributorPage';
 
 function App() {
   // const [isAuthenticated, setAuthenticated] = useState(false);
@@ -154,6 +155,24 @@ function App() {
             </>
           }
         />
+      </Routes>
+      <Routes>
+        <Route
+          path="/distributor-page"
+          element={
+            <>
+              {/* <img
+                src={img26}
+                alt=""
+                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
+              /> */}
+              <DistributorPage
+              // isAuthenticated={isAuthenticated}
+              // setAuthenticated={setAuthenticated}
+              />
+            </>
+          }
+        ></Route>
       </Routes>
       <NavBottom />
       <Outlet />

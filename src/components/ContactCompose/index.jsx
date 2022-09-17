@@ -1,7 +1,7 @@
 import React from 'react'
 import DownArrowIcon from '../../assets/down-arrow.png';
 import Dropdown from '../Dropdown';
-import HomePageTopBanner from '../HomePageTopBanner';
+// import HomePageTopBanner from '../HomePageTopBanner';
 // import img from '../../img8.png';
 
 const ContactCompose = () => {
@@ -26,7 +26,7 @@ const ContactCompose = () => {
                             }} className="flex h-full bg-white rounded-2xl border border-gray-dddddd group">
                                 <div
                                     style={{ width: '26.25rem' }}
-                                    className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight"
+                                    className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight dddd"
                                 >
                                     <Dropdown labelClasses="group-hover:text-black" labelStyle={{ marginLeft: '1.6875rem', fontSize: '2.8125rem' }} options={carrierOptions} isContact={true}>
                                         <img style={{ width: '1.5625rem', height: '1rem' }} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" />

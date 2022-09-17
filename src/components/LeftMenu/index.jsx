@@ -1,3 +1,4 @@
+/* eslint-disable */
 // @ts-nocheck
 import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from "react-router-dom";
@@ -66,7 +67,8 @@ const LeftMenu = ({
     const EditProfileButton = ({ path, text, icon, iconHighlight, selectedTab }) => {
         const isProfileActive = pathname.includes(path);
         return (
-            <div style={{ padding: '0.1875rem', borderBottomWidth: '0.1875rem', background: '#ff000029', width: '1164px', height: '970px', position: 'fixed', top: '36.25rem', left: '50%', transform: 'translate(-50%)' }} className='w-full border-b border-gray-ececec bg-gray-f7f7f7'>
+            <>
+                {/* <div style={{ padding: '0.1875rem', borderBottomWidth: '0.1875rem', background: '#ff000029', width: '1164px', height: '970px', position: 'fixed', top: '36.25rem', left: '50%', transform: 'translate(-50%)' }} className='w-full border-b border-gray-ececec bg-gray-f7f7f7'>
                 <div style={{ width: '100%', height: '100%', padding: '0 1.875rem', background: '#ffc0cb29', position: 'relative' }}>
                     <button
                         style={{ height: '12.375rem', padding: '1.3125rem', paddingRight: 0 }}
@@ -99,7 +101,8 @@ const LeftMenu = ({
                     </button>
 
                 </div>
-            </div>
+            </div> */}
+            </>
         )
     }
 

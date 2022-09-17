@@ -23,7 +23,7 @@ const Search = () => {
                     // className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight"
                     className='content'
                 >
-                    <Dropdown labelStyle={{ marginLeft: '1.6875rem', color: '#454545', fontSize: '2.8125rem' }} options={carrierOptions} isSignup={true} labelClasses="pt-1">
+                    <Dropdown labelStyle={{ marginLeft: '1.6875rem', color: '#ccc2b6', fontSize: '2.8125rem' }} options={carrierOptions} isSignup={true} labelClasses="pt-1">
                         <img style={{ width: '1.5625rem', height: '1rem', marginRight: '1.5625rem', marginTop: '-1.3rem' }} className="object-contain" src={DownArrowIcon} alt="arrow" />
                     </Dropdown>
                 </div>
@@ -46,8 +46,10 @@ const Search = () => {
                         menu.style.marginBottom = '0'
                     }}
                 />
-                <button style={{ border: 0, width: '6.75rem', height: '6.85rem', marginTop: '-0.2875rem', marginRight: '-0.1875rem', position: 'absolute', right: '0.1rem', top: '2.1rem', padding: '0.1875rem', 
-                    background: 'linear-gradient(to top, #4c3c0a, #a07e4d 50%, #e6b786 )', borderRadius: '0.5rem' }}
+                <button style={{
+                    border: 0, width: '6.75rem', height: '6.85rem', marginTop: '-0.2875rem', marginRight: '-0.1875rem', position: 'absolute', right: '0.1rem', top: '2.1rem', padding: '0.1875rem',
+                    background: 'linear-gradient(to top, #4c3c0a, #a07e4d 50%, #e6b786 )', borderRadius: '0.5rem'
+                }}
                     className="flex items-center justify-center h-full rounded-2xl bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 flex-shrink-0 hover:opacity-75">
                     <div style={{
                         width: '100%',
