@@ -22,6 +22,7 @@ const HorizontalMenu13 = ({
     const navigate = useNavigate();
     const pathname = window.location.pathname
     const [isHover, setHover] = useState(null)
+    console.log(isHover);
 
     function TabsList({ items }) {
         return items.map((item, index) => (

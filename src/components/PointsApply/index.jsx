@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PopupControls from '../popups/PopupControls';
 import PointsApplyPopup from '../popups/PointsApplyPopup';
 import WarningMessage from '../WarningMessage'
-import img18 from '../../img16.png'
+// import img18 from '../../img16.png'
 
 const PointsApply = () => {
     const [inputValue, setInputValue] = useState(null)

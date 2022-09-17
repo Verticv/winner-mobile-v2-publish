@@ -5,7 +5,7 @@ import InboxTable from '../InboxTable'
 // import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 // import NoticeBanner from 'components/mainPage/NoticeBanner'
 import HomePageTopBanner from '../HomePageTopBanner'
-import ContactTable from '../ContactTable';
+// import ContactTable from '../ContactTable';
 import Search from '../Search'
 // import ScrollButton from 'components/common/ScrollButton'
 
