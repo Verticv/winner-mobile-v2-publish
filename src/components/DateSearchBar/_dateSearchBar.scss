@@ -81,6 +81,12 @@
         background: linear-gradient(to top, #403e38, #72695d, #a59484);
         padding: 0.1875rem;
         border-radius: 0.6rem;
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(125%);
+        }
 
         .text-con {
             background: linear-gradient(to top, #4c4743, #615952, #776c62);

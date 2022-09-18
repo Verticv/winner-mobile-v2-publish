@@ -10,7 +10,7 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
     const LeftArrow = () => (
         <button
             style={{ backgroundColor: selectedPage !== 1 && "#fff", width: '2.125rem', height: '2.125rem', marginRight: '3.1875rem', background: 'bottom' }}
-            className="flex items-center justify-center rounded-lg  hover:opacity-75"
+            className='hover'
             onClick={() => selectedPage !== 1 && setSelectedPage(selectedPage - 1)}
         >
             <img style={{
@@ -23,7 +23,7 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
     const RightArrow = () => (
         <button
             style={{ backgroundColor: selectedPage !== 1 && "#fff", width: '2.125rem', height: '2.125rem', marginLeft: '3.1875rem', background: 'bottom' }}
-            className="flex items-center justify-center rounded-lg  hover:opacity-75"
+            className='hover'
             onClick={() => selectedPage !== 5 && setSelectedPage(selectedPage + 1)}
         >
             <img style={{ width: '1.3125rem', height: '2.1875rem', marginLeft: '0.9rem' }} className="cursor-pointer max-w-none object-contain" src={RightIcon} alt="arrow" />
@@ -36,7 +36,7 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
         <div style={{ marginBottom: withMarginBottom ? '19.625rem' : '0', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="relative flex items-center justify-center">
             <button
                 style={{ width: '2.125rem', height: '2.125rem', marginRight: '5rem', background: 'bottom' }}
-                className="flex items-center justify-center rounded-lg  hover:opacity-75"
+                className='hover'
                 onClick={() => setSelectedPage(1)}
             >
                 <img style={{ width: '2.125rem', height: '2.125rem', marginLeft: '0.1rem' }} className="cursor-pointer object-contain max-w-none" src={DoubleLeftIcon} alt="" />
@@ -45,7 +45,7 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
             <div className="space-x-px flex items-center buttons-container">
                 <button
                     style={{ background: selectedPage !== 1 ? "bottom" : `url(${bg}) round`, boxShadow: selectedPage !== 1 ? '' : '0.1rem 0.1rem 1rem black', borderRadius: '0.6rem', width: '7.3125rem', height: '7.3125rem', marginRight: '3px' }}
-                    className="flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
+                    className='hover'
                     onClick={() => setSelectedPage(1)}
                 >
                     <div className={`${selectedPage === 1 ? "border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db" : "bg-white"} flex items-center justify-center w-full h-full rounded-2xl  cursor-pointer`}>
@@ -54,7 +54,7 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
                 </button>
                 <button
                     style={{ background: selectedPage !== 2 ? "bottom" : `url(${bg}) round`, boxShadow: selectedPage !== 2 ? '' : '0.1rem 0.1rem 1rem black', borderRadius: '0.6rem', width: '7.3125rem', height: '7.3125rem', marginRight: '3px' }}
-                    className="flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
+                    className='hover'
                     onClick={() => setSelectedPage(2)}
                 >
                     <div className={`${selectedPage === 2 ? "border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db" : "bg-white"} flex items-center justify-center w-full h-full rounded-2xl  cursor-pointer`}>
@@ -62,8 +62,8 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
                     </div>
                 </button>
                 <button
-                    style={{ background: selectedPage !== 3 ? "bottom" : `url(${bg}) round`, boxShadow: selectedPage !== 3 ? '' : '0.1rem 0.1rem 1rem black',borderRadius: '0.6rem',  width: '7.3125rem', height: '7.3125rem', marginRight: '3px' }}
-                    className="flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
+                    style={{ background: selectedPage !== 3 ? "bottom" : `url(${bg}) round`, boxShadow: selectedPage !== 3 ? '' : '0.1rem 0.1rem 1rem black', borderRadius: '0.6rem', width: '7.3125rem', height: '7.3125rem', marginRight: '3px' }}
+                    className='hover'
                     onClick={() => setSelectedPage(3)}
                 >
                     <div className={`${selectedPage === 3 ? "border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db" : "bg-white"} flex items-center justify-center w-full h-full rounded-2xl  cursor-pointer`}>
@@ -72,7 +72,7 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
                 </button>
                 <button
                     style={{ background: selectedPage !== 4 ? "bottom" : `url(${bg}) round`, boxShadow: selectedPage !== 4 ? '' : '0.1rem 0.1rem 1rem black', borderRadius: '0.6rem', width: '7.3125rem', height: '7.3125rem', marginRight: '3px' }}
-                    className="flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
+                    className='hover'
                     onClick={() => setSelectedPage(4)}
                 >
                     <div className={`${selectedPage === 4 ? "border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db" : "bg-white"} flex items-center justify-center w-full h-full rounded-2xl  cursor-pointer`}>
@@ -81,7 +81,7 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
                 </button>
                 <button
                     style={{ background: selectedPage !== 5 ? "bottom" : `url(${bg}) round`, boxShadow: selectedPage !== 5 ? '' : '0.1rem 0.1rem 1rem black', borderRadius: '0.6rem', width: '7.3125rem', height: '7.3125rem', padding: '3px' }}
-                    className="flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
+                    className='hover'
                     onClick={() => setSelectedPage(5)}
                 >
                     <div className={`${selectedPage === 5 ? "border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db" : "bg-white"} flex items-center justify-center w-full h-full rounded-2xl  cursor-pointer`}>
@@ -94,7 +94,7 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
             <RightArrow />
             <button
                 style={{ width: '2.125rem', height: '2.125rem', marginLeft: '5.8125rem', background: 'bottom' }}
-                className="flex items-center justify-center rounded-2xl  hover:opacity-75"
+                className='hover'
                 onClick={() => setSelectedPage(5)}
             >
                 <img style={{ width: '2.125rem', height: '2.125rem' }} className=" cursor-pointer object-contain max-w-none" src={DoubleRightIcon} alt="" />

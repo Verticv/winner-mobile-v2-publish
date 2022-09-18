@@ -11,13 +11,16 @@ const PointsApply = () => {
     var nf = new Intl.NumberFormat();
 
     const detailButton = (
-        <div style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '18.7rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '1.6rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', marginTop: '3.6rem' }}>
+        <div
+            className='shadow-to-box'
+            style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '18.7rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '1.6rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', marginTop: '3.6rem' }}>
             <button
+
                 style={{ width: "100%", height: '100%', marginBottom: '1.5625rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', borderRadius: '1rem' }}
-                className="m-auto flex items-center justify-center rounded-2xl hover:opacity-75"
+                className="hover"
             >
                 <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                    <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className="font-spoqaMedium tracking-tight text-white">신청하기</span>
+                    <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>신청하기</span>
                 </div>
             </button>
         </div>
@@ -209,6 +212,7 @@ const PointsApply = () => {
                         <div className="f-div">
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{  }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 1000)}
@@ -220,6 +224,7 @@ const PointsApply = () => {
                             </div>
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 5000)}
@@ -234,6 +239,7 @@ const PointsApply = () => {
                             </div>
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 10000)}
@@ -245,7 +251,7 @@ const PointsApply = () => {
                             </div>
                             <div className='div-range-border'>
                                 <button
-
+                                    className="hover"
                                     onClick={() => setInputValue(inputValue + 50000)}
                                 >
                                     <div
@@ -261,6 +267,7 @@ const PointsApply = () => {
                         <div className="f-div">
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{  }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 100000)}
@@ -272,6 +279,7 @@ const PointsApply = () => {
                             </div>
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 500000)}
@@ -286,6 +294,7 @@ const PointsApply = () => {
                             </div>
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 1000000)}
@@ -297,6 +306,7 @@ const PointsApply = () => {
                             </div>
                             <div className='div-range-border' style={{ background: 'linear-gradient(to top, #4d3c0a, #b08b5a 50%, #e7b786)' }}>
                                 <button
+                                    className="hover"
                                     style={{ background: 'linear-gradient(to top, #80603f, #956f4a 50%, #a57b52)' }}
                                     onClick={() => setInputValue(0)}
                                 >

@@ -57,7 +57,7 @@ const FreeBoardView2 = () => {
                     }}
                 />
 
-                <button style={{ borderRadius: "0.625rem", width: '10.5625rem', padding: '0.1875rem', position: 'absolute', right: '0', height: '99%', background: 'linear-gradient(to top, #223349, #415a77 50%, #5e7fa4 )', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }} className="right-0 absolute flex items-center justify-center h-full bg-blue-r013d74 hover:opacity-75">
+                <button style={{ borderRadius: "0.625rem", width: '10.5625rem', padding: '0.1875rem', position: 'absolute', right: '0', height: '99%', background: 'linear-gradient(to top, #223349, #415a77 50%, #5e7fa4 )', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }} className="hover">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #27415e, #305176 50%, #305176)', borderRadius: "0.625rem", color: '#d6f3ff', fontSize: '2.811875rem', fontFamily: 'SpoqaHanSansNeoMedium', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <div style={{ borderRadius: "1.625rem" }} className="flex items-center justify-center h-full w-full bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-white" style={{ textShadow: '#00000080 0.3125rem 0.125rem 0.4375rem' }}>{buttonText}</span>
@@ -229,7 +229,9 @@ const FreeBoardView2 = () => {
                 </div> */}
 
             <div className="two-buttons">
-                <button style={{ background: 'linear-gradient(to top, #4d0a25, #a34f63 50%, #e78694 )' }}>
+                <button
+                    className='hover'
+                    style={{ background: 'linear-gradient(to top, #4d0a25, #a34f63 50%, #e78694 )' }}>
                     <div className='div-border'
                         style={{ background: 'linear-gradient(to top, #97351d, #bb4c32 50%, #df6345)' }}
                     >
@@ -238,7 +240,9 @@ const FreeBoardView2 = () => {
                         </div>
                     </div>
                 </button>
-                <button style={{ background: 'linear-gradient(to top, #4d3c0a, #a3814f 50%, #e7b786 )' }}>
+                <button
+                    className='hover'
+                    style={{ background: 'linear-gradient(to top, #4d3c0a, #a3814f 50%, #e7b786 )' }}>
                     <div className='div-border' style={{ background: 'linear-gradient(to top, #80603f, #96704a 50%, #a57b52 )', color: '#ffdfbd' }}>
                         <div className="text">
                             <span className="font-spoqaMedium tracking-tight text-white">삭제하기</span>
@@ -443,7 +447,7 @@ const FreeBoardView2 = () => {
             </div>
 
             <div style={{ marginTop: '3.7rem', paddingBottom: '19.225rem' }} className="w-full flex items-start justify-between">
-                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75">
+                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e48 50%, #a57b52)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <div
                             style={{
@@ -457,7 +461,7 @@ const FreeBoardView2 = () => {
                         </div>
                     </div>
                 </button>
-                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75">
+                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e48 50%, #a57b52)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <div
                             style={{
@@ -473,7 +477,7 @@ const FreeBoardView2 = () => {
                     </div>
                 </button>
 
-                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75">
+                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e48 50%, #a57b52)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <div
                             style={{

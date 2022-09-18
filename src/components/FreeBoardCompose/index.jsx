@@ -14,7 +14,7 @@ const FreeBoardCompose = () => {
         <button
             // style={{ width: "19.3125rem", height: "6.75rem", fontSize: '2.4375rem', borderRadius: '0.5rem', backgroundColor: "#826140", color: '#ffdfbd', marginTop: '1.125rem' }}
             // className="flex items-center justify-center rounded-2xl text-white tracking-tight font-spoqaMedium pt-1"
-            className='popup-btn'
+            className='popup-btn hover shadow-to-text'
         >
             베팅내역첨부
         </button>
@@ -90,14 +90,14 @@ const FreeBoardCompose = () => {
 
 
             <div className="two-buttons-container">
-                <button style={{ height: '7.3125rem' }} onClick={() => navigate("/freeboard")} className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-blue-r0070d9">
+                <button style={{ height: '7.3125rem' }} onClick={() => navigate("/freeboard")} className='shadow-to-box'>
                     <div style={{ width: '100%', height: '100%', borderRadius: '1rem', padding: '0.1875rem' }}>
                         <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #3a6287, #4777ab 50%, #518bcb)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <span style={{ color: '#d6f3ff' }}>작성하기</span>
                         </div>
                     </div>
                 </button>
-                <button style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', height: '7.3125rem', padding: '1px', fontSize: '2.8125rem' }} onClick={() => navigate("/freeboard")} className="flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">
+                <button style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', height: '7.3125rem', padding: '1px', fontSize: '2.8125rem' }} onClick={() => navigate("/freeboard")} className='shadow-to-box'>
                     <div style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', width: '100%', height: '100%', borderRadius: '1rem', padding: '0.1875rem' }}>
                         <div
                             style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e49 50%, #a57b51)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}

@@ -14,7 +14,7 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
                 <div style={{ height: '9.3rem', background: '#272726', borderTopLeftRadius: '2.8rem', borderTopRightRadius: '2.8rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="relative bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
                     <label style={{ fontSize: '3.75rem', color: '#ad9e8c', fontFamily: 'SpoqaHanSansNeoBold', letterSpacing: '-0.07rem', marginLeft: '0.65rem', marginTop: '-0.1rem' }} className="font-spoqaBold text-white tracking-tight">쿠폰 선물하기</label>
                     <button style={{ marginRight: '4rem', position: 'absolute', right: '0', background: 'bottom' }} className="absolute right-0 cursor-pointer z-20" onClick={() => setPopupOpen(false)}>
-                        <img style={{ width: '3.1875rem', height: '3.1875rem' }} src={CloseIcon} alt="close_icon" />
+                        <img className='hover' style={{ width: '3.1875rem', height: '3.1875rem' }} src={CloseIcon} alt="close_icon" />
                     </button>
                 </div>
 
@@ -51,7 +51,7 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
                         </button>
                     </div> */}
                     <div className='button-class-div'>
-                        <button className='button-class'>
+                        <button className='button-class hover'>
                             <div style={{ marginTop: '0.2rem' }}>
                                 <span>쿠폰발송</span>
                             </div>

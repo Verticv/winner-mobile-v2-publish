@@ -15,7 +15,7 @@ const PointsApplyPopup = ({ setPopupOpen }) => {
             <div style={{ height: '9.3125rem', background: '#272726', borderTopLeftRadius: '3.6rem', borderTopRightRadius: '3.6rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', }} className="relative bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
                 <label style={{ fontSize: '3.75rem', color: '#ad9e8c', fontFamily: 'SpoqaHanSansNeoBold', marginTop: '0.7rem', letterSpacing: '-0.1rem', marginLeft: '-0.4rem' }} className="font-spoqaBold text-white tracking-tight">포인트 전환 신청</label>
                 <button style={{ marginRight: '4.4375rem', position: 'absolute', right: '0', background: 'bottom', marginTop: '0.6rem' }} className="absolute right-0 cursor-pointer z-20 hover:opacity-75" onClick={() => setPopupOpen(false)}>
-                    <img style={{ width: '3.1875rem', height: '3.1875rem' }} src={CloseIcon} alt="close_icon" />
+                    <img style={{ width: '3.1875rem', height: '3.1875rem' }} className="hover" src={CloseIcon} alt="close_icon" />
                 </button>
             </div>
 
@@ -61,24 +61,28 @@ const PointsApplyPopup = ({ setPopupOpen }) => {
 
                 {/* </div> */}
                 <div style={{ display: 'flex', marginTop: '4rem' }}>
-                    <div style={{ width: "36.4375rem", height: '7.3125rem', marginRight: '1rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', marginTop: '' }}>
+                    <div
+                        className='shadow-to-box'
+                        style={{ width: "36.4375rem", height: '7.3125rem', marginRight: '1rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', marginTop: '' }}>
                         <button
                             style={{ width: "100%", height: '100%', marginBottom: '1.5625rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', borderRadius: '1rem' }}
-                            className="m-auto flex items-center justify-center rounded-2xl hover:opacity-75"
+                            className="hover"
                         >
                             <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                                <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className="font-spoqaMedium tracking-tight text-white">포인트전환</span>
+                                <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>포인트전환</span>
                             </div>
                         </button>
                     </div>
-                    <div style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '', background: 'linear-gradient(to top, #233449, #445e7c 50%, #5e7fa3 )', marginTop: '' }}>
+                    <div
+                        className='shadow-to-box'
+                        style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '', background: 'linear-gradient(to top, #233449, #445e7c 50%, #5e7fa3 )', marginTop: '' }}>
                         <button
                             style={{ width: "100%", height: '100%', marginBottom: '1.5625rem', background: 'linear-gradient(to top, #28425f, #33567d 50%, #38608d)', borderRadius: '1rem' }}
-                            className="m-auto flex items-center justify-center rounded-2xl hover:opacity-75"
+                            className="hover"
                             onClick={() => navigate('/mypage/points/all/points-transaction-history')}
                         >
                             <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                                <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className="font-spoqaMedium tracking-tight text-white">상세내역</span>
+                                <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>상세내역</span>
                             </div>
                         </button>
                     </div>

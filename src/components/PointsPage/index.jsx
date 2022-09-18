@@ -14,9 +14,9 @@ import React, { useState } from 'react'
 import Icon1 from '../../assets/mainPage/points/1.png';
 import Icon2 from '../../assets/mainPage/points/2.png';
 import Icon3 from '../../assets/mainPage/points/3.png';
-import Icon1Active from '../../assets/mainPage/points/1.png';
-import Icon2Active from '../../assets/mainPage/points/2.png';
-import Icon3Active from '../../assets/mainPage/points/3.png';
+import Icon1Active from '../../assets/mainPage/points/1-active.png';
+import Icon2Active from '../../assets/mainPage/points/2-active.png';
+import Icon3Active from '../../assets/mainPage/points/3-active.png';
 import activeBG from '../../assets/mainPage/points/active-bg.png';
 import { Route, Routes } from 'react-router-dom';
 import PointsAccumulateHistory from '../PointsAccumulateHistory';
@@ -27,9 +27,9 @@ import PointsAccumulateHistory from '../PointsAccumulateHistory';
 
 
 const tabsArray = [
-    { text: "포인트전환신청", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/points/all", activeBG: activeBG },
-    { text: "포인트적립내역", icon: Icon2, id: 1, activeIcon: Icon2Active, path: "/mypage/points/all/points-accumulate-history", activeBG: activeBG },
-    { text: "포인트전환내역", icon: Icon3, id: 2, activeIcon: Icon3Active, path: "/mypage/points/all/points-transaction-history", activeBG: activeBG },
+    { text: "포인트전환신청", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/points/all", activeBG: activeBG, width: '5.25rem' },
+    { text: "포인트적립내역", icon: Icon2, id: 1, activeIcon: Icon2Active, path: "/mypage/points/all/points-accumulate-history", activeBG: activeBG, width: '6.1875rem' },
+    { text: "포인트전환내역", icon: Icon3, id: 2, activeIcon: Icon3Active, path: "/mypage/points/all/points-transaction-history", activeBG: activeBG, width: '5.60625rem' },
 ];
 
 // const LeftMenuSubArray = [

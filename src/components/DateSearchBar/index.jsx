@@ -158,7 +158,7 @@ const DateSearchBar = ({
                                     }}
                                 />
                             </div>
-                            <img style={{ top: '3.44rem', right: '2rem' }} src={CalendarIcon} alt="" className="w-14 absolute" />
+                            <img style={{ top: '3.44rem', right: '2rem', width: '3.5rem' }} src={CalendarIcon} alt="" className="w-14 absolute" />
                         </>
                     ) : (
                         <div className='mt-7 -ml-8 text-15px'>
@@ -240,9 +240,9 @@ const DateSearchBar = ({
                     </div>
                 )}
                 {withBlackButton && (
-                    <div style={{ minWidth: isDistributorPage ? '27.4375rem' : '70.4375rem', height: '7.3125rem', background: 'linear-gradient(to top, #4c3c0a, #9f7e4d 50%, #e6b786)', padding: '0.1875rem', margin: '-1.1rem 0 1.875rem 0', borderRadius: '0.5rem' }} className="common-button flex w-full items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75 withBlackButton">
+                    <div style={{ minWidth: isDistributorPage ? '27.4375rem' : '70.4375rem', height: '7.3125rem', background: 'linear-gradient(to top, #4c3c0a, #9f7e4d 50%, #e6b786)', padding: '0.1875rem', margin: '-1.1rem 0 1.875rem 0', borderRadius: '0.5rem' }} className="shadow-to-box hover withBlackButton">
                         <div style={{ background: 'linear-gradient(to top, #80603f, #946f49 50%, #a57b52)', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '0.5rem' }} className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                            <span style={{ fontSize: '2.625rem', color: '#ffdfbd', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.4rem' }} className="font-spoqaMedium tracking-tight text-white">검색</span>
+                            <span style={{ fontSize: '2.625rem', color: '#ffdfbd', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.4rem' }} className="shadow-to-text">검색</span>
                         </div>
                     </div>
                 )}

@@ -804,7 +804,7 @@ const giftsTableData = [
 
 const GiftButton = (
     <div className='button-class-div'>
-        <button className='button-class'>
+        <button className='button-class hover'>
             <div style={{ marginTop: '0.2rem' }}>
                 <span>쿠폰선물하기</span>
             </div>
@@ -839,9 +839,9 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
     console.log(selectedTab, selectedSubTab)
 
     const tabsArray = [
-        { text: "쿠폰사용", icon: Icon1, activeIcon: Icon1, id: 0, path: "/mypage/coupon/all", activeBG: couponActive },
-        { text: "쿠폰선물", icon: Icon2, activeIcon: Icon2, id: 1, path: "/mypage/coupon/all/coupon-gift", activeBG: couponActive },
-        { text: "쿠폰내역", icon: Icon3, activeIcon: Icon3, id: 2, path: "/mypage/coupon/all/coupon-history", hasSameParent: true, activeBG: couponActive },
+        { text: "쿠폰사용", icon: Icon1, activeIcon: Icon1, id: 0, path: "/mypage/coupon/all", activeBG: couponActive, width: '6.75rem' },
+        { text: "쿠폰선물", icon: Icon2, activeIcon: Icon2, id: 1, path: "/mypage/coupon/all/coupon-gift", activeBG: couponActive, width: '5.686875rem' },
+        { text: "쿠폰내역", icon: Icon3, activeIcon: Icon3, id: 2, path: "/mypage/coupon/all/coupon-history", hasSameParent: true, activeBG: couponActive, width: '5.60625rem' },
     ];
 
     // const LeftMenuSubArray = [
@@ -877,7 +877,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                 <Route index
                     element={
                         <>
-                            hi
+                            {/* hi */}
                         </>
                     }
                 >

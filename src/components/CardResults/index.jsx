@@ -41,8 +41,10 @@ const CardResults = ({
             </div>
             <div className="flex w-full justify-end pr-3" style={{ display: 'flex' }}>
                 <div style={{
-                    background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '25.125rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "1px 1px 1px #00000070" : "", borderRadius: '0.6rem'
+                    background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)',
+                    boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
+                    padding: '0.1875rem', width: smallCard ? '26.875rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "", borderRadius: '0.6rem',
                 }}>
                     <button
                         style={{
@@ -54,7 +56,8 @@ const CardResults = ({
                             // textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                             background: bet === "left" ? "linear-gradient(to top, rgb(101, 79, 57), rgb(125, 99, 72) 50%, rgb(151, 120, 89))" : "#252525",
                             borderRadius: '0.6rem',
-                            color: bet === "left" ? '#ffdfbd' : '#c8c8c8 '
+                            color: bet === "left" ? '#ffdfbd' : '#c8c8c8 ',
+
 
                         }}
                         className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
@@ -77,7 +80,8 @@ const CardResults = ({
 
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '10rem' : '10rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "1px 1px 1px #00000070" : "", borderRadius: '0.6rem'
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "", borderRadius: '0.6rem',
+                    boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button
                         style={{
@@ -93,7 +97,8 @@ const CardResults = ({
                             justifyContent: 'center',
                             alignItems: 'center',
                             fontFamily: 'RobotoMedium',
-                            color: '#c8c8c8'
+                            color: bet === "left" ? '#ffdfbd' : '#c8c8c8 ',
+                            // cursor: 'pointer'
 
                         }}
                         className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
@@ -105,13 +110,15 @@ const CardResults = ({
                                 : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"}
                     pt-px flex items-center justify-center h-full w-full rounded-lg border border-white cursor-pointer pr-3.5`}
                         >
-                            <span style={{ fontSize: '2.625rem' }} className="font-roboto tracking-tight text-14px">{stat2}</span>
+                            <span style={{ fontSize: '2.625rem', color: '#c8c8c8' }} className="font-roboto tracking-tight text-14px">{stat2}</span>
                         </div>
                     </button>
                 </div>
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '25.02rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "1px 1px 1px #00000070" : "", borderRadius: '0.6rem'
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "", borderRadius: '0.6rem',
+                    cursor: 'pointer',
+                    boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button style={{
 
@@ -120,19 +127,19 @@ const CardResults = ({
                         height: '100%',
                         // padding: '1px',
                         // marginRight: '0.375rem',
-                        // textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
+                        textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "",
                         background: bet === "right" ? "linear-gradient(to top,  #654f39,  #7d6348 50%, #977859)" : "#252525",
                         borderRadius: '0.6rem',
                         display: 'flex',
                         // justifyContent: 'center',
                         alignItems: 'center',
                         fontFamily: 'RobotoMedium',
-                        color: '#ffdfbd'
+                        color: bet === "right" ? '#ffdfbd' : '#c8c8c8 '
                     }}
                         className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                         <div
                             style={{
-                                textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
+                                textShadow: bet === "right" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "",
                                 paddingRight: team2?.length > 8 ? '0.7rem' : '0.8rem',
                                 paddingLeft: '0.7rem',
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -141,6 +148,7 @@ const CardResults = ({
                                 // paddingRight: '0.7rem'
                                 // paddingRight: '1.125rem',
                                 // backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
+
                             }}
                             className={`${bet === "right"
                                 ? "text-white border-red-ff7982 bg-gradient-to-b from-red-ff535f to-red-d7434f"
@@ -163,8 +171,9 @@ const CardResults = ({
         <div style={{ borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem', display: 'flex', alignItems: 'center', height: '8.8rem', padding: '1rem 0.3rem 0.4rem 0.4rem', paddingTop: secondCard ? '0.5rem' : '1rem', marginBottom: secondCard ? '0.05rem' : '', borderTop: secondCard ? '0.1875rem solid #252525' : '', marginTop: secondCard ? '0.5rem' : '' }} className={`flex items-center w-full p-3 pr-0 bg-gray-fefefe shadow-plain11`}>
             <div className="flex" style={{ display: 'flex' }} >
                 <div style={{
-                    background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '25.125rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "1px 1px 1px #00000070" : "", borderRadius: '0.6rem'
+                    background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '26.875rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "", borderRadius: '0.6rem',
+                    boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button
                         style={{
@@ -175,22 +184,27 @@ const CardResults = ({
                             // marginRight: '0.375rem',
                             // textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                             background: bet === "left" ? "linear-gradient(to top, rgb(101, 79, 57), rgb(125, 99, 72) 50%, rgb(151, 120, 89))" : "#252525",
-                            borderRadius: '0.6rem'
-
+                            borderRadius: '0.6rem',
+                            color: bet === "left" ? '#ffdfbd' : '#c8c8c8',
+                            textShadow: bet === 'left' ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "",
+                            cursor: 'pointer'
                         }}
                         className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
                     >
                         <div
-                            style={{ paddingLeft: bet === "left" ? '0.7rem' : '0.8rem', letterSpacing: '-0.07rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: bet === "left" ? '' : '0.1rem', paddingRight: bet === "left" ? '' : '0.15rem' }}
+                            style={{
+                                paddingLeft: bet === "left" ? '0.7rem' : '0.8rem', letterSpacing: '-0.07rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: bet === "left" ? '' : '0.1rem', paddingRight: bet === "left" ? '' : '0.15rem',
+                                color: bet === "left" ? '#ffdfbd' : '#c8c8c8'
+                            }}
                             className={`${bet === "left"
                                 ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f"
                                 : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"} 
                     flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer pr-3.5`
                             }>
-                            <span style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#c8c8c8', marginTop: '0.1rem' }} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{shouldTruncate ? truncate(team1, 7, 7) : team1}</span>
+                            <span style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem' }} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{shouldTruncate ? truncate(team1, 7, 7) : team1}</span>
                             <div className="flex items-center">
                                 {hasUp && <img style={{ marginRight: '0.4375rem', width: '2rem', height: '1.75rem' }} className="object-contain w-8 h-7" src={UpIcon} alt="" />}
-                                <span style={{ fontSize: '2.625rem', fontFamily: 'RobotoMedium', marginRight: '0.8rem', color: '#c8c8c8' }} className="font-roboto tracking-tight text-14px mt-1">{stat1}</span>
+                                <span style={{ fontSize: '2.625rem', fontFamily: 'RobotoMedium', marginRight: '0.8rem' }} className="font-roboto tracking-tight text-14px mt-1">{stat1}</span>
                             </div>
                         </div>
                     </button>
@@ -198,7 +212,8 @@ const CardResults = ({
 
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '10rem' : '10rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "1px 1px 1px #00000070" : "", borderRadius: '0.6rem'
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "", borderRadius: '0.6rem',
+                    boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button
                         style={{
@@ -214,8 +229,8 @@ const CardResults = ({
                             justifyContent: 'center',
                             alignItems: 'center',
                             fontFamily: 'RobotoMedium',
-                            color: '#c8c8c8'
-
+                            color: '#c8c8c8',
+                            cursor: 'pointer'
                         }}
                         className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
                     >
@@ -231,8 +246,9 @@ const CardResults = ({
                     </button>
                 </div>
                 <div style={{
-                    background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '25.02rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "1px 1px 1px #00000070" : "", borderRadius: '0.6rem'
+                    background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '26.875rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "", borderRadius: '0.6rem',
+                    boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button style={{
 
@@ -241,19 +257,19 @@ const CardResults = ({
                         height: '100%',
                         // padding: '1px',
                         // marginRight: '0.375rem',
-                        // textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
+                        textShadow: bet === "right" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "",
                         background: bet === "right" ? "linear-gradient(to top,  #654f39,  #7d6348 50%, #977859)" : "#252525",
                         borderRadius: '0.6rem',
                         display: 'flex',
                         // justifyContent: 'center',
                         alignItems: 'center',
                         fontFamily: 'RobotoMedium',
-                        color: '#ffdfbd'
+                        color: bet === "right" ? '#ffdfbd' : '#c8c8c8'
                     }}
                         className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                         <div
                             style={{
-                                textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
+                                textShadow: bet === "right" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "",
                                 paddingRight: team2?.length > 8 ? '0.7rem' : '0.8rem',
                                 paddingLeft: '0.7rem',
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -270,7 +286,7 @@ const CardResults = ({
                         >
                             <div className="flex items-center">
                                 <span style={{ fontSize: '2.625rem' }} className="font-roboto tracking-tight">{stat3}</span>
-                                {hasDown && <img style={{ marginLeft: '0.4375rem' }} className="object-contain w-8 h-7" src={DownIcon} alt="" />}
+                                {hasDown && <img style={{ marginLeft: '0.4375rem', width: '2rem' }} className="object-contain w-8 h-7" src={DownIcon} alt="" />}
                             </div>
                             <span style={{ fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '1.4rem', letterSpacing: '-0.07rem' }} className="font-spoqaMedium tracking-tight text-right overflow-hidden">{shouldTruncate ? truncate(team2, 7, 7) : team2}</span>
                         </div>

@@ -209,7 +209,7 @@ const Inbox = () => {
                             background: 'linear-gradient(to top, rgb(77, 60, 10), rgb(156, 123, 74) 50%, rgb(231, 183, 134))',
                             borderRadius: '1rem'
                         }}
-                        className="common-button flex flex-1 items-center justify-center mr-4 rounded-2xl bg-gray-r171a1d hover:opacity-75"
+                        className="hover"
                         onClick={() => AllSelectButtonPressed()}
                     >
                         <div
@@ -238,7 +238,7 @@ const Inbox = () => {
                             background: 'linear-gradient(to top, #4d0a25, #a75366 50%, #e78795)',
                             borderRadius: '1rem'
                         }}
-                        className="common-button flex flex-1 items-center justify-center mr-4 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
+                        className="hover"
                     >
                         <div
                             style={{
@@ -266,7 +266,7 @@ const Inbox = () => {
                             background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d9e8)',
                             borderRadius: '1rem'
                         }}
-                        className="common-button flex flex-1 items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
+                        className="hover"
                     // onClick={() => allSelectButtonPressed()}
                     >
                         <div
