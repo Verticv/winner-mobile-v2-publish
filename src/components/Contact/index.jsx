@@ -150,7 +150,9 @@ const Contact = () => {
                 </button>
             </div> */}
             <div className="two-buttons">
-                <button style={{ background: 'linear-gradient(to top, #4d0a25, #a34f63 50%, #e78694 )' }}>
+                <button
+                    className='hover'
+                    style={{ background: 'linear-gradient(to top, #4d0a25, #a34f63 50%, #e78694 )' }}>
                     <div className='div-border'
                         style={{ background: 'linear-gradient(to top, #97351d, #bb4c32 50%, #df6345)' }}
                     >
@@ -159,7 +161,9 @@ const Contact = () => {
                         </div>
                     </div>
                 </button>
-                <button style={{ background: 'linear-gradient(to top, #4d3c0a, #a3814f 50%, #e7b786 )' }} onClick={() => navigate('/cscenter/all/contact/compose')} >
+                <button
+                    className='hover'
+                    style={{ background: 'linear-gradient(to top, #4d3c0a, #a3814f 50%, #e7b786 )' }} onClick={() => navigate('/cscenter/all/contact/compose')} >
                     <div className='div-border' style={{ background: 'linear-gradient(to top, #80603f, #96704a 50%, #a57b52 )', color: '#ffdfbd' }}>
                         <div className="text">
                             <span className="font-spoqaMedium tracking-tight text-white">문의작성</span>

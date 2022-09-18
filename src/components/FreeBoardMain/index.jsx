@@ -436,9 +436,9 @@ const FreeBoardMain = () => {
 
                 <div
                     // style={{ margin: 'auto', marginTop: '3.7rem', marginBottom: '3.75rem', width: 'fit-content' }} 
-                    className='button-class-div'
+                    className='button-class-div shadow-to-box'
                 >
-                    <button className='button-class'
+                    <button className='button-class hover'
                         // style={{ width: '36.4375rem', height: '7.3125rem',border: '0.1875rem solid', padding: '0', borderRadius: '1rem' }}
                         onClick={() => navigate('/freeboard/compose')}
                     //  className="flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
@@ -448,6 +448,7 @@ const FreeBoardMain = () => {
                         // className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer"
                         >
                             <span
+                                className='shadow-to-text'
                             // style={{ fontSize: "2.8125rem" }} className="font-spoqaMedium tracking-tight text-white"
                             >작성하기</span>
                         </div>

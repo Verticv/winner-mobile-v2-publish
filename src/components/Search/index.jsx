@@ -50,7 +50,8 @@ const Search = () => {
                     border: 0, width: '6.75rem', height: '6.85rem', marginTop: '-0.2875rem', marginRight: '-0.1875rem', position: 'absolute', right: '0.1rem', top: '2.1rem', padding: '0.1875rem',
                     background: 'linear-gradient(to top, #4c3c0a, #a07e4d 50%, #e6b786 )', borderRadius: '0.5rem'
                 }}
-                    className="flex items-center justify-center h-full rounded-2xl bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 flex-shrink-0 hover:opacity-75">
+                    className='hover'
+                >
                     <div style={{
                         width: '100%',
                         height: '100%',

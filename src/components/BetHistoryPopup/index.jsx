@@ -203,8 +203,8 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
             <div className="베팅내역-border">
                 <div className='first-section'>
                     <label className="text">베팅내역</label>
-                    <button style={{ marginRight: '4.625rem' }} className="absolute right-0 cursor-pointer z-20" onClick={() => setPopupOpen(false)}>
-                        <img className='close' style={{ width: '3.1875rem', height: '3.1875rem' }} src={CloseIcon} alt="close_icon" />
+                    <button style={{ marginRight: '4.625rem' }} onClick={() => setPopupOpen(false)}>
+                        <img className='close hover' style={{ width: '3.1875rem', height: '3.1875rem' }} src={CloseIcon} alt="close_icon" />
                     </button>
                 </div>
 

@@ -27,7 +27,7 @@ const ContactTable = ({
                     } flex contact-card`}
             >
                 <div style={{ width: '9.1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="flex justify-start items-center cursor-pointer" onClick={() => navigate(item.path)}>
-                    <img style={{ width: '4.875rem', height: item.isRead === true ? '4.72625' : '2.945' }} src={item.isRead === true ? MailOpenedIcon : MailIcon} alt="" />
+                    <img className='hover' style={{ width: '4.875rem', height: item.isRead === true ? '4.72625' : '2.945' }} src={item.isRead === true ? MailOpenedIcon : MailIcon} alt="" />
                 </div>
                 <div
                     style={{
@@ -87,7 +87,7 @@ const ContactTable = ({
 
                 </div>
                 <button className='absolute right-0 ' style={{ position: 'absolute', right: '4.5rem', background: 'bottom' }}>
-                    <img style={{ width: '4rem', height: '4.375rem' }} src={item.isRead ? DeleteDark : Delete} alt="" />
+                    <img className='hover' style={{ width: '4rem', height: '4.375rem' }} src={item.isRead ? DeleteDark : Delete} alt="" />
                 </button>
             </div>
         ));

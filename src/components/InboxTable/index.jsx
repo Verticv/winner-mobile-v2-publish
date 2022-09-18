@@ -96,7 +96,7 @@ const InboxTable = ({
                                             className="w-max rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'><span className='mt-1 block'>이벤트</span></span></div>
                                         : <div></div>
                             }
-                            <p style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: item.type === '이벤트' ? '37rem' :  item.type === "안내" ? '40rem' : '47rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#eeeeee', marginTop: '0.5rem', }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap">{item.text}</p>
+                            <p style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: item.type === '이벤트' ? '37rem' : item.type === "안내" ? '40rem' : '47rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#eeeeee', marginTop: '0.5rem', }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap">{item.text}</p>
                             {item.isRead === false && (
                                 <div
                                     style={{ marginLeft: '0.9rem' }}
@@ -130,7 +130,7 @@ const InboxTable = ({
 
                 </div>
                 <button className='absolute right-0' style={{ position: 'absolute', right: '4.55rem', background: 'bottom' }}>
-                    <img style={{ width: '4rem', height: '4.375rem', marginTop: '0.3rem' }} src={item.isRead ? DeleteDark : Delete} alt="" />
+                    <img className='hover' style={{ width: '4rem', height: '4.375rem', marginTop: '0.3rem' }} src={item.isRead ? DeleteDark : Delete} alt="" />
                 </button>
             </div>
         ));

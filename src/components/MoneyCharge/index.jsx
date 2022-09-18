@@ -67,7 +67,7 @@ const MoneyCharge = () => {
                         <div style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '15.7rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '1.6rem', background: 'linear-gradient(to top, #4d3c0a, #b08b5a 50%, #e7b786)' }}>
                             <button
                                 style={{ width: "100%", height: '100%', marginBottom: '1.5625rem', background: "linear-gradient(to top, #80603f, #96704a 50%, #a57b52)", borderRadius: '1rem' }}
-                                className="m-auto flex items-center justify-center rounded-2xl hover:opacity-75"
+                                className="m-auto flex items-center justify-center rounded-2xl hover:opacity-75 hover"
                             >
                                 <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
                                     <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.2rem' }} className="font-spoqaMedium tracking-tight text-white">계좌번호 신청</span>
@@ -157,16 +157,17 @@ const MoneyCharge = () => {
                             <div className='div-range-border'>
                                 <button
                                     // style={{  }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
+                                    className="hover"
                                     onClick={() => setInputValue(inputValue + 10000)}
                                 >
                                     <div className="s-div">
-                                        <span>1만원</span>
+                                        <span className='shadow-to-text'>1만원</span>
                                     </div>
                                 </button>
                             </div>
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 30000)}
@@ -175,31 +176,32 @@ const MoneyCharge = () => {
                                         className="s-div"
                                     //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
                                     >
-                                        <span>3만원</span>
+                                        <span className='shadow-to-text'>3만원</span>
                                     </div>
                                 </button>
                             </div>
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 50000)}
                                 >
                                     <div className="s-div">
-                                        <span className="font-spoqaMedium tracking-tight text-white">5만원</span>
+                                        <span className='shadow-to-text'>5만원</span>
                                     </div>
                                 </button>
                             </div>
                             <div className='div-range-border'>
                                 <button
-
+                                    className="hover"
                                     onClick={() => setInputValue(inputValue + 100000)}
                                 >
                                     <div
                                         className="s-div"
                                     //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
                                     >
-                                        <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">10만원</span>
+                                        <span style={{ fontSize: '2.625rem' }} className='shadow-to-text'>10만원</span>
                                     </div>
                                 </button>
                             </div>
@@ -209,6 +211,7 @@ const MoneyCharge = () => {
                             <div className='div-range-border'>
                                 <button
                                     // style={{  }}
+                                    className="hover"
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 300000)}
                                 >
@@ -219,6 +222,7 @@ const MoneyCharge = () => {
                             </div>
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 500000)}
@@ -227,23 +231,25 @@ const MoneyCharge = () => {
                                         className="s-div"
                                     //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
                                     >
-                                        <span>50만원</span>
+                                        <span className='shadow-to-text'>50만원</span>
                                     </div>
                                 </button>
                             </div>
                             <div className='div-range-border'>
                                 <button
+                                    className="hover"
                                     // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
                                     // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 1000000)}
                                 >
                                     <div className="s-div">
-                                        <span className="font-spoqaMedium tracking-tight text-white">100만원</span>
+                                        <span className='shadow-to-text'>100만원</span>
                                     </div>
                                 </button>
                             </div>
                             <div className='div-range-border' style={{ background: 'linear-gradient(to top, #4d3c0a, #b08b5a 50%, #e7b786)' }}>
                                 <button
+                                    className="hover"
                                     style={{ background: 'linear-gradient(to top, #80603f, #956f4a 50%, #a57b52)' }}
                                     onClick={() => setInputValue(0)}
                                 >
@@ -251,7 +257,7 @@ const MoneyCharge = () => {
                                         className="s-div"
                                     //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
                                     >
-                                        <span style={{ paddingRight: '0' }}>정정</span>
+                                        <span style={{ paddingRight: '0' }} className='shadow-to-text'>정정</span>
                                     </div>
                                 </button>
                             </div>
@@ -357,7 +363,7 @@ const MoneyCharge = () => {
                         <div style={{ display: 'flex', alignItems: 'center', marginTop: '2.2rem', marginBottom: '1.9rem' }}>
                             <div style={{ width: '3.6rem', marginTop: '-3rem' }}>
                                 <img src={info} alt="" style={{
-                                    // width: '2.8125rem'
+                                    width: '2.8125rem'
                                 }} />
                             </div>
                             <p style={{ margin: '0', color: '#828282', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.1rem' }}>첫 충전 보너스 머니를 받으실 경우 아래 버튼을  <span style={{ color: '#4c98ff' }}>선택</span>해 주세요.
@@ -366,11 +372,13 @@ const MoneyCharge = () => {
                         </div>
                         <div style={{ marginLeft: '', display: 'flex' }} className="flex w-full h-full">
                             <div
+                                className='shadow-to-box'
                                 style={{ height: '7.3125rem', width: '22.6rem', padding: '0.1875rem', marginRight: '', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', borderRadius: '0.6rem' }}
                             >
                                 <button
                                     style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
                                     onClick={() => setRadioValue("1")}
+                                    className="hover"
                                 >
                                     <div style={{ display: 'flex', alignItems: 'baseline' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '8.9rem' }}>
@@ -383,12 +391,13 @@ const MoneyCharge = () => {
                                                 />
                                             </label>
                                         </div>
-                                        <span style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>슬롯게임</span>
+                                        <span className='shadow-to-text' style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>슬롯게임</span>
                                     </div>
                                 </button>
 
                             </div>
                             <div
+                                className='shadow-to-box'
                                 style={{
                                     height: '7.3125rem', width: '22.6rem', padding: '0.1875rem',
                                     // marginRight: '0.9375rem',
@@ -399,6 +408,7 @@ const MoneyCharge = () => {
                                 <button
                                     style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
                                     onClick={() => setRadioValue("2")}
+                                    className="hover"
                                 >
                                     <div style={{ display: 'flex', alignItems: 'baseline' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '9.9rem' }}>
@@ -411,17 +421,19 @@ const MoneyCharge = () => {
                                                 />
                                             </label>
                                         </div>
-                                        <span style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>스포츠</span>
+                                        <span className='shadow-to-text' style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>스포츠</span>
                                     </div>
                                 </button>
 
                             </div>
                             <div
+                                className='shadow-to-box'
                                 style={{ height: '7.3125rem', width: '22.6rem', padding: '0.1875rem', marginLeft: '0.8rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', borderRadius: '0.6rem' }}
                             >
                                 <button
                                     style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
                                     onClick={() => setRadioValue("3")}
+                                    className="hover"
                                 >
                                     <div style={{ display: 'flex', alignItems: 'baseline' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '6.5rem' }}>
@@ -434,7 +446,7 @@ const MoneyCharge = () => {
                                                 />
                                             </label>
                                         </div>
-                                        <span style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>키론가상게임</span>
+                                        <span className='shadow-to-text' style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>키론가상게임</span>
                                     </div>
                                 </button>
 
@@ -442,11 +454,13 @@ const MoneyCharge = () => {
                         </div>
                         <div style={{ marginLeft: '', display: 'flex', marginTop: '1rem' }} className="flex w-full h-full">
                             <div
+                                className='shadow-to-box'
                                 style={{ height: '7.3125rem', width: '22.6rem', padding: '0.1875rem', marginRight: '', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', borderRadius: '0.6rem' }}
                             >
                                 <button
                                     style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
                                     onClick={() => setRadioValue("4")}
+                                    className="hover"
                                 >
                                     <div style={{ display: 'flex', alignItems: 'baseline' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '8.9rem' }}>
@@ -459,12 +473,13 @@ const MoneyCharge = () => {
                                                 />
                                             </label>
                                         </div>
-                                        <span style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>피싱게임</span>
+                                        <span className='shadow-to-text' style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>피싱게임</span>
                                     </div>
                                 </button>
 
                             </div>
                             <div
+                                className='shadow-to-box'
                                 style={{
                                     height: '7.3125rem', width: '22.6rem', padding: '0.1875rem',
                                     // marginRight: '0.9375rem',
@@ -475,6 +490,7 @@ const MoneyCharge = () => {
                                 <button
                                     style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #98351e, #bd4d33 50%, #df6345)', paddingTop: '0.8rem' }}
                                     onClick={() => setRadioValue("5")}
+                                    className="hover"
                                 >
                                     <div style={{ display: 'flex', alignItems: 'baseline' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '8.8rem' }}>
@@ -487,7 +503,7 @@ const MoneyCharge = () => {
                                                 />
                                             </label>
                                         </div>
-                                        <span style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>받지않기</span>
+                                        <span className='shadow-to-text' style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>받지않기</span>
                                     </div>
                                 </button>
 
@@ -586,7 +602,7 @@ const MoneyCharge = () => {
 
                     <div className='warning-message'>
                         <div style={{ display: 'flex', alignItems: 'center' }} >
-                            <img src={AlertIcon} alt="" style={{ margin: '-0.2rem 1rem 0 0.8rem' }} />
+                            <img src={AlertIcon} alt="" style={{ margin: '-0.2rem 1rem 0 0.8rem', width: '3.375rem' }} />
                             <div>
                                 <span style={{ color: '#e65454', fontSize: '2.8125rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>알아두세요</span>
 
@@ -604,17 +620,17 @@ const MoneyCharge = () => {
             <div style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '18.7rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '1.6rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', marginTop: '1.8rem' }}>
                 <button
                     style={{ width: "100%", height: '100%', marginBottom: '1.5625rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', borderRadius: '1rem' }}
-                    className="m-auto flex items-center justify-center rounded-2xl hover:opacity-75"
+                    className="hover"
                 >
                     <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                        <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className="font-spoqaMedium tracking-tight text-white">신청하기</span>
+                        <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>신청하기</span>
                     </div>
                 </button>
             </div>
 
             <div style={{ margin: '4.75rem 0 0 12.3rem' }}>
-                <button style={{ background: '#272726', width: '52rem', height: '6.5rem', borderRadius: '3.3rem', paddingTop: '0.15rem' }}>
-                    <span style={{ color: '#ad9e8c', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>은행점검시간</span>
+                <button style={{ background: '#272726', width: '52rem', height: '6.5rem', borderRadius: '3.3rem', paddingTop: '0.15rem' }} className="hover">
+                    <span className='shadow-to-text' style={{ color: '#ad9e8c', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>은행점검시간</span>
                 </button>
             </div>
 

@@ -41,7 +41,7 @@ const CardContent = ({
     };
 
     return (
-        <>
+        <div className='cardContent'>
             <div style={{ margin: '1.5rem', marginBottom: '0', marginTop: withInput ? (secondCard ? '2.1rem' : '2.23rem') : '2.0625rem', display: 'flex', justifyContent: withUploadButton || withCancelButton ? 'space-between' : '', alignItems: 'center' }} className={`flex flex-wrap items-center h-full  ${withUploadButton || withCancelButton ? 'justify-between' : ''}`}>
 
                 <div style={{ width: '', background: '', lineHeight: '1.5', display: 'flex', alignItems: 'center' }} className='flex items-center'>
@@ -60,19 +60,19 @@ const CardContent = ({
                     )}
                     <div>
                         {showBetNumber && (
-                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }}>베팅번호 :</span> 1891241599</div>)}
-                        <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.25rem', fontFamily: 'SpoqaHanSansNeo', color: '#c8c8c8', letterSpacing: '-0.07rem' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>베팅시간 :</span>{time}</div>
+                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem', color: '#c8c8c8' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }}>베팅번호 :</span> 1891241599</div>)}
+                        <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.25rem', fontFamily: 'SpoqaHanSansNeo', color: '#c8c8c8', letterSpacing: '-0.07rem' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', color: '#ccc2b6' }}>베팅시간 :</span>{time}</div>
                         {hasHistory && (
-                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>베팅내역 :</span>{hasHistory}</div>
+                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo', color: '#c8c8c8' }} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }}>베팅내역 :</span>{hasHistory}</div>
                         )}
-                        <div style={{ marginBottom: '0.36rem', display: 'flex', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeo' }} className='flex'>
-                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginRight: '3.8125rem', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>베팅금액 :</span> 5,000</div>
-                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem' }}>배당률 :</span> 4.34</div>
+                        <div style={{ marginBottom: '0.36rem', display: 'flex', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeo', color: '#c8c8c8' }} className='flex'>
+                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginRight: '3.8125rem', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }}>베팅금액 :</span> 5,000</div>
+                            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', color: '#ccc2b6' }}>배당률 :</span> 4.34</div>
                         </div>
                         {isPopup ? (
                             <>
-                                <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginRight: '3.8125rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>예상적중금액 :</span> 20,000</div>
-                                <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem', marginBottom: '0.89rem' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem' }}>당첨금 :</span> <span className={`${winAmount.includes("+") && "text-red-d52e2e"}`} style={{ color: winAmount.includes("+") ? '#e65454' : '#c8c8c8' }}>{winAmount}</span></div>
+                                <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginRight: '3.8125rem', marginBottom: '0.375rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem', color: '#c8c8c8' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }}>예상적중금액 :</span> 20,000</div>
+                                <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem', marginBottom: '0.89rem' }} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.625rem', color: '#ccc2b6' }}>당첨금 :</span> <span className={`${winAmount.includes("+") && "text-red-d52e2e"}`} style={{ color: winAmount.includes("+") ? '#e65454' : '#ccc2b6' }}>{winAmount}</span></div>
                             </>
                         ) : (
                             <div className='flex' style={{ display: 'flex', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeo' }}>
@@ -90,7 +90,7 @@ const CardContent = ({
                         <button
                             onClick={() => canUpload === true && uploadHandler(id)}
                             style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #3a6185, #4575a8 50%, #528bcc)', borderRadius: '0.7rem' }}
-                            className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
+                            className="hover"
                         >
                             <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
                                 <img style={{ width: '3.1875rem', height: '3.25rem', marginTop: '0.1rem' }} className="object-contain" src={UploadIcon} alt="" />
@@ -163,7 +163,7 @@ const CardContent = ({
                     </button>
                 </div>
             )}
-        </>
+        </div>
     )
 }
 
