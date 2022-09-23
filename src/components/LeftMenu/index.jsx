@@ -1,11 +1,10 @@
-/* eslint-disable */
 // @ts-nocheck
 import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from "react-router-dom";
-// import ArrowRight from '../../images/newImages/mainPage/icons/right-arrow-gray.png'
-// import ArrowRightWhite from '../../images/newImages/mainPage/icons/right-arrow-white.png'
+import ArrowRight from '../../assets/myInfo/right-arrow-active.png'
+import ArrowRightWhite from '../../assets/myInfo/right-arrow-active.png'
 import PopupControls from '../popups/PopupControls'
-import ReauthenticatePopup from '../popups/ReauthenticatePopup'
+import ReauthenticatePopup from '../ReauthenticatePopup'
 import { getCookie, setCookie } from '../../utils'
 
 const LeftMenu = ({
@@ -64,45 +63,42 @@ const LeftMenu = ({
         setMouseHover("")
     }
 
-    const EditProfileButton = ({ path, text, icon, iconHighlight, selectedTab }) => {
+    const EditProfileButton = ({ path, text, icon, iconHighlight, selectedTab, width }) => {
         const isProfileActive = pathname.includes(path);
         return (
-            <>
-                {/* <div style={{ padding: '0.1875rem', borderBottomWidth: '0.1875rem', background: '#ff000029', width: '1164px', height: '970px', position: 'fixed', top: '36.25rem', left: '50%', transform: 'translate(-50%)' }} className='w-full border-b border-gray-ececec bg-gray-f7f7f7'>
-                <div style={{ width: '100%', height: '100%', padding: '0 1.875rem', background: '#ffc0cb29', position: 'relative' }}>
-                    <button
-                        style={{ height: '12.375rem', padding: '1.3125rem', paddingRight: 0 }}
-                        className={`${isProfileActive
-                            ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
-                            : ""
-                            } flex w-full items-center rounded-full group`}
-                        onClick={() => {
-                            buttonPressed(path)
-                            setPopupOpen(true)
-                        }}
+            <div style={{ padding: '0 1.875rem', borderBottomWidth: '0.1875rem', background: '#242424', height: '12.375rem', borderBottom: '0.1875rem solid #323231' }} className='w-full border-b border-gray-ececec bg-gray-f7f7f7'>
+                <button
+                    style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', background: 'bottom' }}
+                    className={`${isProfileActive
+                        ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
+                        : ""
+                        } flex w-full items-center rounded-full group`}
+                    onClick={() => {
+                        buttonPressed(path)
+                        setPopupOpen(true)
+                    }}
+                >
+                    <div
+                        className={`${isProfileActive && "shadow-plain9"
+                            } bg-white rounded-full flex items-center justify-center flex-shrink-0`}
+                        style={{ width: '13rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                     >
-                        <div
-                            className={`${isProfileActive && "shadow-plain9"
-                                } bg-white rounded-full flex items-center justify-center flex-shrink-0`}
-                        >
-                            <img
-                                style={{
-                                    height: '', width: '',
-                                    // boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)',
-                                    position: 'absolute', top: '-9.3rem', left: '37%'
-                                }}
-                                className="bg-white rounded-full flex items-center justify-center"
-                                src={icon}
-                                alt="icon" />
-                        </div>
-                        <div style={{ marginLeft: '5rem', marginRight: '4.8125rem' }} className="w-full flex justify-between items-center">
-                            <label style={{ background: 'red' }} className={`${isProfileActive ? "text-white group-hover:text-white" : "text-black group-hover:text-gray-r454545"} font-spoqaMedium text-5xl cursor-pointer tracking-tight`}>{text}</label>
-                        </div>
-                    </button>
-
-                </div>
-            </div> */}
-            </>
+                        <img
+                            style={{
+                                height: '', width: width,
+                                // marginTop: '-1.15rem'
+                                marginLeft: '0.5rem'
+                                // boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)' 
+                            }}
+                            className="bg-white rounded-full flex items-center justify-center"
+                            src={icon}
+                            alt="icon" />
+                    </div>
+                    <div style={{ marginLeft: '2.65rem', marginRight: '4.8125rem', position: 'relative', justifyContent: 'space-between', alignItems: 'center', width: '', letterSpacing: '-0.07rem', marginTop: '0.3rem' }} className="w-full flex justify-between items-center">
+                        <label className={`${isProfileActive ? "text-white group-hover:text-white" : "text-black group-hover:text-gray-r454545"} font-spoqaMedium text-5xl cursor-pointer tracking-tight`}>{text}</label>
+                    </div>
+                </button>
+            </div>
         )
     }
 
@@ -111,29 +107,29 @@ const LeftMenu = ({
         return items.map((item, index) => (
 
             <div key={item.id}>
-                {
-                    // item.text === "회원정보수정" ||
-                    true ? (
-                        <PopupControls
-                            buttonChild={(
-                                <EditProfileButton
-                                    path='/edit'
-                                    text={item.text}
-                                    icon={item.icon}
-                                    iconHighlight={item.iconHighlight}
-                                    selectedTab={selectedTab}
-                                />
-                            )}
-                            isPopupOpen={isPopupOpen}
-                            setPopupOpen={setPopupOpen}
-                        >
-                            <ReauthenticatePopup setPopupOpen={setPopupOpen} setSelectedTab={setSelectedTab} />
-                        </PopupControls>
-                    ) : (
-                        <div style={{ borderBottomWidth: '0.1875rem', height: '12.375rem' }} className={`${index % 2 === 0 ? "bg-white" : "bg-gray-f7f7f7"} border-b border-gray-ececec`}>
-                            <div className='h-full' style={{ padding: '0 1.875rem' }}>
-                                {/* <button
-                                style={{ padding: '1.3125rem', paddingRight: 0 }}
+
+                {item.text === "회원정보수정" ? (
+                    <PopupControls
+                        buttonChild={(
+                            <EditProfileButton
+                                path='/edit'
+                                text={item.text}
+                                icon={item.icon}
+                                iconHighlight={item.iconHighlight}
+                                selectedTab={selectedTab}
+                                width={item.width}
+                            />
+                        )}
+                        isPopupOpen={isPopupOpen}
+                        setPopupOpen={setPopupOpen}
+                    >
+                        <ReauthenticatePopup setPopupOpen={setPopupOpen} setSelectedTab={setSelectedTab} />
+                    </PopupControls>
+                ) : (
+                    <div style={{ borderBottomWidth: '0.1875rem', height: '12.375rem', }} className={`${index % 2 === 0 ? "bg-white" : "bg-gray-f7f7f7"} border-b border-gray-ececec`}>
+                        <div className='h-full' style={{ padding: '0 1.875rem', width: '100%', background: index % 2 === 0 ? '#1e1e1e' : '#242424', height: '12.375rem', borderBottom: '0.1875rem solid #323231' }}>
+                            <button
+                                style={{ padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', background: activeButton === item?.path ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem' }}
                                 className={`${activeButton === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
                                     : ""
@@ -161,17 +157,24 @@ const LeftMenu = ({
                                 }}
                             >
                                 <div
-                                    className={`${activeButton === item?.path && "shadow-plain9"
-                                        } bg-white rounded-full flex items-center justify-center flex-shrink-0`}
+                                    className={`${activeButton === item?.path ? 'menu-active' : ''}`}
+                                    style={{ background: '', width: '13rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                                 >
                                     <img
-                                        style={{ height: '9.4375rem', width: '9.4375rem', boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)' }}
-                                        className="bg-white rounded-full flex items-center justify-center shadow-plain9"
+                                        style={{
+                                            height: 'auto',
+                                            width: item.width,
+                                            marginTop: item.id === 0 ? '-0.9rem' : '-1.15rem'
+                                            // margin: item.margin,
+                                            // width: '7.8rem',
+                                            // boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)' 
+                                        }}
+                                        className="bg-white rounded-full flex items-center justify-center shadow-plain9 first-img"
                                         src={item.icon}
                                         alt="icon" />
                                 </div>
-                                <div style={{ marginLeft: '5rem', marginRight: '4.8125rem' }} className="relative w-full flex justify-between items-center">
-                                    <div className="flex items-center">
+                                <div style={{ marginLeft: '4.8rem', marginRight: '4.8125rem', position: 'relative', justifyContent: 'space-between', alignItems: 'center', width: '100%', letterSpacing: '-0.07rem', marginTop: '-0.7rem' }} className="relative w-full flex justify-between items-center">
+                                    <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
                                         <label
                                             className={`${activeButton === item?.path
                                                 ? "text-white"
@@ -183,24 +186,24 @@ const LeftMenu = ({
                                             {item.text}
                                         </label>
                                         {item.inboxCount && (
-                                            <div style={{ marginLeft: '1.875rem' }} className={`flex items-center justify-center bg-red-notification text-white rounded-full shadow-plain6 ${item.inboxCount.split('').length === 1 ? "w-16 h-16" : "h-16 px-5"}`}>
+                                            <div style={{ marginLeft: '1.875rem' }} className={`flex items-center justify-center bg-red-notification text-white rounded-full shadow-plain6 inbox-count ${item.inboxCount.split('').length === 1 ? "w-16 h-16" : "h-16 px-5"}`}>
                                                 <label style={{ fontSize: '2.8125rem' }} className="font-roboto">{item.inboxCount}</label>
                                             </div>
                                         )}
                                         {item.hasArrow && (
                                             <img
                                                 className="object-contain absolute right-1"
-                                                style={{ width: '1.9375rem', height: '3.1875rem', top: '-0.1rem' }}
+                                                style={{ width: '1.9375rem', height: '3.1875rem', top: '0.2rem', right: '0.3rem', position: 'absolute' }}
                                                 src={activeButton === item?.path ? ArrowRightWhite : ArrowRight}
                                                 alt="icon" />
                                         )}
                                     </div>
                                 </div>
-                            </button> */}
-                            </div>
-
+                            </button>
                         </div>
-                    )}
+
+                    </div>
+                )}
             </div>
         ));
     }

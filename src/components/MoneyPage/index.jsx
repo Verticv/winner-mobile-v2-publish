@@ -29,8 +29,8 @@ import HomePageTopBanner from '../HomePageTopBanner';
 
 
 const tabsArray = [
-    { text: "충전신청", icon: Icon1, activeIcon: activeIcon1, id: 0, path: "/mypage/money/charge", width: '4.8125rem' },
-    { text: "충전내역", icon: Icon2, activeIcon: activeIcon2, id: 1, path: "/mypage/money/charge/history", width: '4.8125rem' },
+    { text: "충전신청", icon: Icon1, activeIcon: activeIcon1, id: 0, path: "/mypage/money/charge", width: '7.875rem' },
+    { text: "충전내역", icon: Icon2, activeIcon: activeIcon2, id: 1, path: "/mypage/money/charge/history", width: '7.875rem' },
 ];
 
 // const LeftMenuSubArray = [

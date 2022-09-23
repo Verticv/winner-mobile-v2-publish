@@ -1,5 +1,5 @@
 import './assets/sass/global.scss';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Outlet,
@@ -31,9 +31,10 @@ import CSCenterPage from './components/pages/CSCenterPage';
 // import PointsPage from './components/PointsPage';
 // import PointsAccumulateHistory from './components/PointsAccumulateHistory';
 import DistributorPage from './components/DistributorPage';
+import AuthenticationPage from './components/AuthenticationPage';
 
 function App() {
-  // const [isAuthenticated, setAuthenticated] = useState(false);
+  const [isAuthenticated, setAuthenticated] = useState(false);
   useEffect(() => {
     const body = document.querySelector('body');
     const html = document.querySelector('html');
@@ -53,12 +54,29 @@ function App() {
 
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
       <Routes>
-        <Route path="/main" element={<MainPage />} />
+        <Route
+          path="/main"
+          element={
+            <>
+              <Header />
+              <MainPage />
+            </>
+          }
+        />
       </Routes>
       <Routes>
-        <Route path="/freeboard" element={<MyPage />} />
+        <Route
+          path="/freeboard"
+          element={
+            <>
+              <Header />
+              <MyPage />
+              <NavBottom />
+            </>
+          }
+        />
       </Routes>
       <Routes>
         <Route
@@ -71,6 +89,7 @@ function App() {
                 alt=""
                 style={{ position: 'absolute', top: '0', opacity: '0.5' }}
               /> */}
+              <Header />
               <HomePageTopBanner
                 pageTitle="게시판"
                 toPath={
@@ -81,6 +100,7 @@ function App() {
                 isFreeboard={true}
               />
               <FreeBoardCompose />
+              <NavBottom />
             </>
           }
         ></Route>
@@ -95,6 +115,7 @@ function App() {
                 alt=""
                 style={{ position: 'absolute', top: '0', opacity: '0.5' }}
               /> */}
+              <Header />
               <HomePageTopBanner
                 pageTitle="게시판"
                 toPath={
@@ -105,6 +126,7 @@ function App() {
                 isFreeboard={true}
               />
               <FreeBoardView />
+              <NavBottom />
             </>
           }
         />
@@ -119,6 +141,7 @@ function App() {
                 alt=""
                 style={{ position: 'absolute', top: '0', opacity: '0.5' }}
               /> */}
+              <Header />
               <HomePageTopBanner
                 pageTitle="게시판"
                 toPath={
@@ -129,13 +152,23 @@ function App() {
                 isFreeboard={true}
               />
               <FreeBoardView2 />
+              <NavBottom />
             </>
           }
         />
       </Routes>
       <Routes>
         {/* cscenter  page*/}
-        <Route path="/cscenter/*" element={<CSCenterPage />} />
+        <Route
+          path="/cscenter/*"
+          element={
+            <>
+              <Header />
+              <CSCenterPage />
+              <NavBottom />
+            </>
+          }
+        />
       </Routes>
       {/* my page */}
       <Routes>
@@ -174,7 +207,21 @@ function App() {
           }
         ></Route>
       </Routes>
-      <NavBottom />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <AuthenticationPage
+                isAuthenticated={isAuthenticated}
+                setAuthenticated={setAuthenticated}
+              />
+              {/* hello */}
+            </>
+          }
+        ></Route>
+      </Routes>
+
       <Outlet />
     </Router>
   );

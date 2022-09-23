@@ -33,8 +33,8 @@ import Sports1 from '../Sports1';
 import TableHeader2 from '../TableHeader2';
 
 const tabsArray = [
-    { text: "스포츠", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/gameresults/all", activeBG: activeBG, inActiveBG: inActiveBG, width: '5.4375rem' },
-    { text: "미니게임", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/mypage/gameresults/minigame/powerball", activeBG: activeBG, inActiveBG: inActiveBG, width: '5.4375rem' },
+    { text: "스포츠", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/gameresults/all", activeBG: activeBG, inActiveBG: inActiveBG, width: '7.875rem' },
+    { text: "미니게임", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/mypage/gameresults/minigame/powerball", activeBG: activeBG, inActiveBG: inActiveBG, width: '7.875rem' },
 ];
 
 // const LeftMenuSubArray = [

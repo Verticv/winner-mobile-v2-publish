@@ -17,8 +17,11 @@ import HistoryTable from '../HistoryTable'
 import couponActive from '../../assets/coupon/coupon-bg.png'
 
 import Icon1 from '../../assets/coupon/coupon1.png'
-import Icon2 from '../../assets/coupon/coupon2-active.png'
+import Icon2 from '../../assets/coupon/coupon2.png'
 import Icon3 from '../../assets/coupon/coupon3.png'
+import Icon1Active from '../../assets/coupon/coupon1-active.png'
+import Icon2Active from '../../assets/coupon/coupon2-active.png'
+import Icon3Active from '../../assets/coupon/coupon3-active.png'
 
 // import subIcon1 from '../../images/newImages/mainPage/coupon/1.png';
 // import subIcon2 from '../../images/newImages/mainPage/coupon/2.png';
@@ -839,9 +842,9 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
     console.log(selectedTab, selectedSubTab)
 
     const tabsArray = [
-        { text: "쿠폰사용", icon: Icon1, activeIcon: Icon1, id: 0, path: "/mypage/coupon/all", activeBG: couponActive, width: '6.75rem' },
-        { text: "쿠폰선물", icon: Icon2, activeIcon: Icon2, id: 1, path: "/mypage/coupon/all/coupon-gift", activeBG: couponActive, width: '5.686875rem' },
-        { text: "쿠폰내역", icon: Icon3, activeIcon: Icon3, id: 2, path: "/mypage/coupon/all/coupon-history", hasSameParent: true, activeBG: couponActive, width: '5.60625rem' },
+        { text: "쿠폰사용", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/coupon/all", activeBG: couponActive, width: '7.875rem' },
+        { text: "쿠폰선물", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/mypage/coupon/all/coupon-gift", activeBG: couponActive, width: '7.875rem' },
+        { text: "쿠폰내역", icon: Icon3, activeIcon: Icon3Active, id: 2, path: "/mypage/coupon/all/coupon-history", hasSameParent: true, activeBG: couponActive, width: '7.875rem' },
     ];
 
     // const LeftMenuSubArray = [

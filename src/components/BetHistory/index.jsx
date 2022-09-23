@@ -3,25 +3,40 @@ import React, { useState } from 'react'
 // import AccountProfileComponent from 'components/common/AccountProfileComponent'
 import HorizontalMenu from '../HorizontalMenu'
 import activeBG from '../../assets/mainPage/points/active-bg.png';
-import icon1 from '../../assets/icon1.png';
+import icon1 from '../../assets/bigIcons/1.png';
 import icon2 from '../../assets/bigIcons/2.png';
 import icon3 from '../../assets/bigIcons/3.png';
-import icon4 from '../../assets/icon4.png';
-import icon5 from '../../assets/icon5.png';
-import icon6 from '../../assets/icon6.png';
-import icon7 from '../../assets/icon7.png';
-import icon8 from '../../assets/icon8.png';
-import icon9 from '../../assets/icon9.png';
+import icon4 from '../../assets/bigIcons/4.png';
+import icon5 from '../../assets/bigIcons/5.png';
+import icon6 from '../../assets/bigIcons/6.png';
+import icon7 from '../../assets/bigIcons/7.png';
+import icon8 from '../../assets/bigIcons/8.png';
+import icon9 from '../../assets/bigIcons/9.png';
+// import icon10 from '../../assets/bigIcons/10.png';
+// import icon4 from '../../assets/icon4.png';
+// import icon5 from '../../assets/icon5.png';
+// import icon6 from '../../assets/icon6.png';
+// import icon7 from '../../assets/icon7.png';
+// import icon8 from '../../assets/icon8.png';
+// import icon9 from '../../assets/icon9.png';
 // import icon10 from '../../assets/icon10.png';
-import icon1Active from '../../assets/icon1-active.png';
-import icon2Active from '../../assets/icon2-active.png';
-import icon3Active from '../../assets/icon3-active.png';
-import icon4Active from '../../assets/icon4-active.png';
-import icon5Active from '../../assets/icon5-active.png';
-import icon6Active from '../../assets/icon6-active.png';
-import icon7Active from '../../assets/icon7-active.png';
-import icon8Active from '../../assets/icon8-active.png';
-import icon9Active from '../../assets/icon9-active.png';
+import icon1Active from '../../assets/bigIcons/1-active.png';
+import icon2Active from '../../assets/bigIcons/2-active.png';
+import icon3Active from '../../assets/bigIcons/3-active.png';
+import icon4Active from '../../assets/bigIcons/4-active.png';
+import icon5Active from '../../assets/bigIcons/5-active.png';
+import icon6Active from '../../assets/bigIcons/6-active.png';
+import icon7Active from '../../assets/bigIcons/7-active.png';
+import icon8Active from '../../assets/bigIcons/8-active.png';
+import icon9Active from '../../assets/bigIcons/9-active.png';
+// import icon2Active from '../../assets/icon2-active.png';
+// import icon3Active from '../../assets/icon3-active.png';
+// import icon4Active from '../../assets/icon4-active.png';
+// import icon5Active from '../../assets/icon5-active.png';
+// import icon6Active from '../../assets/icon6-active.png';
+// import icon7Active from '../../assets/icon7-active.png';
+// import icon8Active from '../../assets/icon8-active.png';
+// import icon9Active from '../../assets/icon9-active.png';
 // import icon10Active from '../../assets/icon10-active.png';
 import SportsBetHistory from '../SportsBetHistory';
 // import img21 from '../../img21.png'
@@ -47,15 +62,15 @@ import { Route, Routes } from 'react-router'
 // import ARGameBetHistory from './betHistory/ARGameBetHistory'
 
 const tabsArray = [
-    { text: "전체", icon: icon1, activeIcon: icon1Active, id: 0, path: "/mypage/bet-history/all", activeBG: activeBG, width: '4.875rem' },
-    { text: "라이브카지노", icon: icon2, activeIcon: icon2Active, id: 1, path: "/mypage/bet-history/all/live-casino", activeBG: activeBG, width: '6.24375rem' },
-    { text: "슬롯", icon: icon3, activeIcon: icon3Active, id: 2, path: "/mypage/bet-history/all/slot-game", activeBG: activeBG, width: '6.2rem' },
-    { text: "스포츠", icon: icon4, activeIcon: icon4Active, id: 3, path: "/mypage/bet-history/all/sports", activeBG: activeBG, width: '5.18625rem' },
-    { text: "e-스포츠", icon: icon5, activeIcon: icon5Active, id: 4, path: "/mypage/bet-history/all/e-sports", activeBG: activeBG, width: '5.3125rem' },
-    { text: "미니게임", icon: icon6, activeIcon: icon6Active, id: 5, path: "/mypage/bet-history/all/minigame", activeBG: activeBG, width: '5.3125rem', subPath: "/mypage/bet-history/all/minigame/powerball", subPath2: "/mypage/bet-history/all/minigame/powerladder", subPath3: "/mypage/bet-history/all/minigame/speedkino", subPath4: "/mypage/bet-history/all/minigame/kinoladder" },
-    { text: "키론가상게임", icon: icon7, activeIcon: icon7Active, id: 6, path: "/mypage/bet-history/all/ar-game", activeBG: activeBG, width: '5.3125rem', },
-    { text: "피싱게임", icon: icon8, activeIcon: icon8Active, id: 7, path: "/mypage/bet-history/all/fishing-game", activeBG: activeBG, width: '5.3125rem', },
-    { text: "로터리게임", icon: icon9, activeIcon: icon9Active, id: 8, path: "/mypage/bet-history/all/lottery-game", activeBG: activeBG, width: '5.3125rem', }
+    { text: "전체", icon: icon1, activeIcon: icon1Active, id: 0, path: "/mypage/bet-history/all", activeBG: activeBG },
+    { text: "라이브카지노", icon: icon2, activeIcon: icon2Active, id: 1, path: "/mypage/bet-history/all/live-casino", activeBG: activeBG },
+    { text: "슬롯", icon: icon3, activeIcon: icon3Active, id: 2, path: "/mypage/bet-history/all/slot-game", activeBG: activeBG },
+    { text: "스포츠", icon: icon4, activeIcon: icon4Active, id: 3, path: "/mypage/bet-history/all/sports", activeBG: activeBG },
+    { text: "e-스포츠", icon: icon5, activeIcon: icon5Active, id: 4, path: "/mypage/bet-history/all/e-sports", activeBG: activeBG },
+    { text: "미니게임", icon: icon6, activeIcon: icon6Active, id: 5, path: "/mypage/bet-history/all/minigame", activeBG: activeBG, subPath: "/mypage/bet-history/all/minigame/powerball", subPath2: "/mypage/bet-history/all/minigame/powerladder", subPath3: "/mypage/bet-history/all/minigame/speedkino", subPath4: "/mypage/bet-history/all/minigame/kinoladder" },
+    { text: "키론가상게임", icon: icon7, activeIcon: icon7Active, id: 6, path: "/mypage/bet-history/all/ar-game", activeBG: activeBG },
+    { text: "피싱게임", icon: icon8, activeIcon: icon8Active, id: 7, path: "/mypage/bet-history/all/fishing-game", activeBG: activeBG },
+    { text: "로터리게임", icon: icon9, activeIcon: icon9Active, id: 8, path: "/mypage/bet-history/all/lottery-game", activeBG: activeBG }
 ];
 
 // const LeftMenuBetHistoryArray = [

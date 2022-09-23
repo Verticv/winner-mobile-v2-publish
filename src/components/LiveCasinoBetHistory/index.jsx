@@ -4,25 +4,26 @@ import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 // import ScrollButton from '../ScrollButton'
 import SelectAllButton from '../SelectAllButton'
-import Icon1 from '../../assets/myPage/second-btns/icon1.png'
-import Icon2 from '../../assets/myPage/second-btns/icon2.png'
-import Icon3 from '../../assets/myPage/second-btns/icon3.png'
-import Icon4 from '../../assets/myPage/second-btns/icon4.png'
-import Icon7 from '../../assets/myPage/second-btns/icon4.png'
-import Icon8 from '../../assets/myPage/second-btns/icon4.png'
-import Icon9 from '../../assets/myPage/second-btns/icon4.png'
+import Icon1 from '../../assets/myPage/second-btns/1.png'
+import Icon2 from '../../assets/myPage/second-btns/2.png'
+import Icon3 from '../../assets/myPage/second-btns/3.png'
+import Icon4 from '../../assets/myPage/second-btns/4.png'
+// import Icon7 from '../../assets/myPage/second-btns/5.png'
+import Icon8 from '../../assets/myPage/second-btns/6.png'
+import Icon9 from '../../assets/myPage/second-btns/7.png'
+import Icon10 from '../../assets/myPage/second-btns/8.png'
 import activeBG from '../../assets/myPage/second-btns/active-bg.png'
 import HorizontalMenu from '../HorizontalMenu'
 // import img22 from '../../img22.png'
 
 const subTabsArray = [
-    { text: "전체", icon: Icon1, id: 0, activeBG: activeBG, marginIcon: '1rem', width: '5.625rem' },
-    { text: "에볼루션", icon: Icon2, id: 1, activeBG: activeBG, width: '14.6875rem' },
-    { text: "프레그메틱플레이", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '-1rem', width: '12.49875rem' },
-    { text: "로얄지", icon: Icon4, id: 3, activeBG: activeBG, width: '13.061875rem' },
-    { text: "드림게이밍", icon: Icon7, id: 4, activeBG: activeBG, width: '13.061875rem' },
-    { text: "섹시게이밍", icon: Icon8, id: 5, activeBG: activeBG, width: '13.061875rem' },
-    { text: "빅게이밍", icon: Icon9, id: 6, activeBG: activeBG, width: '13.061875rem' },
+    { text: "전체", icon: Icon1, id: 0, activeBG: activeBG, marginIcon: '1rem', width: '19.375rem' },
+    { text: "에볼루션", icon: Icon2, id: 1, activeBG: activeBG, width: '19.375rem' },
+    { text: "프레그메틱플레이", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '-1rem', width: '19.375rem' },
+    { text: "로얄지", icon: Icon4, id: 3, activeBG: activeBG, width: '19.375rem' },
+    { text: "드림게이밍", icon: Icon8, id: 4, activeBG: activeBG, width: '19.375rem' },
+    { text: "섹시게이밍", icon: Icon9, id: 5, activeBG: activeBG, width: '19.375rem' },
+    { text: "빅게이밍", icon: Icon10, id: 6, activeBG: activeBG, width: '19.375rem' },
 ];
 
 // 베팅번호 => number
