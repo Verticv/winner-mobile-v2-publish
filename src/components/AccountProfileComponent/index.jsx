@@ -180,7 +180,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
                             marginTop: '0.15rem', borderRadius: '0.7rem', marginLeft: '0.5rem'
                         }} className="shadow-to-box hover">
                             <div style={{ marginRight: '1.8rem', marginTop: '0.1375rem', marginLeft: '-0.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="w-16 h-16 rounded-full flex items-center justify-center">
-                                <img className="" src={Logout} alt="logout"></img>
+                                <img className="" src={Logout} alt="logout" style={{ width: '5.625rem' }}></img>
                             </div>
                             <label style={{ marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', fontSize: '3rem' }} className="shadow-to-text" onClick={() => {
                                 navigate("/")
