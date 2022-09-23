@@ -30,6 +30,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
     const [isCountryOpen, setCountryOpen] = useState();
     const [winImage, setWinImage] = useState(big_1 || big_2);
     const [country, setCountry] = useState("KR");
+    console.log(setCountry());
 
     useEffect(() => {
         setWinImage(big_3)

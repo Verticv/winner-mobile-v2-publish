@@ -5,7 +5,7 @@ import LoginIcon from '../../assets/myInfo/login.png'
 import userName from '../../assets/myInfo/userName.png'
 import password from '../../assets/myInfo/password.png'
 
-import img from '../../img20.png'
+// import img from '../../img20.png'
 
 const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
 
