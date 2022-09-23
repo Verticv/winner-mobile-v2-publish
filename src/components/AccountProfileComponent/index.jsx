@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import DropDownControls from "../MyPageCountriesDropDownControls";
@@ -30,7 +31,6 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
     const [isCountryOpen, setCountryOpen] = useState();
     const [winImage, setWinImage] = useState(big_1 || big_2);
     const [country, setCountry] = useState("KR");
-    console.log(setCountry());
 
     useEffect(() => {
         setWinImage(big_3)
