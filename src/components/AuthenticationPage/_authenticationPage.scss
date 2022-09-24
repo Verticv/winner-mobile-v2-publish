@@ -1,0 +1,50 @@
+.AuthenticationPage {
+    .first-dropdown {
+        border-radius: 0.7rem;
+
+        .sort-by-div {
+            width: 16.6rem !important;
+            background: #191817;
+            border-radius: 0.6rem;
+
+            div {
+                margin-left: 1.3rem;
+
+                p {
+                    margin: 2rem 0 1.7rem 0;
+                    color: #c8c8c8;
+                    font-size: 3rem;
+                    font-family: 'SpoqaHanSansNeoMedium';
+                }
+
+
+            }
+
+            img {
+                margin-right: 1.9rem !important;
+                margin-top: 0.2rem !important;
+            }
+        }
+
+        .select-overlay {
+            // top: 67rem;
+            // left: 11rem;
+            width: 16rem;
+            height: 7.3rem;
+            
+        }
+    }
+
+    .second-dropdown {
+        .sort-by-div {
+            width: 25.75rem !important;
+            background: #191817;
+            border-radius: 0.6rem;
+        }
+
+        .select-overlay {
+            // top: 84rem;
+            width: 25.3rem;
+        }
+    }
+}

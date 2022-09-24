@@ -19,9 +19,19 @@ import ContactCompose from "../ContactCompose";
 import Faq from "../Faq";
 import MinigamePolicy from "../MinigamePolicy";
 import SportsGamePolicy from "../SportsGamePolicy";
+import AccountProfileComponent from '../AccountProfileComponent'
+import LeftMenu from "../LeftMenu";
+import Logo from "../../assets/myInfo/Logo.png";
 // import img from '../../img10.png'
+import subIcon1 from '../../assets/bigIcons/leftMenu/21.png';
+import subIcon2 from '../../assets/bigIcons/leftMenu/22.png';
+import subIcon3 from '../../assets/bigIcons/leftMenu/23.png';
+// import subIcon4 from '../../assets/bigIcons/leftMenu/24.png';
+import subIcon5 from '../../assets/bigIcons/leftMenu/25.png';
+import Header from "../Header";
+import NavBottom from "../NavBottom";
 
-export default function Test() {
+export default function Test({ isAuthenticated, setAuthenticated }) {
 
     const tabsArray = [
         { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },
@@ -30,6 +40,36 @@ export default function Test() {
         { text: "계좌문의", icon: Icon4, activeIcon: Icon4Active, id: 3, path: "#", width: '5.1875rem', marginLeft: '0.1rem' },
         { text: "베팅규정", icon: Icon5, activeIcon: Icon5Active, id: 4, path: "/cscenter/all/policy/sportsgame/soccer", hasSameParent: true, width: '4.875rem', marginLeft: '0.1rem' },
     ];
+    const LeftMenuSubArray = [
+        {
+            text: "문의하기",
+            icon: subIcon1,
+            id: 0,
+            path: "/cscenter/all/contact/all",
+            width: '9.9375rem'
+        },
+        {
+            text: "공지사항",
+            icon: subIcon2,
+            id: 1,
+            path: "/cscenter/all/announcement",
+            width: '9.9375rem'
+        },
+        {
+            text: "자주묻는질문",
+            icon: subIcon3,
+            id: 2,
+            path: "/cscenter/all/faq",
+            width: '9.9375rem'
+        },
+        {
+            text: "베팅규정",
+            icon: subIcon5,
+            id: 3,
+            path: "/cscenter/all/policy/sportsgame/soccer",
+            width: '9.9375rem'
+        }
+    ]
 
     const location = useLocation();
     const [selectedTab, setSelectedTab] = useState(location.pathname)
@@ -60,103 +100,108 @@ export default function Test() {
     //     </div>
 
     // )
-    return (
-        <Routes>
-            <Route index element={<>
-                {/* <AccountProfileComponent isAuthenticated={isAuthenticated} />
-                <div
-                    style={{ marginTop: "1.875rem", marginBottom: "36.375rem" }}
-                    className="flex w-full"
-                >
+
+    const MyInfo = () => {
+        return (
+            <>
+                <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu
                         selectedTab={selectedTab}
                         setSelectedTab={setSelectedTab}
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
-                    // array={LeftMenuSubArray}
+                        array={LeftMenuSubArray}
                     />
                 </div>
-                <div className="flex justify-center mb-40">
-                    <img
-                        style={{ width: "22.3125rem" }}
-                        className="object-contain"
-                        src={Logo}
-                        alt="logo"
-                    />
-                </div> */}
+                <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
+                    <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
+                </div>
+            </>
+        )
+    }
+    return (
+        <Routes>
+            <Route index element={<>
+                <MyInfo />
             </>} />
             <Route
                 path="/all/*"
                 element={
-                    <Routes>
-                        {/* <Route index element={<h2>H2</h2>} /> */}
-                        <Route
-                            path="/contact/all/*"
-                            element={
-                                <>
-                                    <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-                                    <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
-                                    <Contact />
-                                </>
-                            }
-                        />
-                        <Route path="contact/view/*"
-                            element={
-                                <>
-                                    <HomePageTopBanner
-                                        pageTitle="문의하기"
-                                        toPath="/cscenter/all/contact/all"
-                                    />
-                                    <ContactView />
-                                </>
-                            }
-                        />
-                        <Route path="contact/compose"
-                            element={
-                                <>
-                                    <HomePageTopBanner
-                                        pageTitle="문의하기"
-                                        toPath="/cscenter/all/contact/all"
-                                    />
-                                    <ContactCompose />
-                                </>
-                            }
-                        />
-                        {/* <Route path="/announcement"
+                    <>
+                        <Header />
+                        <Routes>
+                            {/* <Route index element={<h2>H2</h2>} /> */}
+                            <Route
+                                path="/contact/all/*"
+                                element={
+                                    <>
+
+                                        <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        <Contact />
+                                    </>
+                                }
+                            />
+                            <Route path="contact/view/*"
+                                element={
+                                    <>
+                                        <HomePageTopBanner
+                                            pageTitle="문의하기"
+                                            toPath="/cscenter/all/contact/all"
+                                        />
+                                        <ContactView />
+                                    </>
+                                }
+                            />
+                            <Route path="contact/compose"
+                                element={
+                                    <>
+                                        <HomePageTopBanner
+                                            pageTitle="문의하기"
+                                            toPath="/cscenter/all/contact/all"
+                                        />
+                                        <ContactCompose />
+                                    </>
+                                }
+                            />
+                            {/* <Route path="/announcement"
                             element={ }
                         /> */}
-                        {/* <Route path="/announcement/view"
+                            {/* <Route path="/announcement/view"
                             element={ }
                         /> */}
-                        <Route path="/faq"
-                            element={
-                                <>
+                            <Route path="/faq"
+                                element={
+                                    <>
+                                        <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        <div style={{ marginBottom: '19.625rem' }}>
+                                            <Faq />
+                                        </div>
+                                    </>
+                                }
+                            />
+                            <Route path="/policy/sportsgame/*"
+                                element={<>
+                                    {/* <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
                                     <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                     <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
-                                    <div style={{ marginBottom: '19.625rem' }}>
-                                        <Faq />
-                                    </div>
-                                </>
-                            }
-                        />
-                        <Route path="/policy/sportsgame/*"
-                            element={<>
-                                {/* <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
-                                <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-                                <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
-                                <SportsGamePolicy setSelectedTab={setSelectedTab} />
-                            </>}
-                        />
-                        <Route path="/policy/minigame/*"
-                            element={
-                                <>
-                                    <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-                                    <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
-                                    <MinigamePolicy />
-                                </>
-                            }
-                        />
-                    </Routes>
+                                    <SportsGamePolicy setSelectedTab={setSelectedTab} />
+                                </>}
+                            />
+                            <Route path="/policy/minigame/*"
+                                element={
+                                    <>
+                                        <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        <MinigamePolicy />
+                                    </>
+                                }
+                            />
+                        </Routes>
+                        <NavBottom />
+                    </>
                 }
             />
         </Routes>

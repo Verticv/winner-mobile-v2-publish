@@ -20,38 +20,48 @@ import Icon3Active from '../../assets/mainPage/points/3-active.png';
 import activeBG from '../../assets/mainPage/points/active-bg.png';
 import { Route, Routes } from 'react-router-dom';
 import PointsAccumulateHistory from '../PointsAccumulateHistory';
-// import subIcon1 from '../images/newImages/mainPage/points/1.png';
+import Logo from "../../assets/myInfo/Logo.png";
+import AccountProfileComponent from '../AccountProfileComponent'
+import LeftMenu from "../LeftMenu";
+import subIcon1 from '../../assets/bigIcons/leftMenu/13.png';
+import subIcon2 from '../../assets/bigIcons/leftMenu/14.png';
+import subIcon3 from '../../assets/bigIcons/leftMenu/15.png';
+import Header from '../Header';
+import NavBottom from '../NavBottom';
 // import subIcon2 from '../images/newImages/mainPage/points/2.png';
 // import subIcon3 from '../images/newImages/mainPage/points/3.png';
 // import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
 
 
 const tabsArray = [
-    { text: "포인트전환신청", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/points/all", activeBG: activeBG, width: '5.25rem' },
-    { text: "포인트적립내역", icon: Icon2, id: 1, activeIcon: Icon2Active, path: "/mypage/points/all/points-accumulate-history", activeBG: activeBG, width: '6.1875rem' },
-    { text: "포인트전환내역", icon: Icon3, id: 2, activeIcon: Icon3Active, path: "/mypage/points/all/points-transaction-history", activeBG: activeBG, width: '5.60625rem' },
+    { text: "포인트전환신청", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/points/all", activeBG: activeBG, width: '7.875rem' },
+    { text: "포인트적립내역", icon: Icon2, id: 1, activeIcon: Icon2Active, path: "/mypage/points/all/points-accumulate-history", activeBG: activeBG, width: '7.875rem' },
+    { text: "포인트전환내역", icon: Icon3, id: 2, activeIcon: Icon3Active, path: "/mypage/points/all/points-transaction-history", activeBG: activeBG, width: '7.875rem' },
 ];
 
-// const LeftMenuSubArray = [
-//     {
-//         text: "포인트전환신청",
-//         icon: subIcon1,
-//         id: 0,
-//         path: "/mypage/points/all",
-//     },
-//     {
-//         text: "포인트적립내역",
-//         icon: subIcon2,
-//         id: 1,
-//         path: "/mypage/points/all/points-accumulate-history",
-//     },
-//     {
-//         text: "포인트전환내역",
-//         icon: subIcon3,
-//         id: 2,
-//         path: "/mypage/points/all/points-transaction-history",
-//     }
-// ]
+const LeftMenuSubArray = [
+    {
+        text: "포인트전환신청",
+        icon: subIcon1,
+        id: 0,
+        path: "/mypage/points/all",
+        width: '9.9375rem'
+    },
+    {
+        text: "포인트적립내역",
+        icon: subIcon2,
+        id: 1,
+        path: "/mypage/points/all/points-accumulate-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "포인트전환내역",
+        icon: subIcon3,
+        id: 2,
+        path: "/mypage/points/all/points-transaction-history",
+        width: '9.9375rem'
+    }
+]
 
 
 const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
@@ -106,13 +116,39 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
     //         </div>
     //     </>
     // )
+    const MyInfo = () => {
+        return (
+            <>
+                <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
+                    <LeftMenu
+                        selectedTab={selectedTab}
+                        setSelectedTab={setSelectedTab}
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        array={LeftMenuSubArray}
+                    />
+                </div>
+                <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
+                    <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
+                </div>
+            </>
+        )
+    }
 
     return (
         <div style={{}} className="relative w-full flex flex-col justify-center overflow-hidden">
 
             <Routes>
+                <Route index element={
+                    <>
+                        <MyInfo />
+                    </>
+                }
+                />
                 <Route path='/all/*'
                     element={<>
+                        <Header />
                         <HomePageTopBanner pageTitle='포인트' toPath='/mypage/points' />
                         <div className='mypage-points'>
                             <HorizontalMenu1 withSmallMarginTop itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
@@ -136,6 +172,7 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
                                 }
                             />
                         </Routes>
+                        <NavBottom />
                     </>}
                 >
                 </Route>

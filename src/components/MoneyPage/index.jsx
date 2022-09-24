@@ -25,30 +25,39 @@ import Icon1 from '../../assets/mainPage/icons/Icon1.png';
 // import subIcon2 from '../images/newImages/mainPage/money/2.png';
 // import Logo from "../images/newImages/mainPage/icons/logo.png";
 import HomePageTopBanner from '../HomePageTopBanner';
+import Logo from "../../assets/myInfo/Logo.png";
+import LeftMenu from "../LeftMenu";
+import AccountProfileComponent from '../AccountProfileComponent'
 // import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
+import subIcon1 from '../../assets/bigIcons/leftMenu/11.png';
+import subIcon2 from '../../assets/bigIcons/leftMenu/12.png';
+import Header from '../Header';
+import NavBottom from '../NavBottom';
 
 
 const tabsArray = [
-    { text: "충전신청", icon: Icon1, activeIcon: activeIcon1, id: 0, path: "/mypage/money/charge", width: '4.8125rem' },
-    { text: "충전내역", icon: Icon2, activeIcon: activeIcon2, id: 1, path: "/mypage/money/charge/history", width: '4.8125rem' },
+    { text: "충전신청", icon: Icon1, activeIcon: activeIcon1, id: 0, path: "/mypage/money/charge", width: '7.875rem' },
+    { text: "충전내역", icon: Icon2, activeIcon: activeIcon2, id: 1, path: "/mypage/money/charge/history", width: '7.875rem' },
 ];
 
-// const LeftMenuSubArray = [
-//     {
-//         text: "충전신청",
-//         icon: subIcon1,
-//         id: 0,
-//         path: "/mypage/money/charge",
-//         mainPath: "/mypage/money",
-//     },
-//     {
-//         text: "충전내역",
-//         icon: subIcon2,
-//         id: 1,
-//         path: "/mypage/money/charge/history",
-//         mainPath: "/mypage/money",
-//     }
-// ];
+const LeftMenuSubArray = [
+    {
+        text: "충전신청",
+        icon: subIcon1,
+        id: 0,
+        path: "/mypage/money/charge",
+        mainPath: "/mypage/money",
+        width: '9.9375rem'
+    },
+    {
+        text: "충전내역",
+        icon: subIcon2,
+        id: 1,
+        path: "/mypage/money/charge/history",
+        mainPath: "/mypage/money",
+        width: '9.9375rem'
+    }
+];
 
 
 
@@ -64,6 +73,26 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     console.log(selectedSubTab, selectedTab)
+
+    const MyInfo = () => {
+        return (
+            <>
+                <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
+                    <LeftMenu
+                        selectedTab={selectedTab}
+                        setSelectedTab={setSelectedTab}
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        array={LeftMenuSubArray}
+                    />
+                </div>
+                <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
+                    <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
+                </div>
+            </>
+        )
+    }
 
     return (
         <div style={{ maxWidth: '1242px', paddingBottom: '16rem' }} className="relative w-full flex flex-col justify-center overflow-hidden money-page">
@@ -87,9 +116,16 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
             </Routes> */}
 
             <Routes>
+                <Route index element={
+                    <>
+                        <MyInfo />
+                    </>
+                }
+                />
                 <Route path="/charge"
                     element={
                         <>
+                        <Header />
                             <HomePageTopBanner pageTitle='머니충전' toPath='/mypage/money' />
 
                             <div className="flex flex-col items-start limit:items-center w-full h-full">
@@ -111,6 +147,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                             </div> */}
                                 </div>
                             </div>
+                            <NavBottom />
                         </>
                     }
                 >

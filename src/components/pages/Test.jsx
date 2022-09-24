@@ -9,29 +9,35 @@ import PointsPage from "../PointsPage";
 // import WinLoseSettlement from "pages/WinLoseSettlement";
 import LeftMenu from "../LeftMenu";
 // import EditInfo from 'components/myPage/EditInfo';
-// import AccountProfileComponent from 'components/common/AccountProfileComponent'
+import AccountProfileComponent from '../AccountProfileComponent'
 // import BetHistory from 'components/myPage/BetHistory'
 import CouponUsage from '../CouponUsage';
 import BetHistory from '../BetHistory';
 // import Inbox from 'components/myPage/Inbox'
 // import InboxView from 'components/myPage/InboxView'
 import GameResultsPage from '../GameResultsPage'
-// import Icon1 from "../images/newImages/mainPage/icons/1.png";
-// import Icon2 from "../images/newImages/mainPage/icons/2.png";
-// import Icon3 from "../images/newImages/mainPage/icons/3.png";
-// import Icon4 from "../images/newImages/mainPage/icons/4.png";
-// import Icon5 from "../images/newImages/mainPage/icons/5.png";
-// import Icon6 from "../images/newImages/mainPage/icons/6.png";
-// import Icon7 from "../images/newImages/mainPage/icons/7.png";
-// import Icon8 from "../images/newImages/mainPage/icons/8.png";
-// import Icon9 from "../images/newImages/mainPage/icons/9.png";
-// import Icon10 from "../images/newImages/mainPage/icons/10.png";
-// import Icon11 from "../images/newImages/mainPage/icons/11.png";
-// import Icon12 from "../images/newImages/mainPage/icons/12.png";
-// import Icon13 from "../images/newImages/mainPage/icons/13.png";
-import Icon14 from "../../assets/mainPage/icons/edit-popup.png";
-// import Logo from "../images/newImages/mainPage/icons/logo.png";
+import Icon1 from "../../assets/myInfo/1.png";
+import Icon2 from "../../assets/myInfo/2.png";
+import Icon3 from "../../assets/myInfo/3.png";
+import Icon4 from "../../assets/myInfo/4.png";
+import Icon5 from "../../assets/myInfo/5.png";
+import Icon6 from "../../assets/myInfo/6.png";
+import Icon7 from "../../assets/myInfo/7.png";
+import Icon8 from "../../assets/myInfo/8.png";
+import Icon9 from "../../assets/myInfo/9.png";
+import Icon10 from "../../assets/myInfo/10.png";
+import Icon11 from "../../assets/myInfo/11.png";
+import Icon12 from "../../assets/myInfo/12.png";
+import Icon13 from "../../assets/myInfo/13.png";
+import Icon14 from "../../assets/myInfo/14.png";
+import Logo from "../../assets/myInfo/Logo.png";
+
 // import Freeboard from "./Freeboard";
+// import img from '../../img27.png'
+import Header from "../Header";
+import NavBottom from "../NavBottom";
+import FreeBoardMain from "../FreeBoardMain";
+import HomePageTopBanner from "../HomePageTopBanner";
 
 
 const MyPage = ({ setAuthenticated, isAuthenticated }) => {
@@ -42,106 +48,119 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
 
 
     const LeftMenuArray = [
-        // {
-        //     text: "베팅내역",
-        //     icon: Icon1,
-        //     id: 0,
-        //     path: "/mypage/bet-history",
-        //     mainPath: "/mypage",
-        //     hasArrow: true,
-        // },
-        // {
-        //     text: "머니충전",
-        //     icon: Icon2,
-        //     id: 1,
-        //     path: "/mypage/money",
-        //     mainPath: "#",
-        //     hasArrow: true,
-        // },
-        // {
-        //     text: "머니환전",
-        //     icon: Icon3,
-        //     id: 2,
-        //     path: "/mypage/money/exchange",
-        //     mainPath: "#",
-        //     hasArrow: true,
-        // },
-        // {
-        //     text: "포인트전환",
-        //     icon: Icon4,
-        //     id: 3,
-        //     path: "/mypage/points",
-        //     mainPath: "#",
-        //     hasArrow: true,
-        // },
-        // {
-        //     text: "총판페이지",
-        //     icon: Icon5,
-        //     id: 4,
-        //     path: "/distributor-page",
-        //     mainPath: "#",
-        // },
-        // {
-        //     text: "윈루즈정산",
-        //     icon: Icon6,
-        //     id: 5,
-        //     path: "/mypage/win-lose-settlement",
-        //     mainPath: "#",
-        // },
-        // {
-        //     text: "라이브영상",
-        //     icon: Icon7,
-        //     id: 6,
-        //     path: "",
-        //     mainPath: "",
-        // },
-        // {
-        //     text: "경기결과",
-        //     icon: Icon8,
-        //     id: 7,
-        //     path: "/mypage/gameresults",
-        //     mainPath: "#",
-        //     hasArrow: true,
-        // },
-        // {
-        //     text: "게시판",
-        //     icon: Icon9,
-        //     id: 8,
-        //     path: "/mypage/freeboard",
-        //     mainPath: "#",
-        // },
-        // {
-        //     text: "쿠폰관리",
-        //     icon: Icon10,
-        //     id: 9,
-        //     path: "/mypage/coupon",
-        //     inboxCount: "1",
-        //     mainPath: "#",
-        //     hasArrow: true,
-        // },
-        // {
-        //     text: "쪽지관리",
-        //     icon: Icon11,
-        //     id: 10,
-        //     path: "/mypage/inbox",
-        //     inboxCount: "20",
-        //     mainPath: "#",
-        // },
-        // {
-        //     text: "고객센터",
-        //     icon: Icon12,
-        //     id: 11,
-        //     path: "/cscenter",
-        //     mainPath: "#",
-        //     hasArrow: true,
-        // },
-        // {
-        //     text: "계좌문의",
-        //     icon: Icon13,
-        //     id: 12,
-        //     path: "",
-        //     mainPath: "#",
-        // },
+        {
+            text: "베팅내역",
+            icon: Icon1,
+            id: 0,
+            path: "/mypage/bet-history",
+            mainPath: "/mypage",
+            hasArrow: true,
+            width: '7.8rem',
+        },
+        {
+            text: "머니충전",
+            icon: Icon2,
+            id: 1,
+            path: "/mypage/money",
+            mainPath: "#",
+            hasArrow: true,
+            width: '6.046875rem'
+        },
+        {
+            text: "머니환전",
+            icon: Icon3,
+            id: 2,
+            path: "/mypage/money/exchange",
+            mainPath: "#",
+            hasArrow: true,
+            width: '6.046875rem'
+        },
+        {
+            text: "포인트전환",
+            icon: Icon4,
+            id: 3,
+            path: "/mypage/points",
+            mainPath: "#",
+            hasArrow: true,
+            width: '4.3125rem'
+        },
+        {
+            text: "총판페이지",
+            icon: Icon5,
+            id: 4,
+            path: "/distributor-page",
+            mainPath: "#",
+            width: '5.0625rem'
+        },
+        {
+            text: "윈루즈정산",
+            icon: Icon6,
+            id: 5,
+            path: "/mypage/win-lose-settlement",
+            mainPath: "#",
+            width: '6.25rem'
+        },
+        {
+            text: "라이브영상",
+            icon: Icon7,
+            id: 6,
+            path: "",
+            mainPath: "",
+            width: '5.75rem'
+        },
+        {
+            text: "경기결과",
+            icon: Icon8,
+            id: 7,
+            path: "/mypage/gameresults",
+            mainPath: "#",
+            hasArrow: true,
+            width: '6.0625rem'
+        },
+        {
+            text: "게시판",
+            icon: Icon9,
+            id: 8,
+            path: "/mypage/freeboard",
+            mainPath: "#",
+            width: '7rem'
+        },
+        {
+            text: "쿠폰관리",
+            icon: Icon10,
+            id: 9,
+            path: "/mypage/coupon",
+            inboxCount: "1",
+            mainPath: "#",
+            hasArrow: true,
+            width: '7.25rem'
+        },
+        {
+            text: "쪽지관리",
+            icon: Icon11,
+            id: 10,
+            path: "/mypage/inbox",
+            inboxCount: "20",
+            mainPath: "#",
+            width: '6.3125rem'
+        },
+        {
+            text: "고객센터",
+            icon: Icon12,
+            id: 11,
+            path: "/cscenter",
+            mainPath: "#",
+            hasArrow: true,
+            width: '6.5rem'
+        },
+        {
+            text: "계좌문의",
+            icon: Icon13,
+            id: 12,
+            path: "",
+            mainPath: "#",
+            width: '6.25rem'
+        },
         {
             text: "회원정보수정",
             icon: Icon14,
@@ -156,19 +175,19 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
         console.log(`location.state`, location.state)
         return (
             <>
-                {/* <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
-                <div style={{ marginTop: '1.875rem', marginBottom: '36.375rem' }} className="flex w-full"> */}
-                <LeftMenu
-                    selectedTab={selectedTab}
-                    setSelectedTab={setSelectedTab}
-                    selectedSubTab={selectedSubTab}
-                    setSelectedSubTab={setSelectedSubTab}
-                    array={LeftMenuArray}
-                />
-                {/* </div>
-                <div className="w-full flex justify-center mb-40">
-                    <img style={{ width: '22.3125rem' }} className="object-contain" src={Logo} alt="logo" />
-                </div> */}
+                <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
+                    <LeftMenu
+                        selectedTab={selectedTab}
+                        setSelectedTab={setSelectedTab}
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        array={LeftMenuArray}
+                    />
+                </div>
+                <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
+                    <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
+                </div>
             </>
         )
     }
@@ -178,19 +197,28 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             <Route index element={
                 <>
                     <MyInfo />
-                    {/* <h1>hello</h1> */}
                 </>
             }
             />
             <Route path="/bet-history/*"
                 element={
-                    <BetHistory isAuthenticated={isAuthenticated} />
+                    <>
+                        {/* <Header /> */}
+                        <BetHistory isAuthenticated={isAuthenticated} />
+                        {/* <NavBottom /> */}
+                    </>
                 }
             >
             </Route>
             {/* <Routes> */}
             <Route path="/money/*"
-                element={<MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated} />}
+                element={
+                    <>
+                        {/* <Header /> */}
+                        <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
+                        {/* <NavBottom /> */}
+                    </>
+                }
             />
             {/* </Route> */}
             {/* </Routes> */}
@@ -199,7 +227,11 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             </Route> */}
             <Route path="/points/*"
                 element={
-                    <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
+                    <>
+                        {/* <Header /> */}
+                        <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
+                        {/* <NavBottom /> */}
+                    </>
                 }
             >
             </Route>
@@ -208,23 +240,47 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             </Route> */}
             <Route path="/gameresults/*"
                 element={
-                    <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                    <>
+                        {/* <Header /> */}
+                        <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                        {/* <NavBottom /> */}
+                    </>
                 }
             >
             </Route>
-            {/* <Route path="/mypage/freeboard">
-                <Freeboard isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
-            </Route> */}
+            <Route path="/freeboard/*"
+                element={
+                    <>
+                        <Header />
+                        <HomePageTopBanner pageTitle='게시판' toPath={window.location.pathname.includes('/mypage') ? '/mypage' : '/main'} isFreeboard={true} />
+                        <div>
+                            <FreeBoardMain isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                        </div>
+                        <NavBottom />
+                    </>
+                }
+            >
+            </Route>
 
             <Route path="/coupon/*"
                 element={
-                    <CouponUsage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                    <>
+                        {/* <Header /> */}
+                        <CouponUsage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                        {/* <NavBottom /> */}
+                    </>
                 }
             >
             </Route>
 
             <Route exact path="/inbox"
-                element={<Inbox />}
+                element={
+                    <>
+                        <Header />
+                        <Inbox />
+                        <NavBottom />
+                    </>
+                }
             >
             </Route>
             {/* <Route path="/inbox/*"
@@ -232,7 +288,13 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             >
             </Route> */}
             <Route path="/edit-info/*"
-                element={<EditInfo />}
+                element={
+                    <>
+                        <Header />
+                        <EditInfo />
+                        <NavBottom />
+                    </>
+                }
             >
             </Route>
         </Routes>

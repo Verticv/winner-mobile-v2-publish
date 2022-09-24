@@ -42,7 +42,7 @@ const navInfo = [
         text: '마이인포',
         width: '4rem',
         isActive: false,
-        path: '/5'
+        path: '/mypage'
     }];
 
 export default function NavBottom() {
