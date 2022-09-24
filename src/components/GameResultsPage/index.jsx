@@ -31,26 +31,35 @@ import PowerballResultsTable from '../PowerballResultsTable';
 import MinigameTab from '../MinigameTab';
 import Sports1 from '../Sports1';
 import TableHeader2 from '../TableHeader2';
+import subIcon1 from '../../assets/bigIcons/leftMenu/16.png';
+import subIcon2 from '../../assets/bigIcons/leftMenu/17.png';
+import Logo from "../../assets/myInfo/Logo.png";
+import LeftMenu from "../LeftMenu";
+import AccountProfileComponent from '../AccountProfileComponent'
+import Header from '../Header';
+import NavBottom from '../NavBottom';
 
 const tabsArray = [
     { text: "스포츠", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/gameresults/all", activeBG: activeBG, inActiveBG: inActiveBG, width: '7.875rem' },
     { text: "미니게임", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/mypage/gameresults/minigame/powerball", activeBG: activeBG, inActiveBG: inActiveBG, width: '7.875rem' },
 ];
 
-// const LeftMenuSubArray = [
-//     {
-//         text: "스포츠",
-//         icon: subIcon1,
-//         id: 0,
-//         path: "/mypage/gameresults/all",
-//     },
-//     {
-//         text: "미니게임",
-//         icon: subIcon3,
-//         id: 1,
-//         path: "/mypage/gameresults/minigame/powerball",
-//     }
-// ]
+const LeftMenuSubArray = [
+    {
+        text: "스포츠",
+        icon: subIcon1,
+        id: 0,
+        path: "/mypage/gameresults/all",
+        width: '9.9375rem'
+    },
+    {
+        text: "미니게임",
+        icon: subIcon2,
+        id: 1,
+        path: "/mypage/gameresults/minigame/powerball",
+        width: '9.9375rem'
+    }
+]
 
 
 
@@ -99,13 +108,32 @@ const inboxArray = [
     },
 ]
 
-const GameResults = ({ isAuthenticated }) => {
+const GameResults = ({ isAuthenticated, setAuthenticated }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [page, setPage] = useState(0)
     const [checkedState, setCheckedState] = useState(
         new Array(3).fill(false)
     );
+    const MyInfo = () => {
+        return (
+            <>
+                <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
+                    <LeftMenu
+                        selectedTab={selectedTab}
+                        setSelectedTab={setSelectedTab}
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        array={LeftMenuSubArray}
+                    />
+                </div>
+                <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
+                    <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
+                </div>
+            </>
+        )
+    }
 
     console.log(selectedTab, selectedSubTab)
 
@@ -134,10 +162,16 @@ const GameResults = ({ isAuthenticated }) => {
                     <img style={{ width: '22.3125rem' }} className="object-contain" src={Logo} alt="logo" />
                 </div> */}
                 {/* </Route> */}
-
+                <Route index element={
+                    <>
+                        <MyInfo />
+                    </>
+                }
+                />
                 <Route path="/all/*"
                     element={
                         <div className='game-result'>
+                            <Header />
                             {/* hi */}
                             {/* <img src={img} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
                             {/* <div className="w-full z-30 flex flex-col items-center"> */}
@@ -161,6 +195,7 @@ const GameResults = ({ isAuthenticated }) => {
                                     </div>
                                 </div>
                             </div> */}
+                            <NavBottom />
                         </div>
                     }
                 />
@@ -193,6 +228,7 @@ const GameResults = ({ isAuthenticated }) => {
                 <Route path="/minigame/*"
                     element={
                         <>
+                            <Header />
                             <div className='game-result'>
                                 {/* <img src={img24} alt="" style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
                                 <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
@@ -245,6 +281,7 @@ const GameResults = ({ isAuthenticated }) => {
                                 </Route>
 
                             </Routes>
+                            <NavBottom />
                         </>
                     }
                 >

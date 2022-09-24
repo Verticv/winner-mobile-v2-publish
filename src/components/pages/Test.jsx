@@ -175,7 +175,6 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
         console.log(`location.state`, location.state)
         return (
             <>
-                {/* <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0', width: '77.625rem' }} /> */}
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu
@@ -189,7 +188,6 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
                     <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
                 </div>
-
             </>
         )
     }
@@ -205,9 +203,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             <Route path="/bet-history/*"
                 element={
                     <>
-                        <Header />
+                        {/* <Header /> */}
                         <BetHistory isAuthenticated={isAuthenticated} />
-                        <NavBottom />
+                        {/* <NavBottom /> */}
                     </>
                 }
             >
@@ -216,9 +214,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             <Route path="/money/*"
                 element={
                     <>
-                        <Header />
+                        {/* <Header /> */}
                         <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
-                        <NavBottom />
+                        {/* <NavBottom /> */}
                     </>
                 }
             />
@@ -230,9 +228,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             <Route path="/points/*"
                 element={
                     <>
-                        <Header />
+                        {/* <Header /> */}
                         <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
-                        <NavBottom />
+                        {/* <NavBottom /> */}
                     </>
                 }
             >
@@ -243,9 +241,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             <Route path="/gameresults/*"
                 element={
                     <>
-                        <Header />
+                        {/* <Header /> */}
                         <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
-                        <NavBottom />
+                        {/* <NavBottom /> */}
                     </>
                 }
             >
@@ -267,9 +265,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             <Route path="/coupon/*"
                 element={
                     <>
-                        <Header />
+                        {/* <Header /> */}
                         <CouponUsage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
-                        <NavBottom />
+                        {/* <NavBottom /> */}
                     </>
                 }
             >

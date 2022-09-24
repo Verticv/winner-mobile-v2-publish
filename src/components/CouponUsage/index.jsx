@@ -22,6 +22,12 @@ import Icon3 from '../../assets/coupon/coupon3.png'
 import Icon1Active from '../../assets/coupon/coupon1-active.png'
 import Icon2Active from '../../assets/coupon/coupon2-active.png'
 import Icon3Active from '../../assets/coupon/coupon3-active.png'
+import Logo from "../../assets/myInfo/Logo.png";
+import LeftMenu from "../LeftMenu";
+import AccountProfileComponent from '../AccountProfileComponent'
+import subIcon1 from '../../assets/bigIcons/leftMenu/18.png';
+import subIcon2 from '../../assets/bigIcons/leftMenu/19.png';
+import subIcon3 from '../../assets/bigIcons/leftMenu/20.png';
 
 // import subIcon1 from '../../images/newImages/mainPage/coupon/1.png';
 // import subIcon2 from '../../images/newImages/mainPage/coupon/2.png';
@@ -847,31 +853,53 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
         { text: "쿠폰내역", icon: Icon3, activeIcon: Icon3Active, id: 2, path: "/mypage/coupon/all/coupon-history", hasSameParent: true, activeBG: couponActive, width: '7.875rem' },
     ];
 
-    // const LeftMenuSubArray = [
-    //     {
-    //         text: "쿠폰사용",
-    //         icon: subIcon1,
-    //         id: 0,
-    //         path: "/mypage/coupon/all",
-    //     },
-    //     {
-    //         text: "쿠폰선물",
-    //         icon: subIcon2,
-    //         id: 1,
-    //         path: "/mypage/coupon/all/coupon-gift",
-    //     },
-    //     {
-    //         text: "쿠폰내역",
-    //         icon: subIcon3,
-    //         id: 2,
-    //         path: "/mypage/coupon/all/coupon-history",
-    //     }
-    // ]
+    const LeftMenuSubArray = [
+        {
+            text: "쿠폰사용",
+            icon: subIcon1,
+            id: 0,
+            path: "/mypage/coupon/all",
+            width: '9.9375rem'
+        },
+        {
+            text: "쿠폰선물",
+            icon: subIcon2,
+            id: 1,
+            path: "/mypage/coupon/all/coupon-gift",
+            width: '9.9375rem'
+        },
+        {
+            text: "쿠폰내역",
+            icon: subIcon3,
+            id: 2,
+            path: "/mypage/coupon/all/coupon-history",
+            width: '9.9375rem'
+        }
+    ]
 
     // const historyTabsArray = [
     //     { text: "쿠폰발급내역", icon: Icon1, id: 0, path: "/mypage/coupon/all/coupon-history" },
     //     { text: "쿠폰선물내역", icon: Icon2, id: 1, path: "/mypage/coupon/all/coupon-history/sent" }
     // ]
+    const MyInfo = () => {
+        return (
+            <>
+                <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
+                    <LeftMenu
+                        selectedTab={selectedTab}
+                        setSelectedTab={setSelectedTab}
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        array={LeftMenuSubArray}
+                    />
+                </div>
+                <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
+                    <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
+                </div>
+            </>
+        )
+    }
 
 
     return (
@@ -880,7 +908,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                 <Route index
                     element={
                         <>
-                            {/* hi */}
+                            <MyInfo />
                         </>
                     }
                 >

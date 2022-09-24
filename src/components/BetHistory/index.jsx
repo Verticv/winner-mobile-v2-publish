@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState } from 'react'
-// import AccountProfileComponent from 'components/common/AccountProfileComponent'
+import AccountProfileComponent from '../AccountProfileComponent'
 import HorizontalMenu from '../HorizontalMenu'
 import activeBG from '../../assets/mainPage/points/active-bg.png';
 import icon1 from '../../assets/bigIcons/1.png';
@@ -43,9 +43,9 @@ import SportsBetHistory from '../SportsBetHistory';
 
 
 
-// import Logo from "../../images/newImages/mainPage/icons/logo.png";
+// import Logo from "../../assets/myInfo/Logo.png";
 import HomePageTopBanner from '../HomePageTopBanner'
-// import LeftMenu from "components/myPage/LeftMenu";
+import LeftMenu from "../LeftMenu";
 // import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import Pagination from '../Pagination'
 import LiveCasinoBetHistory from '../LiveCasinoBetHistory'
@@ -60,6 +60,18 @@ import { Route, Routes } from 'react-router'
 // import ESportsBetHistory from './betHistory/ESportsBetHistory'
 // import MinigameBetHistory from './betHistory/MinigameBetHistory'
 // import ARGameBetHistory from './betHistory/ARGameBetHistory'
+import subIcon0 from '../../assets/bigIcons/leftMenu/1.png';
+import subIcon1 from '../../assets/bigIcons/leftMenu/2.png';
+import subIcon2 from '../../assets/bigIcons/leftMenu/3.png';
+import subIcon3 from '../../assets/bigIcons/leftMenu/4.png';
+import subIcon4 from '../../assets/bigIcons/leftMenu/5.png';
+import subIcon5 from '../../assets/bigIcons/leftMenu/6.png';
+import subIcon6 from '../../assets/bigIcons/leftMenu/7.png';
+import subIcon7 from '../../assets/bigIcons/leftMenu/8.png';
+import subIcon8 from '../../assets/bigIcons/leftMenu/9.png';
+import subIcon9 from '../../assets/bigIcons/leftMenu/10.png';
+import Header from '../Header';
+import NavBottom from '../NavBottom';
 
 const tabsArray = [
     { text: "전체", icon: icon1, activeIcon: icon1Active, id: 0, path: "/mypage/bet-history/all", activeBG: activeBG },
@@ -73,74 +85,91 @@ const tabsArray = [
     { text: "로터리게임", icon: icon9, activeIcon: icon9Active, id: 8, path: "/mypage/bet-history/all/lottery-game", activeBG: activeBG }
 ];
 
-// const LeftMenuBetHistoryArray = [
-//     {
-//         text: "전체보기",
-//         icon: subIcon0,
-//         id: -1,
-//         path: "/mypage/bet-history/all",
-//         mainPath: "/mypage/bet-history",
-//     },
-//     {
-//         text: "라이브카지노",
-//         icon: subIcon1,
-//         id: 0,
-//         path: "/mypage/bet-history/all/live-casino",
-//         mainPath: "/mypage/bet-history",
-//     },
-//     {
-//         text: "슬롯게임",
-//         icon: subIcon2,
-//         id: 1,
-//         path: "/mypage/bet-history/all/slot-game",
-//         mainPath: "/mypage/bet-history",
-//     },
-//     {
-//         text: "스포츠",
-//         icon: subIcon3,
-//         id: 2,
-//         path: "/mypage/bet-history/all/sports",
-//         mainPath: "/mypage/bet-history",
-//     },
-//     {
-//         text: "e-스포츠",
-//         icon: subIcon4,
-//         id: 3,
-//         path: "/mypage/bet-history/all/e-sports",
-//         mainPath: "/mypage/bet-history",
-//     },
-//     {
-//         text: "미니게임",
-//         icon: subIcon5,
-//         id: 4,
-//         path: "/mypage/bet-history/all/minigame",
-//         mainPath: "/mypage/bet-history",
-//     },
-//     {
-//         text: "키론가상게임",
-//         icon: subIcon6,
-//         id: 5,
-//         path: "/mypage/bet-history/all/ar-game",
-//         mainPath: "/mypage/bet-history",
-//     },
-//     {
-//         text: "피싱게임",
-//         icon: subIcon7,
-//         id: 6,
-//         path: "/mypage/bet-history/all/fishing-game",
-//         mainPath: "/mypage/bet-history",
-//     },
-//     {
-//         text: "로터리게임",
-//         icon: subIcon8,
-//         id: 7,
-//         path: "/mypage/bet-history/all/lottery-game",
-//         mainPath: "/mypage/bet-history",
-//     },
-// ];
+const LeftMenuBetHistoryArray = [
+    {
+        text: "전체보기",
+        icon: subIcon0,
+        id: -1,
+        path: "/mypage/bet-history/all",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "라이브카지노",
+        icon: subIcon1,
+        id: 0,
+        path: "/mypage/bet-history/all/live-casino",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "슬롯게임",
+        icon: subIcon2,
+        id: 1,
+        path: "/mypage/bet-history/all/slot-game",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "스포츠",
+        icon: subIcon3,
+        id: 2,
+        path: "/mypage/bet-history/all/sports",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "e-스포츠",
+        icon: subIcon4,
+        id: 3,
+        path: "/mypage/bet-history/all/e-sports",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "미니게임",
+        icon: subIcon5,
+        id: 4,
+        path: "/mypage/bet-history/all/minigame",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "키론가상게임",
+        icon: subIcon6,
+        id: 5,
+        path: "/mypage/bet-history/all/ar-game",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "피싱게임",
+        icon: subIcon7,
+        id: 6,
+        path: "/mypage/bet-history/all/fishing-game",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "로터리게임",
+        icon: subIcon8,
+        id: 7,
+        path: "/mypage/bet-history/all/lottery-game",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+    {
+        text: "티비벳",
+        icon: subIcon9,
+        id: 7,
+        path: "#",
+        mainPath: "/mypage/bet-history",
+        width: '9.9375rem'
+    },
+];
 
 
-const BetHistory = ({ isAuthenticated }) => {
+const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
@@ -151,6 +180,27 @@ const BetHistory = ({ isAuthenticated }) => {
     const [checkedState, setCheckedState] = useState(
         new Array(3).fill(false)
     );
+    const MyInfo = () => {
+        console.log(`location.state`, location.state)
+        return (
+            <>
+                <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
+                    <LeftMenu
+                        selectedTab={selectedTab}
+                        setSelectedTab={setSelectedTab}
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        array={LeftMenuBetHistoryArray}
+                    />
+                </div>
+                {/* <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
+                    <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
+                </div> */}
+                {/* aaa */}
+            </>
+        )
+    }
 
 
     return (
@@ -160,7 +210,20 @@ const BetHistory = ({ isAuthenticated }) => {
                 <Route index
                     element={
                         <>
-                            {/* hi */}
+                            <MyInfo />
+                            {/* <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                            <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
+                                <LeftMenu
+                                    selectedTab={selectedTab}
+                                    setSelectedTab={setSelectedTab}
+                                    selectedSubTab={selectedSubTab}
+                                    setSelectedSubTab={setSelectedSubTab}
+                                    array={LeftMenuBetHistoryArray}
+                                />
+                            </div>
+                            <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
+                                <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
+                            </div> */}
                         </>
                     }
                 >
@@ -180,6 +243,7 @@ const BetHistory = ({ isAuthenticated }) => {
                     </div>
                 </> */}
                 </Route>
+                {/* </Routes> */}
 
                 <Route index path="/all/*"
                     element={
@@ -187,6 +251,7 @@ const BetHistory = ({ isAuthenticated }) => {
                             <div className="w-full z-30 flex flex-col items-center">
                                 {/* <NoticeBanner /> */}
                                 {/* <Navbar /> */}
+                                <Header />
                                 <HomePageTopBanner pageTitle='베팅내역' />
                             </div>
 
@@ -205,7 +270,7 @@ const BetHistory = ({ isAuthenticated }) => {
                             <Routes>
                                 <Route index element={
                                     <>
-                                        {/* hi */}
+                                        <NavBottom />
                                     </>
                                 }
                                 />
@@ -215,6 +280,7 @@ const BetHistory = ({ isAuthenticated }) => {
                                             {/* <img src={img21} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
                                             <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
                                             <Pagination page={page} setPage={setPage} />
+                                            <NavBottom />
                                         </>
                                     }
                                 >
@@ -233,6 +299,7 @@ const BetHistory = ({ isAuthenticated }) => {
                                             <div style={{ marginTop: '3.85rem' }}>
                                                 <Pagination page={page} setPage={setPage} />
                                             </div>
+                                            <NavBottom />
                                             {/* <BottomNavbar /> */}
                                             {/* <h1>hi</h1> */}
                                         </>

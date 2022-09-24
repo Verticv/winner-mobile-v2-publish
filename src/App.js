@@ -163,9 +163,9 @@ function App() {
           path="/cscenter/*"
           element={
             <>
-              <Header />
+              {/* <Header /> */}
               <CSCenterPage />
-              <NavBottom />
+              {/* <NavBottom /> */}
             </>
           }
         />

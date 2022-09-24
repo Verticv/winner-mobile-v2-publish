@@ -112,10 +112,10 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
         <div className="w-full top-0 z-50 flex flex-col items-start limit1920:items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
             <div style={{ marginBottom: '1.875rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#272726', borderBottom: '0.1875rem solid rgb(121, 102, 87)', height: '9.5rem', width: '77.625rem' }} className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec cursor-pointer">
                 {window.location.pathname !== '/mypage' && (
-                    <button onClick={() => navigate(location)} className="absolute cursor-pointer" style={{ top: '2.9375rem', left: '3.6875rem' }}>
+                    <button onClick={() => navigate(location)} className="absolute cursor-pointer" style={{ top: '2.9375rem', left: '3.6875rem', position: 'absolute', background: 'bottom' }}>
                         <img
                             // onClick={() => history.push('/main')}
-                            style={{ height: '3.625rem', width: '2.3125rem' }}
+                            style={{ height: '3.625rem', width: '2.3125rem', transform: 'rotate(180deg)' }}
                             className="w-9"
                             src={LeftArrowIcon}
                             alt="left_arrow_icon"
