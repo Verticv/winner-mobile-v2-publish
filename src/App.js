@@ -199,10 +199,12 @@ function App() {
                 alt=""
                 style={{ position: 'absolute', top: '0', opacity: '0.5' }}
               /> */}
+              <Header />
               <DistributorPage
               // isAuthenticated={isAuthenticated}
               // setAuthenticated={setAuthenticated}
               />
+              <NavBottom />
             </>
           }
         ></Route>
