@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import BankTable from '../BankTable'
-import NavBottom from '../NavBottom'
+// import NavBottom from '../NavBottom'
 // import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import WarningMessage from '../WarningMessage'
 
@@ -396,7 +396,7 @@ const MoneyExchange = () => {
 
             <BankTable />
             {/* <BottomNavbar /> */}
-            <NavBottom />
+            {/* <NavBottom /> */}
         </div>
     )
 }

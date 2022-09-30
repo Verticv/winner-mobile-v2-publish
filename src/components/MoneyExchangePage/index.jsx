@@ -30,14 +30,15 @@ import subIcon2 from '../../assets/bigIcons/leftMenu/12.png';
 import activeIcon1 from '../../assets/mainPage/icons/recharge-application.png';
 import activeIcon2 from '../../assets/mainPage/icons/active-icon2.png';
 import NavBottom from '../NavBottom';
+import Header from '../Header';
 // import Icon2 from '../../assets/mainPage/icons/charging-history.png';
 // import Icon1 from '../../assets/mainPage/icons/Icon1.png';
 // import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
 
 // currency exchange
 const tabsArray = [
-    { text: "환전신청", icon: Icon1, id: 0, activeIcon: activeIcon1, path: "/mypage/money/exchange/currency" },
-    { text: "환전내역", icon: Icon2, id: 1, activeIcon: activeIcon2, path: "/mypage/money/exchange/currency/history" },
+    { text: "환전신청", icon: Icon1, id: 0, activeIcon: activeIcon1, path: "/mypage/money/exchange/currency", width: '7.875rem' },
+    { text: "환전내역", icon: Icon2, id: 1, activeIcon: activeIcon2, path: "/mypage/money/exchange/currency/history", width: '7.875rem' },
 ];
 
 const LeftMenuSubArray = [
@@ -47,6 +48,7 @@ const LeftMenuSubArray = [
         id: 0,
         path: "/mypage/money/exchange/currency",
         mainPath: "/mypage/money/exchange",
+        width: '9.9375rem'
     },
     {
         text: "환전내역",
@@ -54,6 +56,7 @@ const LeftMenuSubArray = [
         id: 1,
         path: "/mypage/money/exchange/currency/history",
         mainPath: "/mypage/money/exchange",
+        width: '9.9375rem'
     }
 ]
 
@@ -96,6 +99,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated }) => {
                             <div className="w-full z-30 flex flex-col items-center">
                                 {/* <NoticeBanner /> */}
                                 {/* <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} /> */}
+                                <Header />
                                 <HomePageTopBanner pageTitle='머니환전' toPath='/mypage/money/exchange' />
                             </div>
 
@@ -134,6 +138,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated }) => {
                                                     <>
                                                         {/* hi */}
                                                         <MoneyExchange />
+                                                        <NavBottom />
                                                     </>
 
                                                 }

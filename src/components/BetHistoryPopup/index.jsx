@@ -223,7 +223,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                 <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
                                 <div id='scroll-wrapper' style={{ padding: '1.875rem 1.6rem', paddingRight: '0', paddingBottom: 0 }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                     <div className=" flex flex-shrink-0 w-full" style={{ marginBottom: '' }}>
-                                        <HorizontalMenu withoutFirst={false} setSelectedTab={setSelectedTab} itemsArray={tabsArray} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} />
+                                        <HorizontalMenu withoutFirst={false} setSelectedTab={setSelectedTab} itemsArray={tabsArray} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup={true} />
                                     </div>
                                 </div>
                                 <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full top-0 left-0 z-50"></div>

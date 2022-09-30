@@ -151,6 +151,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                                 <Route path='/charge' element={
                                     <>
                                         <MoneyCharge />
+                                        <NavBottom />
                                     </>
                                 } />
                                 <Route path="/charge/history"
@@ -165,7 +166,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                                 </Route>
                             </Routes>
 
-                            <NavBottom />
+                            {/* <NavBottom /> */}
                         </>
                     }
                 >

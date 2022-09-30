@@ -55,7 +55,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/bet-history",
             mainPath: "/mypage",
             hasArrow: true,
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "머니충전",
@@ -64,7 +64,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/money",
             mainPath: "#",
             hasArrow: true,
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "머니환전",
@@ -73,7 +73,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/money/exchange",
             mainPath: "#",
             hasArrow: true,
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "포인트전환",
@@ -82,7 +82,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/points",
             mainPath: "#",
             hasArrow: true,
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "총판페이지",
@@ -90,7 +90,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 4,
             path: "/distributor-page",
             mainPath: "#",
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "윈루즈정산",
@@ -98,7 +98,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 5,
             path: "/mypage/win-lose-settlement",
             mainPath: "#",
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "라이브영상",
@@ -106,7 +106,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 6,
             path: "",
             mainPath: "",
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "경기결과",
@@ -115,7 +115,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/gameresults",
             mainPath: "#",
             hasArrow: true,
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "게시판",
@@ -123,7 +123,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 8,
             path: "/mypage/freeboard",
             mainPath: "#",
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "쿠폰관리",
@@ -133,7 +133,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             inboxCount: "1",
             mainPath: "#",
             hasArrow: true,
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "쪽지관리",
@@ -142,7 +142,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/inbox",
             inboxCount: "20",
             mainPath: "#",
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "고객센터",
@@ -151,7 +151,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/cscenter",
             mainPath: "#",
             hasArrow: true,
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "계좌문의",
@@ -159,7 +159,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 12,
             path: "",
             mainPath: "#",
-            width: '7.875rem',
+            width: '9.9375rem'
         },
         {
             text: "회원정보수정",
@@ -167,7 +167,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 13,
             path: "",
             mainPath: "#",
-            width: '7.875rem',
+            width: '9.9375rem'
         },
     ];
 
