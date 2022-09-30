@@ -26,7 +26,7 @@ import QIcon from '../../assets/myPage/contact/qa.png'
 // import Icon10 from '../../images/cscenter/10.png'
 import HorizontalSubMenu from '../HorizontalSubMenu';
 // import HorizontalMenu1 from '../HorizontalMenu1';
-        // import HomePageTopBanner from '../HomePageTopBanner';
+// import HomePageTopBanner from '../HomePageTopBanner';
 // import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 // import img from '../../img9.png'
 
@@ -40,17 +40,17 @@ const Faq = () => {
     //     { text: "베팅규정", icon: Icon5, activeIcon: Icon5Active, id: 4, path: "/cscenter/all/policy/sportsgame/soccer", hasSameParent: true, width: '4.875rem', marginLeft: '0.1rem' },
     // ];
     const tabsArray2 = [
-        { text: "전체", id: 0, width: '11.5625rem', path: "/cscenter/all/contact/all" },
-        { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/contact/all/live-casino" },
-        { text: "슬롯", id: 2, width: '11.5625rem', path: "/cscenter/all/contact/all/slot" },
-        { text: "스포츠", id: 3, width: '13.4375rem', path: "/cscenter/all/contact/all/sports" },
-        { text: "호텔카지노", id: 10, width: '18.3125rem', path: "/cscenter/all/contact/all/e-sports/1" },
-        { text: "e-스포츠", id: 4, width: '15.3125rem', path: "/cscenter/all/contact/all/e-sports" },
-        { text: "미니게임", id: 5, width: '15.3125rem', path: "/cscenter/all/contact/all/minigame" },
-        { text: "키론가상게임", width: '20.3125rem', id: 6, path: "/cscenter/all/contact/all/ar-game" },
-        { text: "충전/환전", width: '16.3125rem', id: 7, path: "/cscenter/all/contact/all/transaction" },
-        { text: "베팅관련", width: '15.3125rem', id: 8, path: "/cscenter/all/contact/all/about-betting" },
-        { text: "기타", width: '10.3125rem', id: 9, path: "/cscenter/all/contact/all/other" },
+        { text: "전체", id: 0, width: '11.5625rem', path: "/cscenter/all/faq" },
+        { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/faq/live-casino" },
+        { text: "슬롯", id: 2, width: '11.5625rem', path: "/cscenter/all/faq/slot" },
+        { text: "스포츠", id: 3, width: '13.4375rem', path: "/cscenter/all/faq/sports" },
+        { text: "호텔카지노", id: 10, width: '18.3125rem', path: "/cscenter/all/faq/e-sports/1" },
+        { text: "e-스포츠", id: 4, width: '15.3125rem', path: "/cscenter/all/faq/e-sports" },
+        { text: "미니게임", id: 5, width: '15.3125rem', path: "/cscenter/all/faq/minigame" },
+        { text: "키론가상게임", width: '20.3125rem', id: 6, path: "/cscenter/all/faq/ar-game" },
+        { text: "충전/환전", width: '16.3125rem', id: 7, path: "/cscenter/all/faq/transaction" },
+        { text: "베팅관련", width: '15.3125rem', id: 8, path: "/cscenter/all/faq/about-betting" },
+        { text: "기타", width: '10.3125rem', id: 9, path: "/cscenter/all/faq/other" },
     ];
 
     const location = useLocation();

@@ -13,6 +13,7 @@ const HorizontalMenu = ({
 }) => {
 
     const navigate = useNavigate();
+    let pathname = window.location.pathname
     const [isHover, setHover] = useState(null)
 
     console.log('selectedSubTab', selectedSubTab);
@@ -27,6 +28,8 @@ const HorizontalMenu = ({
         // const [btnActive, setBtnActive] = useState('0')
         return items.map((item, index) => {
             const isActive = selectedSubTab === item.id
+            let isSameLink = pathname === item.path
+
 
             //     <div className={`nav-button`} id={id}
             //     onClick={(event) => setBtnActive(event.target.id)}
@@ -37,7 +40,7 @@ const HorizontalMenu = ({
             //     </button>
             // </div>
             return (
-                <div className={`nav-button ${isActive ? 'active' : ''}`} id={item.id}
+                <div className={`nav-button ${isActive || isSameLink ? 'active' : ''}`} id={item.id}
                     key={item.id}
                 // onClick={(event) => setBtnActive(event.target.id)}
                 >
@@ -101,7 +104,7 @@ const HorizontalMenu = ({
                                 className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                             > */}
                         <div style={{ width: '100%', textAlign: 'center', height: '6.2rem', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: item.marginIcon ? item.marginIcon : '' }}>
-                            <img id={item.id} className='icon' src={(isActive) ? (item.activeIcon ? item.activeIcon : item.icon) : item.icon} alt='' style={{ width: item.width || '7.875rem', height: item.height, marginTop: item.marginTop }} />
+                            <img id={item.id} className='icon' src={(isActive || isSameLink) ? (item.activeIcon ? item.activeIcon : item.icon) : item.icon} alt='' style={{ width: item.width || '7.875rem', height: item.height, marginTop: item.marginTop }} />
                         </div>
                         {/* <img style={{ width: '6.8rem', marginLeft: '0.5625rem', WebkitUserDrag: "none", MozUserDrag: "none", userDrag: "none" }} className="mt-4 object-contain select-none icon" src={item.icon} alt="" /> */}
                         <div style={{ width: '100%', textAlign: 'center', height: '4.67rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -119,9 +122,12 @@ const HorizontalMenu = ({
     }
 
     return (
-        <div id="container" className="flex justify-start items-start">
-            {/* <Botton /> */}
-            <TabsList items={itemsArray} />
+        <div className='div-shadow'>
+            <div id="container" className="flex justify-start items-start">
+                {/* <Botton /> */}
+                <TabsList items={itemsArray} />
+            </div>
+            <div className='nav-shadow' style={{ height: '100%' }}></div>
         </div>
     )
 }

@@ -130,10 +130,13 @@ const HorizontalMenu13 = ({
     }
 
     return (
-        <div id="container" className="flex justify-start items-start" style={{
-            marginLeft: '1.6rem',
-        }}>
-            <TabsList items={itemsArray} />
+        <div className='div-shadow'>
+            <div id="container" className="flex justify-start items-start" style={{
+                marginLeft: '1.6rem',
+            }}>
+                <TabsList items={itemsArray} />
+            </div>
+            <div className='nav-shadow' ></div>
         </div>
     )
 }

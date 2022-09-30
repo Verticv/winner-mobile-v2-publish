@@ -85,7 +85,7 @@ const LeftMenu = ({
                     >
                         <img
                             style={{
-                                height: '', width: '7.3125rem',
+                                height: '',  width: '7.875rem',
                                 // marginTop: '-1.15rem'
                                 marginLeft: '0.5rem'
                                 // boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)' 

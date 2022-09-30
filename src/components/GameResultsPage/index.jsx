@@ -279,6 +279,28 @@ const GameResults = ({ isAuthenticated, setAuthenticated }) => {
                                     }
                                 >
                                 </Route>
+                                <Route path="/speedkino"
+                                    element={
+                                        <>
+                                            <MinigamesMatchResultPanel type="speedkino" />
+                                            <div style={{ marginTop: '3.7rem', paddingBottom: '0.01rem' }}>
+                                                <Pagination page={page} setPage={setPage} />
+                                            </div>
+                                        </>
+                                    }
+                                >
+                                </Route>
+                                <Route path="/kinoladder"
+                                    element={
+                                        <>
+                                            <MinigamesMatchResultPanel type="kinoladder" />
+                                            <div style={{ marginTop: '3.7rem', paddingBottom: '0.01rem' }}>
+                                                <Pagination page={page} setPage={setPage} />
+                                            </div>
+                                        </>
+                                    }
+                                >
+                                </Route>
 
                             </Routes>
                             <NavBottom />

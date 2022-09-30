@@ -34,7 +34,8 @@
             position: relative;
             background: #272726;
             position: sticky;
-            top: 0;
+            top: -0.1875rem;
+            z-index: 55;
 
             .text {
                 font-size: 3.749375rem;

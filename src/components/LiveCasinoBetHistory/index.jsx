@@ -17,13 +17,13 @@ import HorizontalMenu from '../HorizontalMenu'
 // import img22 from '../../img22.png'
 
 const subTabsArray = [
-    { text: "전체", icon: Icon1, id: 0, activeBG: activeBG, marginIcon: '1rem', width: '19.375rem' },
-    { text: "에볼루션", icon: Icon2, id: 1, activeBG: activeBG, width: '19.375rem' },
-    { text: "프레그메틱플레이", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '-1rem', width: '19.375rem' },
-    { text: "로얄지", icon: Icon4, id: 3, activeBG: activeBG, width: '19.375rem' },
-    { text: "드림게이밍", icon: Icon8, id: 4, activeBG: activeBG, width: '19.375rem' },
-    { text: "섹시게이밍", icon: Icon9, id: 5, activeBG: activeBG, width: '19.375rem' },
-    { text: "빅게이밍", icon: Icon10, id: 6, activeBG: activeBG, width: '19.375rem' },
+    { text: "전체", icon: Icon1, id: 0, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
+    { text: "에볼루션", icon: Icon2, id: 1, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "프레그메틱플레이", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
+    { text: "로얄지", icon: Icon4, id: 3, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "드림게이밍", icon: Icon8, id: 4, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "섹시게이밍", icon: Icon9, id: 5, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "빅게이밍", icon: Icon10, id: 6, activeBG: activeBG, width: '19.375rem', path: '#' },
 ];
 
 // 베팅번호 => number

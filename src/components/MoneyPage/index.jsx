@@ -1,7 +1,7 @@
 // import Footer from 'components/mainPage/Footer'
 // import Footer2 from 'components/mainPage/Footer2'
 import MoneyCharge from '../MoneyCharge'
-// import MoneyChargeHistory from 'components/money/MoneyChargeHistory'
+import MoneyChargeHistory from '../MoneyChargeHistory'
 // import AccountProfileComponent from 'components/common/AccountProfileComponent'
 // import LeftMenu from "components/myPage/LeftMenu";
 // import DirectoryComponent from 'components/myPage/DirectoryComponent'
@@ -122,10 +122,10 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                     </>
                 }
                 />
-                <Route path="/charge"
+                <Route path="/*"
                     element={
                         <>
-                        <Header />
+                            <Header />
                             <HomePageTopBanner pageTitle='머니충전' toPath='/mypage/money' />
 
                             <div className="flex flex-col items-start limit:items-center w-full h-full">
@@ -133,9 +133,9 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                                 <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isMoneyPage='true' />
 
 
-                                <div className="flex w-full">
-                                    <MoneyCharge />
-                                    {/* <div className="w-full">
+                                {/* <div className="flex w-full"> */}
+
+                                {/* <div className="w-full">
 
                                 <Route exact path="/mypage/money/charge">
                                     
@@ -145,13 +145,32 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                                     <BottomNavbar />
                                 </Route>
                             </div> */}
-                                </div>
+                                {/* </div> */}
                             </div>
+                            <Routes>
+                                <Route path='/charge' element={
+                                    <>
+                                        <MoneyCharge />
+                                    </>
+                                } />
+                                <Route path="/charge/history"
+                                    element={
+                                        <>
+                                            <div style={{ marginTop: '1rem' }}>
+                                                <MoneyChargeHistory />
+                                            </div>
+                                            < NavBottom />
+                                        </>
+                                    }>
+                                </Route>
+                            </Routes>
+
                             <NavBottom />
                         </>
                     }
                 >
                 </Route>
+
             </Routes>
 
 

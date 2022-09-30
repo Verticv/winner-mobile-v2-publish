@@ -12,14 +12,14 @@ import subInactive from '../../assets/gameresults/sub-inactive.png';
 import subActive from '../../assets/gameresults/sub-active.png';
 
 const tabsArray = [
-    { text: "전체", icon: Icon1, id: 0, number: 854, subInactive: subInactive, subActive: subActive },
-    { text: "축구", icon: Icon2, id: 1, number: 567, subInactive: subInactive, subActive: subActive },
-    { text: "농구", icon: Icon3, id: 2, number: 227, subInactive: subInactive, subActive: subActive },
-    { text: "야구", icon: Icon4, id: 3, number: 407, subInactive: subInactive, subActive: subActive },
-    { text: "배구", icon: Icon5, id: 4, number: 0, subInactive: subInactive, subActive: subActive },
-    { text: "하키", icon: Icon6, id: 5, number: 0, subInactive: subInactive, subActive: subActive },
-    { text: "미식축구", icon: Icon7, id: 6, number: 0, subInactive: subInactive, subActive: subActive },
-    { text: "격투기", icon: Icon8, id: 7, number: 9, subInactive: subInactive, subActive: subActive },
+    { text: "전체", icon: Icon1, id: 0, number: 854, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "축구", icon: Icon2, id: 1, number: 567, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "농구", icon: Icon3, id: 2, number: 227, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "야구", icon: Icon4, id: 3, number: 407, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "배구", icon: Icon5, id: 4, number: 0, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "하키", icon: Icon6, id: 5, number: 0, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "미식축구", icon: Icon7, id: 6, number: 0, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "격투기", icon: Icon8, id: 7, number: 9, subInactive: subInactive, subActive: subActive, path: '#' },
 ];
 
 

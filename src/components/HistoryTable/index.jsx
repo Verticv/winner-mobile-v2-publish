@@ -30,9 +30,14 @@ const HistoryTable = ({
         )
 
         const wideDetailButtonComponent = (
-            <button style={{ width: '20.25rem', height: '14.0625rem' }} className="common-button flex items-center justify-center rounded-3xl bg-orange-d43712 hover:opacity-75">
-                <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-3xl p-10 border border-orange-f07a5f bg-gradient-to-b from-orange-f4603d to-orange-e9451e cursor-pointer">
-                    <span style={{ fontSize: '2.7rem', lineHeight: '1.1' }} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px">사용하기</span>
+            // <button style={{ width: '20.25rem', height: '14.0625rem' }} className="common-button flex items-center justify-center rounded-3xl bg-orange-d43712 hover:opacity-75">
+            //     <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-3xl p-10 border border-orange-f07a5f bg-gradient-to-b from-orange-f4603d to-orange-e9451e cursor-pointer">
+            //         <span style={{ fontSize: '2.7rem', lineHeight: '1.1' }} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px">사용하기</span>
+            //     </div>
+            // </button>
+            <button style={{ width: '20.25rem', height: '14.0625rem',background: '#c65337', position: 'absolute', top: '7.56rem', right: '1.9rem', borderRadius: '1.1rem', boxShadow: '0px 6px 0px 0px rgb(0 0 0 / 60%)' }} className="hover change-top">
+                <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
+                    <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', textShadow: '#00000080 0.3125rem 0.125rem 0.4375rem' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> 진행중 </span>
                 </div>
             </button>
         )
@@ -87,7 +92,7 @@ const HistoryTable = ({
                                     firstColumnColor = row[0][firstRowKeysName[0]].includes("+") ? "#e65454" : "#c8c8c8"
                                 }
                                 if (firstRowKeysName[0] === '금액') {
-                                    firstColumnColor = row[0][firstRowKeysName[0]].includes("+") ? "#e65454" : row[0][firstRowKeysName[0]].includes("-") ? '#0056a6' : "#7b7b7b"
+                                    firstColumnColor = row[0][firstRowKeysName[0]].includes("+") ? "#e65454" : row[0][firstRowKeysName[0]].includes("-") ? '#e65454' : "#c8c8c8"
                                 }
                                 if (secondRowKeysName[0] === '적립포인트') {
                                     secondColumnColor = '#0056a6'
@@ -139,9 +144,9 @@ const HistoryTable = ({
                                 )}
                             </div>
                         ) : hasButton &&
-                        <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '7.56rem', right: '1.9rem', borderRadius: '1.1rem', boxShadow: '0px 6px 0px 0px rgb(0 0 0 / 60%)' }} className="hover">
+                        <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '7.56rem', right: '1.9rem', borderRadius: '1.1rem', boxShadow: '0px 6px 0px 0px rgb(0 0 0 / 60%)' }} className="hover change-top">
                             <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
-                                <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffd2d2', textShadow: '#00000080 0.3125rem 0.125rem 0.4375rem' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length - 1].buttonColor === '#0056a6' ? <div> {card[card.length - 1].buttonText ? card[card.length - 1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length - 1].buttonText || '진행중'} </span>
+                                <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', textShadow: '#00000080 0.3125rem 0.125rem 0.4375rem' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length - 1].buttonColor === '#e65454' ? <div> {card[card.length - 1].buttonText ? card[card.length - 1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length - 1].buttonText || '진행중'} </span>
                             </div>
                         </button>
                 }

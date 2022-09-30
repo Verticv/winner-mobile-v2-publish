@@ -154,6 +154,14 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                     </>
                                 }
                             />
+                            <Route path="/announcement"
+                                element={
+                                    <>
+                                        <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                    </>
+                                }
+                            />
                             <Route path="contact/compose"
                                 element={
                                     <>
@@ -171,7 +179,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                             {/* <Route path="/announcement/view"
                             element={ }
                         /> */}
-                            <Route path="/faq"
+                            <Route path="/faq/*"
                                 element={
                                     <>
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
