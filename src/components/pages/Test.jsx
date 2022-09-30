@@ -4,9 +4,9 @@ import { useLocation } from "react-router-dom";
 import MoneyPage from "../MoneyPage";
 import EditInfo from "../EditInfo";
 import Inbox from "../Inbox";
-// import MoneyExchangePage from "pages/MoneyExchangePage";
+import MoneyExchangePage from "../MoneyExchangePage";
 import PointsPage from "../PointsPage";
-// import WinLoseSettlement from "pages/WinLoseSettlement";
+import WinLoseSettlement from "../WinLoseSettlement";
 import LeftMenu from "../LeftMenu";
 // import EditInfo from 'components/myPage/EditInfo';
 import AccountProfileComponent from '../AccountProfileComponent'
@@ -55,7 +55,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/bet-history",
             mainPath: "/mypage",
             hasArrow: true,
-            width: '7.8rem',
+            width: '9.9375rem'
         },
         {
             text: "머니충전",
@@ -64,7 +64,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/money",
             mainPath: "#",
             hasArrow: true,
-            width: '6.046875rem'
+            width: '9.9375rem'
         },
         {
             text: "머니환전",
@@ -73,7 +73,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/money/exchange",
             mainPath: "#",
             hasArrow: true,
-            width: '6.046875rem'
+            width: '9.9375rem'
         },
         {
             text: "포인트전환",
@@ -82,7 +82,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/points",
             mainPath: "#",
             hasArrow: true,
-            width: '4.3125rem'
+            width: '9.9375rem'
         },
         {
             text: "총판페이지",
@@ -90,7 +90,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 4,
             path: "/distributor-page",
             mainPath: "#",
-            width: '5.0625rem'
+            width: '9.9375rem'
         },
         {
             text: "윈루즈정산",
@@ -98,7 +98,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 5,
             path: "/mypage/win-lose-settlement",
             mainPath: "#",
-            width: '6.25rem'
+            width: '9.9375rem'
         },
         {
             text: "라이브영상",
@@ -106,7 +106,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 6,
             path: "",
             mainPath: "",
-            width: '5.75rem'
+            width: '9.9375rem'
         },
         {
             text: "경기결과",
@@ -115,7 +115,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/gameresults",
             mainPath: "#",
             hasArrow: true,
-            width: '6.0625rem'
+            width: '9.9375rem'
         },
         {
             text: "게시판",
@@ -123,7 +123,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 8,
             path: "/mypage/freeboard",
             mainPath: "#",
-            width: '7rem'
+            width: '9.9375rem'
         },
         {
             text: "쿠폰관리",
@@ -133,7 +133,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             inboxCount: "1",
             mainPath: "#",
             hasArrow: true,
-            width: '7.25rem'
+            width: '9.9375rem'
         },
         {
             text: "쪽지관리",
@@ -142,7 +142,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/mypage/inbox",
             inboxCount: "20",
             mainPath: "#",
-            width: '6.3125rem'
+            width: '9.9375rem'
         },
         {
             text: "고객센터",
@@ -151,7 +151,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             path: "/cscenter",
             mainPath: "#",
             hasArrow: true,
-            width: '6.5rem'
+            width: '9.9375rem'
         },
         {
             text: "계좌문의",
@@ -159,7 +159,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 12,
             path: "",
             mainPath: "#",
-            width: '6.25rem'
+            width: '9.9375rem'
         },
         {
             text: "회원정보수정",
@@ -167,6 +167,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             id: 13,
             path: "",
             mainPath: "#",
+            width: '9.9375rem'
         },
     ];
 
@@ -222,9 +223,12 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             />
             {/* </Route> */}
             {/* </Routes> */}
-            {/* <Route path="/mypage/money/exchange">
-                <MoneyExchangePage isAuthenticated={true} setAuthenticated={setAuthenticated} />
-            </Route> */}
+            <Route path="/money/exchange/*"
+                element={
+                    <MoneyExchangePage isAuthenticated={true} setAuthenticated={setAuthenticated} />
+                }
+            >
+            </Route>
             <Route path="/points/*"
                 element={
                     <>
@@ -235,9 +239,13 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 }
             >
             </Route>
-            {/* <Route path="/mypage/win-lose-settlement">
-                <WinLoseSettlement isAuthenticated={true} setAuthenticated={setAuthenticated} />
-            </Route> */}
+            <Route path="/win-lose-settlement"
+                element={
+                    <WinLoseSettlement isAuthenticated={true} setAuthenticated={setAuthenticated} />
+                }
+            >
+
+            </Route>
             <Route path="/gameresults/*"
                 element={
                     <>

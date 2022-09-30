@@ -25,6 +25,7 @@
             button {
                 background: url('../../assets/bigIcons/shadow-active-btn.png') round;
             }
+
             .text {
                 color: #252525;
             }
@@ -45,5 +46,20 @@
             margin-right: 0.35rem;
             // margin-top: 0;
         }
+    }
+}
+
+.div-shadow {
+    position: relative;
+
+    .nav-shadow {
+        height: 14.1rem;
+        width: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #191920;
+        box-shadow: 0.4875rem 0 3rem 3rem #19191c;
+        transform: rotate(180deg);
     }
 }

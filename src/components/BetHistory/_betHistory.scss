@@ -33,9 +33,15 @@
                 &.active {
                     button {
                         background: url('../../assets/myPage/second-btns/active-bg.png') round !important;
-                        width: 20.8rem;
-                        height: 13.5rem;
-                        margin-left: 0.4rem;
+                        background-repeat: round;
+                        width: 21.6rem;
+                        height: 14.1rem;
+                        margin-right: 0.2rem;
+                        // width: 20.8rem;
+                        // height: 13.6rem;
+                        // height: 14.0625rem;
+                        // height: 14rem; 
+                        // margin-left: 0.4rem;
 
                         .text {
                             color: #ccc2b6;

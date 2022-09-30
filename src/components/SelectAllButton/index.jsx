@@ -78,32 +78,34 @@ const SelectAllButton = (
 
     return (
         <div style={{ margin: '3.75rem 1.875rem', marginTop: '1.875rem', marginBottom: '2.5rem' }} >
-            <div>
+            <div className='two-buttons'>
                 <button
-                    style={{ height: '7.3125rem' }}
-                    className="first-btn"
+                    style={{ height: '7.3125rem', background: 'linear-gradient(to top, rgb(77, 10, 37), rgb(163, 79, 99) 50%, rgb(231, 134, 148))' }}
+                    className="first-btn hover shadow-to-box "
                     onClick={() => allSelectButtonPressed()}
                 >
                     <div
                         style={{
-                            background: "linear-gradient(to bottom, #555555, #333333)",
+                            // background: "linear-gradient(to bottom, #555555, #333333)",
+                            background: 'linear-gradient(to top, rgb(151, 53, 29), rgb(187, 76, 50) 50%, rgb(223, 99, 69))'
                         }}
-                        className="flex items-center justify-center h-full w-full rounded-2xl border border-gray-r737579 cursor-pointer"
+                        className="div-border flex items-center justify-center h-full w-full rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
-                        <span style={{ fontSize: '2.8125rem' }} className="font-spoqaMedium tracking-tight text-14px text-white  mb-2">{isAllSelected ? "선택해제" : "전체선택"}</span>
+                        <span style={{ fontSize: '2.8125rem' }} className="text font-spoqaMedium tracking-tight text-14px text-white  mb-2">{isAllSelected ? "선택해제" : "전체선택"}</span>
                     </div>
                 </button>
                 <button
-                    style={{ height: '7.3125rem' }}
-                    className="common-button flex flex-1 items-center justify-center m-0 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
+                    style={{ height: '7.3125rem', background: 'linear-gradient(to top, rgb(77, 60, 10), rgb(163, 129, 79) 50%, rgb(231, 183, 134))' }}
+                    className="hover shadow-to-box common-button flex flex-1 items-center justify-center m-0 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
                 >
                     <div
                         style={{
-                            background: "linear-gradient(to bottom, #f03a50, #cf254d)",
+                            background: 'linear-gradient(to top, rgb(128, 96, 63), rgb(150, 112, 74) 50%, rgb(165, 123, 82))',
+                            color: 'rgb(255, 223, 189)'
                         }}
-                        className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 cursor-pointer"
+                        className="div-border flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 cursor-pointer"
                     >
-                        <span style={{ fontSize: '2.8125rem' }} className="font-spoqaMedium tracking-tight text-14px text-white mb-2">{btn1Text}</span>
+                        <span style={{ fontSize: '2.8125rem' }} className="text font-spoqaMedium tracking-tight text-14px text-white mb-2">{btn1Text}</span>
                     </div>
                 </button>
             </div>

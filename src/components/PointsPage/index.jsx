@@ -1,5 +1,5 @@
 import PointsApply from '../PointsApply'
-// import PointsTransactionHistory from 'components/points/PointsTransactionHistory'
+import PointsTransactionHistory from '../PointsTransactionHistory'
 // import PointsAccumulateHistory from 'components/points/PointsAccumulateHistory'
 // import AccountProfileComponent from 'components/common/AccountProfileComponent'
 // import LeftMenu from "components/myPage/LeftMenu";
@@ -69,53 +69,62 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     console.log(selectedSubTab, selectedTab)
 
-    // const SubMenuList = (
-    //     <>
-    //         <div style={{ padding: '1.875rem', paddingBottom: '0.9375rem' }} className='w-full flex'>
-    //             <div style={{ borderRadius: "1.625rem", padding: '2px', marginRight: '0.46875rem', height: '13.125rem' }} className="flex items-center justify-center w-1/2 bg-gradient-to-b from-blue-r01a0ea to-blue-r0779de">
-    //                 <div style={{ borderRadius: "1.5rem", paddingTop: '2.5625rem' }} className="w-full h-full bg-white flex items-center flex-col">
-    //                     <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">잔여 포인트</div>
-    //                     <div style={{ fontSize: '4.125rem', marginTop: '0.5625rem' }} className="tracking-tight flex items-center">
-    //                         <span className="font-spoqaBold text-blue-r0056a6">278</span>
-    //                         <span className="font-spoqa text-gray-r616161">P</span>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //             <div style={{ borderRadius: "1.625rem", marginLeft: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem' }} className="items-center flex-col flex w-1/2 bg-white border-2 border-gray-b7b7b7">
-    //                 <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">당월 적립포인트</div>
-    //                 <div style={{ fontSize: '4.125rem', marginTop: '0.5625rem' }} className="tracking-tight flex items-center text-gray-r616161">
-    //                     <span className="font-spoqaBold">50</span>
-    //                     <span className="font-spoqa">P</span>
-    //                 </div>
-    //             </div>
-    //         </div>
+    const SubMenuList = (
+        <>
+            <div style={{ padding: '1.75rem 1.875rem 0.975rem 1.9rem', display: 'flex' }} className='w-full flex'>
+                <div style={{ borderRadius: "0.625rem", padding: '0.375rem', marginRight: '1rem', height: '13.125rem', background: 'linear-gradient(to top, #846241, #97714a 50%, #a47b51)', width: '36.5rem' }} className="flex items-center justify-center w-1/2 bg-gradient-to-b from-blue-r01a0ea to-blue-r0779de">
+                    <div style={{ borderRadius: "0.5rem", color: '#ad9e8c', paddingTop: '2.15rem', background: '#272624', width: '100%', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', fontFamily: 'SpoqaHanSansNeoMedium' }} className="w-full h-full bg-white flex items-center flex-col">
+                        <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center" style={{ fontSize: '2.25rem', letterSpacing: '-0.07rem' }}>잔여 포인트</div>
+                        <div style={{ fontSize: '4.125rem', marginTop: '0.9rem', letterSpacing: '-0.13rem' }} className="tracking-tight flex items-center">
+                            <span className="font-spoqaBold text-blue-r0056a6" style={{ color: '#4c98ff', fontFamily: 'SpoqaHanSansNeoBold' }}>278</span>
+                            <span className="font-spoqa text-gray-r616161">P</span>
+                        </div>
+                    </div>
+                </div>
+                <div style={{ borderRadius: "0.625rem", padding: '0.375rem', marginRight: '', height: '13.125rem', background: '#404040', width: '36.5rem' }} className="flex items-center justify-center w-1/2 bg-gradient-to-b from-blue-r01a0ea to-blue-r0779de">
+                    <div style={{ borderRadius: "0.5rem", color: '#ad9e8c', paddingTop: '2.15rem', background: '#272624', width: '100%', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', fontFamily: 'SpoqaHanSansNeoMedium' }} className="w-full h-full bg-white flex items-center flex-col">
+                        <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center" style={{ fontSize: '2.25rem', letterSpacing: '-0.07rem' }}>당월 적립포인트</div>
+                        <div style={{ fontSize: '4.125rem', marginTop: '0.9rem', letterSpacing: '-0.13rem' }} className="tracking-tight flex items-center">
+                            <span className="font-spoqaBold text-blue-r0056a6" style={{ fontFamily: 'SpoqaHanSansNeoBold' }}>50</span>
+                            <span className="font-spoqa text-gray-r616161">P</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-    //         <div style={{ padding: '1.875rem', paddingTop: '0' }} className='w-full flex'>
-    //             <div style={{ borderRadius: "1.625rem", marginRight: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem' }} className="items-center flex-col flex w-1/3 bg-white border-2 border-gray-b7b7b7">
-    //                 <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">전월 적립포인트</div>
-    //                 <div style={{ fontSize: '3.625rem', marginTop: '0.6625rem' }} className="tracking-tight flex items-center text-gray-r616161">
-    //                     <span className="font-spoqaBold">228</span>
-    //                     <span className="font-spoqa">P</span>
-    //                 </div>
-    //             </div>
-    //             <div style={{ borderRadius: "1.625rem", marginRight: '0.46875rem', marginLeft: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem' }} className="items-center flex-col flex w-1/3 bg-white border-2 border-gray-b7b7b7">
-    //                 <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">총 누적포인트</div>
-    //                 <div style={{ fontSize: '3.625rem', marginTop: '0.6625rem' }} className="tracking-tight flex items-center text-gray-r616161">
-    //                     <span className="font-spoqaBold">278</span>
-    //                     <span className="font-spoqa">P</span>
-    //                 </div>
-    //             </div>
-    //             <div style={{ borderRadius: "1.625rem", marginLeft: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem' }} className="items-center flex-col flex w-1/3 bg-white border-2 border-gray-b7b7b7">
-    //                 <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">총 사용포인트</div>
-    //                 <div style={{ fontSize: '3.625rem', marginTop: '0.6625rem' }} className="tracking-tight flex items-center text-gray-r616161">
-    //                     <span className="font-spoqaBold">0</span>
-    //                     <span className="font-spoqa">P</span>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </>
-    // )
+            <div style={{ padding: '1.875rem', paddingTop: '0', display: 'flex' }} className='w-full flex'>
+                <div style={{ borderRadius: "0.625rem", padding: '0.375rem', marginRight: '1rem', height: '13.125rem', background: '#404040', width: '24rem' }} className="flex items-center justify-center w-1/2 bg-gradient-to-b from-blue-r01a0ea to-blue-r0779de">
+                    <div style={{ borderRadius: "0.5rem", color: '#ad9e8c', paddingTop: '2.15rem', background: '#272624', width: '100%', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', fontFamily: 'SpoqaHanSansNeoMedium', paddingRight: '0.35rem' }} className="w-full h-full bg-white flex items-center flex-col">
+                        <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center" style={{ fontSize: '2.25rem', letterSpacing: '-0.07rem' }}>전월 적립포인트</div>
+                        <div style={{ fontSize: '4.125rem', marginTop: '0.9rem', letterSpacing: '-0.13rem' }} className="tracking-tight flex items-center">
+                            <span className="font-spoqaBold text-blue-r0056a6" style={{ fontFamily: 'SpoqaHanSansNeoBold' }}>228</span>
+                            <span className="font-spoqa text-gray-r616161">P</span>
+                        </div>
+                    </div>
+                </div>
+                <div style={{ borderRadius: "0.625rem", padding: '0.375rem', marginRight: '1rem', height: '13.125rem', background: '#404040', width: '24rem' }} className="flex items-center justify-center w-1/2 bg-gradient-to-b from-blue-r01a0ea to-blue-r0779de">
+                    <div style={{ borderRadius: "0.5rem", color: '#ad9e8c', paddingTop: '2.15rem', background: '#272624', width: '100%', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', fontFamily: 'SpoqaHanSansNeoMedium', paddingRight: '0.26rem' }} className="w-full h-full bg-white flex items-center flex-col">
+                        <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center" style={{ fontSize: '2.25rem', letterSpacing: '-0.07rem' }}>총 누적포인트</div>
+                        <div style={{ fontSize: '4.125rem', marginTop: '0.9rem', letterSpacing: '-0.13rem' }} className="tracking-tight flex items-center">
+                            <span className="font-spoqaBold text-blue-r0056a6" style={{ fontFamily: 'SpoqaHanSansNeoBold' }}>278</span>
+                            <span className="font-spoqa text-gray-r616161">P</span>
+                        </div>
+                    </div>
+                </div>
+                <div style={{ borderRadius: "0.625rem", padding: '0.375rem', marginRight: '', height: '13.125rem', background: '#404040', width: '24rem' }} className="flex items-center justify-center w-1/2 bg-gradient-to-b from-blue-r01a0ea to-blue-r0779de">
+                    <div style={{ borderRadius: "0.5rem", color: '#ad9e8c', paddingTop: '2.15rem', background: '#272624', width: '100%', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', fontFamily: 'SpoqaHanSansNeoMedium', paddingRight: '0.26rem' }} className="w-full h-full bg-white flex items-center flex-col">
+                        <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center" style={{ fontSize: '2.25rem', letterSpacing: '-0.07rem' }}>총 사용포인트</div>
+                        <div style={{ fontSize: '4.125rem', marginTop: '0.9rem', letterSpacing: '-0.13rem' }} className="tracking-tight flex items-center">
+                            <span className="font-spoqaBold text-blue-r0056a6" style={{ fontFamily: 'SpoqaHanSansNeoBold' }}>228</span>
+                            <span className="font-spoqa text-gray-r616161">P</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+
     const MyInfo = () => {
         return (
             <>
@@ -167,10 +176,16 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
                                             alt=""
                                             style={{ position: 'absolute', top: '0', opacity: '0.5' }}
                                         /> */}
-                                        <PointsAccumulateHistory />
+                                        <PointsAccumulateHistory SubMenuList={SubMenuList} />
                                     </>
                                 }
                             />
+
+                            <Route path="/points-transaction-history"
+                                element={<PointsTransactionHistory SubMenuList={SubMenuList} />}
+                            >
+
+                            </Route>
                         </Routes>
                         <NavBottom />
                     </>}

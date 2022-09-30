@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Pagination from '../Pagination'
 import CouponGiftPopup from '../popups/CouponGiftPopup'
 // import ScrollButton from 'components/common/ScrollButton'
@@ -28,6 +28,8 @@ import AccountProfileComponent from '../AccountProfileComponent'
 import subIcon1 from '../../assets/bigIcons/leftMenu/18.png';
 import subIcon2 from '../../assets/bigIcons/leftMenu/19.png';
 import subIcon3 from '../../assets/bigIcons/leftMenu/20.png';
+import NavBottom from '../NavBottom'
+import Header from '../Header'
 
 // import subIcon1 from '../../images/newImages/mainPage/coupon/1.png';
 // import subIcon2 from '../../images/newImages/mainPage/coupon/2.png';
@@ -391,424 +393,431 @@ const giftsTableData = [
     ],
 ]
 
-// const historyTableData = [
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 보낸회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#c65337',
-//             buttonText: '사용 가능'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 보낸회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#0056a6',
-//             buttonText: '사용 완료'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 보낸회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#454545',
-//             buttonText: '기간 만료'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 보낸회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#279140',
-//             buttonText: '회수 쿠폰'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 보낸회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#c65337',
-//             buttonText: '사용 가능'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 보낸회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#c65337',
-//             buttonText: '사용 가능'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 보낸회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#c65337',
-//             buttonText: '사용 가능'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 보낸회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#c65337',
-//             buttonText: '사용 가능'
-//         }
-//     ],
-// ]
+const historyTableData = [
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 보낸회원아이디: "eric123" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#c65337',
+            buttonText: '사용 가능'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 보낸회원아이디: "eric123" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '사용 완료'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 보낸회원아이디: "eric123" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#454545',
+            buttonText: '기간 만료'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 보낸회원아이디: "eric123" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#279140',
+            buttonText: '회수 쿠폰'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 보낸회원아이디: "eric123" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#c65337',
+            buttonText: '사용 가능'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 보낸회원아이디: "eric123" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#c65337',
+            buttonText: '사용 가능'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 보낸회원아이디: "eric123" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#c65337',
+            buttonText: '사용 가능'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 보낸회원아이디: "eric123" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#c65337',
+            buttonText: '사용 가능'
+        }
+    ],
+]
 
-// const sentHistoryTableData = [
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 받는회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 보낸일시: "2021-06-29 15:45" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#92278f',
-//             buttonText: '선물 완료',
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 받는회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 보낸일시: "2021-06-29 15:45" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#92278f',
-//             buttonText: '선물 완료'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 받는회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 보낸일시: "2021-06-29 15:45" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#92278f',
-//             buttonText: '선물 완료'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 받는회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 보낸일시: "2021-06-29 15:45" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#92278f',
-//             buttonText: '선물 완료'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 받는회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 보낸일시: "2021-06-29 15:45" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#92278f',
-//             buttonText: '선물 완료'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 받는회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 보낸일시: "2021-06-29 15:45" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#92278f',
-//             buttonText: '선물 완료'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 받는회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 보낸일시: "2021-06-29 15:45" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#92278f',
-//             buttonText: '선물 완료'
-//         }
-//     ],
-//     [
-//         {
-//             0: { 쿠폰명: '테스트쿠폰' },
-//         },
-//         {
-//             0: { 쿠폰금액: "5,000" }
-//         },
-//         {
-//             0: { 받는회원아이디: "eric123" },
-//         },
-//         {
-//             0: { 보낸일시: "2021-06-29 15:45" },
-//         },
-//         {
-//             0: { 발급일: "2021-06-29" },
-//         },
-//         {
-//             0: { 만료일: "2021-07-29" },
-//         },
-//         {
-//             buttonColor: '#92278f',
-//             buttonText: '선물 완료'
-//         }
-//     ],
-// ]
+const sentHistoryTableData = [
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 받는회원아이디: "eric123" },
+        },
+        {
+            0: { 보낸일시: "2021-06-29 15:45" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료',
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 받는회원아이디: "eric123" },
+        },
+        {
+            0: { 보낸일시: "2021-06-29 15:45" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 받는회원아이디: "eric123" },
+        },
+        {
+            0: { 보낸일시: "2021-06-29 15:45" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 받는회원아이디: "eric123" },
+        },
+        {
+            0: { 보낸일시: "2021-06-29 15:45" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 받는회원아이디: "eric123" },
+        },
+        {
+            0: { 보낸일시: "2021-06-29 15:45" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 받는회원아이디: "eric123" },
+        },
+        {
+            0: { 보낸일시: "2021-06-29 15:45" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 받는회원아이디: "eric123" },
+        },
+        {
+            0: { 보낸일시: "2021-06-29 15:45" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [
+        {
+            0: { 쿠폰명: '테스트쿠폰' },
+        },
+        {
+            0: { 쿠폰금액: "5,000" }
+        },
+        {
+            0: { 받는회원아이디: "eric123" },
+        },
+        {
+            0: { 보낸일시: "2021-06-29 15:45" },
+        },
+        {
+            0: { 발급일: "2021-06-29" },
+        },
+        {
+            0: { 만료일: "2021-07-29" },
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+]
 
 
 
-// const HistoryMenu = ({
-//     itemsArray,
-//     setSelectedTab,
-//     setSelectedSubTab = null
-// }) => {
-//     // r0056a6
-//     const navigate = useNavigate();
-//     const pathname = window.location.pathname
-//     const [isHover, setHover] = useState(null)
-//     console.log(isHover)
+const HistoryMenu = ({
+    itemsArray,
+    setSelectedTab,
+    setSelectedSubTab = null
+}) => {
+    const navigate = useNavigate();
+    const pathname = window.location.pathname
+    const [isHover, setHover] = useState(null)
+    console.log(isHover)
 
-//     function TabsList({ items }) {
-//         return items.map((item, index) => (
-//             <button
-//                 className={`${pathname === item.path
-//                     ? "bg-blue-r0056a6"
-//                     : "bg-white  border border-gray-b7b7b7"
-//                     } w-1/2 rounded-full font-spoqaMedium`}
-//                 style={{ height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : ''}`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}` }}
-//                 key={item.id}
-//                 onClick={() => {
-//                     navigate(item.path)
-//                     setSelectedTab(item.id)
-//                     if (setSelectedSubTab !== null) {
-//                         setSelectedSubTab(0)
-//                     }
-//                 }}
-//                 onMouseOver={() => setHover(item.id)}
-//                 onMouseLeave={() => setHover(null)}
-//             >
-//                 <div >
-//                     <div>
-//                         <span
-//                             className={`${pathname === item.path
-//                                 ? "text-white"
-//                                 : "text-gray-r7b7b7b"
-//                                 }`}
-//                         >{item.text}</span>
-//                     </div>
-//                 </div>
-//             </button>
-//         ));
-//     }
+    function TabsList({ items }) {
+        return items.map((item, index) => {
+            let isActive = pathname === item.path
+            if (item.path.includes('/cscenter/all/policy/sportsgame')) {
+                isActive = true
+            }
+            return (
+                <button
+                    className={`${isActive
+                        ? "bg-blue-r0056a6"
+                        : "bg-white border border-gray-b7b7b7"
+                        } w-1/2 rounded-full font-spoqaMedium`}
+                    style={{ background: isActive ? '#826140' : '#1e1e1e', fontFamily: 'SpoqaHanSansNeoMedium', color: isActive ? '#ffdfbd' : '#ccc2b6', width: '49.2%', borderRadius: '4rem', marginTop: '1rem', height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '1.15rem' : ''}`, border: `${pathname !== item.path && !isActive ? '0.1875rem solid #555555' : ''}`, letterSpacing: '-0.07rem' }}
+                    key={item.id}
 
-//     return (
-//         <div className="flex w-full">
-//             <TabsList items={itemsArray} />
-//         </div>
-//     )
-// }
+                    onPointerDown={() => setHover(item.id)}
+                    onPointerUp={() => {
+                        navigate(item.path)
+                        setSelectedTab(item.id)
+                        if (setSelectedSubTab !== null) {
+                            setSelectedSubTab(0)
+                        }
+                    }}
+                    onPointerOut={() => setHover(null)}
+                    onPointerCancel={() => setHover(null)}
+                >
+                    <div >
+                        <div className='mt-2' style={{ marginRight: '-0.2rem', paddingTop: '0.3rem' }}>
+                            <span
+                                className={`${isActive
+                                    ? "text-white"
+                                    : "text-gray-r7b7b7b"
+                                    }`}
+                            >{item.text}</span>
+                        </div>
+                    </div>
+                </button>
+            )
+        });
+    }
+
+    return (
+        <div className="flex w-full">
+            <TabsList items={itemsArray} />
+        </div>
+    )
+}
 
 
 const GiftButton = (
@@ -828,7 +837,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
 
     const CouponTitle = ({ text = '사용 가능한 쿠폰', number = '10', numberColor = '#e65454' }) => {
         return (
-            <div className="flex items-center space-x-20px" style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="flex items-center space-x-20px" style={{ display: 'flex', justifyContent: 'center', marginTop: "2.6rem" }}>
                 <div style={{
                     fontSize: '2.624375rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.6rem'
                 }} className="font-spoqaMedium tracking-tight text-gray-r8c8c8c">
@@ -877,10 +886,10 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
         }
     ]
 
-    // const historyTabsArray = [
-    //     { text: "쿠폰발급내역", icon: Icon1, id: 0, path: "/mypage/coupon/all/coupon-history" },
-    //     { text: "쿠폰선물내역", icon: Icon2, id: 1, path: "/mypage/coupon/all/coupon-history/sent" }
-    // ]
+    const historyTabsArray = [
+        { text: "쿠폰발급내역", icon: Icon1, id: 0, path: "/mypage/coupon/all/coupon-history" },
+        { text: "쿠폰선물내역", icon: Icon2, id: 1, path: "/mypage/coupon/all/coupon-history/sent" }
+    ]
     const MyInfo = () => {
         return (
             <>
@@ -932,6 +941,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                         <>
                             <div className="w-full z-30 flex flex-col items-center">
                                 {/* <NoticeBanner /> */}
+                                <Header />
                                 {/* <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} /> */}
                                 <HomePageTopBanner pageTitle='쿠폰관리' />
                             </div>
@@ -962,7 +972,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
 
                                         <Routes>
 
-                                            <Route path="/all/*"
+                                            <Route index
                                                 element={
                                                     <>
                                                         <div style={{ marginBottom: '-0.8125rem' }} className='mt-4 flex justify-center'>
@@ -982,10 +992,10 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                                                                 isCouponUsage={true}
                                                             />
                                                         </div>
-                                                        <div style={{ marginTop: '1.875rem' }}>
+                                                        <div style={{ marginTop: '1.875rem', paddingBottom: '0.01rem' }}>
                                                             <Pagination page={page} setPage={setPage} />
                                                         </div>
-                                                        {/* <BottomNavbar /> */}
+                                                        <NavBottom />
 
                                                     </>
                                                 }
@@ -1032,6 +1042,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                                                         <div style={{ marginTop: '3.86rem', paddingBottom: '0.1rem' }}>
                                                             <Pagination page={page} setPage={setPage} />
                                                         </div>
+                                                        <NavBottom />
                                                         {/* <CouponGiftPopup setPopupOpen={setPopupOpen} /> */}
                                                     </div>
                                                 }
@@ -1042,6 +1053,84 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                                                 {/* <PointsAccumulateHistory />
                                 <BottomNavbar /> */}
                                             </Route>
+                                            <Route
+                                                path='/coupon-history'
+                                                element={
+                                                    <>
+                                                        <div style={{ margin: '1.875rem', marginTop: '0.5rem', marginBottom: '0' }}>
+                                                            <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
+                                                        </div>
+
+                                                        <div style={{ marginBottom: '-0.8125rem', display: 'flex', justifyContent: 'center' }} className='mt-4 flex justify-center'>
+                                                            <CouponTitle text='사용가능' number='32' />
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
+                                                            <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
+                                                            <CouponTitle text='기간만료' number='0' numberColor='#000000' />
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
+                                                            <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
+                                                        </div>
+                                                        <div className="">
+                                                            <HistoryTable
+                                                                containerBackground='#f7f9fc'
+                                                                wrapButtonText
+                                                                tableData={historyTableData}
+                                                                checkedState={checkedState}
+                                                                hasLeftInput={false}
+                                                                setCheckedState={setCheckedState}
+                                                                isPopupOpen={isPopupOpen}
+                                                                setPopupOpen={setPopupOpen}
+                                                                cardHeight='25.3125rem'
+                                                                isButtonGradient={false}
+                                                            />
+                                                        </div>
+                                                        <div style={{ marginTop: '1.875rem', paddingBottom: '0.01rem' }}>
+                                                            <Pagination page={page} setPage={setPage} />
+                                                        </div>
+                                                        <NavBottom />
+                                                    </>
+                                                }
+                                            >
+
+                                            </Route>
+                                            <Route
+                                                path='/coupon-history/sent'
+                                                element={
+                                                    <>
+                                                        <div style={{ margin: '1.875rem', marginTop: '0.5rem', marginBottom: '0' }}>
+                                                            <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
+                                                        </div>
+
+                                                        <div style={{ marginBottom: '-0.8125rem', display: 'flex', justifyContent: 'center' }} className='mt-4 flex justify-center'>
+                                                            <CouponTitle text='사용가능' number='32' />
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem' }} className='bg-gray-c5c5c5'></div>
+                                                            <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem' }} className='bg-gray-c5c5c5'></div>
+                                                            <CouponTitle text='기간만료' number='0' numberColor='#000000' />
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem' }} className='bg-gray-c5c5c5'></div>
+                                                            <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
+                                                        </div>
+                                                        <div className="">
+                                                            <HistoryTable
+                                                                containerBackground='#f7f9fc'
+                                                                wrapButtonText
+                                                                tableData={sentHistoryTableData}
+                                                                hasLeftInput={false}
+                                                                checkedState={checkedState}
+                                                                setCheckedState={setCheckedState}
+                                                                isPopupOpen={isPopupOpen}
+                                                                setPopupOpen={setPopupOpen}
+                                                                cardHeight='29.5rem'
+                                                                isButtonGradient={false}
+                                                            />
+                                                        </div>
+                                                        <div style={{ marginTop: '1.875rem', paddingBottom: '0.01rem' }}>
+                                                            <Pagination page={page} setPage={setPage} />
+                                                        </div>
+                                                        <NavBottom />
+                                                    </>
+                                                }
+                                            ></Route>
                                             {/* <Route exact path="/mypage/coupon/all/coupon-history">
                                                 <div style={{ margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem' }}>
                                                     <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />

@@ -17,13 +17,13 @@ import HorizontalMenu from '../HorizontalMenu'
 // import img22 from '../../img22.png'
 
 const subTabsArray = [
-    { text: "전체", icon: Icon1, id: 0, activeBG: activeBG, marginIcon: '1rem', width: '19.375rem' },
-    { text: "에볼루션", icon: Icon2, id: 1, activeBG: activeBG, width: '19.375rem' },
-    { text: "프레그메틱플레이", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '-1rem', width: '19.375rem' },
-    { text: "로얄지", icon: Icon4, id: 3, activeBG: activeBG, width: '19.375rem' },
-    { text: "드림게이밍", icon: Icon8, id: 4, activeBG: activeBG, width: '19.375rem' },
-    { text: "섹시게이밍", icon: Icon9, id: 5, activeBG: activeBG, width: '19.375rem' },
-    { text: "빅게이밍", icon: Icon10, id: 6, activeBG: activeBG, width: '19.375rem' },
+    { text: "전체", icon: Icon1, id: 0, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
+    { text: "에볼루션", icon: Icon2, id: 1, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "프레그메틱플레이", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
+    { text: "로얄지", icon: Icon4, id: 3, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "드림게이밍", icon: Icon8, id: 4, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "섹시게이밍", icon: Icon9, id: 5, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "빅게이밍", icon: Icon10, id: 6, activeBG: activeBG, width: '19.375rem', path: '#' },
 ];
 
 // 베팅번호 => number
@@ -242,7 +242,7 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
                         <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
                         <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                             <div className=" flex flex-shrink-0 w-full">
-                                <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} />
+                                <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup/>
                                 {/* <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} /> */}
                                 {/* <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} /> */}
                             </div>

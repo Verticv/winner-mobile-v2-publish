@@ -1210,7 +1210,7 @@ const DistributorPage = ({
                                 <span style={{ fontSize: '3rem', marginTop: '0rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', letterSpacing: '-0.07rem' }}>롤링요율</span>
                             </div>
 
-                            <div className='flex relative' style={{ display: 'flex', position: 'relative' }}>
+                            <div className='flex relative div-shadow' style={{ display: 'flex', position: 'relative' }}>
                                 {/* <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '74.5rem' }} className="absolute h-full z-50"></div> */}
 
                                 {/* the red box */}
@@ -1270,7 +1270,7 @@ const DistributorPage = ({
                                         </table>
                                     </div>
                                 </div>
-
+                                <div className='nav-shadow' style={{ height: '17rem' }}></div>
                                 {/* <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem', left: '0' }} className="absolute h-full z-50"></div> */}
                             </div>
 
@@ -1333,7 +1333,7 @@ const DistributorPage = ({
 
 
 
-                            <div className='flex relative' style={{ display: 'flex', position: 'relative' }}>
+                            <div className='flex relative div-shadow' style={{ display: 'flex', position: 'relative' }}>
                                 {/* <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '74.5rem' }} className="absolute h-full z-50"></div> */}
 
 
@@ -1446,7 +1446,7 @@ const DistributorPage = ({
                                         </table>
                                     </div>
                                 </div>
-
+                                <div className='nav-shadow' style={{ height: '35rem' }}></div>
                                 {/* <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '2.5rem', left: '0' }} className="absolute h-full z-50"></div> */}
                             </div>
 
@@ -1517,7 +1517,7 @@ const DistributorPage = ({
                                 </div>
                             </div>
 
-                            <div className='flex relative' style={{
+                            <div className='flex relative div-shadow' style={{
                                 // background: '#323232', 
                                 marginLeft: '1.8125rem', color: '#c8c8c8', padding: '0.1875rem',
                                 borderTopLeftRadius: '0.4rem',
@@ -1626,6 +1626,7 @@ const DistributorPage = ({
                                         </div>
                                     </div>
                                 </div>
+                                <div className='nav-shadow' style={{height: '100%'}}></div>
                                 {/* <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '2.5rem', left: '0' }} className="absolute h-full z-50"></div> */}
                             </div>
 
