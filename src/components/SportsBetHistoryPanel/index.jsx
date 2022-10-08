@@ -17,7 +17,7 @@ const SportsBetHistoryPanel = ({
                     <TableHeader />
                     <div style={{ padding: '0rem 0.9rem 0 0.7rem' }} className="w-full">
                         <div className="w-full rounded-lg">
-                            <div className='rounded-lg w-full' style={{ border: '0.375rem solid #473b35', borderRadius: '0.4rem' }}>
+                            <div className='rounded-lg w-full shadow-to-box' style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem' }}>
                                 <CardHeader flag='us' name='MLS' date='2021-06-29 15:45' smallCard />
                                 <CardResults
                                     bet="right"
@@ -44,7 +44,7 @@ const SportsBetHistoryPanel = ({
                     <TableHeader />
                     <div style={{ padding: '0rem 0.9rem 0 0.7rem' }} className="w-full">
                         <div className="w-full rounded-lg">
-                            <div className='rounded-lg w-full' style={{ border: '0.375rem solid #473b35', borderRadius: '0.4rem' }}>
+                            <div className='rounded-lg w-full shadow-to-box' style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem' }}>
                                 <CardHeader flag='uk' name='EPL' date='2021-06-29 15:45' smallCard />
                                 <CardResults
                                     bet="left"
@@ -87,7 +87,7 @@ const SportsBetHistoryPanel = ({
                     <TableHeader />
                     <div style={{ padding: '0rem 0.9rem 0 0.7rem' }} className="w-full">
                         <div className="w-full rounded-lg" >
-                            <div style={{ marginBottom: '-1rem', border: '0.375rem solid #473b35', borderRadius: '0.4rem' }} className='rounded-lg w-full'>
+                            <div style={{ marginBottom: '-1rem', border: '0.45rem solid #473b35', borderRadius: '0.4rem' }} className='rounded-lg w-full shadow-to-box'>
                                 <CardHeader flag='uk' name='EPL' date='2021-06-29 15:45' />
                                 <CardResults
                                     bet="left"
@@ -104,7 +104,7 @@ const SportsBetHistoryPanel = ({
                                     hasDown={false}
                                 />
                             </div>
-                            <div className='rounded-lg w-full' style={{ border: '0.375rem solid #473b35', borderRadius: '0.4rem', marginTop: '1.7rem' }}>
+                            <div className='rounded-lg w-full shadow-to-box' style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem', marginTop: '1.7rem' }}>
                                 <CardHeader flag='spain' name='라리가' date='2021-06-29 15:45' />
                                 <CardResults
                                     bet="left"

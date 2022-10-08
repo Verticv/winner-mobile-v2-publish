@@ -19,7 +19,7 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#0056a6',
+            buttonColor: '#826140',
             buttonText: '완료'
         }
     ],
@@ -37,7 +37,7 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#9ca3af',
+            buttonColor: '#826140',
             buttonText: '취소'
         }
     ],
@@ -55,7 +55,7 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#0056a6',
+            buttonColor: '#826140',
             buttonText: '완료'
         }
     ],
@@ -73,7 +73,7 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#0056a6',
+            buttonColor: '#826140',
             buttonText: '완료'
         }
     ],
@@ -91,7 +91,7 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#0056a6',
+            buttonColor: '#826140',
             buttonText: '완료'
         }
     ],
@@ -109,7 +109,7 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#0056a6',
+            buttonColor: '#826140',
             buttonText: '완료'
         }
     ],
@@ -127,7 +127,7 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#0056a6',
+            buttonColor: '#826140',
             buttonText: '완료'
         }
     ],
@@ -145,7 +145,7 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#0056a6',
+            buttonColor: '#826140',
             buttonText: '완료'
         }
     ],

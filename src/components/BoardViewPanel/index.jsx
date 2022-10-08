@@ -24,7 +24,7 @@ const BoardViewPanel = ({
                         <TableHeader smallCard />
                         <div style={{ padding: '0 1rem' }} className="w-full">
                             <div className="w-full rounded-lg" style={{ padding: '0.2875rem 0.1875rem' }}>
-                                <div className='rounded-lg w-full' style={{ background: '', border: '0.375rem solid #473b35', borderRadius: '0.4rem' }}>
+                                <div className='rounded-lg w-full shadow-to-box' style={{ background: '', border: '0.45rem solid #473b35', borderRadius: '0.4rem' }}>
                                     <CardHeader flag={card.flag} name={card.name} date='2021-06-29 15:45' />
                                     <CardResults
                                         bet={card.bet}

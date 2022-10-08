@@ -39,7 +39,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
     const InboxButton = (
         <button
             onClick={() => navigate("/mypage/inbox")}
-            style={{ height: '9.3125rem', width: '9.375rem', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(to top, #a67c52, #7f5f3f)', marginRight: '0.45rem', marginTop: '0.15rem', borderRadius: '0.7rem', marginLeft: '0.5rem' }}
+            style={{ height: '9.3125rem', width: '9.375rem', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(to top, #7f5f3f, #a67c52)', marginRight: '0.45rem', marginTop: '0.15rem', borderRadius: '0.7rem', marginLeft: '0.5rem' }}
             className="shadow-to-box hover"
         >
             <img
@@ -48,7 +48,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
                 src={InboxIcon}
                 alt="inbox_icon"
             />
-            <div className="absolute flex items-center justify-center w-16 h-16 bg-red-notification top-0 right-0 -mt-3px -mr-3px rounded-full shadow-plain6" style={{ position: 'absolute', display: 'flex', justifyContent: 'center', alignItems: 'center', top: '-0.55rem', right: '-0.6rem', padding: '0.3rem 1.1rem', borderRadius: '0.9rem', background: 'red', boxShadow: '0.09375rem 0.162375rem 0.0625rem 0 rgba(0, 0, 0, 0.51)' }}>
+            <div className="absolute flex items-center justify-center w-16 h-16 bg-red-notification top-0 right-0 -mt-3px -mr-3px rounded-full shadow-plain6" style={{ position: 'absolute', display: 'flex', justifyContent: 'center', alignItems: 'center', top: '-0.65rem', right: '-0.6rem', padding: '0.3rem 1.1rem', borderRadius: '0.9rem', background: '#e9441d', boxShadow: '0.09375rem 0.162375rem 0.0625rem 0 rgba(0, 0, 0, 0.51)' }}>
                 <label style={{ fontSize: '2.8125rem', marginLeft: '0.1875rem', fontFamily: 'RobotoMedium', color: '#ffffff' }} className="font-roboto">1</label>
             </div>
         </button>
@@ -57,7 +57,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
     const ProfileButton = (
         <button
             onClick={() => navigate("/attendance")}
-            style={{ height: '9.3125rem', width: '9.375rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(to top, #a67c52, #7f5f3f)', marginRight: '0.45rem', marginTop: '0.15rem', borderRadius: '0.7rem', marginLeft: '0.5rem' }}
+            style={{ height: '9.3125rem', width: '9.375rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(to top, #7f5f3f, #a67c52)', marginRight: '0.45rem', marginTop: '0.15rem', borderRadius: '0.7rem', marginLeft: '0.5rem' }}
             className="shadow-to-box hover"
         >
             <img
@@ -88,7 +88,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
             width: '100%', height: '100%',
             // marginRight: '0.9375rem',
             display: 'flex', alignItems: 'center', justifyContent: '',
-            background: 'linear-gradient(to top, #a67c52, #7f5f3f)',
+            background: 'linear-gradient(to top, #7f5f3f, #a67c52)',
             // paddingLeft: '2.4rem',
             paddingRight: '1.8rem',
             // marginTop: '0.15rem',
@@ -98,7 +98,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
             <div style={{ marginRight: '1.7rem', marginTop: '0.1rem', marginLeft: '2rem' }} className="rounded-full h-full flex items-center justify-center">
                 <img style={{ width: '7.0625rem', height: '' }} className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label style={{ marginRight: '2.45rem', fontSize: '3rem', marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd' }} className="font-spoqaBold text-white cursor-pointer">{country}</label>
+            <label style={{ marginRight: '2.45rem', fontSize: '3rem', marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', textShadow: '#000000 0rem 0rem 0.4375rem' }} className="font-spoqaBold text-white cursor-pointer">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen} />
         </div>
     )
@@ -155,7 +155,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
                                             <img className="object-contain ml-1" style={{ width: '5.5625rem', marginTop: '0.1125rem', marginLeft: '0.3rem' }} src={W} alt="₩" />
                                         </div>
                                     </div>
-                                    <p className="w-5/6 m-0 text-6xl text-right text-blue-gradLight font-robotoBold" style={{ margin: '0', fontFamily: 'RobotoBold', color: '#ad9e8c', fontSize: '3.75rem' }}>100,000,000 <span className="font-spoqaBold mr-3" style={{ color: '#c8c8c8', fontSize: '3.5rem', fontFamily: 'SpoqaHanSansNeoBold' }}>원</span></p>
+                                    <p className="w-5/6 m-0 text-6xl text-right text-blue-gradLight font-robotoBold" style={{ margin: '0.679rem 0', fontFamily: 'RobotoBold', color: '#ad9e8c', fontSize: '3.75rem' }}>100,000,000 <span className="font-spoqaBold mr-3" style={{ color: '#c8c8c8', fontSize: '3.5rem', fontFamily: 'SpoqaHanSansNeoBold' }}>원</span></p>
                                 </div>
                                 <div style={{ borderBottomRightRadius: '3.75rem', borderBottomLeftRadius: '3.75rem', padding: '0.55rem 1.1rem 0.55rem 0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="flex w-full items-center bg-white rounded-b-2xl p-1.5 pr-4">
                                     <div className="w-1/6 ">
@@ -174,7 +174,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
                         <div style={{
                             height: '9.3125rem', width: '23.75rem', marginRight: '0.9375rem',
                             display: 'flex', alignItems: 'center', justifyContent: '',
-                            background: 'linear-gradient(to top, #a67c52, #7f5f3f)',
+                            background: 'linear-gradient(to top, #7f5f3f, #a67c52)',
                             paddingLeft: '2.4rem',
                             paddingRight: '1.8rem',
                             marginTop: '0.15rem', borderRadius: '0.7rem', marginLeft: '0.5rem'
@@ -182,7 +182,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
                             <div style={{ marginRight: '1.8rem', marginTop: '0.1375rem', marginLeft: '-0.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="w-16 h-16 rounded-full flex items-center justify-center">
                                 <img className="" src={Logout} alt="logout" style={{ width: '5.625rem' }}></img>
                             </div>
-                            <label style={{ marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', fontSize: '3rem' }} className="shadow-to-text" onClick={() => {
+                            <label style={{ marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', fontSize: '3rem', textShadow: '#000000 0rem 0rem 0.4375rem' }} className="shadow-to-text" onClick={() => {
                                 navigate("/")
                                 setAuthenticated(false)
                             }}>

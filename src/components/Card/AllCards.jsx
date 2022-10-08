@@ -68,6 +68,8 @@ const cardInfo = [{
     icon: true,
     text: '에볼루션',
     isActive: false,
+    path: '/live-casino',
+    group: '1'
 },
 {
     id: 2,
@@ -76,6 +78,8 @@ const cardInfo = [{
     icon: true,
     text: '프레그메틱플레이',
     isActive: true,
+    path: '/live-casino',
+    group: '1'
 },
 {
     id: 3,
@@ -84,6 +88,8 @@ const cardInfo = [{
     icon: true,
     text: '로얄지',
     isActive: false,
+    path: '/live-casino',
+    group: '1'
 },
 {
     id: 4,
@@ -92,6 +98,8 @@ const cardInfo = [{
     icon: true,
     text: '아시아게이밍',
     isActive: false,
+    path: '/live-casino',
+    group: '1'
 },
 {
     id: 5,
@@ -100,6 +108,8 @@ const cardInfo = [{
     icon: true,
     text: '드림게이밍',
     isActive: false,
+    path: '/live-casino',
+    group: '1'
 },
 {
     id: 6,
@@ -108,6 +118,8 @@ const cardInfo = [{
     icon: true,
     text: '섹시게이밍',
     isActive: false,
+    path: '/live-casino',
+    group: '1'
 },
 {
     id: 7,
@@ -116,6 +128,8 @@ const cardInfo = [{
     icon: true,
     text: '빅게이밍',
     isActive: false,
+    path: '/live-casino',
+    group: '1'
 },
 {
     id: 8,
@@ -124,6 +138,7 @@ const cardInfo = [{
     icon: true,
     text: '케이플레이슬롯',
     isActive: false,
+    group: '2'
 },
 {
     id: 9,
@@ -132,6 +147,7 @@ const cardInfo = [{
     icon: false,
     text: '라이브베팅',
     isActive: false,
+    group: '3'
 },
 {
     id: 10,
@@ -140,6 +156,8 @@ const cardInfo = [{
     icon: false,
     text: '조합베팅',
     isActive: false,
+    path: '/bet-combination',
+    group: '3'
 },
 {
     id: 11,
@@ -148,6 +166,8 @@ const cardInfo = [{
     icon: false,
     text: '스페셜베팅',
     isActive: false,
+    path: '/bet-combination',
+    group: '3'
 },
 {
     id: 12,
@@ -156,6 +176,7 @@ const cardInfo = [{
     icon: true,
     text: '보타카지노',
     isActive: false,
+    group: '4'
 },
 {
     id: 13,
@@ -164,6 +185,7 @@ const cardInfo = [{
     icon: true,
     text: 'e-스포츠',
     isActive: false,
+    group: '5'
 },
 {
     id: 14,
@@ -172,6 +194,8 @@ const cardInfo = [{
     icon: false,
     text: '파워볼',
     isActive: false,
+    path: '/minigame/powerball',
+    group: '6'
 },
 {
     id: 15,
@@ -180,6 +204,8 @@ const cardInfo = [{
     icon: false,
     text: '파워사다리',
     isActive: false,
+    path: '/minigame/powerladder',
+    group: '6'
 },
 {
     id: 16,
@@ -188,6 +214,8 @@ const cardInfo = [{
     icon: false,
     text: '스피드키노',
     isActive: false,
+    path: '/minigame/speedkino',
+    group: '6'
 },
 {
     id: 17,
@@ -196,6 +224,8 @@ const cardInfo = [{
     icon: false,
     text: '키노사다리',
     isActive: false,
+    path: '/minigame/kinoladder',
+    group: '6'
 },
 {
     id: 18,
@@ -204,6 +234,7 @@ const cardInfo = [{
     icon: true,
     text: '키론가상게임',
     isActive: false,
+    group: '7'
 },
 {
     id: 19,
@@ -212,6 +243,7 @@ const cardInfo = [{
     icon: true,
     text: '케이플레이피싱',
     isActive: false,
+    group: '8'
 },
 {
     id: 20,
@@ -220,18 +252,27 @@ const cardInfo = [{
     icon: true,
     text: '티비벳',
     isActive: false,
+    group: '9'
 }
 ]
 
-export default function AllCards() {
+export default function AllCards({ btnActive, setBtnActive }) {
     const [cardActive, setCardActive] = useState('2');
     return (
         <div className="cards">
-            {cardInfo.map(({ id, inactivBackground, activeBackground, icon, text, isActive }) => (
+            {btnActive === '0' ? cardInfo.map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group }) => (
                 <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
-                    icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive}
+                    icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path}
                 />
-            ))}
+            ))
+                : <>
+                    {true ? cardInfo.filter((a) => a.group === btnActive).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group }) => (
+                        <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
+                            icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path}
+                        />
+                    ))
+                        : <></>}
+                </>}
         </div>
     )
 }

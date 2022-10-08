@@ -1,7 +1,7 @@
-#container {
+.HorizontalMenu {
     display: flex;
     flex-direction: row;
-    overflow: scroll hidden;
+    // overflow: scroll hidden;
     // gap: 0.1rem;
 
     &::-webkit-scrollbar {
@@ -62,4 +62,15 @@
         box-shadow: 0.4875rem 0 3rem 3rem #19191c;
         transform: rotate(180deg);
     }
+}
+
+.nav-shadow {
+    height: 14.1rem;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #191920;
+    box-shadow: 0.4875rem 0 3rem 3rem #19191c;
+    transform: rotate(180deg);
 }

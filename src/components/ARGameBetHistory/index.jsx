@@ -12,7 +12,7 @@ import Icon6 from '../../assets/ar-game/6.png';
 import Icon7 from '../../assets/ar-game/7.png';
 import Icon8 from '../../assets/ar-game/8.png';
 
-import HorizontalMenu from '../HorizontalMenu'
+import HorizontalSubMenu from '../HorizontalSubMenuDefault'
 
 const subTabsArray = [
     { text: "전체", icon: Icon1, id: 0, width: '19.375rem', marginIcon: '', path: '#' },
@@ -121,22 +121,19 @@ const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = fal
         <div className="LiveCasinoBetHistory">
             {showSub === true && (
                 <>
-                    <div className="w-full flex relative top-0">
-                        <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
-                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
+                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0', overflowX: 'scroll' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                             <div className=" flex flex-shrink-0 w-full">
-                                <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
-                                {/* <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} /> */}
-                                {/* <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} /> */}
+                                <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
                             </div>
                         </div>
-                        <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full left-0 z-50"></div>
+                        <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
                     </div>
                 </>
 
             )}
-            <div style={{marginTop: '1.0rem'}}>
-            <DateSearchBar isLeagueSearch={false} isGameResultsSearch={true} />
+            <div style={{ marginTop: '1.0rem' }}>
+                <DateSearchBar isLeagueSearch={false} isGameResultsSearch={true} />
             </div>
 
             {/* <ScrollButton /> */}

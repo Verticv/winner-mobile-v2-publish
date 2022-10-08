@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import horizontalsScroll from '../../utils/horizontalsScroll';
 // import Botton from '../NavButtons';
 
@@ -14,7 +14,7 @@ const HorizontalMenu = ({
 }) => {
 
     const navigate = useNavigate();
-    let pathname = window.location.pathname
+    const { pathname } = useLocation();
     const [isHover, setHover] = useState(null)
 
     console.log('selectedSubTab', selectedSubTab);
@@ -23,7 +23,7 @@ const HorizontalMenu = ({
         if (withoutFirst) {
             horizontalsScroll(itemsArray, 't', 'scroll-wrapper')
         }
-    }, [itemsArray, withoutFirst])
+    }, [itemsArray])
 
     function TabsList({ items }) {
         // const [btnActive, setBtnActive] = useState('0')
@@ -32,6 +32,19 @@ const HorizontalMenu = ({
             let isSameLink = pathname === item.path
 
 
+            if (item.hasSameParent) {
+                const pagePath = window.location.pathname.split('/')
+                pagePath?.pop()
+                const parentPath = item.path.split('/')
+                if (parentPath.join('/') === pagePath.join('/')) {
+                    isSameLink = true
+                }
+            }
+
+            if (window.location.pathname.includes('/mypage/bet-history/all/minigame') && item.path.includes('/mypage/bet-history/all/minigame')) {
+                isSameLink = true
+            }
+            // console.log(pathname.includes('/minigame'), 'pathname');
             //     <div className={`nav-button`} id={id}
             //     onClick={(event) => setBtnActive(event.target.id)}
             // >
@@ -41,13 +54,27 @@ const HorizontalMenu = ({
             //     </button>
             // </div>
             return (
-                <div className={`nav-button ${(isActive && popup) || (isSameLink && !popup) ? 'active' : ''}`} id={item.id}
+                <div className={`nav-button ${(isActive && popup) || (isSameLink && !popup) ? 'active' : ''}`}
+                    id={`t${index}`}
                     key={item.id}
+                    onPointerDown={() => setHover(item.id)}
+                    onPointerUp={() => {
+                        setHover(null)
+                        horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
+                        navigate(item.path)
+                        setSelectedSubTab(item.id)
+                        setSelectedTab(item.id)
+                        // if (setSelectedSubTab !== null) {
+                        //     setSelectedSubTab(0)
+                        // }
+                    }}
+                    onPointerOut={() => setHover(null)}
+                    onPointerCancel={() => setHover(null)}
                 // onClick={(event) => setBtnActive(event.target.id)}
                 >
-                    {console.log(item.marginIcon)}
+                    {console.log(item.id, 'withoutFirst')}
                     <button
-                        id={item.id}
+                        id={`t${index}`}
                         key={item.id}
                         style={{
                             // background: 'red'
@@ -59,23 +86,23 @@ const HorizontalMenu = ({
                             // padding: '1px'
                             // padding: '1px'
                         }}
-                        // className={`${isActive ? 'active' : ''}`}
-                        // ? "bg-blue-r58baf7"
-                        // : "bg-white"
-                        // } overflow-hidden flex items-end`}
-                        onPointerDown={() => setHover(item.id)}
-                        onPointerUp={() => {
-                            setHover(null)
-                            horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
-                            navigate(item.path)
-                            setSelectedSubTab(item.id)
-                            setSelectedTab(item.id)
-                            // if (setSelectedSubTab !== null) {
-                            //     setSelectedSubTab(0)
-                            // }
-                        }}
-                        onPointerOut={() => setHover(null)}
-                        onPointerCancel={() => setHover(null)}
+                    // className={`${isActive ? 'active' : ''}`}
+                    // ? "bg-blue-r58baf7"
+                    // : "bg-white"
+                    // } overflow-hidden flex items-end`}
+                    // onPointerDown={() => setHover(item.id)}
+                    // onPointerUp={() => {
+                    //     setHover(null)
+                    //     horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
+                    //     navigate(item.path)
+                    //     setSelectedSubTab(item.id)
+                    //     setSelectedTab(item.id)
+                    // if (setSelectedSubTab !== null) {
+                    //     setSelectedSubTab(0)
+                    // }
+                    // }}
+                    // onPointerOut={() => setHover(null)}
+                    // onPointerCancel={() => setHover(null)}
                     >
                         {/* <div
                             style={{
@@ -108,7 +135,7 @@ const HorizontalMenu = ({
                             <img id={item.id} className='icon' src={((isActive && popup) || (isSameLink && !popup)) ? (item.activeIcon ? item.activeIcon : item.icon) : item.icon} alt='' style={{ width: item.width || '7.875rem', height: item.height, marginTop: item.marginTop }} />
                         </div>
                         {/* <img style={{ width: '6.8rem', marginLeft: '0.5625rem', WebkitUserDrag: "none", MozUserDrag: "none", userDrag: "none" }} className="mt-4 object-contain select-none icon" src={item.icon} alt="" /> */}
-                        <div style={{ width: '100%', textAlign: 'center', height: '4.67rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <div style={{ width: '100%', textAlign: 'center', height: '4.97rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <span
                                 id={item.id}
                                 style={{ marginTop: item.marginTop, marginLeft: item.textMargin }}
@@ -123,13 +150,13 @@ const HorizontalMenu = ({
     }
 
     return (
-        <div className='div-shadow'>
-            <div id="container" className="flex justify-start items-start">
+        // <div className='div-shadow'>
+            <div id="container" className="HorizontalMenu flex justify-start items-start">
                 {/* <Botton /> */}
                 <TabsList items={itemsArray} />
             </div>
-            <div className='nav-shadow' style={{ height: '100%' }}></div>
-        </div>
+            // {/* <div className='nav-shadow' style={{ height: '12.4rem' }}></div> */}
+        // </div>
     )
 }
 

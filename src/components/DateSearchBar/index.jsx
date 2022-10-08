@@ -72,11 +72,11 @@ const DateSearchBar = ({
 
             {isGameResultsSearch === true && (
                 <div className="first-row">
-                    <input
-                        // style={{ height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginLeft: '1.875rem' }}
+                    {/* <input
+                        style={{ height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginLeft: '1.875rem' }}
                         placeholder="리그선택"
-                        className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
-                    {/* <DropDownInput /> */}
+                        className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" /> */}
+                    <DropDownInput />
                     {/* <span style={{ fontSize: '2.6rem', marginTop: '1.875rem', width: '1.880875rem' }} className="invisible text-center font-spoqaMedium text-gray-r454545 mt-px">~</span> */}
                     <input
                         style={{ marginLeft: '2.05rem' }}
@@ -95,7 +95,7 @@ const DateSearchBar = ({
             )}
 
             <div className="second-row">
-                <div className="date-picker">
+                <div className="date-picker left-date-picker relative" style={{ position: 'relative' }}>
                     <DatePicker
                         customInput={
                             <CustomInput />
@@ -127,7 +127,7 @@ const DateSearchBar = ({
                     <img src={CalendarIcon} alt="" style={{ width: '3.5rem' }} className="w-14 absolute right-8" />
                 </div>
                 <span className='Signal'>~</span>
-                <div className="date-picker">
+                <div className="date-picker right-date-picker relative " style={{ position: 'relative' }}>
                     {hasDateSuggestion ? (
                         <>
                             <div className=' -ml-8'>
@@ -171,32 +171,32 @@ const DateSearchBar = ({
                 <div
                     // style={{ margin: '0.75rem 1.875rem', marginBottom: withBlackButton ? '0.75rem' : '0' }} 
                     className="buttons-container2">
-                    <div className="common-button">
+                    <div className="common-button12">
                         <div className="text-con">
                             <span className="font-spoqaMedium tracking-tight text-white pt-px">오늘</span>
                         </div>
                     </div>
 
-                    <div className="common-button">
+                    <div className="common-button12">
                         <div className="text-con">
                             <span className="font-spoqaMedium tracking-tight text-white pt-px">1주일</span>
                         </div>
                     </div>
 
-                    <div className="common-button">
+                    <div className="common-button12">
                         <div className="text-con">
                             <span className="font-spoqaMedium tracking-tight text-white pt-px">15일</span>
                         </div>
                     </div>
 
-                    <div className="common-button">
+                    <div className="common-button12">
                         <div className="text-con">
                             <span className="font-spoqaMedium tracking-tight text-white pt-px">1개월</span>
                         </div>
                     </div>
 
                     {has3MonthSearch && (
-                        <div className="common-button">
+                        <div className="common-button12">
                             <div className="text-con">
                                 <span className="font-spoqaMedium tracking-tight text-white pt-px">3개월</span>
                             </div>
@@ -204,7 +204,7 @@ const DateSearchBar = ({
                     )}
 
                     {!hasIdSearch ? (
-                        <div className="common-button" style={{ background: 'linear-gradient(to top, #4d3c0a, #997947 50%, #e6b786)' }}>
+                        <div className="common-button12" style={{ background: 'linear-gradient(to top, #4d3c0a, #997947 50%, #e6b786)' }}>
                             <div className="text-con" style={{ background: 'linear-gradient(to top, #805f3f, #936e49 50%, #a57b52)' }}>
                                 <span className="font-spoqaMedium tracking-tight text-white pt-px">{withBlackButton ? "3개월" : "검색"}</span>
                             </div>
@@ -221,7 +221,7 @@ const DateSearchBar = ({
             ) : (<div style={{ margin: '0.45rem' }}></div>)}
 
 
-            <div style={{ margin: '0.75rem 1.8rem', marginBottom: withMargin ? '1.8rem' : '1.375rem', marginTop: '0', paddingBottom: '0.1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="flex w-full h-full items-center justify-between distributor-page-btn">
+            <div style={{ margin: '0.75rem 1.8rem', marginBottom: withMargin ? '1.7rem' : '1.375rem', marginTop: '0', paddingBottom: '0.1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="flex w-full h-full items-center justify-between distributor-page-btn">
                 {withBlackButton && !withMargin && (
                     <div className="first-row">
                         <input

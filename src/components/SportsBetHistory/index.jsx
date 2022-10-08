@@ -15,7 +15,7 @@ const SportsBetHistory = ({ checkedState, setCheckedState, showSub = true, attac
 
             <DateSearchBar isGameResultsSearch={true} />
 
-
+            {/* isLeagueSearch={false} withBlackButton hasDateSuggestion={false} */}
             <div className="w-full h-full z-10" style={{ margin: '1.9rem 1.875rem 3.75rem' }}>
 
                 {/* <ScrollButton /> */}

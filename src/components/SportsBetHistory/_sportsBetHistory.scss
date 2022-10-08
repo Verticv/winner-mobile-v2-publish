@@ -38,9 +38,12 @@
                 // margin-top: 0.35rem;
                 letter-spacing: -0.07rem;
                 margin-right: 0.1rem;
-                text-shadow: #00000080 0.3125rem 0.125rem 0.4375rem;
+                text-shadow: rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem;
                 font-size: 2.625rem;
             }
         }
+    }
+    .select-overlay {
+        width: 100%;
     }
 }

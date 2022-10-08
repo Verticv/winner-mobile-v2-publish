@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from "react-router-dom";
-import ArrowRight from '../../assets/myInfo/right-arrow-active.png'
+import ArrowRight from '../../assets/myInfo/right-arrow2.png'
 import ArrowRightWhite from '../../assets/myInfo/right-arrow-active.png'
 import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from '../ReauthenticatePopup'

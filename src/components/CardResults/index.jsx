@@ -44,7 +44,7 @@ const CardResults = ({
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)',
                     boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                     padding: '0.1875rem', width: smallCard ? '26.875rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "", borderRadius: '0.6rem',
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem;" : "", borderRadius: '0.6rem',
                 }}>
                     <button
                         style={{
@@ -80,7 +80,7 @@ const CardResults = ({
 
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '10rem' : '10rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "", borderRadius: '0.6rem',
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem;" : "", borderRadius: '0.6rem',
                     boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button
@@ -116,7 +116,7 @@ const CardResults = ({
                 </div>
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '25.02rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "", borderRadius: '0.6rem',
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem;" : "", borderRadius: '0.6rem',
                     cursor: 'pointer',
                     boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
@@ -127,7 +127,7 @@ const CardResults = ({
                         height: '100%',
                         // padding: '1px',
                         // marginRight: '0.375rem',
-                        textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "",
+                        textShadow: bet === "left" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem" : "",
                         background: bet === "right" ? "linear-gradient(to top,  #654f39,  #7d6348 50%, #977859)" : "#252525",
                         borderRadius: '0.6rem',
                         display: 'flex',
@@ -139,7 +139,7 @@ const CardResults = ({
                         className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                         <div
                             style={{
-                                textShadow: bet === "right" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "",
+                                textShadow: bet === "right" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem;" : "",
                                 paddingRight: team2?.length > 8 ? '0.7rem' : '0.8rem',
                                 paddingLeft: '0.7rem',
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -172,7 +172,7 @@ const CardResults = ({
             <div className="flex" style={{ display: 'flex' }} >
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '26.875rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "", borderRadius: '0.6rem',
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem" : "", borderRadius: '0.6rem',
                     boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button
@@ -186,7 +186,7 @@ const CardResults = ({
                             background: bet === "left" ? "linear-gradient(to top, rgb(101, 79, 57), rgb(125, 99, 72) 50%, rgb(151, 120, 89))" : "#252525",
                             borderRadius: '0.6rem',
                             color: bet === "left" ? '#ffdfbd' : '#c8c8c8',
-                            textShadow: bet === 'left' ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "",
+                            textShadow: bet === 'left' ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem" : "",
                             cursor: 'pointer'
                         }}
                         className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
@@ -212,7 +212,7 @@ const CardResults = ({
 
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '10rem' : '10rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "", borderRadius: '0.6rem',
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem" : "", borderRadius: '0.6rem',
                     boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button
@@ -247,7 +247,7 @@ const CardResults = ({
                 </div>
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '26.875rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "", borderRadius: '0.6rem',
+                    textShadow: bet === "left" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem" : "", borderRadius: '0.6rem',
                     boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button style={{
@@ -257,7 +257,7 @@ const CardResults = ({
                         height: '100%',
                         // padding: '1px',
                         // marginRight: '0.375rem',
-                        textShadow: bet === "right" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem" : "",
+                        textShadow: bet === "right" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem" : "",
                         background: bet === "right" ? "linear-gradient(to top,  #654f39,  #7d6348 50%, #977859)" : "#252525",
                         borderRadius: '0.6rem',
                         display: 'flex',
@@ -269,7 +269,7 @@ const CardResults = ({
                         className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                         <div
                             style={{
-                                textShadow: bet === "right" ? "rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;" : "",
+                                textShadow: bet === "right" ? "rgb(0 0 0 / 80%) 0rem 0rem 0.4375rem;" : "",
                                 paddingRight: team2?.length > 8 ? '0.7rem' : '0.8rem',
                                 paddingLeft: '0.7rem',
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',

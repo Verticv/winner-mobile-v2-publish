@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar'
-// import SubHorizontalMenu from '../SubHorizontalMenu'
+import HorizontalSubMenu from '../HorizontalSubMenuDefault'
 import HistoryTable from '../HistoryTable'
 // import ScrollButton from '../ScrollButton'
 import SelectAllButton from '../SelectAllButton'
@@ -13,7 +13,7 @@ import Icon8 from '../../assets/myPage/second-btns/6.png'
 import Icon9 from '../../assets/myPage/second-btns/7.png'
 import Icon10 from '../../assets/myPage/second-btns/8.png'
 import activeBG from '../../assets/myPage/second-btns/active-bg.png'
-import HorizontalMenu from '../HorizontalMenu'
+// import HorizontalMenu from '../HorizontalMenu'
 // import img22 from '../../img22.png'
 
 const subTabsArray = [
@@ -238,19 +238,15 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
         <div className="LiveCasinoBetHistory">
             {showSub === true && (
                 <>
-                    <div className="w-full flex relative top-0">
-                        <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
-                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
+                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0', overflowX: 'scroll' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                             <div className=" flex flex-shrink-0 w-full">
-                                <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup/>
-                                {/* <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} /> */}
-                                {/* <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} /> */}
+                                <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
                             </div>
                         </div>
-                        <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full left-0 z-50"></div>
+                        <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
                     </div>
                 </>
-
             )}
             {/* <img src={img22} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
             <DateSearchBar isLeagueSearch={false} isPoints />

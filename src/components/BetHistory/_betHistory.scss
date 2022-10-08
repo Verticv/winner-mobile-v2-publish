@@ -1,7 +1,7 @@
 .bet-history {
     #container {
         .nav-button {
-            margin-right: -0.25rem;
+            // margin-right: -0.2rem;
         }
 
     }
@@ -16,7 +16,7 @@
 
 .LiveCasinoBetHistory {
     #scroll-wrapper1 {
-        padding: 0px 0px 0rem 1.5rem !important;
+        padding: 0px 0px 0rem 1.1rem !important;
         margin-top: 0.9rem;
         margin-bottom: -0.2rem;
 
@@ -34,9 +34,11 @@
                     button {
                         background: url('../../assets/myPage/second-btns/active-bg.png') round !important;
                         background-repeat: round;
-                        width: 21.6rem;
-                        height: 14.1rem;
+                        width: 20.9rem;
+                        height: 13.6rem;
                         margin-right: 0.2rem;
+                        padding-top: 0.5rem;
+                        margin-left: 0.35rem;
                         // width: 20.8rem;
                         // height: 13.6rem;
                         // height: 14.0625rem;
@@ -50,5 +52,8 @@
                 }
             }
         }
+    }
+    .select-overlay {
+        width: 100%;
     }
 }

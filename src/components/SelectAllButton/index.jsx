@@ -28,7 +28,7 @@ const SelectAllButton = (
                         style={{
                             background: 'linear-gradient(to top, rgb(77, 60, 10), rgb(156, 123, 74) 50%, rgb(231, 183, 134))',
                         }}
-                        className="common-button flex flex-1 items-center justify-center mr-4 rounded-2xl bg-gray-r171a1d hover:opacity-75"
+                        className="shadow-to-box common-button flex flex-1 items-center justify-center mr-4 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                         onClick={() => allSelectButtonPressed()}
                     >
                         <div
@@ -44,31 +44,31 @@ const SelectAllButton = (
                         style={{
                             background: 'linear-gradient(to top, #4b0923, #e88895)',
                         }}
-                        className="common-button flex flex-1 items-center justify-center mr-4 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
+                        className="shadow-to-box common-button flex flex-1 items-center justify-center mr-4 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
                     >
                         <div
                             style={{
-                                background: 'linear-gradient(to top, #e06446, #96341d)',
+                                background: 'linear-gradient(to top, #96341d, #e06446)',
                             }}
                             className="div-text"
                         >
-                            <span style={{ color: 'rgb(255, 223, 189)' }}>{btn1Text}</span>
+                            <span style={{ color: '#ffd2d2' }}>{btn1Text}</span>
                         </div>
                     </button>
                     <button
                         style={{
                             background: 'linear-gradient(to top, #3d4a8d, #88d9e8)',
                         }}
-                        className="common-button flex flex-1 items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
+                        className="shadow-to-box common-button flex flex-1 items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
                     // onClick={() => allSelectButtonPressed()}
                     >
                         <div
                             style={{
-                                background: 'linear-gradient(to top, #528ccd, #396084)',
+                                background: 'linear-gradient(to top, #396084, #528ccd)',
                             }}
                             className="div-text"
                         >
-                            <span style={{ color: 'rgb(255, 223, 189)' }}>{btn2Text}</span>
+                            <span style={{ color: '#d6f3ff' }}>{btn2Text}</span>
                         </div>
                     </button>
                 </div >

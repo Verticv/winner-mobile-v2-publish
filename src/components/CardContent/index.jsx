@@ -157,7 +157,7 @@ const CardContent = ({
                             <div
                                 style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #96341d, #e06446)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                             >
-                                <span style={{ color: '#ffdfbd' }}>내역삭제</span>
+                                <span style={{ color: '#ffd2d2' }}>내역삭제</span>
                             </div>
                         </div>
                     </button>
