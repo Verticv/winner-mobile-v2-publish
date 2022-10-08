@@ -8,8 +8,9 @@ import Icon3 from '../../assets/minigameResults/1.png'
 import Icon4 from '../../assets/minigameResults/2.png'
 import Icon5 from '../../assets/minigameResults/3.png'
 import Icon6 from '../../assets/minigameResults/4.png'
+import HorizontalSubMenu from '../HorizontalSubMenuDefault';
 // import SubHorizontalMenu5 from './SubHorizontalMenu5'
-import HorizontalMenu from '../HorizontalMenu'
+// import HorizontalMenu from '../HorizontalMenu'
 import PowerLadderBetHistoryPanel from '../PowerLadderBetHistoryPanel'
 import KinoLadderBetHistoryPanel from '../KinoLadderBetHistoryPanel'
 import { Route, Routes } from 'react-router-dom'
@@ -496,14 +497,13 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
         <div className="LiveCasinoBetHistory">
             {showSub === true && (
                 <>
-                    <div className="w-full flex relative top-0">
-                        <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
-                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
+                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0', overflowX: 'scroll' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                             <div className=" flex flex-shrink-0 w-full">
-                                <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} />
+                                <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
                             </div>
                         </div>
-                        <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full left-0 z-50"></div>
+                        <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
                     </div>
                     <DateSearchBar isLeagueSearch={false} isPoints />
                 </>

@@ -10,14 +10,14 @@ function Header() {
   const [country, setCountry] = useState("KR")
   const [isCountryOpen, setCountryOpen] = useState()
   const navigate = useNavigate();
-  
+
 
   const DropdownArrow = ({ isOpen, isWhite }) => (
     <>
       {isWhite ? (
         <img className="arrow" src={isOpen ? arrow : arrow} alt="arrow" />
       ) : (
-        <img style={{ width: "5px" }} className="w-4 object-contain" src='' alt="arrow" />
+        <img className="arrow" src='' alt="arrow" />
       )}
     </>
   )
@@ -50,7 +50,7 @@ function Header() {
             isDropdownOpen={isCountryOpen}
             setDropdownOpen={setCountryOpen}
           >
-            <div className="absolute" style={{ marginRight: "-90px" }}>
+            <div className="absolute" style={{ marginRight: "", }}>
               <CountryDropDown setCountry={setCountry} country={country} />
             </div>
           </DropDownControls>

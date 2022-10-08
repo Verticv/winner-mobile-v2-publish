@@ -2,9 +2,6 @@
     width: 10.875rem;
     height: 10.875rem;
     background-color: rgb(130, 97, 64);
-    position: absolute;
-    top: 11.56rem;
-    right: 1.9rem;
     border-radius: 1.1rem;
     box-shadow: rgb(0 0 0 / 60%) 0px 0.375rem 0px 0px;
     cursor: pointer;
@@ -16,7 +13,10 @@
         margin-top: 0.2375rem;
         font-family: SpoqaHanSansNeoMedium;
         color: rgb(255, 223, 189);
-        text-shadow: rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // text-shadow: rgb(0 0 0 / 50%) 0.3125rem 0.125rem 0.4375rem;
     }
 
     &:hover {

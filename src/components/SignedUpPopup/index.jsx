@@ -37,8 +37,8 @@ const SignedUpPopup = ({ setCompletePopup, setSignup }) => {
                         <span style={{ fontSize: '2.625rem', marginTop: '3rem' }} className="mt-10 text-center">당사 사이트는 깨끗하고 안전한 운영을 자랑합니다. </span>
                     </div>
                     {/* BREAK */}
-                    <div style={{ paddingLeft: "6.85rem", paddingRight: "3rem", display: 'flex', position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '1.875rem', fontFamily: 'SpoqaHanSansNeoMedium', textAlign: 'center', marginTop: '5.6rem' }} className="relative flex w-full mt-30px">
-                        <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '19.3125rem', height: '19.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '0.5rem' }}>
+                    <div style={{ paddingLeft: "3rem", paddingRight: "3rem", display: 'flex', position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '1.875rem', fontFamily: 'SpoqaHanSansNeoMedium', textAlign: 'center', marginTop: '5.6rem' }} className="relative flex w-full mt-30px">
+                        <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22.3125rem', height: '22.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '0.5rem' }}>
                             <img className="h-26px object-contain" src={img1} alt="" style={{ marginTop: '2.4rem', marginLeft: '-0.6rem', marginBottom: '3rem', width: '6.125rem' }} />
                             <div className="w-full text-center mt-20px" style={{ letterSpacing: '-0.025em', marginTop: '-0.1rem' }}>
                                 <div style={{ wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">회원님의 모든 데이터는</div>
@@ -54,7 +54,7 @@ const SignedUpPopup = ({ setCompletePopup, setSignup }) => {
                                 <div style={{ fontSize: '1.7rem', wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">신경 써 주세요.</div>
                             </div>
                         </div> */}
-                        <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '19.3125rem', height: '19.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '0.5rem' }}>
+                        <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22.3125rem', height: '22.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '0.5rem' }}>
                             <img className="h-26px object-contain" src={img2} alt="" style={{ marginTop: '2.7rem', marginLeft: '-0.3rem', marginBottom: '3.3rem', width: '3.6875rem' }} />
                             <div className="w-full text-center mt-20px" style={{ letterSpacing: '-0.025em', marginTop: '-0.1rem', marginLeft: '-0.1rem' }}>
                                 <div style={{ wordBreak: "keep-all", }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">아이디/비밀번호를</div>
@@ -70,7 +70,7 @@ const SignedUpPopup = ({ setCompletePopup, setSignup }) => {
                                 <div style={{ fontSize: '1.7rem', wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">완전히 삭제됩니다.</div>
                             </div>
                         </div> */}
-                        <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '19.3125rem', height: '19.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '' }}>
+                        <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22.3125rem', height: '22.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '' }}>
                             <img className="h-26px object-contain" src={img3} alt="" style={{ marginTop: '3.1rem', marginLeft: '-0.6rem', marginBottom: '3.6rem', width: '3.875rem' }} />
                             <div className="w-full text-center mt-20px" style={{ letterSpacing: '-0.025em', marginTop: '-0.1rem', marginLeft: '-0.5rem' }}>
                                 <div style={{ wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">회원 탈퇴 후</div>
@@ -102,10 +102,10 @@ const SignedUpPopup = ({ setCompletePopup, setSignup }) => {
                                     회원가입
                                 </button> */}
 
-                        <div style={{ height: '8.456875rem', width: '56.476875rem', marginBottom: '4.0625rem', padding: '0.1875rem', background: 'linear-gradient(to top, #4b3b09, #e8b888)', borderRadius: '1.6rem' }}>
+                        <div className='shadow-to-box' style={{ height: '8.456875rem', width: '56.476875rem', marginBottom: '4.0625rem', padding: '0.1875rem', background: 'linear-gradient(to top, #4b3b09, #e8b888)', borderRadius: '1.6rem' }}>
                             <button
                                 style={{ padding: '0.5625rem', width: '100%', height: '100%', background: 'linear-gradient(to top, #7f5f3f, #a67c52)', borderRadius: '1.6rem' }}
-                                className="hover shadow-to-box"
+                                className="hover "
                                 onClick={() => {
                                     navigate('/')
                                     setCompletePopup(false)

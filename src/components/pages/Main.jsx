@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AllCards from "../Card/AllCards";
 // import Header from "../Header";
 import Jackpot from "../Jackpot";
@@ -8,15 +8,16 @@ import NoticeBanner from "../NoticeBanner";
 import Slider from "../SliderImgs/Slider";
 
 function MainPage() {
+    const [btnActive, setBtnActive] = useState('0');
     return (
         <>
             {/* <Header /> */}
             <Slider />
             <NoticeBanner />
             <Jackpot />
-            <div style={{ display: 'flex', paddingBottom: '17rem' }}>
-                <NavButtons />
-                <AllCards />
+            <div style={{ display: 'flex', paddingBottom: '17rem', justifyContent: '', alignItems: 'start' }}>
+                <NavButtons btnActive={btnActive} setBtnActive={setBtnActive} />
+                <AllCards btnActive={btnActive} setBtnActive={setBtnActive} />
             </div>
             <NavBottom />
         </>

@@ -16,7 +16,7 @@ const SportsMatchResultPanel = ({
                     <TableHeader />
                     <div style={{ padding: '0rem 0.9rem 0 0.7rem' }} className="w-full">
                         <div className="w-full rounded-lg">
-                            <div style={{ border: '0.375rem solid #473b35', borderRadius: '0.4rem', marginBottom: '2rem' }} className='rounded-lg w-full'>
+                            <div style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem', marginBottom: '2rem' }} className='rounded-lg w-full shadow-to-box shadow-to-box shadow-to-box shadow-to-box shadow-to-box'>
                                 <CardHeader flag='us' name='MLS' date='2021-06-29 15:45' />
                                 <CardResults
                                     bet="right"
@@ -32,7 +32,7 @@ const SportsMatchResultPanel = ({
                                     hasDown={false}
                                 />
                             </div>
-                            <div style={{ border: '0.375rem solid #473b35', borderRadius: '0.4rem', marginBottom: '1.75rem' }} className='rounded-lg w-full'>
+                            <div style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem', marginBottom: '1.75rem' }} className='rounded-lg w-full shadow-to-box shadow-to-box shadow-to-box shadow-to-box'>
                                 <CardHeader flag='uk' name='EPL' date='2021-06-29 15:45' />
                                 <CardResults
                                     bet="left"
@@ -66,7 +66,7 @@ const SportsMatchResultPanel = ({
                                 />
                             </div>
 
-                            <div style={{ border: '0.375rem solid #473b35', borderRadius: '0.4rem', marginBottom: '1.9rem' }} className='rounded-lg w-full'>
+                            <div style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem', marginBottom: '1.9rem' }} className='rounded-lg w-full shadow-to-box shadow-to-box shadow-to-box shadow-to-box'>
                                 <CardHeader flag='uk' name='EPL' date='2021-06-29 15:45' />
                                 <CardResults
                                     bet="left"
@@ -83,7 +83,7 @@ const SportsMatchResultPanel = ({
                                 />
                             </div>
 
-                            <div style={{ border: '0.375rem solid #473b35', borderRadius: '0.4rem' }} className='rounded-lg w-full '>
+                            <div style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem' }} className='rounded-lg w-full shadow-to-box shadow-to-box shadow-to-box shadow-to-box '>
                                 <CardHeader flag='spain' name='라리가' date='2021-06-29 15:45' />
                                 <CardResults
                                     bet="left"

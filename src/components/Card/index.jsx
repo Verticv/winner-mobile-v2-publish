@@ -1,9 +1,16 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
-function Card({ id, inactivBackground, activeBackground, icon, text, isActive, cardActive, setCardActive }) {
+function Card({ id, inactivBackground, activeBackground, icon, text, isActive, cardActive, setCardActive, path }) {
+    const navigate = useNavigate();
     return (
         <div className="card-container" id={id}
-            onClick={(e) => setCardActive(e.target.id)}
+            onClick={(e) => {
+                setCardActive(e.target.id);
+                console.log('aa');
+                navigate(path);
+            }}
+
         >
             <div id={id} className={`main-div ${(+cardActive === id) ? 'active' : ''}`}
                 style={{ background: `url(${(+cardActive === id) ? activeBackground : inactivBackground}) round` }}

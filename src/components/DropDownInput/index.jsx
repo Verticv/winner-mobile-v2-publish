@@ -31,7 +31,7 @@ const DropDownInput = ({ isLeagueSelection = true, isBetCombination = false }) =
 
     return (
         <div
-            style={{ width: '34.06rem', height: '6.75rem', fontSize: '2.625rem', marginLeft: '1.875rem' }}
+            style={{ width: '34.06rem', height: '6.7rem', fontSize: '2.625rem', marginLeft: '1.875rem', background: '#1a1a1a', border: '0.1875rem solid #404040', position: 'relative', borderRadius: '0.5rem', marginTop: '0.1rem' }}
             className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-between items-center tracking-minus05"
         >
             <div style={{ width: '34.06rem', height: '6.75rem', fontSize: '2.625rem' }} className="w-full rounded-2xl flex h-full bg-white group">

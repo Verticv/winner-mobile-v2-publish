@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "./index";
 import icon1 from '../../assets/icon1.png';
 import icon2 from '../../assets/icon2.png';
@@ -24,29 +24,29 @@ import icon10Active from '../../assets/icon10-active.png';
 const navInfo = [{
     id: 0,
     icon: icon1,
-    activeIcon: icon1Active, 
+    activeIcon: icon1Active,
     text: '전체',
     width: '4.375rem',
     height: '4.375rem',
     marginTop: '0.4rem',
     textMargin: '0.8rem',
     isActive: true,
-}, 
+},
 {
     id: 1,
     icon: icon2,
-    activeIcon: icon2Active, 
+    activeIcon: icon2Active,
     text: '라이브카지노',
     width: '4.9375rem',
     height: '5.0625rem',
     marginTop: '0.4rem',
     textMargin: '0.6rem',
     isActive: false,
-}, 
+},
 {
     id: 2,
     icon: icon3,
-    activeIcon: icon3Active, 
+    activeIcon: icon3Active,
     text: '슬롯게임',
     width: '4.5rem',
     height: '4.25rem',
@@ -56,7 +56,7 @@ const navInfo = [{
 }, {
     id: 3,
     icon: icon4,
-    activeIcon: icon4Active, 
+    activeIcon: icon4Active,
     text: '스포츠',
     width: '4.25rem',
     height: '4.3125rem',
@@ -66,7 +66,7 @@ const navInfo = [{
 }, {
     id: 4,
     icon: icon5,
-    activeIcon: icon5Active, 
+    activeIcon: icon5Active,
     text: '호텔카지노',
     width: '5.5625rem',
     height: '5.0625rem',
@@ -76,7 +76,7 @@ const navInfo = [{
 }, {
     id: 5,
     icon: icon6,
-    activeIcon: icon6Active, 
+    activeIcon: icon6Active,
     text: 'e-스포츠',
     width: '4.875rem',
     height: '3.625rem',
@@ -85,7 +85,7 @@ const navInfo = [{
 }, {
     id: 6,
     icon: icon7,
-    activeIcon: icon7Active, 
+    activeIcon: icon7Active,
     text: '미니게임',
     width: '4.25rem',
     height: '4.375rem',
@@ -94,7 +94,7 @@ const navInfo = [{
 }, {
     id: 7,
     icon: icon8,
-    activeIcon: icon8Active, 
+    activeIcon: icon8Active,
     text: '키론가상게임',
     width: '5.375rem',
     height: '4rem',
@@ -103,7 +103,7 @@ const navInfo = [{
 }, {
     id: 8,
     icon: icon9,
-    activeIcon: icon9Active, 
+    activeIcon: icon9Active,
     text: '피싱게임',
     width: '5rem',
     height: '4rem',
@@ -112,7 +112,7 @@ const navInfo = [{
 }, {
     id: 9,
     icon: icon10,
-    activeIcon: icon10Active, 
+    activeIcon: icon10Active,
     text: '티비벳',
     width: '4.25rem',
     height: '4.375rem',
@@ -121,8 +121,7 @@ const navInfo = [{
 }
 ]
 
-function NavButton() {
-    const [btnActive, setBtnActive] = useState('0');
+function NavButton({ btnActive, setBtnActive }) {
     return (
         <div className="nav">
             {navInfo.map(({ id, icon, activeIcon, text, width, height, marginTop, textMargin, isActive }, index) =>

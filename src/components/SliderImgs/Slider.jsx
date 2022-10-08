@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import BtnSlider from './BtnSlider';
 import dataSlider from './dataSlider';
 import visual from '../../assets/visual.png';
-import visual2 from '../../assets/visual2.png';
+// import visual2 from '../../assets/visual2.png';
 
 export default function Slider() {
 
@@ -44,9 +44,9 @@ export default function Slider() {
                     <div
                         key={obj.id}
                         className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
-                        style={{ background: `url(${slideIndex === 1 ? visual : visual2}) 77.625rem 29.6875rem round`}}
+                        style={{ background: `url(${slideIndex === 1 ? visual : visual}) 77.625rem 29.6875rem round`}}
                     >
-                        {slideIndex === 1 ? <p style={{ postion: 'absolute' }}>다양하고 멋진 경기들이 준비되어 있습니다. <br /> 더 쉽고 재미있는 스포츠베팅의 세계를 경험하세요!</p> : null}
+                        {/* {slideIndex === 1 ? <p style={{ postion: 'absolute' }}>다양하고 멋진 경기들이 준비되어 있습니다. <br /> 더 쉽고 재미있는 스포츠베팅의 세계를 경험하세요!</p> : null} */}
                     </div>
                 )
             })}

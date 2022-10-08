@@ -129,7 +129,7 @@ const HorizontalMenu1 = ({
     }
 
     return (
-        <div id="container-nav">
+        <div id="container">
             <TabsList items={itemsArray} />
         </div>
     )

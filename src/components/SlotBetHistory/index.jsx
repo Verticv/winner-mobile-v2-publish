@@ -19,7 +19,7 @@ import Icon12 from '../../assets/slotGame/13.png'
 import Icon13 from '../../assets/slotGame/14.png'
 import Icon14 from '../../assets/slotGame/15.png'
 import Icon15 from '../../assets/slotGame/16.png'
-import HorizontalMenu from '../HorizontalMenu'
+import HorizontalSubMenu from '../HorizontalSubMenuDefault'
 // import Icon16 from '../../assets/slotGame/17.png'
 
 // import SubHorizontalMenu3 from '../SubHorizontalMenu3'
@@ -256,16 +256,13 @@ const SlotBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false
         <div className="LiveCasinoBetHistory">
             {showSub === true && (
                 <>
-                    <div className="w-full flex relative top-0">
-                        <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
-                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
+                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0', overflowX: 'scroll' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                             <div className=" flex flex-shrink-0 w-full">
-                                <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
-                                {/* <HorizontalMenu itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} /> */}
-                                {/* <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} /> */}
+                                <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
                             </div>
                         </div>
-                        <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full left-0 z-50"></div>
+                        <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
                     </div>
                 </>
 

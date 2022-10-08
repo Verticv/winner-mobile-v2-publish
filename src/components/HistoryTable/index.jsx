@@ -1,6 +1,6 @@
 import React from 'react'
 import PopupControls from '../popups/PopupControls';
-// import LiveCasinoHistoryDetailPopup from '../myPage/popups/LiveCasinoHistoryDetailPopup';
+import LiveCasinoHistoryDetailPopup from '../LiveCasinoHistoryDetailPopup';
 // import UploadIcon from '../../images/newImages/upload.png'
 
 const HistoryTable = ({
@@ -35,7 +35,7 @@ const HistoryTable = ({
             //         <span style={{ fontSize: '2.7rem', lineHeight: '1.1' }} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px">사용하기</span>
             //     </div>
             // </button>
-            <button style={{ width: '20.25rem', height: '14.0625rem',background: '#c65337', position: 'absolute', top: '7.56rem', right: '1.9rem', borderRadius: '1.1rem', boxShadow: '0px 6px 0px 0px rgb(0 0 0 / 60%)' }} className="hover change-top">
+            <button style={{ width: '20.25rem', height: '14.0625rem', background: '#c65337', position: 'absolute', top: '7.56rem', right: '1.9rem', borderRadius: '1.1rem', boxShadow: '0px 6px 0px 0px rgb(0 0 0 / 60%)' }} className="hover change-top">
                 <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
                     <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', textShadow: '#00000080 0.3125rem 0.125rem 0.4375rem' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> 진행중 </span>
                 </div>
@@ -51,10 +51,10 @@ const HistoryTable = ({
 
         return cards.map((card, index) => (
             <div style={{
-                height: cardHeight, width: `${!hasButton ? '73.875rem' : ''}`,
+                minHeight: cardHeight, width: `${!hasButton ? '73.875rem' : ''}`,
                 padding: '0.1875rem',
                 marginTop: `${index ? '0' : '1.875rem'}`,
-                margin: '1.875rem',
+                margin: '1.86rem',
                 // background: `${containerBackground && index % 2 ? containerBackground : ''}`,
                 background: 'linear-gradient(to top, #1f1f1e, #3b3b3b 50%, #4a4a4a)',
                 // margin: 'auto'
@@ -106,7 +106,7 @@ const HistoryTable = ({
                                 return (
                                     <div key={index} style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', color: firstColumnColor, letterSpacing: '-0.07rem', marginLeft: '0.15rem' }} className="w-full font-spoqa text-left text-gray-r7b7b7b">
                                         <span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium' }}>{firstRowKeysName[0]} : </span>
-                                        <span className='font-spoqa' style={{ fontFamily: 'SpoqaHanSansNeo', color: '' }}>
+                                        <span className='font-spoqa' style={{ fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex', maxWidth: '40rem' }}>
                                             {row[0][firstRowKeysName[0]]}
                                         </span>
                                         {secondRowKeysName?.length > 0 && <><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '3.725rem' }}>{secondRowKeysName[0]} : </span><span style={{ fontFamily: 'SpoqaHanSansNeo', color: secondColumnColor }} className='text-blue-r0056a6'> {row[1][secondRowKeysName[0]]}</span></>}
@@ -117,39 +117,40 @@ const HistoryTable = ({
 
                         })}
                     </div>
+
+                    {
+                        isButtonGradient ?
+                            hasButton && (
+                                <div className="text-center">
+                                    {isPopup ? (
+                                        <button
+                                            style={{ width: '9rem', height: '9rem', padding: '1px', }}
+                                            className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
+                                        >
+                                            <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
+                                                {/* <img style={{width: '3.1875rem', height: '3.25rem'}} className="object-contain" src={UploadIcon} alt="" /> */}
+                                            </div>
+                                        </button>
+                                    ) : (
+                                        <>
+                                            {!isCouponUsage ? (
+                                                <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent : detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen} hasMargin='true'>
+                                                    <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
+                                                </PopupControls>
+                                            ) : (
+                                                <>{wideDetailButtonComponent}</>
+                                            )}
+                                        </>
+                                    )}
+                                </div>
+                            ) : hasButton &&
+                            <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '', right: '1.9rem', borderRadius: '1.1rem', boxShadow: '0px 6px 0px 0px rgb(0 0 0 / 60%)' }} className="hover change-top">
+                                <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
+                                    <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length - 1].buttonColor === '#e65454' ? <div> {card[card.length - 1].buttonText ? card[card.length - 1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length - 1].buttonText || '진행중'} </span>
+                                </div>
+                            </button>
+                    }
                 </div>
-                {
-                    isButtonGradient ?
-                        hasButton && (
-                            <div className="text-center">
-                                {isPopup ? (
-                                    <button
-                                        style={{ width: '9rem', height: '9rem', padding: '1px', }}
-                                        className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
-                                    >
-                                        <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
-                                            {/* <img style={{width: '3.1875rem', height: '3.25rem'}} className="object-contain" src={UploadIcon} alt="" /> */}
-                                        </div>
-                                    </button>
-                                ) : (
-                                    <>
-                                        {!isCouponUsage ? (
-                                            <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent : detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                                                {/* <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} /> */}
-                                            </PopupControls>
-                                        ) : (
-                                            <>{wideDetailButtonComponent}</>
-                                        )}
-                                    </>
-                                )}
-                            </div>
-                        ) : hasButton &&
-                        <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '7.56rem', right: '1.9rem', borderRadius: '1.1rem', boxShadow: '0px 6px 0px 0px rgb(0 0 0 / 60%)' }} className="hover change-top">
-                            <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
-                                <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', textShadow: '#00000080 0.3125rem 0.125rem 0.4375rem' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length - 1].buttonColor === '#e65454' ? <div> {card[card.length - 1].buttonText ? card[card.length - 1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length - 1].buttonText || '진행중'} </span>
-                            </div>
-                        </button>
-                }
             </div >
         ))
     }

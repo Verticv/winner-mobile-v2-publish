@@ -5,34 +5,40 @@ import icon2 from '../../assets/nav-bottom-icon2.png'
 import icon3 from '../../assets/nav-bottom-icon3.png'
 import icon4 from '../../assets/nav-bottom-icon4.png'
 import icon5 from '../../assets/nav-bottom-icon5.png'
+import i1 from '../../assets/nav-bottom-icon1-active.png'
+import i2 from '../../assets/nav-bottom-icon2-active.png'
+import i3 from '../../assets/nav-bottom-icon3-active.png'
+import i4 from '../../assets/nav-bottom-icon4-active.png'
+import i5 from '../../assets/nav-bottom-icon5-active.png'
+
 
 const navInfo = [
     {
         id: 1,
         icon: icon5,
         text: '출석부',
-        width: '4.3125rem',
+        activeIcon: i5,
         isActive: false,
-        path: '/aa1'
+        path: '/attendance'
     }, {
         id: 2,
         icon: icon4,
         text: '게시판',
-        width: '5.875rem',
+        activeIcon: i4,
         isActive: false,
         path: '/freeboard'
     }, {
         id: 3,
         icon: icon3,
         text: '홈',
-        width: '5.3125rem',
+        activeIcon: i3,
         isActive: true,
         path: '/main'
     }, {
         id: 4,
         icon: icon2,
         text: '문의',
-        width: '4.3125rem',
+        activeIcon: i2,
         isActive: false,
         path: '/cscenter/all/contact/all'
     },
@@ -40,7 +46,7 @@ const navInfo = [
         id: 5,
         icon: icon1,
         text: '마이인포',
-        width: '4rem',
+        activeIcon: i1,
         isActive: false,
         path: '/mypage'
     }];
@@ -50,13 +56,13 @@ export default function NavBottom() {
 
     return (
         <div className="nav-bottom">
-            {navInfo?.map(({ id, icon, text, width, isActive, path }) => (
+            {navInfo?.map(({ id, icon, text, width, isActive, path, activeIcon }) => (
                 <div key={id} className={`nav-content ${(window.location.pathname.includes(path)) ? 'active' : ''}`} id={id}
                     onClick={(event) => {
                         navigate(path);
                     }}
                 >
-                    <img id={id} src={icon} alt="" style={{ width: width }} />
+                    <img id={id} src={(window.location.pathname.includes(path)) ? activeIcon : icon} alt="" style={{ width: '6.625rem' }} />
                     <span id={id} className="text">{text}</span>
                 </div>
             ))}

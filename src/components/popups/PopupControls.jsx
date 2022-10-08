@@ -8,7 +8,8 @@ export default function PopupControls({
     buttonChild,
     isPopupOpen,
     setPopupOpen,
-    isNotFullScreen
+    isNotFullScreen,
+    hasMargin
 }) {
     const [open, setOpen] = useState(false);
     const ref = useRef();
@@ -41,7 +42,8 @@ export default function PopupControls({
     return (
         <div>
             <div
-                className="flex items-center justify-center"
+                className="flex items-center justify-center "
+                style={{ margin: hasMargin ? '-1.8rem 0rem 0 0.6rem' : '' }}
                 onMouseDown={() => {
                     if (onClick) onClick();
                     setOpen(true);
