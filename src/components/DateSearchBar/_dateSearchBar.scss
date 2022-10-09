@@ -81,7 +81,7 @@
         background: linear-gradient(to top, #403e38, #72695d, #a59484);
         padding: 0.1875rem;
         border-radius: 0.6rem;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0.312rem 0.625rem 0 rgba(0, 0, 0, 0.3);
         cursor: pointer;
 
 
@@ -102,7 +102,7 @@
             span {
                 // margin-top: 0.5rem;
                 letter-spacing: -0.07rem;
-                text-shadow: #00000080 0rem 0rem 0.4375rem;
+                text-shadow: rgb(0 0 0 ) 0rem 0rem 0.4375rem;
             }
         }
     }
@@ -112,7 +112,7 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     .buttons-container2 {
         .common-button12 {
             padding: 1px;

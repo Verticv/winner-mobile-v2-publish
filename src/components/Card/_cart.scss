@@ -49,6 +49,18 @@
                 height: 5.57rem;
                 border-radius: 0.9rem;
 
+                &.disable-style {
+                    background: linear-gradient(to top, #59544e, #aca298);
+
+                    button {
+                        background: linear-gradient(to top, #6b655e, #8a8179);
+
+                        &.active-btn {
+                            background: linear-gradient(to top, #6b655e, #8a8179);
+                        }
+                    }
+                }
+
                 button {
                     padding: 0;
                     border: 0;

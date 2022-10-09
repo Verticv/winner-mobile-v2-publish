@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
 import horizontalsScroll from '../../utils/horizontalsScroll';
+import inactive from '../../assets/inactive-bg.png';
 // import Botton from '../NavButtons';
 
 const HorizontalSubMenu = ({
@@ -77,6 +78,12 @@ const HorizontalSubMenu = ({
                         id={`t-sub${index}`}
                         key={item.id}
                         style={{
+                            background: `url(${inactive})`,
+                            backgroundRepeat: 'round',
+                            width: '20.9rem',
+                            height: '13.6rem',
+                            marginLeft: '0',
+                            paddingTop: '0'
                             // background: 'red'
                             // background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
                             // borderRadius: "1.625rem",
