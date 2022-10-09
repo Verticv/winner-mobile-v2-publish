@@ -61,6 +61,22 @@ import bga19 from '../../assets/mainPage/active-bg19-card.png';
 import bg20 from '../../assets/mainPage/inactive-bg20-card.png';
 import bga20 from '../../assets/mainPage/active-bg20-card.png';
 
+import bg21 from '../../assets/mainPage/inactive-bg21-card.png';
+import bga21 from '../../assets/mainPage/active-bg21-card.png';
+import bg22 from '../../assets/mainPage/inactive-bg22-card.png';
+import bga22 from '../../assets/mainPage/inactive-bg22-card.png';
+import bg23 from '../../assets/mainPage/inactive-bg23-card.png';
+import bga23 from '../../assets/mainPage/active-bg23-card.png';
+import bg24 from '../../assets/mainPage/inactive-bg24-card.png';
+import bga24 from '../../assets/mainPage/active-bg24-card.png';
+import bg25 from '../../assets/mainPage/inactive-bg25-card.png';
+import bga25 from '../../assets/mainPage/active-bg25-card.png';
+import bg26 from '../../assets/mainPage/inactive-bg26-card.png';
+import bga26 from '../../assets/mainPage/active-bg26-card.png';
+import bg27 from '../../assets/mainPage/inactive-bg27-card.png';
+import bga27 from '../../assets/mainPage/active-bg27-card.png';
+import bg28 from '../../assets/mainPage/inactive-bg28-card.png';
+import bga28 from '../../assets/mainPage/active-bg28-card.png';
 const cardInfo = [{
     id: 1,
     inactivBackground: bg1,
@@ -253,22 +269,101 @@ const cardInfo = [{
     text: '티비벳',
     isActive: false,
     group: '9'
-}
+},
+{
+    id: 21,
+    inactivBackground: bg21,
+    activeBackground: bga21,
+    icon: true,
+    text: '이용가이드',
+    isActive: false,
+    group: '4',
+    extra: 'true'
+}, {
+    id: 22,
+    inactivBackground: bg22,
+    activeBackground: bga22,
+    icon: true,
+    text: '호텔카지노',
+    isActive: false,
+    group: '4',
+    disable: 'true',
+    extra: 'true'
+}, {
+    id: 23,
+    inactivBackground: bg23,
+    activeBackground: bga23,
+    icon: true,
+    text: '호텔카지노',
+    isActive: false,
+    group: '4',
+    disable: 'true',
+    extra: 'true'
+}, {
+    id: 24,
+    inactivBackground: bg24,
+    activeBackground: bga24,
+    icon: true,
+    text: '화면구성설명',
+    isActive: false,
+    group: '5',
+    extra: 'true',
+    path: '/esports/structure'
+}, {
+    id: 25,
+    inactivBackground: bg25,
+    activeBackground: bga25,
+    icon: true,
+    text: '단폴더베팅방법',
+    isActive: false,
+    group: '5',
+    extra: 'true',
+    path: '/esports/single'
+}, {
+    id: 26,
+    inactivBackground: bg26,
+    activeBackground: bga26,
+    icon: true,
+    text: '다폴더베팅방법',
+    isActive: false,
+    group: '5',
+    extra: 'true',
+    path: '/esports/multi'
+}, {
+    id: 27,
+    inactivBackground: bg27,
+    activeBackground: bga27,
+    icon: true,
+    text: '화면구성설명',
+    isActive: false,
+    group: '9',
+    extra: 'true'
+}, {
+    id: 28,
+    inactivBackground: bg28,
+    activeBackground: bga28,
+    icon: true,
+    text: '베팅방법',
+    isActive: false,
+    group: '9',
+    extra: 'true'
+},
+
 ]
 
 export default function AllCards({ btnActive, setBtnActive }) {
     const [cardActive, setCardActive] = useState('2');
     return (
         <div className="cards">
-            {btnActive === '0' ? cardInfo.map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group }) => (
+            {btnActive === '0' ? cardInfo.filter((a) => !a.extra).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group }) => (
                 <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
                     icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path}
                 />
             ))
                 : <>
-                    {true ? cardInfo.filter((a) => a.group === btnActive).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group }) => (
+                    {true ? cardInfo.filter((a) => a.group === btnActive).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, disable }) => (
                         <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
-                            icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path}
+                            icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path} disable={disable}
                         />
                     ))
                         : <></>}
