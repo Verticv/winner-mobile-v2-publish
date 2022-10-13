@@ -43,7 +43,7 @@ const LiveCasinoHistoryDetailPopup = ({ setPopupOpen }) => {
                                 <div
                                     style={{
                                         backgroundColor: "#473e35", height: '5.375rem', display: 'flex', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.053rem', justifyContent: 'center', paddingTop: '', color: '#ffdfbd'
-                                        , borderBottom: '0.1875rem solid #000'
+                                        // , borderBottom: '0.1875rem solid #000'
                                     }}
                                     className="flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                                 >

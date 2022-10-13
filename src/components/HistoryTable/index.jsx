@@ -58,7 +58,7 @@ const HistoryTable = ({
                 // background: `${containerBackground && index % 2 ? containerBackground : ''}`,
                 background: 'linear-gradient(to top, #1f1f1e, #3b3b3b 50%, #4a4a4a)',
                 // margin: 'auto'
-                boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)',
+                boxShadow: '0px 0px 8px 0px rgba(0, 0, 0, 0.6)',
                 borderRadius: '1rem',
                 position: 'relative'
             }} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">

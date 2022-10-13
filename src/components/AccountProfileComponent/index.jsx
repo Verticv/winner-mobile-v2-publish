@@ -16,7 +16,7 @@ import calendar from "../../assets/myInfo/calendar.png";
 import P from "../../assets/myInfo/p.png";
 import W from "../../assets/myInfo/w.png";
 import Koreaflag from "../../assets/myInfo/korea_flag.png";
-import UKflag from "../../assets/myInfo/korea_flag.png";
+import UKflag from '../../assets/second-flag.png'
 import KakaoLogo from "../../assets/myInfo/kakao.png";
 import TelegramLogo from "../../assets/myInfo/telegram.png";
 import ArrowUpWhite from "../../assets/myInfo/down-arrow.png";
@@ -24,6 +24,7 @@ import ArrowDown from "../../assets/myInfo/down-arrow.png";
 import ArrowUp from "../../assets/myInfo/down-arrow.png";
 // import ArrowDownWhite from "../../images/arrows/arrow_down_white.png";
 import LeftArrowIcon from '../../assets/myInfo/left-arrow.png'
+import CountryDropDown from '../CountryDropDown';
 
 const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
 
@@ -144,8 +145,8 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
                             <p style={{ margin: '0.1rem 1.8rem 1.7rem 0', fontSize: '2.8125rem', lineHeight: '0.7', fontFamily: 'RobotoBold', color: '#ffffff', textAlign: 'right' }} className="font-robotoBold text-right text-gray-text">
                                 LEVEL3
                             </p>
-                            <p style={{ margin: '0px 2rem 1.475rem 0px', letterSpacing: '-0.075rem', fontSize: '3.375rem', lineHeight: '1.1', textAlign: 'right', fontFamily: 'SpoqaHanSansNeoBold', color: '#aa9264' }} className="font-spoqaBold text-right text-blue-r1ca7ec">
-                                마이마이프로틴화이팅
+                            <p style={{ margin: '0px 2rem 1.475rem 0px', letterSpacing: '-0.075rem', fontSize: '3.375rem', lineHeight: '1.1', textAlign: 'right', fontFamily: 'SpoqaHanSansNeoBold', color: '#aa9264', display: 'flex', justifyContent: 'end' }} className="font-spoqaBold text-right text-blue-r1ca7ec">
+                                <span style={{ whiteSpace: 'nowrap', width: '38rem', overflow: 'hidden', textOverflow: 'ellipsis' }}>마이마이프로틴화이팅</span>
                                 <span className="text-gray-a4b1b4 font-spoqaBold" style={{ color: '#c8c8c8' }}>님</span>
                             </p>
                             <div style={{ background: '#252525', borderRadius: '0.9rem' }}>
@@ -189,9 +190,14 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
                                 로그아웃
                             </label>
                         </div>
-                        <DropDownControls buttonChild={CountryButton} isDropdownOpen={isCountryOpen} setDropdownOpen={setCountryOpen} >
-                            {/* <div className=""><CountryDropDown setCountry={setCountry} country={country} /></div> */}
-                        </DropDownControls>
+                        <div className='dropdown-mypage' onClick={() => setCountryOpen((prev => !prev))}>
+
+                            <DropDownControls buttonChild={CountryButton} isDropdownOpen={isCountryOpen} setDropdownOpen={setCountryOpen} >
+                                <div className="absolute" style={{ right: "0.7rem", top: '11rem', position: 'absolute', zIndex: '40' }}>
+                                    <CountryDropDown setCountry={setCountry} country={country} />
+                                </div>
+                            </DropDownControls>
+                        </div>
                     </div>
                 </div>
                 <div style={{ borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem', height: '18.875rem', marginTop: '-7.75rem', paddingTop: '9.3125rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="flex w-full justify-between items-center pt-16 rounded-3xl bg-gray-d9e6f2 shadow-to-box">

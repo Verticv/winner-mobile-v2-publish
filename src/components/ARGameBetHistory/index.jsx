@@ -11,7 +11,10 @@ import Icon5 from '../../assets/ar-game/5.png';
 import Icon6 from '../../assets/ar-game/6.png';
 import Icon7 from '../../assets/ar-game/7.png';
 import Icon8 from '../../assets/ar-game/8.png';
-
+import Icon9 from '../../assets/ar-game/9.png';
+import Icon10 from '../../assets/ar-game/10.png';
+import Icon11 from '../../assets/ar-game/11.png';
+import Icon12 from '../../assets/ar-game/12.png';
 import HorizontalSubMenu from '../HorizontalSubMenuDefault'
 
 const subTabsArray = [
@@ -23,6 +26,10 @@ const subTabsArray = [
     { text: "탁구", icon: Icon6, id: 5, width: '19.375rem', path: '#' },
     { text: "배드민턴", icon: Icon7, id: 6, width: '19.375rem', path: '#' },
     { text: "양궁", icon: Icon8, id: 8, width: '19.375rem', path: '#' },
+    { text: "마구", icon: Icon9, id: 9, width: '19.375rem', path: '#' },
+    { text: "레이싱룰렛", icon: Icon10, id: 10, width: '19.375rem', path: '#' },
+    { text: "농구", icon: Icon11, id: 11, width: '19.375rem', path: '#' },
+    { text: "아이스하키", icon: Icon12, id: 12, width: '19.375rem', path: '#' },
 ];
 
 // 베팅번호 => number

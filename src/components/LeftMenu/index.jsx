@@ -85,7 +85,7 @@ const LeftMenu = ({
                     >
                         <img
                             style={{
-                                height: '',  width: '7.875rem',
+                                height: '', width: '7.875rem',
                                 // marginTop: '-1.15rem'
                                 marginLeft: '0.5rem'
                                 // boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)' 
@@ -129,7 +129,10 @@ const LeftMenu = ({
                     <div style={{ borderBottomWidth: '0.1875rem', height: '12.375rem', }} className={`${index % 2 === 0 ? "bg-white" : "bg-gray-f7f7f7"} border-b border-gray-ececec`}>
                         <div className='h-full' style={{ padding: '0 1.875rem', width: '100%', background: index % 2 === 0 ? '#1e1e1e' : '#242424', height: '12.375rem', borderBottom: '0.1875rem solid #323231' }}>
                             <button
-                                style={{ padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', background: activeButton === item?.path ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem' }}
+                                style={{
+                                    padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd',
+                                    background: 'bottom', borderRadius: '1rem'
+                                }}
                                 className={`${activeButton === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
                                     : ""
@@ -145,6 +148,7 @@ const LeftMenu = ({
                                 onMouseLeave={() => mouseLeave(item.path)}
                                 onFocus={(e) => {
                                     e.target.children[1].children[0].children[0].style.color = 'white'
+                                    e.target.style.background = 'linear-gradient(#a67c52, #7f5f3f)'
                                     if (e.target.children[1].children[0].children.length === 3) {
                                         if (e.target.children[1].children[0].children[2]) {
                                             e.target.children[1].children[0].children[2].src = ArrowRightWhite
@@ -153,7 +157,6 @@ const LeftMenu = ({
                                     if (e.target.children[1].children[0].children[1]) {
                                         e.target.children[1].children[0].children[1].src = ArrowRightWhite
                                     }
-
                                 }}
                             >
                                 <div
@@ -194,7 +197,9 @@ const LeftMenu = ({
                                             <img
                                                 className="object-contain absolute right-1"
                                                 style={{ width: '1.9375rem', height: '3.1875rem', top: '0.2rem', right: '0.3rem', position: 'absolute' }}
-                                                src={activeButton === item?.path ? ArrowRightWhite : ArrowRight}
+                                                // src={activeButton === item?.path ? ArrowRightWhite : ArrowRight}
+                                                src={ArrowRight}
+
                                                 alt="icon" />
                                         )}
                                     </div>

@@ -19,6 +19,12 @@ import Icon12 from '../../assets/slotGame/13.png'
 import Icon13 from '../../assets/slotGame/14.png'
 import Icon14 from '../../assets/slotGame/15.png'
 import Icon15 from '../../assets/slotGame/16.png'
+import Icon17 from '../../assets/slotGame/17.png'
+import Icon18 from '../../assets/slotGame/18.png'
+import Icon19 from '../../assets/slotGame/19.png'
+import Icon20 from '../../assets/slotGame/20.png'
+import Icon21 from '../../assets/slotGame/21.png'
+import Icon22 from '../../assets/slotGame/22.png'
 import HorizontalSubMenu from '../HorizontalSubMenuDefault'
 // import Icon16 from '../../assets/slotGame/17.png'
 
@@ -42,6 +48,13 @@ const subTabsArray = [
     { text: "플레이앤고", icon: Icon13, id: 13, width: '19.375rem', path: '#' },
     { text: "YL게이밍", icon: Icon14, id: 14, width: '19.375rem', path: '#' },
     { text: "레드타이거", icon: Icon15, id: 15, width: '19.375rem', path: '#' },
+    { text: "플레이텍", icon: Icon17, id: 16, width: '19.375rem', path: '#' },
+    { text: "스카이윈드", icon: Icon18, id: 17, width: '19.375rem', path: '#' },
+    { text: "CQ9", icon: Icon19, id: 18, width: '19.375rem', path: '#' },
+    { text: "올웨이스핀", icon: Icon20, id: 19, width: '19.375rem', path: '#' },
+    { text: "와즈단", icon: Icon21, id: 20, width: '19.375rem', path: '#' },
+    { text: "PG소프트", icon: Icon22, id: 21, width: '19.375rem', path: '#' },
+
 ];
 
 // 베팅번호 => number

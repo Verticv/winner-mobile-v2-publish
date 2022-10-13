@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-function Card({ id, inactivBackground, activeBackground, icon, text, isActive, cardActive, setCardActive, path, disable }) {
+function Card({ id, inactivBackground, activeBackground, icon, text, isActive, cardActive, setCardActive, path, disable, group, extra }) {
     const navigate = useNavigate();
     return (
         <div className="card-container" id={id}
@@ -19,10 +19,10 @@ function Card({ id, inactivBackground, activeBackground, icon, text, isActive, c
                     <div className="content">
                         <p style={{ marginTop: !icon ? '-4.3rem' : '' }} id={id}>{text}</p>
                     </div>
-                    <div className={`card-btn ${disable ?  'disable-style' : ''}`} id={id}>
+                    <div className={`card-btn ${disable ? 'disable-style' : ''}`} id={id}>
                         <button id={id} className={`${(+cardActive === id) ? 'active-btn' : ''}`}>
-                            <span className="text-btn" id={id}>
-                                게임시작
+                            <span className="text-btn" style={{ color: disable ? '#cccccc' : '' }} id={id}>
+                                {disable ? '준비중' : (extra ? '설명보기' : '게임시작')}
                             </span>
                         </button>
                     </div>

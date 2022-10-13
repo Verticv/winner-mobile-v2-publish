@@ -10,7 +10,7 @@ const SignedUpPopup = ({ setCompletePopup, setSignup }) => {
     const navigate = useNavigate()
 
     return (
-        <div style={{ width: '72.9rem', borderRadius: "2.25rem", height: '85.625rem', padding: "0.1875rem", background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '11.6rem', marginLeft: '0.2rem' }} className="relative bg-white rounded-xl shadow-popup">
+        <div style={{ width: '72.9rem', borderRadius: "2.25rem", height: '88.625rem', padding: "0.1875rem", background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '14.6rem', marginLeft: '0.2rem' }} className="relative bg-white rounded-xl shadow-popup shadow-to-box">
             <div style={{ paddingBottom: "", background: '#323232', width: '100%', height: '100%', borderRadius: "2.25rem" }} >
 
                 <div style={{ width: '72.75rem', position: 'absolute', display: 'flex', justifyContent: 'center' }} className="absolute flex justify-center">

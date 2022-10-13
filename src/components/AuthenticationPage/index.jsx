@@ -151,7 +151,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
 
 
     return (
-        <div className="w-full AuthenticationPage" style={{ background: '', width: '77.625rem', height: '138rem', overflow: 'hidden', position: 'relative' }}>
+        <div className="w-full AuthenticationPage" style={{ background: '', width: '77.625rem', height: '140rem', overflow: 'hidden', position: 'relative' }}>
             {/* <img src={img28} alt="" style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
             {/* {toSignup === false ? ( */}
             <>
@@ -160,7 +160,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                 <div className="bg-white w-full z-20 px-44" style={{ background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', zIndex: '0', position: 'absolute', top: '55.5rem', width: '72.552rem', padding: '0.1875rem', margin: '0 2.55rem', borderRadius: '2.25rem' }}>
 
                     {/* BREAK */}
-                    <div className="w-full h-full flex flex-col items-center justify-end pb-10px" style={{ background: 'linear-gradient(to top, #212121, #323231)', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '5.6rem 7.7rem 0', borderRadius: '2.25rem' }}>
+                    <div className="w-full h-full flex flex-col items-center justify-end pb-10px" style={{ background: 'linear-gradient(to top, #212121, #323231)', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '5.6rem 7.7rem 1rem', borderRadius: '2.25rem' }}>
 
                         <div style={{ fontSize: '4.5rem', marginBottom: "5.9rem", width: '100%', color: '#ad9e8c', fontFamily: 'SpoqaHanSansNeoBold' }} className="w-full mb-12 mt-4 font-spoqaBold text-7xl">환영합니다</div>
 
@@ -255,12 +255,12 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
             {toSignup === true ? (
                 <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', top: '0', right: '0', width: '100vw', background: 'rgb(0 0 0 / 30%)', height: '100%', display: 'flex', justifyContent: 'center' }}>
                     <div style={{ zIndex: '20', width: '72.75rem', overflowY: 'scroll', background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '2.4rem', padding: '0.1875rem', borderRadius: '2rem' }}>
-                        <div style={{ padding: '0 7.6875rem', background: '#323232', width: '100%', height: '', borderRadius: '2rem' }} className="w-full h-full z-20">
+                        <div style={{ padding: '0 7.6875rem', background: '#323232', width: '100%', height: '', borderRadius: '2rem', paddingBottom: '1.3rem' }} className="w-full h-full z-20">
 
                             {/* BREAK */}
                             <div className="w-full flex flex-col" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
 
-                                <label style={{ marginBottom: '7.8rem', fontSize: '4.375rem', marginTop: '11.8125rem', marginLeft: '0.6rem', width: '100%', color: '#ad9e8c', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }} className="text-black font-spoqaMedium tracking-minus05 w-full">회원가입</label>
+                                <label style={{ marginBottom: '7.8rem', fontSize: '4.375rem', marginTop: '11.8125rem', marginLeft: '0.6rem', width: '100%', color: '#ad9e8c', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }} className="shadow-to-text text-black font-spoqaMedium tracking-minus05 w-full">회원가입</label>
 
                                 {/* BREAK */}
                                 <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 0 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }} className="w-full flex flex-col space-y-4px space-x-10px">
