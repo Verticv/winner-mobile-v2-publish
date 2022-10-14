@@ -9,18 +9,18 @@ export default function DropDownControls({
 }) {
 
     return (
-        <div className="shadow-to-box hover" style={{ position: 'relative' }}>
-            <button
+        <div className="shadow-to-box" style={{ position: 'relative', marginTop: '0.2rem', borderRadius: '0.7rem' }}>
+            <button 
                 onMouseDown={() => setDropdownOpen(isOpen => !isOpen)}
                 style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', height: '9.375rem',
                     width: '23.75rem', borderRadius: '0.7rem',
                 }}
-                className="flex relative items-center justify-center"
+                className="flex relative items-center justify-center hover"
             >{buttonChild}</button>
             {isDropdownOpen && (
                 <OutsideAlerter setDropdownOpen={setDropdownOpen}>
-                    <div style={{ marginTop: '12.4375rem', left: '-0.5rem' }} className="absolute text-copy-primary fixed top-0 justify-center z-30" >
+                    <div style={{ marginTop: '', left: '-0.5rem' }} className="absolute text-copy-primary fixed top-0 justify-center z-30" >
                         {children}
                     </div>
                 </OutsideAlerter>

@@ -9,14 +9,15 @@ export default function DropDownControls({
 }) {
     
     return (
-        <div className="relative">
+        <div className="relative" style={{ position: 'relative'}}>
             <button
                 onMouseDown={() => setDropdownOpen(isOpen => !isOpen)}
                 className="flex relative items-center justify-center"
+                style={{ display: 'flex', position: 'relative', alignItems: 'center', justifyContent: 'center'}}
             >{buttonChild}</button>
             {isDropdownOpen && (
                 <OutsideAlerter setDropdownOpen={setDropdownOpen}>
-                    <div style={{marginTop: '', left: ''}} className="absolute text-copy-primary fixed top-0 justify-center z-30" >
+                    <div style={{marginTop: '36px', left: '-3px', position: 'absolute', top: '0', justifyContent: 'center', zIndex: '30'}} className="absolute text-copy-primary fixed top-0 justify-center z-30" >
                         {children}
                     </div>
                 </OutsideAlerter>

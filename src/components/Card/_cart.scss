@@ -91,4 +91,8 @@
 .cards {
     display: flex;
     flex-wrap: wrap;
+    max-height: 63rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 0.2rem;
 }

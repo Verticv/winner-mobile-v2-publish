@@ -87,7 +87,7 @@ const tabsArray = [
     { text: "미니게임", icon: icon7, activeIcon: icon7Active, id: 5, path: "/mypage/bet-history/all/minigame", activeBG: activeBG, subPath: "/mypage/bet-history/all/minigame/powerball", subPath2: "/mypage/bet-history/all/minigame/powerladder", subPath3: "/mypage/bet-history/all/minigame/speedkino", subPath4: "/mypage/bet-history/all/minigame/kinoladder" },
     { text: "키론가상게임", icon: icon8, activeIcon: icon8Active, id: 6, path: "/mypage/bet-history/all/ar-game", activeBG: activeBG },
     { text: "피싱게임", icon: icon9, activeIcon: icon9Active, id: 7, path: "/mypage/bet-history/all/fishing-game", activeBG: activeBG },
-    { text: "로터리게임", icon: icon10, activeIcon: icon10Active, id: 8, path: "#", activeBG: activeBG }
+    { text: "티비벳", icon: icon10, activeIcon: icon10Active, id: 8, path: "/mypage/bet-history/all/bet", activeBG: activeBG }
 ];
 
 const LeftMenuBetHistoryArray = [
@@ -166,7 +166,7 @@ const LeftMenuBetHistoryArray = [
         text: "로터리게임",
         icon: subIcon9,
         id: 7,
-        path: "#",
+        path: "/mypage/bet-history/all/bet",
         mainPath: "/mypage/bet-history",
         width: '9.9375rem'
     },
@@ -409,6 +409,16 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                 >
 
                                 </Route>
+                                <Route path='/bet' element={
+                                    <>
+                                        <LiveCasinoBetHistory key={11} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                        <div style={{ marginTop: '3.85rem' }}>
+                                            <Pagination page={page} setPage={setPage} />
+                                        </div>
+                                        <NavBottom />
+                                    </>
+                                }
+                                />
                             </Routes>
                         </>
                     }

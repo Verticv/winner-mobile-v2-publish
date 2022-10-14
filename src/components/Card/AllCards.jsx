@@ -94,7 +94,7 @@ const cardInfo = [{
     icon: true,
     text: '프레그메틱플레이',
     isActive: true,
-    path: '/live-casino',
+    // path: '/live-casino',
     group: '1'
 },
 {
@@ -361,9 +361,9 @@ export default function AllCards({ btnActive, setBtnActive }) {
                 />
             ))
                 : <>
-                    {true ? cardInfo.filter((a) => a.group === btnActive).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, disable }) => (
+                    {true ? cardInfo.filter((a) => a.group === btnActive).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, disable, extra }) => (
                         <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
-                            icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path} disable={disable}
+                            icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path} disable={disable} group={group} extra={extra}
                         />
                     ))
                         : <></>}

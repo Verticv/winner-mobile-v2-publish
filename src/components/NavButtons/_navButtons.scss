@@ -37,7 +37,7 @@
     }
 
     .icon {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
 
     .text {
@@ -57,4 +57,12 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    // height: 63rem;
+    // overflow: hidden;
+    // width: 168rem;
+    // overflow-y: scroll;
+    overflow-y: scroll;
+    height: 63rem;
+    flex-shrink: 0;
+    padding-top: 0.2rem;
 }
