@@ -138,7 +138,10 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                     <>
 
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        <div id='container-nav'>
+
+                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        </div>
                                         <Contact />
                                     </>
                                 }
@@ -158,7 +161,9 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                 element={
                                     <>
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        <div id='container-nav'>
+                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        </div>
                                     </>
                                 }
                             />
@@ -183,7 +188,9 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                 element={
                                     <>
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        <div id='container-nav'>
+                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        </div>
                                         <div style={{ marginBottom: '19.625rem' }}>
                                             <Faq />
                                         </div>
@@ -194,7 +201,9 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                 element={<>
                                     {/* <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
                                     <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-                                    <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                    <div id='container-nav'>
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                    </div>
                                     <SportsGamePolicy setSelectedTab={setSelectedTab} />
                                 </>}
                             />
@@ -202,7 +211,9 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                 element={
                                     <>
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        <div id='container-nav'>
+                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        </div>
                                         <MinigamePolicy />
                                     </>
                                 }

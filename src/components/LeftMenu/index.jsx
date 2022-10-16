@@ -1,4 +1,5 @@
 // @ts-nocheck
+/* eslint-disable */
 import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from "react-router-dom";
 import ArrowRight from '../../assets/myInfo/right-arrow2.png'
@@ -24,15 +25,28 @@ const LeftMenu = ({
 
     const [activeButton, setActiveButton] = useState()
 
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         const isFromPreviousPage = array.find(ele => ele.path === getCookie('previousUrl'))
+    //         if (isFromPreviousPage) {
+    //             setActiveButton(getCookie('previousUrl'))
+    //         }
+    //     }, 0)
+
+    // }, [currentPathname, array])
+
     useEffect(() => {
         setTimeout(() => {
-            const isFromPreviousPage = array.find(ele => ele.path === getCookie('previousUrl'))
+            const isFromPreviousPage = state?.path
             if (isFromPreviousPage) {
-                setActiveButton(getCookie('previousUrl'))
+                setActiveButton(isFromPreviousPage)
             }
         }, 0)
 
-    }, [currentPathname, array])
+    }, [currentPathname, array]);
+
+    const { state } = useLocation();
+    console.log(state, 'state');
 
     function buttonPressed(text, path) {
         if (text === "총판페이지") {
@@ -68,7 +82,7 @@ const LeftMenu = ({
         return (
             <div style={{ padding: '0 1.875rem', borderBottomWidth: '0.1875rem', background: '#242424', height: '12.375rem', borderBottom: '0.1875rem solid #323231' }} className='w-full border-b border-gray-ececec bg-gray-f7f7f7'>
                 <button
-                    style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', background: 'bottom' }}
+                    style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', background: isProfileActive ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom' }}
                     className={`${isProfileActive
                         ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
                         : ""
@@ -131,7 +145,7 @@ const LeftMenu = ({
                             <button
                                 style={{
                                     padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd',
-                                    background: 'bottom', borderRadius: '1rem'
+                                    background: activeButton === item?.path ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
                                 }}
                                 className={`${activeButton === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
@@ -197,8 +211,8 @@ const LeftMenu = ({
                                             <img
                                                 className="object-contain absolute right-1"
                                                 style={{ width: '1.9375rem', height: '3.1875rem', top: '0.2rem', right: '0.3rem', position: 'absolute' }}
-                                                // src={activeButton === item?.path ? ArrowRightWhite : ArrowRight}
-                                                src={ArrowRight}
+                                                src={activeButton === item?.path ? ArrowRightWhite : ArrowRight}
+                                                // src={ArrowRight}
 
                                                 alt="icon" />
                                         )}

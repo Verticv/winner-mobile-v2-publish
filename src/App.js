@@ -13,7 +13,7 @@ import MyPage from './components/pages/MyPage';
 import Header from './components/Header';
 import NavBottom from './components/NavBottom';
 import MyPageTest from './components/pages/Test';
-// import { getCookie, setCookie } from './utils';
+import { getCookie, setCookie } from './utils';
 // import img20 from './img20.png';
 // import img14 from './img14.png';
 // import img13 from './img13.png';
@@ -38,7 +38,9 @@ import AuthenticationPage from './components/AuthenticationPage';
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
-  // const pathname = window.location.pathname;
+  const pathname = window.location.pathname;
+
+  // const { pathname } = useLocation();
   // console.log(pathname, 'aaaaaaaaaaa');
   useEffect(() => {
     const datePickerInput = document.querySelectorAll(
@@ -54,17 +56,17 @@ function App() {
       });
     });
   }, []);
-  // useEffect(() => {
-  //   const previousUrl = getCookie('previousUrl');
-  //   const currentUrl = getCookie('currentUrl');
-  //   if (!previousUrl) {
-  //     setCookie('previousUrl', pathname);
-  //     setCookie('currentUrl', pathname);
-  //   } else {
-  //     setCookie('previousUrl', currentUrl);
-  //     setCookie('currentUrl', pathname);
-  //   }
-  // }, [pathname]);
+  useEffect(() => {
+    const previousUrl = getCookie('previousUrl');
+    const currentUrl = getCookie('currentUrl');
+    if (!previousUrl) {
+      setCookie('previousUrl', pathname);
+      setCookie('currentUrl', pathname);
+    } else {
+      setCookie('previousUrl', currentUrl);
+      setCookie('currentUrl', pathname);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     const body = document.querySelector('body');
@@ -105,10 +107,10 @@ function App() {
           <Route
             path="/main"
             element={
-              <>
+              <div style={{ overflowY: 'hidden', maxHeight: '111vh' }}>
                 <Header />
                 <MainPage />
-              </>
+              </div>
             }
           />
         </Routes>

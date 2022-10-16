@@ -17,7 +17,7 @@ export default function DropDownControls({
             >{buttonChild}</button>
             {isDropdownOpen && (
                 <OutsideAlerter setDropdownOpen={setDropdownOpen}>
-                    <div style={{marginTop: '36px', left: '-3px', position: 'absolute', top: '0', justifyContent: 'center', zIndex: '30'}} className="absolute text-copy-primary fixed top-0 justify-center z-30" >
+                    <div style={{marginTop: '2.25rem', left: '-0.1875rem', position: 'absolute', top: '0', justifyContent: 'center', zIndex: '30'}} className="absolute text-copy-primary fixed top-0 justify-center z-30" >
                         {children}
                     </div>
                 </OutsideAlerter>

@@ -15,6 +15,10 @@
 
     #container {
         margin: 1rem 0rem 0 2rem;
+        overflow-x: scroll;
+        display: flex;
+        flex-shrink: 0;
+
 
         button {
             // color: rgb(255, 223, 189);

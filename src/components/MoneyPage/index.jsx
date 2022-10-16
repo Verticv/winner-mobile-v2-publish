@@ -128,7 +128,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                             <Header />
                             <HomePageTopBanner pageTitle='머니충전' toPath='/mypage/money' />
 
-                            <div className="flex flex-col items-start limit:items-center w-full h-full">
+                            <div className="flex flex-col items-start limit:items-center w-full h-full" id='container-nav'>
 
                                 <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isMoneyPage='true' />
 

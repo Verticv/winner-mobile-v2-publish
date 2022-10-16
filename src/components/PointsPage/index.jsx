@@ -159,7 +159,7 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
                     element={<>
                         <Header />
                         <HomePageTopBanner pageTitle='포인트' toPath='/mypage/points' />
-                        <div className='mypage-points'>
+                        <div className='mypage-points'  id='container-nav'>
                             <HorizontalMenu1 withSmallMarginTop itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                         </div>
                         <Routes>

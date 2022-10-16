@@ -8,6 +8,7 @@
     margin-top: -0.175rem;
     margin-right: -0.1rem;
     margin-bottom: 0.7rem;
+    cursor: pointer;
 
     .main-div {
         width: 100%;
@@ -69,6 +70,7 @@
                     border-radius: 0.9rem;
                     background: linear-gradient(to top, #805f3f, #936e49 50%, #a57c52);
                     background: linear-gradient(180deg, rgba(167, 120, 80, 1) 8%, rgba(162, 121, 80, 1) 14.000000000000002%, rgba(131, 96, 64, 1) 90%);
+                    cursor: pointer;
 
                     &.active-btn {
                         background: linear-gradient(to top, #b75c02, #d47414 50%, #f18c26)

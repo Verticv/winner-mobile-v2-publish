@@ -468,7 +468,7 @@ const SportsGamePolicy = ({ setSelectedTab }) => {
             </div>
             <div className="w-full flex relative top-0">
                 <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
-                <div style={{ paddingLeft: '1.875rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                <div style={{ paddingLeft: '1.875rem', overflowX: 'scroll' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">
                         <HorizontalSubMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                     </div>

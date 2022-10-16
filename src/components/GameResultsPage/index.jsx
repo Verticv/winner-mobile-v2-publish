@@ -178,7 +178,10 @@ const GameResults = ({ isAuthenticated, setAuthenticated }) => {
                             {/* <NoticeBanner /> */}
                             {/* <Navbar /> */}
                             <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
-                            <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                            <div id='container-nav'>
+                                <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                            </div>
+
                             <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
                             <Sports1 />
                             <SportsContent checkedState={checkedState} setCheckedState={setCheckedState} />
@@ -232,7 +235,10 @@ const GameResults = ({ isAuthenticated, setAuthenticated }) => {
                             <div className='game-result'>
                                 {/* <img src={img24} alt="" style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
                                 <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
-                                <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                <div id='container-nav'>
+                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                </div>
+
                                 <MinigameTab />
                                 <div style={{ marginTop: '1rem' }} className='test'>
                                     <DateSearchBar isLeagueSearch={false} withBlackButton hasDateSuggestion={false} />

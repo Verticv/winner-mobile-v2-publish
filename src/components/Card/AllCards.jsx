@@ -93,7 +93,7 @@ const cardInfo = [{
     activeBackground: bga2,
     icon: true,
     text: '프레그메틱플레이',
-    isActive: true,
+    isActive: false,
     // path: '/live-casino',
     group: '1'
 },
@@ -352,7 +352,7 @@ const cardInfo = [{
 ]
 
 export default function AllCards({ btnActive, setBtnActive }) {
-    const [cardActive, setCardActive] = useState('2');
+    const [cardActive, setCardActive] = useState('');
     return (
         <div className="cards">
             {btnActive === '0' ? cardInfo.filter((a) => !a.extra).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group }) => (

@@ -954,7 +954,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                                 {/* <div style={{ padding: '1.8rem', paddingBottom: '1.875rem' }} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full"> */}
-                                <div className='coupon-usage'>
+                                <div className='coupon-usage' id='container-nav'>
 
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isCouponPage='true' />
                                 </div>
