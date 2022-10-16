@@ -51,7 +51,7 @@ function Header() {
             isDropdownOpen={isCountryOpen}
             setDropdownOpen={setCountryOpen}
           >
-            <div className="absolute" style={{ right: "0.7rem", top: '2rem', position: 'absolute', zIndex: '40' }}>
+            <div className="absolute" style={{ right: "0.7rem", top: '3.7rem', position: 'absolute', zIndex: '40' }}>
               <CountryDropDown setCountry={setCountry} country={country} />
             </div>
           </DropDownControls>

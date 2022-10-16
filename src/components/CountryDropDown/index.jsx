@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import Koreaflag from '../../assets/Koreaflag.png'
 import UKflag from '../../assets/second-flag.png'
+import Koreaflag2 from '../../assets/Koreaflag2.png'
+import UKflag2 from '../../assets/second-flag2.png'
 
-const CountryDropDown = ({ setCountry, country }) => {
+const CountryDropDown = ({ setCountry, country, isBig }) => {
 
     const [selectedTab, setSelectedTab] = useState(country === "KR" ? 0 : 1)
     const [hoveredTab, setHoveredTab] = useState(null)
@@ -35,7 +37,7 @@ const CountryDropDown = ({ setCountry, country }) => {
                 }
             >
                 <div style={{ width: '5rem', height: '0.5rem', marginRight: '8px' }} className="rounded-full flex items-center justify-center">
-                    <img className="" src={item.text === "KR" ? Koreaflag : UKflag} alt="flag" style={{width: '5.625rem'}}></img>
+                    <img className="" src={item.text === "KR" ? isBig ? Koreaflag2 : Koreaflag : isBig ? UKflag2 : UKflag} alt="flag" style={{ width: isBig ? '7.0625rem' : '5.625rem', marginTop: isBig ? '-0.7rem' : '' }}></img>
                 </div>
                 <label style={{ fontSize: '2.4rem', color: 'rgb(255, 223, 189)', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '6.4rem' }} className={`${(selectedTab === item.id) ? "text-white" : "text-gray-subNavbar"} font-spoqaBold cursor-pointer`}>{item.text}</label>            </div>
         ));

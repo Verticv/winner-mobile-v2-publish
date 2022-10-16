@@ -107,7 +107,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated }) => {
 
                                 <div style={{ padding: '1.875rem', paddingBottom: '1.875rem' }} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                                        <div className=" flex flex-shrink-0 w-full">
+                                        <div className=" flex flex-shrink-0 w-full"  id='container-nav'>
                                             <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isMoneyPage='true' />
                                             {/* {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
                                     <div style={{marginLeft: `${selectedTab * 116 + 49}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>

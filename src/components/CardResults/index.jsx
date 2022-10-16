@@ -139,7 +139,7 @@ const CardResults = ({
                         className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                         <div
                             style={{
-                                textShadow: bet === "right" ? "rgb(0 0 0) 0rem 0rem 0.4375rem;" : "",
+                                textShadow: bet === "right" ? "rgb(0 0 0) 0rem 0rem rem;" : "",
                                 paddingRight: team2?.length > 8 ? '0.7rem' : '0.8rem',
                                 paddingLeft: '0.7rem',
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -203,7 +203,7 @@ const CardResults = ({
                             }>
                             <span style={{
                                 fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem', whiteSpace: 'nowrap',
-                                maxWidth: '35rem',
+                                maxWidth: '17rem',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                             }} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{shouldTruncate ? truncate(team1, 7, 7) : team1}</span>
@@ -276,7 +276,7 @@ const CardResults = ({
                             style={{
                                 textShadow: bet === "right" ? "rgb(0 0 0) 0rem 0rem 0.4375rem;" : "",
                                 paddingRight: team2?.length > 8 ? '0.7rem' : '0.8rem',
-                                paddingLeft: '0.7rem',
+                                paddingLeft: '0.4rem',
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                                 width: '100%',
                                 marginTop: bet === "right" ? '0.1rem' : ''
@@ -294,7 +294,7 @@ const CardResults = ({
                                 {hasDown && <img style={{ marginLeft: '0.4375rem', width: '2rem' }} className="object-contain w-8 h-7" src={DownIcon} alt="" />}
                             </div>
                             <span style={{
-                                fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : hasDown ? '13.875rem' : '15.875rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.4rem', letterSpacing: '-0.07rem', whiteSpace: 'nowrap',
+                                fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : hasDown ? '13.875rem' : '17rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.4rem', letterSpacing: '-0.07rem', whiteSpace: 'nowrap',
                                 // maxWidth: '35rem',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',

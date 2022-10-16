@@ -32,7 +32,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
     const [isCountryOpen, setCountryOpen] = useState();
     const [winImage, setWinImage] = useState(big_1 || big_2);
     const [country, setCountry] = useState("KR");
-
+    const path = window.location.pathname;
     useEffect(() => {
         setWinImage(big_3)
     }, []);
@@ -99,7 +99,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
             <div style={{ marginRight: '1.7rem', marginTop: '0.1rem', marginLeft: '2rem' }} className="rounded-full h-full flex items-center justify-center">
                 <img style={{ width: '7.0625rem', height: '' }} className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label style={{ marginRight: '2.45rem', fontSize: '3rem', marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', textShadow: '#000000 0rem 0rem 0.4375rem' }} className="font-spoqaBold text-white cursor-pointer">{country}</label>
+            <label style={{ marginRight: '2.45rem', fontSize: '3rem', marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', textShadow: '#000000 0rem 0rem 1rem' }} className="font-spoqaBold text-white cursor-pointer">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen} />
         </div>
     )
@@ -113,7 +113,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
         <div className="w-full top-0 z-50 flex flex-col items-start limit1920:items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
             <div style={{ marginBottom: '1.875rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#272726', borderBottom: '0.1875rem solid rgb(121, 102, 87)', height: '9.5rem', width: '77.625rem' }} className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec cursor-pointer">
                 {window.location.pathname !== '/mypage' && (
-                    <button onClick={() => navigate(location)} className="absolute cursor-pointer" style={{ top: '2.9375rem', left: '3.6875rem', position: 'absolute', background: 'bottom' }}>
+                    <button onClick={() => navigate("/mypage", { state: { path } })} className="absolute cursor-pointer" style={{ top: '2.9375rem', left: '3.6875rem', position: 'absolute', background: 'bottom' }}>
                         <img
                             // onClick={() => history.push('/main')}
                             style={{ height: '3.625rem', width: '2.3125rem', transform: 'rotate(180deg)' }}
@@ -183,7 +183,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
                             <div style={{ marginRight: '1.8rem', marginTop: '0.1375rem', marginLeft: '-0.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="w-16 h-16 rounded-full flex items-center justify-center">
                                 <img className="" src={Logout} alt="logout" style={{ width: '5.625rem' }}></img>
                             </div>
-                            <label style={{ marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', fontSize: '3rem', textShadow: '#000000 0rem 0rem 0.4375rem' }} className="shadow-to-text" onClick={() => {
+                            <label style={{ marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', fontSize: '3rem', textShadow: '#000000 0rem 0rem 1rem' }} className="shadow-to-text" onClick={() => {
                                 navigate("/")
                                 setAuthenticated(false)
                             }}>
@@ -193,8 +193,8 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
                         <div className='dropdown-mypage' onClick={() => setCountryOpen((prev => !prev))}>
 
                             <DropDownControls buttonChild={CountryButton} isDropdownOpen={isCountryOpen} setDropdownOpen={setCountryOpen} >
-                                <div className="absolute" style={{ right: "0.7rem", top: '11rem', position: 'absolute', zIndex: '40' }}>
-                                    <CountryDropDown setCountry={setCountry} country={country} />
+                                <div className="absolute" style={{ right: "0rem", top: '11rem', position: 'absolute', zIndex: '40' }}>
+                                    <CountryDropDown setCountry={setCountry} country={country} isBig='true' />
                                 </div>
                             </DropDownControls>
                         </div>

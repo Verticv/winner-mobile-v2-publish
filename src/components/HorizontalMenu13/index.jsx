@@ -33,7 +33,7 @@ const HorizontalMenu13 = ({
                     // background: items.length - 1 === index ? subActive : `url(${subInactive})`,
                     background: `url(${pathname === item.path || isState === item.id ? item.subActive : item.subInactive}) round`,
                     borderRadius: "0",
-                    width: '14.2rem',
+                    width: '14.1rem',
                     height: '14.4rem',
                     marginRight: '-0.2rem',
                     // marginRight: items.length - 1 === index ? '1.875rem' : '0.1875rem',

@@ -9,7 +9,7 @@ export default function DropDownControls({
 }) {
 
     return (
-        <div className="shadow-to-box" style={{ position: 'relative', marginTop: '0.2rem', borderRadius: '0.7rem' }}>
+        <div className="shadow-to-box" style={{ position: 'relative', marginTop: '0.1rem', borderRadius: '0.7rem' }}>
             <button 
                 onMouseDown={() => setDropdownOpen(isOpen => !isOpen)}
                 style={{

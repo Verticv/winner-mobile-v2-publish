@@ -253,8 +253,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
             </>
             {/* ) : ( */}
             {toSignup === true ? (
-                <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', top: '0', right: '0', width: '100vw', background: 'rgb(0 0 0 / 30%)', height: '100%', display: 'flex', justifyContent: 'center' }}>
-                    <div style={{ zIndex: '20', width: '72.75rem', overflowY: 'scroll', background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '2.4rem', padding: '0.1875rem', borderRadius: '2rem' }}>
+                <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', overflowY: 'scroll', top: '0', right: '0', width: '100vw', background: 'rgb(0 0 0 / 30%)', height: '100%', display: 'flex', justifyContent: 'center' }}>
+                    <div style={{ zIndex: '20', width: '72.75rem', background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '2.4rem', padding: '0.1875rem', borderRadius: '2rem' }}>
                         <div style={{ padding: '0 7.6875rem', background: '#323232', width: '100%', height: '', borderRadius: '2rem', paddingBottom: '1.3rem' }} className="w-full h-full z-20">
 
                             {/* BREAK */}
@@ -270,7 +270,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                             className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none"
                                             onFocus={(e) => setSelectedInput(0)}
                                             onBlur={(e) => setSelectedInput(false)}
-                                            placeholder="louie3"
+                                            placeholder="아이디"
                                         />
                                         <div className='h-1.5'>
                                             <div className={`${selectedInput === 0 ? "bg-blue-r1ca7ec h-1.5" : "bg-gray-bebebe h-0.75"} w-full`} style={{ width: '100%' }} />
@@ -597,7 +597,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                         <span className="text-blue-r2aa1d5 font-roboto text-5xl leading-snug mb-6px tracking-wide">test1234</span>
                                     </div>
                                 </div> */}
-                                <div style={{ borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem', height: '18.875rem', marginTop: '-6.3rem', paddingTop: '9.3125rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="flex w-full justify-between items-center pt-16 rounded-3xl bg-gray-d9e6f2 ">
+                                <div style={{ borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem', height: '24.875rem', paddingBottom: '5.3125rem', marginTop: '-6.3rem', paddingTop: '9.3125rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="flex w-full justify-between items-center pt-16 rounded-3xl bg-gray-d9e6f2 ">
                                     <div style={{ marginTop: '-1.3rem', display: 'flex', alignItems: 'center' }} className="flex items-center ml-32">
                                         <img
                                             style={{ width: '7.375rem', margin: '0 1.75rem 0 0' }}
