@@ -107,7 +107,7 @@ function App() {
           <Route
             path="/main"
             element={
-              <div style={{ overflowY: 'hidden', maxHeight: '111vh' }}>
+              <div style={{ }}>
                 <Header />
                 <MainPage />
               </div>
