@@ -44,7 +44,9 @@ const CardHeader = ({ flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMi
             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <img style={{ width: '3.9375rem', height: '3.9375rem', marginTop: '-0.3rem' }} src={FootballIcon} alt="" />
                 <img style={{ width: '5.625', height: '3.3125rem', marginLeft: '1.0625rem', marginTop: '-0.3rem' }} src={headerFlag} alt="" />
-                <span style={{ fontSize: '2.624375rem', paddingTop: '0.1875rem', marginLeft: '0.85rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', marginTop: '-0.3rem' }} className="ml-4 font-spoqaMedium text-20px tracking-tight text-white">{name}</span>
+                <span style={{ fontSize: '2.624375rem', paddingTop: '0.1875rem', marginLeft: '0.85rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', marginTop: '-0.3rem',
+                    whiteSpace: 'nowrap', maxWidth: '31rem', overflow: 'hidden', textOverflow: 'ellipsis'
+            }} className="ml-4 font-spoqaMedium text-20px tracking-tight text-white">{name}</span>
             </div>
             <div className="flex items-center" style={{ display: 'flex' }}>
                 <img style={{ width: '2.375rem', height: '2.375rem', marginTop: '0.2rem' }} src={ClockIcon} alt="" />

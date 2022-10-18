@@ -30,7 +30,9 @@ const LiveCasinoHistoryDetailPopup = ({ setPopupOpen }) => {
                                 // background: 'red', width: '41.3rem' 
                             }} className="tracking-tight flex items-center">
                                 <p className="font-spoqaMedium" style={{ margin: '0', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.2rem', color: '#ad9e8c' }}>플레이어 이름 :</p>
-                                <p className="font-spoqaBold text-blue-r0056a6" style={{ margin: '0', fontFamily: 'SpoqaHanSansNeoBold', letterSpacing: '-0.2rem', marginLeft: '0.4rem', color: '#c8c8c8' }}> WINlouie3</p>
+                                <p className="font-spoqaBold text-blue-r0056a6" style={{
+                                    margin: '0', fontFamily: 'SpoqaHanSansNeoBold', letterSpacing: '-0.2rem', marginLeft: '0.4rem', color: '#c8c8c8', whiteSpace: 'nowrap', maxWidth: '21.5rem', overflow: 'hidden ', textOverflow: 'ellipsis'
+                                }}> WINlouie3</p>
                             </div>
                             {/* <div style={{ backgroundColor: "#868686", height: '0.1875rem', minHeight: '0.1875rem', marginBottom: '44px', width: '45.4375rem' }} className=""></div> */}
                         </div>
