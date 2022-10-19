@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Pagination from '../Pagination'
 import CouponGiftPopup from '../popups/CouponGiftPopup'
@@ -832,6 +832,10 @@ const GiftButton = (
 
 
 const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
 

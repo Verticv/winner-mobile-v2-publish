@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Pagination from '../Pagination'
 import InboxTable from '../InboxTable'
 // import Navbar from 'components/mainPage/Navbar'
@@ -10,6 +10,9 @@ import Search from '../Search'
 // import ScrollButton from 'components/common/ScrollButton'
 
 const Inbox = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const inboxArray = [
         {

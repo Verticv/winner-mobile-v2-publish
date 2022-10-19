@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import { Route, useLocation, Routes } from "react-router-dom";
 import HomePageTopBanner from '../HomePageTopBanner';
 import Icon1 from '../../assets/cscenter/leftMenu/icon_1.png'
@@ -32,6 +32,9 @@ import Header from "../Header";
 import NavBottom from "../NavBottom";
 
 export default function Test({ isAuthenticated, setAuthenticated }) {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const tabsArray = [
         { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },

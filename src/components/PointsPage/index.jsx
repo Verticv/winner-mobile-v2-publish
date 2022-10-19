@@ -8,7 +8,7 @@ import PointsTransactionHistory from '../PointsTransactionHistory'
 // import NoticeBanner from 'components/mainPage/NoticeBanner'
 import HomePageTopBanner from '../HomePageTopBanner';
 import HorizontalMenu1 from '..//HorizontalMenu1'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import img17 from '../../img17.png';
 // import { Route } from 'react-router'
 import Icon1 from '../../assets/mainPage/points/1.png';
@@ -68,6 +68,9 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     console.log(selectedSubTab, selectedTab)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const SubMenuList = (
         <>
@@ -159,7 +162,7 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
                     element={<>
                         <Header />
                         <HomePageTopBanner pageTitle='포인트' toPath='/mypage/points' />
-                        <div className='mypage-points'  id='container-nav'>
+                        <div className='mypage-points' id='container-nav'>
                             <HorizontalMenu1 withSmallMarginTop itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                         </div>
                         <Routes>

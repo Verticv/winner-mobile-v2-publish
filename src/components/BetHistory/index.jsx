@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import AccountProfileComponent from '../AccountProfileComponent'
 import HorizontalMenu from '../HorizontalMenu'
 import activeBG from '../../assets/mainPage/points/active-bg.png';
@@ -193,6 +193,9 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
     const [checkedState, setCheckedState] = useState(
         new Array(3).fill(false)
     );
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     const MyInfo = () => {
         console.log(`location.state`, location.state)
         return (

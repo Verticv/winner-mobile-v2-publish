@@ -1,5 +1,5 @@
 import Pagination from '../Pagination';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BlueSpeaker from '../../assets/myPage/speaker/blue_speaker.png';
 import YellowSpeaker from '../../assets/myPage/speaker/yellow_speaker.png';
@@ -225,6 +225,9 @@ const FreeBoardMain = () => {
 
     const navigate = useNavigate();
     const [page, setPage] = useState(0)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     function InboxList({ items }) {
         return items.map(item => (

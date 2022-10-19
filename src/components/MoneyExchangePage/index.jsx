@@ -65,6 +65,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     console.log(selectedTab, selectedSubTab)
+    
 
     return (
         <div style={{ maxWidth: '1242px', paddingBottom: '16rem' }} className="relative w-full flex flex-col justify-center overflow-hidden money-page2">
@@ -105,7 +106,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated }) => {
 
                             <div className="flex flex-col items-start limit:items-center w-full h-full">
 
-                                <div style={{ padding: '1.875rem', paddingBottom: '1.875rem' }} className="w-full relative top-0">
+                                <div style={{ padding: '1.875rem 1rem', paddingBottom: '1.875rem' }} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full"  id='container-nav'>
                                             <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isMoneyPage='true' />

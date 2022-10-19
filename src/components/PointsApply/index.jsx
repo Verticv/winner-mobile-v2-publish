@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PopupControls from '../popups/PopupControls';
 import PointsApplyPopup from '../popups/PointsApplyPopup';
 import WarningMessage from '../WarningMessage'
@@ -9,6 +9,10 @@ const PointsApply = () => {
     const [inputClicked, setInputClicked] = useState(false)
     const [isPopupOpen, setPopupOpen] = useState(true)
     var nf = new Intl.NumberFormat();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const detailButton = (
         <div

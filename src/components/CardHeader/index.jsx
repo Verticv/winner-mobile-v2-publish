@@ -49,7 +49,7 @@ const CardHeader = ({ flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMi
             }} className="ml-4 font-spoqaMedium text-20px tracking-tight text-white">{name}</span>
             </div>
             <div className="flex items-center" style={{ display: 'flex' }}>
-                <img style={{ width: '2.375rem', height: '2.375rem', marginTop: '0.2rem' }} src={ClockIcon} alt="" />
+                <img style={{ width: '2.375rem', height: '2.375rem', marginTop: '0.3rem' }} src={ClockIcon} alt="" />
                 <span
                     style={{ color: "#ffdfbd", fontSize: '2.624375rem', marginLeft: '0.5rem', marginTop: '-0.1rem', fontFamily: 'RobotoMedium', marginRight: '-0.2rem', letterSpacing: '-0.11rem' }}
                     className="font-spoqa text-16px tracking-tight text-white"

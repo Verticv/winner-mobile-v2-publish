@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import HorizontalSubMenu from '../HorizontalSubMenu';
 // import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
@@ -7,13 +7,16 @@ import ContactTable from '../ContactTable';
 import Search from '../Search'
 
 const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const tabsArray = [
         { text: "전체", id: 0, width: '11.5625rem', path: "/cscenter/all/contact/all" },
         { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/contact/all/live-casino" },
         { text: "슬롯", id: 2, width: '11.5625rem', path: "/cscenter/all/contact/all/slot" },
         { text: "스포츠", id: 3, width: '13.4375rem', path: "/cscenter/all/contact/all/sports" },
-        { text: "호텔카지노", id: 10, width: '18.3125rem', path: "/cscenter/all/contact/all/e-sports/1" },
+        { text: "호텔카지노", id: 10, width: '18.3125rem', path: "/cscenter/all/contact/all/e-sports1" },
         { text: "e-스포츠", id: 4, width: '15.3125rem', path: "/cscenter/all/contact/all/e-sports" },
         { text: "미니게임", id: 5, width: '15.3125rem', path: "/cscenter/all/contact/all/minigame" },
         { text: "키론가상게임", width: '20.3125rem', id: 6, path: "/cscenter/all/contact/all/ar-game" },
