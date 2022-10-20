@@ -4,13 +4,17 @@ import React, { useState, useEffect } from 'react'
 import HomePageTopBanner from '../HomePageTopBanner'
 // import Navbar from 'components/mainPage/Navbar'
 
-const EditInfo = () => {
+const EditInfo = ({ activeButton, setActiveButton }) => {
 
     const [selectedInput, setSelectedInput] = useState();
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        setActiveButton('/mypage/edit-info')
+    }, [setActiveButton]);
 
     const Title = ({ text }) => (
         <div style={{ width: "24rem", marginRight: '2.7rem', background: '#272726', flexShrink: '0', borderRadius: '0.5rem' }} className="form-Title">

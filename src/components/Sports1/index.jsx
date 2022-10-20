@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Icon1 from '../../assets/gameresults/1.png'
 import Icon2 from '../../assets/gameresults/2.png'
 import Icon3 from '../../assets/gameresults/3.png'
@@ -23,9 +23,12 @@ const tabsArray = [
 ];
 
 
-const Sports1 = ({ paddingLeft }) => {
+const Sports1 = ({ paddingLeft,  subActiveButton, setSubActiveButton }) => {
     const [selectedTab, setSelectedTab] = useState(0)
 
+    useEffect(() => {
+        setSubActiveButton('/mypage/gameresults/all')
+    }, [setSubActiveButton]);
 
     console.log(selectedTab)
 

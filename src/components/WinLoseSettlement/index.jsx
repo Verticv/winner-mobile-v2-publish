@@ -149,7 +149,7 @@ const tableData = [
 ]
 
 
-const WinLoseSettlementContent = () => {
+const WinLoseSettlementContent = ({ activeButton, setActiveButton }) => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -159,6 +159,11 @@ const WinLoseSettlementContent = () => {
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
+
+    useEffect(() => {
+        setActiveButton('/mypage/win-lose-settlement')
+    }, [setActiveButton]);
+
 
     return (
         <div className="WinLoseSettlement">

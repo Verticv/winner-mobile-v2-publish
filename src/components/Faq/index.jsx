@@ -30,10 +30,16 @@ import HorizontalSubMenu from '../HorizontalSubMenu';
 // import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 // import img from '../../img9.png'
 
-const Faq = () => {
+const Faq = ({ subActiveButton, setSubActiveButton }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    useEffect(() => {
+        setSubActiveButton('/cscenter/all/faq')
+    }, [setSubActiveButton]);
+
+
     // const tabsArray = [
     //     { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },
     //     { text: "공지사항", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/cscenter/all/announcement", width: '5.625rem', marginLeft: '0.2rem' },

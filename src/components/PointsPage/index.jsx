@@ -64,13 +64,15 @@ const LeftMenuSubArray = [
 ]
 
 
-const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
+const PointsPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubActiveButton }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     console.log(selectedSubTab, selectedTab)
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+
+
 
     const SubMenuList = (
         <>
@@ -139,6 +141,7 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
                         array={LeftMenuSubArray}
+                        subActiveButton={subActiveButton}
                     />
                 </div>
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
@@ -168,7 +171,7 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
                         <Routes>
                             <Route index element={
                                 <div className='points-apply'>
-                                    <PointsApply />
+                                    <PointsApply subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                 </div>
                             } />
                             <Route path='/points-accumulate-history'
@@ -179,13 +182,13 @@ const PointsPage = ({ isAuthenticated, setAuthenticated }) => {
                                             alt=""
                                             style={{ position: 'absolute', top: '0', opacity: '0.5' }}
                                         /> */}
-                                        <PointsAccumulateHistory SubMenuList={SubMenuList} />
+                                        <PointsAccumulateHistory SubMenuList={SubMenuList} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                     </>
                                 }
                             />
 
                             <Route path="/points-transaction-history"
-                                element={<PointsTransactionHistory SubMenuList={SubMenuList} />}
+                                element={<PointsTransactionHistory SubMenuList={SubMenuList} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />}
                             >
 
                             </Route>

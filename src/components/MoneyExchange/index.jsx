@@ -1,15 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import BankTable from '../BankTable'
 // import NavBottom from '../NavBottom'
 // import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import WarningMessage from '../WarningMessage'
 
-const MoneyExchange = () => {
+const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
     const [inputValue, setInputValue] = useState(null)
     const [secondInputValue, setSecondInputValue] = useState(null)
 
     const [inputClicked, setInputClicked] = useState(false)
     const [secondInputClicked, SecondInputClicked] = useState(false)
+
+    useEffect(() => {
+        setSubActiveButton('/mypage/money/exchange/currency')
+    }, [setSubActiveButton]);
 
     var nf = new Intl.NumberFormat();
 

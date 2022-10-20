@@ -61,7 +61,7 @@ const LeftMenuSubArray = [
 ]
 
 
-const MoneyExchangePage = ({ isAuthenticated, setAuthenticated }) => {
+const MoneyExchangePage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubActiveButton }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     console.log(selectedTab, selectedSubTab)
@@ -82,6 +82,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated }) => {
                                     selectedSubTab={selectedSubTab}
                                     setSelectedSubTab={setSelectedSubTab}
                                     array={LeftMenuSubArray}
+                                    subActiveButton={subActiveButton}
                                 />
                             </div>
                             <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
@@ -126,7 +127,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated }) => {
                                             <Route path="/history"
                                                 element={
                                                     <>
-                                                        <MoneyExchangeHistory />
+                                                        <MoneyExchangeHistory subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                                         {/* <BottomNavbar /> */}
                                                         <NavBottom />
                                                     </>
@@ -138,7 +139,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated }) => {
 
                                                     <>
                                                         {/* hi */}
-                                                        <MoneyExchange />
+                                                        <MoneyExchange subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                                         <NavBottom />
                                                     </>
 

@@ -61,7 +61,7 @@ const LeftMenuSubArray = [
 
 
 
-const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
+const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubActiveButton }) => {
 
     // const LeftMenuArray = [
     //     { text: "보유머니 충전", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/money/charge", mainPath: "/mypage/money/charge" },
@@ -85,6 +85,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
                         array={LeftMenuSubArray}
+                        subActiveButton={subActiveButton}
                     />
                 </div>
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
@@ -150,7 +151,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                             <Routes>
                                 <Route path='/charge' element={
                                     <>
-                                        <MoneyCharge />
+                                        <MoneyCharge subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                         <NavBottom />
                                     </>
                                 } />
@@ -158,7 +159,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
                                     element={
                                         <>
                                             <div style={{ marginTop: '1rem' }}>
-                                                <MoneyChargeHistory />
+                                                <MoneyChargeHistory subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}/>
                                             </div>
                                             < NavBottom />
                                         </>

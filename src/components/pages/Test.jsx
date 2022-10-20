@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable */
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from 'react-router';
 import { useLocation } from "react-router-dom";
 import MoneyPage from "../MoneyPage";
@@ -45,7 +46,15 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
     const location = useLocation();
     const [selectedTab, setSelectedTab] = useState(location.pathname);
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname);
+    const [subActiveButton, setSubActiveButton] = useState();
+    const [activeButton2, setActiveButton2] = useState()
+    const [activeButton, setActiveButton] = useState()
 
+    useEffect(() => {
+        if (window.location.pathname === '/mypage') {
+            setSubActiveButton('')
+        }
+    })
 
     const LeftMenuArray = [
         {
@@ -172,11 +181,12 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
     ];
 
 
-    const MyInfo = () => {
+    const MyInfo = ({ activeButton, setActiveButton }) => {
+
         console.log(`location.state`, location.state)
         return (
             <>
-                <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                 <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu
                         selectedTab={selectedTab}
@@ -184,6 +194,10 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
                         array={LeftMenuArray}
+                        activeButton2={activeButton2}
+                        activeButton={activeButton}
+                        setActiveButton={setActiveButton}
+                        setSubActiveButton={setSubActiveButton}
                     />
                 </div>
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
@@ -197,7 +211,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
         <Routes >
             <Route index element={
                 <>
-                    <MyInfo />
+                    <MyInfo activeButton={activeButton} setActiveButton={setActiveButton} />
                 </>
             }
             />
@@ -205,7 +219,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         {/* <Header /> */}
-                        <BetHistory isAuthenticated={isAuthenticated} />
+                        <BetHistory isAuthenticated={isAuthenticated}
+                            subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                        />
                         {/* <NavBottom /> */}
                     </>
                 }
@@ -216,7 +232,8 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         {/* <Header /> */}
-                        <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
+                        <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated}
+                            subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                         {/* <NavBottom /> */}
                     </>
                 }
@@ -225,7 +242,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             {/* </Routes> */}
             <Route path="/money/exchange/*"
                 element={
-                    <MoneyExchangePage isAuthenticated={true} setAuthenticated={setAuthenticated} />
+                    <MoneyExchangePage isAuthenticated={true} setAuthenticated={setAuthenticated}
+                        subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                    />
                 }
             >
             </Route>
@@ -233,7 +252,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         {/* <Header /> */}
-                        <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
+                        <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated}
+                            subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                        />
                         {/* <NavBottom /> */}
                     </>
                 }
@@ -241,7 +262,10 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             </Route>
             <Route path="/win-lose-settlement"
                 element={
-                    <WinLoseSettlement isAuthenticated={true} setAuthenticated={setAuthenticated} />
+                    <WinLoseSettlement isAuthenticated={true} setAuthenticated={setAuthenticated}
+                        activeButton={activeButton}
+                        setActiveButton={setActiveButton}
+                    />
                 }
             >
 
@@ -250,7 +274,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         {/* <Header /> */}
-                        <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                        <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
+                            subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                        />
                         {/* <NavBottom /> */}
                     </>
                 }
@@ -262,7 +288,10 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                         <Header />
                         <HomePageTopBanner pageTitle='게시판' toPath={window.location.pathname.includes('/mypage') ? '/mypage' : '/main'} isFreeboard={true} />
                         <div>
-                            <FreeBoardMain isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                            <FreeBoardMain isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
+                                activeButton={activeButton}
+                                setActiveButton={setActiveButton}
+                            />
                         </div>
                         <NavBottom />
                     </>
@@ -274,7 +303,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         {/* <Header /> */}
-                        <CouponUsage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                        <CouponUsage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
+                            subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                        />
                         {/* <NavBottom /> */}
                     </>
                 }
@@ -285,7 +316,10 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         <Header />
-                        <Inbox />
+                        <Inbox
+                            activeButton={activeButton}
+                            setActiveButton={setActiveButton}
+                        />
                         <NavBottom />
                     </>
                 }
@@ -299,7 +333,8 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         <Header />
-                        <EditInfo />
+                        <EditInfo activeButton={activeButton}
+                            setActiveButton={setActiveButton} />
                         <NavBottom />
                     </>
                 }

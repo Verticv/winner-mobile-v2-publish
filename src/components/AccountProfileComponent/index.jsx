@@ -26,7 +26,7 @@ import ArrowUp from "../../assets/myInfo/down-arrow.png";
 import LeftArrowIcon from '../../assets/myInfo/left-arrow.png'
 import CountryDropDown from '../CountryDropDown';
 
-const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
+const AccountProfileComponent = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubActiveButton }) => {
 
     const navigate = useNavigate();
     const [isCountryOpen, setCountryOpen] = useState();
@@ -113,7 +113,8 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated }) => {
         <div className="w-full top-0 z-50 flex flex-col items-start limit1920:items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
             <div style={{ marginBottom: '1.875rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#272726', borderBottom: '0.1875rem solid rgb(121, 102, 87)', height: '9.5rem', width: '77.625rem' }} className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec cursor-pointer">
                 {window.location.pathname !== '/mypage' && (
-                    <button onClick={() => navigate("/mypage", { state: { path } })} className="absolute cursor-pointer" style={{ top: '2.9375rem', left: '3.6875rem', position: 'absolute', background: 'bottom' }}>
+                    <button onClick={() => navigate("/mypage", { state: { path } })
+                    } className="absolute cursor-pointer" style={{ top: '2.9375rem', left: '3.6875rem', position: 'absolute', background: 'bottom' }}>
                         <img
                             // onClick={() => history.push('/main')}
                             style={{ height: '3.625rem', width: '2.3125rem', transform: 'rotate(180deg)' }}

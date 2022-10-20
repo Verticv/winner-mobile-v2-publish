@@ -225,13 +225,17 @@ const tableData = [
 // )
 
 
-const PointsAccumulateHistory = ({ SubMenuList }) => {
+const PointsAccumulateHistory = ({ SubMenuList, subActiveButton, setSubActiveButton  }) => {
     const [page, setPage] = useState(0)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+
+    useEffect(() => {
+        setSubActiveButton('/mypage/points/all/points-accumulate-history')
+    }, [setSubActiveButton]);
 
     return (
         <>

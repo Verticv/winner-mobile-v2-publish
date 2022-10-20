@@ -445,12 +445,14 @@ const historyTabsArray = [
 ]
 
 
-const SportsGamePolicy = ({ setSelectedTab }) => {
+const SportsGamePolicy = ({ setSelectedTab, subActiveButton, setSubActiveButton }) => {
 
     const location = useLocation();
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     console.log(`selectedSubTab`, selectedSubTab)
-
+    useEffect(() => {
+        setSubActiveButton('/cscenter/all/policy/sportsgame/soccer')
+    }, [setSubActiveButton]);
 
     const tabsArray = [
         { text: "축구", id: 0, path: "/cscenter/all/policy/sportsgame/soccer" },

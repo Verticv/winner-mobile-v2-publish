@@ -9,10 +9,14 @@ import HomePageTopBanner from '../HomePageTopBanner'
 import Search from '../Search'
 // import ScrollButton from 'components/common/ScrollButton'
 
-const Inbox = () => {
+const Inbox = ({ activeButton, setActiveButton }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        setActiveButton('/mypage/inbox')
+    }, [setActiveButton]);
 
     const inboxArray = [
         {

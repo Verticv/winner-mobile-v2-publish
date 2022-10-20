@@ -11,7 +11,11 @@ import Rank4 from '../../assets/myPage/freeboard/4.png';
 import Rank5 from '../../assets/myPage/freeboard/5.png';
 import Search from '../Search';
 
-const FreeBoardMain = () => {
+const FreeBoardMain = ({ activeButton, setActiveButton }) => {
+
+    useEffect(() => {
+        setActiveButton('/mypage/freeboard')
+    }, [setActiveButton]);
 
     const cellArray = [
         {

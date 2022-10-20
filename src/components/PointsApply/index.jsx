@@ -4,7 +4,7 @@ import PointsApplyPopup from '../popups/PointsApplyPopup';
 import WarningMessage from '../WarningMessage'
 // import img18 from '../../img16.png'
 
-const PointsApply = () => {
+const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
     const [inputValue, setInputValue] = useState(null)
     const [inputClicked, setInputClicked] = useState(false)
     const [isPopupOpen, setPopupOpen] = useState(true)
@@ -13,6 +13,9 @@ const PointsApply = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+    useEffect(() => {
+        setSubActiveButton('/mypage/points/all');
+    }, [setSubActiveButton]);
 
     const detailButton = (
         <div

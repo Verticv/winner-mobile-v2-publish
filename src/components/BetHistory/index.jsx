@@ -181,7 +181,7 @@ const LeftMenuBetHistoryArray = [
 ];
 
 
-const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
+const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubActiveButton }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
@@ -208,6 +208,7 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
                         array={LeftMenuBetHistoryArray}
+                        subActiveButton={subActiveButton}
                     />
                 </div>
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
@@ -267,7 +268,7 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                 {/* <NoticeBanner /> */}
                                 {/* <Navbar /> */}
                                 <Header />
-                                <HomePageTopBanner pageTitle='베팅내역' />
+                                <HomePageTopBanner pageTitle='베팅내역' toPath='/mypage/bet-history' />
                             </div>
 
                             <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
@@ -285,7 +286,10 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                             <Routes>
                                 <Route index element={
                                     <>
-                                        <LiveCasinoBetHistory key={1} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                        <LiveCasinoBetHistory key={1} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab}
+                                            subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                            path="/mypage/bet-history/all"
+                                        />
                                         <div style={{ marginTop: '3.85rem' }}>
                                             <Pagination page={page} setPage={setPage} />
                                         </div>
@@ -297,7 +301,9 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                     element={
                                         <>
                                             {/* <img src={img21} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
-                                            <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
+                                            <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState}
+                                                subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                            />
                                             <Pagination page={page} setPage={setPage} />
                                             <NavBottom />
                                         </>
@@ -314,7 +320,10 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                 <Route path="/live-casino/*"
                                     element={
                                         <>
-                                            <LiveCasinoBetHistory key={2} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                            <LiveCasinoBetHistory key={2} isState={historySelectedSubTab} setState={setHistorySelectedSubTab}
+                                                subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                                path='/mypage/bet-history/all/live-casino'
+                                            />
                                             <div style={{ marginTop: '3.85rem' }}>
                                                 <Pagination page={page} setPage={setPage} />
                                             </div>
@@ -328,7 +337,9 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                 <Route path="/hotel-casino/*"
                                     element={
                                         <>
-                                            <HotelCasinoBetHistory isState={historySelectedSubTab4} setState={setHistorySelectedSubTab4} />
+                                            <HotelCasinoBetHistory isState={historySelectedSubTab4} setState={setHistorySelectedSubTab4}
+                                                subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                            />
                                             <div style={{ marginTop: '3.85rem' }}>
                                                 <Pagination page={page} setPage={setPage} />
                                             </div>
@@ -348,7 +359,9 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                                     <Pagination page={page} setPage={setPage} />
                                                 </div>
                                                 <BottomNavbar /> */}
-                                            <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                                            <SlotBetHistory key={1} isState={selectedSubTab} setState={setSelectedSubTab}
+                                                subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} path='/mypage/bet-history/all/slot-game'
+                                            />
                                             <div style={{ marginTop: '3.85rem' }}>
                                                 <Pagination page={page} setPage={setPage} />
                                             </div>
@@ -366,7 +379,9 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                     <BottomNavbar /> */}
-                                            <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                            <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}
+                                                subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                            />
                                             {/* <DateSearchBar isLeagueSearch={false} /> */}
                                             <NavBottom />
                                         </>
@@ -376,7 +391,9 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                 <Route path="/minigame/*"
                                     element={
                                         <>
-                                            <MinigameBetHistory isState={historySelectedSubTab2} setState={setHistorySelectedSubTab2} />
+                                            <MinigameBetHistory isState={historySelectedSubTab2} setState={setHistorySelectedSubTab2}
+                                                subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                            />
                                             <div style={{ marginTop: '1.25rem' }}>
                                                 {/* <Pagination page={page} setPage={setPage} /> */}
                                             </div>
@@ -389,7 +406,9 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                 <Route path="/ar-game"
                                     element={
                                         <>
-                                            <ARGameBetHistory isState={historySelectedSubTab3} setState={setHistorySelectedSubTab3} />
+                                            <ARGameBetHistory isState={historySelectedSubTab3} setState={setHistorySelectedSubTab3}
+                                                subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                            />
                                             <div style={{ marginTop: '1.25rem' }}>
                                                 <Pagination page={page} setPage={setPage} />
                                             </div>
@@ -402,7 +421,10 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                 <Route path="/fishing-game"
                                     element={
                                         <>
-                                            <SlotBetHistory key={2} isState={selectedSubTab} setState={setSelectedSubTab} />
+                                            <SlotBetHistory key={2} isState={selectedSubTab} setState={setSelectedSubTab}
+                                                subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                                path='/mypage/bet-history/all/fishing-game'
+                                            />
                                             <div style={{ marginTop: '1.25rem' }}>
                                                 <Pagination page={page} setPage={setPage} />
                                             </div>
@@ -414,7 +436,9 @@ const BetHistory = ({ isAuthenticated, setAuthenticated }) => {
                                 </Route>
                                 <Route path='/bet' element={
                                     <>
-                                        <LiveCasinoBetHistory key={11} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                        <LiveCasinoBetHistory key={11} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab}
+                                            subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                            path='/mypage/bet-history/all/bet' />
                                         <div style={{ marginTop: '3.85rem' }}>
                                             <Pagination page={page} setPage={setPage} />
                                         </div>
