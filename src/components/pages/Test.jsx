@@ -55,6 +55,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             setSubActiveButton('')
         }
     })
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const LeftMenuArray = [
         {
