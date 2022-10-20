@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 // import SubHorizontalMenu from '../SubHorizontalMenu'
 import HistoryTable from '../HistoryTable'
@@ -224,7 +224,7 @@ const tableData = [
     ],
 ]
 
-const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false }) => {
+const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false, subActiveButton, setSubActiveButton }) => {
 
     const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -234,6 +234,9 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     // const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
 
+    useEffect(() => {
+        setSubActiveButton('/mypage/bet-history/all/hotel-casino')
+    }, [setSubActiveButton]);
     return (
         <div className="LiveCasinoBetHistory">
             {showSub === true && (

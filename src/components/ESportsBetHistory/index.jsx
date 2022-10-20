@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 // import SubHorizontalMenu from './SubHorizontalMenu'
 // import ScrollButton from 'components/common/ScrollButton'
@@ -28,7 +28,12 @@ import DateSearchBar from '../DateSearchBar'
 // 적중/손실금액 => profit
 // 상태 => status
 
-const ESportsBetHistory = ({ isState = 0, setState, showSub = false, isPopup = false }) => {
+const ESportsBetHistory = ({ isState = 0, setState, showSub = false, isPopup = false, subActiveButton, setSubActiveButton }) => {
+
+    useEffect(() => {
+        setSubActiveButton('/mypage/bet-history/all/e-sports')
+    }, [setSubActiveButton]);
+
 
     return (
         <div className="">
@@ -46,7 +51,7 @@ const ESportsBetHistory = ({ isState = 0, setState, showSub = false, isPopup = f
                 </>
 
             )} */}
-            <div style={{marginTop: '-0.2rem'}}>
+            <div style={{ marginTop: '-0.2rem' }}>
 
                 <DateSearchBar isLeagueSearch={false} isPoints />
             </div>

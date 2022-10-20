@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, useLocation, Routes } from "react-router-dom";
 import HomePageTopBanner from '../HomePageTopBanner';
 import Icon1 from '../../assets/cscenter/leftMenu/icon_1.png'
@@ -32,6 +32,9 @@ import Header from "../Header";
 import NavBottom from "../NavBottom";
 
 export default function Test({ isAuthenticated, setAuthenticated }) {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const tabsArray = [
         { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },
@@ -74,6 +77,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
     const location = useLocation();
     const [selectedTab, setSelectedTab] = useState(location.pathname)
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
+    const [subActiveButton, setSubActiveButton] = useState();
     console.log(selectedSubTab, selectedTab)
     // return (
     //     <div>
@@ -112,6 +116,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
                         array={LeftMenuSubArray}
+                        subActiveButton={subActiveButton}
                     />
                 </div>
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
@@ -142,7 +147,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
 
                                             <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                         </div>
-                                        <Contact />
+                                        <Contact subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                     </>
                                 }
                             />
@@ -160,6 +165,11 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                             <Route path="/announcement"
                                 element={
                                     <>
+                                        {useEffect(() => {
+                                            setSubActiveButton('/cscenter/all/announcement')
+                                        }, [setSubActiveButton])
+                                        }
+
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                         <div id='container-nav'>
                                             <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
@@ -192,7 +202,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                             <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                         </div>
                                         <div style={{ marginBottom: '19.625rem' }}>
-                                            <Faq />
+                                            <Faq subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                         </div>
                                     </>
                                 }
@@ -204,7 +214,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                     <div id='container-nav'>
                                         <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                     </div>
-                                    <SportsGamePolicy setSelectedTab={setSelectedTab} />
+                                    <SportsGamePolicy setSelectedTab={setSelectedTab} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                 </>}
                             />
                             <Route path="/policy/minigame/*"

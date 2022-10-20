@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 // import ScrollButton from '../ScrollButton'
@@ -115,13 +115,17 @@ const tableData = [
     ],
 ]
 
-const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false }) => {
+const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false, subActiveButton, setSubActiveButton }) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
+
+    useEffect(() => {
+        setSubActiveButton('/mypage/bet-history/all/ar-game')
+    }, [setSubActiveButton]);
 
 
     return (

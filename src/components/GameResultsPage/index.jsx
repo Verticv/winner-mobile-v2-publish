@@ -108,7 +108,7 @@ const inboxArray = [
     },
 ]
 
-const GameResults = ({ isAuthenticated, setAuthenticated }) => {
+const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubActiveButton }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [page, setPage] = useState(0)
@@ -126,6 +126,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated }) => {
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
                         array={LeftMenuSubArray}
+                        subActiveButton={subActiveButton}
                     />
                 </div>
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
@@ -183,7 +184,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated }) => {
                             </div>
 
                             <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
-                            <Sports1 />
+                            <Sports1 subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}/>
                             <SportsContent checkedState={checkedState} setCheckedState={setCheckedState} />
                             <div style={{
                                 margin: '4rem'
@@ -239,7 +240,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated }) => {
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                 </div>
 
-                                <MinigameTab />
+                                <MinigameTab subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                 <div style={{ marginTop: '1rem' }} className='test'>
                                     <DateSearchBar isLeagueSearch={false} withBlackButton hasDateSuggestion={false} />
                                 </div>

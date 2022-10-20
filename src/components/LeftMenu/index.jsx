@@ -13,7 +13,11 @@ const LeftMenu = ({
     setSelectedTab,
     selectedSubTab = null,
     setSelectedSubTab = null,
-    array
+    array,
+    subActiveButton,
+    activeButton2,
+    setSubActiveButton,
+    activeButton, setActiveButton
 }) => {
 
     const { currentPathname } = useLocation();
@@ -23,7 +27,8 @@ const LeftMenu = ({
     const [isExpanded, setExpanded] = useState(window.location.pathname)
     const [isMouseHover, setMouseHover] = useState("")
 
-    const [activeButton, setActiveButton] = useState()
+    // console.log('fff', activeButton, 'sss');
+    // const [activeButton, setActiveButton] = useState()
 
     // useEffect(() => {
     //     setTimeout(() => {
@@ -78,11 +83,11 @@ const LeftMenu = ({
     }
 
     const EditProfileButton = ({ path, text, icon, iconHighlight, selectedTab, width }) => {
-        const isProfileActive = pathname.includes(path);
+        const isProfileActive = activeButton?.includes(path);
         return (
             <div style={{ padding: '0 1.875rem', borderBottomWidth: '0.1875rem', background: '#242424', height: '12.375rem', borderBottom: '0.1875rem solid #323231' }} className='w-full border-b border-gray-ececec bg-gray-f7f7f7'>
                 <button
-                    style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', background: isProfileActive ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom' }}
+                    style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', background: isProfileActive ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem' }}
                     className={`${isProfileActive
                         ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
                         : ""
@@ -145,7 +150,7 @@ const LeftMenu = ({
                             <button
                                 style={{
                                     padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd',
-                                    background: activeButton === item?.path ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
+                                    background: (((activeButton) === item?.path || subActiveButton === item?.path)) ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
                                 }}
                                 className={`${activeButton === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
@@ -157,6 +162,8 @@ const LeftMenu = ({
                                         setActiveButton('/distributor-page')
                                     }
                                     buttonPressed(item.text, item.path)
+
+                                    console.log(subActiveButton, item?.path, 'subActiveButton.path');
                                 }}
                                 onMouseEnter={() => mouseHover(item.path)}
                                 onMouseLeave={() => mouseLeave(item.path)}

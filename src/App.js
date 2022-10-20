@@ -107,7 +107,7 @@ function App() {
           <Route
             path="/main"
             element={
-              <div style={{ }}>
+              <div style={{}}>
                 <Header />
                 <MainPage />
               </div>

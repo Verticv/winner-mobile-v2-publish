@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, useNavigate, useLocation, Routes } from 'react-router';
 import HorizontalSubMenu1 from '../HorizontalSubMenu1'
 // import Icon1 from '../../images/cscenter/sportsPolicy/1.png'
@@ -256,61 +256,61 @@ const HandballArray = [
     { id: 0, type: "양팀득점 \n (후반전)", typeColor: "#2d6da8", overtime: false, ruleText: "후반전만의 경기결과 양팀모두 득점이 있음 또는 없음을 예측하여 베팅하는 방식", rows: '2' },
 
     { id: 0, type: "점수합계~", typeColor: "#ff4800", overtime: true, ruleText: "경기결과 양팀에서 발생한 득점의 합(~이상)을 예측하여 베팅하는 방식", rows: '2' },
-    { id: 0, type: "점수합계~ \n (전반전)", typeColor: "#ff4800", overtime: false, ruleText: "전반전만의 경기결과로 양팀에서 발생한 득점의 합(~이상)을 예측하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "점수합계~ \n (후반전)", typeColor: "#ff4800", overtime: false, ruleText: "후반전만의 경기결과로 양팀에서 발생한 득점의 합(~이상)을 예측하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "점수합계", typeColor: "#ff4800", overtime: true, ruleText: "경기결과 양팀에서 발생한 득점의 합을 정확히 예측하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "점수합계 \n (전반전)", typeColor: "#ff4800", overtime: false, ruleText: "전반전만의 경기결과로 양팀에서 발생한 득점의 합을 정확히 예측하여 베팅하는 방식" , rows: '3' },
-    { id: 0, type: "점수합계 \n (후반전)", typeColor: "#ff4800", overtime: false, ruleText: "후반전만의 경기결과로 양팀에서 발생한 득점의 합을 정확히 예측하여 베팅하는 방식", rows: '3'  },
+    { id: 0, type: "점수합계~ \n (전반전)", typeColor: "#ff4800", overtime: false, ruleText: "전반전만의 경기결과로 양팀에서 발생한 득점의 합(~이상)을 예측하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "점수합계~ \n (후반전)", typeColor: "#ff4800", overtime: false, ruleText: "후반전만의 경기결과로 양팀에서 발생한 득점의 합(~이상)을 예측하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "점수합계", typeColor: "#ff4800", overtime: true, ruleText: "경기결과 양팀에서 발생한 득점의 합을 정확히 예측하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "점수합계 \n (전반전)", typeColor: "#ff4800", overtime: false, ruleText: "전반전만의 경기결과로 양팀에서 발생한 득점의 합을 정확히 예측하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "점수합계 \n (후반전)", typeColor: "#ff4800", overtime: false, ruleText: "후반전만의 경기결과로 양팀에서 발생한 득점의 합을 정확히 예측하여 베팅하는 방식", rows: '3' },
 
-    { id: 0, type: "최고득점구간", typeColor: "#75942d", overtime: true, ruleText: "경기중 최고 많은 득점이 발생 할 구간(전,후반)을 예측하여 베팅하는 방식", rows: '2'  },
+    { id: 0, type: "최고득점구간", typeColor: "#75942d", overtime: true, ruleText: "경기중 최고 많은 득점이 발생 할 구간(전,후반)을 예측하여 베팅하는 방식", rows: '2' },
 
-    { id: 0, type: "스코어", typeColor: "#b538d6", overtime: true, ruleText: "양팀의 경기 결과에 대한 최종 스코어를 정확하게 예상하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "스코어 \n (전반전)", typeColor: "#b538d6", overtime: false, ruleText: "전반전만의 양팀의 경기 결과에 대한 최종 스코어를 정확하게 예상하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "스코어 \n (후반전)", typeColor: "#b538d6", overtime: false, ruleText: "후반전만의 양팀의 경기 결과에 대한 최종 스코어를 정확하게 예상하여 베팅하는 방식", rows: '3'  },
+    { id: 0, type: "스코어", typeColor: "#b538d6", overtime: true, ruleText: "양팀의 경기 결과에 대한 최종 스코어를 정확하게 예상하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "스코어 \n (전반전)", typeColor: "#b538d6", overtime: false, ruleText: "전반전만의 양팀의 경기 결과에 대한 최종 스코어를 정확하게 예상하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "스코어 \n (후반전)", typeColor: "#b538d6", overtime: false, ruleText: "후반전만의 양팀의 경기 결과에 대한 최종 스코어를 정확하게 예상하여 베팅하는 방식", rows: '3' },
 ]
 
 const FootballArray = [
-    { id: 0, type: "승패 \n (풀타임)", typeColor: "#0056a6", overtime: null, ruleText: "승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "승패 (무X) \n (1쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "1쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3'  },
-    { id: 0, type: "승패 (무X) \n (2쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "2쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3'  },
-    { id: 0, type: "승패 (무X) \n (3쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "3쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3'  },
-    { id: 0, type: "승패 (무X) \n (4쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "4쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3'  },
-    { id: 0, type: "승무패 \n (전반전)", typeColor: "#0056a6", overtime: false, ruleText: "전반전(1,2쿼터)만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "승무패 \n (후반전)", typeColor: "#0056a6", overtime: false, ruleText: "후반전(3,4쿼터)만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "승무패 \n (1쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "1쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "승무패 \n (2쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "2쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "승무패 \n (3쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "3쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "승무패 \n (4쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "4쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "전반 & 전후반", typeColor: "#0056a6", overtime: true, ruleText: "전반전만의 결과와 최종(전후반포함) 각각의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '4'  },
-    { id: 0, type: "전반 & 전후반 \n (풀타임)", typeColor: "#0056a6", overtime: null, ruleText: "전반전만의 결과와 최종(전후반 연장포함) 각각의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '4'  },
+    { id: 0, type: "승패 \n (풀타임)", typeColor: "#0056a6", overtime: null, ruleText: "승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "승패 (무X) \n (1쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "1쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3' },
+    { id: 0, type: "승패 (무X) \n (2쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "2쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3' },
+    { id: 0, type: "승패 (무X) \n (3쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "3쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3' },
+    { id: 0, type: "승패 (무X) \n (4쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "4쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3' },
+    { id: 0, type: "승무패 \n (전반전)", typeColor: "#0056a6", overtime: false, ruleText: "전반전(1,2쿼터)만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "승무패 \n (후반전)", typeColor: "#0056a6", overtime: false, ruleText: "후반전(3,4쿼터)만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "승무패 \n (1쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "1쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "승무패 \n (2쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "2쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "승무패 \n (3쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "3쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "승무패 \n (4쿼터)", typeColor: "#0056a6", overtime: false, ruleText: "4쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "전반 & 전후반", typeColor: "#0056a6", overtime: true, ruleText: "전반전만의 결과와 최종(전후반포함) 각각의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '4' },
+    { id: 0, type: "전반 & 전후반 \n (풀타임)", typeColor: "#0056a6", overtime: null, ruleText: "전반전만의 결과와 최종(전후반 연장포함) 각각의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식", rows: '4' },
 
-    { id: 0, type: "핸디캡 \n (풀타임)", typeColor: "#905a12", overtime: null, ruleText: "상대적으로 전력이 우수한 팀에게 불리한 조건을 주어 경기의 균형을 맞추고 승리가 예상되는 팀을 선택하여", ruleText2: "베팅하는 방식 홈팀(왼쪽)기준으로 +,-의 핸디캡 기준점수가 표기됨", rows: '5'  },
-    { id: 0, type: "핸디캡 \n (전반전)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 전반전(1,2쿼터)만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "핸디캡 \n (후반전)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 후반전(3,4쿼터)만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "핸디캡 \n (1쿼터)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 1쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "핸디캡 \n (2쿼터)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 2쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "핸디캡 \n (3쿼터)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 3쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "핸디캡 \n (4쿼터)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 4쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3'  },
+    { id: 0, type: "핸디캡 \n (풀타임)", typeColor: "#905a12", overtime: null, ruleText: "상대적으로 전력이 우수한 팀에게 불리한 조건을 주어 경기의 균형을 맞추고 승리가 예상되는 팀을 선택하여", ruleText2: "베팅하는 방식 홈팀(왼쪽)기준으로 +,-의 핸디캡 기준점수가 표기됨", rows: '5' },
+    { id: 0, type: "핸디캡 \n (전반전)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 전반전(1,2쿼터)만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "핸디캡 \n (후반전)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 후반전(3,4쿼터)만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "핸디캡 \n (1쿼터)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 1쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "핸디캡 \n (2쿼터)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 2쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "핸디캡 \n (3쿼터)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 3쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "핸디캡 \n (4쿼터)", typeColor: "#905a12", overtime: false, ruleText: "핸디캡을 적용하여 4쿼터만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", rows: '3' },
 
-    { id: 0, type: "언더오버 \n (풀타임)", typeColor: "#75942d", overtime: null, ruleText: "양팀의 최종 득점의 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "언더오버 \n (전반전)", typeColor: "#75942d", overtime: false, ruleText: "전반전(1,2쿼터)만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "언더오버 \n (후반전)", typeColor: "#75942d", overtime: false, ruleText: "후반전(3,4쿼터)만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '3'  },
-    { id: 0, type: "언더오버 \n (1쿼터)", typeColor: "#75942d", overtime: false, ruleText: "1쿼터만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "언더오버 \n (2쿼터)", typeColor: "#75942d", overtime: false, ruleText: "2쿼터만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "언더오버 \n (3쿼터)", typeColor: "#75942d", overtime: false, ruleText: "3쿼터만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "언더오버 \n (4쿼터)", typeColor: "#75942d", overtime: false, ruleText: "4쿼터만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2'  },
+    { id: 0, type: "언더오버 \n (풀타임)", typeColor: "#75942d", overtime: null, ruleText: "양팀의 최종 득점의 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "언더오버 \n (전반전)", typeColor: "#75942d", overtime: false, ruleText: "전반전(1,2쿼터)만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "언더오버 \n (후반전)", typeColor: "#75942d", overtime: false, ruleText: "후반전(3,4쿼터)만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '3' },
+    { id: 0, type: "언더오버 \n (1쿼터)", typeColor: "#75942d", overtime: false, ruleText: "1쿼터만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "언더오버 \n (2쿼터)", typeColor: "#75942d", overtime: false, ruleText: "2쿼터만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "언더오버 \n (3쿼터)", typeColor: "#75942d", overtime: false, ruleText: "3쿼터만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "언더오버 \n (4쿼터)", typeColor: "#75942d", overtime: false, ruleText: "4쿼터만의 양팀이 득점한 합이 기준점 보다 높고 낮음을 예상하여 베팅하는 방식", rows: '2' },
 
-    { id: 0, type: "홀짝 \n (풀타임)", typeColor: "#b538d6", overtime: null, ruleText: "양팀의 최종 득점의 합이 홀 또는, 짝으로 예상하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "홀짝 \n (전반전)", typeColor: "#b538d6", overtime: false, ruleText: "전반전(1,2쿼터)만의 양팀이 득점한 합이 홀 또는, 짝으로 예상하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "홀짝 \n (후반전)", typeColor: "#b538d6", overtime: false, ruleText: "후반전(3,4쿼터)만의 양팀이 득점한 합이 홀 또는, 짝으로 예상하여 베팅하는 방식", rows: '2'  },
+    { id: 0, type: "홀짝 \n (풀타임)", typeColor: "#b538d6", overtime: null, ruleText: "양팀의 최종 득점의 합이 홀 또는, 짝으로 예상하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "홀짝 \n (전반전)", typeColor: "#b538d6", overtime: false, ruleText: "전반전(1,2쿼터)만의 양팀이 득점한 합이 홀 또는, 짝으로 예상하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "홀짝 \n (후반전)", typeColor: "#b538d6", overtime: false, ruleText: "후반전(3,4쿼터)만의 양팀이 득점한 합이 홀 또는, 짝으로 예상하여 베팅하는 방식", rows: '2' },
 
-    { id: 0, type: "최고득점구간", typeColor: "#75942d", overtime: true, ruleText: "경기중 최고 많은 득점이 발생 할 구간(1쿼터, 2쿼터, 3쿼터, 4쿼터)을 예측하여 베팅하는 방식", rows: '3'  },
+    { id: 0, type: "최고득점구간", typeColor: "#75942d", overtime: true, ruleText: "경기중 최고 많은 득점이 발생 할 구간(1쿼터, 2쿼터, 3쿼터, 4쿼터)을 예측하여 베팅하는 방식", rows: '3' },
 ]
 
 const ESportsArray = [
-    { id: 0, type: "승패 \n (풀타임)", typeColor: "#0056a6", overtime: null, ruleText: "승리가 예상되는 팀(선수)을 선택하여 베팅하는 방식", rows: '2'  },
-    { id: 0, type: "승패 (무X) \n (풀타임)", typeColor: "#0056a6", overtime: null, ruleText: "승리가 예상되는 팀(선수)을 선택하여 베팅하는 방식 (무승부는 적중특례)", rows: '2'  },
-    { id: 0, type: "핸디캡 \n (풀타임)", typeColor: "#905a12", overtime: null, ruleText: "상대적으로 전력이 우수한 팀(선수)에게 불리한 조건을 주어 경기의 균형을 맞추고 승리가 예상되는", ruleText2: "팀(선수)을 선택하여 베팅하는 방식 홈팀(왼쪽)기준으로 +,-의 핸디캡 기준점수가 표기됨", rows: 'ss'  },
+    { id: 0, type: "승패 \n (풀타임)", typeColor: "#0056a6", overtime: null, ruleText: "승리가 예상되는 팀(선수)을 선택하여 베팅하는 방식", rows: '2' },
+    { id: 0, type: "승패 (무X) \n (풀타임)", typeColor: "#0056a6", overtime: null, ruleText: "승리가 예상되는 팀(선수)을 선택하여 베팅하는 방식 (무승부는 적중특례)", rows: '2' },
+    { id: 0, type: "핸디캡 \n (풀타임)", typeColor: "#905a12", overtime: null, ruleText: "상대적으로 전력이 우수한 팀(선수)에게 불리한 조건을 주어 경기의 균형을 맞추고 승리가 예상되는", ruleText2: "팀(선수)을 선택하여 베팅하는 방식 홈팀(왼쪽)기준으로 +,-의 핸디캡 기준점수가 표기됨", rows: 'ss' },
 
 ]
 
@@ -388,7 +388,9 @@ const HistoryMenu = ({
     const pathname = window.location.pathname
     const [isHover, setHover] = useState(null)
     console.log(isHover)
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     function TabsList({ items }) {
         return items.map((item, index) => {
             let isActive = pathname === item.path
@@ -443,11 +445,14 @@ const historyTabsArray = [
 ]
 
 
-const SportsGamePolicy = ({ setSelectedTab }) => {
+const SportsGamePolicy = ({ setSelectedTab, subActiveButton, setSubActiveButton }) => {
 
     const location = useLocation();
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     console.log(`selectedSubTab`, selectedSubTab)
+    useEffect(() => {
+        setSubActiveButton('/cscenter/all/policy/sportsgame/soccer')
+    }, [setSubActiveButton]);
 
     const tabsArray = [
         { text: "축구", id: 0, path: "/cscenter/all/policy/sportsgame/soccer" },

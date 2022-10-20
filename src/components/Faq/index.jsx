@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router';
 import parse from 'html-react-parser';
 import ArrowDown from '../../assets/myPage/contact/down-arrow.png'
@@ -30,7 +30,15 @@ import HorizontalSubMenu from '../HorizontalSubMenu';
 // import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 // import img from '../../img9.png'
 
-const Faq = () => {
+const Faq = ({ subActiveButton, setSubActiveButton }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        setSubActiveButton('/cscenter/all/faq')
+    }, [setSubActiveButton]);
+
 
     // const tabsArray = [
     //     { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },
@@ -44,7 +52,7 @@ const Faq = () => {
         { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/faq/live-casino" },
         { text: "슬롯", id: 2, width: '11.5625rem', path: "/cscenter/all/faq/slot" },
         { text: "스포츠", id: 3, width: '13.4375rem', path: "/cscenter/all/faq/sports" },
-        { text: "호텔카지노", id: 10, width: '18.3125rem', path: "/cscenter/all/faq/e-sports/1" },
+        { text: "호텔카지노", id: 10, width: '18.3125rem', path: "/cscenter/all/faq/e-sports1" },
         { text: "e-스포츠", id: 4, width: '15.3125rem', path: "/cscenter/all/faq/e-sports" },
         { text: "미니게임", id: 5, width: '15.3125rem', path: "/cscenter/all/faq/minigame" },
         { text: "키론가상게임", width: '20.3125rem', id: 6, path: "/cscenter/all/faq/ar-game" },

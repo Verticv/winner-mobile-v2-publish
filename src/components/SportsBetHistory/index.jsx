@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar';
 import SportsBetHistoryPanel from '../SportsBetHistoryPanel'
 // import ScrollButton from '../ScrollButton'
 import SelectAllButton from '../SelectAllButton'
 
-const SportsBetHistory = ({ checkedState, setCheckedState, showSub = true, attachedArray, setAttachedArray, setPopupOpen }) => {
+const SportsBetHistory = ({ checkedState, setCheckedState, showSub = true, attachedArray, setAttachedArray, setPopupOpen, subActiveButton, setSubActiveButton }) => {
 
     const [isAllSelected, setAllSelected] = useState(false)
-
+    useEffect(() => {
+        setSubActiveButton('/mypage/bet-history/all/sports')
+    }, [setSubActiveButton]);
     return (
         <div className="SportsBetHistory" style={{
 

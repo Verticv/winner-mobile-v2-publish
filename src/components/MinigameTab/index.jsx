@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import HorizontalMenu2 from '../HorizontalMenu2'
 
 import Icon3 from '../../assets/minigameResults/1.png'
@@ -16,10 +16,12 @@ const tabsArray = [
 ];
 
 
-const MinigameTab = ({ paddingLeft }) => {
+const MinigameTab = ({ paddingLeft, subActiveButton, setSubActiveButton }) => {
     const [selectedTab, setSelectedTab] = useState(0)
 
-
+    useEffect(() => {
+        setSubActiveButton('/mypage/gameresults/minigame/powerball')
+    }, [setSubActiveButton]);
     console.log(selectedTab)
 
     return (

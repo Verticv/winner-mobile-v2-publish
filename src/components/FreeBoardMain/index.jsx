@@ -1,5 +1,5 @@
 import Pagination from '../Pagination';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BlueSpeaker from '../../assets/myPage/speaker/blue_speaker.png';
 import YellowSpeaker from '../../assets/myPage/speaker/yellow_speaker.png';
@@ -11,7 +11,7 @@ import Rank4 from '../../assets/myPage/freeboard/4.png';
 import Rank5 from '../../assets/myPage/freeboard/5.png';
 import Search from '../Search';
 
-const FreeBoardMain = () => {
+const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboard' }) => {
 
     const cellArray = [
         {
@@ -225,6 +225,12 @@ const FreeBoardMain = () => {
 
     const navigate = useNavigate();
     const [page, setPage] = useState(0)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+    useEffect(() => {
+        setActiveButton('/mypage/freeboard')
+    }, [setActiveButton]);
 
     function InboxList({ items }) {
         return items.map(item => (

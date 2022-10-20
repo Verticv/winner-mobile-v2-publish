@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Pagination from '../Pagination'
 import CouponGiftPopup from '../popups/CouponGiftPopup'
@@ -831,7 +831,16 @@ const GiftButton = (
 )
 
 
-const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
+const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubActiveButton }) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        setSubActiveButton('/mypage/coupon/all')
+    }, [setSubActiveButton]);
+
 
     const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
 
@@ -901,6 +910,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
                         array={LeftMenuSubArray}
+                        subActiveButton={subActiveButton}
                     />
                 </div>
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
@@ -1005,6 +1015,11 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                                             <Route exact path="/coupon-gift"
                                                 element={
                                                     <div className='coupon-all'>
+                                                        {useEffect(() => {
+                                                            if (window.pathname === '/mypage/coupon/all/coupon-gift') {
+                                                                setSubActiveButton('/mypage/coupon/all/coupon-gift')
+                                                            }
+                                                        }, [setSubActiveButton])}
                                                         {/* <img src={img18} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
                                                         <div style={{
                                                             marginBottom: '-0.8125rem',
@@ -1057,6 +1072,10 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated }) => {
                                                 path='/coupon-history'
                                                 element={
                                                     <>
+                                                        {useEffect(() => {
+                                                            if (window.pathname === '/mypage/coupon/all/coupon-history')
+                                                                setSubActiveButton('/mypage/coupon/all/coupon-history')
+                                                        }, [setSubActiveButton])}
                                                         <div style={{ margin: '1.875rem', marginTop: '0.5rem', marginBottom: '0' }}>
                                                             <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
                                                         </div>

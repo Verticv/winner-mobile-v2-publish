@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 // import ScrollButton from 'components/common/ScrollButton'
@@ -256,7 +256,7 @@ const tableData = [
 ]
 
 
-const SlotBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false }) => {
+const SlotBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false, subActiveButton, setSubActiveButton, key, path }) => {
 
     const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -264,6 +264,15 @@ const SlotBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
 
+    useEffect(() => {
+        // if (key === 2) {
+            // setSubActiveButton('/mypage/bet-history/all/fishing-game')
+            setSubActiveButton(path)
+        // } 
+        // else if (key === 1) {
+        //     setSubActiveButton('/mypage/bet-history/all/slot-game')
+        // }
+    }, [setSubActiveButton, path]);
 
     return (
         <div className="LiveCasinoBetHistory">

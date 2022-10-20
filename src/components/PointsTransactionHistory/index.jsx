@@ -1,5 +1,5 @@
 import Pagination from '../Pagination'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 // import ScrollButton from '../ScrollButton'
@@ -154,10 +154,18 @@ const tableData = [
 
 
 
-const PointsTransactionHistory = ({ SubMenuList }) => {
+const PointsTransactionHistory = ({ SubMenuList,  subActiveButton, setSubActiveButton  }) => {
     const [page, setPage] = useState(0)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        setSubActiveButton('/mypage/points/all/points-transaction-history')
+    }, [setSubActiveButton]);
 
     return (
         <div className="flex flex-col items-center">

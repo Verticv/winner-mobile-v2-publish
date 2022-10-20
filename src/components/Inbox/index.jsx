@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Pagination from '../Pagination'
 import InboxTable from '../InboxTable'
 // import Navbar from 'components/mainPage/Navbar'
@@ -9,7 +9,14 @@ import HomePageTopBanner from '../HomePageTopBanner'
 import Search from '../Search'
 // import ScrollButton from 'components/common/ScrollButton'
 
-const Inbox = () => {
+const Inbox = ({ activeButton, setActiveButton }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        setActiveButton('/mypage/inbox')
+    }, [setActiveButton]);
 
     const inboxArray = [
         {

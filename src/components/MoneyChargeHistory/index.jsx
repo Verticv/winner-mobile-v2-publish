@@ -1,5 +1,5 @@
 import Pagination from '../Pagination'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 import SelectAllButton from '../SelectAllButton'
@@ -154,7 +154,7 @@ const tableData = [
 
 
 
-const MoneyChargeHistory = () => {
+const MoneyChargeHistory = ({ subActiveButton, setSubActiveButton }) => {
 
     const [page, setPage] = useState(0)
     // const [inputValue, setInputValue] = useState(null)
@@ -164,7 +164,9 @@ const MoneyChargeHistory = () => {
     const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
     // var nf = new Intl.NumberFormat();
-
+    useEffect(() => {
+        setSubActiveButton('/mypage/money/charge/history')
+    }, [setSubActiveButton]);
 
     return (
         <div className="flex flex-col items-center MoneyChargeHistory">

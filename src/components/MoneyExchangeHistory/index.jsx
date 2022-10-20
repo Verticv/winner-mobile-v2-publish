@@ -1,5 +1,5 @@
 import Pagination from '../Pagination'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 import SelectAllButton from '../SelectAllButton'
@@ -129,7 +129,7 @@ const tableData = [
 ]
 
 
-const MoneyExchangeHistory = () => {
+const MoneyExchangeHistory = ({ subActiveButton, setSubActiveButton }) => {
 
     const [page, setPage] = useState(0)
     // const [inputValue, setInputValue] = useState(null)
@@ -139,7 +139,9 @@ const MoneyExchangeHistory = () => {
     const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
     // var nf = new Intl.NumberFormat();
-
+    useEffect(() => {
+        setSubActiveButton('/mypage/money/exchange/currency/history')
+    }, [setSubActiveButton]);
 
     return (
         <div className="flex flex-col items-center">
@@ -164,7 +166,7 @@ const MoneyExchangeHistory = () => {
                 <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
-            <div style={{paddingBottom: '0.01rem'}}>
+            <div style={{ paddingBottom: '0.01rem' }}>
                 <Pagination page={page} setPage={setPage} />
             </div>
 

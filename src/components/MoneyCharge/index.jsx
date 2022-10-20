@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Step1 from '../../assets/mainPage/icons/step-1.png'
 import Step2 from '../../assets/mainPage/icons/step-2.png'
 import Step3 from '../../assets/mainPage/icons/step-3.png'
@@ -8,7 +8,11 @@ import WarningMessage from '../WarningMessage'
 import info from '../../assets/mainPage/icons/info.png';
 import AlertIcon from '../../assets/mainPage/icons/warning.png'
 
-const MoneyCharge = () => {
+const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
+
+    useEffect(() => {
+        setSubActiveButton('/mypage/money/charge')
+    }, [setSubActiveButton]);
 
     // const [page, setPage] = useState(0)
     const [inputValue, setInputValue] = useState(null)

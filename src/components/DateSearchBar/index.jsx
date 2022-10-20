@@ -7,6 +7,7 @@ import DropDownInput from '../../components/DropDownInput'
 import CalendarIcon from '../../assets/myPage/CalendarIcon.png';
 // import DropDownControls from 'components/dropdowns/DropDownControls';
 // import ArrowDownGray from '../../images/arrows/arrow_down_gray.png'
+import { isIOS } from 'react-device-detect';
 import './DatePicker.css'
 registerLocale('ko', ko)
 
@@ -38,7 +39,7 @@ const DateSearchBar = ({
         )
     }
     return (
-        <div style={{ margin: withMargin ? (!isFreeboard ? '0.9rem 1.875rem' : '1.2rem 1.875rem') : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem', background: '#2e2e2e', borderRadius: '1.1rem', paddingTop: isPoints ? '0' : '0.7rem', marginTop: isPoints ? '1.1rem' : '' }} className="date12">
+        <div style={{ margin: withMargin ? (!isFreeboard ? '0.9rem 1.875rem' : '1.2rem 1.875rem') : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem', background: '#2e2e2e', borderRadius: '1.1rem', paddingTop: isPoints ? '0' : '0.7rem', marginTop: isPoints ? '1.1rem' : '', marginBottom: isIOS?  '-0.3rem' : '' }} className="date12">
 
             {isLeagueSearch === true && (
                 <div className="space-x-5px">
