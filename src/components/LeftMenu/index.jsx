@@ -27,6 +27,7 @@ const LeftMenu = ({
     const [isExpanded, setExpanded] = useState(window.location.pathname)
     const [isMouseHover, setMouseHover] = useState("")
 
+    // console.log('fff', activeButton, 'sss');
     // const [activeButton, setActiveButton] = useState()
 
     // useEffect(() => {

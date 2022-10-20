@@ -221,6 +221,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                         {/* <Header /> */}
                         <BetHistory isAuthenticated={isAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                        // activeButton={activeButton} setActiveButton={setActiveButton}
                         />
                         {/* <NavBottom /> */}
                     </>
@@ -288,7 +289,8 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                         <Header />
                         <HomePageTopBanner pageTitle='게시판' toPath={window.location.pathname.includes('/mypage') ? '/mypage' : '/main'} isFreeboard={true} />
                         <div>
-                            <FreeBoardMain isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
+                            <FreeBoardMain key={14}
+                                // isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
                                 activeButton={activeButton}
                                 setActiveButton={setActiveButton}
                             />

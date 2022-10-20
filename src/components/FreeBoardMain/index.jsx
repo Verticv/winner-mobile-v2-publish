@@ -11,11 +11,7 @@ import Rank4 from '../../assets/myPage/freeboard/4.png';
 import Rank5 from '../../assets/myPage/freeboard/5.png';
 import Search from '../Search';
 
-const FreeBoardMain = ({ activeButton, setActiveButton }) => {
-
-    useEffect(() => {
-        setActiveButton('/mypage/freeboard')
-    }, [setActiveButton]);
+const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboard' }) => {
 
     const cellArray = [
         {
@@ -232,6 +228,9 @@ const FreeBoardMain = ({ activeButton, setActiveButton }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+    useEffect(() => {
+        setActiveButton('/mypage/freeboard')
+    }, [setActiveButton]);
 
     function InboxList({ items }) {
         return items.map(item => (
