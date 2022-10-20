@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import Rank1 from '../../assets/myPage/freeboard/1.png';
 import parse from 'html-react-parser';
