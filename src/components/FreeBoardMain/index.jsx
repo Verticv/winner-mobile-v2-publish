@@ -229,8 +229,11 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
         window.scrollTo(0, 0);
     }, [])
     useEffect(() => {
-        setActiveButton('/mypage/freeboard')
-    }, [setActiveButton]);
+        if (activeButton) {
+
+            setActiveButton('/mypage/freeboard')
+        }
+    }, [setActiveButton, activeButton]);
 
     function InboxList({ items }) {
         return items.map(item => (

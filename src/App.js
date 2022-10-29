@@ -17,13 +17,14 @@ import { getCookie, setCookie } from './utils';
 // import img20 from './img20.png';
 // import img14 from './img14.png';
 // import img13 from './img13.png';
-// import img26 from './img26.png';
+import AttendPage from './components/AttendPage';
 import FreeBoardCompose from './components/FreeBoardCompose';
 import HomePageTopBanner from './components/HomePageTopBanner';
 import FreeBoardView from './components/FreeBoardView';
 import FreeBoardView2 from './components/FreeBoardView2';
 import CSCenterPage from './components/pages/CSCenterPage';
 import LiveCasinoPage from './components/LiveCasinoPage';
+import EsportsPage from './components/EsportsPage';
 // import ContactViewPage from './components/pages/ContactViewPage';
 // import ContactCompose from './components/ContactCompose';
 // import Faq from './components/Faq';
@@ -35,6 +36,8 @@ import LiveCasinoPage from './components/LiveCasinoPage';
 // import PointsAccumulateHistory from './components/PointsAccumulateHistory';
 import DistributorPage from './components/DistributorPage';
 import AuthenticationPage from './components/AuthenticationPage';
+import BetCombinationPage from './components/BetCombinationPage';
+// import img from './1.png';
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -271,8 +274,46 @@ function App() {
             }
           ></Route>
         </Routes>
-
+        <Routes>
+          <Route
+            path="/attendance"
+            element={
+              <>
+                <AttendPage
+                  isAuthenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </>
+            }
+          ></Route>
+        </Routes>
         {/* <Outlet /> */}
+        <Routes>
+          <Route
+            path="/esports/*"
+            element={
+              <>
+                <EsportsPage
+                  isAuthenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </>
+            }
+          ></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/bet-combination/*"
+            element={
+              <>
+                <BetCombinationPage
+                  isAuthenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </>
+            }
+          ></Route>
+        </Routes>
       </Router>
     </>
   );

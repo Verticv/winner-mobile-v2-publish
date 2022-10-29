@@ -16,7 +16,7 @@ const HorizontalMenu13 = ({
 }) => {
 
     useEffect(() => {
-        horizontalsScroll(itemsArray, 't', 'scroll-wrapper')
+        horizontalsScroll(itemsArray, 't', 'scroll-wrapper2')
     }, [itemsArray])
 
     const navigate = useNavigate();
@@ -96,16 +96,16 @@ const HorizontalMenu13 = ({
                     marginTop: '-1.5rem',
                     marginLeft: '-0.6rem'
                 }}>
-                    <div style={{ marginTop: '1.5rem', height: '5.9rem' }}>
-                        <img style={{ width: imageWidth ? imageWidth : '5.0625rem', marginTop: '1.1rem', marginLeft: '0.4375rem', WebkitUserDrag: "none", MozUserDrag: "none", userDrag: "none" }} className={`${hasNumber ? "mt-2" : "mt-5"}  object-contain`} src={item.icon} alt="" />
+                    <div className='changeMargin' style={{ marginTop: '1.5rem', height: '5.9rem' }}>
+                        <img style={{ width: item.width ? item.width : imageWidth ? imageWidth : '5.0625rem', marginTop: '1.1rem', marginLeft: '0.4375rem', WebkitUserDrag: "none", MozUserDrag: "none", userDrag: "none" }} className={`${hasNumber ? "mt-2" : "mt-5"}  object-contain`} src={item.icon} alt="" />
 
                     </div>
                     <p
-                        style={{ margin: '0', marginTop: `${imageWidth ? '0.0625rem' : '0.7rem'}`, fontSize: '2.25rem', color: pathname === item.path || isState === item.id ? '#252525' : '#ccc2b6', marginLeft: '0.6rem' }}
+                        style={{ margin: '0', marginTop: `${imageWidth ? '0.0625rem' : '0.7rem'}`, fontSize: '2.25rem', color: pathname === item.path || isState === item.id ? '#252525' : '#ccc2b6', marginLeft: '0.6rem', fontFamily: 'SpoqaHanSansNeoMedium' }}
                         className={`${pathname === item.path || isState === item.id
                             ? "text-white"
                             : "text-gray-r616161"
-                            } text-4xl font-spoqaMedium tracking-tight mt-0`}
+                            } text-4xl font-spoqaMedium tracking-tight mt-0 paragraph`}
                     >{item.text}</p>
                     {hasNumber && (
                         <div
@@ -113,7 +113,7 @@ const HorizontalMenu13 = ({
                                 width: '6.19rem', height: '2.785rem', marginTop: imageWidth ? '0.0625rem' : '', marginBottom: '2.1rem', marginLeft: '4.6rem', fontFamily: 'RobotoMedium', background: 'rgb(0 0 0 / 50%)', borderRadius: '2rem',
                                 display: 'flex', justifyContent: 'center', alignItems: 'center'
                             }}
-                            className={`${pathname === item.path || isState === item.id
+                            className={`hasNumber ${pathname === item.path || isState === item.id
                                 ? "bg-blue-r1b4372"
                                 : "bg-gray-r8c8c8c"
                                 } rounded-full flex items-center justify-center`}>
@@ -130,14 +130,20 @@ const HorizontalMenu13 = ({
     }
 
     return (
-        <div className='div-shadow'>
-            <div id="container" className="flex justify-start items-start" style={{
-                marginLeft: '1.6rem',
-            }}>
+        <>
+            <div id="container" className="HorizontalMenu flex justify-start items-start">
+                {/* <Botton /> */}
                 <TabsList items={itemsArray} />
             </div>
-            <div className='nav-shadow' ></div>
-        </div>
+            {/* <div className='div-shadow'>
+                <div id="container" className="flex justify-start items-start" style={{
+                    marginLeft: '1.6rem',
+                }}>
+                    <TabsList items={itemsArray} />
+                </div>
+                <div className='nav-shadow' ></div>
+            </div> */}
+        </>
     )
 }
 
