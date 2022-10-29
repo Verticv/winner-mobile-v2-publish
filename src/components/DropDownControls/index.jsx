@@ -1,4 +1,5 @@
-import React, { useState, useRef, useCallback, useEffect } from "react";
+/* eslint-disable */
+import React, { useRef, useCallback, useEffect } from "react";
 import { useOnClickOutside } from "../../helpers/functions";
 import './_sportNonLiveDropDownControls.scss';
 
