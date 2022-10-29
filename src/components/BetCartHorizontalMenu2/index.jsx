@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import activeBG from '../../assets/betCombinationRightPanel/active-bg.png'

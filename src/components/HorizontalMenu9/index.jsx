@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router';
 import activeBtn from '../../assets/sports/active-btn.png'
