@@ -86,7 +86,7 @@ const FreeBoardView = () => {
         <div className="freeboard-view">
             <div className="border-div">
                 <div className='content' >
-                    <div className="first-card">
+                    <div className="first-card" style={{ width: '100%' }}>
                         <div
                             className='buttons'
                         >
@@ -105,7 +105,7 @@ const FreeBoardView = () => {
                         <div className="text">메신저 고객센터 사칭주의</div>
                     </div>
 
-                    <div className="second-card">
+                    <div className="second-card" style={{ width: '100%' }}>
                         <img src={WinnerSmall} alt="" />
                         <div
                             // style={{ width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem' }} 

@@ -13,7 +13,7 @@ export default function MyPage() {
                 top: '0'
             }} src={img} alt=""/> */}
             <HomePageTopBanner pageTitle='게시판' toPath={window.location.pathname.includes('/mypage') ? '/mypage' : '/main'} isFreeboard={true} />
-            <FreeBoardMain />
+            <FreeBoardMain activeButton='' setActiveButton='' />
         </>
     )
 }

@@ -29,34 +29,35 @@
             }
         }
     }
-}
 
-.country {
-    position: absolute;
-    right: 2rem;
-    top: -0.0375rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    label {
-        font-size: 2.4rem;
-        margin-left: 0.8rem;
-        margin-right: 0.4rem;
-        margin-top: -0.5rem;
-        color: #ffdfbd;
-        font-family: 'SpoqaHanSansNeoMedium'
-    }
+    .country {
+        position: absolute;
+        right: 2rem;
+        top: -0.0375rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    .arrow {
-        width: 2rem;
-        height: 1.2rem;
-        margin-top: -0.3rem;
-    }
+        label {
+            font-size: 2.4rem;
+            margin-left: 0.8rem;
+            margin-right: 0.4rem;
+            margin-top: -0.5rem;
+            color: #ffdfbd;
+            font-family: 'SpoqaHanSansNeoMedium'
+        }
 
-    .flag {
-        width: 5.625rem;
-        height: 3.75rem;
-        margin-top: -0.4rem;
+        .arrow {
+            width: 2rem;
+            height: 1.2rem;
+            margin-top: -0.3rem;
+        }
+
+        .flag {
+            width: 5.625rem;
+            height: 3.75rem;
+            margin-top: -0.4rem;
+        }
     }
 }

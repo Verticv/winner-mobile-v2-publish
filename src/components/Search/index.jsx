@@ -23,7 +23,7 @@ const Search = () => {
                     // className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight"
                     className='content'
                 >
-                    <Dropdown labelStyle={{ marginLeft: '1.6875rem', color: '#ccc2b6', fontSize: '2.8125rem' }} options={carrierOptions} isSignup={true} labelClasses="pt-1">
+                    <Dropdown ddda labelStyle={{ marginLeft: '1.6875rem', color: '#ccc2b6', fontSize: '2.8125rem' }} options={carrierOptions} isSignup={true} labelClasses="pt-1">
                         <img style={{ width: '1.5625rem', height: '1rem', marginRight: '1.5625rem', marginTop: '-1.3rem' }} className="object-contain" src={DownArrowIcon} alt="arrow" />
                     </Dropdown>
                 </div>

@@ -32,6 +32,7 @@ const FreeBoardPanel = ({
                                     hasUp={false}
                                     hasDown={false}
                                     smallCard
+                                    width92
                                 />
                             </div>
                             <CardContent showBetNumber={false} withButtons={false} withInput={false} winAmount='+900,000,000' checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
@@ -60,6 +61,7 @@ const FreeBoardPanel = ({
                                     hasUp={false}
                                     hasDown={false}
                                     smallCard
+                                    width92
                                 />
                             </div>
                             <CardContent showBetNumber={false} withButtons={false} withInput={false} winAmount='+900,000,000' checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
