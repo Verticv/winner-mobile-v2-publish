@@ -198,7 +198,7 @@ const MinigamesRightPanel = ({
             style={{
                 width: '36.375rem',
                 height: '7.5rem',
-                background: buttonClicked ? 'linear-gradient(to top, #4b3b09, #e8b888)' : 'linear-gradient(to top, #393835, #6b6865)',
+                background: 'linear-gradient(to top, #393835, #6b6865)',
                 borderRadius: '0.5rem',
                 padding: '0.1875rem',
                 zIndex: '200'
@@ -206,7 +206,7 @@ const MinigamesRightPanel = ({
         >
             <button
                 style={{
-                    background: buttonClicked ? "linear-gradient(to bottom, #a67c52, #7f5f3f)" : "linear-gradient(to top, #323231, #545452)",
+                    background: "linear-gradient(to top, #323231, #545452)",
                     // borderRadius: "0.75rem",
                     width: '100%',
                     height: '100%',
@@ -360,7 +360,7 @@ const MinigamesRightPanel = ({
                         // onPointerOut={() => setButtonHover(null)}
                         >
                             <div style={{ borderColor: "#9c9c9c" }} className="content-RP14">
-                                <img className="content-RP15" src={RefrshIcon} style={{width: '2.9375rem'}} alt="" />
+                                <img className="content-RP15" src={RefrshIcon} style={{ width: '2.9375rem' }} alt="" />
                             </div>
                         </button>
                     </div>
@@ -422,7 +422,7 @@ const MinigamesRightPanel = ({
 
 
                     <div style={{ height: "11.6875rem" }} className="rightpanel-content1">
-                        <img className="rightpanel-content2" src={SelectionBg} alt="" style={{ width: '73.5rem'}} />
+                        <img className="rightpanel-content2" src={SelectionBg} alt="" style={{ width: '73.5rem' }} />
                         <div style={{ padding: '0.7rem 4rem 0 6rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }} className="rightpanel-content3">
                             <div style={{ display: 'flex', alignItems: 'center' }}>
                                 <img style={{
