@@ -1,3 +1,4 @@
+/* eslint-disable */
 import HorizontalMenu3 from '../HorizontalMenu3'
 import Header from '../Header';
 import Cart from '../Cart'
