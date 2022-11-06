@@ -21,7 +21,8 @@ const CardResults = ({
     isMinigame = false,
     shouldTruncate = true.valueOf,
     secondCard,
-    withTopBorder
+    withTopBorder,
+    width92,
 }) => {
 
     const truncate = (str, max, len) => {
@@ -169,7 +170,7 @@ const CardResults = ({
 
     return (
         <div style={{ borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem', display: 'flex', alignItems: 'center', height: '8.8rem', padding: '1rem 0.3rem 0.4rem 0.4rem', paddingTop: secondCard ? '0.5rem' : '1rem', marginBottom: secondCard ? '0.05rem' : '', borderTop: secondCard ? '0.1875rem solid #252525' : '', marginTop: secondCard ? '0.5rem' : '' }} className={`flex items-center w-full p-3 pr-0 bg-gray-fefefe shadow-plain11`}>
-            <div className="flex" style={{ display: 'flex' }} >
+            <div className="flex" style={{ display: 'flex', width: width92 ? '92%': '' }} >
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '26.875rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
                     textShadow: bet === "left" ? "rgb(0 0 0) 0.1rem 0.1rem 0.1rem" : "", borderRadius: '0.6rem',

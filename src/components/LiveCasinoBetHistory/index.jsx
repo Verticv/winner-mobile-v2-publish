@@ -235,12 +235,15 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
     // const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
     useEffect(() => {
         // if (key === 1) {
-            // setSubActiveButton('/mypage/bet-history/all')
+        // setSubActiveButton('/mypage/bet-history/all')
+        if (subActiveButton) {
+
             setSubActiveButton(path)
+        }
         // } else if (key === 2) {
-            // setSubActiveButton('/mypage/bet-history/all/live-casino')
+        // setSubActiveButton('/mypage/bet-history/all/live-casino')
         // }
-    }, [setSubActiveButton, path]);
+    }, [setSubActiveButton, path, subActiveButton]);
 
     return (
         <div className="LiveCasinoBetHistory">

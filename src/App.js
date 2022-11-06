@@ -16,7 +16,7 @@ import MyPageTest from './components/pages/Test';
 import { getCookie, setCookie } from './utils';
 // import img20 from './img20.png';
 // import img14 from './img14.png';
-// import img13 from './img13.png';
+// import img from './1.png';
 import AttendPage from './components/AttendPage';
 import FreeBoardCompose from './components/FreeBoardCompose';
 import HomePageTopBanner from './components/HomePageTopBanner';
@@ -37,6 +37,7 @@ import EsportsPage from './components/EsportsPage';
 import DistributorPage from './components/DistributorPage';
 import AuthenticationPage from './components/AuthenticationPage';
 import BetCombinationPage from './components/BetCombinationPage';
+import MinigamesPage from './components/MinigamesPage';
 // import img from './1.png';
 
 function App() {
@@ -313,6 +314,25 @@ function App() {
               </>
             }
           ></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/minigame/*"
+            element={
+              <>
+                {/* <img
+                  className="img"
+                  src={img}
+                  alt=""
+                  style={{ position: 'absolute', top: '0', opacity: '0.5' }}
+                /> */}
+                <MinigamesPage
+                  isAuthenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </>
+            }
+          />
         </Routes>
       </Router>
     </>

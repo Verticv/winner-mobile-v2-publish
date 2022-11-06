@@ -266,13 +266,14 @@ const SlotBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false
 
     useEffect(() => {
         // if (key === 2) {
-            // setSubActiveButton('/mypage/bet-history/all/fishing-game')
+        // setSubActiveButton('/mypage/bet-history/all/fishing-game')
+        if (subActiveButton) {
             setSubActiveButton(path)
-        // } 
+        }
         // else if (key === 1) {
         //     setSubActiveButton('/mypage/bet-history/all/slot-game')
         // }
-    }, [setSubActiveButton, path]);
+    }, [setSubActiveButton, path, subActiveButton]);
 
     return (
         <div className="LiveCasinoBetHistory">

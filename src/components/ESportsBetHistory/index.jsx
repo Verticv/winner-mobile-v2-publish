@@ -31,8 +31,10 @@ import DateSearchBar from '../DateSearchBar'
 const ESportsBetHistory = ({ isState = 0, setState, showSub = false, isPopup = false, subActiveButton, setSubActiveButton }) => {
 
     useEffect(() => {
-        setSubActiveButton('/mypage/bet-history/all/e-sports')
-    }, [setSubActiveButton]);
+        if (subActiveButton) {
+            setSubActiveButton('/mypage/bet-history/all/e-sports')
+        }
+    }, [setSubActiveButton, subActiveButton]);
 
 
     return (

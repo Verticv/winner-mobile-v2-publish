@@ -29,7 +29,7 @@ const SortBy = ({ children, options, value, onChange, onClick, multiple }) => (
     </div>
 );
 
-const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelection = false, isContact = false, multiple = false, isSignup = false }) => {
+const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelection = false, isContact = false, multiple = false, isSignup = false, ddda }) => {
     const [sortValue, setSortValue] = useState(isContact ? "선택" : isLeagueSelection ? "리그선택" : isSignup ? options[0] : "전체회차")
 
     const onChange = e => setSortValue(e.currentTarget.value);
@@ -43,7 +43,7 @@ const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelecti
                 onClick={() => console.log('on click!')}
                 multiple={multiple}
             >
-                <div className="sort-by-div"
+                <div className={`sort-by-div  ${ddda ? 'ddda' : ''}`}
                     style={{
                         // display: 'flex',
                         // justifyContent: 'space-between',
@@ -51,7 +51,7 @@ const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelecti
                         width: '15rem'
                     }}
                 >
-                    <div className={`sort-by-p ${labelClasses}`} style={labelStyle}><p>{sortValue}</p></div>
+                    <div className={`sort-by-p ${labelClasses} ${ddda? 'ddda' : ''} `} style={labelStyle}><p>{sortValue}</p></div>
                     {children}
                 </div>
             </SortBy>

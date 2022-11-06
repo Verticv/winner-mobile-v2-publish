@@ -708,7 +708,7 @@ const BetCombinationPanel = ({
                     <p>{item.text}</p>
                     <input
                         // style={{right: '1.875rem', top: '2.5rem'}}
-                        className='w-12 h-12'
+                        className='input-style w-12 h-12'
                         type="checkbox"
                         checked={isChecked}
                         name={item.text}
@@ -726,10 +726,10 @@ const BetCombinationPanel = ({
                 <SearchDropdownCell items={filterArray} />
             </div>
             <div style={{ padding: '1.875rem' }} className="searchdropdown-style2">
+                <div className='divsearchdropdown-style3 shadow-to-box'>
                 <button
                     style={{
                         backgroundColor: "#171a1d",
-                        height: "7.3125rem",
                         padding: '1px',
                     }}
                     className="searchdropdown-style3"
@@ -737,20 +737,21 @@ const BetCombinationPanel = ({
                 >
                     <div
                         style={{
-                            borderColor: "#737579",
-                            background: "linear-gradient(to bottom, #585b5e, #303337)",
+                            borderColor: "#737579"
                         }}
                         className="searchdropdown-style4"
                     >
-                        <span style={{ textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem' }} className="searchdropdown-style5" >
+                        <span style={{fontSize: '2.8125rem' }} className="searchdropdown-style5 shadow-to-text" >
                             확인
                         </span>
                     </div>
                 </button>
+                </div>
+                <div className='divsearchdropdown-style6 shadow-to-box'>
                 <button
                     style={{
                         backgroundColor: "#cb4343",
-                        height: "7.3125rem",
+                        // height: "7.3125rem",
                         padding: '1px',
                     }}
                     className="searchdropdown-style6"
@@ -758,16 +759,16 @@ const BetCombinationPanel = ({
                 >
                     <div
                         style={{
-                            borderColor: "#f36576",
-                            background: "linear-gradient(to bottom, #f03a50, #cf254d)",
+                            borderColor: "#f36576"
                         }}
                         className="searchdropdown-style7"
                     >
-                        <span style={{ textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem' }} className="searchdropdown-style8" >
+                        <span style={{ fontSize: '2.8125rem' }} className="searchdropdown-style8 shadow-to-text" >
                             초기화
                         </span>
                     </div>
                 </button>
+                </div>
             </div>
         </div>
     )
