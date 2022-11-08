@@ -14,7 +14,7 @@ const Search = () => {
             className='options-div'
         >
             <div
-                style={{ width: '15rem', height: '6.75rem', borderWidth: '0.1875rem' }}
+                style={{ width: '15rem', height: '6.75rem', borderWidth: '0.1875rem', paddingTop: '1rem' }}
                 // className="flex h-full bg-white rounded-2xl border border-gray-dddddd group"
                 className='left-div-options'
             >

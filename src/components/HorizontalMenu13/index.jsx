@@ -51,7 +51,7 @@ const HorizontalMenu13 = ({
                     setHover(null)
                     navigate(item.path)
                     setSelectedTab(item.id)
-                    horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
+                    horizontalsScroll(itemsArray, 't', 'scroll-wrapper2', index)
                     if (setSelectedSubTab !== null) {
                         setSelectedSubTab(0)
                     }

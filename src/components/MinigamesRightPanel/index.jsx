@@ -555,7 +555,7 @@ const MinigamesRightPanel = ({
                 <div style={{ height: '7rem', paddingLeft: '3.2rem', paddingRight: '1.5rem', fontSize: '2.625rem', borderBottom: '0.1875rem solid #1e1e1e', background: '#323232' }} className="content-cart15">
                     <p className="content-cart16">베팅금액</p>
                     <input
-                        style={{ color: "#e65454", width: "36.875rem", height: "5.3rem", backgroundColor: "#1a1a1a", border: '0.1875rem solid #404040' }}
+                        style={{ color: "#d52e2e", width: "36.875rem", height: "5.3rem", backgroundColor: "#1a1a1a", border: '0.1875rem solid #404040' }}
                         className="content-cart17"
                         placeholder="0"
                         value={nf.format(inputValue)}

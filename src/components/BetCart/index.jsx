@@ -74,7 +74,7 @@ const BetCart = ({ selectedOption, addedCard, setAddedCard, isPanelFixed, setPan
                             <img style={{ width: '4.5rem', marginLeft: '', paddingBottom: '', objectFit: 'contain' }} className="w-16 object-contain" src={ArrowUp} alt="" />
                         </button>
                         <div style={{ width: '40.625rem' }} className='container_10'>
-                            <p className='container_11'>배당률 <span className='container_12'>99.99</span></p>
+                            <p className='container_11' style={{ marginRight: '2.8rem' }}>배당률 <span className='container_12'>99.99</span></p>
                             <Link to={'/main'}>
                                 <img
                                     className='link-content1'

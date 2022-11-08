@@ -737,7 +737,7 @@ const BetCombinationPanel = ({
                 >
                     <div
                         style={{
-                            borderColor: "#737579"
+                            // borderColor: "#737579"
                         }}
                         className="searchdropdown-style4"
                     >
@@ -759,7 +759,7 @@ const BetCombinationPanel = ({
                 >
                     <div
                         style={{
-                            borderColor: "#f36576"
+                            // borderColor: "#f36576"
                         }}
                         className="searchdropdown-style7"
                     >
@@ -858,7 +858,7 @@ const BetCombinationPanel = ({
                         }}
                         className="event-content5 bg-gradient-to-b"
                     >
-                        <span className="event-content6 shadow-to-text">{stat2}</span>
+                        <span className="event-content6">{stat2}</span>
                     </div>
                 </button>
             </div>
@@ -941,7 +941,7 @@ const BetCombinationPanel = ({
                             width: "100%",
                             height: "100%",
                             fontSize: '2.625rem',
-                            backgroundColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#cb4343" : "#b3b3b3"
+                            // backgroundColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#cb4343" : "#b3b3b3"
                         }}
                         className="normaloption-content"
                         onClick={() => {
@@ -1147,7 +1147,7 @@ const BetCombinationPanel = ({
                                     style={{
                                         width: "100%",
                                         height: "100%",
-                                        borderColor: isOpen[items.id] === true ? "#8f97a0" : "#737579",
+                                        // borderColor: isOpen[items.id] === true ? "#8f97a0" : "#737579",
                                         background: isOpen[items.id] === true
                                             ? "linear-gradient(to bottom, #f38d27, #b45a00)"
                                             : "linear-gradient(to bottom, #a67c52, #7f5f3f)"

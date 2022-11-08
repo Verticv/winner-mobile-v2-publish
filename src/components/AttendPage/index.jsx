@@ -21,7 +21,7 @@ const AttendPage = ({ isAuthenticated, setAuthenticated }) => {
             </div>
             <div
                 style={{ padding: "0 1.875rem" }}
-                className="content"
+                className="contents"
             >
                 <div className="content_1">
                     <AttendanceCalendar />
