@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import "./style.css";
 
 
-const SortBy = ({ children, options, value, onChange, onClick, multiple }) => (
+const SortBy = ({ children, options, value, onChange, onClick, multiple, withArrow }) => (
     <div className="container"
         style={{ postion: 'relative', width: '100%' }}
     >
@@ -29,7 +29,7 @@ const SortBy = ({ children, options, value, onChange, onClick, multiple }) => (
     </div>
 );
 
-const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelection = false, isContact = false, multiple = false, isSignup = false, ddda }) => {
+const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelection = false, isContact = false, multiple = false, isSignup = false, ddda, withArrow }) => {
     const [sortValue, setSortValue] = useState(isContact ? "선택" : isLeagueSelection ? "리그선택" : isSignup ? options[0] : "전체회차")
 
     const onChange = e => setSortValue(e.currentTarget.value);
@@ -42,6 +42,7 @@ const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelecti
                 onChange={onChange}
                 onClick={() => console.log('on click!')}
                 multiple={multiple}
+                withArrow={withArrow}
             >
                 <div className={`sort-by-div  ${ddda ? 'ddda' : ''}`}
                     style={{
@@ -51,8 +52,9 @@ const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelecti
                         width: '15rem'
                     }}
                 >
-                    <div className={`sort-by-p ${labelClasses} ${ddda? 'ddda' : ''} `} style={labelStyle}><p>{sortValue}</p></div>
+                    <div className={`sort-by-p ${labelClasses} ${ddda ? 'ddda' : ''} `} style={labelStyle}><p>{sortValue}</p></div>
                     {children}
+                    {console.log('sortValue', sortValue)}
                 </div>
             </SortBy>
         </form >

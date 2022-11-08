@@ -57,12 +57,13 @@ const HorizontalMenu1 = ({
                     style={{
                         // {isSameLink ? '' : ''}
                         background: !isMoneyPage ? `url(${isSameLink ? (item.activeBG ? item.activeBG : activeBG) : (item.inActiveBG ? item.inActiveBG : inactive)}) round` : `url(${isSameLink ? moneyActive : moneyInactive}) round`,
-                        backgroundSize: 'cover'
+                        backgroundSize: 'cover',
                         // borderRadius: "1.625rem",
                         // width: '60%',
                         // height: '13.18rem',
                         // marginRight: items?.length - 1 === index ? '' : '1px',
                         // padding: '1px'
+                        marginRight: index === 0 ? '0.1rem' : ''
                     }}
                     className={`${isSameLink
                         ? "display-active"

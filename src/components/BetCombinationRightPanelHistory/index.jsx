@@ -71,7 +71,7 @@ const BetCombinationRightPanelHistory = () => {
                     <p style={{ color: '#c8c8c8' }}>{winStatus === "win" ? "승 @" : "패 @"}</p>
                     <p
                         className="historycard-content9"
-                        style={{ color: winStatus === "win" ? "#e65454" : "#0056a6" }}
+                        style={{ color: winStatus === "win" ? "#e65454" : "#4c98ff" }}
                     >
                         {winStatus === "win" ? "2.26" : "3.47"}
                     </p>

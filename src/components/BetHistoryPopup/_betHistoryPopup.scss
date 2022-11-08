@@ -12,6 +12,7 @@
     padding: 0.1875rem;
     margin: auto;
     overflow: hidden scroll;
+    z-index: 100;
 
     &::-webkit-scrollbar {
         display: none;
