@@ -30,6 +30,8 @@ import subIcon3 from '../../assets/bigIcons/leftMenu/23.png';
 import subIcon5 from '../../assets/bigIcons/leftMenu/25.png';
 import Header from "../Header";
 import NavBottom from "../NavBottom";
+import Announcement from '../Announcement';
+import AnnouncementView from '../AnnouncementView'
 
 export default function Test({ isAuthenticated, setAuthenticated }) {
     useEffect(() => {
@@ -173,6 +175,21 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                         <div id='container-nav'>
                                             <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        </div>
+                                        <Announcement />
+                                    </>
+                                }
+                            />
+                            <Route path="/announcement/view"
+                                element={
+                                    <>
+                                        {useEffect(() => {
+                                            setSubActiveButton('/cscenter/all/announcement')
+                                        }, [setSubActiveButton])
+                                        }
+                                        <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
+                                        <div style={{ marginBottom: '19.625rem', paddingBottom: '0.1rem' }}>
+                                            <AnnouncementView />
                                         </div>
                                     </>
                                 }

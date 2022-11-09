@@ -157,7 +157,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         icon: icon10,
         activeIcon: icon10Active,
         text: '티비벳',
-        width: '7.875rem',
+        width: '5.875rem',
         // height: '5.375rem',
         marginTop: '0.4rem',
         isActive: false,
@@ -219,14 +219,14 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                             className="overflow-y-auto hide-scrollbar"
                         >
 
-                            <div className="w-full relative top-0">
+                            <div className="w-full relative top-0" style={{ position: 'relative' }}>
                                 <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
-                                <div id='scroll-wrapper' style={{ padding: '1.875rem 1.6rem', paddingRight: '0', paddingBottom: 0 }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                                <div id='scroll-wrapper' style={{ padding: '1.875rem 1.6rem', paddingRight: '0', paddingBottom: 0, overflowX: 'scroll' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                     <div className=" flex flex-shrink-0 w-full" style={{ marginBottom: '' }}>
                                         <HorizontalMenu withoutFirst={false} setSelectedTab={setSelectedTab} itemsArray={tabsArray} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup={true} />
                                     </div>
                                 </div>
-                                <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full top-0 left-0 z-50"></div>
+                                <div style={{ height: '11.1rem', top: '2rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
                             </div>
 
                             {selectedTab === 0 ? (
@@ -252,7 +252,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                     {/* <img src={img} alt=''
                                         style={{ position: 'fixed', top: '0', opacity: '0.5' }}
                                     /> */}
-                                    <div style={{marginTop: '1rem'}}>
+                                    <div style={{ marginTop: '1rem' }} className='ar-date'>
                                         <DateSearchBar isGameResultsSearch={true} isFreeboard='true' />
                                     </div>
                                     <div style={{ paddingBottom: '0.1rem', margin: '0 1.8rem' }}>
@@ -290,6 +290,20 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                             ) : selectedTab === 6 ? (
                                 <>
                                     <SlotBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                    <div style={{ marginTop: '1.25rem' }}>
+                                        <Pagination page={page} setPage={setPage} />
+                                    </div>
+                                </>
+                            ) : selectedTab === 7 ? (
+                                <>
+                                    <SlotBetHistory key={20} isState={selectedSubTab} setState={setSelectedSubTab} />
+                                    <div style={{ marginTop: '1.25rem' }}>
+                                        <Pagination page={page} setPage={setPage} />
+                                    </div>
+                                </>
+                            ) : selectedTab === 8 ? (
+                                <>
+                                    <LiveCasinoBetHistory key={100} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
                                     <div style={{ marginTop: '1.25rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>

@@ -484,7 +484,7 @@ const tableData1 = [
     ],
 ]
 
-const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false , subActiveButton, setSubActiveButton}) => {
+const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false, subActiveButton, setSubActiveButton }) => {
 
     const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -493,8 +493,10 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     useEffect(() => {
-        setSubActiveButton('/mypage/bet-history/all/minigame')
-    }, [setSubActiveButton]);
+        if (subActiveButton) {
+            setSubActiveButton('/mypage/bet-history/all/minigame')
+        }
+    }, [setSubActiveButton, subActiveButton]);
 
     return (
         <div className="LiveCasinoBetHistory">

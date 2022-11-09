@@ -16,6 +16,7 @@ import Icon10 from '../../assets/ar-game/10.png';
 import Icon11 from '../../assets/ar-game/11.png';
 import Icon12 from '../../assets/ar-game/12.png';
 import HorizontalSubMenu from '../HorizontalSubMenuDefault'
+import './_argame.scss'
 
 const subTabsArray = [
     { text: "전체", icon: Icon1, id: 0, width: '19.375rem', marginIcon: '', path: '#' },
@@ -124,8 +125,10 @@ const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = fal
     const [selectedSubTab, setSelectedSubTab] = useState(0)
 
     useEffect(() => {
-        setSubActiveButton('/mypage/bet-history/all/ar-game')
-    }, [setSubActiveButton]);
+        if (subActiveButton) {
+            setSubActiveButton('/mypage/bet-history/all/ar-game')
+        }
+    }, [setSubActiveButton, subActiveButton]);
 
 
     return (
@@ -143,7 +146,7 @@ const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = fal
                 </>
 
             )}
-            <div style={{ marginTop: '1.0rem' }}>
+            <div style={{ marginTop: '1.0rem' }} className='ar-date'>
                 <DateSearchBar isLeagueSearch={false} isGameResultsSearch={true} />
             </div>
 
