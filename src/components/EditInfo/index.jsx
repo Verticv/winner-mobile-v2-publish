@@ -18,7 +18,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
 
     const Title = ({ text }) => (
         <div style={{ width: "24rem", marginRight: '2.7rem', background: '#272726', flexShrink: '0', borderRadius: '0.5rem' }} className="form-Title">
-            <div style={{ fontSize: '2.8125rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '2.2rem 0 0 1.25rem', letterSpacing: '-0.07rem' }} className="text-gray-r454545 font-spoqaMedium">{text}</div>
+            <div style={{ fontSize: '2.8125rem', color: text === '레벨' ? '#c8c8c8' :'#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '2.2rem 0 0 1.25rem', letterSpacing: '-0.07rem' }} className="text-gray-r454545 font-spoqaMedium">{text}</div>
             {/* <div style={{ height: '0.1875rem', marginTop: '1.1875rem' }} className="w-full bg-gray-bebebe"></div> */}
         </div>
     )
@@ -47,7 +47,10 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                     <div className="border">
                         <div className="form-section">
                             <Title text="아이디" />
-                            <div className="lable-or-input" style={{ borderBottom: '0.375rem solid rgb(110, 84, 58)' }}>
+                            <div className="lable-or-input"
+                                style={{ borderBottom: selectedInput === 0 ? '0.375rem solid rgb(110, 84, 58)' : '0.375rem solid #191817' }}
+                                onClick={() => setSelectedInput(0)}
+                            >
                                 <label
                                     // style={{ fontSize: '2.8125rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeo', marginBottom: '1.1875rem', display: 'inline-block' }}
                                     className="text-gray-r585858 font-spoqa">louie3</label>
@@ -60,7 +63,10 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                         <div style={{ marginTop: '1.5rem' }} className="flex flex-wrap">
                             <div className='form-section'>
                                 <Title text="비밀번호" />
-                                <div className="lable-or-input">
+                                <div className="lable-or-input"
+                                    style={{ borderBottom: selectedInput === 1 ? '0.375rem solid rgb(110, 84, 58)' : '0.375rem solid #191817' }}
+                                    onClick={() => setSelectedInput(1)}
+                                >
                                     <input
                                         className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                         style={{ fontSize: '2.625rem', marginBottom: '1.1875rem' }}
@@ -89,7 +95,10 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                         <div style={{ marginTop: '1.2rem' }} className="flex flex-wrap">
                             <div className='form-section'>
                                 <Title text="비밀번호 확인" />
-                                <div className="lable-or-input">
+                                <div className="lable-or-input"
+                                    style={{ borderBottom: selectedInput === 2 ? '0.375rem solid rgb(110, 84, 58)' : '0.375rem solid #191817' }}
+                                    onClick={() => setSelectedInput(2)}
+                                >
                                     <input
                                         className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                         style={{ fontSize: '2.625rem', marginBottom: '1.1875rem' }}
@@ -117,7 +126,10 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                         <div style={{ marginTop: '1.5rem' }} className="flex flex-wrap">
                             <div className='form-section'>
                                 <Title text="환전비밀번호" />
-                                <div className="lable-or-input">
+                                <div className="lable-or-input"
+                                    style={{ borderBottom: selectedInput === 3 ? '0.375rem solid rgb(110, 84, 58)' : '0.375rem solid #191817' }}
+                                    onClick={() => setSelectedInput(3)}
+                                >
                                     <input
                                         className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                         style={{ fontSize: '2.625rem', marginBottom: '1.1875rem' }}
@@ -144,7 +156,10 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                         <div style={{ marginTop: '1rem' }} className="flex flex-wrap">
                             <div className='form-section'>
                                 <Title text="환전 비밀번호 확인" />
-                                <div className="lable-or-input">
+                                <div className="lable-or-input"
+                                style={{ borderBottom: selectedInput === 4 ? '0.375rem solid rgb(110, 84, 58)' : '0.375rem solid #191817' }}
+                                onClick={() => setSelectedInput(4)}
+                                >
                                     <input
                                         className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                         style={{ fontSize: '2.625rem', marginBottom: '1.1875rem' }}
@@ -237,10 +252,10 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                     </button>
                 </div> */}
 
-                <div className='button-class-div'>
+                <div className='button-class-div shadow-to-box'>
                     <button className='button-class'>
                         <div style={{ marginTop: '0.2rem' }}>
-                            <span>수정하기</span>
+                            <span className='shadow-to-text'>수정하기</span>
                         </div>
                     </button>
                 </div>

@@ -821,10 +821,10 @@ const HistoryMenu = ({
 
 
 const GiftButton = (
-    <div className='button-class-div'>
+    <div className='button-class-div shadow-to-box'>
         <button className='button-class hover'>
             <div style={{ marginTop: '0.2rem' }}>
-                <span>쿠폰선물하기</span>
+                <span className='shadow-to-text'>쿠폰선물하기</span>
             </div>
         </button>
     </div>

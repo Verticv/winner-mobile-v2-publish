@@ -37,7 +37,7 @@ const HistoryTable = ({
             // </button>
             <button style={{ width: '20.25rem', height: '14.0625rem', background: '#c65337', position: 'absolute', top: '7.56rem', right: '1.9rem', borderRadius: '1.1rem', boxShadow: 'rgb(0 0 0 / 60%) 0px 0.375rem 0px 0px' }} className="hover change-top">
                 <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
-                    <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd', textShadow: '#00000080 0.3125rem 0.125rem 0.4375rem' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> 진행중 </span>
+                    <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffd2d2', textShadow: '#00000080 0.3125rem 0.125rem 0.4375rem' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> 진행중 </span>
                 </div>
             </button>
         )
@@ -146,7 +146,7 @@ const HistoryTable = ({
                             ) : hasButton &&
                             <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '', right: '1.9rem', borderRadius: '1.1rem', boxShadow: 'rgb(0 0 0 / 60%) 0px 0.375rem 0px 0px' }} className="hover change-top">
                                 <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
-                                    <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length - 1].buttonColor === '#e65454' ? <div> {card[card.length - 1].buttonText ? card[card.length - 1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length - 1].buttonText || '진행중'} </span>
+                                    <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffd2d2' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length - 1].buttonColor === '#e65454' ? <div> {card[card.length - 1].buttonText ? card[card.length - 1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length - 1].buttonText || '진행중'} </span>
                                 </div>
                             </button>
                     }

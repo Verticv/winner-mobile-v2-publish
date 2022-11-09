@@ -216,7 +216,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
                             background: 'linear-gradient(to top, rgb(77, 60, 10), rgb(156, 123, 74) 50%, rgb(231, 183, 134))',
                             borderRadius: '1rem'
                         }}
-                        className="hover"
+                        className="hover shadow-to-box"
                         onClick={() => AllSelectButtonPressed()}
                     >
                         <div
@@ -232,7 +232,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
                             }}
                             className="flex items-center justify-center h-full w-full rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
-                            <span style={{ fontSize: '2.8125rem', marginTop: '0.4rem', letterSpacing: '-0.07rem', color: '#ffdfbd' }} className="font-spoqaMedium tracking-tight text-14px text-white mb-2">{isAllSelected ? "선택해제" : "전체선택"}</span>
+                            <span style={{ fontSize: '2.8125rem', marginTop: '0.4rem', letterSpacing: '-0.07rem', color: '#ffdfbd' }} className="shadow-to-text font-spoqaMedium tracking-tight text-14px text-white mb-2">{isAllSelected ? "선택해제" : "전체선택"}</span>
                         </div>
                     </button>
                     <button
@@ -245,7 +245,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
                             background: 'linear-gradient(to top, #4d0a25, #a75366 50%, #e78795)',
                             borderRadius: '1rem'
                         }}
-                        className="hover"
+                        className="hover shadow-to-box"
                     >
                         <div
                             style={{
@@ -260,7 +260,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
                             }}
                             className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 cursor-pointer"
                         >
-                            <span style={{ fontSize: '2.8125rem', color: '#ffd2d2', marginTop: '0.4rem', letterSpacing: '-0.07rem' }} className="font-spoqaMedium tracking-tight text-14px text-white pb-2">선택삭제</span>
+                            <span style={{ fontSize: '2.8125rem', color: '#ffd2d2', marginTop: '0.4rem', letterSpacing: '-0.07rem' }} className="shadow-to-text font-spoqaMedium tracking-tight text-14px text-white pb-2">선택삭제</span>
                         </div>
                     </button>
                     <button
@@ -273,7 +273,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
                             background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d9e8)',
                             borderRadius: '1rem'
                         }}
-                        className="hover"
+                        className="hover shadow-to-box"
                     // onClick={() => allSelectButtonPressed()}
                     >
                         <div
@@ -289,7 +289,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
                             }}
                             className="flex items-center justify-center h-full w-full rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db"
                         >
-                            <span style={{ fontSize: '2.8125rem', color: '#d6f3ff', marginTop: '0.4rem', letterSpacing: '-0.07rem' }} className="font-spoqaMedium tracking-tight text-14px text-white pb-2">전체읽음처리</span>
+                            <span style={{ fontSize: '2.8125rem', color: '#d6f3ff', marginTop: '0.4rem', letterSpacing: '-0.07rem' }} className="shadow-to-text font-spoqaMedium tracking-tight text-14px text-white pb-2">전체읽음처리</span>
                         </div>
                     </button>
                 </div >

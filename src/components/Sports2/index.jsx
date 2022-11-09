@@ -37,14 +37,17 @@ const Sports2 = ({ paddingLeft, subActiveButton, setSubActiveButton }) => {
     return (
         <div style={{ maxWidth: '1242px' }} className="w-full flex flex-col">
 
-            {/* <div className="w-full flex relative top-0">
-                <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff)", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
-                <div id='scroll-wrapper' style={{ padding: '1.875rem', paddingRight: '0', paddingLeft: paddingLeft ? paddingLeft : '1.875rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"> */}
-            <div className=" flex flex-shrink-0 w-full" style={{ marginTop: '0.8rem', overflowY: 'scroll' }}>
-                <HorizontalMenu13 itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
-                {/* </div> */}
-                {/* </div> */}
-                {/* <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div> */}
+            <div className="w-full flex relative top-0">
+                {/* <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff)", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div> */}
+                <div id='scroll-wrapper' style={{ padding: '1.875rem', paddingRight: '0', paddingLeft: paddingLeft ? paddingLeft : '1.875rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+
+                    <div className=" flex flex-shrink-0 w-full" style={{ marginTop: '0.8rem', overflowY: 'scroll' }}>
+                        <HorizontalMenu13 itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
+                        {/* </div> */}
+                        {/* </div> */}
+                        <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
+                    </div>
+                </div>
             </div>
         </div>
     )
