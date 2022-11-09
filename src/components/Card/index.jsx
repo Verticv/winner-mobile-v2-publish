@@ -13,9 +13,12 @@ function Card({ id, inactivBackground, activeBackground, icon, text, isActive, c
 
         >
             <div id={id} className={`main-div ${(+cardActive === id) ? 'active' : ''}`}
-                style={{ background: `url(${(+cardActive === id) ? activeBackground : inactivBackground}) round` }}
+                style={{ background: `url(${inactivBackground}) round`, position: 'relative' }}
             >
-                <div className="card-content" id={id}>
+                <div id={id} className={`main-div ${(+cardActive === id) ? 'active' : ''}`}
+                    style={{ background: (+cardActive === id) && `url(${activeBackground}) round`, position: 'absolute' }}
+                ></div>
+                <div className="card-content" style={{ zIndex: 4 }} id={id}>
                     <div className="content">
                         <p style={{ marginTop: !icon ? '-4.3rem' : '' }} id={id}>{text}</p>
                     </div>
@@ -27,6 +30,8 @@ function Card({ id, inactivBackground, activeBackground, icon, text, isActive, c
                         </button>
                     </div>
                 </div>
+
+
             </div>
         </div>
     );

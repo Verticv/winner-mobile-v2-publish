@@ -29,7 +29,7 @@ const CountryDropDown = ({ setCountry, country, isBig }) => {
                 // className="flex items-center shadow-inner p-2"
                 onMouseOver={() => { setHoveredTab(item.id) }}
                 onMouseLeave={() => setHoveredTab(null)}
-                onClick={
+                onMouseDown={
                     () => {
                         setSelectedTab(item.id)
                         setCountry(item.text)
