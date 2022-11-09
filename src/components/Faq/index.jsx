@@ -191,7 +191,17 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
             {/* <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} /> */}
             <div style={{ margin: '1rem 1.85rem' }}>
 
-                <HorizontalSubMenu itemsArray={tabsArray2} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                
+            </div>
+            <div className="w-full flex relative top-0" style={{ position: 'relative' }}>
+                <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
+
+                <div id='scroll-wrapper12' style={{ paddingLeft: '1.875rem', overflowX: 'scroll', display: 'flex', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div className=" flex flex-shrink-0 w-full" style={{ overflowX: 'scroll', display: 'flex', flexShrink: '0' }}>
+                    <HorizontalSubMenu itemsArray={tabsArray2} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                    </div>
+                </div>
+                <div style={{ height: '98%', top: '2rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
             </div>
             {/* <div className="w-full flex relative top-0"> */}
             {/* <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div> */}

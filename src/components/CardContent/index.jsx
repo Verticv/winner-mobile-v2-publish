@@ -101,7 +101,7 @@ const CardContent = ({
                 {withCancelButton && (
                     <button
                         onClick={() => cancelHandler(id)}
-                        style={{ width: '9rem', height: '9rem', padding: '1px' }}
+                        style={{ width: '9rem', height: '9rem', padding: '1px', background: 'bottom' }}
                         className="flex items-center justify-center rounded-2xl hover:opacity-75 bg-brown-r7e3636"
                     >
                         <div
@@ -143,7 +143,7 @@ const CardContent = ({
                 <div className="two-buttons-container">
                     <button style={{ height: '7.3125rem' }}
                         // onClick={() => navigate("/freeboard")} 
-                        className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-blue-r0070d9">
+                        className="shadow-to-box flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-blue-r0070d9">
                         <div style={{ width: '100%', height: '100%', borderRadius: '1rem', padding: '0.1875rem' }}>
                             <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #3a6287, #4777ab 50%, #518bcb)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <span style={{ color: '#d6f3ff' }}>내역올리기</span>
@@ -152,7 +152,7 @@ const CardContent = ({
                     </button>
                     <button style={{ background: 'linear-gradient(to top, #4b0923, #e88895)', height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem' }}
                         // onClick={() => navigate("/freeboard")} 
-                        className="flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">
+                        className="shadow-to-box flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">
                         <div style={{ width: '100%', height: '100%', borderRadius: '1rem' }}>
                             <div
                                 style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #96341d, #e06446)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}

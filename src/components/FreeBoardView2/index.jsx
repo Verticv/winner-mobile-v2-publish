@@ -230,7 +230,7 @@ const FreeBoardView2 = () => {
 
             <div className="two-buttons">
                 <button
-                    className='hover'
+                    className='hover shadow-to-box'
                     style={{ background: 'linear-gradient(to top, #4d0a25, #a34f63 50%, #e78694 )' }}>
                     <div className='div-border'
                         style={{ background: 'linear-gradient(to top, #97351d, #bb4c32 50%, #df6345)' }}
@@ -241,7 +241,7 @@ const FreeBoardView2 = () => {
                     </div>
                 </button>
                 <button
-                    className='hover'
+                    className='hover shadow-to-box'
                     style={{ background: 'linear-gradient(to top, #4d3c0a, #a3814f 50%, #e7b786 )' }}>
                     <div className='div-border' style={{ background: 'linear-gradient(to top, #80603f, #96704a 50%, #a57b52 )', color: '#ffdfbd' }}>
                         <div className="text">
@@ -447,7 +447,7 @@ const FreeBoardView2 = () => {
             </div>
 
             <div style={{ marginTop: '3.7rem', paddingBottom: '19.225rem' }} className="w-full flex items-start justify-between">
-                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover">
+                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover shadow-to-box">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e48 50%, #a57b52)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <div
                             style={{
@@ -455,13 +455,13 @@ const FreeBoardView2 = () => {
                             }}
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
-                            <span className="font-spoqaMedium tracking-tight text-white" style={{
+                            <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
                                 color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
                             }}>이전</span>
                         </div>
                     </div>
                 </button>
-                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover">
+                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover shadow-to-box">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e48 50%, #a57b52)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <div
                             style={{
@@ -470,14 +470,14 @@ const FreeBoardView2 = () => {
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                             onClick={() => navigate('/freeboard')}
                         >
-                            <span className="font-spoqaMedium tracking-tight text-white" style={{
+                            <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
                                 color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
                             }}>목록보기</span>
                         </div>
                     </div>
                 </button>
 
-                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover">
+                <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover shadow-to-box">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e48 50%, #a57b52)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <div
                             style={{
@@ -486,7 +486,7 @@ const FreeBoardView2 = () => {
                             onClick={() => navigate('/freeboard/view2')}
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
-                            <span className="font-spoqaMedium tracking-tight text-white" style={{
+                            <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
                                 color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
                             }}>다음</span>
                         </div>

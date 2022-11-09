@@ -68,13 +68,13 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                         </div>
                         <div style={{ height: '0.1875rem', margin: '1.16rem 0rem 1.89rem', background: '#494745' }} className="w-full bg-gray-bebebe my-5" />
 
-                        <div style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '15.7rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '1.6rem', background: 'linear-gradient(to top, #4d3c0a, #b08b5a 50%, #e7b786)' }}>
+                        <div className='shadow-to-box' style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '15.7rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '1.6rem', background: 'linear-gradient(to top, #4d3c0a, #b08b5a 50%, #e7b786)' }}>
                             <button
                                 style={{ width: "100%", height: '100%', marginBottom: '1.5625rem', background: "linear-gradient(to top, #80603f, #96704a 50%, #a57b52)", borderRadius: '1rem' }}
                                 className="m-auto flex items-center justify-center rounded-2xl hover:opacity-75 hover"
                             >
                                 <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                                    <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.2rem' }} className="font-spoqaMedium tracking-tight text-white">계좌번호 신청</span>
+                                    <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.2rem' }} className="shadow-to-text font-spoqaMedium tracking-tight text-white">계좌번호 신청</span>
                                 </div>
                             </button>
 
@@ -507,7 +507,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                                 />
                                             </label>
                                         </div>
-                                        <span className='shadow-to-text' style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>받지않기</span>
+                                        <span className='shadow-to-text' style={{ fontSize: '2.625rem', color: '#ffd2d2', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>받지않기</span>
                                     </div>
                                 </button>
 
@@ -621,20 +621,20 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                     </div>
                 </div>
             </div>
-            <div style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '18.7rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '1.6rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', marginTop: '1.8rem' }}>
+            <div className='shadow-to-box' style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '18.7rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '1.6rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', marginTop: '1.8rem' }}>
                 <button
                     style={{ width: "100%", height: '100%', marginBottom: '1.5625rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', borderRadius: '1rem' }}
                     className="hover"
                 >
                     <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                        <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>신청하기</span>
+                        <span style={{ fontSize: '2.8125rem', color: '#ffffff', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className=''>신청하기</span>
                     </div>
                 </button>
             </div>
 
             <div style={{ margin: '4.75rem 0 0 12.3rem' }}>
                 <button style={{ background: '#272726', width: '52rem', height: '6.5rem', borderRadius: '3.3rem', paddingTop: '0.15rem' }} className="hover">
-                    <span className='shadow-to-text' style={{ color: '#ad9e8c', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>은행점검시간</span>
+                    <span className='' style={{ color: '#ad9e8c', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>은행점검시간</span>
                 </button>
             </div>
 

@@ -124,7 +124,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
 
     return (
         <div className='contact-container'>
-            <div className="w-full flex relative top-0">
+            <div className="w-full flex relative top-0" style={{ position: 'relative'}}>
                 <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
 
                 <div id='scroll-wrapper12' style={{ paddingLeft: '1.875rem', overflowX: 'scroll', display: 'flex', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
@@ -132,7 +132,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
                         <HorizontalSubMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                     </div>
                 </div>
-                <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '2.3rem' }} className="absolute h-full left-0 z-50"></div>
+                <div style={{ height: '88%' }} className="nav-shadow absolute h-full left-0 z-50"></div>
             </div>
 
             <div style={{ borderRadius: "1em", margin: '1.875rem', marginTop: '1.875rem' }} className="shadow-subNavbar overflow-hidden">
@@ -158,7 +158,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
             </div> */}
             <div className="two-buttons">
                 <button
-                    className='hover'
+                    className='hover shadow-to-box'
                     style={{ background: 'linear-gradient(to top, #4d0a25, #a34f63 50%, #e78694 )' }}>
                     <div className='div-border'
                         style={{ background: 'linear-gradient(to top, #97351d, #bb4c32 50%, #df6345)' }}
@@ -169,7 +169,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
                     </div>
                 </button>
                 <button
-                    className='hover'
+                    className='hover shadow-to-box'
                     style={{ background: 'linear-gradient(to top, #4d3c0a, #a3814f 50%, #e7b786 )' }} onClick={() => navigate('/cscenter/all/contact/compose')} >
                     <div className='div-border' style={{ background: 'linear-gradient(to top, #80603f, #96704a 50%, #a57b52 )', color: '#ffdfbd' }}>
                         <div className="text">

@@ -231,15 +231,15 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
 
                             {selectedTab === 0 ? (
                                 <>
-                                    <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} checkedState={checkedState} setCheckedState={setCheckedState} />
-                                    <div style={{ marginTop: '1.25rem' }}>
+                                    <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} checkedState={checkedState} setCheckedState={setCheckedState} margon1 />
+                                    <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
                             ) : selectedTab === 1 ? (
                                 <>
                                     <SlotBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
-                                    <div style={{ marginTop: '1.25rem' }}>
+                                    <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
@@ -248,7 +248,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                 //     <SportsBetHistory  checkedState={checkedState} setCheckedState={setCheckedState} showSub={false} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen} />
                                 //     <Pagination page={page} setPage={setPage}/>   
                                 // </div>
-                                <div style={{ marginBottom: '5.625rem' }} className="w-full h-full">
+                                <div style={{ marginBottom: '5.625rem', paddingBottom: '0.1rem' }} className="w-full h-full">
                                     {/* <img src={img} alt=''
                                         style={{ position: 'fixed', top: '0', opacity: '0.5' }}
                                     /> */}
@@ -276,35 +276,35 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                             ) : selectedTab === 4 ? (
                                 <>
                                     <MinigameBetHistoryPopup isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
-                                    <div style={{ marginTop: '1.25rem' }}>
-                                        <Pagination page={page} setPage={setPage} />
+                                    <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
+                                        {/* <Pagination page={page} setPage={setPage} /> */}
                                     </div>
                                 </>
                             ) : selectedTab === 5 ? (
                                 <>
                                     <ARGameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
-                                    <div style={{ marginTop: '1.25rem' }}>
+                                    <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
                             ) : selectedTab === 6 ? (
                                 <>
                                     <SlotBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
-                                    <div style={{ marginTop: '1.25rem' }}>
+                                    <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
                             ) : selectedTab === 7 ? (
                                 <>
                                     <SlotBetHistory key={20} isState={selectedSubTab} setState={setSelectedSubTab} />
-                                    <div style={{ marginTop: '1.25rem' }}>
+                                    <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
                             ) : selectedTab === 8 ? (
                                 <>
-                                    <LiveCasinoBetHistory key={100} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
-                                    <div style={{ marginTop: '1.25rem' }}>
+                                    <LiveCasinoBetHistory key={100} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} margon1 />
+                                    <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
