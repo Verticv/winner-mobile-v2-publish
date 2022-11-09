@@ -132,7 +132,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
                         <HorizontalSubMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                     </div>
                 </div>
-                <div style={{ height: '100%' }} className="nav-shadow absolute h-full left-0 z-50"></div>
+                <div style={{ height: '88%' }} className="nav-shadow absolute h-full left-0 z-50"></div>
             </div>
 
             <div style={{ borderRadius: "1em", margin: '1.875rem', marginTop: '1.875rem' }} className="shadow-subNavbar overflow-hidden">
