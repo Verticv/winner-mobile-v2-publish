@@ -1,14 +1,14 @@
 import React from "react";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Card({ id, inactivBackground, activeBackground, icon, text, isActive, cardActive, setCardActive, path, disable, group, extra }) {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
         <div className="card-container" id={id}
             onClick={(e) => {
                 setCardActive(e.target.id);
                 // console.log('aa');
-                // navigate(path);
+                navigate(path);
             }}
 
         >

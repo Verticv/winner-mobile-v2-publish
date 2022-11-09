@@ -7,6 +7,13 @@
     }
 
     .date12 {
+        .container {
+            height: 6.7rem;
+        }
+    }
+
+    .date12 {
+        // margin: 0.9rem 1.875rem;
         margin: 1.1rem 1.875rem;
         padding-top: 0.5rem;
     }
@@ -43,6 +50,7 @@
             }
         }
     }
+
     .select-overlay {
         width: 100%;
     }

@@ -84,7 +84,7 @@ const cardInfo = [{
     icon: true,
     text: '에볼루션',
     isActive: false,
-    path: '/live-casino',
+    // path: '/live-casino',
     group: '1'
 },
 {
@@ -104,7 +104,7 @@ const cardInfo = [{
     icon: true,
     text: '로얄지',
     isActive: false,
-    path: '/live-casino',
+    // path: '/live-casino',
     group: '1'
 },
 {
@@ -114,7 +114,7 @@ const cardInfo = [{
     icon: true,
     text: '아시아게이밍',
     isActive: false,
-    path: '/live-casino',
+    // path: '/live-casino',
     group: '1'
 },
 {
@@ -124,7 +124,7 @@ const cardInfo = [{
     icon: true,
     text: '드림게이밍',
     isActive: false,
-    path: '/live-casino',
+    // path: '/live-casino',
     group: '1'
 },
 {
@@ -134,7 +134,7 @@ const cardInfo = [{
     icon: true,
     text: '섹시게이밍',
     isActive: false,
-    path: '/live-casino',
+    // path: '/live-casino',
     group: '1'
 },
 {
@@ -144,7 +144,7 @@ const cardInfo = [{
     icon: true,
     text: '빅게이밍',
     isActive: false,
-    path: '/live-casino',
+    // path: '/live-casino',
     group: '1'
 },
 {

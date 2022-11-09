@@ -14,7 +14,7 @@ const EsportsMulti = () => {
                 <span className="text-blue-r0056a6" style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
                 <span className="text-gray-r585858" style={{ color: '#ccc2b6' }}>{title}</span>
             </div>
-            <span style={{ color: "#828282", fontSize: '2.0625rem' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text} <span className="ml-2px text-blue-r0056a6" style={{ color: '#2980b9', marginLeft: '0.1rem', marginRight: '0.2rem' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem' }} className="mr-2px">{color2}</span><p style={{ margin: '0', display: 'inline-block' }}>{color3}</p></span>
+            <span style={{ color: "#828282", fontSize: '2.0625rem' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text} <span className="ml-2px text-blue-r0056a6" style={{ color: '#4c98ff', marginLeft: '0.1rem', marginRight: '0.2rem',fontWeight: '600' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem', fontWeight: '600' }} className="mr-2px">{color2}</span><p style={{ margin: '0', display: 'inline-block' }}>{color3}</p></span>
             {text2 && (
                 <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.0625rem', marginTop: '-0.3rem' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text2}</span>
             )}
@@ -68,7 +68,7 @@ const EsportsMulti = () => {
 
                     <div style={{ width: "fit-content", padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.25rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }} className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px mt-60px">알아두세요!</div>
                     <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', marginTop: '0.35rem' }}>
-                        <span style={{ color: "#8c8c8c", fontSize: '2.0625rem', display: 'flex' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-5px">※ 각 팀의 좌/우 가장자리에 있는 ①<p className="ml-2px text-blue-r0056a6" style={{ margin: '0 0.5rem 0 0', color: '#4c98ff' }}>[+]</p><p style={{ color: "#ff1237", margin: '0 0.5rem 0 0' }}>[+]</p> 버튼을 누르면</span>
+                        <span style={{ color: "#8c8c8c", fontSize: '2.0625rem', display: 'flex' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-5px">※ 각 팀의 좌/우 가장자리에 있는 ①<p className="ml-2px text-blue-r0056a6" style={{ margin: '0 0.5rem 0 0', color: '#4c98ff',fontWeight: '600' }}>[+]</p><p style={{ color: "#e65454", margin: '0 0.5rem 0 0', fontWeight: '600' }}>[+]</p> 버튼을 누르면</span>
                     </div>
                     <div className="flex items-center" style={{ color: '#8c8c8c', fontSize: '2.0625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-4px"> 선택한 경기(배당)가 ②팔레이 리스트에 추가됩니다.</span>
