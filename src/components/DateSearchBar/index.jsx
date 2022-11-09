@@ -40,7 +40,7 @@ const DateSearchBar = ({
         )
     }
     return (
-        <div style={{ margin: withMargin ? (!isFreeboard ? '0.9rem 1.875rem' : '1.2rem 1.875rem') : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem', background: '#2e2e2e', borderRadius: '1.1rem', paddingTop: isPoints ? '0' : '0.7rem', marginTop: isPoints ? '1.1rem' : '', marginBottom: isIOS?  '-0.3rem' : '' }} className="date12">
+        <div style={{ margin: withMargin ? (!isFreeboard ? '0.9rem 1.875rem' : '1.2rem 1.875rem') : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem', background: '#2e2e2e', borderRadius: '1.1rem', paddingTop: isPoints ? '0' : '0.7rem', marginTop: isPoints ? '1.3rem' : '', marginBottom: isIOS?  '-0.3rem' : '' }} className="date12">
 
             {isLeagueSearch === true && (
                 <div className="space-x-5px">
@@ -81,7 +81,7 @@ const DateSearchBar = ({
                     <DropDownInput isBetCombination={false} withArrow />
                     {/* <span style={{ fontSize: '2.6rem', marginTop: '1.875rem', width: '1.880875rem' }} className="invisible text-center font-spoqaMedium text-gray-r454545 mt-px">~</span> */}
                     <input
-                        style={{ marginLeft: '2.05rem' }}
+                        style={{ marginLeft: '2rem' }}
                         placeholder="팀명검색"
                         className="place-color-grey placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
                         onFocus={() => {
@@ -227,7 +227,7 @@ const DateSearchBar = ({
                 {withBlackButton && !withMargin && (
                     <div className="first-row">
                         <input
-                            style={{ marginLeft: '2.05rem' }}
+                            style={{ marginLeft: '2rem' }}
                             placeholder="아이디"
                             className="place-color-grey placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
                             onFocus={() => {

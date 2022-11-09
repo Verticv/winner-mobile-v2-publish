@@ -34,7 +34,7 @@ const DropDownInput = ({ isLeagueSelection = true, isBetCombination = false, wit
     return (
         <div
             style={{
-                width: withArrow ? '34.06rem' : '', height: withArrow ? '6.7rem' : '', fontSize: withArrow ? '2.625rem' : '',
+                width: withArrow ? '34.06rem' : '', height: withArrow ? '6.75rem' : '', fontSize: withArrow ? '2.625rem' : '',
                 marginLeft: '1.875rem',
                 background: withArrow ? '#1a1a1a' : '', border: withArrow ? '0.1875rem solid #404040' : '', position: withArrow ? 'relative' : '', borderRadius: withArrow ? '0.5rem' : '',
                 marginTop: '0.1rem'
