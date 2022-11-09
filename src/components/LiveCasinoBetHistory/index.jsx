@@ -224,7 +224,7 @@ const tableData = [
     ],
 ]
 
-const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false, subActiveButton, setSubActiveButton, key, path }) => {
+const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false, subActiveButton, setSubActiveButton, key, path, margon1 }) => {
 
     const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -246,7 +246,7 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
     }, [setSubActiveButton, path, subActiveButton]);
 
     return (
-        <div className="LiveCasinoBetHistory" style={{ marginBottom: '12rem' }}>
+        <div className="LiveCasinoBetHistory" style={{ marginBottom: margon1 ? '3rem' : '12rem' }}>
             {showSub === true && (
                 <>
                     <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
@@ -255,7 +255,7 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
                                 <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
                             </div>
                         </div>
-                        <div style={{  height: '10.8rem', top: '1.6rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
+                        <div style={{ height: '10.8rem', top: '1.6rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
                     </div>
                 </>
             )}
