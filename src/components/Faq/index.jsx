@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import parse from 'html-react-parser';
 import ArrowDown from '../../assets/myPage/contact/down-arrow.png'
 import arrowUp from '../../assets/myPage/contact/up-arrow.png'
@@ -31,14 +31,6 @@ import HorizontalSubMenu from '../HorizontalSubMenu';
 // import img from '../../img9.png'
 
 const Faq = ({ subActiveButton, setSubActiveButton }) => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
-    useEffect(() => {
-        setSubActiveButton('/cscenter/all/faq')
-    }, [setSubActiveButton]);
-
 
     // const tabsArray = [
     //     { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },
@@ -66,6 +58,21 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
     const [, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     console.log(`selectedSubTab`, selectedSubTab)
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        window.onpopstate = e => {
+            navigate('/cscenter')
+            setSubActiveButton('/cscenter/all/faq')
+        }
+        return (() => {
+            setSubActiveButton('/cscenter/all/faq')
+        })
+    }, [setSubActiveButton, navigate]);
 
     const questionArray = [
         { id: 0, type: "충전/환전", text: "첫, 매충 10% 포인트를 받으면 롤링을 어떻게 해야 환전가능한가요?" },

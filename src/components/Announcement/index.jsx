@@ -1,11 +1,14 @@
 import Pagination from '../Pagination'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AnnouncementTable from '../AnnouncementTable'
 import Search from '../Search'
 import NavBottom from '../NavBottom'
 import './_announcementTable.scss'
+import { useNavigate } from 'react-router-dom'
 
-const Announcement = () => {
+const Announcement = ({
+    setSubActiveButton
+}) => {
 
     const inboxArray = [
         {
@@ -99,6 +102,17 @@ const Announcement = () => {
     const [checkedState, setCheckedState] = useState(
         new Array(inboxArray.length).fill(false)
     );
+    const navigate = useNavigate()
+    
+    useEffect(() => {
+        window.onpopstate = e => {
+            navigate('/cscenter')
+            setSubActiveButton('/cscenter/all/announcement')
+        }
+        return (() => {
+            setSubActiveButton('/cscenter/all/announcement')
+        })
+    }, [setSubActiveButton, navigate]);
 
     return (
         <div>

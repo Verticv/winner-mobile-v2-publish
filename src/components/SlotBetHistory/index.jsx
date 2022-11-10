@@ -26,6 +26,7 @@ import Icon20 from '../../assets/slotGame/20.png'
 import Icon21 from '../../assets/slotGame/21.png'
 import Icon22 from '../../assets/slotGame/22.png'
 import HorizontalSubMenu from '../HorizontalSubMenuDefault'
+import { useNavigate } from 'react-router-dom'
 // import Icon16 from '../../assets/slotGame/17.png'
 
 // import SubHorizontalMenu3 from '../SubHorizontalMenu3'
@@ -263,17 +264,17 @@ const SlotBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
+    const navigate = useNavigate()
 
     useEffect(() => {
-        // if (key === 2) {
-        // setSubActiveButton('/mypage/bet-history/all/fishing-game')
-        if (subActiveButton) {
+        window.onpopstate = e => {
+            navigate('/mypage/bet-history')
             setSubActiveButton(path)
         }
-        // else if (key === 1) {
-        //     setSubActiveButton('/mypage/bet-history/all/slot-game')
-        // }
-    }, [setSubActiveButton, path, subActiveButton]);
+        return (() => {
+            setSubActiveButton(path)
+        })
+    }, [setSubActiveButton, path, subActiveButton, navigate]);
 
     return (
         <div className="LiveCasinoBetHistory">

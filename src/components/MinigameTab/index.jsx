@@ -7,6 +7,7 @@ import Icon5 from '../../assets/minigameResults/3.png'
 import Icon6 from '../../assets/minigameResults/4.png'
 import subInactive from '../../assets/gameresults/minigameResults/inactive-bg.png'
 import subActive from '../../assets/gameresults/minigameResults/active-bg.png'
+import { useNavigate } from 'react-router-dom'
 
 const tabsArray = [
     { text: "파워볼", path: "/mypage/gameresults/minigame/powerball", icon: Icon3, id: 0, number: 854, subInactive: subInactive, subActive: subActive },
@@ -18,10 +19,18 @@ const tabsArray = [
 
 const MinigameTab = ({ paddingLeft, subActiveButton, setSubActiveButton }) => {
     const [selectedTab, setSelectedTab] = useState(0)
+    const navigate = useNavigate()
 
     useEffect(() => {
-        setSubActiveButton('/mypage/gameresults/minigame/powerball')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/gameresults')
+            setSubActiveButton('/mypage/gameresults/minigame/powerball')
+        }
+        return (() => {
+            setSubActiveButton('/mypage/gameresults/minigame/powerball')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
+
     console.log(selectedTab)
 
     return (

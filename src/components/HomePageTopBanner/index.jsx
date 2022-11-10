@@ -11,6 +11,7 @@ const HomePageTopBanner = ({ pageTitle, toPath = "/mypage", isFreeboard = false 
         <div className='Home-page-top-banner'>
             <img
                 onClick={() => {
+                    window.location.pathname.includes('/mypage/coupon/all') ? navigate('/mypage/coupon') :
                     isFreeboard ? navigate(-1) : navigate(toPath)
                 }}
                 className='left-arrow'

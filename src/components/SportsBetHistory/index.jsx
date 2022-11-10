@@ -3,13 +3,23 @@ import DateSearchBar from '../DateSearchBar';
 import SportsBetHistoryPanel from '../SportsBetHistoryPanel'
 // import ScrollButton from '../ScrollButton'
 import SelectAllButton from '../SelectAllButton'
+import { useNavigate } from 'react-router-dom';
 
 const SportsBetHistory = ({ checkedState, setCheckedState, showSub = true, attachedArray, setAttachedArray, setPopupOpen, subActiveButton, setSubActiveButton }) => {
 
     const [isAllSelected, setAllSelected] = useState(false)
+    const navigate = useNavigate()
+    
     useEffect(() => {
-        setSubActiveButton('/mypage/bet-history/all/sports')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/bet-history')
+            setSubActiveButton('/mypage/bet-history/all/sports')
+        }
+        return (() => {
+            setSubActiveButton('/mypage/bet-history/all/sports')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
+
     return (
         <div className="SportsBetHistory" style={{
 

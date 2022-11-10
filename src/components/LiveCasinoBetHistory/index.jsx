@@ -13,6 +13,7 @@ import Icon8 from '../../assets/myPage/second-btns/6.png'
 import Icon9 from '../../assets/myPage/second-btns/7.png'
 import Icon10 from '../../assets/myPage/second-btns/8.png'
 import activeBG from '../../assets/myPage/second-btns/active-bg.png'
+import { useNavigate } from 'react-router-dom'
 // import HorizontalMenu from '../HorizontalMenu'
 // import img22 from '../../img22.png'
 
@@ -233,17 +234,18 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     // const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
-    useEffect(() => {
-        // if (key === 1) {
-        // setSubActiveButton('/mypage/bet-history/all')
-        if (subActiveButton) {
+    const navigate = useNavigate()
 
+    useEffect(() => {
+        window.onpopstate = e => {
+            navigate('/mypage/bet-history')
             setSubActiveButton(path)
         }
-        // } else if (key === 2) {
-        // setSubActiveButton('/mypage/bet-history/all/live-casino')
-        // }
-    }, [setSubActiveButton, path, subActiveButton]);
+        return (() => {
+            setSubActiveButton(path)
+        })
+    }, [setSubActiveButton, path, subActiveButton, navigate]);
+
 
     return (
         <div className="LiveCasinoBetHistory" style={{ marginBottom: margon1 ? '3rem' : '12rem' }}>

@@ -197,7 +197,7 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
         window.scrollTo(0, 0);
     }, [])
     const MyInfo = () => {
-        console.log(`location.state`, location.state)
+        // console.log(`location.state`, location.state)
         return (
             <>
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />

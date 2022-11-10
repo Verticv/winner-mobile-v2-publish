@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import BankTable from '../BankTable'
 // import NavBottom from '../NavBottom'
 // import BottomNavbar from '../bottomNavbar/BottomNavbar'
@@ -10,10 +11,17 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
 
     const [inputClicked, setInputClicked] = useState(false)
     const [secondInputClicked, SecondInputClicked] = useState(false)
+    const navigate = useNavigate()
 
     useEffect(() => {
-        setSubActiveButton('/mypage/money/exchange/currency')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/money/exchange')
+            setSubActiveButton('/mypage/money/exchange/currency')
+        }
+        return (() => {
+            setSubActiveButton('/mypage/money/exchange/currency')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     var nf = new Intl.NumberFormat();
 

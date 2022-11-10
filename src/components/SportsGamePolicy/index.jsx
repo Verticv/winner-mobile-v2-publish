@@ -450,9 +450,16 @@ const SportsGamePolicy = ({ setSelectedTab, subActiveButton, setSubActiveButton 
     const location = useLocation();
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     console.log(`selectedSubTab`, selectedSubTab)
+    const navigate = useNavigate()
     useEffect(() => {
-        setSubActiveButton('/cscenter/all/policy/sportsgame/soccer')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/cscenter')
+            setSubActiveButton('/cscenter/all/policy/sportsgame/soccer')
+        }
+        return (() => {
+            setSubActiveButton('/cscenter/all/policy/sportsgame/soccer')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     const tabsArray = [
         { text: "축구", id: 0, path: "/cscenter/all/policy/sportsgame/soccer" },

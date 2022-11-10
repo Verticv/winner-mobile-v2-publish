@@ -13,7 +13,7 @@ import HorizontalSubMenu from '../HorizontalSubMenuDefault';
 // import HorizontalMenu from '../HorizontalMenu'
 import PowerLadderBetHistoryPanel from '../PowerLadderBetHistoryPanel'
 import KinoLadderBetHistoryPanel from '../KinoLadderBetHistoryPanel'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Pagination from '../Pagination'
 
 const subTabsArray = [
@@ -492,11 +492,17 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
     const [page, setPage] = useState(0)
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
+    const navigate = useNavigate()
+
     useEffect(() => {
-        if (subActiveButton) {
+        window.onpopstate = e => {
+            navigate('/mypage/bet-history')
             setSubActiveButton('/mypage/bet-history/all/minigame')
         }
-    }, [setSubActiveButton, subActiveButton]);
+        return (() => {
+            setSubActiveButton('/mypage/bet-history/all/minigame')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     return (
         <div className="LiveCasinoBetHistory">

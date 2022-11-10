@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 import SelectAllButton from '../SelectAllButton'
+import { useNavigate } from 'react-router-dom'
 // import ScrollButton from '../ScrollButton'
 
 const tableData = [
@@ -164,9 +165,17 @@ const MoneyChargeHistory = ({ subActiveButton, setSubActiveButton }) => {
     const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
     // var nf = new Intl.NumberFormat();
+    const navigate = useNavigate()
+    
     useEffect(() => {
-        setSubActiveButton('/mypage/money/charge/history')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/money')
+            setSubActiveButton('/mypage/money/charge/history')
+        }
+        return (() => {
+            setSubActiveButton('/mypage/money/charge/history')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     return (
         <div className="flex flex-col items-center MoneyChargeHistory">

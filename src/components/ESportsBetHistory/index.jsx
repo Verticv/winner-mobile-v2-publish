@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import DateSearchBar from '../DateSearchBar'
 // import SubHorizontalMenu from './SubHorizontalMenu'
 // import ScrollButton from 'components/common/ScrollButton'
@@ -30,12 +31,17 @@ import DateSearchBar from '../DateSearchBar'
 
 const ESportsBetHistory = ({ isState = 0, setState, showSub = false, isPopup = false, subActiveButton, setSubActiveButton }) => {
 
+    const navigate = useNavigate()
+
     useEffect(() => {
-        if (subActiveButton) {
+        window.onpopstate = e => {
+            navigate('/mypage/bet-history')
             setSubActiveButton('/mypage/bet-history/all/e-sports')
         }
-    }, [setSubActiveButton, subActiveButton]);
-
+        return (() => {
+            setSubActiveButton('/mypage/bet-history/all/e-sports')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     return (
         <div className="">

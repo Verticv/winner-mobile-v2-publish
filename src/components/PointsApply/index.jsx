@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PopupControls from '../popups/PopupControls';
 import PointsApplyPopup from '../popups/PointsApplyPopup';
 import WarningMessage from '../WarningMessage'
+import { useNavigate } from 'react-router-dom';
 // import img18 from '../../img16.png'
 
 const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
@@ -10,12 +11,21 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
     const [isPopupOpen, setPopupOpen] = useState(true)
     var nf = new Intl.NumberFormat();
 
+    const navigate = useNavigate()
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+
     useEffect(() => {
-        setSubActiveButton('/mypage/points/all');
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/points')
+            setSubActiveButton('/mypage/points/all');
+        }
+        return (() => {
+            setSubActiveButton('/mypage/points/all');
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     const detailButton = (
         <div
