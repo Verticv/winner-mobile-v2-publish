@@ -38,6 +38,7 @@ import DistributorPage from './components/DistributorPage';
 import AuthenticationPage from './components/AuthenticationPage';
 import BetCombinationPage from './components/BetCombinationPage';
 import MinigamesPage from './components/MinigamesPage';
+import ScrollToTop from './helpers/scrollToTop';
 // import img from './1.png';
 
 function App() {
@@ -98,6 +99,7 @@ function App() {
         />
       </Helmet> */}
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route
             path="/live-casino"
