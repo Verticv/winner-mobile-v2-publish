@@ -496,8 +496,11 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/bet-history')
-            setSubActiveButton('/mypage/bet-history/all/minigame')
+
+            setTimeout(() => {
+                navigate('/mypage/bet-history')
+                setSubActiveButton('/mypage/bet-history/all/minigame')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/bet-history/all/minigame')

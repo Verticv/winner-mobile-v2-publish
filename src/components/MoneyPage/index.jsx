@@ -9,8 +9,8 @@ import MoneyChargeHistory from '../MoneyChargeHistory'
 // import NoticeBanner from 'components/mainPage/NoticeBanner'
 // import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu'
 import HorizontalMenu1 from '../HorizontalMenu1'
-import React, { useState } from 'react'
-import { Route, Routes } from 'react-router'
+import React, { useEffect, useState } from 'react'
+import { Route, Routes, useNavigate } from 'react-router'
 // import MoneyChargeBanner from '../images/money/money_charge.png'
 // import MoneyExchangeBanner from '../images/money/money_exchange.png'
 // import Icon1 from '../images/money/leftMenu/icon_1.png'
@@ -61,7 +61,7 @@ const LeftMenuSubArray = [
 
 
 
-const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubActiveButton }) => {
+const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubActiveButton, setActiveButton }) => {
 
     // const LeftMenuArray = [
     //     { text: "보유머니 충전", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/money/charge", mainPath: "/mypage/money/charge" },
@@ -73,6 +73,20 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubA
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     console.log(selectedSubTab, selectedTab)
+
+    const navigate = useNavigate()
+    useEffect(() => {
+        window.onpopstate = e => {
+
+            setTimeout(() => {
+                navigate('/mypage')
+                setActiveButton('/mypage/mypage/money')
+            }, 0)
+        }
+        return (() => {
+            setActiveButton('/mypage/mypage/money')
+        })
+    }, [setActiveButton, navigate]);
 
     const MyInfo = () => {
         return (
@@ -159,7 +173,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubA
                                     element={
                                         <>
                                             <div style={{ marginTop: '1rem' }}>
-                                                <MoneyChargeHistory subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}/>
+                                                <MoneyChargeHistory subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                             </div>
                                             < NavBottom />
                                         </>

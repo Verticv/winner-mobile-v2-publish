@@ -29,8 +29,11 @@ const Sports1 = ({ paddingLeft, subActiveButton, setSubActiveButton }) => {
     const navigate = useNavigate()
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/gameresults')
-            setSubActiveButton('/mypage/gameresults/all')
+
+            setTimeout(() => {
+                navigate('/mypage/gameresults')
+                setSubActiveButton('/mypage/gameresults/all')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/gameresults/all')

@@ -19,8 +19,11 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/points')
-            setSubActiveButton('/mypage/points/all');
+
+            setTimeout(() => {
+                navigate('/mypage/points')
+                setSubActiveButton('/mypage/points/all');
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/points/all');

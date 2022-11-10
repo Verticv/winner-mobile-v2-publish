@@ -40,7 +40,8 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated, subActiveB
     useEffect(() => {
         window.onpopstate = e => {
             if (window.location.pathname !== '/mypage') {
-                navigate("/mypage", { state: { path } })
+                setTimeout(navigate("/mypage", { state: { path } }), 0)
+                
             }
         }
         return () => { }

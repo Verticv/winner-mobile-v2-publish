@@ -166,11 +166,14 @@ const MoneyChargeHistory = ({ subActiveButton, setSubActiveButton }) => {
     const [isAllSelected, setAllSelected] = useState(false)
     // var nf = new Intl.NumberFormat();
     const navigate = useNavigate()
-    
+
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/money')
-            setSubActiveButton('/mypage/money/charge/history')
+
+            setTimeout(() => {
+                navigate('/mypage/money')
+                setSubActiveButton('/mypage/money/charge/history')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/money/charge/history')

@@ -453,8 +453,11 @@ const SportsGamePolicy = ({ setSelectedTab, subActiveButton, setSubActiveButton 
     const navigate = useNavigate()
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/cscenter')
-            setSubActiveButton('/cscenter/all/policy/sportsgame/soccer')
+            setTimeout(() => {
+                navigate('/cscenter')
+                setSubActiveButton('/cscenter/all/policy/sportsgame/soccer')
+            }, 0)
+
         }
         return (() => {
             setSubActiveButton('/cscenter/all/policy/sportsgame/soccer')
@@ -478,7 +481,7 @@ const SportsGamePolicy = ({ setSelectedTab, subActiveButton, setSubActiveButton 
             <div style={{ margin: '1.875rem', marginTop: '0', marginBottom: '2.1rem' }}>
                 <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
             </div>
-            <div className="w-full flex relative top-0" style={{ position: 'relative'}}>
+            <div className="w-full flex relative top-0" style={{ position: 'relative' }}>
                 <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
                 <div style={{ paddingLeft: '1.875rem', overflowX: 'scroll' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">

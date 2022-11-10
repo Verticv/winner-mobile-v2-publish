@@ -268,8 +268,11 @@ const SlotBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/bet-history')
-            setSubActiveButton(path)
+
+            setTimeout(() => {
+                navigate('/mypage/bet-history')
+                setSubActiveButton(path)
+            }, 0)
         }
         return (() => {
             setSubActiveButton(path)
@@ -286,7 +289,7 @@ const SlotBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false
                                 <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
                             </div>
                         </div>
-                        <div style={{ height: '10.8rem', top: '1.6rem'  }} className="nav-shadow absolute h-full left-0 z-50"></div>
+                        <div style={{ height: '10.8rem', top: '1.6rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
                     </div>
                 </>
 

@@ -14,8 +14,11 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/money')
-            setSubActiveButton('/mypage/money/charge')
+
+            setTimeout(() => {
+                navigate('/mypage/money')
+                setSubActiveButton('/mypage/money/charge')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/money/charge')

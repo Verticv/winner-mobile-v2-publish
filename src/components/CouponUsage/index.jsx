@@ -936,8 +936,11 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
     const Usage = () => {
         useEffect(() => {
             window.onpopstate = e => {
-                navigate('/mypage/coupon')
+                
+                setTimeout(() => {
+                    navigate('/mypage/coupon')
                 setSubActiveButton('/mypage/coupon/all')
+                }, 0)
             }
 
             return (() => {
@@ -974,8 +977,11 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
         useEffect(() => {
             window.onpopstate = e => {
-                navigate('/mypage/coupon')
+                
+                setTimeout(() => {
+                    navigate('/mypage/coupon')
                 setSubActiveButton('/mypage/coupon/all/coupon-gift')
+                }, 0)
             }
 
             return (() => {
@@ -1031,8 +1037,11 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
         useEffect(() => {
             window.onpopstate = e => {
-                navigate('/mypage/coupon')
+                
+                setTimeout(() => {
+                    navigate('/mypage/coupon')
                 setSubActiveButton('/mypage/coupon/all/coupon-history')
+                }, 0)
             }
 
             return (() => {

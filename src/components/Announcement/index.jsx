@@ -103,11 +103,13 @@ const Announcement = ({
         new Array(inboxArray.length).fill(false)
     );
     const navigate = useNavigate()
-    
+
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/cscenter')
-            setSubActiveButton('/cscenter/all/announcement')
+            setTimeout(() => {
+                navigate('/cscenter')
+                setSubActiveButton('/cscenter/all/announcement')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/cscenter/all/announcement')

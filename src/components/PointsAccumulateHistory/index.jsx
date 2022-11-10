@@ -226,7 +226,7 @@ const tableData = [
 // )
 
 
-const PointsAccumulateHistory = ({ SubMenuList, subActiveButton, setSubActiveButton  }) => {
+const PointsAccumulateHistory = ({ SubMenuList, subActiveButton, setSubActiveButton }) => {
     const [page, setPage] = useState(0)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
@@ -237,8 +237,11 @@ const PointsAccumulateHistory = ({ SubMenuList, subActiveButton, setSubActiveBut
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/points')
-            setSubActiveButton('/mypage/points/all/points-accumulate-history')
+
+            setTimeout(() => {
+                navigate('/mypage/points')
+                setSubActiveButton('/mypage/points/all/points-accumulate-history')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/points/all/points-accumulate-history')
