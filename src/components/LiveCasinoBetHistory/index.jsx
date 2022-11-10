@@ -237,8 +237,8 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
     const navigate = useNavigate()
 
     useEffect(() => {
+        window.addEventListener('popstate');
         window.onpopstate = e => {
-
             setTimeout(() => {
                 navigate('/mypage/bet-history')
                 setSubActiveButton(path)
@@ -246,6 +246,7 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
         }
         return (() => {
             setSubActiveButton(path)
+            window.removeEventListener('popstate')
         })
     }, [setSubActiveButton, path, subActiveButton, navigate]);
 
