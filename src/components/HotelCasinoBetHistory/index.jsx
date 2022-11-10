@@ -235,11 +235,14 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     // const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
     const navigate = useNavigate()
-    
+
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/bet-history')
-            setSubActiveButton('/mypage/bet-history/all/hotel-casino')
+
+            setTimeout(() => {
+                navigate('/mypage/bet-history')
+                setSubActiveButton('/mypage/bet-history/all/hotel-casino')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/bet-history/all/hotel-casino')

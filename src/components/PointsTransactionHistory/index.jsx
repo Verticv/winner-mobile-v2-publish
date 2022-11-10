@@ -155,7 +155,7 @@ const tableData = [
 
 
 
-const PointsTransactionHistory = ({ SubMenuList,  subActiveButton, setSubActiveButton  }) => {
+const PointsTransactionHistory = ({ SubMenuList, subActiveButton, setSubActiveButton }) => {
     const [page, setPage] = useState(0)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
@@ -167,8 +167,11 @@ const PointsTransactionHistory = ({ SubMenuList,  subActiveButton, setSubActiveB
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/points')
-            setSubActiveButton('/mypage/points/all/points-transaction-history')
+
+            setTimeout(() => {
+                navigate('/mypage/points')
+                setSubActiveButton('/mypage/points/all/points-transaction-history')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/points/all/points-transaction-history')

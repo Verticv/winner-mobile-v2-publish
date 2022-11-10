@@ -9,11 +9,14 @@ const SportsBetHistory = ({ checkedState, setCheckedState, showSub = true, attac
 
     const [isAllSelected, setAllSelected] = useState(false)
     const navigate = useNavigate()
-    
+
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/bet-history')
-            setSubActiveButton('/mypage/bet-history/all/sports')
+
+            setTimeout(() => {
+                navigate('/mypage/bet-history')
+                setSubActiveButton('/mypage/bet-history/all/sports')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/bet-history/all/sports')

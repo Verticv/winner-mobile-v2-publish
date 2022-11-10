@@ -15,8 +15,11 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/money/exchange')
-            setSubActiveButton('/mypage/money/exchange/currency')
+
+            setTimeout(() => {
+                navigate('/mypage/money/exchange')
+                setSubActiveButton('/mypage/money/exchange/currency')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/money/exchange/currency')

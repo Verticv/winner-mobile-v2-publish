@@ -23,8 +23,11 @@ const MinigameTab = ({ paddingLeft, subActiveButton, setSubActiveButton }) => {
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/gameresults')
-            setSubActiveButton('/mypage/gameresults/minigame/powerball')
+
+            setTimeout(() => {
+                navigate('/mypage/gameresults')
+                setSubActiveButton('/mypage/gameresults/minigame/powerball')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/gameresults/minigame/powerball')

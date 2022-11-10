@@ -144,8 +144,11 @@ const MoneyExchangeHistory = ({ subActiveButton, setSubActiveButton }) => {
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/money/exchange')
-            setSubActiveButton('/mypage/money/exchange/currency/history')
+
+            setTimeout(() => {
+                navigate('/mypage/money/exchange')
+                setSubActiveButton('/mypage/money/exchange/currency/history')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/mypage/money/exchange/currency/history')

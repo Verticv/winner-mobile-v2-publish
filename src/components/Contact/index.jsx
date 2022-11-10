@@ -115,15 +115,17 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
     );
     const navigate = useNavigate();
 
-        
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/cscenter')
-            setSubActiveButton('/cscenter/all/contact/all')
+            setTimeout(() => {
+                navigate('/cscenter')
+                setSubActiveButton('/cscenter/all/contact/all')
+            }, 0)
         }
         return (() => {
             setSubActiveButton('/cscenter/all/contact/all')
@@ -132,7 +134,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
 
     return (
         <div className='contact-container'>
-            <div className="w-full flex relative top-0" style={{ position: 'relative'}}>
+            <div className="w-full flex relative top-0" style={{ position: 'relative' }}>
                 <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
 
                 <div id='scroll-wrapper12' style={{ paddingLeft: '1.875rem', overflowX: 'scroll', display: 'flex', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">

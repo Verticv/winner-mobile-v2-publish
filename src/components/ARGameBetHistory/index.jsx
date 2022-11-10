@@ -125,11 +125,15 @@ const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = fal
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const navigate = useNavigate()
-    
+
     useEffect(() => {
         window.onpopstate = e => {
-            navigate('/mypage/bet-history')
-            setSubActiveButton('/mypage/bet-history/all/ar-game')
+            setTimeout(() => {
+                navigate('/mypage/bet-history')
+                setSubActiveButton('/mypage/bet-history/all/ar-game')
+            }, 0)
+
+
         }
         return (() => {
             setSubActiveButton('/mypage/bet-history/all/ar-game')
