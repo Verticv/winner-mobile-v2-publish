@@ -237,16 +237,23 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
     const navigate = useNavigate()
 
     useEffect(() => {
-        window.addEventListener('popstate');
-        window.onpopstate = e => {
+
+        function test() {
             setTimeout(() => {
-                navigate('/mypage/bet-history')
-                setSubActiveButton(path)
-            }, 0)
+            navigate('/mypage/bet-history')
+            setSubActiveButton(path)
+            },0)
         }
+        window.addEventListener('popstate', test);
+        // window.onpopstate = e => {
+        //     setTimeout(() => {
+        //         navigate('/mypage/bet-history')
+        //         setSubActiveButton(path)
+        //     }, 0)
+        // }
         return (() => {
             setSubActiveButton(path)
-            window.removeEventListener('popstate')
+            window.removeEventListener('popstate',test)
         })
     }, [setSubActiveButton, path, subActiveButton, navigate]);
 
