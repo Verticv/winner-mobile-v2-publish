@@ -7,13 +7,6 @@ import ContactTable from '../ContactTable';
 import Search from '../Search'
 
 const Contact = ({ subActiveButton, setSubActiveButton }) => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
-    useEffect(() => {
-        setSubActiveButton('/cscenter/all/contact/all')
-    }, [setSubActiveButton]);
 
     const tabsArray = [
         { text: "전체", id: 0, width: '11.5625rem', path: "/cscenter/all/contact/all" },
@@ -121,6 +114,21 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
         new Array(inboxArray.length).fill(false)
     );
     const navigate = useNavigate();
+
+        
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        window.onpopstate = e => {
+            navigate('/cscenter')
+            setSubActiveButton('/cscenter/all/contact/all')
+        }
+        return (() => {
+            setSubActiveButton('/cscenter/all/contact/all')
+        })
+    }, [setSubActiveButton, navigate]);
 
     return (
         <div className='contact-container'>

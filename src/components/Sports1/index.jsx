@@ -10,6 +10,7 @@ import Icon8 from '../../assets/gameresults/8.png'
 import HorizontalMenu13 from '../HorizontalMenu13'
 import subInactive from '../../assets/gameresults/sub-inactive.png';
 import subActive from '../../assets/gameresults/sub-active.png';
+import { useNavigate } from 'react-router-dom'
 
 const tabsArray = [
     { text: "전체", icon: Icon1, id: 0, number: 854, subInactive: subInactive, subActive: subActive, path: '#' },
@@ -25,10 +26,16 @@ const tabsArray = [
 
 const Sports1 = ({ paddingLeft, subActiveButton, setSubActiveButton }) => {
     const [selectedTab, setSelectedTab] = useState(0)
-
+    const navigate = useNavigate()
     useEffect(() => {
-        setSubActiveButton('/mypage/gameresults/all')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/gameresults')
+            setSubActiveButton('/mypage/gameresults/all')
+        }
+        return (() => {
+            setSubActiveButton('/mypage/gameresults/all')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     console.log(selectedTab)
 

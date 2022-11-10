@@ -167,16 +167,11 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                             <Route path="/announcement"
                                 element={
                                     <>
-                                        {useEffect(() => {
-                                            setSubActiveButton('/cscenter/all/announcement')
-                                        }, [setSubActiveButton])
-                                        }
-
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                         <div id='container-nav'>
                                             <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                         </div>
-                                        <Announcement />
+                                        <Announcement setSubActiveButton={setSubActiveButton} />
                                     </>
                                 }
                             />
@@ -184,7 +179,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                 element={
                                     <>
                                         {useEffect(() => {
-                                            setSubActiveButton('/cscenter/all/announcement')
+                                            setSubActiveButton('/cscenter')
                                         }, [setSubActiveButton])
                                         }
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />

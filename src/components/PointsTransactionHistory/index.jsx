@@ -2,6 +2,7 @@ import Pagination from '../Pagination'
 import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
+import { useNavigate } from 'react-router-dom'
 // import ScrollButton from '../ScrollButton'
 
 const tableData = [
@@ -158,14 +159,21 @@ const PointsTransactionHistory = ({ SubMenuList,  subActiveButton, setSubActiveB
     const [page, setPage] = useState(0)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
+    const navigate = useNavigate()
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     useEffect(() => {
-        setSubActiveButton('/mypage/points/all/points-transaction-history')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/points')
+            setSubActiveButton('/mypage/points/all/points-transaction-history')
+        }
+        return (() => {
+            setSubActiveButton('/mypage/points/all/points-transaction-history')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     return (
         <div className="flex flex-col items-center">

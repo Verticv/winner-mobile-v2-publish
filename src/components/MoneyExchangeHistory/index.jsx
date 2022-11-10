@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 import SelectAllButton from '../SelectAllButton'
+import { useNavigate } from 'react-router-dom'
 // import ScrollButton from 'components/common/ScrollButton'
 
 const tableData = [
@@ -138,10 +139,18 @@ const MoneyExchangeHistory = ({ subActiveButton, setSubActiveButton }) => {
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
+    const navigate = useNavigate()
     // var nf = new Intl.NumberFormat();
+
     useEffect(() => {
-        setSubActiveButton('/mypage/money/exchange/currency/history')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/money/exchange')
+            setSubActiveButton('/mypage/money/exchange/currency/history')
+        }
+        return (() => {
+            setSubActiveButton('/mypage/money/exchange/currency/history')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     return (
         <div className="flex flex-col items-center">

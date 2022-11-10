@@ -17,6 +17,7 @@ import Icon11 from '../../assets/ar-game/11.png';
 import Icon12 from '../../assets/ar-game/12.png';
 import HorizontalSubMenu from '../HorizontalSubMenuDefault'
 import './_argame.scss'
+import { useNavigate } from 'react-router-dom';
 
 const subTabsArray = [
     { text: "전체", icon: Icon1, id: 0, width: '19.375rem', marginIcon: '', path: '#' },
@@ -123,12 +124,17 @@ const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = fal
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
-
+    const navigate = useNavigate()
+    
     useEffect(() => {
-        if (subActiveButton) {
+        window.onpopstate = e => {
+            navigate('/mypage/bet-history')
             setSubActiveButton('/mypage/bet-history/all/ar-game')
         }
-    }, [setSubActiveButton, subActiveButton]);
+        return (() => {
+            setSubActiveButton('/mypage/bet-history/all/ar-game')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
 
     return (

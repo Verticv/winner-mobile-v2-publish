@@ -14,6 +14,7 @@ import Icon4 from '../../assets/myPage/second-btns/icon6.png'
 // import Icon10 from '../../assets/myPage/second-btns/8.png'
 import activeBG from '../../assets/myPage/second-btns/active-bg.png'
 import HorizontalSubMenu from '../HorizontalSubMenuDefault'
+import { useNavigate } from 'react-router-dom'
 // import img22 from '../../img22.png'
 
 const subTabsArray = [
@@ -233,10 +234,18 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     // const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
-
+    const navigate = useNavigate()
+    
     useEffect(() => {
-        setSubActiveButton('/mypage/bet-history/all/hotel-casino')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/bet-history')
+            setSubActiveButton('/mypage/bet-history/all/hotel-casino')
+        }
+        return (() => {
+            setSubActiveButton('/mypage/bet-history/all/hotel-casino')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
+
     return (
         <div className="LiveCasinoBetHistory">
             {showSub === true && (

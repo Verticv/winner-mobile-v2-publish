@@ -7,12 +7,20 @@ import BankTable from '../BankTable'
 import WarningMessage from '../WarningMessage'
 import info from '../../assets/mainPage/icons/info.png';
 import AlertIcon from '../../assets/mainPage/icons/warning.png'
+import { useNavigate } from 'react-router-dom'
 
 const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
+    const navigate = useNavigate()
 
     useEffect(() => {
-        setSubActiveButton('/mypage/money/charge')
-    }, [setSubActiveButton]);
+        window.onpopstate = e => {
+            navigate('/mypage/money')
+            setSubActiveButton('/mypage/money/charge')
+        }
+        return (() => {
+            setSubActiveButton('/mypage/money/charge')
+        })
+    }, [setSubActiveButton, subActiveButton, navigate]);
 
     // const [page, setPage] = useState(0)
     const [inputValue, setInputValue] = useState(null)

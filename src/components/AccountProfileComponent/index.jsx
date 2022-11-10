@@ -37,6 +37,16 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated, subActiveB
         setWinImage(big_3)
     }, []);
 
+    useEffect(() => {
+        window.onpopstate = e => {
+            if (window.location.pathname !== '/mypage') {
+                navigate("/mypage", { state: { path } })
+            }
+        }
+        return () => { }
+    }, [])
+
+
     const InboxButton = (
         <button
             onClick={() => navigate("/mypage/inbox")}

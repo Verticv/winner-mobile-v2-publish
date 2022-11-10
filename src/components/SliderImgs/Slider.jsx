@@ -4,6 +4,7 @@ import dataSlider from './dataSlider';
 import visual from '../../assets/visual.png';
 // import { useNavigate } from 'react-router-dom';
 import visual2 from '../../assets/visual2.png';
+import { useEffect } from 'react';
 
 export default function Slider() {
 
@@ -30,13 +31,24 @@ export default function Slider() {
     const moveDot = index => {
         setSlideIndex(index)
     }
-    setTimeout(() => {
-        if (slideIndex === 1) {
-            setSlideIndex(2);
-        } else if (slideIndex === 2) {
-            setSlideIndex(1);
-        }
-    }, 5000);
+    
+	useEffect(
+		() => {
+			let timer1 = setTimeout(() => {
+					if (slideIndex === 1) {
+						setSlideIndex(2)
+					} else {
+						setSlideIndex(1)
+					}
+			}, 5000);
+			return () => {
+				clearTimeout(timer1);
+			};
+		},
+		[slideIndex]
+	);
+
+
 
     // const navigate = useNavigate();
     return (
