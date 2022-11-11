@@ -58,7 +58,7 @@ const DateSearchBar = ({
                     />
                     <input
                         placeholder="팀명검색"
-                        className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
+                        className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b placeholder-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
                         onFocus={() => {
                             const menu = document.querySelector('#main-menu');
                             menu.style.marginBottom = '-14.075rem'
@@ -83,7 +83,7 @@ const DateSearchBar = ({
                     <input
                         style={{ marginLeft: '2rem' }}
                         placeholder="팀명검색"
-                        className="place-color-grey placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
+                        className="place-color-grey placeholder:text-gray-r7b7b7b placeholder-gray-r7b7b7b flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
                         onFocus={() => {
                             const menu = document.querySelector('#main-menu');
                             menu.style.marginBottom = '-14.075rem'
