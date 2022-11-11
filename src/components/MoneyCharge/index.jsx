@@ -48,9 +48,9 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                 title='확인 / 필독사항'
                 message1='입금 시 반드시 회원님의 성함으로 입금 바랍니다.'
                 isFirstMessageDark
-                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 점검 시간을 피해 신청해 주시기 바랍니다.'
+                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 점검 시간을 피해 신청해 주시기 바랍니다.'
                 mr2='11rem'
-                message3='입금계좌는 수시로 변경되오니 &nbsp;반드시 계좌번호 문의 신청을 &nbsp; &nbsp; &nbsp; &nbsp; 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.'
+                message3='입금계좌는 수시로 변경되오니 &nbsp;반드시 계좌번호 문의 신청을 &nbsp; &nbsp; &nbsp; &nbsp;통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.'
                 mr3='4.875rem'
                 message4='&nbsp;자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
             />
@@ -391,13 +391,13 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                 style={{ height: '7.3125rem', width: '22.6rem', padding: '0.1875rem', marginRight: '', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', borderRadius: '0.6rem' }}
                             >
                                 <button
-                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
+                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '', display: 'flex', alignItems: 'center' }}
                                     onClick={() => setRadioValue("1")}
                                     className="hover"
                                 >
-                                    <div style={{ display: 'flex', alignItems: 'baseline' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', width: '100%', height: '100%' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '8.9rem' }}>
-                                            <label style={{ marginTop: '0.4rem', marginRight: '4.1rem' }}>
+                                            <label style={{ marginTop: '0.4rem', marginRight: '4.1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                                 <input
                                                     className='w-12 h-12'
                                                     type="checkbox"
@@ -421,13 +421,13 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                 }}
                             >
                                 <button
-                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
+                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '' }}
                                     onClick={() => setRadioValue("2")}
                                     className="hover"
                                 >
-                                    <div style={{ display: 'flex', alignItems: 'baseline' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', width: '100%', height: '100%' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '9.9rem' }}>
-                                            <label style={{ marginTop: '0.4rem', marginRight: '4.1rem' }}>
+                                            <label style={{ marginTop: '0.4rem', marginRight: '4.1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                                 <input
                                                     className='w-12 h-12'
                                                     type="checkbox"
@@ -446,13 +446,13 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                 style={{ height: '7.3125rem', width: '22.6rem', padding: '0.1875rem', marginLeft: '0.8rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', borderRadius: '0.6rem' }}
                             >
                                 <button
-                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
+                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '' }}
                                     onClick={() => setRadioValue("3")}
                                     className="hover"
                                 >
-                                    <div style={{ display: 'flex', alignItems: 'baseline' }}>
-                                        <div style={{ paddingLeft: '1.7875rem', width: '6.5rem' }}>
-                                            <label style={{ marginTop: '0.4rem', marginRight: '4.1rem' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', width: '100%', height: '100%' }}>
+                                        <div style={{ paddingLeft: '1.7875rem', width: '5.9rem' }}>
+                                            <label style={{ marginTop: '0.4rem', marginRight: '1.1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                                 <input
                                                     className='w-12 h-12'
                                                     type="checkbox"
@@ -473,13 +473,13 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                 style={{ height: '7.3125rem', width: '22.6rem', padding: '0.1875rem', marginRight: '', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', borderRadius: '0.6rem' }}
                             >
                                 <button
-                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
+                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '' }}
                                     onClick={() => setRadioValue("4")}
                                     className="hover"
                                 >
-                                    <div style={{ display: 'flex', alignItems: 'baseline' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', width: '100%', height: '100%' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '8.9rem' }}>
-                                            <label style={{ marginTop: '0.4rem', marginRight: '4.1rem' }}>
+                                            <label style={{ marginTop: '0.4rem', marginRight: '4.1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                                 <input
                                                     className='w-12 h-12'
                                                     type="checkbox"
@@ -503,13 +503,13 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                 }}
                             >
                                 <button
-                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #98351e, #bd4d33 50%, #df6345)', paddingTop: '0.8rem' }}
+                                    style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #98351e, #bd4d33 50%, #df6345)', paddingTop: '' }}
                                     onClick={() => setRadioValue("5")}
                                     className="hover"
                                 >
-                                    <div style={{ display: 'flex', alignItems: 'baseline' }}>
+                                    <div style={{ display: 'flex',  alignItems: 'center', width: '100%', height: '100%' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '8.8rem' }}>
-                                            <label style={{ marginTop: '0.4rem', marginRight: '4.1rem' }}>
+                                            <label style={{ marginTop: '0.4rem', marginRight: '4.1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                                 <input
                                                     className='w-12 h-12'
                                                     type="checkbox"
