@@ -20,8 +20,8 @@ import { useNavigate } from 'react-router-dom'
 const subTabsArray = [
     { text: "전체", icon: Icon1, id: 0, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
     { text: "보타카지노", icon: Icon2, id: 1, activeBG: activeBG, width: '19.375rem', path: '#' },
-    { text: "호텔카지노", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
-    { text: "호텔카지노", icon: Icon4, id: 3, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "준비중", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
+    { text: "준비중", icon: Icon4, id: 3, activeBG: activeBG, width: '19.375rem', path: '#' },
     // { text: "드림게이밍", icon: Icon8, id: 4, activeBG: activeBG, width: '19.375rem', path: '#' },
     // { text: "섹시게이밍", icon: Icon9, id: 5, activeBG: activeBG, width: '19.375rem', path: '#' },
     // { text: "빅게이밍", icon: Icon10, id: 6, activeBG: activeBG, width: '19.375rem', path: '#' },

@@ -17,10 +17,10 @@ import { Route, Routes } from 'react-router'
 // import Icon2 from '../images/money/leftMenu/icon_2.png'
 // import IconHighlight1 from '../images/money/leftMenu/icon_1_highlight.png'
 // import IconHighlight2 from '../images/money/leftMenu/icon_2_highlight.png'
-import activeIcon1 from '../../assets/mainPage/icons/recharge-application.png';
-import activeIcon2 from '../../assets/mainPage/icons/active-icon2.png';
-import Icon2 from '../../assets/mainPage/icons/charging-history.png';
-import Icon1 from '../../assets/mainPage/icons/Icon1.png';
+import activeIcon1 from '../../assets/mainPage/icons/recharge-application2.png';
+import activeIcon2 from '../../assets/mainPage/icons/active-icon22.png';
+import Icon2 from '../../assets/mainPage/icons/charging-history2.png';
+import Icon1 from '../../assets/mainPage/icons/Icon12.png';
 // import subIcon1 from '../images/newImages/mainPage/money/1.png';
 // import subIcon2 from '../images/newImages/mainPage/money/2.png';
 // import Logo from "../images/newImages/mainPage/icons/logo.png";

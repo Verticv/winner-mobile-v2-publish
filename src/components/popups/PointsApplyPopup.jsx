@@ -10,9 +10,9 @@ const PointsApplyPopup = ({ setPopupOpen }) => {
     const [inputValue, setInputValue] = useState(null)
 
     return (
-        <div style={{ width: '72.125rem', maxWidth: '1154px', borderRadius: '3rem', background: '#323232', marginTop: '10.8rem', height: '78.1875rem' }} className="flex flex-col rounded-lg overflow-hidden">
+        <div style={{ width: '72.125rem', maxWidth: '1154px', borderRadius: '3rem', background: '#323232', marginTop: '10.8rem', height: '78.1875rem', padding: '0.1875rem' }} className="flex flex-col rounded-lg overflow-hidden">
 
-            <div style={{ height: '9.3125rem', background: '#272726', borderTopLeftRadius: '3.6rem', borderTopRightRadius: '3.6rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', }} className="relative bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
+            <div style={{ height: '9.3125rem', background: '#272726', borderTopLeftRadius: '3rem', borderTopRightRadius: '3rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', }} className="relative bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
                 <label style={{ fontSize: '3.75rem', color: '#ad9e8c', fontFamily: 'SpoqaHanSansNeoBold', marginTop: '0.7rem', letterSpacing: '-0.1rem', marginLeft: '-0.4rem' }} className="font-spoqaBold text-white tracking-tight">포인트 전환 신청</label>
                 <button style={{ marginRight: '4.4375rem', position: 'absolute', right: '0', background: 'bottom', marginTop: '0.6rem' }} className="absolute right-0 cursor-pointer z-20 hover:opacity-75" onClick={() => setPopupOpen(false)}>
                     <img style={{ width: '3.1875rem', height: '3.1875rem' }} className="hover" src={CloseIcon} alt="close_icon" />
@@ -69,7 +69,7 @@ const PointsApplyPopup = ({ setPopupOpen }) => {
                             className="hover"
                         >
                             <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                                <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>포인트전환</span>
+                                <span style={{ fontSize: '2.8125rem', color: '#ffffff', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>포인트전환</span>
                             </div>
                         </button>
                     </div>
@@ -82,7 +82,7 @@ const PointsApplyPopup = ({ setPopupOpen }) => {
                             onClick={() => navigate('/mypage/points/all/points-transaction-history')}
                         >
                             <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                                <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>상세내역</span>
+                                <span style={{ fontSize: '2.8125rem', color: '#ffffff', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>상세내역</span>
                             </div>
                         </button>
                     </div>
