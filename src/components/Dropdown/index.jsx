@@ -52,7 +52,7 @@ const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelecti
                         width: '15rem'
                     }}
                 >
-                    <div className={`sort-by-p ${labelClasses} ${ddda ? 'ddda' : ''} `} style={labelStyle}><p>{sortValue}</p></div>
+                    <div className={`sort-by-p ${labelClasses} ${ddda ? 'ddda' : ''} `} style={labelStyle}><p className="placeholder:text-gray-r7b7b7b text-gray-r7b7b7b">{sortValue}</p></div>
                     {children}
                     {console.log('sortValue', sortValue)}
                 </div>
