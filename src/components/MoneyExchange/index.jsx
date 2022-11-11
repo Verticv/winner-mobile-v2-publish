@@ -270,7 +270,7 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
                                     onClick={() => setInputValue(inputValue + 300000)}
                                 >
                                     <div className="s-div">
-                                        <span>30만원</span>
+                                        <span className='shadow-to-text'>30만원</span>
                                     </div>
                                 </button>
                             </div>

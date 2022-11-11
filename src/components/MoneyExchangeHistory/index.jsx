@@ -178,7 +178,7 @@ const MoneyExchangeHistory = ({ subActiveButton, setSubActiveButton }) => {
                 <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
-            <div style={{ paddingBottom: '0.01rem' }}>
+            <div style={{ paddingBottom: '0.01rem', marginBottom: '-20rem' }}>
                 <Pagination page={page} setPage={setPage} />
             </div>
 

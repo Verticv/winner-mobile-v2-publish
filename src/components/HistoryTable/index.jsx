@@ -17,7 +17,8 @@ const HistoryTable = ({
     hasLeftInput = true,
     wideDetailButton = false,
     hasButton = true,
-    containerBackground
+    containerBackground,
+    isPointPage
 }) => {
 
     function Cells({ cards }) {
@@ -49,6 +50,10 @@ const HistoryTable = ({
             setCheckedState(updatedCheckedState);
         };
 
+        const truncate = (str, max, len) => {
+            return str.length > max ? str.substring(0, len) + "..." : str;
+        }
+
         return cards.map((card, index) => (
             <div style={{
                 minHeight: cardHeight, width: `${!hasButton ? '73.875rem' : ''}`,
@@ -62,7 +67,7 @@ const HistoryTable = ({
                 borderRadius: '1rem',
                 position: 'relative'
             }} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
-                <div style={{ borderRadius: '1rem', width: '100%', height: '100%', background: `${containerBackground && index % 2 ? '#2e2e2e' : '#323232'}`, paddingRight: '1.875rem', padding: '2.125rem', paddingLeft: '2.7rem', paddingTop: hasLeftInput ? (hasButton ? '2.8rem     ' : '3.3rem') : '2rem', display: 'flex', alignItems: 'center' }} className="flex flex-wrap items-center w-full h-full">
+                <div style={{ borderRadius: '1rem', width: '100%', height: '100%', background: `${containerBackground && index % 2 ? '#2e2e2e' : '#323232'}`, paddingRight: '1.875rem', padding: '2.125rem 2.7rem', paddingTop: hasLeftInput ? (hasButton ? '2.8rem     ' : '3.3rem') : '2rem', display: 'flex', alignItems: 'center' }} className="flex flex-wrap items-center w-full h-full">
                     {hasLeftInput && (
                         <div style={{ width: '5.8125rem', position: 'relative', marginRight: '-0.15rem', marginTop: '-0.2rem' }} className="relative text-left">
                             <label className="form-control">
@@ -75,7 +80,8 @@ const HistoryTable = ({
                             </label>
                         </div>
                     )}
-                    <div style={{ width: wideDetailButton ? '' : '52rem', lineHeight: '1.45' }}>
+                    {/* 52 */}
+                    <div style={{ width: wideDetailButton ? '' : '66rem', lineHeight: '1.45' }}>
                         {card.map((row, index) => {
                             let firstColumnColor = '#c8c8c8';
                             let secondColumnColor = '#c8c8c8';
@@ -104,10 +110,17 @@ const HistoryTable = ({
                                     firstColumnColor = row[0][firstRowKeysName[0]] === '사용가능' ? "#c65337" : "#7b7b7b"
                                 }
                                 return (
-                                    <div key={index} style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', color: firstColumnColor, letterSpacing: '-0.07rem', marginLeft: '0.15rem' }} className="w-full font-spoqa text-left text-gray-r7b7b7b">
+                                    <div key={index} style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', color: firstColumnColor, letterSpacing: '-0.07rem', marginLeft: '0.14rem', display: '', width: '100%' }} className="w-full font-spoqa text-left text-gray-r7b7b7b">
                                         <span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium' }}>{firstRowKeysName[0]} : </span>
-                                        <span className='font-spoqa' style={{ fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex', maxWidth: '40rem' }}>
-                                            {row[0][firstRowKeysName[0]]}
+                                        <span className='font-spoqa' style={{
+                                            fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex', maxWidth: firstRowKeysName[0] === '아이디' ? '15rem' : isPointPage ? '57rem' : '40rem',
+                                            overflow: firstRowKeysName[0] === '아이디' ? 'hidden' : '',
+                                            textOverflow: firstRowKeysName[0] === '아이디' ? 'ellipsis' : '',
+                                            whiteSpace: firstRowKeysName[0] === '아이디' ? 'nowrap' : '',
+                                        }}>
+                                            {firstRowKeysName[0] === '아이디' ? truncate(row[0][firstRowKeysName[0]], 12, 10) : row[0][firstRowKeysName[0]]}
+                                            {/* {row[0][firstRowKeysName[0]]} */}
+                                            {console.log(firstRowKeysName[0], 'firstRowKeysName[0]')}
                                         </span>
                                         {secondRowKeysName?.length > 0 && <><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '3.725rem' }}>{secondRowKeysName[0]} : </span><span style={{ fontFamily: 'SpoqaHanSansNeo', color: secondColumnColor }} className='text-blue-r0056a6'> {row[1][secondRowKeysName[0]]}</span></>}
                                     </div>

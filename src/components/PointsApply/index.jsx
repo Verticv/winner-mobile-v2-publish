@@ -238,7 +238,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                     onClick={() => setInputValue(inputValue + 1000)}
                                 >
                                     <div className="s-div">
-                                        <span>1천P</span>
+                                        <span className='shadow-to-text'>1천P</span>
                                     </div>
                                 </button>
                             </div>
@@ -253,7 +253,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                         className="s-div"
                                     //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
                                     >
-                                        <span>5천P</span>
+                                        <span className='shadow-to-text'>5천P</span>
                                     </div>
                                 </button>
                             </div>
@@ -265,7 +265,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                     onClick={() => setInputValue(inputValue + 10000)}
                                 >
                                     <div className="s-div">
-                                        <span className="font-spoqaMedium tracking-tight text-white">1만P</span>
+                                        <span className='shadow-to-text'>1만P</span>
                                     </div>
                                 </button>
                             </div>
@@ -278,7 +278,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                         className="s-div"
                                     //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
                                     >
-                                        <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">5만P</span>
+                                        <span style={{ fontSize: '2.625rem' }} className='shadow-to-text'>5만P</span>
                                     </div>
                                 </button>
                             </div>
@@ -293,7 +293,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                     onClick={() => setInputValue(inputValue + 100000)}
                                 >
                                     <div className="s-div">
-                                        <span>10만P</span>
+                                        <span className='shadow-to-text'>10만P</span>
                                     </div>
                                 </button>
                             </div>
@@ -308,7 +308,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                         className="s-div"
                                     //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
                                     >
-                                        <span>50만P</span>
+                                        <span className='shadow-to-text'>50만P</span>
                                     </div>
                                 </button>
                             </div>
@@ -320,7 +320,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                     onClick={() => setInputValue(inputValue + 1000000)}
                                 >
                                     <div className="s-div">
-                                        <span className="font-spoqaMedium tracking-tight text-white">100만P</span>
+                                        <span className='shadow-to-text'>100만P</span>
                                     </div>
                                 </button>
                             </div>
@@ -334,7 +334,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                         className="s-div"
                                     //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
                                     >
-                                        <span style={{ paddingRight: '0' }}>정정</span>
+                                        <span className='shadow-to-text' style={{ paddingRight: '0' }}>정정</span>
                                     </div>
                                 </button>
                             </div>
@@ -396,7 +396,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                     {/* <img src={img18} alt='' style={{ position: 'absolute', top: '0', opacity: '0.52' }} /> */}
                     <div style={{
                         background: '#000000cc', width: '100vw', height: '100vh', transform: 'translate(-50%)', left: '50%',
-                        position: 'fixed', margin: 'auto', display: 'flex', justifyContent: 'center'
+                        position: 'fixed', margin: 'auto', display: 'flex', justifyContent: 'center', top: '-1rem'
                     }}>
                         <PointsApplyPopup setPopupOpen={setPopupOpen} />
                     </div>
