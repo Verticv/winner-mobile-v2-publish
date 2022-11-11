@@ -107,7 +107,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated, subActiveButton,
 
                             <div className="flex flex-col items-start limit:items-center w-full h-full">
 
-                                <div style={{ padding: '1.875rem 1rem', paddingBottom: '1.875rem' }} className="w-full relative top-0">
+                                <div className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full"  id='container-nav'>
                                             <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isMoneyPage='true' />

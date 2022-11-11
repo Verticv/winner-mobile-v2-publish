@@ -48,11 +48,11 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                 title='확인 / 필독사항'
                 message1='입금 시 반드시 회원님의 성함으로 입금 바랍니다.'
                 isFirstMessageDark
-                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;점검 시간을 피해 신청해 주시기 바랍니다.'
+                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 점검 시간을 피해 신청해 주시기 바랍니다.'
                 mr2='11rem'
                 message3='입금계좌는 수시로 변경되오니 &nbsp;반드시 계좌번호 문의 신청을 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.'
                 mr3='4.875rem'
-                message4='자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
+                message4='&nbsp;자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
             />
 
             <div style={{
@@ -638,7 +638,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                     className="hover"
                 >
                     <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                        <span style={{ fontSize: '2.8125rem', color: '#ffffff', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className=''>신청하기</span>
+                        <span style={{ fontSize: '2.8125rem', color: '#d6f3ff', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className=''>신청하기</span>
                     </div>
                 </button>
             </div>

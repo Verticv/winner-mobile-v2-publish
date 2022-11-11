@@ -13,13 +13,13 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
         { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/contact/all/live-casino" },
         { text: "슬롯", id: 2, width: '11.5625rem', path: "/cscenter/all/contact/all/slot" },
         { text: "스포츠", id: 3, width: '13.4375rem', path: "/cscenter/all/contact/all/sports" },
-        { text: "호텔카지노", id: 10, width: '18.3125rem', path: "/cscenter/all/contact/all/e-sports1" },
-        { text: "e-스포츠", id: 4, width: '15.3125rem', path: "/cscenter/all/contact/all/e-sports" },
-        { text: "미니게임", id: 5, width: '15.3125rem', path: "/cscenter/all/contact/all/minigame" },
-        { text: "키론가상게임", width: '20.3125rem', id: 6, path: "/cscenter/all/contact/all/ar-game" },
-        { text: "충전/환전", width: '16.3125rem', id: 7, path: "/cscenter/all/contact/all/transaction" },
-        { text: "베팅관련", width: '15.3125rem', id: 8, path: "/cscenter/all/contact/all/about-betting" },
-        { text: "기타", width: '10.3125rem', id: 9, path: "/cscenter/all/contact/all/other" },
+        { text: "호텔카지노", id: 4, width: '18.3125rem', path: "/cscenter/all/contact/all/e-sports1" },
+        { text: "e-스포츠", id: 5, width: '15.3125rem', path: "/cscenter/all/contact/all/e-sports" },
+        { text: "미니게임", id: 6, width: '15.3125rem', path: "/cscenter/all/contact/all/minigame" },
+        { text: "키론가상게임", width: '20.3125rem', id: 7, path: "/cscenter/all/contact/all/ar-game" },
+        { text: "충전/환전", width: '16.3125rem', id: 8, path: "/cscenter/all/contact/all/transaction" },
+        { text: "베팅관련", width: '15.3125rem', id: 9, path: "/cscenter/all/contact/all/about-betting" },
+        { text: "기타", width: '10.3125rem', id: 10, path: "/cscenter/all/contact/all/other" },
     ];
 
     const inboxArray = [
@@ -139,7 +139,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
 
                 <div id='scroll-wrapper12' style={{ paddingLeft: '1.875rem', overflowX: 'scroll', display: 'flex', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full" style={{ overflowX: 'scroll', display: 'flex', flexShrink: '0' }}>
-                        <HorizontalSubMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                        <HorizontalSubMenu key={40} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                     </div>
                 </div>
                 <div style={{ height: '88%' }} className="nav-shadow absolute h-full left-0 z-50"></div>

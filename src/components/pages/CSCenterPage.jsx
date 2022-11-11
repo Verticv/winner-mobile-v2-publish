@@ -40,7 +40,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
 
     const tabsArray = [
         { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },
-        { text: "공지사항", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/cscenter/all/announcement", width: '5.625rem', marginLeft: '0.2rem' },
+        { text: "공지사항", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/cscenter/all/announcement", hasSameParent: true, width: '5.625rem', marginLeft: '0.2rem' },
         { text: "자주묻는질문", icon: Icon3, activeIcon: Icon3Active, id: 2, path: "/cscenter/all/faq", hasSameParent: true, width: '5.375rem', marginLeft: '0.2rem' },
         { text: "계좌문의", icon: Icon4, activeIcon: Icon4Active, id: 3, path: "#", width: '5.1875rem', marginLeft: '0.1rem' },
         { text: "베팅규정", icon: Icon5, activeIcon: Icon5Active, id: 4, path: "/cscenter/all/policy/sportsgame/soccer", hasSameParent: true, width: '4.875rem', marginLeft: '0.1rem' },
@@ -147,7 +147,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                         <div id='container-nav'>
 
-                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                            <HorizontalMenu1 key={1} withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                         </div>
                                         <Contact subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                     </>
@@ -164,12 +164,12 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                     </>
                                 }
                             />
-                            <Route path="/announcement"
+                            <Route path="/announcement/*"
                                 element={
                                     <>
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                         <div id='container-nav'>
-                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                            <HorizontalMenu1 key={2} withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                         </div>
                                         <Announcement setSubActiveButton={setSubActiveButton} />
                                     </>
@@ -211,7 +211,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                     <>
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                         <div id='container-nav'>
-                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                            <HorizontalMenu1 key={3} withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                         </div>
                                         <div style={{ marginBottom: '19.625rem' }}>
                                             <Faq subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
@@ -224,7 +224,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                     {/* <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
                                     <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                     <div id='container-nav'>
-                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        <HorizontalMenu1 key={4} withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                     </div>
                                     <SportsGamePolicy setSelectedTab={setSelectedTab} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                 </>}
@@ -234,7 +234,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                     <>
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                         <div id='container-nav'>
-                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                            <HorizontalMenu1 key={5} withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                         </div>
                                         <MinigamePolicy />
                                     </>

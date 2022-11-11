@@ -41,8 +41,8 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
 
             <WarningMessage
                 title='확인 / 필독사항'
-                message1='환전 신청 시 현재 보유머니에서 차감되며, 회원님의 계좌번호로 입금됩니다.'
-                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.'
+                message1='환전 신청 시 현재 보유머니에서 차감되며, 회원님의 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;계좌번호로 입금됩니다.'
+                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 &nbsp; &nbsp; &nbsp;시간을 피해 신청해 주시기 바랍니다.'
                 mr2='7.8rem'
                 message3='자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
             />
@@ -404,7 +404,7 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
                     className="hover"
                 >
                     <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                        <span style={{ fontSize: '2.8125rem', color: '#ffdfbd', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>신청하기</span>
+                        <span style={{ fontSize: '2.8125rem', color: '#d6f3ff', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.5rem', marginLeft: '0.2rem' }} className='shadow-to-text'>신청하기</span>
                     </div>
                 </button>
             </div>
