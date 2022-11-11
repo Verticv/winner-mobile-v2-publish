@@ -50,7 +50,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                 isFirstMessageDark
                 message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 점검 시간을 피해 신청해 주시기 바랍니다.'
                 mr2='11rem'
-                message3='입금계좌는 수시로 변경되오니 &nbsp;반드시 계좌번호 문의 신청을 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.'
+                message3='입금계좌는 수시로 변경되오니 &nbsp;반드시 계좌번호 문의 신청을 &nbsp; &nbsp; &nbsp; &nbsp; 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.'
                 mr3='4.875rem'
                 message4='&nbsp;자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
             />
