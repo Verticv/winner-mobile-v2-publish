@@ -19,8 +19,17 @@
         padding-left: 1.65rem;
         letter-spacing: -0.07rem;
         padding-top: 0.15rem;
+
+
+    }
+
+    ::placeholder {
+        color: #7b7b7b;
     }
 }
+
+
+
 
 .second-row {
     display: flex;
@@ -102,7 +111,7 @@
             span {
                 margin-top: 0.2rem;
                 letter-spacing: -0.07rem;
-                text-shadow: rgb(0 0 0 ) 0rem 0rem 0.4375rem;
+                text-shadow: rgb(0 0 0) 0rem 0rem 0.4375rem;
             }
         }
     }

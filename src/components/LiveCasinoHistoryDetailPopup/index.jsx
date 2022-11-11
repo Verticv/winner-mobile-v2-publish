@@ -16,7 +16,7 @@ const LiveCasinoHistoryDetailPopup = ({ setPopupOpen }) => {
                 >
                     <div className="거래-상세-내역-popup">
                         <label>거래 상세 내역</label>
-                        <button className="absolute right-0 cursor-pointer z-20" onClick={() => setPopupOpen(false)}>
+                        <button className="absolute right-0 cursor-pointer z-20" onClick={() => setPopupOpen((prev) => !prev)}>
                             <img className='hover' src={CloseIcon} alt="close_icon" />
                         </button>
                     </div>
