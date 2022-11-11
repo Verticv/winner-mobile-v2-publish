@@ -193,7 +193,7 @@ const WinLoseSettlementContent = ({ activeButton, setActiveButton }) => {
                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.2rem' }} src={Diamond} alt="" />
                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">진행중인 금액:</span>
+                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">진행중인 금액 :</span>
                                 <span className="text-yellow-ffcc00" style={{ color: '#ffd200' }}>2,520,000</span>
                             </div>
                         </div>
@@ -205,7 +205,7 @@ const WinLoseSettlementContent = ({ activeButton, setActiveButton }) => {
                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.3125rem' }} src={Diamond} alt="" />
                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">정산 총 금액:</span>
+                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">정산 총 금액 :</span>
                                 <span className="text-yellow-ffcc00" style={{ color: '#ffd200' }}>500,000</span>
                             </div>
                         </div>
