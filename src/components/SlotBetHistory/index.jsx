@@ -25,6 +25,7 @@ import Icon19 from '../../assets/slotGame/19.png'
 import Icon20 from '../../assets/slotGame/20.png'
 import Icon21 from '../../assets/slotGame/21.png'
 import Icon22 from '../../assets/slotGame/22.png'
+import Icon23 from '../../assets/slotGame/23.png'
 import HorizontalSubMenu from '../HorizontalSubMenuDefault'
 import { useNavigate } from 'react-router-dom'
 // import Icon16 from '../../assets/slotGame/17.png'
@@ -45,7 +46,7 @@ const subTabsArray = [
     { text: "스페이드", icon: Icon9, id: 9, width: '19.375rem', path: '#' },
     { text: "하바네로", icon: Icon10, id: 10, width: '19.375rem', path: '#' },
     { text: "월드매치", icon: Icon11, id: 11, width: '19.375rem', path: '#' },
-    { text: "메버릭", icon: Icon12, id: 12, width: '19.375rem', path: '#' },
+    { text: "엘리시움", icon: Icon12, id: 12, width: '19.375rem', path: '#' },
     { text: "플레이앤고", icon: Icon13, id: 13, width: '19.375rem', path: '#' },
     { text: "YL게이밍", icon: Icon14, id: 14, width: '19.375rem', path: '#' },
     { text: "레드타이거", icon: Icon15, id: 15, width: '19.375rem', path: '#' },
@@ -55,6 +56,7 @@ const subTabsArray = [
     { text: "올웨이스핀", icon: Icon20, id: 19, width: '19.375rem', path: '#' },
     { text: "와즈단", icon: Icon21, id: 20, width: '19.375rem', path: '#' },
     { text: "PG소프트", icon: Icon22, id: 21, width: '19.375rem', path: '#' },
+    { text: "로얄슬롯게이밍", icon: Icon23, id: 22, width: '19.375rem', path: '#' },
 
 ];
 

@@ -4,11 +4,27 @@ import AnnouncementTable from '../AnnouncementTable'
 import Search from '../Search'
 import NavBottom from '../NavBottom'
 import './_announcementTable.scss'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom';
+import HorizontalSubMenu from '../HorizontalSubMenu'
 
 const Announcement = ({
     setSubActiveButton
 }) => {
+
+
+    const tabsArray = [
+        { text: "전체", id: 0, width: '11.5625rem', path: "/cscenter/all/announcement" },
+        { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/announcement/live-casino" },
+        { text: "슬롯", id: 2, width: '11.5625rem', path: "/cscenter/all/announcement/slot" },
+        { text: "스포츠", id: 3, width: '13.4375rem', path: "/cscenter/all/announcement/sports" },
+        { text: "호텔카지노", id: 4, width: '18.3125rem', path: "/cscenter/all/announcement/e-sportsa" },
+        { text: "e-스포츠", id: 5, width: '15.3125rem', path: "/cscenter/all/announcement/e-sports" },
+        { text: "미니게임", id: 6, width: '15.3125rem', path: "/cscenter/all/announcement/minigame" },
+        { text: "키론가상게임", width: '20.3125rem', id: 7, path: "/cscenter/all/announcement/ar-game" },
+        { text: "충전/환전", width: '16.3125rem', id: 8, path: "/cscenter/all/announcement/transaction" },
+        { text: "베팅관련", width: '15.3125rem', id: 9, path: "/cscenter/all/announcement/about-betting" },
+        { text: "기타", width: '10.3125rem', id: 10, path: "/cscenter/all/announcement/other" },
+    ];
 
     const inboxArray = [
         {
@@ -97,11 +113,14 @@ const Announcement = ({
         },
 
     ]
+    const location = useLocation();
 
     const [page, setPage] = useState(0)
     const [checkedState, setCheckedState] = useState(
         new Array(inboxArray.length).fill(false)
     );
+    const [, setSelectedTab] = useState(0);
+    const [, setSelectedSubTab] = useState(location.pathname)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -119,6 +138,17 @@ const Announcement = ({
     return (
         <div>
             <div className="" />
+
+            <div className="w-full flex relative top-0" style={{ position: 'relative' }}>
+                <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
+
+                <div id='scroll-wrapper12' style={{ paddingLeft: '1.875rem', overflowX: 'scroll', display: 'flex', marginTop: '1.08rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div className=" flex flex-shrink-0 w-full" style={{ overflowX: 'scroll', display: 'flex', flexShrink: '0' }}>
+                        <HorizontalSubMenu key={201} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                    </div>
+                </div>
+                <div style={{ height: '88%' }} className="nav-shadow absolute h-full left-0 z-50"></div>
+            </div>
 
             <div style={{ borderRadius: "1em", margin: '1.875rem', marginTop: '0' }} className="shadow-subNavbar overflow-hidden">
                 <div className="flex flex-col w-full announcementTable-container">
