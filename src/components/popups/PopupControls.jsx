@@ -25,11 +25,12 @@ export default function PopupControls({
     }, [isPopupOpen, onClose, open]);
 
     useEffect(() => {
-        if (open && !isPopupOpen) {
-            setOpen(false)
-            setPopupOpen(true)
-        }
-    }, [isPopupOpen, open, setPopupOpen])
+        setPopupOpen(true)
+        // if (open && !isPopupOpen) {
+        //     setOpen(false)
+        //     setPopupOpen(true)
+        // }
+    }, [setPopupOpen])
     useOnClickOutside(ref, handler);
 
     function onHeaderClick(e) {

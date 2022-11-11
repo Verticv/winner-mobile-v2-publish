@@ -526,7 +526,7 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
 
             <Routes>
                 <Route index element={
-                    <>
+                    <div style={{ margin: '-0.2rem 0 0' }}>
                         <HistoryTable
                             containerBackground='#f7f9fc'
                             tableData={tableData}
@@ -537,11 +537,11 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
                             cardHeight='42.15rem'
                             isPopup={isPopup}
                         />
-                    </>
+                    </div>
                 } />
                 <Route path='/powerball'
                     element={
-                        <>
+                        <div style={{ margin: '-0.2rem 0 0' }}>
                             <HistoryTable
                                 containerBackground='#f7f9fc'
                                 tableData={tableData1}
@@ -552,7 +552,7 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
                                 cardHeight='37.75rem'
                                 isPopup={isPopup}
                             />
-                        </>
+                        </div>
                     }
                 />
                 <Route path="/powerladder"
