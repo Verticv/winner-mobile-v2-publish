@@ -20,6 +20,12 @@ const LeftMenu = ({
     activeButton, setActiveButton
 }) => {
 
+    useEffect(() => {
+        window.onpopstate = () => {
+           console.log('add code to handle the back button if needed')
+          }
+    })
+
     const { currentPathname } = useLocation();
     const pathname = window.location.pathname
     const navigate = useNavigate();
@@ -58,6 +64,10 @@ const LeftMenu = ({
             window.open('/distributor-page');
         } else {
             navigate({
+                options: {
+                    replace: true
+                },
+                to: path,
                 pathname: path,
                 state: { fromPage: window.location.pathname }
             })
@@ -157,10 +167,10 @@ const LeftMenu = ({
                                     : ""
                                     } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l hover:opacity-75 focus:from-blue-gradDark focus:to-blue-r2088f0`}
                                 onClick={(e) => {
-                                    if (item.text === '총판페이지') {
-                                        setCookie('previousUrl', '/distributor-page');
-                                        setActiveButton('/distributor-page')
-                                    }
+                                    // if (item.text === '총판페이지') {
+                                    //     setCookie('previousUrl', '/distributor-page');
+                                    //     setActiveButton('/distributor-page')
+                                    // }
                                     buttonPressed(item.text, item.path)
 
                                     console.log(subActiveButton, item?.path, 'subActiveButton.path');
