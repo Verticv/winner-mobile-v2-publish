@@ -26,14 +26,14 @@ import subActive from '../../assets/gameresults/sub-active.png';
 const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
 
     const tabsArray = [
-        { text: "전체", icon: Icon1, id: 0, number: 854, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "축구", icon: Icon2, id: 1, number: 567, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "농구", icon: Icon3, id: 2, number: 227, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "야구", icon: Icon4, id: 3, number: 407, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "배구", icon: Icon5, id: 4, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "하키", icon: Icon6, id: 5, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "미식축구", icon: Icon7, id: 6, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "격투기", icon: Icon8, id: 7, number: 9, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+        { text: "전체", icon: Icon1, id: 1, number: 854, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+        { text: "축구", icon: Icon2, id: 2, number: 567, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+        { text: "농구", icon: Icon3, id: 3, number: 227, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+        { text: "야구", icon: Icon4, id: 4, number: 407, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+        { text: "배구", icon: Icon5, id: 5, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+        { text: "하키", icon: Icon6, id: 6, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+        { text: "미식축구", icon: Icon7, id: 7, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+        { text: "격투기", icon: Icon8, id: 8, number: 9, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
     ];
 
 

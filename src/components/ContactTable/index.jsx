@@ -65,7 +65,8 @@ const ContactTable = ({
                             >
                                 <p style={{ marginTop: '0.3rem', letterSpacing: '-0.05rem' }}>{item.isRead === true ? "답변완료" : "답변대기"}</p>
                             </div>
-                            <p style={{ textOverflow: 'ellipsis', maxWidth: '37rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#eeeeee', marginTop: '0.5rem' }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap mt-1">{item.text}</p>
+                            <p style={{ textOverflow: 'ellipsis', maxWidth: '37rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
+                                color: item.isRead === true ? '#a0a0a0' : '#c8c8c8', marginTop: '0.5rem' }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap mt-1">{item.text}</p>
                             {item.isRead === false && (
                                 <div className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto n-div">
                                     N

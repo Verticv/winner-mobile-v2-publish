@@ -14,7 +14,9 @@
             border-bottom: 0.1875rem solid #252525;
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
-            height: 7.3125rem;
+            min-height: 7.3125rem;
+            padding: 1rem 2rem;
+            text-align: center;
 
             .text {
                 // margin-left: 0.5rem;
@@ -49,7 +51,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                text-shadow: #00000080 0.3125rem 0.125rem 0.4375rem;
+                // text-shadow: #00000080 0.3125rem 0.125rem 0.4375rem;
                 color: #ffd2d2;
                 font-family: 'SpoqaHanSansNeoMedium';
                 font-size: 2.811875rem;

@@ -42,6 +42,7 @@ const ESportsBetHistory = ({ isState = 0, setState, showSub = false, isPopup = f
             }, 0)
         }
         return (() => {
+            if (subActiveButton)
             setSubActiveButton('/mypage/bet-history/all/e-sports')
         })
     }, [setSubActiveButton, subActiveButton, navigate]);

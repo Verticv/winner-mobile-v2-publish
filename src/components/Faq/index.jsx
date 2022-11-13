@@ -153,10 +153,10 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
                             )}
                         </div>
                         <div style={{ marginBottom: '1.9rem' }} className="font-spoqa tracking-tight text-gray-r585858">
-                            - 스포츠 : <span style={{ color: "#c0392b" }} className="">두폴더 이상 </span> 롤링 100% 최대 30만원
+                            - 스포츠 : <span style={{ color: "#e65454" }} className="">두폴더 이상 </span> 롤링 100% 최대 30만원
                         </div>
                         <div style={{ marginBottom: '1.9rem' }} className="font-spoqa tracking-tight text-gray-r585858 ">
-                            - 스포츠단폴더, 가상게임, 미니게임, 카지노 :  <span style={{ color: "#c0392b" }} className="">이용불가</span>
+                            - 스포츠단폴더, 가상게임, 미니게임, 카지노 :  <span style={{ color: "#e65454" }} className="">이용불가</span>
 
                         </div>
                         <div style={{ marginBottom: '1rem' }} className="font-spoqa tracking-tight text-gray-r585858">
@@ -164,7 +164,7 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
                         </div>
 
                         <div style={{ marginBottom: '5.1rem', lineHeight: '1.9' }} className="font-spoqa tracking-tight text-gray-r585858">
-                            스포츠 단폴더, 타 게임 이용 가능하며, 스포츠 2폴더 100% 롤링 전 타게임 이용시 보유금 <span style={{ color: "#c0392b" }} className="">전액 몰수처리</span>
+                            스포츠 단폴더, 타 게임 이용 가능하며, 스포츠 2폴더 100% 롤링 전 타게임 이용시 보유금 <span style={{ color: "#e65454" }} className="">전액 몰수처리</span>
                         </div>
 
                         <div style={{ marginBottom: '5.2rem', lineHeight: '1.9' }} className="font-spoqa tracking-tight text-gray-r585858">

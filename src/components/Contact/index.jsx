@@ -12,14 +12,15 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
         { text: "전체", id: 0, width: '11.5625rem', path: "/cscenter/all/contact/all" },
         { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/contact/all/live-casino" },
         { text: "슬롯", id: 2, width: '11.5625rem', path: "/cscenter/all/contact/all/slot" },
-        { text: "스포츠", id: 3, width: '13.4375rem', path: "/cscenter/all/contact/all/sports" },
-        { text: "호텔카지노", id: 4, width: '18.3125rem', path: "/cscenter/all/contact/all/e-sports1" },
-        { text: "e-스포츠", id: 5, width: '15.3125rem', path: "/cscenter/all/contact/all/e-sports" },
-        { text: "미니게임", id: 6, width: '15.3125rem', path: "/cscenter/all/contact/all/minigame" },
-        { text: "키론가상게임", width: '20.3125rem', id: 7, path: "/cscenter/all/contact/all/ar-game" },
-        { text: "충전/환전", width: '16.3125rem', id: 8, path: "/cscenter/all/contact/all/transaction" },
-        { text: "베팅관련", width: '15.3125rem', id: 9, path: "/cscenter/all/contact/all/about-betting" },
-        { text: "기타", width: '10.3125rem', id: 10, path: "/cscenter/all/contact/all/other" },
+        { text: "티비벳", id: 3, width: '11.5625rem', path: "/cscenter/all/contact/all/slot2" },
+        { text: "스포츠", id: 4, width: '13.4375rem', path: "/cscenter/all/contact/all/sports" },
+        { text: "호텔카지노", id: 5, width: '18.3125rem', path: "/cscenter/all/contact/all/e-sports1" },
+        { text: "e-스포츠", id: 6, width: '15.3125rem', path: "/cscenter/all/contact/all/e-sports" },
+        { text: "미니게임", id: 7, width: '15.3125rem', path: "/cscenter/all/contact/all/minigame" },
+        { text: "키론가상게임", width: '20.3125rem', id: 8, path: "/cscenter/all/contact/all/ar-game" },
+        { text: "충전/환전", width: '16.3125rem', id: 9, path: "/cscenter/all/contact/all/transaction" },
+        { text: "베팅관련", width: '15.3125rem', id: 10, path: "/cscenter/all/contact/all/about-betting" },
+        { text: "기타", width: '10.3125rem', id: 11, path: "/cscenter/all/contact/all/other" },
     ];
 
     const inboxArray = [
@@ -168,7 +169,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
             </div> */}
             <div className="two-buttons">
                 <button
-                    className='hover shadow-to-box'
+                    className='hover shadow-to-box shadow-to-text'
                     style={{ background: 'linear-gradient(to top, #4d0a25, #a34f63 50%, #e78694 )' }}>
                     <div className='div-border'
                         style={{ background: 'linear-gradient(to top, #97351d, #bb4c32 50%, #df6345)' }}
@@ -179,7 +180,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
                     </div>
                 </button>
                 <button
-                    className='hover shadow-to-box'
+                    className='hover shadow-to-box shadow-to-text'
                     style={{ background: 'linear-gradient(to top, #4d3c0a, #a3814f 50%, #e7b786 )' }} onClick={() => navigate('/cscenter/all/contact/compose')} >
                     <div className='div-border' style={{ background: 'linear-gradient(to top, #80603f, #96704a 50%, #a57b52 )', color: '#ffdfbd' }}>
                         <div className="text">

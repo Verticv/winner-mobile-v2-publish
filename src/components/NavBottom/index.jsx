@@ -53,19 +53,27 @@ const navInfo = [
 
 export default function NavBottom() {
     let navigate = useNavigate();
-
+    
     return (
         <div className="nav-bottom">
-            {navInfo?.map(({ id, icon, text, width, isActive, path, activeIcon }) => (
-                <div key={id} className={`nav-content ${(window.location.pathname.includes(path)) ? 'active' : ''}`} id={id}
-                    onClick={(event) => {
-                        navigate(path);
-                    }}
-                >
-                    <img id={id} src={(window.location.pathname.includes(path)) ? activeIcon : icon} alt="" style={{ width: '6.625rem' }} />
-                    <span id={id} className="text">{text}</span>
-                </div>
-            ))}
+            {navInfo?.map(({ id, icon, text, width, isActive, path, activeIcon }) => {
+                let isActiveButton = window.location.pathname.includes(path)
+
+                if (path === '/mypage' && window.location.pathname.includes('/mypage/freeboard')){
+                    isActiveButton = false
+                }
+
+                return (
+                    <div key={id} className={`nav-content ${isActiveButton ? 'active' : ''}`} id={id}
+                        onClick={(event) => {
+                            navigate(path);
+                        }}
+                    >
+                        <img id={id} src={isActiveButton ? activeIcon : icon} alt="" style={{ width: '6.625rem' }} />
+                        <span id={id} className="text">{text}</span>
+                    </div>
+                )
+            })}
         </div>
     )
 }

@@ -96,7 +96,10 @@ const InboxTable = ({
                                             className="w-max rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'><span className='mt-1 block'>이벤트</span></span></div>
                                         : <div></div>
                             }
-                            <p style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: item.type === '이벤트' ? '37rem' : item.type === "안내" ? '40rem' : '47rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#eeeeee', marginTop: '0.5rem', }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap">{item.text}</p>
+                            <p style={{
+                                textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: item.type === '이벤트' ? '37rem' : item.type === "안내" ? '40rem' : '47rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
+                                color: item.isRead !== true ? '#c8c8c8' : '#a0a0a0', marginTop: '0.5rem',
+                            }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap">{item.text}</p>
                             {item.isRead === false && (
                                 <div
                                     style={{ marginLeft: '0.9rem' }}

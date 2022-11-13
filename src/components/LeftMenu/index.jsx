@@ -20,6 +20,12 @@ const LeftMenu = ({
     activeButton, setActiveButton
 }) => {
 
+    useEffect(() => {
+        window.onpopstate = () => {
+           console.log('add code to handle the back button if needed')
+          }
+    })
+
     const { currentPathname } = useLocation();
     const pathname = window.location.pathname
     const navigate = useNavigate();
@@ -150,17 +156,17 @@ const LeftMenu = ({
                             <button
                                 style={{
                                     padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd',
-                                    background: (((activeButton) === item?.path || subActiveButton === item?.path)) ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
+                                    background: (((selectedTab) === item?.path || subActiveButton === item?.path)) ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
                                 }}
-                                className={`${activeButton === item?.path
+                                className={`${selectedTab === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
                                     : ""
                                     } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l hover:opacity-75 focus:from-blue-gradDark focus:to-blue-r2088f0`}
                                 onClick={(e) => {
-                                    if (item.text === '총판페이지') {
-                                        setCookie('previousUrl', '/distributor-page');
-                                        setActiveButton('/distributor-page')
-                                    }
+                                    // if (item.text === '총판페이지') {
+                                    //     setCookie('previousUrl', '/distributor-page');
+                                    //     setActiveButton('/distributor-page')
+                                    // }
                                     buttonPressed(item.text, item.path)
 
                                     console.log(subActiveButton, item?.path, 'subActiveButton.path');

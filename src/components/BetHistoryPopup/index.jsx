@@ -203,17 +203,18 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
             <div className="베팅내역-border">
                 <div className='first-section'>
                     <label className="text">베팅내역</label>
-                    <button style={{ marginRight: '4.625rem' }} onClick={() => setPopupOpen(false)}>
-                        <img className='close hover' style={{ width: '3.1875rem', height: '3.1875rem' }} src={CloseIcon} alt="close_icon" />
+                    <button style={{ marginRight: '3.625rem', width: '3.4rem', height: '3.1875rem', right: '0', top: '2.9rem', position: 'absolute', background: 'bottom' }} onClick={() => setPopupOpen((prev) => !prev)}>
+                        <img className='close hover' style={{ width: '3.1875rem', height: 'auto' }} src={CloseIcon} alt="close_icon" />
                     </button>
                 </div>
 
-                <div className="w-full h-full bg-white" style={{ height: '100vh' }}>
+                <div className="w-full h-full bg-white" style={{ height: 'auto' }}>
 
                     <div className="w-full">
                         <div
                             style={{
-                                height: 'calc(var(--vh, 1vh) * 100)',
+                                // height: 'calc(var(--vh, 1vh) * 100)',
+                                height: 'auto',
                                 width: '77.625rem',
                             }}
                             className="overflow-y-auto hide-scrollbar"

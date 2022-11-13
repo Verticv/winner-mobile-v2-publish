@@ -150,7 +150,7 @@ const MinigamePolicy = () => {
     ]
 
     return (
-        <div>
+        <div style={{ overflow: 'hidden'}}>
             <div style={{ margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem' }}>
                 <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
             </div>

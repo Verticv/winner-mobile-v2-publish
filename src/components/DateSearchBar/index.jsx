@@ -206,8 +206,12 @@ const DateSearchBar = ({
                     )}
 
                     {!hasIdSearch ? (
-                        <div className="common-button12" style={{ background: 'linear-gradient(to top, #4d3c0a, #997947 50%, #e6b786)' }}>
-                            <div className="text-con" style={{ background: 'linear-gradient(to top, #805f3f, #936e49 50%, #a57b52)' }}>
+                        <div className="common-button12"
+                            // style={{ background: 'linear-gradient(to top, #4d3c0a, #997947 50%, #e6b786)' }}
+                        >
+                            <div className="text-con"
+                                // style={{ background: 'linear-gradient(to top, #805f3f, #936e49 50%, #a57b52)' }}
+                            >
                                 <span className="font-spoqaMedium tracking-tight text-white pt-px">{withBlackButton ? "3개월" : "검색"}</span>
                             </div>
                         </div>
