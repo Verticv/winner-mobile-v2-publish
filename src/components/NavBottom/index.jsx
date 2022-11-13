@@ -56,18 +56,6 @@ export default function NavBottom() {
     
     return (
         <div className="nav-bottom">
-<<<<<<< HEAD
-            {navInfo?.map(({ id, icon, text, width, isActive, path, activeIcon }) => (
-                <div key={id} className={`nav-content ${(window.location.pathname.includes(path)) ? 'active' : ''}`} id={id}
-                    onClick={(event) => {
-                        navigate(path);
-                    }}
-                >
-                    <img id={id} src={ (window.location.pathname.includes(path)) ? activeIcon : icon} alt="" style={{ width: '6.625rem' }} />
-                    <span id={id} className="text">{text}</span>
-                </div>
-            ))}
-=======
             {navInfo?.map(({ id, icon, text, width, isActive, path, activeIcon }) => {
                 let isActiveButton = window.location.pathname.includes(path)
 
@@ -86,7 +74,6 @@ export default function NavBottom() {
                     </div>
                 )
             })}
->>>>>>> c2b8fdf573083f62eb5d0c862418d3370000cafc
         </div>
     )
 }
