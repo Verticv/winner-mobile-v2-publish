@@ -6,7 +6,7 @@ import Dropdown from '../Dropdown';
 
 const ContactCompose = () => {
 
-    const carrierOptions = ["라이브카지노", "슬롯게임", "스포츠", "e-스포츠", "미니게임", "키론가상게임", "충전/환전", "베팅관련", "기타"]
+    const carrierOptions = ["라이브카지노", "슬롯게임", "스포츠", "e-스포츠", "미니게임", "티비벳 ", "키론가상게임", "충전/환전", "베팅관련", "기타"]
     return (
         <>
             {/* <img src={img} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
@@ -87,7 +87,7 @@ const ContactCompose = () => {
                             </div>
                         </div>
                     </button>
-                    <button style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', height: '7.3125rem', padding: '1px', fontSize: '2.8125rem' }}
+                    <button style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', height: '7.3125rem', fontSize: '2.8125rem' }}
                         // onClick={() => navigate("/freeboard")} 
                         className="shadow-to-box flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">
                         <div style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', width: '100%', height: '100%', borderRadius: '1rem', padding: '0.1875rem' }}>

@@ -252,6 +252,7 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
         //     }, 0)
         // }
         return (() => {
+            if (subActiveButton)
             setSubActiveButton(path)
             window.removeEventListener('popstate',test)
         })

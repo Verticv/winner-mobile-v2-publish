@@ -136,6 +136,7 @@ const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = fal
 
         }
         return (() => {
+            if (subActiveButton)
             setSubActiveButton('/mypage/bet-history/all/ar-game')
         })
     }, [setSubActiveButton, subActiveButton, navigate]);

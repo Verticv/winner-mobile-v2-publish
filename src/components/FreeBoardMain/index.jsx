@@ -234,6 +234,9 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             setActiveButton('/mypage/freeboard')
         }
     }, [setActiveButton, activeButton]);
+    const truncate = (str, max, len) => {
+        return str.length > max ? str.substring(0, len) + "..." : str;
+    }
 
     function InboxList({ items }) {
         return items.map(item => (
@@ -302,7 +305,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         <span
                                         // className='mt-1.5'
                                         // style={{ background: 'blue', padding: '0.4rem 1.5rem'}}
-                                        >안내</span>
+                                        >{truncate('안내', 6, 6)}</span>
                                     </div>
                                     : item.type === "이벤트"
                                         ? <div
@@ -312,7 +315,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         ><span
                                             style={{ marginLeft: '-0.3rem' }}
                                         //  className='mt-1.5'
-                                        >이벤트</span></div>
+                                        >{truncate('이벤트', 3, 3)}</span></div>
                                         : <div></div>
                             }
                             <p
@@ -329,7 +332,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                             {item.replies && (
                                 <div
                                     style={{
-                                        width: '7.0625rem',
+                                        minWidth: '9.875rem',
                                         height: '7.0625rem',
                                         borderWidth: '0.1875rem',
                                         borderStyle: 'solid',
@@ -343,7 +346,8 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         justifyContent: 'center',
                                         alignItems: 'center',
                                         background: '#2e2e2e',
-                                        color: '#ff6945'
+                                        color: '#ff6945',
+                                        padding: '0 2.6rem'
                                     }} className="absolute pl-7px pr-8px rounded-full flex items-center justify-center border text-red-d52e2e font-roboto"
                                 >{item.replies}</div>
                             )}
@@ -405,7 +409,13 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                                             ? <img style={{ width: "3.8125rem", height: 'auto', marginTop: '0rem', marginLeft: '-0.3rem', marginRight: '-0.2rem' }} src={Rank4} alt="" />
                                                             : <img style={{ width: "3.8125rem", height: 'auto', marginTop: '0rem', marginLeft: '-0.2rem', marginRight: '-0.2rem' }} src={Rank5} alt="" />
                                         }
-                                        <p className='flex items-center text-gray-r7b7b7b' style={{ margin: 0, fontSize: '2.61875rem', marginLeft: '0.89rem', letterSpacing: '-0.06rem', marginTop: '0.3rem' }}>{item.author}</p>
+                                        <p className='flex items-center text-gray-r7b7b7b' style={{
+                                            margin: 0, fontSize: '2.61875rem', marginLeft: '0.89rem', letterSpacing: '-0.06rem', marginTop: '0.3rem',
+                                            whiteSpace: 'nowrap',
+                                            maxWidth: '33.5rem',
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis'
+                                        }}>{item.author}</p>
                                         <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#929292' }} className='bg-gray-c5c5c5'></div>
                                         {item.type === "일반" && (
                                             <div style={{ fontSize: '2.61875rem', fontFamily: 'SpoqaHanSansNeo', marginLeft: '-0.1rem', letterSpacing: '-0.059rem' }} className="flex items-center text-gray-r7b7b7b font-spoqa">

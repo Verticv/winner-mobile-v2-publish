@@ -53,7 +53,7 @@ const navInfo = [
 
 export default function NavBottom() {
     let navigate = useNavigate();
-
+    
     return (
         <div className="nav-bottom">
             {navInfo?.map(({ id, icon, text, width, isActive, path, activeIcon }) => (
@@ -62,7 +62,7 @@ export default function NavBottom() {
                         navigate(path);
                     }}
                 >
-                    <img id={id} src={(window.location.pathname.includes(path)) ? activeIcon : icon} alt="" style={{ width: '6.625rem' }} />
+                    <img id={id} src={ (window.location.pathname.includes(path)) ? activeIcon : icon} alt="" style={{ width: '6.625rem' }} />
                     <span id={id} className="text">{text}</span>
                 </div>
             ))}

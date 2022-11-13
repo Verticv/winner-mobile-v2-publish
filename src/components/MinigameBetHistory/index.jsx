@@ -503,6 +503,7 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
             }, 0)
         }
         return (() => {
+            if (subActiveButton)
             setSubActiveButton('/mypage/bet-history/all/minigame')
         })
     }, [setSubActiveButton, subActiveButton, navigate]);

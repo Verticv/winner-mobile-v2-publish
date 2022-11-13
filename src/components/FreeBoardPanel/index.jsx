@@ -33,9 +33,10 @@ const FreeBoardPanel = ({
                                     hasDown={false}
                                     smallCard
                                     width92
+                                    isFreeboard
                                 />
                             </div>
-                            <CardContent showBetNumber={false} withButtons={false} withInput={false} winAmount='+900,000,000' checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
+                            <CardContent showBetNumber={false} withButtons={false} withInput={false} winAmount='+900,000,000' checkedState={checkedState} type={0} setCheckedState={setCheckedState} isFreeboard />
                         </div>
                     </div>
                 </div>
@@ -62,9 +63,10 @@ const FreeBoardPanel = ({
                                     hasDown={false}
                                     smallCard
                                     width92
+                                    isFreeboard
                                 />
                             </div>
-                            <CardContent showBetNumber={false} withButtons={false} withInput={false} winAmount='+900,000,000' checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
+                            <CardContent showBetNumber={false} withButtons={false} withInput={false} winAmount='+900,000,000' checkedState={checkedState} type={0} setCheckedState={setCheckedState} isFreeboard/>
                         </div>
                     </div>
                 </div>

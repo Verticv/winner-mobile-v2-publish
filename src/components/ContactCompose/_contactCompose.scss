@@ -1,12 +1,16 @@
 .contact-compose {
 
     // background: red;
+    .container {
+        height: 6.7rem;
+    }
+
     .select-overlay {
         cursor: pointer;
         width: 26.2rem;
         height: 6.6875rem;
-        margin-left: 2.625rem;
-        margin-top: 1.0625rem;
+        // margin-left: 2.625rem;
+        // margin-top: 1.0625rem;
     }
 
 }
@@ -92,7 +96,7 @@ input {
 
     img {
         margin-right: 1.2rem;
-        margin-top: -1.3rem;
+        margin-top: -0.3rem;
     }
 
 }
@@ -126,7 +130,7 @@ input {
             margin-top: 0.2rem;
             letter-spacing: -0.07rem;
             margin-right: -0.1rem;
-            text-shadow: #00000080 0.3125rem 0.125rem 0.4375rem;
+            text-shadow: rgb(0 0 0) 0rem 0rem 1rem;
         }
     }
 }

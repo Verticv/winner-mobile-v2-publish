@@ -412,7 +412,9 @@ const historyTableData = [
         },
         {
             buttonColor: '#c65337',
-            buttonText: '사용 가능'
+            buttonText: '사용 가능',
+           
+            
         }
     ],
     [
@@ -432,8 +434,9 @@ const historyTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#0056a6',
-            buttonText: '사용 완료'
+            buttonColor: '#2f5d9c',
+            buttonText: '사용 완료',
+            textColor: '#d6f3ff'
         }
     ],
     [
@@ -453,8 +456,9 @@ const historyTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#454545',
-            buttonText: '기간 만료'
+            buttonColor: '#464646',
+            buttonText: '기간 만료',
+            textColor: '#c8c8c8'
         }
     ],
     [
@@ -474,8 +478,9 @@ const historyTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#279140',
-            buttonText: '회수 쿠폰'
+            buttonColor: '#427515',
+            buttonText: '회수 쿠폰',
+            textColor: '#2f5d9',
         }
     ],
     [
@@ -585,7 +590,7 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#92278f',
+            buttonColor: '#5a2867',
             buttonText: '선물 완료',
         }
     ],
@@ -609,7 +614,7 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#92278f',
+            buttonColor: '#5a2867',
             buttonText: '선물 완료'
         }
     ],
@@ -633,7 +638,7 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#92278f',
+            buttonColor: '#5a2867',
             buttonText: '선물 완료'
         }
     ],
@@ -657,7 +662,7 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#92278f',
+            buttonColor: '#5a2867',
             buttonText: '선물 완료'
         }
     ],
@@ -681,7 +686,7 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#92278f',
+            buttonColor: '#5a2867',
             buttonText: '선물 완료'
         }
     ],
@@ -705,7 +710,7 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#92278f',
+            buttonColor: '#5a2867',
             buttonText: '선물 완료'
         }
     ],
@@ -729,7 +734,7 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#92278f',
+            buttonColor: '#5a2867',
             buttonText: '선물 완료'
         }
     ],
@@ -753,7 +758,7 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#92278f',
+            buttonColor: '#5a2867',
             buttonText: '선물 완료'
         }
     ],
@@ -936,10 +941,10 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
     const Usage = () => {
         useEffect(() => {
             window.onpopstate = e => {
-                
+
                 setTimeout(() => {
                     navigate('/mypage/coupon')
-                setSubActiveButton('/mypage/coupon/all')
+                    setSubActiveButton('/mypage/coupon/all')
                 }, 0)
             }
 
@@ -954,16 +959,26 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                 </div>
                 <div className="">
                     <HistoryTable
-                        containerBackground='#f7f9fc'
+                        // containerBackground='#f7f9fc'
                         tableData={tableData}
                         wideDetailButton
+                        // checkedState={checkedState}
+                        // setCheckedState={setCheckedState}
+                        // isPopupOpen={isPopupOpen}
+                        // setPopupOpen={setPopupOpen}
+                        // cardHeight='29.5625rem'
+                        hasLeftInput={false}
+                        isCouponUsage={true}
+                        containerBackground='#f7f9fc'
+                        wrapButtonText
+                        // tableData={giftsTableData}
                         checkedState={checkedState}
                         setCheckedState={setCheckedState}
                         isPopupOpen={isPopupOpen}
                         setPopupOpen={setPopupOpen}
-                        cardHeight='29.5625rem'
-                        hasLeftInput={false}
-                        isCouponUsage={true} />
+                        cardHeight='25.3125rem'
+                        isButtonGradient={false}
+                    />
                 </div>
                 <div style={{ marginTop: '1.875rem', paddingBottom: '0.01rem' }}>
                     <Pagination page={page} setPage={setPage} />
@@ -977,10 +992,10 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
         useEffect(() => {
             window.onpopstate = e => {
-                
+
                 setTimeout(() => {
                     navigate('/mypage/coupon')
-                setSubActiveButton('/mypage/coupon/all/coupon-gift')
+                    setSubActiveButton('/mypage/coupon/all/coupon-gift')
                 }, 0)
             }
 
@@ -1037,10 +1052,10 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
         useEffect(() => {
             window.onpopstate = e => {
-                
+
                 setTimeout(() => {
                     navigate('/mypage/coupon')
-                setSubActiveButton('/mypage/coupon/all/coupon-history')
+                    setSubActiveButton('/mypage/coupon/all/coupon-history')
                 }, 0)
             }
 
@@ -1057,11 +1072,11 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                 <div style={{ marginBottom: '-0.8125rem', display: 'flex', justifyContent: 'center' }} className='mt-4 flex justify-center'>
                     <CouponTitle text='사용가능' number='32' />
                     <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
-                    <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
+                    <CouponTitle text='사용완료' number='8' numberColor='#4c98ff' />
                     <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
-                    <CouponTitle text='기간만료' number='0' numberColor='#000000' />
+                    <CouponTitle text='기간만료' number='0' numberColor='#c8c8c8' />
                     <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
-                    <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
+                    <CouponTitle text='회수된쿠폰' number='0' numberColor='#4aca68' />
                 </div>
                 <div className="">
                     <HistoryTable

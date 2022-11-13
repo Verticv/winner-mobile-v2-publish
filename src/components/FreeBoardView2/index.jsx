@@ -60,7 +60,7 @@ const FreeBoardView2 = () => {
                 <button style={{ borderRadius: "0.625rem", width: '10.5625rem', padding: '0.1875rem', position: 'absolute', right: '0', height: '99%', background: 'linear-gradient(to top, #223349, #415a77 50%, #5e7fa4 )', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }} className="hover">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #27415e, #305176 50%, #305176)', borderRadius: "0.625rem", color: '#d6f3ff', fontSize: '2.811875rem', fontFamily: 'SpoqaHanSansNeoMedium', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <div style={{ borderRadius: "1.625rem" }} className="flex items-center justify-center h-full w-full bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-white" style={{ textShadow: '#00000080 0.3125rem 0.125rem 0.4375rem' }}>{buttonText}</span>
+                            <span className="font-spoqaMedium tracking-tight text-white shadow-to-text">{buttonText}</span>
                         </div>
                     </div>
                 </button>
@@ -126,19 +126,19 @@ const FreeBoardView2 = () => {
                 </div>
             </div>
             <div style={{ marginLeft: '3.8rem', marginTop: '2.83rem', height: '8.625rem', borderRadius: '0.8rem', width: '66.15rem', background: '#272726', fontSize: '2.811875rem', color: '#828282', fontFamily: 'SpoqaHanSansNeo' }} className="">
-                <div style={{ borderRadius: "1.625rem", fontSize: '2.8125rem', paddingLeft: '3.6625rem', borderWidth: '0.1875rem', display: 'flex' }} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
+                <div style={{ borderRadius: "1.625rem", fontSize: '2.8125rem', paddingLeft: '3.6625rem', paddingRight: '3.6625rem', borderWidth: '0.1875rem', display: 'flex' }} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
                     <div className="flex font-spoqa" style={{ display: 'flex' }}>
                         {tag && (<p style={{ fontSize: '2.8125rem', color: '#4c98ff', marginRight: '0.8rem' }} className="text-blue-r0056a6 font-spoqa mr-4">@{tag}</p>)}
-                        <p style={{ WebkitTextStroke: "0.2px", fontSize: '2.8125rem' }} className="text-gray-r585858 font-spoqa">{text}</p>
+                        <p style={{ WebkitTextStroke: "0.2px", fontSize: '2.8125rem', color: '#b4b4b4' }} className="text-gray-r585858 font-spoqa">{text}</p>
                     </div>
                 </div>
             </div>
             <div style={{ marginTop: '1.1rem', marginLeft: '3.8rem', display: 'flex', marginBottom: '-0.2rem' }} className='flex'>
-                <button style={{ borderRadius: "0.8rem", width: '9.2rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', color: isOneButton ? '#ccc2b6' : '#ff6945', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid rgb(59, 59, 59)' }} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                <button style={{ borderRadius: "0.8rem", width: '9.2rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', color: isOneButton ? '#ccc2b6' : '#ff6945', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid rgb(59, 59, 59)' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                     <div className={`${isOneButton ? "text-gray-r7b7b7b" : "text-red-d52e2e"} font-spoqaMedium flex items-center justify-center mt-2`}>{isOneButton ? "답글" : "수정"}</div>
                 </button>
                 {!isOneButton && (
-                    <div style={{ borderRadius: "0.8rem", width: '9.26rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid rgb(59, 59, 59)' }} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                    <div style={{ borderRadius: "0.8rem", width: '9.26rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid rgb(59, 59, 59)' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                         <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5" style={{ color: '#ff6945', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%' }}>삭제</div>
                     </div>
                 )}
@@ -163,13 +163,20 @@ const FreeBoardView2 = () => {
                             </div> */}
                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.3rem', height: '9rem', letterSpacing: '-0.07rem' }}>
                                 <img style={{ width: '3.450625rem', height: '4.436875rem', marginRight: '0.8rem', marginLeft: '-0.3rem' }} className='object-contain' src={Rank1} alt="" />
-                                <p style={{ fontSize: '2.624375rem', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">하이도1207</p>
+                                <p style={{
+                                    fontSize: '2.624375rem', color: '#929292 ',
+                                    whiteSpace: 'nowrap',
+                                    maxWidth: '33.5rem',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                }} className="font-spoqaMedium tracking-tight text-gray-r585858">하이도1207</p>
                                 <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1rem auto 1.16rem', background: '#929292' }} className='bg-gray-c5c5c5'></div>
                                 <p style={{ fontSize: '2.4375rem', color: '#929292', marginTop: '2.2rem', fontFamily: 'RobotoRegular' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:49</p>
                             </div>
                         </div>
                         <div style={{
-                            width: '10.375rem',
+                            // width: '10.375rem',
+                            padding: '0 1.5rem',
                             height: '4.4375rem',
                             fontSize: '2.4375rem',
                             display: 'flex',
@@ -210,7 +217,7 @@ const FreeBoardView2 = () => {
                         </div>
                     </div>
 
-                    <div style={{ height: "28.1875rem", WebkitTextStroke: "", borderTopWidth: '0.1875rem', paddingTop: '2.2rem', paddingLeft: '1.85rem', fontSize: '2.811875rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeo', background: '#323232', marginTop: '5.4rem', borderTop: '0.1875rem solid #252525', borderBottomLeftRadius: '1rem', borderBottomRightRadius: '1rem', letterSpacing: '-0.07rem' }} className=" bg-white border-b border-gray-dddddd  font-spoqa tracking-tight text-gray-r585858">
+                    <div style={{ minHeight: "28.1875rem", WebkitTextStroke: "", borderTopWidth: '0.1875rem', padding: '2.2rem 1.85rem', fontSize: '2.811875rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeo', background: '#323232', marginTop: '5.4rem', borderTop: '0.1875rem solid #252525', borderBottomLeftRadius: '1rem', borderBottomRightRadius: '1rem', letterSpacing: '-0.07rem' }} className=" bg-white border-b border-gray-dddddd  font-spoqa tracking-tight text-gray-r585858">
                         베팅기록 올려봅니다.
                     </div>
                 </div>
@@ -236,7 +243,7 @@ const FreeBoardView2 = () => {
                         style={{ background: 'linear-gradient(to top, #97351d, #bb4c32 50%, #df6345)' }}
                     >
                         <div className="text">
-                            <span className="font-spoqaMedium tracking-tight text-white">수정하기</span>
+                            <span className="font-spoqaMedium tracking-tight text-white shadow-to-text">수정하기</span>
                         </div>
                     </div>
                 </button>
@@ -245,7 +252,7 @@ const FreeBoardView2 = () => {
                     style={{ background: 'linear-gradient(to top, #4d3c0a, #a3814f 50%, #e7b786 )' }}>
                     <div className='div-border' style={{ background: 'linear-gradient(to top, #80603f, #96704a 50%, #a57b52 )', color: '#ffdfbd' }}>
                         <div className="text">
-                            <span className="font-spoqaMedium tracking-tight text-white">삭제하기</span>
+                            <span className="font-spoqaMedium tracking-tight text-white shadow-to-text">삭제하기</span>
                         </div>
                     </div>
                 </button>
@@ -270,7 +277,8 @@ const FreeBoardView2 = () => {
                     <div className="flex items-center justify-between" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '0.6rem' }}>
                         <p style={{ fontSize: '2.624375rem', color: '#ccc2b6', marginTop: '2.8rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }} className="font-spoqaMedium tracking-tight text-gray-r454545">댓글 작성하기</p>
                         <div style={{
-                            width: '10.375rem',
+                            // width: '10.375rem',
+                            padding: '0 1.5rem',
                             height: '4.4375rem',
                             fontSize: '2.4375rem',
                             display: 'flex',
@@ -338,14 +346,14 @@ const FreeBoardView2 = () => {
                             </div>
                         </div>
 
-                        <div style={{ borderRadius: "0.8rem", WebkitTextStroke: "0.2px", height: '8.5625rem', marginTop: '-2.85rem', marginBottom: '1rem', borderWidth: '0.1875rem', background: '#272726' }} className="w-full h-full bg-white border border-gray-dddddd flex items-center justify-between">
-                            <p style={{ paddingLeft: '3.65rem', paddingTop: '2.7rem', fontSize: '2.811875rem', color: '#828282', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
+                        <div style={{ borderRadius: "0.8rem", WebkitTextStroke: "0.2px", minHeight: '8.5625rem', marginTop: '-2.85rem', marginBottom: '1rem', borderWidth: '0.1875rem', background: '#272726', paddingBottom: '0.01rem' }} className="w-full h-full bg-white border border-gray-dddddd flex items-center justify-between">
+                            <p style={{ paddingLeft: '3.65rem', paddingRight: '3.65rem', paddingTop: '2.7rem', fontSize: '2.811875rem', color: '#b4b4b4', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         </div>
                         <div style={{ marginLeft: '-0.2rem' }} className='flex'>
-                            <button style={{ borderRadius: "0.8rem", width: '9.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.39rem', marginBottom: '0.95rem', background: '#272726', border: '0.1875rem solid #3b3b3b', color: '#ff6945', fontFamily: 'SpoqaHanSansNeoMedium' }} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <button style={{ borderRadius: "0.8rem", width: '9.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.39rem', marginBottom: '0.95rem', background: '#272726', border: '0.1875rem solid #3b3b3b', color: '#ff6945', fontFamily: 'SpoqaHanSansNeoMedium' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                                 <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2" style={{ paddingLeft: '0.2rem', paddingTop: '0.2rem' }}>수정</div>
                             </button>
-                            <button style={{ borderRadius: "0.8rem", width: '9.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', background: '#272726', border: '0.1875rem solid #3b3b3b', color: '#ff6945', fontFamily: 'SpoqaHanSansNeoMedium' }} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <button style={{ borderRadius: "0.8rem", width: '9.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', background: '#272726', border: '0.1875rem solid #3b3b3b', color: '#ff6945', fontFamily: 'SpoqaHanSansNeoMedium' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                                 <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2" style={{ paddingLeft: '0.2rem', paddingTop: '0.2rem' }}>삭제</div>
                             </button>
                         </div>
@@ -400,14 +408,14 @@ const FreeBoardView2 = () => {
                             </div>
                         </div>
 
-                        <div style={{ borderRadius: "0.625rem", WebkitTextStroke: "0.2px", height: '8.6rem', marginTop: '2.03rem', marginBottom: '0.95rem', borderWidth: '0.1875rem', display: 'flex', background: '#272726' }} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
-                            <p style={{ marginLeft: '3.6875rem', marginTop: '2.5rem', fontSize: '2.811875rem', color: '#828282', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
+                        <div style={{ borderRadius: "0.625rem", WebkitTextStroke: "0.2px", height: '8.6rem', marginTop: '2.03rem', marginBottom: '0.95rem', borderWidth: '0.1875rem', display: 'flex', background: '#272726', paddingRight: '3.6875rem' }} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
+                            <p style={{ marginLeft: '3.6875rem', marginTop: '2.5rem', fontSize: '2.811875rem', color: '#b4b4b4', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         </div>
                         <div style={{ marginLeft: '-0.2rem' }} className='flex'>
-                            <button style={{ borderRadius: "0.8rem", width: '9.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.39rem', marginBottom: '0.95rem', background: '#272726', border: '0.1875rem solid #3b3b3b', color: '#ff6945', fontFamily: 'SpoqaHanSansNeoMedium' }} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <button style={{ borderRadius: "0.8rem", width: '9.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.39rem', marginBottom: '0.95rem', background: '#272726', border: '0.1875rem solid #3b3b3b', color: '#ff6945', fontFamily: 'SpoqaHanSansNeoMedium' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                                 <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2" style={{ paddingLeft: '0.2rem', paddingTop: '0.2rem' }}>수정</div>
                             </button>
-                            <button style={{ borderRadius: "0.8rem", width: '9.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', background: '#272726', border: '0.1875rem solid #3b3b3b', color: '#ff6945', fontFamily: 'SpoqaHanSansNeoMedium' }} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <button style={{ borderRadius: "0.8rem", width: '9.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', background: '#272726', border: '0.1875rem solid #3b3b3b', color: '#ff6945', fontFamily: 'SpoqaHanSansNeoMedium' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                                 <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2" style={{ paddingLeft: '0.2rem', paddingTop: '0.2rem' }}>삭제</div>
                             </button>
                         </div>
@@ -430,11 +438,11 @@ const FreeBoardView2 = () => {
                             </div>
                         </div>
 
-                        <div style={{ borderRadius: "0.625rem", WebkitTextStroke: "0.2px", height: '8.5625rem', marginTop: '2.06rem', marginBottom: '1.1rem', borderWidth: '0.1875rem', display: 'flex', background: '#272726' }} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
-                            <p style={{ marginLeft: '3.6875rem', marginTop: '2.5rem', fontSize: '2.811875rem', color: '#828282', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
+                        <div style={{ borderRadius: "0.625rem", WebkitTextStroke: "0.2px", minHeight: '8.5625rem', marginTop: '2.06rem', marginBottom: '1.1rem', borderWidth: '0.1875rem', display: 'flex', background: '#272726' }} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
+                            <p style={{ marginLeft: '3.6875rem', marginTop: '2.5rem', fontSize: '2.811875rem', color: '#b4b4b4', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         </div>
                         <div style={{ marginTop: '-0.1rem', marginLeft: '-0.2rem', display: 'flex', marginBottom: '-0.2rem' }} className='flex'>
-                            <button style={{ borderRadius: "0.8rem", width: '9.4rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', color: '#ccc2b6', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid rgb(59, 59, 59)', marginBottom: '1.1rem' }} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <button style={{ borderRadius: "0.8rem", width: '9.4rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', color: '#ccc2b6', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid rgb(59, 59, 59)', marginBottom: '1.1rem' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                                 <div>답글</div>
                             </button>
                         </div>

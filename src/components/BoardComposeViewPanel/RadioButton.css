@@ -46,14 +46,14 @@ input[type='checkbox'] {
 
 input[type='radio'] {
   appearance: none;
-  background-color: #fff;
+  background-color: #1e1e1e;
   margin: 0;
   font: inherit;
-  color: #dddddd;
+  color: #927c55;
   width: 3rem;
   height: 3rem;
-  border: 0.2rem solid #dddddd;
-  border-radius: 0.7rem;
+  border: 0.2rem solid #41403f;
+  border-radius: 0.9rem;
   transform: translateY(-0.075em);
 
   display: grid;
@@ -87,7 +87,7 @@ input[type='radio']::before {
   transition: 120ms transform ease-in-out;
   box-shadow: inset 1em 1em #927c55;
   background-color: #927c55;
-  border-radius: 0.7rem;
+  border-radius: 0.6rem;
 }
 
 input[type='checkbox']:checked::before {

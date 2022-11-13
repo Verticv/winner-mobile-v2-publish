@@ -127,7 +127,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
         }
     };
 
-    const CouponTitle = ({ text = '사용 가능한 쿠폰', number = '10', numberColor = '#ed2f59', endText = '장' }) => {
+    const CouponTitle = ({ text = '사용 가능한 쿠폰', number = '10', numberColor = '#e65454', endText = '장' }) => {
         return (
             <div className="flex items-center space-x-20px coupon-title">
                 <div style={{ fontSize: '2.625rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="font-spoqaMedium tracking-tight text-gray-r8c8c8c">
@@ -149,8 +149,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             <div style={{ margin: '1.875rem', marginBottom: '1.4rem', marginTop: '0rem', background: '', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#c8c8c8' }} className='mt-4 flex justify-between'>
                 <CouponTitle text='전체 받은 쪽지' number='7' endText='건' />
                 <div className='flex' style={{ display: 'flex', marginRight: '-0.6rem' }}>
-                    <CouponTitle text='쪽지보관은 최장' number='14' endText='일' numberColor='#0056a6' />
-                    <CouponTitle text='최대' number='20' endText='개' numberColor='#0056a6' />
+                    <CouponTitle text='쪽지보관은 최장' number='14' endText='일' numberColor='#4c98ff' />
+                    <CouponTitle text='최대' number='20' endText='개' numberColor='#4c98ff' />
                 </div>
             </div>
             <div style={{ borderRadius: "1em", margin: '1.875rem', marginTop: '0' }} className="shadow-subNavbar overflow-hidden">

@@ -277,6 +277,7 @@ const SlotBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false
             }, 0)
         }
         return (() => {
+            if (subActiveButton)
             setSubActiveButton(path)
         })
     }, [setSubActiveButton, path, subActiveButton, navigate]);

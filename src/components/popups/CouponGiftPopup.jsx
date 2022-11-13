@@ -4,6 +4,7 @@ import CloseIcon from '../../assets/coupon/close-btn.png'
 import Step1 from '../../assets/coupon/step-1.png'
 import Step2 from '../../assets/coupon/step-2.png'
 import './Scrollbars.css'
+import '../BoardComposeViewPanel/RadioButton.css'
 // import img18 from '../../img19.png'
 
 const CouponGiftPopup = ({ setPopupOpen }) => {
@@ -50,10 +51,10 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
                             </div>
                         </button>
                     </div> */}
-                    <div className='button-class-div'>
+                    <div className='button-class-div shadow-to-box'>
                         <button className='button-class hover'>
                             <div style={{ marginTop: '0.2rem' }}>
-                                <span>쿠폰발송</span>
+                                <span className='shadow-to-text'>쿠폰발송</span>
                             </div>
                         </button>
                     </div>
