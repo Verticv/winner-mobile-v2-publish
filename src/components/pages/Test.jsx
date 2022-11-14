@@ -15,7 +15,7 @@ import AccountProfileComponent from '../AccountProfileComponent'
 import CouponUsage from '../CouponUsage';
 import BetHistory from '../BetHistory';
 // import Inbox from 'components/myPage/Inbox'
-// import InboxView from 'components/myPage/InboxView'
+import InboxView from '../InboxView'
 import GameResultsPage from '../GameResultsPage'
 import Icon1 from "../../assets/myInfo/1.png";
 import Icon2 from "../../assets/myInfo/2.png";
@@ -330,10 +330,10 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 }
             >
             </Route>
-            {/* <Route path="/inbox/*"
+            <Route path="/inbox/*"
                 element={<InboxView />}
             >
-            </Route> */}
+            </Route>
             <Route path="/edit-info/*"
                 element={
                     <>
