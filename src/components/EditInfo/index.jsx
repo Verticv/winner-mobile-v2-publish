@@ -16,6 +16,11 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
         setActiveButton('/mypage/edit-info')
     }, [setActiveButton]);
 
+    const truncate = (str, max, len) => {
+        return str.length > max ? str.substring(0, len) + "..." : str;
+    }
+
+
     const Title = ({ text }) => (
         <div style={{ width: "24rem", marginRight: '2.7rem', background: '#272726', flexShrink: '0', borderRadius: '0.5rem' }} className="form-Title">
             <div style={{ fontSize: '2.8125rem', color: text === '레벨' ? '#c8c8c8' :'#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '2.2rem 0 0 1.25rem', letterSpacing: '-0.07rem' }} className="text-gray-r454545 font-spoqaMedium">{text}</div>
@@ -37,7 +42,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
 
                 <div style={{ fontSize: '2.625rem' }} className="flex text-gray-r7c7c7c flex-col items-center justify-center font-spoqaMedium edit-info-text">
                     <div className="flex items-center h-14">
-                        <span className="input-with-text">louie3</span>
+                        <span className="input-with-text">{truncate('louie3louie3louie3louie3', 10, 16 )}</span>
                         <span>님의 회원정보를 수정합니다.</span>
                     </div>
                     <span className="flex items-center h-14" style={{ margin: '0.5rem 0 0 0.5rem' }}>아이디와 비밀번호 보안에 신경써주십시오.</span>
@@ -48,12 +53,12 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                         <div className="form-section">
                             <Title text="아이디" />
                             <div className="lable-or-input"
-                                style={{ borderBottom: selectedInput === 0 ? '0.375rem solid rgb(110, 84, 58)' : '0.375rem solid #191817' }}
+                                style={{ borderBottom: selectedInput === 0 ? '0.375rem solid #191817' : '0.375rem solid #191817', overflow: 'hidden' }}
                                 onClick={() => setSelectedInput(0)}
                             >
                                 <label
                                     // style={{ fontSize: '2.8125rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeo', marginBottom: '1.1875rem', display: 'inline-block' }}
-                                    className="text-gray-r585858 font-spoqa">louie3</label>
+                                    className="text-gray-r585858 font-spoqa" disabled>louie3</label>
                                 <div style={{ height: '0.1875rem' }} className={`bg-gray-bebebe w-full`}></div>
                             </div>
                         </div>

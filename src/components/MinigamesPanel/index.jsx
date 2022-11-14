@@ -85,7 +85,7 @@ const MinigamesPanel = ({
                         <p style={{ fontSize: '3.375rem' }}>02:16</p>
                     </div>
                 </div>
-                <img style={{ width: '7.9375rem', marginRight: '0.2rem', marginTop: '0.6rem', marginLeft: '-2.1rem' }} src={RefreshIcon} alt="" className="imgcontent1" />
+                <img style={{ width: '7.9375rem', marginRight: '0.2rem', marginTop: '0.6rem', marginLeft: '-2.1rem' }} src={RefreshIcon} alt="" className="imgcontent1 hover" />
             </div>
 
             <div className="container1">

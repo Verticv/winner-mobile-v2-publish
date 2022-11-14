@@ -71,7 +71,7 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
                     style={{ marginTop: '1rem' }}
                 >
 
-                    <div style={{ padding: '0 1.8rem' }}>
+                    <div style={{ padding: '0 1.8rem', marginBottom: '1.6rem' }}>
                         <Routes>
                             <Route path="/powerball/*"
                                 element={

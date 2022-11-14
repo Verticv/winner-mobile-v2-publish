@@ -315,7 +315,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                     <button
                         style={{
                             height: '100%', padding: '1px', fontSize: '3.1875rem',
-                            background: 'linear-gradient(to top, #528ccd, #396084)'
+                            background: 'linear-gradient(to top, #396084, #528ccd)'
                         }}
                         className="buttonstayle"
                         onClick={() => {
@@ -324,7 +324,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                         }}
                     >
                         <div className="div-style flex items-center justify-center">
-                            <img style={{ width: '3.1875rem', height: '3.1875rem' }} src={BetIcon} alt="" />
+                            <img style={{ width: '3.1875rem', height: '3.1875rem', marginTop: '0.2rem' }} src={BetIcon} alt="" />
                             <span style={{ marginLeft: '1.3125rem', color: '#d6f3ff' }} className="span-style shadow-to-text">베팅하기</span>
                         </div>
                     </button>

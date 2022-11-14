@@ -56,7 +56,7 @@ const tableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#d43712'
+            buttonColor: '#c65337'
         }
     ],
     [
@@ -79,7 +79,7 @@ const tableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#d43712'
+            buttonColor: '#c65337'
         }
     ],
     [
@@ -102,7 +102,7 @@ const tableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#d43712'
+            buttonColor: '#c65337'
         }
     ],
     [
@@ -125,7 +125,7 @@ const tableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#d43712'
+            buttonColor: '#c65337'
         }
     ],
     [
@@ -148,7 +148,7 @@ const tableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#d43712'
+            buttonColor: '#c65337'
         }
     ],
     [
@@ -171,7 +171,7 @@ const tableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#d43712'
+            buttonColor: '#c65337'
         }
     ],
     [
@@ -194,7 +194,7 @@ const tableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#d43712'
+            buttonColor: '#c65337'
         }
     ],
     [
@@ -217,7 +217,7 @@ const tableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#d43712'
+            buttonColor: '#c65337'
         }
     ],
 ]
@@ -411,10 +411,13 @@ const historyTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
+            // 0: { textColor: 'red' }
+        },
+        {
             buttonColor: '#c65337',
             buttonText: '사용 가능',
-           
-            
+            // textColor: 'red'
+
         }
     ],
     [
@@ -480,7 +483,7 @@ const historyTableData = [
         {
             buttonColor: '#427515',
             buttonText: '회수 쿠폰',
-            textColor: '#2f5d9',
+            // textColor: '#2f5d9c',
         }
     ],
     [
@@ -592,6 +595,7 @@ const sentHistoryTableData = [
         {
             buttonColor: '#5a2867',
             buttonText: '선물 완료',
+            textColor: '#c697d3'
         }
     ],
     [
@@ -615,7 +619,8 @@ const sentHistoryTableData = [
         },
         {
             buttonColor: '#5a2867',
-            buttonText: '선물 완료'
+            buttonText: '선물 완료',
+            textColor: '#c697d3'
         }
     ],
     [
@@ -639,7 +644,8 @@ const sentHistoryTableData = [
         },
         {
             buttonColor: '#5a2867',
-            buttonText: '선물 완료'
+            buttonText: '선물 완료',
+            textColor: '#c697d3'
         }
     ],
     [
@@ -663,7 +669,8 @@ const sentHistoryTableData = [
         },
         {
             buttonColor: '#5a2867',
-            buttonText: '선물 완료'
+            buttonText: '선물 완료',
+            textColor: '#c697d3'
         }
     ],
     [
@@ -687,7 +694,8 @@ const sentHistoryTableData = [
         },
         {
             buttonColor: '#5a2867',
-            buttonText: '선물 완료'
+            buttonText: '선물 완료',
+            textColor: '#c697d3'
         }
     ],
     [
@@ -711,7 +719,8 @@ const sentHistoryTableData = [
         },
         {
             buttonColor: '#5a2867',
-            buttonText: '선물 완료'
+            buttonText: '선물 완료',
+            textColor: '#c697d3'
         }
     ],
     [
@@ -735,7 +744,8 @@ const sentHistoryTableData = [
         },
         {
             buttonColor: '#5a2867',
-            buttonText: '선물 완료'
+            buttonText: '선물 완료',
+            textColor: '#c697d3'
         }
     ],
     [
@@ -759,7 +769,8 @@ const sentHistoryTableData = [
         },
         {
             buttonColor: '#5a2867',
-            buttonText: '선물 완료'
+            buttonText: '선물 완료',
+            textColor: '#c697d3'
         }
     ],
 ]

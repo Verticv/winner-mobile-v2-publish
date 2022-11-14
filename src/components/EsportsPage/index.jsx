@@ -31,7 +31,7 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
             <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
                 {/* <NoticeBanner /> */}
                 <Header isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                <HomePageTopBanner pageTitle='e-스포츠' />
+                <HomePageTopBanner pageTitle='e-스포츠' toPath='/main' />
             </div>
 
 
