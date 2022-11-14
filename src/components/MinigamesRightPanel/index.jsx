@@ -203,6 +203,7 @@ const MinigamesRightPanel = ({
                 padding: '0.1875rem',
                 zIndex: '200'
             }}
+            className='shadow-to-box'
         >
             <button
                 style={{
@@ -236,7 +237,15 @@ const MinigamesRightPanel = ({
                         }}
                         className={`gray-button-div1`}
                     >
-                        <div style={{ fontSize: '2.625rem', color: '#c8c8c8' }} className={`gray-button-div2 shadow-to-text`}>
+                        <div style={{
+                            fontSize: '2.625rem', color: '#c8c8c8',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            width: '100%',
+                            alignItems: 'center',
+                            height: '100%',
+                            marginTop: '0.25rem'
+                        }} className={`gray-button-div2 shadow-to-text`}>
                             {text}
                         </div>
 
@@ -340,7 +349,7 @@ const MinigamesRightPanel = ({
                             borderRadius: '1rem',
                             marginRight: '0.75rem'
                         }}
-                        className='shadow-to-box'
+                        className='shadow-to-box hover'
                     >
                         <button
                             style={{
@@ -348,9 +357,9 @@ const MinigamesRightPanel = ({
                                 height: "100%",
                                 background: "linear-gradient(to top, #7f5f3f, #a67c52)",
                                 borderRadius: '0.8rem',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center'
+                                // display: 'flex',
+                                // justifyContent: 'center',
+                                // alignItems: 'center'
                             }}
                             // className={`${buttonHover === 1 && "content-RP12"} content-RP13`}
                             // onPointerDown={() => setButtonHover(1)}
@@ -359,7 +368,14 @@ const MinigamesRightPanel = ({
                             }}
                         // onPointerOut={() => setButtonHover(null)}
                         >
-                            <div style={{ borderColor: "#9c9c9c" }} className="content-RP14">
+                            <div style={{
+                                borderColor: "#9c9c9c",
+                                width: '100%',
+                                height: '100%',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }} className="content-RP14">
                                 <img className="content-RP15" src={RefrshIcon} style={{ width: '2.9375rem' }} alt="" />
                             </div>
                         </button>
@@ -374,7 +390,7 @@ const MinigamesRightPanel = ({
                             borderRadius: '1rem',
                             marginRight: '0.75rem'
                         }}
-                        className='shadow-to-box'
+                        className='shadow-to-box hover'
                     >
                         <button
                             // onPointerDown={() => setButtonHover(2)}
@@ -388,13 +404,20 @@ const MinigamesRightPanel = ({
                                 height: "100%",
                                 background: "linear-gradient(to top, #7f5f3f, #a67c52)",
                                 borderRadius: '0.8rem',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center'
+                                // display: 'flex',
+                                // justifyContent: 'center',
+                                // alignItems: 'center'
                             }}
                         // className={`${buttonHover === 2 && "content-RP16"} content-RP17`}
                         >
-                            <div style={{ borderColor: "#9c9c9c" }} className="content-RP18">
+                            <div style={{
+                                borderColor: "#9c9c9c",
+                                width: '100%',
+                                height: '100%',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }} className="content-RP18">
                                 <img
                                     style={{ width: "2.875rem" }}
                                     src={CloseIcon}
@@ -527,11 +550,11 @@ const MinigamesRightPanel = ({
 
                 </div>
 
-                <div style={{ height: '7rem', paddingLeft: '3.2rem', paddingRight: '3.5rem', fontSize: '2.625rem', borderBottom: '0.1875rem solid #1e1e1e', background: '#323232' }} className="content-cart">
+                <div style={{ height: '7rem', paddingLeft: '3.2rem', paddingRight: '3.5rem', fontSize: '2.625rem', borderBottom: '0.1875rem solid #252525', background: '#323232' }} className="content-cart">
                     <p className="content-cart1">보유금액</p>
                     <p style={{ fontSize: '2.625rem' }} className="content-cart2">3,522,170</p>
                 </div>
-                <div style={{ height: '7.125rem', paddingLeft: '3.2rem', paddingRight: '3.5rem', fontSize: '2.625rem', borderBottom: '0.1875rem solid #1e1e1e', background: '#323232' }} className="content-cart12">
+                <div style={{ height: '7.125rem', paddingLeft: '3.2rem', paddingRight: '3.5rem', fontSize: '2.625rem', borderBottom: '0.1875rem solid #252525', background: '#323232' }} className="content-cart12">
                     <p className="content-cart13">배당률</p>
                     <p style={{ color: "#f26522" }} className="content-cart14">1.95</p>
                 </div>
@@ -552,7 +575,7 @@ const MinigamesRightPanel = ({
                         }}
                     />
                 </div> */}
-                <div style={{ height: '7rem', paddingLeft: '3.2rem', paddingRight: '1.5rem', fontSize: '2.625rem', borderBottom: '0.1875rem solid #1e1e1e', background: '#323232' }} className="content-cart15">
+                <div style={{ height: '7rem', paddingLeft: '3.2rem', paddingRight: '1.5rem', fontSize: '2.625rem', borderBottom: '0.1875rem solid #252525', background: '#323232' }} className="content-cart15">
                     <p className="content-cart16">베팅금액</p>
                     <input
                         style={{ color: "#d52e2e", width: "36.875rem", height: "5.3rem", backgroundColor: "#1a1a1a", border: '0.1875rem solid #404040' }}
@@ -592,16 +615,16 @@ const MinigamesRightPanel = ({
                             <div style={{ marginRight: '0.3rem' }}>
                                 <BetAmountButton amount={5000} inputValue={inputValue} setInputValue={setInputValue} />
                             </div>
-                            <div style={{ marginRight: '0.3rem' }}>
+                            <div style={{ marginRight: '0.35rem' }}>
                                 <BetAmountButton amount={10000} inputValue={inputValue} setInputValue={setInputValue} />
                             </div>
                             <BetAmountButton amount={50000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
-                        <div style={{ marginTop: '0.375rem', marginBottom: '0.375rem' }} className="betamount-btn3">
+                        <div style={{ marginTop: '0.4rem', marginBottom: '0.375rem' }} className="betamount-btn3">
                             <div style={{ marginRight: '0.3rem' }}>
                                 <BetAmountButton amount={100000} inputValue={inputValue} setInputValue={setInputValue} />
                             </div>
-                            <div style={{ marginRight: '0.3rem' }}>
+                            <div style={{ marginRight: '0.35rem' }}>
                                 <BetAmountButton amount={500000} inputValue={inputValue} setInputValue={setInputValue} />
                             </div>
                             <BetAmountButton amount={1000000} inputValue={inputValue} setInputValue={setInputValue} />
@@ -612,7 +635,7 @@ const MinigamesRightPanel = ({
                         <div style={{ marginRight: '0.3rem' }} className="betfixedamount-btn1">
                             <BetFixedAmountButton amount={inputValue / 2} text="하프" />
                         </div>
-                        <div style={{ marginRight: '0.3rem' }} className="betfixedamount-btn1">
+                        <div style={{ marginRight: '0.35rem' }} className="betfixedamount-btn1">
                             <BetFixedAmountButton amount={3522170} text="최대" />
                         </div>
                         <div className="betfixedamount-btn1">
@@ -629,12 +652,12 @@ const MinigamesRightPanel = ({
                         <button
                             style={{
                                 height: '100%', padding: '1px', fontSize: '3.1875rem',
-                                background: 'linear-gradient(to top, #528ccd, #396084)'
+                                background: 'linear-gradient(to top, #396084, #528ccd)'
                             }}
                             className="buttonstayle"
                         >
                             <div className="div-style flex items-center justify-center">
-                                <img style={{ width: '3.1875rem', height: '3.1875rem' }} src={BetIcon} alt="" />
+                                <img style={{ width: '3.1875rem', height: '3.1875rem', marginTop: '0.2rem' }} src={BetIcon} alt="" />
                                 <span style={{ marginLeft: '1.3125rem', color: '#d6f3ff' }} className="span-style shadow-to-text">베팅하기</span>
                             </div>
                         </button>

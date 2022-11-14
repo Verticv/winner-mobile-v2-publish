@@ -21,7 +21,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
         titleNumber = 1,
         subText = "홀짝",
         subText2 = null,
-        borderColor = "#c7b9a6",
+        borderColor = "#4d473c",
         missingBorder = "left",
         type = "파워볼",
         gradient11 = '#4b443d',
@@ -102,7 +102,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                             borderTop: `0.1875rem solid ${borderColor}`,
                             // borderBottom: `0.1875rem solid ${borderColor}`,
                             // borderLeft: missingBorder !== "both" && missingBorder === "right" ? `0.1875rem solid ${borderColor}` : '',
-                            borderTopColor: 'white'
+                            borderTopColor: titleNumber === 1 ? '#b1aa9d' : '#a0aca9'
                             // , marginLeft: '-0.3rem', marginTop: '-0.1rem'
                         }}
                             className="betoptions-style8"
@@ -160,7 +160,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                             borderTop: `0.1875rem solid ${borderColor}`,
                             // borderBottom: `0.1875rem solid ${borderColor}`,
                             // borderLeft: missingBorder !== "both" && missingBorder === "right" ? `0.1875rem solid ${borderColor}` : '',
-                            borderTopColor: 'white',
+                            borderTopColor: titleNumber === 2 ? '#b1aa9d' : '#a0aca9'
                         }}
                             className="betoption-content"
                         >
@@ -228,7 +228,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                             borderTop: `0.1875rem solid ${borderColor}`,
                             // borderBottom: `0.1875rem solid ${borderColor}`,
                             // borderLeft: missingBorder !== "both" && missingBorder === "right" ? `0.1875rem solid ${borderColor}` : '',
-                            borderTopColor: 'white',
+                            borderTopColor: titleNumber === 3 ? '#b1aa9d' : '#a0aca9'
                         }} className="betoption-space">
                             <div className="betoption-content1">
                                 <div
@@ -350,7 +350,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                             borderTop: `0.1875rem solid ${borderColor}`,
                             // borderBottom: `0.1875rem solid ${borderColor}`,
                             // borderLeft: (missingBorder !== "both" && missingBorder === "right") ? `0.1875rem solid ${borderColor}` : '',
-                            borderTopColor: 'white',
+                            borderTopColor: titleNumber === 4 ? '#b1aa9d' : '#a0aca9'
                         }} className="betoption-space">
                             <div className="betoption-content1">
                                 <div
@@ -448,7 +448,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                             borderTop: `0.1875rem solid ${borderColor}`,
                             // borderBottom: `0.1875rem solid ${borderColor}`,
                             // borderLeft: missingBorder !== "both" && missingBorder === "right" ? `0.1875rem solid ${borderColor}` : '',
-                            borderTopColor: 'white',
+                            borderTopColor: titleNumber === 5 ? '#b1aa9d' : '#a0aca9'
                         }} className="betoption-spacey">
                             <div className="betoption-space-x15">
                                 <div className="betoption-content-1">
@@ -638,7 +638,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                             borderTop: `0.1875rem solid ${borderColor}`,
                             // borderBottom: `0.1875rem solid ${borderColor}`,
                             // borderLeft: (missingBorder !== "both" && missingBorder === "right") ? `0.1875rem solid ${borderColor}` : '',
-                            borderTopColor: 'white',
+                            borderTopColor: '#a0aca9',
                         }} className="betoption-content9-space">
                             <div className="betoption-content--1">
                                 <div
@@ -714,7 +714,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                             borderTop: `0.1875rem solid ${borderColor}`,
                             // borderBottom: `0.1875rem solid ${borderColor}`,
                             // borderLeft: (missingBorder !== "both" && missingBorder === "right") ? `0.1875rem solid ${borderColor}` : '',
-                            borderTopColor: 'white',
+                            borderTopColor: '#a0aca9',
                         }} className="betoption-space changeChange">
                             <div className="betoption-content1">
                                 <div
@@ -865,13 +865,13 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                 {/* <PanelTitle title="파워볼" /> */}
                 <div className="contentball1">
                     <div className="contentball2">
-                        <div style={{ marginRight: '0.2rem' }} className="contentball2">
+                        <div style={{ marginRight: '0.1rem' }} className="contentball2">
                             <BetOptions />
                         </div>
                         <BetOptions titleNumber={3} width={48.8} subText2="언오버" missingBorder='right' />
                     </div>
                     <div className="contentball2">
-                        <div style={{ marginRight: '0.2rem' }} className="contentball2">
+                        <div style={{ marginRight: '0.1rem' }} className="contentball2">
                             <BetOptions titleNumber={2} subText="언오버" />
                         </div>
                         <BetOptions titleNumber={4} width={48.8} subText="구간" missingBorder='right' />
@@ -885,13 +885,13 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                 {/* <PanelTitle title="일반볼" /> */}
                 <div className="contentball1">
                     <div className="contentball2">
-                        <div style={{ marginRight: '0.2rem' }}>
+                        <div style={{ marginRight: '0.1rem' }}>
                             <BetOptions
                                 titleNumber={6}
                                 titleBg="#00000030"
                                 gradient1="#687f78"
                                 gradient2="#50655e"
-                                borderColor='#a3bbb1'
+                                borderColor='#3e4a41'
                                 type='일반볼'
                                 gradient11="#2b3838"
                                 gradient12="#a0bab4"
@@ -904,22 +904,22 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                             gradient2="#50655e"
                             width={48.8}
                             subText2="언오버"
-                            borderColor='#a3bbb1'
+                            borderColor='#3e4a41'
                             missingBorder='right'
                             type='일반볼'
                             gradient11="#2b3838"
                             gradient12="#a0bab4"
                         />
                     </div>
-                    <div className="contentball2" style={{ marginBottom: '0.3rem' }}>
-                        <div style={{ marginRight: '0.2rem' }}>
+                    <div className="contentball2" style={{ marginBottom: '0rem' }}>
+                        <div style={{ marginRight: '0.1rem' }}>
                             <BetOptions
                                 titleNumber={7}
                                 titleBg="#00000030"
                                 gradient1="#687f78"
                                 gradient2="#50655e"
                                 subText="언오버"
-                                borderColor='#a3bbb1'
+                                borderColor='#3e4a41'
                                 type='일반볼'
                                 gradient11="#2b3838"
                                 gradient12="#a0bab4"
@@ -932,7 +932,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                             gradient2="#50655e"
                             width={48.8}
                             subText="구간"
-                            borderColor='#a3bbb1'
+                            borderColor='#3e4a41'
                             missingBorder='right'
                             type='일반볼'
                             gradient11="#2b3838"
@@ -946,7 +946,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                         gradient2="#50655e"
                         width={77.625}
                         subText2="소중대"
-                        borderColor='#a3bbb1'
+                        borderColor='#3e4a41'
                         missingBorder='both'
                         type='일반볼'
                         gradient11="#2b3838"

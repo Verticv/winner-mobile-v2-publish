@@ -147,7 +147,7 @@ const BetCombinationRightPanel = ({
                             borderRadius: '1rem',
                             marginRight: '0.75rem'
                         }}
-                        className='shadow-to-box'
+                        className='shadow-to-box hover'
                     >
                         <button
                             style={{
@@ -162,7 +162,14 @@ const BetCombinationRightPanel = ({
                             }}
                             onPointerOut={() => setButtonHover(null)}
                         >
-                            <div style={{ borderColor: "#9c9c9c" }} className="content-RP14">
+                            <div style={{
+                                borderColor: "#9c9c9c",
+                                width: '100%',
+                                height: '100%',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }} className="content-RP14">
                                 <img className="content-RP15" src={RefrshIcon} alt="" />
                             </div>
                         </button>
@@ -177,7 +184,7 @@ const BetCombinationRightPanel = ({
                             borderRadius: '1rem',
                             marginRight: '0.75rem'
                         }}
-                        className='shadow-to-box'
+                        className='shadow-to-box hover'
                     >
                         <button
                             onPointerDown={() => setButtonHover(2)}
@@ -193,7 +200,14 @@ const BetCombinationRightPanel = ({
                             }}
                             className={`${buttonHover === 2 && "content-RP16"} content-RP17`}
                         >
-                            <div style={{ borderColor: "#9c9c9c" }} className="content-RP18">
+                            <div style={{
+                                borderColor: "#9c9c9c",
+                                width: '100%',
+                                height: '100%',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }} className="content-RP18">
                                 <img
                                     style={{ width: "2.875rem" }}
                                     src={CloseIcon}

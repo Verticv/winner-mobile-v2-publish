@@ -65,7 +65,7 @@ const BetCart = ({ selectedOption, addedCard, setAddedCard, isPanelFixed, setPan
                     <div style={{ height: "9.0625rem", padding: '0 3.6875rem', borderTopLeftRadius: '2.9rem', borderTopRightRadius: '2.9rem' }} className={`${openedCartDelay ? "container_4 transition" : "container_5 transition"} container_6 shadow-to-box`} onClick={() => setOpenedCart(true)}>
                         <div style={{ width: '40.625rem', display: 'flex', alignItems: 'center' }} className='flex items-center'>
                             <img style={{ width: '4.0625rem', marginLeft: '', paddingBottom: '', objectFit: 'contain' }} className="object-contain" src={CartIcon} alt="" />
-                            <div style={{ width: '3.5625rem', height: '3.5625rem', marginRight: '1.125rem', background: "linear-gradient(to bottom right, #e9441d, #8a2a13)", boxShadow: "1px 1px 1px #00000060" }} className="container_7">
+                            <div style={{ minWidth: '3.5625rem', padding: '0rem 0.7rem', height: '3.5625rem', marginRight: '1.125rem', background: "linear-gradient(to bottom right, #e9441d, #8a2a13)", boxShadow: "1px 1px 1px #00000060" }} className="container_7">
                                 2
                             </div>
                             <p className='container_8'>베팅카트 열기</p>
@@ -112,6 +112,7 @@ const BetCart = ({ selectedOption, addedCard, setAddedCard, isPanelFixed, setPan
                                     paddingTop: '1.6rem',
                                     borderTopLeftRadius: '2.6rem',
                                     borderTopRightRadius: '2.6rem'
+                                    , paddingBottom: '2rem'
                                 }}
                             >
                                 <BetCombinationRightPanel

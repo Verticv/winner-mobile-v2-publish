@@ -49,7 +49,13 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
 
                         <div style={{ fontSize: '2.625rem', marginBottom: '2.7rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.01rem' }} className="flex text-gray-text flex-col items-center justify-center font-spoqaMedium">
                             <div className="flex items-center h-14" style={{ display: 'flex', alignItems: 'center', marginTop: '0.35rem', marginLeft: '' }}>
-                                <span className="text-blue-gradLight font-spoqaBold" style={{ fontFamily: 'SpoqaHanSansNeoBold', color: '#ad9e8c' }}>louie3</span>
+                                <span className="text-blue-gradLight font-spoqaBold" style={{
+                                    fontFamily: 'SpoqaHanSansNeoBold', color: '#ad9e8c',
+                                    whiteSpace: 'nowrap',
+                                    maxWidth: '22.5rem',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                }}>louie3</span>
                                 <span style={{ marginLeft: '0.6rem' }}> 님의 회원정보를 수정합니다.</span>
                             </div>
                             <div className="flex items-center h-14" style={{ marginTop: '0.4rem' }}>비밀번호를 다시 입력해 주세요.</div>
@@ -118,7 +124,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
                                     <div
                                         style={{
                                             width: '100%', height: '100%',
-                                            background: 'linear-gradient(to top, #a67c52, #7f5f3f)',
+                                            background: 'linear-gradient(to top, #7f5f3f, #a67c52)',
                                             borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center'
                                         }}
                                     >
