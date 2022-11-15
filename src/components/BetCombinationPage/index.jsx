@@ -92,7 +92,6 @@ const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
     }, [])
     return (
         <div style={{ maxWidth: '1242px' }} className="container">
-            {console.log("hello")}
             <div className="header-style">
                 <Header isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>

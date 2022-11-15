@@ -966,7 +966,7 @@ const DistributorPage = ({
                             <div className='flex relative div-shadow' style={{ display: 'flex', position: 'relative' }}>
                                 <div style={{ padding: '0', width: '114.75rem' }} className=''>
                                     <div style={{ width: '75.625rem', background: 'linear-gradient(to top, #1f1f1e, #343434 80%)', borderTopLeftRadius: '0.4rem', borderBottomLeftRadius: '0.4rem', overflow: 'scroll', height: '35.8rem', marginLeft: '1.875rem', padding: '0.1875rem', boxShadow: 'rgb(0 0 0) 0 0.4375rem 3rem 0' }} className="w-full overflow-scroll">
-                                        <table style={{ width: '474.625rem', padding: '', display: 'block', background: '', borderCollapse: 'collapse' }} className="w-full">
+                                        <table style={{ width: '469.625rem', padding: '', display: 'block', background: '', borderCollapse: 'collapse' }} className="w-full">
                                             <thead style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', background: '#242424', color: '#ccc2b6' }} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-white tracking-tight">
                                                 <tr style={{ height: '8.925rem', borderBottom: '0.1875rem solid #252525' }} className="flex items-center border-b">
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', background: 'rgb(29, 30, 31)' }} className="bg-gray-r676e76 h-full flex items-center justify-center">구분</td>
@@ -1040,7 +1040,7 @@ const DistributorPage = ({
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right">0</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right">0</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right">3.06M</td>
-                                                    <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right pr-4">0</td>
+                                                    {/* <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right pr-4">0</td> */}
                                                     <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'center', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right pr-4 h-full flex items-center justify-end">7.14M</td>
                                                 </tr>
                                                 <tr style={{ height: '8.625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #252525', background: '#2e2e2e' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
@@ -1077,7 +1077,7 @@ const DistributorPage = ({
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
-                                                    <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right pr-4">0</td>
+                                                    {/* <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right pr-4">0</td> */}
                                                     <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'center', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right pr-4 h-full flex items-center justify-end"></td>
                                                 </tr>
                                                 <tr style={{ height: '8.925rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem', background: '#323232' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
@@ -1114,7 +1114,7 @@ const DistributorPage = ({
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right">0</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right">0</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right">0</td>
-                                                    <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right pr-4">0</td>
+                                                    {/* <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right pr-4">0</td> */}
                                                     <td style={{ backgroundColor: "#2c2c2c", color: "#", width: '13.8125rem', textAlign: 'center', paddingRight: '0.8rem', }} className="text-right pr-4 h-full flex items-center justify-end"></td>
                                                 </tr>
                                             </tbody>

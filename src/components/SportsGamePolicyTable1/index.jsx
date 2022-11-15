@@ -19,7 +19,7 @@ const SportsGamePolicyTable1 = ({ array }) => {
                     <p style={{ marginRight: '-1.2rem', marginTop: '0.2rem' }} key={i}>{item}</p>
                 )}
             </td>
-            {console.log(rows)}
+            {/* {console.log(rows)} */}
             <td style={{ width: "14.1875rem", color: overtime === null ? "#FF0000" : overtime === true ? "#ffcc00" : "#929292" }} className="font-spoqaMedium text-center">
                 <p style={{ marginTop: '0.5rem', marginLeft: hasMargin ? '' : '1rem' }}>{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</p>
             </td>

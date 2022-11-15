@@ -638,7 +638,7 @@ const BetCombinationPanel = ({
             hasDown: false,
             bet: "none",
             subArray: subArray8,
-            isLast: true
+            isLast: true,
         },
 
     ]
@@ -647,9 +647,24 @@ const BetCombinationPanel = ({
     const [selectedCarrier, setSelectedCarrier] = useState("국가선택")
     const [isHover1, setHover1] = useState(null)
     const [isOpen, setOpen] = useState(new Array(20).fill(false))
-    const [isButtonClicked, setButtonClicked] = useState("")
+    const [isButtonOn, setButtonOn] = useState([])
+    const [isButtonClicked, setButtonClicked] = useState("");
+    console.log('isButtonClicked', isButtonClicked);
     const [openPopup, setOpenPopup] = useState(false);
     console.log(`isHover1`, isHover1)
+
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+            index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);
+    };
+    const handleOnClick = (position) => {
+        const updatedButtonClicked = isButtonOn
+        const index = isButtonOn.indexOf(position);
+        index > -1 ? updatedButtonClicked.splice(index, 1) : updatedButtonClicked.push(position)
+        setButtonOn(updatedButtonClicked);
+    }
 
     const truncate = (str, max, len) => {
         return str.length > max ? str.substring(0, len) + "..." : str;
@@ -693,13 +708,6 @@ const BetCombinationPanel = ({
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const handleOnChange = (position) => {
-        const updatedCheckedState = checkedState.map((item, index) =>
-            index === position ? !item : item
-        );
-        setCheckedState(updatedCheckedState);
-    };
-
     function SearchDropdownCell({ items }) {
         return items.map(item => {
             let isChecked = checkedState[item.id]
@@ -721,53 +729,53 @@ const BetCombinationPanel = ({
     }
 
     const searchDropdown = (
-        <div className="searchdropdown-style shadow-to-box shadow-plain5">
-            <div style={{ height: "calc(var(--vh) * 100 - 40rem)" }} className='searchdropdown-style1'>
+        <div className="searchdropdown-style shadow-to-box shadow-plain5" style={{ height: "calc(var(--vh) * 100 - 40rem)", padding: '0.1875rem', background: 'linear-gradient(to top, #1f1f1e, #303030 50%, #4a4a4a)', borderRadius: '1.5rem' }}>
+            <div style={{ height: "", width: '100%' }} className='searchdropdown-style1'>
                 <SearchDropdownCell items={filterArray} />
             </div>
             <div style={{ padding: '1.875rem' }} className="searchdropdown-style2">
                 <div className='divsearchdropdown-style3 shadow-to-box'>
-                <button
-                    style={{
-                        backgroundColor: "#171a1d",
-                        padding: '1px',
-                    }}
-                    className="searchdropdown-style3"
-                    onClick={() => setDropdownOpen(false)}
-                >
-                    <div
+                    <button
                         style={{
-                            // borderColor: "#737579"
+                            backgroundColor: "#171a1d",
+                            padding: '1px',
                         }}
-                        className="searchdropdown-style4"
+                        className="searchdropdown-style3"
+                        onClick={() => setDropdownOpen(false)}
                     >
-                        <span style={{fontSize: '2.8125rem' }} className="searchdropdown-style5 shadow-to-text" >
-                            확인
-                        </span>
-                    </div>
-                </button>
+                        <div
+                            style={{
+                                // borderColor: "#737579"
+                            }}
+                            className="searchdropdown-style4"
+                        >
+                            <span style={{ fontSize: '2.8125rem' }} className="searchdropdown-style5 shadow-to-text" >
+                                확인
+                            </span>
+                        </div>
+                    </button>
                 </div>
                 <div className='divsearchdropdown-style6 shadow-to-box'>
-                <button
-                    style={{
-                        backgroundColor: "#cb4343",
-                        // height: "7.3125rem",
-                        padding: '1px',
-                    }}
-                    className="searchdropdown-style6"
-                    onClick={() => setCheckedState(filterArray.fill(false))}
-                >
-                    <div
+                    <button
                         style={{
-                            // borderColor: "#f36576"
+                            backgroundColor: "#cb4343",
+                            // height: "7.3125rem",
+                            padding: '1px',
                         }}
-                        className="searchdropdown-style7"
+                        className="searchdropdown-style6"
+                        onClick={() => setCheckedState(filterArray.fill(false))}
                     >
-                        <span style={{ fontSize: '2.8125rem' }} className="searchdropdown-style8 shadow-to-text" >
-                            초기화
-                        </span>
-                    </div>
-                </button>
+                        <div
+                            style={{
+                                // borderColor: "#f36576"
+                            }}
+                            className="searchdropdown-style7"
+                        >
+                            <span style={{ fontSize: '2.8125rem' }} className="searchdropdown-style8 shadow-to-text" >
+                                초기화
+                            </span>
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -820,7 +828,8 @@ const BetCombinationPanel = ({
                     <div
                         style={{
                             color: "#ffffff",
-                            textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem",
+                            textShadow: "rgb(0 0 0 / 31%) 0.125rem 0.125rem 0",
+                            // textShadow: 'rgb(0 0 0 / 44%) 0.0625rem 0.0625rem 0',
                             padding: '0 1rem'
                         }}
                         className="event-content1 bg-gradient-to-b"
@@ -854,7 +863,8 @@ const BetCombinationPanel = ({
                     <div
                         style={{
                             color: "#ffffff",
-                            textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem",
+                            // textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem",
+                            textShadow: "rgb(0 0 0 / 31%) 0.125rem 0.125rem 0",
                         }}
                         className="event-content5 bg-gradient-to-b"
                     >
@@ -888,7 +898,8 @@ const BetCombinationPanel = ({
                     <div
                         style={{
                             color: "#ffffff",
-                            textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem",
+                            // textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem",
+                            textShadow: "rgb(0 0 0 / 31%) 0.125rem 0.125rem 0",
                             padding: '0 1rem'
                         }}
                         className="event-content8 bg-gradient-to-b"
@@ -916,7 +927,10 @@ const BetCombinationPanel = ({
         stat1Color = "none",
         stat2Color = "none",
         isSubButton,
-        buttonWithExtraData
+        buttonWithExtraData,
+        isSubArray = false,
+        items_id = null,
+        special = false
     }) => {
         const [isHover3, setHover3] = useState("")
 
@@ -945,9 +959,10 @@ const BetCombinationPanel = ({
                         }}
                         className="normaloption-content"
                         onClick={() => {
+                            handleOnClick(isSubArray ? `${items_id}-${id}left` : `${id}left`)
                             setButtonClicked(`${id}left`)
                             setAddedCard(prevArray =>
-                                [...prevArray, { id: _uniqueId('prefix-'), value: "left" }])
+                                [...prevArray, { id: _uniqueId('prefix-'), value: "left", special: team1 }])
                         }}
                         onMouseEnter={() => setHover3(`${id}left`)}
                         onMouseLeave={() => setHover3(null)}
@@ -956,16 +971,16 @@ const BetCombinationPanel = ({
                             style={{
                                 padding: '0 0.7875rem',
                                 // borderColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ff7982" : "#ffffff",
-                                background: (`${id}left` === isButtonClicked || `${id}left` === isHover3)
-                                    ? "linear-gradient(to bottom, #634d38, #987959)"
+                                background: (`${id}left` === isHover3 || isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) > -1)
+                                    ? "linear-gradient(to top, #634d38, #987959)"
                                     : isSubButton ? 'linear-gradient(to top, #262626, #333333)' : "linear-gradient(to bottom, #545452, #373736)",
-                                color: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ffdfbd" : "#c8c8c8",
-                                textShadow: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "1px 1px 0px #00000070" : ""
+                                color: (`${id}left` === isHover3 || isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) > -1) ? "#ffdfbd" : "#c8c8c8",
+                                textShadow: (`${id}left` === isHover3 || isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) > -1) ? "1px 1px 0px #00000070" : ""
                             }}
                             className="normaloption-content1 bg-gradient-to-b"
                         >
-                            <span className="normaloption-content2">{truncate(team1, 10, 13)}</span>
-                            <span style={{ color: stat1Color === "red" && `${id}left` !== isButtonClicked && `${id}left` !== isHover3 ? "#e65454" : "" }} className="normaloption-content3">
+                            <span className="normaloption-content2">{truncate(team1, 10, 8)}</span>
+                            <span style={{ color: stat1Color === "red" && isButtonOn.indexOf(isSubArray?`${items_id}-${id}left`:`${id}left`)===-1 && `${id}left` !== isHover3 ? "#e65454" : "" }} className="normaloption-content3">
                                 {hasUp === true && (
                                     <img className='normaloption-content4' style={{ width: '1.3125rem', height: '1.125rem' }} src={UpIcon} alt="" />
                                 )}
@@ -975,7 +990,7 @@ const BetCombinationPanel = ({
                         {buttonWithExtraData?.text && (
                             <p style={{ fontSize: '1.875rem', marginLeft: '1.4875rem' }} className="normaloption-content5">
                                 <img style={{ maxWidth: '2.5625rem', maxHeight: '2.5625rem', marginRight: '0.1875rem' }} className="" src={buttonWithExtraData?.img} alt="" />
-                                <span style={{ color: `${id}left` === isButtonClicked || `${id}left` === isHover3 ? "#fadcdc" : "#7b7b7b" }} className='normaloption-content6'>{buttonWithExtraData?.text}</span>
+                                <span style={{ color: isButtonOn.indexOf(isSubArray?`${items_id}-${id}left`:`${id}left`)===-1 && `${id}left` !== isHover3 ? "#7b7b7b" : "#fadcdc" }} className='normaloption-content6'>{buttonWithExtraData?.text}</span>
                             </p>
                         )}
                     </button>
@@ -988,9 +1003,9 @@ const BetCombinationPanel = ({
                         height: `${isSubButton ? "9.9375rem" : "7.4375rem"}`,
                         padding: '0.1875rem',
                         // background: 'linear-gradient(to top, #3c3c3b, #6b6865)',
-                        marginRight: '0.45rem',
+                        marginRight: '0.35rem',
                         borderRadius: '0.5rem',
-                        background: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3)
+                        background: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}middle` : `${id}middle`) > -1 || `${id}middle` === isHover3)
                             ? "linear-gradient(to bottom, #4f4a41, #2f2c28)"
                             : isSubButton ? 'linear-gradient(to top, #2a2a2a, #434343)' : "linear-gradient(to top, #3c3c3b, #6b6865)",
                     }}
@@ -1003,11 +1018,12 @@ const BetCombinationPanel = ({
                             // padding: '1px',
                             fontSize: '2.625rem',
                             // marginRight: '0.45rem',
-                            backgroundColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#cb4343" : "#b3b3b3"
+                            backgroundColor: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}middle` : `${id}middle`) > -1 || `${id}middle` === isHover3) ? "#cb4343" : "#b3b3b3"
                         }}
                         className="normaloption-content7"
                         onClick={() => {
                             setButtonClicked(`${id}middle`)
+                            handleOnClick(isSubArray ? `${items_id}-${id}middle` : `${id}middle`)
                             setAddedCard(prevArray =>
                                 [...prevArray, { id: _uniqueId('prefix-'), value: "middle" }])
                         }}
@@ -1018,11 +1034,11 @@ const BetCombinationPanel = ({
                         <div
                             style={{
                                 padding: '0 0.6875rem',
-                                background: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3)
-                                    ? "linear-gradient(to bottom, #634d38, #987959)"
+                                background: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}middle` : `${id}middle`) > -1 || `${id}middle` === isHover3)
+                                    ? "linear-gradient(to top, #634d38, #987959)"
                                     : isSubButton ? 'linear-gradient(to top, #262626, #333333)' : "linear-gradient(to bottom, #545452, #373736)",
-                                color: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#ffdfbd" : "#c8c8c8",
-                                textShadow: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "1px 1px 0px #00000070" : ""
+                                color: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}middle` : `${id}middle`) > -1 || `${id}middle` === isHover3) ? "#ffdfbd" : "#c8c8c8",
+                                textShadow: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}middle` : `${id}middle`) > -1 || `${id}middle` === isHover3) ? "1px 1px 0px #00000070" : ""
                             }}
                             className="normaloption-content8 bg-gradient-to-b px-10px pt-2px"
                         >
@@ -1040,7 +1056,7 @@ const BetCombinationPanel = ({
                         // background: 'linear-gradient(to top, #3c3c3b, #6b6865)',
                         marginRight: '0.45rem',
                         borderRadius: '0.5rem',
-                        background: (`${id}right` === isButtonClicked || `${id}right` === isHover3)
+                        background: (isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3)
                             ? "linear-gradient(to bottom, #4f4a41, #2f2c28)"
                             : isSubButton ? 'linear-gradient(to top, #2a2a2a, #434343)' : "linear-gradient(to top, #3c3c3b, #6b6865)",
                     }}
@@ -1052,11 +1068,12 @@ const BetCombinationPanel = ({
                             // padding: '1px',
                             fontSize: '2.625rem',
                             // marginRight: '0.45rem',
-                            backgroundColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3"
+                            backgroundColor:(isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3"
                         }}
                         className="normaloption-content10"
                         onClick={() => {
                             setButtonClicked(`${id}right`)
+                            handleOnClick(isSubArray ? `${items_id}-${id}right` : `${id}right`)
                             setAddedCard(prevArray =>
                                 [...prevArray, { id: _uniqueId('prefix-'), value: "right" }])
                         }}
@@ -1066,11 +1083,11 @@ const BetCombinationPanel = ({
                         <div
                             style={{
                                 padding: '0 0.7875rem',
-                                background: (`${id}right` === isButtonClicked || `${id}right` === isHover3)
-                                    ? "linear-gradient(to bottom, #634d38, #987959)"
+                                background: (isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3)
+                                    ? "linear-gradient(to top, #634d38, #987959)"
                                     : isSubButton ? 'linear-gradient(to top, #262626, #333333)' : "linear-gradient(to bottom, #545452, #373736)",
-                                color: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#ffdfbd" : "#c8c8c8",
-                                textShadow: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "1px 1px 0px #00000070" : ""
+                                color: (isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3) ? "#ffdfbd" : "#c8c8c8",
+                                textShadow: (isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3) ? "1px 1px 0px #00000070" : ""
                             }}
                             className="normaloption-content11 bg-gradient-to-b"
                         >
@@ -1080,7 +1097,7 @@ const BetCombinationPanel = ({
                                     <img className='normaloption-content13' style={{ width: '1.3125rem', height: '1.125rem' }} src={DownIcon} alt="" />
                                 )}
                             </span>
-                            <span className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 13, 13) : truncate(team2, 10, 8)}</span>
+                            <span className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 10, 8) : truncate(team2, 10, 8)}</span>
                         </div>
                     </button>
                 </div>
@@ -1150,11 +1167,12 @@ const BetCombinationPanel = ({
                                         // borderColor: isOpen[items.id] === true ? "#8f97a0" : "#737579",
                                         background: isOpen[items.id] === true
                                             ? "linear-gradient(to bottom, #f38d27, #b45a00)"
-                                            : "linear-gradient(to bottom, #a67c52, #7f5f3f)"
+                                            : "linear-gradient(to bottom, #a67c52, #7f5f3f)",
+
                                     }}
                                     className="leaguecell-content5"
                                 >
-                                    <span style={{ textShadow: "1px 1px 1px #00000070" }} className="leaguecell-content6" >
+                                    <span style={{ textShadow: "1px 1px 1px #00000070", marginTop: isOpen[items.id] === true ? '-0.3rem' : '' }} className="leaguecell-content6" >
                                         {isOpen[items.id] === true ? (
                                             <img className='leaguecell-content7' src={Minus} alt="" />
                                         ) : (
@@ -1234,7 +1252,7 @@ const BetCombinationPanel = ({
                 <img style={{ width: '77.625rem', paddingTop: '0.3rem' }} className="eventoptions-content" src={BonusCell} alt="" />
                 <img style={{ width: '6.75rem' }} className="eventoptions-content1" src={Gift} alt="" />
                 <div className="eventoptions-content2">
-                    <p style={{ color: "#fff", fontSize: '2.625rem', marginTop: "2.3rem", letterSpacing: '-0.07rem', textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem", }} className="eventoptions-content3">보너스 이벤트</p>
+                    <p style={{ color: "#fff", fontSize: '2.625rem', marginTop: "2.3rem", letterSpacing: '-0.07rem', textShadow: "rgb(0 0 0 / 31%) 0.125rem 0.125rem 0", }} className="eventoptions-content3">보너스 이벤트</p>
                 </div>
                 <div style={{ marginLeft: '1.9rem' }} className="eventoptions-content4">
                     <EventOptions
@@ -1253,7 +1271,7 @@ const BetCombinationPanel = ({
                         <img style={{ width: '3.9375rem', marginLeft: '1.4425rem' }} className="betpanel-content9" src={FootballIcon} alt="" />
                         <p style={{ fontSize: '2.625rem', marginLeft: '0.6875rem', color: '#ccc2b6' }} className="betpanel-content10">축구</p>
                         <div
-                            style={{ backgroundColor: "#826140", color: '#ffdfbd', fontSize: '2.9375rem', width: '8.125rem', height: '4.5rem' }}
+                            style={{ backgroundColor: "#826140", color: '#ffdfbd', fontSize: '2.9375rem', minWidth: '8.125rem', height: '4.5rem', padding: '0.25rem 2rem 0' }}
                             className="betpanel-content11"
                         >
                             15
