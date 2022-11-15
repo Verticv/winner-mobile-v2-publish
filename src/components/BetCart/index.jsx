@@ -102,7 +102,7 @@ const BetCart = ({ selectedOption, addedCard, setAddedCard, isPanelFixed, setPan
                     </div>
                     {/* ): */}
                     <Expand className='expand-content-1' duration={200} open={openedCart}>
-                        <div className='expand-content-2 shadow-to-box' style={{ height: 'auto', maxHeight: openedCart ? 'calc(var(--vh) * 100)' : 'unset', padding: '0.1875rem', borderTopLeftRadius: '2.7rem', borderTopRightRadius: '2.7rem' }}>
+                        <div className='expand-content-2 shadow-to-box' style={{ height: 'auto',width: '100%', maxHeight: openedCart ? 'calc(var(--vh) * 100)' : 'unset', padding: '0.1875rem', borderTopLeftRadius: '2.7rem', borderTopRightRadius: '2.7rem' }}>
                             <div
                                 style={{
                                     background: '#262626',

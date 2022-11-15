@@ -27,7 +27,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
 
             <div className="confirmcard-content4">
                 <p className="confirmcard-content5">티켓번호</p>
-                <p style={{ color: "#fde1a4", marginTop: '0.2rem', marginLeft: '0.7rem' }} className="confirmcard-content6">189106964</p>
+                <p style={{ color: "#fde1a4", marginTop: '0.5rem', marginLeft: '0.7rem' }} className="confirmcard-content6">189106964</p>
             </div>
 
             <img style={{ width: '2.3125rem', height: '2.3125rem', top: '4rem', right: '3rem' }} src={CancelIcon} alt="" className="confirmcard-content7" onClick={() => setShowConfirm(false)} />
@@ -65,6 +65,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                             borderColor: "#fbddb1",
                             borderWidth: '0.1875rem',
                             fontSize: '2.625rem',
+                            paddingRight: '5.5rem'
                             // background: "linear-gradient(120deg, #ffffff, #e0e2e6)"
                         }}
                         className="bet-card1"
@@ -73,17 +74,19 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                             style={{ color: item.value === "right" ? "#e65454" : "#ffffff" }}
                             className="bet-card2"
                         >
-                            {item.value === "right" ? "SV Kuchl" : "FK Haugesund"}
+                            {item.special === "FK Haugesund" ? 'FK Haugesund' : item.value === "right" ? "SV Kuchl" : "FK Haugesund FK Haugesund FK Haugesund FK Haugesund FK Haugesund FK Haugesund FK Haugesund FK Haugesund"}
                         </p>
                         <p
                             style={{ color: item.value === "right" ? "#ffffff" : "#e65454" }}
                             className="bet-card3"
                         >
-                            {item.value === "right" ? "FC Blau Weiss Linz" : "스트룀스고세 IF"}
+                            {item.special === "FK Haugesund" ? '스트룀스고세 IF' : item.value === "right" ? "FC Blau Weiss Linz" : "스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF"}
                         </p>
-                        <p style={{ fontSize: '2.4375rem', color: '#c8c8c8' }} className="bet-card4">축구 - 승무패 (게임)</p>
-                        <img style={{ width: '2.7rem', height: '2.7rem', right: '2rem' }} src={CancelIconGray} alt="" name={item.id} className="bet-card5" onClick={handleRemoveItem} />
-                        <div style={{ fontSize: '2.4375rem', right: '9rem', color: '#c8c8c8' }} className="bet-card6">
+                        <p style={{ fontSize: '2.4375rem', color: '#c8c8c8', maxWidth: '59rem' }} className="bet-card4">
+                            {item.special === "FK Haugesund" ? '축구 - 승무패 (게임)' : item.value === "right" ? '축구 - 승무패 (게임)' : '축구 - 승무패 (게임) 축구 - 승무패 (게임) 축구 - 승무패 (게임) 축구 - 승무패 (게임)축구 - 승무패 (게임)'}
+                        </p>
+                        <img style={{ width: '2.7rem', height: '2.7rem', right: '2rem', top: '2.5rem' }} src={CancelIconGray} alt="" name={item.id} className="bet-card5" onClick={handleRemoveItem} />
+                        <div style={{ fontSize: '2.4375rem', right: '3rem', bottom: '1.5rem', color: '#c8c8c8' }} className="bet-card6">
                             <p>{item.value === "right" ? "승 @" : "패 @"}</p>
                             <p
                                 style={{ color: item.value === "right" ? "#e65454" : "#4c98ff" }}
@@ -208,7 +211,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
 
     return (
         <div >
-            <div style={{ borderBottom: '0.1875rem solid #1e1e1e', padding: '0 1.7rem 0 1.6rem', marginTop: '0.7rem' }} className="confirmcard-content">
+            <div style={{ borderBottom: '0.1875rem solid #1e1e1e', padding: '0 2rem', marginTop: '0.7rem' }} className="confirmcard-content">
                 {showConfirm && (
                     <>
                         <ConfirmCard />
@@ -254,7 +257,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
             <div style={{ height: '5.75rem', paddingLeft: '3.4rem', paddingRight: '2rem', fontSize: '2.625rem', borderBottom: '0.1875rem solid #1e1e1e', background: '#323232' }} className="content-cart15">
                 <p className="content-cart16">베팅금액</p>
                 <input
-                    style={{ color: "#d52e2e",fontFamily: '2.625rem', width: "36.875rem", height: "4.8125rem", backgroundColor: "#1a1a1a", border: '0.1875rem solid #404040' }}
+                    style={{ color: "#d52e2e", fontFamily: '2.625rem', width: "36.875rem", height: "4.8125rem", backgroundColor: "#1a1a1a", border: '0.1875rem solid #404040' }}
                     className="content-cart17"
                     placeholder="0"
                     value={nf.format(inputValue)}
@@ -279,7 +282,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                         <div style={{ marginRight: '0.3rem' }}>
                             <BetAmountButton amount={5000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
-                        <div style={{ marginRight: '0.3rem' }}>
+                        <div style={{ marginRight: '0.35rem' }}>
                             <BetAmountButton amount={10000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
                         <BetAmountButton amount={50000} inputValue={inputValue} setInputValue={setInputValue} />
@@ -288,7 +291,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                         <div style={{ marginRight: '0.3rem' }}>
                             <BetAmountButton amount={100000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
-                        <div style={{ marginRight: '0.3rem' }}>
+                        <div style={{ marginRight: '0.35rem' }}>
                             <BetAmountButton amount={500000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
                         <BetAmountButton amount={1000000} inputValue={inputValue} setInputValue={setInputValue} />
@@ -299,7 +302,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                     <div style={{ marginRight: '0.3rem' }} className="betfixedamount-btn1">
                         <BetFixedAmountButton amount={inputValue / 2} text="하프" />
                     </div>
-                    <div style={{ marginRight: '0.3rem' }} className="betfixedamount-btn1">
+                    <div style={{ marginRight: '0.35rem' }} className="betfixedamount-btn1">
                         <BetFixedAmountButton amount={3522170} text="최대" />
                     </div>
                     <div className="betfixedamount-btn1">

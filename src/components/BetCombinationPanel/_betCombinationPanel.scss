@@ -135,8 +135,12 @@
 
             .betpanel-content10 {
                 margin-top: 0.25rem;
-                font-family: SpoqaHanSansNeoMedium;
+                font-family: 'SpoqaHanSansNeoMedium';
                 color: rgba(69, 69, 69, 1);
+                white-space: nowrap;
+                max-width: 24.5rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .betpanel-content11 {
@@ -196,7 +200,7 @@
     align-items: center;
     overflow: hidden;
     border-radius: 1.5rem;
-    background-color: rgba(26, 26, 26);
+    background-color: #323232;
     font-family: SpoqaHanSansNeoMedium;
     font-size: 3rem;
     line-height: 1;
@@ -206,6 +210,9 @@
     .searchdropdown-style1 {
         width: 100%;
         overflow-y: scroll;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        background: #323232;
 
         .searchcell-style {
             position: relative;
@@ -216,22 +223,24 @@
             border-bottom-width: 1px;
             // border-color: rgba(236, 236, 236, 1);
             padding-top: 0.75rem;
-            background-color: rgba(31, 31, 30, 1);
+            // background-color: rgba(31, 31, 30, 1);
 
-            .input-style {
-                border: 1px solid #323232;
-                background: #323232 50%;
-            }
+            // .input-style {
+            //     border: 1px solid #323232;
+            //     background: #323232 50%;
+            // }
         }
     }
 
     .searchdropdown-style2 {
         display: flex;
         width: 100%;
-        height: 100%;
+        // height: 100%;
         align-items: center;
         justify-content: center;
         background-color: rgb(26, 26, 26);
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
 
         .divsearchdropdown-style3 {
             width: 50%;
@@ -583,7 +592,7 @@
                     justify-content: center;
                     cursor: pointer;
                     border-radius: 0.5rem;
-                    border-width: 1px;
+                    // border-width: 1px;
 
 
                     .leaguecell-content6 {
@@ -626,6 +635,10 @@
             font-family: 'SpoqaHanSansNeoMedium';
             color: #ffdfbd;
             letter-spacing: -0.07rem;
+            white-space: nowrap;
+            max-width: 43.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .leaguegroup-content3 {

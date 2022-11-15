@@ -75,7 +75,7 @@ const Cart = ({ selectedOption }) => {
                 <Expand className='cart-content15' open={openedCart} duration={200} >
                     <div className='expand-content-2 shadow-to-box' style={{
                         // background: 'bottom',
-                        height: 'auto', margin: 'auto', maxHeight: openedCart ? 'calc(var(--vh) * 100)' : 'unset', padding: '0.1875rem', borderTopLeftRadius: '2.7rem', borderTopRightRadius: '2.7rem'
+                        height: 'auto',width: '100%', margin: 'auto', maxHeight: openedCart ? 'calc(var(--vh) * 100)' : 'unset', padding: '0.1875rem', borderTopLeftRadius: '2.7rem', borderTopRightRadius: '2.7rem'
                     }}>
                         <div
                             style={{

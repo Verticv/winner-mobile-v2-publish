@@ -76,7 +76,7 @@ const BetCartHorizontalMenu2 = ({
                         }}
                         className={`content-tabslist4`}
                     >
-                        <img style={{ width: item.width, marginRight: item.isLeft ? '0.5rem' : '0.875rem', marginTop: item.isLeft ? '0.1rem' : '' }} className="content-tabslist5" src={pathname === item.path ? item.iconHighlight : item.icon} alt="" />
+                        <img style={{ width: item.width, marginRight: item.isLeft ? '0.5rem' : '0.875rem', marginTop: item.isLeft ? '0.1rem' : '', marginTop: '0.5rem' }} className="content-tabslist5" src={pathname === item.path ? item.iconHighlight : item.icon} alt="" />
                         <span
                             style={{ fontSize: '3rem', marginRight: item.isLeft? '0.6rem' : '0.75rem', marginTop: `${imageWidth ? '-0.5rem' : ''}` }}
                             className={`${pathname === item.path

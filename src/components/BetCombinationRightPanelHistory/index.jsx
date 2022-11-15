@@ -48,6 +48,7 @@ const BetCombinationRightPanelHistory = () => {
                     borderRightWidth: "0.1875rem",
                     borderBottomLeftRadius: "1.3125rem",
                     borderBottomRightRadius: "1.3125rem",
+                    paddingRight: '6rem'
                 }}
                 className="historycard-content3"
             >
@@ -66,14 +67,14 @@ const BetCombinationRightPanelHistory = () => {
                 >
                     {team2}
                 </p>
-                <p className="historycard-content7" style={{ color: '#c8c8c8' }}>{type}</p>
+                <p className="historycard-content7" style={{ color: '#c8c8c8', maxWidth: '59rem' }}>{type}</p>
                 <div style={{ right: "1.8125rem" }} className="historycard-content8">
                     <p style={{ color: '#c8c8c8' }}>{winStatus === "win" ? "승 @" : "패 @"}</p>
                     <p
                         className="historycard-content9"
                         style={{ color: winStatus === "win" ? "#e65454" : "#4c98ff" }}
                     >
-                        {winStatus === "win" ? "2.26" : "3.47"}
+                        {winStatus === "win" ? "2.26" : "00.00"}
                     </p>
                 </div>
                 <div style={{ right: "1.8125rem" }} className="historycard-content10">
@@ -126,8 +127,8 @@ const BetCombinationRightPanelHistory = () => {
                     className="historycard-content"
                 >
                     <HistoryCard
-                        team1="FK Haugesund"
-                        team2="스트룀스고세 IF"
+                        team1="FK Haugesund FK Haugesund FK Haugesund FK Haugesund FK Haugesund FK Haugesund FK Haugesund " 
+                        team2="스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF " 
                         side="left"
                         winStatus="lose"
                     />
