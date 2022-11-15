@@ -47,7 +47,7 @@ const DropDownInput = ({ isLeagueSelection = true, isBetCombination = false, wit
                     className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight"
                 >
                     <Dropdown labelStyle={{ marginLeft: '1.75rem', color: '#7b7b7b' }} options={isLeagueSelection === true ? carrierOptions1 : carrierOptions2} isLeagueSelection={isLeagueSelection}>
-                        <img style={{ width: '1.5625rem', marginRight: '1.875rem', height: '1rem', position: 'absolute', right: '0', top: '3.9rem' }} className="object-contain" src={DownArrowIcon} alt="arrow" />
+                        <img style={{ width: '1.5625rem', marginRight: '1.875rem', height: '1rem', position: 'absolute', right: '0', top: '4.2rem' }} className="object-contain" src={DownArrowIcon} alt="arrow" />
                     </Dropdown>
                 </div>
             </div>
