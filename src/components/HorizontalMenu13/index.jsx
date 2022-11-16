@@ -11,6 +11,7 @@ const HorizontalMenu13 = ({
     width,
     imageWidth,
     hasNumber = true,
+    withoutMargin
     // subInactive,
     // subActive,
 }) => {
@@ -30,14 +31,11 @@ const HorizontalMenu13 = ({
                 id={`t${index}`}
                 key={item.id}
                 style={{
-                    // background: items.length - 1 === index ? subActive : `url(${subInactive})`,
                     background: `url(${pathname === item.path || isState === item.id ? item.subActive : item.subInactive}) round`,
                     borderRadius: "0",
                     width: '14.1rem',
                     height: '14.4rem',
                     marginRight: '-0.2rem',
-                    // marginRight: items.length - 1 === index ? '1.875rem' : '0.1875rem',
-                    // padding: '1rem',
                     border: '0',
                     flexShrink: '0'
                 }}
@@ -59,45 +57,13 @@ const HorizontalMenu13 = ({
                 onPointerOut={() => setHover(null)}
                 onPointerCancel={() => setHover(null)}
             >
-                {/* <div
-                    style={{
-                        // height:"78px",
-                        width: "100%",
-                        borderRadius: "1.625rem",
-                        height: '100%',
-                        paddingTop: '0.1875rem',
-                        // background: 'red'
-                    }}
-                    className={`flex w-full justify-end h-full items-end bg-white ${pathname === item.path || isState === item.id
-                        ? "bg-blue-r58baf7"
-                        : "bg-white"
-                        }`}
-                > */}
-                {/* <div
-                        style={{
-                            background: pathname === item.path || isState === item.id
-                                ? "linear-gradient(to bottom, #2087f0, #1873cf)"
-                                : isHover === item.id
-                                    ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
-                                    : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
-                            height: '100%', width: '100%',
-                            borderRadius: "1.625rem",
-                            borderTopLeftRadius: "1.625rem 1.3rem",
-                            borderTopRightRadius: "1.625rem 1.3rem",
-                            borderColor: pathname === item.path || isState === item.id ? "#1a73ce" : "#d6dfe8",
-                            boxShadow: 'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset',
-                        }}
-                        className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
-                    > */}
+
                 <div style={{
-                    // display: 'flex',
-                    // alignItems: 'center',
-                    // flexDirection: 'column',
                     marginTop: '-1.5rem',
                     marginLeft: '-0.6rem'
                 }}>
                     <div className='changeMargin' style={{ marginTop: '1.5rem', height: '5.9rem' }}>
-                        <img style={{ width: item.width ? item.width : imageWidth ? imageWidth : '5.0625rem', marginTop: '1.1rem', marginLeft: '0.4375rem', WebkitUserDrag: "none", MozUserDrag: "none", userDrag: "none" }} className={`${hasNumber ? "mt-2" : "mt-5"}  object-contain`} src={item.icon} alt="" />
+                        <img style={{ width: item.width ? item.width : imageWidth ? imageWidth : withoutMargin ? '6.0625rem' : '5.0625rem', marginTop: '1.1rem', marginLeft: '0.4375rem', WebkitUserDrag: "none", MozUserDrag: "none", userDrag: "none" }} className={`${hasNumber ? "mt-2" : "mt-5"}  object-contain`} src={item.icon} alt="" />
 
                     </div>
                     <p
@@ -120,11 +86,7 @@ const HorizontalMenu13 = ({
                             <p style={{ margin: '0', fontSize: '2rem', marginLeft: '-0.2rem' }} className=" font-roboto text-white">{item.number}</p>
                         </div>
                     )}
-
                 </div>
-
-                {/* </div> */}
-                {/* </div> */}
             </button>
         ));
     }
@@ -132,17 +94,8 @@ const HorizontalMenu13 = ({
     return (
         <>
             <div id="container" className="HorizontalMenu flex justify-start items-start">
-                {/* <Botton /> */}
                 <TabsList items={itemsArray} />
             </div>
-            {/* <div className='div-shadow'>
-                <div id="container" className="flex justify-start items-start" style={{
-                    marginLeft: '1.6rem',
-                }}>
-                    <TabsList items={itemsArray} />
-                </div>
-                <div className='nav-shadow' ></div>
-            </div> */}
         </>
     )
 }
