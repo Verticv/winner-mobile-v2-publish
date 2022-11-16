@@ -24,7 +24,7 @@ const tabsArray = [
 ];
 
 
-const Sports1 = ({ paddingLeft, subActiveButton, setSubActiveButton }) => {
+const Sports1 = ({ paddingLeft, subActiveButton, setSubActiveButton, withoutMargin }) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const navigate = useNavigate()
     useEffect(() => {
@@ -36,6 +36,7 @@ const Sports1 = ({ paddingLeft, subActiveButton, setSubActiveButton }) => {
             }, 0)
         }
         return (() => {
+            if (subActiveButton)
             setSubActiveButton('/mypage/gameresults/all')
         })
     }, [setSubActiveButton, subActiveButton, navigate]);
@@ -44,31 +45,17 @@ const Sports1 = ({ paddingLeft, subActiveButton, setSubActiveButton }) => {
 
     return (
         <div style={{ maxWidth: '1242px' }} className="w-full flex flex-col">
-
-            {/* <div className="w-full flex relative top-0">
-                <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff)", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
-                <div id='scroll-wrapper' style={{ padding: '1.875rem', paddingRight: '0', paddingLeft: paddingLeft ? paddingLeft : '1.875rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"> */}
-            {/* <div id='scroll-wrapper' style={{ overflowX: 'scroll' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                <div className=" flex flex-shrink-0 w-full" style={{ marginTop: '0.8rem', position: 'relative' }}>
-                    <HorizontalMenu13 itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
-                    <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
-                </div>
-            </div> */}
-
             <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
-                {/* <div style={{  }} className="absolute h-full right-0 z-50 nav-shadow"></div> */}
                 <div id='scroll-wrapper2'
-                    style={{ padding: '0.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
+                    style={{ padding: withoutMargin ? '' : '0.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
                 >
                     <div className="bet-history" style={{ display: 'flex', flexShrink: '0' }}>
-                        <HorizontalMenu13 key={15} itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
+                        <HorizontalMenu13 withoutMargin key={15} itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
                 </div>
                 <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
             </div>
         </div>
-
-
     )
 }
 

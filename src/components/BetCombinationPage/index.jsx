@@ -6,35 +6,36 @@ import React, { useState, useEffect } from 'react';
 //import Sports from 'components/myPage/gameResults/Sports'
 import BetCart from '../BetCart';
 import Header from '../Header';
+import Sports1 from '../Sports1';
 // import Sports2 from '../Sports2';
 
 import './_betCombinationPage.scss';
 
-import Icon1 from '../../assets/gameresults/1.png'
-import Icon2 from '../../assets/gameresults/2.png'
-import Icon3 from '../../assets/gameresults/3.png'
-import Icon4 from '../../assets/gameresults/4.png'
-import Icon5 from '../../assets/gameresults/5.png'
-import Icon6 from '../../assets/gameresults/6.png'
-import Icon7 from '../../assets/gameresults/7.png'
-import Icon8 from '../../assets/gameresults/8.png'
-import HorizontalMenu13 from '../HorizontalMenu13'
-import subInactive from '../../assets/gameresults/sub-inactive.png';
-import subActive from '../../assets/gameresults/sub-active.png';
+// import Icon1 from '../../assets/gameresults/1.png'
+// import Icon2 from '../../assets/gameresults/2.png'
+// import Icon3 from '../../assets/gameresults/3.png'
+// import Icon4 from '../../assets/gameresults/4.png'
+// import Icon5 from '../../assets/gameresults/5.png'
+// import Icon6 from '../../assets/gameresults/6.png'
+// import Icon7 from '../../assets/gameresults/7.png'
+// import Icon8 from '../../assets/gameresults/8.png'
+// import HorizontalMenu13 from '../HorizontalMenu13'
+// import subInactive from '../../assets/gameresults/sub-inactive.png';
+// import subActive from '../../assets/gameresults/sub-active.png';
 // import HorizontalMenu6 from 'components/horizontalMenus/HorizontalMenu6'
 
 const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
 
-    const tabsArray = [
-        { text: "전체", icon: Icon1, id: 1, number: 854, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "축구", icon: Icon2, id: 2, number: 567, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "농구", icon: Icon3, id: 3, number: 227, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "야구", icon: Icon4, id: 4, number: 407, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "배구", icon: Icon5, id: 5, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "하키", icon: Icon6, id: 6, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "미식축구", icon: Icon7, id: 7, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-        { text: "격투기", icon: Icon8, id: 8, number: 9, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
-    ];
+    // const tabsArray = [
+    //     { text: "전체", icon: Icon1, id: 1, number: 854, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+    //     { text: "축구", icon: Icon2, id: 2, number: 567, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+    //     { text: "농구", icon: Icon3, id: 3, number: 227, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+    //     { text: "야구", icon: Icon4, id: 4, number: 407, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+    //     { text: "배구", icon: Icon5, id: 5, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+    //     { text: "하키", icon: Icon6, id: 6, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+    //     { text: "미식축구", icon: Icon7, id: 7, number: 0, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+    //     { text: "격투기", icon: Icon8, id: 8, number: 9, subInactive: subInactive, subActive: subActive, path: '#', width: '6.0625rem' },
+    // ];
 
 
     const filterArray = [
@@ -64,7 +65,7 @@ const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
 
     const cardsArray = []
 
-    const [selectedTab, setSelectedTab] = useState(0)
+    // const [selectedTab, setSelectedTab] = useState(0)
     const [isPanelFixed, setPanelFixed] = useState(true)
     const [addedCard, setAddedCard] = useState(cardsArray)
     const [checkedState, setCheckedState] = useState(
@@ -110,15 +111,20 @@ const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
 
             <div className="sport-container" style={{ width: '100%', display: 'flex', position: 'relative', top: '0', marginTop: '1.8rem' }}>
                 {/* <div style={{  }} className="absolute h-full right-0 z-50 nav-shadow"></div> */}
-                <div id='scroll-wrapper2'
+                {/* <div id='scroll-wrapper2'
                     style={{ padding: '0.1rem 0 0.1rem 1.5rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
                 >
                     <div className="" style={{ display: 'flex', flexShrink: '0' }}>
-                        <HorizontalMenu13 key={5} itemsArray={tabsArray}  isState={selectedTab} setSelectedTab={setSelectedTab} />
+                        <HorizontalMenu13 key={5} itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
-                </div>
-                <div style={{ height: '' }} className="nav-shadow absolute h-full left-0 z-50"></div>
+                </div> */}
+                {/* <div style={{ height: '' }} className="nav-shadow absolute h-full left-0 z-50"></div> */}
+               {/* <HorizontalMenu13 key={5} itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} /> */}
+                <Sports1 withoutMargin
+                // subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                />
             </div>
+
 
 
 
