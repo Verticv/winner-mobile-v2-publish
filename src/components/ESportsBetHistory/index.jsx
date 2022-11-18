@@ -63,10 +63,10 @@ const ESportsBetHistory = ({ isState = 0, setState, showSub = false, isPopup = f
                 </>
 
             )} */}
-            <div style={{ marginTop: '-0.2rem' }}>
+            {/* <div style={{ marginTop: '-0.2rem' }}> */}
 
                 <DateSearchBar isLeagueSearch={false} isPoints />
-            </div>
+            {/* </div> */}
 
             {/* <ScrollButton /> */}
 
