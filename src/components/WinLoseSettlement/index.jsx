@@ -223,6 +223,7 @@ const WinLoseSettlementContent = ({ activeButton, setActiveButton }) => {
                     setPopupOpen={setPopupOpen}
                     cardHeight='20.9375rem'
                     isButtonGradient={false}
+                    width45
                 />
             </div>
 

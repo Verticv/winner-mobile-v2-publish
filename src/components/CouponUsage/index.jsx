@@ -894,7 +894,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
     console.log(selectedTab, selectedSubTab)
 
     const tabsArray = [
-        { text: "쿠폰사용", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/coupon/all", activeBG: couponActive, width: '7.875rem' },
+        { text: "쿠폰사용", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/coupon/all", activeBG: couponActive,inActiveBG : '', width: '7.875rem' },
         { text: "쿠폰선물", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/mypage/coupon/all/coupon-gift", activeBG: couponActive, width: '7.875rem' },
         { text: "쿠폰내역", icon: Icon3, activeIcon: Icon3Active, id: 2, path: "/mypage/coupon/all/coupon-history", hasSameParent: true, activeBG: couponActive, width: '7.875rem' },
     ];
@@ -989,6 +989,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                         setPopupOpen={setPopupOpen}
                         cardHeight='25.3125rem'
                         isButtonGradient={false}
+                        inlineText
                     />
                 </div>
                 <div style={{ marginTop: '1.875rem', paddingBottom: '0.01rem' }}>
