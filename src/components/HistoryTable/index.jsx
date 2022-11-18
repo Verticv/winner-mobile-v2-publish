@@ -20,7 +20,8 @@ const HistoryTable = ({
     containerBackground,
     isPointPage,
     color,
-    width45
+    width45,
+    inlineText
 }) => {
     function Cells({ cards }) {
         const detailButton = (
@@ -165,8 +166,8 @@ const HistoryTable = ({
                                 </div>
                             ) : hasButton &&
                             <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '', right: '1.9rem', borderRadius: '1.1rem', boxShadow: 'rgb(0 0 0 / 60%) 0px 0.375rem 0px 0px' }} className="hover change-top">
-                                <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
-                                    {console.log(card[card.length - 1].textColor, 'aaaaa')}
+                                <div style={{ padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
+                                    {console.log(card[card.length - 1].Proceeding, 'aaaaa')}
                                     <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: card[card.length - 1].textColor ? card[card.length - 1].textColor : '#ffdfbd' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length - 1].buttonColor === '#e65454' ? <div> {card[card.length - 1].buttonText ? card[card.length - 1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length - 1].buttonText || '진행중'} </span>
                                 </div>
                             </button>
