@@ -258,7 +258,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                                 }}>
                                                     <TableHeader2 isMinigame={true} />
                                                     <div className="flex flex-col w-full px-4 pb-4" style={{ margin: '0.3rem 0.8rem 0 0.8rem', border: '0.375rem solid #473b35', borderRadius: '0.4rem' }}>
-                                                        <CardHeader flag='us' name='파워볼' date='2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
+                                                        <CardHeader flag='us' name='파워볼' date='2021-06-29 15:45' isMinigame={true} minigameType="powerball" width6 />
                                                         <PowerballResultsTable able checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray} />
                                                     </div>
                                                     <div className="flex flex-col w-full px-4 pb-4" style={{ margin: '2.19rem 0.8rem 0 0.8rem', border: '0.375rem solid #473b35', borderRadius: '0.4rem' }}>

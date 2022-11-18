@@ -10,7 +10,7 @@ import Icon4 from '../../assets/gameresults/mini-icon2.png'
 import Icon5 from '../../assets/minigameResults/3.png'
 import Icon6 from '../../assets/minigameResults/4.png'
 
-const CardHeader = ({ flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMinigame = false, minigameType = "powerball", smallCard }) => {
+const CardHeader = ({ flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMinigame = false, minigameType = "powerball", smallCard, width6 }) => {
     const flags = {
         us: USFlagIcon,
         uk: UKFlagIcon,
@@ -21,7 +21,7 @@ const CardHeader = ({ flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMi
     if (isMinigame === true) return (
         <div style={{ height: '7.2rem', paddingLeft: "1.4rem", background: 'linear-gradient(to right, #6c553e, #473b35)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '' }} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd pr-7">
             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                <img style={{ width: minigameType === "powerladder" ? '7rem' : '7rem', height: 'auto', marginTop: minigameType === "powerladder" ? '-0.44rem' : '-0.34rem', marginLeft: '' }} className='object-contain' src={minigameType === "powerladder" ? Icon4 : minigameType === "kinoladder" ? Icon6 : minigameType === "powerball" ? Icon3 : Icon5} alt="" />
+                <img style={{ width: minigameType === "powerladder" ? width6 ? '6.5rem' : '6.3rem' :  width6 ? '6rem' :'7rem', height: 'auto', marginTop: minigameType === "powerladder" ? '-0.44rem' : '-0.34rem', marginLeft: '' }} className='object-contain' src={minigameType === "powerladder" ? Icon4 : minigameType === "kinoladder" ? Icon6 : minigameType === "powerball" ? Icon3 : Icon5} alt="" />
                 <span style={{ fontSize: '2.625rem', paddingBottom: '0.2rem', marginLeft: '0.7rem', color: '#ffdfbd', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }} className="ml-4 font-spoqaMedium text-20px tracking-tight text-white">{minigameType === "powerladder" ? "파워사다리" : minigameType === "kinoladder" ? "키노사다리" : minigameType === "powerball" ? "파워볼" : "스피드키노"}</span>
             </div>
             {minigameType !== "powerball" && (

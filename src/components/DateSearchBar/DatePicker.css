@@ -900,7 +900,9 @@
   font-size: 3.5em;
   font-family: RobotoMedium;
 }
-
+.react-datepicker__day-name {
+  font-family: 'SpoqaHanSansNeo';
+}
 .react-datepicker__current-month,
 .react-datepicker-time__header,
 .react-datepicker-year-header {

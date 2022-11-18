@@ -19,7 +19,8 @@ const HistoryTable = ({
     hasButton = true,
     containerBackground,
     isPointPage,
-    color
+    color,
+    width45
 }) => {
     function Cells({ cards }) {
         const detailButton = (
@@ -101,7 +102,7 @@ const HistoryTable = ({
                                     firstColumnColor = row[0][firstRowKeysName[0]].includes("+") ? "#e65454" : row[0][firstRowKeysName[0]].includes("-") ? '#e65454' : "#c8c8c8"
                                 }
                                 if (secondRowKeysName[0] === '적립포인트') {
-                                    secondColumnColor = '#2f5d9c'
+                                    secondColumnColor = '#4c98ff'
                                 }
                                 if (firstRowKeysName[0] === '쿠폰금액') {
                                     firstColumnColor = '#e65454'
@@ -115,12 +116,12 @@ const HistoryTable = ({
                                         <span className='font-spoqa' style={{
                                             fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex',
                                             wordBreak: 'break-all',
-                                            maxWidth: firstRowKeysName[0] === '아이디' ? '15rem' : isPointPage ? '57rem' : firstRowKeysName[0] === '쿠폰명' ? '47rem' : '38rem',
+                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : firstRowKeysName[0] === '쿠폰명' ? '47rem' : width45 ? '45rem' : '38rem',
                                             overflow: firstRowKeysName[0] === '아이디' ? 'hidden' : '',
                                             textOverflow: firstRowKeysName[0] === '아이디' ? 'ellipsis' : '',
                                             whiteSpace: firstRowKeysName[0] === '아이디' ? 'nowrap' : '',
                                         }}>
-                                            {firstRowKeysName[0] === '아이디' ? truncate(row[0][firstRowKeysName[0]], 12, 10) : row[0][firstRowKeysName[0]]}
+                                            {firstRowKeysName[0] === '아이디' ? truncate(row[0][firstRowKeysName[0]], 16, 16) : row[0][firstRowKeysName[0]]}
                                             {/* {row[0][firstRowKeysName[0]]} */}
                                             {console.log('firstRowKeysName[0]', firstRowKeysName[0])}
                                         </span>

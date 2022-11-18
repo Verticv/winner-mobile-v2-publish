@@ -163,7 +163,7 @@ const CardResults = ({
                                 <span style={{ fontSize: '2.625rem' }} className="font-roboto tracking-tight">{stat3}</span>
                                 {hasDown && <img style={{ marginLeft: '0.4375rem' }} className="object-contain w-8 h-7" src={DownIcon} alt="" />}
                             </div>
-                            <span style={{ fontSize: '2.625rem', maxWidth: smallContent ? '15rem' : '15rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '1.4rem', letterSpacing: '-0.07rem' }} className="font-spoqaMedium tracking-tight text-right overflow-hidden">{shouldTruncate ? truncate(team2, 10, 7) : team2}</span>
+                            <span style={{ fontSize: '2.625rem', maxWidth: smallContent ? '15.6rem' : '15.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '1.4rem', letterSpacing: '-0.07rem' }} className="font-spoqaMedium tracking-tight text-right overflow-hidden">{shouldTruncate ? truncate(team2, 10, 7) : team2}</span>
                         </div>
                     </button>
                 </div>
@@ -207,11 +207,11 @@ const CardResults = ({
                             }>
                             <span style={{
                                 fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem', whiteSpace: 'nowrap',
-                                maxWidth: hasUp ? '15rem' : '15rem',
+                                maxWidth: hasUp ? '15.6rem' : '15.6rem',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                             }} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{shouldTruncate ? truncate(team1, 7, 7) : team1}</span>
-                            <div className="flex items-center" style={{ width: hasUp ? '8rem' : '6rem', textAlign: 'center', marginRight: '0.2rem' }}>
+                            <div className="flex items-center" style={{ width: hasUp ? '10rem' : '6rem', textAlign: 'center', marginRight: '0.2rem' }}>
                                 {hasUp && <img style={{ marginRight: '0.4375rem', width: '2rem', height: '1.75rem' }} className="object-contain w-8 h-7" src={UpIcon} alt="" />}
                                 <span style={{ fontSize: '2.625rem', fontFamily: 'RobotoMedium', marginRight: '0.2rem' }} className="font-roboto tracking-tight text-14px mt-1">{stat1}</span>
                             </div>
@@ -298,7 +298,7 @@ const CardResults = ({
                                 {hasDown && <img style={{ marginLeft: '0.4375rem', width: '2rem' }} className="object-contain w-8 h-7" src={DownIcon} alt="" />}
                             </div>
                             <span style={{
-                                fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : hasDown ? '15rem' : '15rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.4rem', letterSpacing: '-0.07rem', whiteSpace: 'nowrap',
+                                fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : hasDown ? '15.6rem' : '15.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem', whiteSpace: 'nowrap',
                                 // maxWidth: '35rem',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
