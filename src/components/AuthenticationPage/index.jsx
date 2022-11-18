@@ -151,7 +151,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
 
 
     return (
-        <div className="w-full AuthenticationPage" style={{ background: '', width: '77.625rem', height: '140rem', overflow: 'hidden', position: 'relative' }}>
+        <div className="w-full AuthenticationPage" style={{ background: '#000', width: '77.625rem', height: '100vh', overflow: 'hidden', position: 'relative' }}>
             {/* <img src={img28} alt="" style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
             {/* {toSignup === false ? ( */}
             <>

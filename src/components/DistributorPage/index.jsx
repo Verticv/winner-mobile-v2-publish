@@ -208,12 +208,12 @@ const DistributorPage = ({
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">e-스포츠</td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>키론</span><br /><span className='-mt-3.5'>가상게임</span></td>
 
-                                <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">관리</td>
+                                <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingRight: '2rem' }} className="text-center">관리</td>
                             </tr>
                         </thead>
                         <tbody style={{ height: '8.8125rem', background: '#323232' }} className="w-full text-585858 tracking-tight font-spoqaMedium">
                             <tr style={{ height: '8.8125rem', fontFamily: 'RobotoRegular', color: '#c8c8c8', letterSpacing: '-0.07rem', borderBottomLeftRadius: '1rem' }} className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
-                                <td style={{ width: '13.8125rem', textAlign: 'center', background: '#2c2c2c' }} className="bg-gray-r676e76 h-full flex items-center justify-center">변경</td>
+                                <td style={{ width: '13.8125rem', textAlign: 'center', background: '#2c2c2c', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium' }} className="bg-gray-r676e76 h-full flex items-center justify-center">변경</td>
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingRight: '1.3rem' }} className=" text-center">0.00%</td>
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className=" text-center">0.00%</td>
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingLeft: '1rem' }} className=" text-center">0.00%</td>
@@ -249,13 +249,13 @@ const DistributorPage = ({
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingLeft: '1rem' }} className=" text-center">0.00%</td>
                                 <td>
                                     <button
-                                        className='shadow-to-box'
+                                        className='shadow-to-box hover'
                                         style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
                                     >
                                         <div
                                             style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%', background: 'linear-gradient(to top, rgb(127, 95, 63), rgb(166, 124, 82))', borderRadius: '0.5625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07REM' }}
                                         >
-                                            <span className="font-spoqaMedium tracking-tight text-white small-padding shadow-to-text" style={{ color: '#ffffff' }}>
+                                            <span className="font-spoqaMedium tracking-tight text-white small-padding shadow-to-text" style={{ color: 'rgb(255, 232, 189)' }}>
                                                 수정
                                             </span>
 
@@ -277,21 +277,21 @@ const DistributorPage = ({
                     <div style={{ width: '38.5rem', height: '6.3rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '', marginTop: '1.8rem', marginLeft: '1rem', fontFamily: 'SpoqaHanSansNeoMedium', marginBottom: '1.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                         <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '1.5rem' }} className="object-contain" src={Diamond} alt="" />
                         <div style={{ marginTop: '0.15rem' }} className="flex items-center">
-                            <span className="text-white flex-shrink-0" style={{ color: '#fff' }}>입금 :</span>
+                            <span className="text-white flex-shrink-0" style={{ color: '#ffdfbd' }}>입금 :</span>
                             <span className="text-yellow-ffcc00 ml-3" style={{ color: '#ffcc00', letterSpacing: '0', marginLeft: '0.6rem' }}>{truncate("000,000,000", 15, 15)}</span>
                         </div>
                     </div>
                     <div style={{ width: '38.5rem', height: '6.3rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '', marginTop: '1.8rem', marginLeft: '1rem', fontFamily: 'SpoqaHanSansNeoMedium', marginBottom: '1.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                         <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '1.5rem' }} className="object-contain" src={Diamond} alt="" />
                         <div style={{ marginTop: '0.15rem' }} className="flex items-center">
-                            <span className="text-white flex-shrink-0" style={{ color: '#fff' }}>보너스 : </span>
+                            <span className="text-white flex-shrink-0" style={{ color: '#ffdfbd' }}>보너스 : </span>
                             <span className="text-yellow-ffcc00 ml-3" style={{ color: '#ffcc00', letterSpacing: '0', marginLeft: '0.6rem' }}>{truncate("0", 15, 15)}</span>
                         </div>
                     </div>
                     <div style={{ width: '38.5rem', height: '6.3rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '', marginTop: '1.8rem', marginLeft: '1rem', fontFamily: 'SpoqaHanSansNeoMedium', marginBottom: '1.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                         <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '1.5rem' }} className="object-contain" src={Diamond} alt="" />
                         <div style={{ marginTop: '0.15rem' }} className="flex items-center">
-                            <span className="text-white flex-shrink-0" style={{ color: '#fff' }}>출금 : </span>
+                            <span className="text-white flex-shrink-0" style={{ color: '#ffdfbd' }}>출금 : </span>
                             <span className="text-yellow-ffcc00 ml-3" style={{ color: '#ffcc00', letterSpacing: '0', marginLeft: '0.6rem' }}>{truncate("0", 15, 15)}</span>
                         </div>
                     </div>
@@ -494,7 +494,7 @@ const DistributorPage = ({
                             :
                             <button
                                 style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
-                                className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center rounded-lg hover:opacity-75`}
+                                className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} hover flex items-center justify-center rounded-lg hover:opacity-75`}
                                 onClick={() => {
                                     handleOnChange1(item.id)
                                 }}
@@ -506,7 +506,7 @@ const DistributorPage = ({
                                         : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
                                         } flex items-center justify-center rounded-lg w-full h-full border cursor-pointer px-8 py-5 shadow-to-box shadow-to-text`}
                                 >
-                                    <span className="font-spoqaMedium tracking-tight text-white small-padding" style={{ color: '#ffffff' }}>
+                                    <span className="font-spoqaMedium tracking-tight text-white small-padding" style={{ color: 'rgb(255, 232, 189)' }}>
                                         {isUserCountOpen[item.id] === true ? "접기" : "보기"}  {item.user_count}
                                     </span>
                                     <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isUserCountOpen[item.id] === true ? '' : 'rotate(180deg)' }} className={isUserCountOpen[0] === false && " transform rotate-180"} src={WhiteArrow} alt="" />
@@ -527,7 +527,7 @@ const DistributorPage = ({
                     <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
                         <button
                             style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
-                            className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
+                            className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} hover flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
                             onClick={() => {
                                 handleOnChange1(item.id + 1)
                             }}
@@ -539,7 +539,7 @@ const DistributorPage = ({
                                     : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
                                     } flex items-center justify-center rounded-lg border w-full h-full cursor-pointer px-10 py-5 shadow-to-box shadow-to-text`}
                             >
-                                <span className="font-spoqaMedium tracking-tight text-white" style={{ color: '#ffffff' }}>
+                                <span className="font-spoqaMedium tracking-tight text-white" style={{ color: 'rgb(255, 232, 189)' }}>
                                     {isUserCountOpen[item.id + 1] === true ? "접기" : "보기"}
                                 </span>
                                 <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isUserCountOpen[item.id + 1] === true ? '' : 'rotate(180deg)' }} className={isUserCountOpen[item.id + 1] === false && " transform rotate-180"} src={WhiteArrow} alt="" />
@@ -560,7 +560,7 @@ const DistributorPage = ({
                     <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
                         <button
                             style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
-                            className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
+                            className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} hover flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
                             onClick={() => {
                                 handleOnChange1(item.id + 2)
                             }}
@@ -572,7 +572,7 @@ const DistributorPage = ({
                                     : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
                                     } flex items-center justify-center rounded-lg w-full h-full border cursor-pointer px-10 py-5`}
                             >
-                                <span className="font-spoqaMedium tracking-tight text-white" style={{ color: '#ffffff' }}>
+                                <span className="font-spoqaMedium tracking-tight text-white" style={{ color: 'rgb(255, 232, 189)' }}>
                                     {isUserCountOpen[item.id + 2] === true ? "접기" : "보기"}
                                 </span>
                                 <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isUserCountOpen[item.id + 2] === true ? '' : 'rotate(180deg)' }} className={isUserCountOpen[item.id + 1] === false && " transform rotate-180"} src={WhiteArrow} alt="" />
@@ -737,7 +737,7 @@ const DistributorPage = ({
         >
             <div
                 style={{
-                    background: "#868686",
+                    background: "#6b6b6b",
                     width: 'max-content',
                     height: '100%',
                     paddingTop: '0.1875rem',
@@ -770,8 +770,8 @@ const DistributorPage = ({
             <HomePageTopBanner pageTitle='총판페이지' />
             <div style={{ margin: '0', marginTop: '0', overflowX: 'hidden', marginRight: '0', marginBottom: '0' }} className="relative overflow-hidden flex flex-col h-full">
                 <div style={{ marginLeft: '1.875rem', height: '11.1875rem', fontSize: '3rem', paddingTop: '' }} className='flex flex-col items-center'>
-                    <div style={{ marginBottom: '0.25rem', background: '#272726', display: 'flex', width: '49rem', margin: '1.6rem 12.4rem 0', letterSpacing: '-0.07rem', marginLeft: '12.4rem', height: '5rem', paddingTop: '0.7rem', borderRadius: '3rem', justifyContent: 'center' }} className="tracking-tight flex items-center">
-                        <p className="font-spoqaMedium text-blue-r0056a6" style={{ margin: '0', color: '#aa9264', fontFamily: 'SpoqaHanSansNeoMedium', marginRight: '1rem', marginLeft: '1.4rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '15.7rem' }}>{truncate('Louie3', 12, 12)}</p>
+                    <div style={{margin: 'auto', marginBottom: '0.25rem', background: '#272726', display: 'flex', width: '52rem', marginTop: '1.6rem', letterSpacing: '-0.07rem', height: '5rem', paddingTop: '0.7rem', borderRadius: '3rem', justifyContent: 'center' }} className="tracking-tight flex items-center">
+                        <p className="font-spoqaMedium text-blue-r0056a6" style={{ margin: '0', color: '#aa9264', fontFamily: 'SpoqaHanSansNeoMedium', marginRight: '1rem', marginLeft: '1.4rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '' }}>{truncate('Louie3Louie3Louie3Louie3Louie3', 12, 12)}</p>
                         <p className="font-spoqaMedium ml-2 text-gray-r454545" style={{ margin: '0', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium' }}>님의 총판 정보입니다.</p>
                     </div>
                 </div>
@@ -920,7 +920,7 @@ const DistributorPage = ({
                                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.2rem' }} src={Diamond} alt="" />
                                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">입금 :</span>
+                                                <span style={{ marginRight: '0.625rem', color: '#ffdfbd', letterSpacing: '-0.07rem' }} className="text-white">입금 :</span>
                                                 <span className="text-yellow-ffcc00" style={{ color: '#ffd200' }}>2,520,000</span>
                                             </div>
                                         </div>
@@ -930,7 +930,7 @@ const DistributorPage = ({
                                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                                             <img style={{ width: '1.2rem', height: '1.3125rem', marginRight: '1.2rem' }} src={Diamond} alt="" />
                                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">출금 :</span>
+                                                <span style={{ marginRight: '0.625rem', color: '#ffdfbd', letterSpacing: '-0.07rem' }} className="text-white">출금 :</span>
                                                 <span className="text-yellow-ffcc000" style={{ color: '#ffd200' }}>5,800,000</span>
                                             </div>
                                         </div>
@@ -943,7 +943,7 @@ const DistributorPage = ({
                                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.3125rem' }} src={Diamond} alt="" />
                                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">보너스 :</span>
+                                                <span style={{ marginRight: '0.625rem', color: '#ffdfbd', letterSpacing: '-0.07rem' }} className="text-white">보너스 :</span>
                                                 <span className="text-yellow-ffcc00" style={{ color: '#ffd200' }}>500,000</span>
                                             </div>
                                         </div>
@@ -953,7 +953,7 @@ const DistributorPage = ({
                                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                                             <img style={{ width: '1.2rem', height: '1.3125rem', marginRight: '1.2rem' }} src={Diamond} alt="" />
                                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                                <span style={{ marginRight: '1.1875rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">입출금 합계 :</span>
+                                                <span style={{ marginRight: '1.1875rem', color: '#ffdfbd', letterSpacing: '-0.07rem' }} className="text-white">입출금 합계 :</span>
                                                 <span className="text-red-f47d7d" style={{ color: '#ff7f7f' }}>-300,200,000</span>
                                             </div>
                                         </div>
@@ -1138,7 +1138,7 @@ const DistributorPage = ({
                                         boxShadow: 'rgb(0 0 0) 0 0.4375rem 3rem 0',
                                         marginTop: '-0.1rem'
                                     }}
-                                    className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
+                                    className="hover flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
                                     onClick={() => setViewOnline(!viewOnline)}
                                 >
                                     <div
@@ -1154,8 +1154,8 @@ const DistributorPage = ({
                                         className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer"
                                     >
                                         <span style={{
-                                            fontSize: '2.625rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium',
-                                            marginTop: '0.4rem',
+                                            fontSize: '2.625rem', color: '#ffdfbd', fontFamily: 'SpoqaHanSansNeoMedium',
+                                            marginTop: '0.2rem',
                                             marginLeft: '-0.1rem',
                                         }} className="shadow-to-text font-spoqaMedium tracking-tight text-white pt-px">
                                             {viewOnline ? "닫기" : "보기"}
@@ -1181,7 +1181,7 @@ const DistributorPage = ({
                                 <div style={{ maxWidth: '40.6875rem', height: '5.3125rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '0 2rem', marginTop: '0.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                                     <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '0.9rem' }} className="object-contain" src={Diamond} alt="" />
                                     <div style={{ marginTop: '0.15rem' }} className="flex items-center">
-                                        <span className="text-white flex-shrink-0" style={{ color: '#fff' }}>보유금 총합계 :</span>
+                                        <span className="text-white flex-shrink-0" style={{ color: '#ffdfbd' }}>보유금 총합계 :</span>
                                         <span className="text-yellow-ffcc00 ml-3" style={{ color: '#ffcc00', letterSpacing: '0', marginLeft: '0.6rem' }}>{truncate("75,000", 15, 15)}</span>
                                     </div>
                                 </div>
