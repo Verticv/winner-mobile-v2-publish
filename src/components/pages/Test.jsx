@@ -32,7 +32,7 @@ import Icon12 from "../../assets/myInfo/12.png";
 import Icon13 from "../../assets/myInfo/13.png";
 import Icon14 from "../../assets/myInfo/14.png";
 import Logo from "../../assets/myInfo/Logo.png";
-
+import ScrollButton from '../ScrollButton'
 // import Freeboard from "./Freeboard";
 // import img from '../../img27.png'
 import Header from "../Header";
@@ -41,7 +41,7 @@ import FreeBoardMain from "../FreeBoardMain";
 import HomePageTopBanner from "../HomePageTopBanner";
 
 
-const MyPage = ({ setAuthenticated, isAuthenticated }) => {
+const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setDistributorPageActive }) => {
 
     const location = useLocation();
     const [selectedTab, setSelectedTab] = useState(location.pathname);
@@ -189,6 +189,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
         console.log(`location.state`, location.state)
         return (
             <>
+                <ScrollButton />
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                 <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu
@@ -201,6 +202,8 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                         activeButton={activeButton}
                         setActiveButton={setActiveButton}
                         setSubActiveButton={setSubActiveButton}
+                        distributorPageActive={distributorPageActive}
+                        setDistributorPageActive={setDistributorPageActive}
                     />
                 </div>
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
@@ -236,6 +239,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         {/* <Header /> */}
+                        <ScrollButton />
                         <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                         {/* <NavBottom /> */}
@@ -246,9 +250,12 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             {/* </Routes> */}
             <Route path="/money/exchange/*"
                 element={
-                    <MoneyExchangePage isAuthenticated={true} setAuthenticated={setAuthenticated}
-                        subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
-                    />
+                    <>
+                        <ScrollButton />
+                        <MoneyExchangePage isAuthenticated={true} setAuthenticated={setAuthenticated}
+                            subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                        />
+                    </>
                 }
             >
             </Route>
@@ -256,6 +263,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         {/* <Header /> */}
+                        <ScrollButton />
                         <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />
@@ -266,10 +274,13 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             </Route>
             <Route path="/win-lose-settlement"
                 element={
-                    <WinLoseSettlement isAuthenticated={true} setAuthenticated={setAuthenticated}
-                        activeButton={activeButton}
-                        setActiveButton={setActiveButton}
-                    />
+                    <>
+                        <ScrollButton />
+                        <WinLoseSettlement isAuthenticated={true} setAuthenticated={setAuthenticated}
+                            activeButton={activeButton}
+                            setActiveButton={setActiveButton}
+                        />
+                    </>
                 }
             >
 
@@ -278,6 +289,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         {/* <Header /> */}
+                        <ScrollButton />
                         <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />
@@ -292,6 +304,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                         <Header />
                         <HomePageTopBanner pageTitle='게시판' toPath={window.location.pathname.includes('/mypage') ? '/mypage' : '/main'} isFreeboard={true} />
                         <div>
+                            <ScrollButton />
                             <FreeBoardMain key={14}
                                 // isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
                                 activeButton={activeButton}
@@ -308,6 +321,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         {/* <Header /> */}
+                        <ScrollButton />
                         <CouponUsage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />
@@ -321,6 +335,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
                 element={
                     <>
                         <Header />
+                        <ScrollButton />
                         <Inbox
                             activeButton={activeButton}
                             setActiveButton={setActiveButton}
@@ -331,13 +346,19 @@ const MyPage = ({ setAuthenticated, isAuthenticated }) => {
             >
             </Route>
             <Route path="/inbox/*"
-                element={<InboxView />}
+                element={
+                    <>
+                        <ScrollButton />
+                        <InboxView />
+                    </>
+                }
             >
             </Route>
             <Route path="/edit-info/*"
                 element={
                     <>
                         <Header />
+                        <ScrollButton />
                         <EditInfo activeButton={activeButton}
                             setActiveButton={setActiveButton} />
                         <NavBottom />

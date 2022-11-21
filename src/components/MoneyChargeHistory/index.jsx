@@ -39,8 +39,9 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#826140',
-            buttonText: '취소'
+            buttonColor: '#464646',
+            buttonText: '취소',
+            textColor: '#c8c8c8',
         }
     ],
     [

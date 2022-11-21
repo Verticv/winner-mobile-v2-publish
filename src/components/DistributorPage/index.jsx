@@ -19,16 +19,28 @@ import SummaryIcon7 from '../../assets/mainPage/distributor/SummaryIcon7.png'
 import SummaryIcon8 from '../../assets/mainPage/distributor/SummaryIcon8.png'
 import DefaultUser from '../../assets/mainPage/distributor/default.png'
 
-
+import ScrollButton from '../ScrollButton'
 import DateSearchBar from '../DateSearchBar'
 import Diamond from '../../assets/mainPage/distributor/diamond.png'
 import WhiteArrow from '../../assets/mainPage/distributor/arrow.png'
 import BlueTriangle from '../../assets/mainPage/distributor/blue_triangle2.png'
+import { useEffect } from 'react';
 
 const DistributorPage = ({
     isAuthenticated,
-    setAuthenticated
+    setAuthenticated,
+    distributorPageActive,
+    setDistributorPageActive,
 }) => {
+
+    useEffect(() => {
+        if (window.location.pathname === '/distributor-page') {
+
+            setDistributorPageActive('/distributor-page');
+        } else {
+            setDistributorPageActive('')
+        }
+    }, [setDistributorPageActive])
 
     const RecommendedUserArray = [
         {
@@ -488,7 +500,7 @@ const DistributorPage = ({
                         <div className="w-full h-full flex items-center justify-center font-spoqaMedium" style={{ width: '16.6rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>{item.name}</div>
                     )}
                     <div className="w-full h-full flex items-center justify-center font-spoqaMedium" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium', paddingLeft: '3.5rem' }}>{item.nickname}</div>
-                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', marginLeft: '0.9rem', marginRight: '-0.9rem' }}>
                         {item.user_count === 0
                             ? <div className="" style={{ fontFamily: 'RobotoRegular' }}>{item.added_amount}</div>
                             :
@@ -524,7 +536,7 @@ const DistributorPage = ({
                         <div className="flex items-center -mt-3.5">{item.login_date}</div>
                         <div className="flex items-center -mt-3.5 font-spoqaMedium">({item.absent_date})</div>
                     </div>
-                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', marginLeft: '1.1rem', marginRight: '-1.1rem' }}>
                         <button
                             style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
                             className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} hover flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
@@ -557,7 +569,7 @@ const DistributorPage = ({
                     <div className="w-full h-full flex items-center justify-end text-right" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', textAlign: 'right' }}><p className="pr-32px">{item.added_withdraw_amount}</p></div>
                     <div className="w-full h-full flex items-center justify-end text-right" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', textAlign: 'right' }}><p className="pr-32px">{item.bet_amount}</p></div>
                     <div className="w-full h-full flex items-center justify-end text-right" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', textAlign: 'right' }}><p className="pr-32px">{item.win_lose}</p></div>
-                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', position: 'relative', paddingRight: '0.5rem' }}>
                         <button
                             style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
                             className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} hover flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
@@ -767,10 +779,11 @@ const DistributorPage = ({
 
     return (
         <div className="relative flex flex-col h-full">
-            <HomePageTopBanner pageTitle='총판페이지' />
+            <ScrollButton />
+            <HomePageTopBanner pageTitle='총판페이지' toPath='/mypage' />
             <div style={{ margin: '0', marginTop: '0', overflowX: 'hidden', marginRight: '0', marginBottom: '0' }} className="relative overflow-hidden flex flex-col h-full">
                 <div style={{ marginLeft: '1.875rem', height: '11.1875rem', fontSize: '3rem', paddingTop: '' }} className='flex flex-col items-center'>
-                    <div style={{margin: 'auto', marginBottom: '0.25rem', background: '#272726', display: 'flex', width: '52rem', marginTop: '1.6rem', letterSpacing: '-0.07rem', height: '5rem', paddingTop: '0.7rem', borderRadius: '3rem', justifyContent: 'center' }} className="tracking-tight flex items-center">
+                    <div style={{ margin: 'auto', marginBottom: '0.25rem', background: '#272726', display: 'flex', width: '52rem', marginTop: '1.6rem', letterSpacing: '-0.07rem', height: '5rem', paddingTop: '0.7rem', borderRadius: '3rem', justifyContent: 'center' }} className="tracking-tight flex items-center">
                         <p className="font-spoqaMedium text-blue-r0056a6" style={{ margin: '0', color: '#aa9264', fontFamily: 'SpoqaHanSansNeoMedium', marginRight: '1rem', marginLeft: '1.4rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '' }}>{truncate('Louie3Louie3Louie3Louie3Louie3', 12, 12)}</p>
                         <p className="font-spoqaMedium ml-2 text-gray-r454545" style={{ margin: '0', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium' }}>님의 총판 정보입니다.</p>
                     </div>
@@ -826,7 +839,7 @@ const DistributorPage = ({
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">에볼루션</td>
                                                     <td style={{ width: '16.5rem', fontSize: '2.625rem', textAlign: 'center', display: 'flex', flexDirection: 'column', paddingTop: '1.2rem', paddingLeft: '0.7rem' }} className="text-center flex flex-col"><span>프레그메틱</span><span className='-mt-3.5'>플레이</span></td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">로얄지</td>
-                                                    <td style={{ width: '16.5rem', fontSize: '2.625rem', textAlign: 'center', display: 'flex', flexDirection: 'column', paddingTop: '1.2rem', paddingLeft: '0.7rem' }} className="text-center flex flex-col"><span>아시아</span><span className='-mt-3.5'>게이밍</span></td>
+                                                    <td style={{ width: '16.5rem', fontSize: '2.625rem', textAlign: 'center', display: 'flex', flexDirection: 'column', paddingTop: '1.2rem', paddingLeft: '0.7rem' }} className="text-center flex flex-col"><span>아시안</span><span className='-mt-3.5'>게이밍</span></td>
                                                     <br />
                                                     <td style={{ width: '16.5rem', fontSize: '2.625rem', textAlign: 'center', display: '', flexDirection: 'column', paddingTop: '1.2rem', paddingLeft: '0.7rem' }} className="text-center flex flex-col">
                                                         <p>드림</p>
@@ -1135,7 +1148,7 @@ const DistributorPage = ({
                                         marginLeft: "2.4rem",
                                         padding: '0.1875rem',
                                         background: 'linear-gradient(to top, #4b3b09, #e8b888)',
-                                        boxShadow: 'rgb(0 0 0) 0 0.4375rem 3rem 0',
+                                        boxShadow: 'rgb(0 0 0) 0 0.4375rem 0.75rem 0',
                                         marginTop: '-0.1rem'
                                     }}
                                     className="hover flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"

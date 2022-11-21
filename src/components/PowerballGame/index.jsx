@@ -32,7 +32,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
             style={{
                 width: width + "rem",
                 height: height + "rem",
-                marginBottom: '0.2rem'
+                marginBottom: '0.1rem'
             }}
             className={`betoptions-style`}
         >

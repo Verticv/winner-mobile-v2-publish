@@ -20,6 +20,9 @@ const AnnouncementView = () => {
 
 
     const navigate = useNavigate();
+    const truncate = (str, max, len) => {
+        return str.length > max ? str.substring(0, len) + "..." : str;
+    }
 
     return (
         <div className="w-full announcementView">
@@ -33,7 +36,7 @@ const AnnouncementView = () => {
                                 // style={{ backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', paddingBottom: '0', width: 'fit-content' }}
                                 className="announcementView4 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
-                                스포츠
+                                {truncate('스포츠스포츠스포츠', 6, 6)}
                             </div>
                         </div>
                         <div className="announcementView5 flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
@@ -159,7 +162,7 @@ const AnnouncementView = () => {
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '', display: 'flex', marginTop: '0.2rem'
                             }}>이전</span>
                         </div>
                     </div>
@@ -171,10 +174,10 @@ const AnnouncementView = () => {
                                 // background: 'linear gradient(to top, #80603f, #936e48 50%, #a57b52)'
                             }}
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
-                            onClick={() => navigate('/cscenter/all/contact/all')}
+                            onClick={() => navigate('/main')}
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '', display: 'flex', marginTop: '0.2rem'
                             }}>목록보기</span>
                         </div>
                     </div>
@@ -190,7 +193,7 @@ const AnnouncementView = () => {
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '', display: 'flex', marginTop: '0.2rem'
                             }}>다음</span>
                         </div>
                     </div>

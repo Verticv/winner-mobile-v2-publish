@@ -6,7 +6,7 @@ import Dropdown from '../Dropdown';
 
 const ContactCompose = () => {
 
-    const carrierOptions = ["라이브카지노", "슬롯게임", "스포츠", "e-스포츠", "미니게임", "티비벳 ", "키론가상게임", "충전/환전", "베팅관련", "기타"]
+    const carrierOptions = ["라이브카지노", "슬롯게임", "스포츠", "호텔카지노", "e-스포츠", "미니게임", "키론가상게임 ", "피싱게임", "충전/환전", "베팅관련", "기타"]
     return (
         <>
             {/* <img src={img} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
@@ -16,7 +16,7 @@ const ContactCompose = () => {
             /> */}
             <div style={{ margin: '0.0625rem 1.875rem' }} className='contact-compose'>
 
-                <div style={{ background: 'linear-gradient(to top,#1f1f1e, #353534 50%,#4a4a4a)', padding: '0.1875rem', borderRadius: '1rem', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }}>
+                <div style={{ background: 'linear-gradient(to top,#1f1f1e, #353534 50%,#4a4a4a)', padding: '0.1875rem', borderRadius: '1rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                     <div className="w-full rounded-2xl shadow-subNavbar overflow-hidden" style={{ background: '#323232', borderRadius: '1rem' }}>
 
                         <div style={{ height: '9.1875rem', paddingLeft: '2.625rem', borderTopLeftRadius: '1rem', borderTopRightRadius: '1rem', background: '#2e2e2e', borderBottom: '0.1875rem solid #252525', paddingTop: '1.1rem', position: 'relative' }} className="w-full bg-gray-fafafa border-b border-gray-ededed flex items-center">
@@ -29,7 +29,7 @@ const ContactCompose = () => {
                                     className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight dddd"
                                 >
                                     <Dropdown labelClasses="group-hover:text-black" labelStyle={{ marginLeft: '1.6875rem', fontSize: '2.8125rem' }} options={carrierOptions} isContact={true}>
-                                        <img style={{ width: '1.5625rem', height: '1rem' }} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" />
+                                        <img style={{ width: '1.5625rem', height: '1rem', marginTop: '-0.3rem' }} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" />
                                     </Dropdown>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@ const ContactCompose = () => {
                 <div className="two-buttons-container">
                     <button style={{ height: '7.3125rem' }}
                         // onClick={() => navigate("/freeboard")} 
-                        className="shadow-to-box flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-blue-r0070d9">
+                        className="shadow-to-box hover flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-blue-r0070d9">
                         <div style={{ width: '100%', height: '100%', borderRadius: '1rem', padding: '0.1875rem' }}>
                             <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #3a6287, #4777ab 50%, #518bcb)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <span style={{ color: '#d6f3ff' }}>신청하기</span>
@@ -89,7 +89,7 @@ const ContactCompose = () => {
                     </button>
                     <button style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', height: '7.3125rem', fontSize: '2.8125rem' }}
                         // onClick={() => navigate("/freeboard")} 
-                        className="shadow-to-box flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">
+                        className="shadow-to-box hover flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">
                         <div style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', width: '100%', height: '100%', borderRadius: '1rem', padding: '0.1875rem' }}>
                             <div
                                 style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e49 50%, #a57b51)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}

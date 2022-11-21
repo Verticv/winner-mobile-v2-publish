@@ -267,7 +267,7 @@ const PointsAccumulateHistory = ({ SubMenuList, subActiveButton, setSubActiveBut
                 }} className="font-spoqaMedium tracking-tight my-4 text-gray-r8c8c8c">
                     <span className="font-spoqaBold text-blue-r0056a6" style={{
                         color: '#aa9264', fontFamily: 'SpoqaHanSansNeoBold'
-                    }}>{truncate('louie3', 22, 22)}</span>
+                    }}>{truncate('louie3louie3louie3louie3louie3louie3', 22, 22)}</span>
                     <span className="" style={{ color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium' }}>님의 포인트적립 정보입니다.</span>
                 </div>
 

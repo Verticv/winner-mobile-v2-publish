@@ -79,17 +79,17 @@ const KinoLadderGame = ({ setSelectedOption }) => {
     }) => (
         <div
             style={{
-                // width: width + "rem", 
+                width: width + "rem", 
                 height: height + "rem",
                 // background: "#c7b8a4",
-                marginBottom: '0.35rem',
+                marginBottom: '0.1rem',
                 // padding: '1px'
             }}
             className={`kinoladdergame-content4`}
         >
             <div
                 style={{
-                    width: width - 0.1875 + "rem",
+                    width: width  + "rem",
                     height: height - 0.1875 + "rem",
                     border: '0.1875rem solid',
                     background: "linear-gradient(to top, #5b4e37, #786749)",
@@ -120,7 +120,7 @@ const KinoLadderGame = ({ setSelectedOption }) => {
                         paddingLeft: `${extraLeftPadding + 2}rem`,
                         paddingRight: `${extraRightPadding + 2.2}rem`
                     }} className="kinoladdergame-content12">
-                        <div style={{ marginRight: '1.375rem' }} className="kinoladdergame-content13">
+                        <div style={{ marginRight: '' }} className="kinoladdergame-content13">
                             <div
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
@@ -136,7 +136,7 @@ const KinoLadderGame = ({ setSelectedOption }) => {
                                 style={{ height: '11.375rem' }}
                                 className="kinoladdergame-content14"
                             >
-                                <img style={{ width: '10.2rem', maxWidth: 'unset' }} className="kinoladdergame-content15" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                <img style={{ width: '10.125rem', maxWidth: 'unset' }} className="kinoladdergame-content15" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                 <p style={{ textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem' }} className="kinoladdergame-content16">{button1Text}</p>
                             </div>
                             <div style={{ height: '3.65rem' }}>
@@ -161,7 +161,7 @@ const KinoLadderGame = ({ setSelectedOption }) => {
                                 className="kinoladdergame-content19"
                             >
 
-                                <img style={{ width: '10.2rem', maxWidth: 'unset' }} className="kinoladdergame-content20" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                <img style={{ width: '10.125rem', maxWidth: 'unset' }} className="kinoladdergame-content20" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                 <p style={{ textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem' }} className="kinoladdergame-content21">{button2Text}</p>
                             </div>
                             <div style={{ height: '3.65rem' }}>
@@ -194,14 +194,14 @@ const KinoLadderGame = ({ setSelectedOption }) => {
                 width: width + "rem",
                 height: height + "rem",
                 // background: "#c7b8a4",
-                marginBottom: '0.2rem',
-                padding: '1px'
+                marginBottom: '0.1rem',
+                // padding: '1px'
             }}
             className={`three-card-container`}
         >
             <div
                 style={{
-                    // width: width - 0.1875 + "rem", 
+                    width: width - 0.1875 + "rem", 
                     height: height - 0.1875 + "rem",
                     border: '0.1875rem solid',
                     background: "linear-gradient(to top, #5b4e37, #786749)",
@@ -347,10 +347,10 @@ const KinoLadderGame = ({ setSelectedOption }) => {
             <div className="kinoladdergame-content">
                 <div className="kinoladdergame-content1">
                     <div className="kinoladdergame-content2">
-                        <div style={{ marginRight: '0.35rem' }} className="kinoladdergame-content3">
-                            <SingleCard width={25.82} height={23.375} titleNumber={1} title='게임' subText="홀짝" />
+                        <div style={{ marginRight: '0.25rem' }} className="kinoladdergame-content3">
+                            <SingleCard width={25.62} height={23.375} titleNumber={1} title='게임' subText="홀짝" />
                         </div>
-                        <div style={{ marginRight: '0.35rem' }} className="kinoladdergame-content23">
+                        <div style={{ marginRight: '0.25rem' }} className="kinoladdergame-content23">
                             <SingleCard width={25.82} isMiddle='true' button1Text='좌' button2Text='우' height={23.375} titleNumber={2} title='게임' subText="출발점" missingBorder='none' />
                         </div>
                         <div>

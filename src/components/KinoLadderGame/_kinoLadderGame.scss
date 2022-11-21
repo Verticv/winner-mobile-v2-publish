@@ -50,7 +50,7 @@
 
         .kinoladdergame-content12 {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             width: 100%;
             align-items: center;
 
@@ -262,7 +262,7 @@
                         letter-spacing: -0.025em;
                         color: #ffffff;
                         margin-top: -0.95rem;
-                        margin-left: -0.6rem;
+                        margin-left: -0.1rem;
                     }
                 }
 
@@ -312,6 +312,7 @@
                                 letter-spacing: -0.025em;
                                 font-family: 'SpoqaHanSansNeoMedium';
                                 margin-bottom: 0.25rem;
+                                margin-left: -0.25rem;
                             }
                         }
                     }
@@ -371,7 +372,8 @@
                                 letter-spacing: -0.025em;
                                 font-family: SpoqaHanSansNeoMedium;
                                 margin-bottom: 0.25rem;
-                                margin-right: 1px;
+                                // margin-right: 1px;
+                                margin-left: -0.25rem;
                             }
                         }
                     }
@@ -381,7 +383,7 @@
                         letter-spacing: -0.025em;
                         color: #ffffff;
                         margin-top: -0.95rem;
-                        margin-left: -0.6rem;
+                        margin-left: -0.3rem;
                     }
 
                 }

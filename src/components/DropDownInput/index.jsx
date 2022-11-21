@@ -11,11 +11,11 @@ const DropDownInput = ({ isLeagueSelection = true, isBetCombination = false, wit
 
     if (isBetCombination) return (
         <div
-            style={{ width: '34.06rem', height: '6.75rem', fontSize: '2.625rem', marginLeft: '1.875rem' }}
+            style={{ width: '34.06rem', height: '7rem', fontSize: '2.625rem', marginLeft: '1.875rem' }}
             className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-between items-center tracking-minus05"
         >
             <div
-                style={{ width: '34.06rem', height: '6.75rem', fontSize: '2.625rem' }}
+                style={{ width: '34.06rem', height: '7rem', fontSize: '2.625rem' }}
                 className="w-full rounded-2xl flex h-full bg-white group">
                 <div
                     style={{ borderWidth: '1px' }}
@@ -34,14 +34,14 @@ const DropDownInput = ({ isLeagueSelection = true, isBetCombination = false, wit
     return (
         <div
             style={{
-                width: withArrow ? '34.06rem' : '', height: withArrow ? '6.75rem' : '', fontSize: withArrow ? '2.625rem' : '',
+                width: withArrow ? '34.06rem' : '', height: withArrow ? '7rem' : '', fontSize: withArrow ? '2.625rem' : '',
                 marginLeft: '1.875rem',
                 background: withArrow ? '#1a1a1a' : '', border: withArrow ? '0.1875rem solid #404040' : '', position: withArrow ? 'relative' : '', borderRadius: withArrow ? '0.5rem' : '',
                 marginTop: '0.1rem'
             }}
             className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-between items-center tracking-minus05"
         >
-            <div style={{ width: '34.06rem', height: '6.75rem', fontSize: '2.625rem' }} className="w-full rounded-2xl flex h-full bg-white group">
+            <div style={{ width: '34.06rem', height: '7rem', fontSize: '2.625rem' }} className="w-full rounded-2xl flex h-full bg-white group">
                 <div
                     style={{ borderWidth: '1px' }}
                     className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight"

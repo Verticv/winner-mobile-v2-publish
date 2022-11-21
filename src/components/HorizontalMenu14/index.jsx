@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import horizontalsScroll from '../../utils/horizontalsScroll';
 
 
-const HorizontalMenu13 = ({
+const HorizontalMenu14 = ({
     itemsArray,
     setSelectedTab,
     isState = 0,
@@ -103,4 +103,4 @@ const HorizontalMenu13 = ({
     )
 }
 
-export default HorizontalMenu13
+export default HorizontalMenu14;

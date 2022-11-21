@@ -9,7 +9,7 @@
     right: 0;
     min-height: -webkit-fill-available;
     background: linear-gradient(to top, #1f1f1e ,#2a2a29 80%,#343434);
-    // padding: 0.1875rem;
+    padding: 0.1875rem;
     margin: auto;
     overflow: hidden scroll;
     z-index: 201;
@@ -21,8 +21,8 @@
     .베팅내역-border {
         height: auto;
         width: 100%;
-        border-top-left-radius: 2.7rem;
-        border-top-right-radius: 2.7rem;
+        border-top-left-radius: 3.2rem;
+        border-top-right-radius: 3.2rem;
         min-height: -webkit-fill-available;
         // background: #1e1e1e;
 
@@ -37,6 +37,8 @@
             position: sticky;
             top: -0.1875rem;
             z-index: 55;
+            border-top-left-radius: 3.2rem;
+            border-top-right-radius: 3.2rem;
 
             .text {
                 font-size: 3.749375rem;

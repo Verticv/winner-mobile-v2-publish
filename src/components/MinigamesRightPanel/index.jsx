@@ -11,12 +11,12 @@ import SelectionBg from '../../assets/minigames/cart-check-img.png'
 import CheckIcon from '../../assets/minigames/checkbox.png'
 import BetIcon from '../../assets/betCombinationRPCart/dollar.png'
 import LockIcon from '../../assets/minigames/lock.png'
-// import BlueButton from '../../assets/minigames/blue.png'
+import BlueButton from '../../assets/minigames/blue.png'
 import RedButton from '../../assets/minigames/red.png'
-// import YellowButton from '../../assets/minigames/yellow.png'
-// import GreenButton from '../../assets/minigames/green.png'
-// import BlueButtonSq from '../../assets/minigames/blue_sq.png'
-// import RedButtonSq from '../../assets/minigames/red_sq.png'
+import YellowButton from '../../assets/minigames/yellow.png'
+import GreenButton from '../../assets/minigames/green.png'
+import BlueButtonSq from '../../assets/minigames/blue_sq.png'
+import RedButtonSq from '../../assets/minigames/red_sq.png'
 import { format } from 'date-fns'
 import { ko } from "date-fns/locale"
 import { Link } from 'react-router-dom';
@@ -119,6 +119,7 @@ const MinigamesRightPanel = ({
                 borderRadius: '0.5rem',
                 padding: '0.1875rem'
             }}
+            className='hover'
         >
             <button
                 style={{
@@ -156,12 +157,13 @@ const MinigamesRightPanel = ({
     const BetFixedAmountButton = ({ amount, text }) => (
         <div
             style={{
-                width: "24.375rem",
-                height: '7.5rem',
+                width: "100%",
+                height: '100%',
                 padding: '0.1875rem',
                 borderRadius: '0.5rem',
                 background: 'linear-gradient(to top, #4b3b09, #e8b888)'
             }}
+            className='hover'
         >
             <button
                 style={{
@@ -196,14 +198,14 @@ const MinigamesRightPanel = ({
     const GrayButton = ({ text }) => (
         <div
             style={{
-                width: '36.375rem',
+                width: '36.775rem',
                 height: '7.5rem',
                 background: 'linear-gradient(to top, #393835, #6b6865)',
                 borderRadius: '0.5rem',
                 padding: '0.1875rem',
                 zIndex: '200'
             }}
-            className='shadow-to-box'
+            className='shadow-to-box hover'
         >
             <button
                 style={{
@@ -244,7 +246,7 @@ const MinigamesRightPanel = ({
                             width: '100%',
                             alignItems: 'center',
                             height: '100%',
-                            marginTop: '0.25rem'
+                            marginTop: '0.2rem'
                         }} className={`gray-button-div2 shadow-to-text`}>
                             {text}
                         </div>
@@ -455,7 +457,7 @@ const MinigamesRightPanel = ({
                                 }} className="rightpanel-content4" src={CheckIcon} alt="" />
                                 <p style={{ color: "#ffdfbd", fontSize: '2.625rem', marginTop: '' }} className="rightpanel-content5">게임선택</p>
                             </div>
-                            <div
+                            {/* <div
                                 style={{ textAlign: 'center', marginLeft: '0.4rem', letterSpacing: '-0.07rem', marginTop: '-0.1rem' }}
                             >
                                 <span style={{ color: '#c8c8c8', fontSize: '1.875rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>일반볼</span>
@@ -464,7 +466,7 @@ const MinigamesRightPanel = ({
 
                                     홀짝/언오버
                                 </span>
-                            </div>
+                            </div> */}
                             <div>
                                 <div
                                     // onClick={() => {
@@ -479,73 +481,75 @@ const MinigamesRightPanel = ({
                                     style={{ height: '11.375rem' }}
                                     className="betoption-content2"
                                 >
-                                    <img style={{ width: '11.375rem', maxWidth: 'unset' }} className="betoption-content3" src={RedButton} alt="" />
+                                    {/* <img style={{ width: '11.375rem', maxWidth: 'unset' }} className="betoption-content3" src={RedButton} alt="" />
                                     <div className="betoption-content4">
                                         <p style={{ textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem' }} className="betoption-content5">짝오버</p>
                                         <div className='betoption-content6'>
                                             <p style={{ fontSize: "1.6rem" }} className="betoption-content7">
                                                 4.5
-                                                {/* {titleNumber === 2 ? "4.5" : "72.5"} */}
                                             </p>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
-                        </div>
-                        {/* <div style={{ width: "30rem", fontSize: '1.875rem', marginLeft: '1rem' }} className="rightpanel-content6">
-                            {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") && (
-                                <p style={{ color: "#3e83b3" }} className="rightpanel-content7">{selectedOption[0].type}</p>
-                            )}
-                            {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") ? (
-                                <p style={{ color: "#365b7e", fontSize: '2.25rem' }} className="rightpanel-content8">{selectedOption[0].name}</p>
-                            ) : (
-                                <p style={{ color: "#365b7e", fontSize: '2.25rem' }} className="rightpanel-content9">{selectedOption[0].name}</p>
-                            )}
-                        </div> */}
-                        {/* <div style={{ width: "16rem" }} className="rightpanel-content10">
-                            {selectedOption[0].buttonType && (
-                                <div
-                                    style={{ width: "11.375rem" }}
-                                    className="rightpanel-content11"
-                                >
-                                    <img
-                                        style={{
-                                            paddingTop: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "0.2rem" : "",
-                                            width: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "10.375rem" : ""
-                                        }}
-                                        className={`${(selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "rightpanel-content12" : ""
-                                            } rightpanel-content13`}
-                                        src={
-                                            selectedOption[0].buttonType === "blue"
-                                                ? BlueButton
-                                                : selectedOption[0].buttonType === "red"
-                                                    ? RedButton
-                                                    : selectedOption[0].buttonType === "yellow"
-                                                        ? YellowButton
-                                                        : selectedOption[0].buttonType === "green"
-                                                            ? GreenButton
-                                                            : selectedOption[0].buttonType === "blue_sq"
-                                                                ? BlueButtonSq
-                                                                : RedButtonSq
-                                        }
-                                        alt=""
-                                    />
-                                    <div className="rightpanel-content14 -space-y-5 -mb-2">
-                                        <p style={{ textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: "3.75rem" }} className="rightpanel-content15 -mt-1">{selectedOption[0].selection}</p>
-                                        {selectedOption[0].subtitle && (
-                                            <p style={{ fontSize: "1.6rem" }} className="rightpanel-content16">
-                                                {selectedOption[0].subtitle}
-                                            </p>
+
+
+                            {console.log('selectedOption', selectedOption[0])}
+                            <div style={{ width: "30rem", fontSize: '1.875rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '1rem' }} className="rightpanel-content6">
+                                {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") && (
+                                    <p style={{ color: "rgb(200, 200, 200)" }} className="rightpanel-content7">{selectedOption[0].type}</p>
+                                )}
+                                {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") ? (
+                                    <p style={{ color: "#4c98ff", fontSize: '2.25rem', fontFamily: 'SpoqaHanSansNeoBold' }} className="rightpanel-content8">{selectedOption[0].name}</p>
+                                ) : (
+                                    <p style={{ color: "#4c98ff", fontSize: '2.25rem', fontFamily: 'SpoqaHanSansNeoBold' }} className="rightpanel-content9">{selectedOption[0].name}</p>
+                                )}
+                            </div>
+                            <div style={{ width: "16rem" }} className="rightpanel-content10">
+                                {selectedOption[0].buttonType && (
+                                    <div
+                                        style={{ width: "11.375rem" }}
+                                        className="rightpanel-content11"
+                                    >
+                                        <img
+                                            style={{
+                                                paddingTop: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "0.2rem" : "",
+                                                width: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "10.375rem" : ""
+                                            }}
+                                            className={`${(selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "rightpanel-content12" : ""
+                                                } rightpanel-content13`}
+                                            src={
+                                                selectedOption[0].buttonType === "blue"
+                                                    ? BlueButton
+                                                    : selectedOption[0].buttonType === "red"
+                                                        ? RedButton
+                                                        : selectedOption[0].buttonType === "yellow"
+                                                            ? YellowButton
+                                                            : selectedOption[0].buttonType === "green"
+                                                                ? GreenButton
+                                                                : selectedOption[0].buttonType === "blue_sq"
+                                                                    ? BlueButtonSq
+                                                                    : RedButtonSq
+                                            }
+                                            alt=""
+                                        />
+                                        <div className="rightpanel-content14 -space-y-5 -mb-2">
+                                            <p style={{ textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: "3.75rem" }} className="rightpanel-content15 -mt-1">{selectedOption[0].selection}</p>
+                                            {selectedOption[0].subtitle && (
+                                                <p style={{ fontSize: "1.6rem", zIndex: '10' }} className="rightpanel-content16 betoption-content7">
+                                                    {selectedOption[0].subtitle}
+                                                </p>
+                                            )}
+                                        </div>
+                                        {selectedOption[0].tailSide && (
+                                            <div style={{ width: '3.75rem', height: '3.75rem', marginTop: '0.18rem', top: '1.2rem' }} className={`${selectedOption[0].tailSide === "left" ? "rightpanel-content17" : "rightpanel-content18"} rightpanel-content19 w-22px h-22px`}>
+                                                <div style={{ fontSize: '2.0625rem' }} className="rightpanel-content20 text-12px">{selectedOption[0].tail}</div>
+                                            </div>
                                         )}
                                     </div>
-                                    {selectedOption[0].tailSide && (
-                                        <div style={{ width: '3.75rem', height: '3.75rem', marginTop: '0.18rem', top: '1.2rem' }} className={`${selectedOption[0].tailSide === "left" ? "rightpanel-content17" : "rightpanel-content18"} rightpanel-content19 w-22px h-22px`}>
-                                            <div style={{ fontSize: '2.0625rem' }} className="rightpanel-content20 text-12px">{selectedOption[0].tail}</div>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-                        </div> */}
+                                )}
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -612,33 +616,33 @@ const MinigamesRightPanel = ({
 
                     <div className="betamount-btn1" style={{ marginTop: '-0.5rem' }}>
                         <div className="betamount-btn2">
-                            <div style={{ marginRight: '0.3rem' }}>
+                            <div style={{ marginRight: '0.6rem' }}>
                                 <BetAmountButton amount={5000} inputValue={inputValue} setInputValue={setInputValue} />
                             </div>
-                            <div style={{ marginRight: '0.35rem' }}>
+                            <div style={{ marginRight: '0.6rem' }}>
                                 <BetAmountButton amount={10000} inputValue={inputValue} setInputValue={setInputValue} />
                             </div>
                             <BetAmountButton amount={50000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
-                        <div style={{ marginTop: '0.4rem', marginBottom: '0.375rem' }} className="betamount-btn3">
-                            <div style={{ marginRight: '0.3rem' }}>
+                        <div style={{ marginTop: '0.6rem', marginBottom: '0.6rem' }} className="betamount-btn3">
+                            <div style={{ marginRight: '0.6rem' }}>
                                 <BetAmountButton amount={100000} inputValue={inputValue} setInputValue={setInputValue} />
                             </div>
-                            <div style={{ marginRight: '0.35rem' }}>
+                            <div style={{ marginRight: '0.6rem' }}>
                                 <BetAmountButton amount={500000} inputValue={inputValue} setInputValue={setInputValue} />
                             </div>
                             <BetAmountButton amount={1000000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
                     </div>
 
-                    <div style={{ marginBottom: '0.7rem' }} className="betfixedamount-btn">
-                        <div style={{ marginRight: '0.3rem' }} className="betfixedamount-btn1">
+                    <div style={{ marginBottom: '0.6rem' }} className="betfixedamount-btn">
+                        <div style={{ marginRight: '0.6rem', width: '24.375rem', height: '7.5rem' }} className="betfixedamount-btn1">
                             <BetFixedAmountButton amount={inputValue / 2} text="하프" />
                         </div>
-                        <div style={{ marginRight: '0.35rem' }} className="betfixedamount-btn1">
+                        <div style={{ marginRight: '0.6rem', width: '24.375rem', height: '7.5rem' }} className="betfixedamount-btn1">
                             <BetFixedAmountButton amount={3522170} text="최대" />
                         </div>
-                        <div className="betfixedamount-btn1">
+                        <div className="betfixedamount-btn1" style={{ width: '24.375rem', height: '7.5rem' }}>
                             <BetFixedAmountButton amount={0} text="정정" />
                         </div>
                     </div>
@@ -648,6 +652,7 @@ const MinigamesRightPanel = ({
                             height: '9rem', padding: '0.1875rem', borderRadius: '0.5rem',
                             background: 'linear-gradient(to top, #3d4a8d, #88d9e8)'
                         }}
+                        className='hover'
                     >
                         <button
                             style={{
@@ -658,7 +663,7 @@ const MinigamesRightPanel = ({
                         >
                             <div className="div-style flex items-center justify-center">
                                 <img style={{ width: '3.1875rem', height: '3.1875rem', marginTop: '0.2rem' }} src={BetIcon} alt="" />
-                                <span style={{ marginLeft: '1.3125rem', color: '#d6f3ff' }} className="span-style shadow-to-text">베팅하기</span>
+                                <span style={{ marginLeft: '0.8125rem', color: '#d6f3ff' }} className="span-style shadow-to-text">베팅하기</span>
                             </div>
                         </button>
                     </div>
@@ -765,7 +770,7 @@ const MinigamesRightPanel = ({
                     <GrayButton text='전체베팅내역' />
                 </Link>
             </div>
-        </div>
+        </div >
     )
 }
 

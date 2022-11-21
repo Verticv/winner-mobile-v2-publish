@@ -58,8 +58,8 @@ const BetCart = ({ selectedOption, addedCard, setAddedCard, isPanelFixed, setPan
 
 
     return (
-        <div style={{ maxWidth: '1242px', height: openedCartDelay ? "100vh" : "auto" }} className="container_1 shadow-to-box">
-            <div style={{ maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem' }} className="container_2 shadow-to-box">
+        <div style={{ width: '77.625rem', height: openedCartDelay ? "100vh" : "auto" }} className="container_1 shadow-to-box">
+            <div style={{ width: '77.625rem', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem' }} className="container_2 shadow-to-box">
                 <div className="container_3">
                     {/* {!openedCart ? ( */}
                     <div style={{ height: "9.0625rem", padding: '0 3.6875rem', borderTopLeftRadius: '2.9rem', borderTopRightRadius: '2.9rem' }} className={`${openedCartDelay ? "container_4 transition" : "container_5 transition"} container_6 shadow-to-box`} onClick={() => setOpenedCart(true)}>
@@ -102,7 +102,7 @@ const BetCart = ({ selectedOption, addedCard, setAddedCard, isPanelFixed, setPan
                     </div>
                     {/* ): */}
                     <Expand className='expand-content-1' duration={200} open={openedCart}>
-                        <div className='expand-content-2 shadow-to-box' style={{ height: 'auto',width: '100%', maxHeight: openedCart ? 'calc(var(--vh) * 100)' : 'unset', padding: '0.1875rem', borderTopLeftRadius: '2.7rem', borderTopRightRadius: '2.7rem' }}>
+                        <div className='expand-content-2 shadow-to-box' style={{ height: 'auto',width: '77.625rem', maxHeight: openedCart ? 'calc(var(--vh) * 100)' : 'unset', padding: '0.1875rem', borderTopLeftRadius: '2.7rem', borderTopRightRadius: '2.7rem' }}>
                             <div
                                 style={{
                                     background: '#262626',

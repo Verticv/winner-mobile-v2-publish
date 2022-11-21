@@ -113,7 +113,7 @@ const SignedUpPopup = ({ setCompletePopup, setSignup }) => {
                                 }}
                             >
                                 <div style={{ color: "#ffdfbd", fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="shadow-to-text">
-                                    <p className='mt-1' style={{ margin: '0.5rem 0 0 0', letterSpacing: '-0.07rem' }}>로그인</p>
+                                    <p className='mt-1' style={{ margin: '0.2rem 0 0 0', letterSpacing: '-0.07rem' }}>로그인</p>
                                 </div>
                             </button>
                         </div>

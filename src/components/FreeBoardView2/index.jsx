@@ -57,7 +57,7 @@ const FreeBoardView2 = () => {
                     }}
                 />
 
-                <button style={{ borderRadius: "0.625rem", width: '10.5625rem', padding: '0.1875rem', position: 'absolute', right: '0', height: '99%', background: 'linear-gradient(to top, #223349, #415a77 50%, #5e7fa4 )', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }} className="hover">
+                <button style={{ borderRadius: "0.625rem", width: '10.5625rem', padding: '0.1875rem', position: 'absolute', right: '0', height: '99%', background: 'linear-gradient(to top, #223349, #415a77 50%, #5e7fa4 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }} className="hover">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #27415e, #305176 50%, #305176)', borderRadius: "0.625rem", color: '#d6f3ff', fontSize: '2.811875rem', fontFamily: 'SpoqaHanSansNeoMedium', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <div style={{ borderRadius: "1.625rem" }} className="flex items-center justify-center h-full w-full bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text">{buttonText}</span>
@@ -147,7 +147,7 @@ const FreeBoardView2 = () => {
     )
     return (
         <div style={{ padding: '0 1.875rem', marginTop: '0.1rem' }} className="free-board-view2">
-            <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }}>
+            <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ borderRadius: "1rem" }} className="title-div">
                     <div className="title">
                         <div className="text font-spoqaMedium tracking-tight text-5xl text-gray-r454545">이벤트 신청합니다.</div>
@@ -280,7 +280,7 @@ const FreeBoardView2 = () => {
                 </div>
             </div> */}
 
-            <div style={{ borderRadius: "1.1875rem", padding: '0.1875rem', background: 'linear-gradient(to top, #1f1f1e, #313130 50%, #4a4a4a)', boxShadow: '0px 6px 12px 0px rgb(0 0 0 / 60%)' }} className="w-full bg-gray-fafafa shadow-subNavbar">
+            <div style={{ borderRadius: "1.1875rem", padding: '0.1875rem', background: 'linear-gradient(to top, #1f1f1e, #313130 50%, #4a4a4a)', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }} className="w-full bg-gray-fafafa shadow-subNavbar">
                 <div style={{ background: '#323232', padding: '0 1.5rem 1.6rem', width: '100%', height: '100%', borderRadius: "1.1875rem" }}>
                     <div className="flex items-center justify-between" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '0.6rem' }}>
                         <p style={{ fontSize: '2.624375rem', color: '#ccc2b6', marginTop: '2.8rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }} className="font-spoqaMedium tracking-tight text-gray-r454545">댓글 작성하기</p>
@@ -342,7 +342,7 @@ const FreeBoardView2 = () => {
                 </div>
             </div> */}
             {/* second */}
-            <div style={{ borderRadius: "1.1875rem", marginTop: '3.75rem', padding: '0.1875rem', background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }} className="w-full bg-gray-fafafa shadow-subNavbar">
+            <div style={{ borderRadius: "1.1875rem", marginTop: '3.75rem', padding: '0.1875rem', background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }} className="w-full bg-gray-fafafa shadow-subNavbar">
                 <div style={{ width: '100%', height: '100%', background: '#323232', borderRadius: '1.1875rem', paddingBottom: '1.8rem' }}>
                     <div style={{ padding: '0 1.7rem', borderBottomWidth: '0.1875rem', background: '#323232', borderTopLeftRadius: "1.1875rem", borderTopRightRadius: "1.1875rem", borderBottom: '0.1875rem solid #252525' }} className="border-b border-gray-dddddd">
                         <div className="w-full flex items-center justify-between">
@@ -408,7 +408,7 @@ const FreeBoardView2 = () => {
                     <SendMessage placeholder='두개의 이벤트 모두 참여하였습니다.' buttonText='등록' />
                 </div>
             </div> */}
-            <div style={{ borderRadius: "1.1875rem", marginTop: '3.75rem', padding: '0.1875rem', background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }}>
+            <div style={{ borderRadius: "1.1875rem", marginTop: '3.75rem', padding: '0.1875rem', background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ borderRadius: "1.1875rem", marginTop: '', padding: '0.1875rem', paddingTop: '2.07rem', background: '#323232' }} className="w-full bg-gray-fafafa shadow-subNavbar">
                     <div style={{ padding: '0 1.5rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #252525' }} className="border-b border-gray-dddddd">
                         <div className="w-full items-center flex justify-between">
@@ -438,7 +438,7 @@ const FreeBoardView2 = () => {
                     </div>
                 </div>
             </div>
-            <div style={{ borderRadius: "1.1875rem", marginTop: '3.9rem', padding: '0.1875rem', background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }}>
+            <div style={{ borderRadius: "1.1875rem", marginTop: '3.9rem', padding: '0.1875rem', background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ borderRadius: "1.1875rem", marginTop: '', padding: '0.1875rem', paddingTop: '', background: '#323232' }} className="w-full bg-gray-fafafa shadow-subNavbar">
                     <div style={{ padding: '2.1rem 1.5rem 0', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #252525' }} className="border-b border-gray-dddddd">
                         <div className="w-full items-center flex justify-between">
@@ -474,6 +474,7 @@ const FreeBoardView2 = () => {
                                 // background: 'linear gradient(to top, #80603f, #936e48 50%, #a57b52)'
                             }}
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
+                            onClick={() => navigate('/freeboard/view')}
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
                                 color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'

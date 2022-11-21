@@ -32,6 +32,7 @@ import Header from "../Header";
 import NavBottom from "../NavBottom";
 import Announcement from '../Announcement';
 import AnnouncementView from '../AnnouncementView'
+import ScrollButton from '../ScrollButton'
 
 export default function Test({ isAuthenticated, setAuthenticated }) {
     useEffect(() => {
@@ -110,6 +111,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
     const MyInfo = () => {
         return (
             <>
+            <ScrollButton />
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu

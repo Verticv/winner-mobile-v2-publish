@@ -29,7 +29,7 @@ const InboxView = () => {
             </div>
 
             <div className='shadow-to-box' style={{ margin: '1.875rem', padding: '0.1875rem', background: 'linear-gradient(to top, #1f1f1e, #2f2f2e 50%, #4a4a4a)', borderRadius: '1rem', marginTop: '0' }}>
-                <div style={{ fontFamily: "SpoqaHanSansNeoMedium", color: '#FFF', width: '100%', height: '100%', background: '#323232', borderRadius: '1rem' }} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
+                <div style={{ fontFamily: "SpoqaHanSansNeoMedium", color: '#c8c8c8', width: '100%', height: '100%', background: '#323232', borderRadius: '1rem' }} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
                     <div style={{ borderBottom: '0.1875rem solid #252525', display: 'flex', flexWrap: 'wrap', alignItems: 'center', background: '#2e2e2e', borderTopLeftRadius: '1rem', borderTopRightRadius: '1rem', padding: '0 2rem' }} className="bg-gray-fafafa border-b border-gray-dddddd flex flex-wrap  items-center">
                         <div style={{ margin: '2.0625rem 0', display: 'flex', width: '100%', justifyContent: 'center' }} className='flex w-full justify-center'>
@@ -42,10 +42,10 @@ const InboxView = () => {
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
 
-                                {truncate('안내', 6, 6)}
+                                {truncate('안내안내안내안내안내안내안내안내안내', 6, 6)}
                             </div>
                         </div>
-                        <div style={{ marginBottom: '1.3125rem', display: 'flex', justifyContent: 'center', width: '100%', fontSize: '2.999375rem' }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
+                        <div style={{ marginBottom: '1.3125rem', display: '', textAlign: 'center', justifyContent: 'center', width: '100%', fontSize: '2.999375rem' }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
                             서버 점검 안내
                             <div style={{
                                 width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem',
@@ -59,6 +59,7 @@ const InboxView = () => {
                                 marginLeft: '1rem',
                                 borderRadius: '0.77rem',
                                 color: '#fff',
+                                display: 'inline-block',
                             }} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 pt-px">
                                 N
                             </div>
@@ -101,7 +102,7 @@ const InboxView = () => {
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginTop: '0.2rem', display: 'flex'
                             }}>이전</span>
                         </div>
                     </div>
@@ -113,10 +114,10 @@ const InboxView = () => {
                                 // background: 'linear gradient(to top, #80603f, #936e48 50%, #a57b52)'
                             }}
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
-                            onClick={() => navigate('/cscenter/all/contact/all')}
+                            onClick={() => navigate('/mypage/inbox')}
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginTop: '0.2rem', display: 'flex'
                             }}>목록보기</span>
                         </div>
                     </div>
@@ -132,7 +133,7 @@ const InboxView = () => {
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '0.2rem', display: 'flex'
                             }}>다음</span>
                         </div>
                     </div>

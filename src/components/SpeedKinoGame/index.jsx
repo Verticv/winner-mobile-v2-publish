@@ -82,7 +82,7 @@ const SpeedKinoGame = ({ setSelectedOption }) => {
                 width: width + "rem",
                 height: height + "rem",
                 // background: "#cf9494",
-                marginBottom: '0.2rem',
+                marginBottom: '0.1rem',
                 // padding: '1px'
                 // paddingRight: button1Text === "언더" ? '0.35rem' : ""
             }}
@@ -334,7 +334,7 @@ const SpeedKinoGame = ({ setSelectedOption }) => {
             <div className="speedgame-content">
                 <div className="speedgame-content1">
                     <div className="speedgame-content2">
-                        <div style={{ marginRight: '0.35rem', marginBottom: '0.15rem' }} className="speedgame-content3">
+                        <div style={{ marginRight: '0.25rem', marginBottom: '0.1rem' }} className="speedgame-content3">
                             <SingleCard button1Text='홀' button2Text='짝' width={38.6} height={23.375} titleNumber={1} title='게임' subText="홀짝" />
                         </div>
                         <div>

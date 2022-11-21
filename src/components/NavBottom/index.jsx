@@ -40,7 +40,9 @@ const navInfo = [
         text: '문의',
         activeIcon: i2,
         isActive: false,
-        path: '/cscenter/all/contact/all'
+        path: '/cscenter/all/contact/all',
+        includes: '/cscenter/all/contact/view'
+
     },
     {
         id: 5,
@@ -56,8 +58,8 @@ export default function NavBottom() {
     
     return (
         <div className="nav-bottom">
-            {navInfo?.map(({ id, icon, text, width, isActive, path, activeIcon }) => {
-                let isActiveButton = window.location.pathname.includes(path)
+            {navInfo?.map(({ id, icon, text, width, isActive, path, activeIcon, includes }) => {
+                let isActiveButton = window.location.pathname.includes(path) || window.location.pathname.includes(includes)
 
                 if (path === '/mypage' && window.location.pathname.includes('/mypage/freeboard')){
                     isActiveButton = false

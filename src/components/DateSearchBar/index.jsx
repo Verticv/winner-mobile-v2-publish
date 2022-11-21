@@ -89,7 +89,7 @@ const DateSearchBar = ({
                     <DropDownInput isBetCombination={false} withArrow />
                     {/* <span style={{ fontSize: '2.6rem', marginTop: '1.875rem', width: '1.880875rem' }} className="invisible text-center font-spoqaMedium text-gray-r454545 mt-px">~</span> */}
                     <input
-                        style={{ marginLeft: '2rem' }}
+                        style={{ marginLeft: '2rem', marginTop: '0.1rem' }}
                         placeholder="팀명검색"
                         className="place-color-grey placeholder:text-gray-r7b7b7b placeholder-gray-r7b7b7b flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
                         onFocus={() => {

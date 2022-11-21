@@ -1,5 +1,5 @@
 .container {
-    overflow: hidden;
+    // overflow-x: scroll ;
     flex-direction: column;
     display: flex;
     width: 100%;
@@ -30,7 +30,7 @@
 
                 p {
                     color: #ffffff !important;
-                    margin: -0.1rem 0px 0px -0.2rem !important;
+                    margin: -0.15rem 0px 0px -0.2rem !important;
                 }
             }
 
