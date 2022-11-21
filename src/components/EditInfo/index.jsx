@@ -23,7 +23,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
 
     const Title = ({ text }) => (
         <div style={{ width: "24rem", marginRight: '2.7rem', background: '#272726', flexShrink: '0', borderRadius: '0.5rem' }} className="form-Title">
-            <div style={{ fontSize: '2.8125rem', color: text === '레벨' ? '#c8c8c8' :'#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '2.2rem 0 0 1.25rem', letterSpacing: '-0.07rem' }} className="text-gray-r454545 font-spoqaMedium">{text}</div>
+            <div style={{ fontSize: '2.8125rem', color: text === '레벨' ? '#ccc2b6' :'#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '2.2rem 0 0 1.25rem', letterSpacing: '-0.07rem' }} className="text-gray-r454545 font-spoqaMedium">{text}</div>
             {/* <div style={{ height: '0.1875rem', marginTop: '1.1875rem' }} className="w-full bg-gray-bebebe"></div> */}
         </div>
     )
@@ -257,7 +257,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                     </button>
                 </div> */}
 
-                <div className='button-class-div shadow-to-box'>
+                <div className='button-class-div shadow-to-box hover'>
                     <button className='button-class'>
                         <div style={{ marginTop: '0.2rem' }}>
                             <span className='shadow-to-text'>수정하기</span>

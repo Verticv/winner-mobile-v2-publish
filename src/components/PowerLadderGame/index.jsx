@@ -59,7 +59,7 @@ const PowerLadderGame = ({ setSelectedOption }) => {
                 width: width + "rem",
                 height: height + "rem",
 
-                marginBottom: '0.35rem',
+                marginBottom: '0.1rem',
 
             }}
             className={`powerladdergame-content4`}
@@ -93,9 +93,10 @@ const PowerLadderGame = ({ setSelectedOption }) => {
                         // borderBottom: `0.1875rem solid #abc7db`,
                         // borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #abc7db` : '',
                         borderTopColor: '#b5bdca',
-                        padding: '0.9rem 2.1rem 0',
+                        // padding: '0.9rem 2.1rem 0',
                         paddingLeft: `${extraLeftPadding + 2}rem`,
-                        paddingRight: `${extraRightPadding + 2.2}rem`
+                        paddingRight: `${extraRightPadding + 2.2}rem`,
+                        padding: '0.9rem 2.2rem 0px 2rem'
                     }} className="powerladdergame-content12">
                         <div style={{ marginRight: '' }} className="powerladdergame-content13">
                             <div
@@ -170,7 +171,7 @@ const PowerLadderGame = ({ setSelectedOption }) => {
                 width: width + "rem",
                 height: height + "rem",
                 // background: "linear-gradient(to bottom, #b8d5e6, #b7c7d4)",
-                marginBottom: '0.2rem',
+                marginBottom: '0.1rem',
             }}
             className={`threecard-container`}
         >

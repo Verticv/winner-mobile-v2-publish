@@ -49,8 +49,8 @@ const Sports1 = ({ paddingLeft, subActiveButton, setSubActiveButton, withoutMarg
                 <div id='scroll-wrapper2'
                     style={{ padding: withoutMargin ? '' : '0.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
                 >
-                    <div className={`bet-history ${withoutMargin ? 'bet-history-withMargin' : ''}`} style={{ display: 'flex', flexShrink: '0' }}>
-                        <HorizontalMenu13  key={15} itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
+                    <div className={`bet-history ${withoutMargin ? 'bet-history-withMargin' : ''}`} style={{ }}>
+                        <HorizontalMenu13 key={15} itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
                 </div>
                 <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>

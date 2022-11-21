@@ -76,6 +76,7 @@ import subIcon8 from '../../assets/bigIcons/leftMenu/9.png';
 import subIcon9 from '../../assets/bigIcons/leftMenu/10.png';
 import Header from '../Header';
 import NavBottom from '../NavBottom';
+import ScrollButton from '../ScrollButton'
 
 const tabsArray = [
     { text: "전체", icon: icon1, activeIcon: icon1Active, id: -1, path: "/mypage/bet-history/all", activeBG: activeBG },
@@ -200,6 +201,7 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
         // console.log(`location.state`, location.state)
         return (
             <>
+                <ScrollButton />
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu
@@ -221,6 +223,7 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
 
     return (
         <div style={{ maxWidth: '1242px', paddingBottom: '0.01rem' }} className="w-full flex flex-col">
+            <ScrollButton />
 
             <Routes>
                 <Route index

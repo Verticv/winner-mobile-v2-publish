@@ -17,13 +17,14 @@ const LeftMenu = ({
     subActiveButton,
     activeButton2,
     setSubActiveButton,
-    activeButton, setActiveButton
+    activeButton, setActiveButton,
+    distributorPageActive, setDistributorPageActive
 }) => {
 
     useEffect(() => {
         window.onpopstate = () => {
-           console.log('add code to handle the back button if needed')
-          }
+            console.log('add code to handle the back button if needed')
+        }
     })
 
     const { currentPathname } = useLocation();
@@ -60,7 +61,11 @@ const LeftMenu = ({
     console.log(state, 'state');
 
     function buttonPressed(text, path) {
+        if (distributorPageActive) {
+            setDistributorPageActive('')
+        }
         if (text === "총판페이지") {
+            setDistributorPageActive('/distributor-page')
             window.open('/distributor-page');
         } else {
             navigate({
@@ -156,20 +161,22 @@ const LeftMenu = ({
                             <button
                                 style={{
                                     padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd',
-                                    background: (((selectedTab) === item?.path || subActiveButton === item?.path)) ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
+                                    background: ((((selectedTab) === item?.path) || (distributorPageActive === '/distributor-page' && item.text === '총판페이지') || subActiveButton === item?.path)) ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
                                 }}
                                 className={`${selectedTab === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
                                     : ""
                                     } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l hover:opacity-75 focus:from-blue-gradDark focus:to-blue-r2088f0`}
                                 onClick={(e) => {
-                                    // if (item.text === '총판페이지') {
-                                    //     setCookie('previousUrl', '/distributor-page');
-                                    //     setActiveButton('/distributor-page')
-                                    // }
+                                    if (item.text === '총판페이지') {
+                                        //     setCookie('previousUrl', '/distributor-page');
+                                        // setActiveButton('')
+                                        setDistributorPageActive('/')
+                                    }
+
                                     buttonPressed(item.text, item.path)
 
-                                    console.log(subActiveButton, item?.path, 'subActiveButton.path');
+                                    console.log(subActiveButton, 'distributorPageActive');
                                 }}
                                 onMouseEnter={() => mouseHover(item.path)}
                                 onMouseLeave={() => mouseLeave(item.path)}
@@ -186,6 +193,7 @@ const LeftMenu = ({
                                     }
                                 }}
                             >
+                                {console.log('selectedTab', activeButton)}
                                 <div
                                     className={`${activeButton === item?.path ? 'menu-active' : ''}`}
                                     style={{ background: '', width: '13rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}

@@ -25,7 +25,7 @@ const ContactView = () => {
     return (
         <div className="w-full">
 
-            <div style={{ margin: ' 1px 1.875rem 1.875rem', background: 'linear-gradient(to top,#1f1f1e, #353534 50%,#4a4a4a)', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)' }}>
+            <div style={{ margin: ' 1px 1.875rem 1.875rem', background: 'linear-gradient(to top,#1f1f1e, #353534 50%,#4a4a4a)', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ background: '#323232', paddingBottom: '0.1rem', borderRadius: '1.1rem' }} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
                     <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
@@ -36,7 +36,7 @@ const ContactView = () => {
                                 style={{ backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.6rem 1.73rem', height: '4.125rem', marginTop: '0.35rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '2rem' }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
-                                {truncate('계좌문의', 6, 6)}
+                                {truncate('계좌문의계좌문의', 6, 6)}
                             </div>
                         </div>
                         <div style={{ color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '3rem', letterSpacing: '-0.07rem', marginLeft: '0.2rem' }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
@@ -44,7 +44,7 @@ const ContactView = () => {
                         </div>
                     </div>
 
-                    <div style={{ minHeight: '7.3125rem', padding: '1.4375rem 1.65rem', borderBottomWidth: '0.1875rem', background: '#2e2e2e', display: 'flex', alignItems: 'flex-start', position: 'relative' }} className="relative bg-gray-fafafa border-b border-gray-dddddd flex items-center">
+                    <div style={{ minHeight: '7.3125rem', padding: '1.4375rem 1.65rem', borderBottomWidth: '0.1875rem', background: '#2e2e2e', borderBottom: '0.1875rem solid rgb(37, 37, 37)', display: 'flex', alignItems: 'flex-start', position: 'relative' }} className="relative bg-gray-fafafa border-b border-gray-dddddd flex items-center">
                         <img style={{ width: "3.4375rem", height: '4.4375rem', marginTop: '0.6rem' }} src={Rank1} alt="" />
                         <p className='flex mt-1.5 items-center text-gray-r585858 font-spoqaMedium' style={{ margin: '0', fontSize: '2.4375rem', marginLeft: '0.875rem', letterSpacing: '-0.07rem', color: '#929292', fontFamily: 'SpoqaHanSansNeoMedium', maxWidth: '52rem', marginTop: '1.1rem' }}>마이마이프로틴화이팅
                             <div className='flex mt-2' style={{ display: 'inline-block' }}>
@@ -60,7 +60,7 @@ const ContactView = () => {
                             }}
                             className="absolute right-0 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                         >
-                            {truncate('답변대기', 6, 6)}
+                            {truncate('답변대기답변대기', 6, 6)}
                         </div>
                     </div>
 
@@ -68,7 +68,7 @@ const ContactView = () => {
                         borderRadius: "1rem", paddingLeft: '1.8rem', fontSize: '2.8125rem', margin: '3.75rem 1.7rem 3.7rem', WebkitTextStroke: "0.2px",
                         minHeight: '7rem',
                         paddingRight: '1.8rem',
-                        paddingBottom: '0.1rem',
+                        paddingBottom: '',
                         // marginTop: '-2.85rem',
                         // marginBottom: '1rem',
                         background: 'rgb(39, 39, 38)',

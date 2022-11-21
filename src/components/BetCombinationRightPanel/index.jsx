@@ -116,7 +116,7 @@ const BetCombinationRightPanel = ({
                             borderRadius: '1rem',
                             marginRight: '0.75rem'
                         }}
-                        className='shadow-to-box'
+                        className='shadow-to-box hover'
                     >
                         <button
                             style={{

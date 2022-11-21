@@ -40,6 +40,7 @@ import BetCombinationPage from './components/BetCombinationPage';
 import MinigamesPage from './components/MinigamesPage';
 import ScrollToTop from './helpers/scrollToTop';
 // import img from './1.png';
+import ScrollButton from './components/ScrollButton';
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -89,6 +90,19 @@ function App() {
       }
     });
   }, []);
+  useEffect(() => {
+    const body = document.querySelector('body');
+    console.log(window.location.pathname, 'window.location.pathname');
+    if (window.location.pathname === '/') {
+      body.style.background = '#000';
+    } else {
+      body.style.background = '#1e1e1e';
+    }
+  });
+
+  const [distributorPageActive, setDistributorPageActive] = useState();
+
+  console.log(distributorPageActive);
 
   return (
     <>
@@ -126,6 +140,7 @@ function App() {
             element={
               <>
                 <Header />
+                <ScrollButton />
                 <MyPage />
                 <NavBottom />
               </>
@@ -153,6 +168,7 @@ function App() {
                   }
                   isFreeboard={true}
                 />
+                <ScrollButton />
                 <FreeBoardCompose />
                 <NavBottom />
               </>
@@ -179,6 +195,7 @@ function App() {
                   }
                   isFreeboard={true}
                 />
+                <ScrollButton />
                 <FreeBoardView />
                 <NavBottom />
               </>
@@ -205,6 +222,7 @@ function App() {
                   }
                   isFreeboard={true}
                 />
+                <ScrollButton />
                 <FreeBoardView2 />
                 <NavBottom />
               </>
@@ -218,6 +236,7 @@ function App() {
             element={
               <>
                 {/* <Header /> */}
+                <ScrollButton />
                 <CSCenterPage />
                 {/* <NavBottom /> */}
               </>
@@ -238,6 +257,8 @@ function App() {
                 <MyPageTest
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}
+                  distributorPageActive={distributorPageActive}
+                  setDistributorPageActive={setDistributorPageActive}
                 />
               </>
             }
@@ -257,6 +278,8 @@ function App() {
                 <DistributorPage
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}
+                  distributorPageActive={distributorPageActive}
+                  setDistributorPageActive={setDistributorPageActive}
                 />
                 <NavBottom />
               </>
@@ -296,6 +319,7 @@ function App() {
             path="/esports/*"
             element={
               <>
+                <ScrollButton />
                 <EsportsPage
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}
@@ -309,6 +333,7 @@ function App() {
             path="/bet-combination/*"
             element={
               <>
+                <ScrollButton />
                 <BetCombinationPage
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}
@@ -328,6 +353,7 @@ function App() {
                   alt=""
                   style={{ position: 'absolute', top: '0', opacity: '0.5' }}
                 /> */}
+                <ScrollButton />
                 <MinigamesPage
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}

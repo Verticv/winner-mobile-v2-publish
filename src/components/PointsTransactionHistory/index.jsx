@@ -38,8 +38,9 @@ const tableData = [
             0: { 처리일시: "2021-06-30 14:45" }
         },
         {
-            buttonColor: '#826140',
-            buttonText: '취소'
+            buttonColor: '#464646',
+            buttonText: '취소',
+            textColor: '#c8c8c8',
         }
     ],
     [
@@ -191,7 +192,7 @@ const PointsTransactionHistory = ({ SubMenuList, subActiveButton, setSubActiveBu
             }} className="font-spoqaMedium tracking-tight my-4 text-gray-r8c8c8c">
                 <span className="font-spoqaBold text-blue-r0056a6" style={{
                     color: '#aa9264', fontFamily: 'SpoqaHanSansNeoBold'
-                }}>{truncate('louie3', 22, 22)}</span>
+                }}>{truncate('louie3louie3louie3louie3louie3louie3', 22, 22)}</span>
                 <span className="" style={{ color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium' }}>님의 포인트적립 정보입니다.</span>
             </div>
 
@@ -217,6 +218,7 @@ const PointsTransactionHistory = ({ SubMenuList, subActiveButton, setSubActiveBu
                     cardHeight='21rem'
                     isButtonGradient={false}
                     hasLeftInput={false}
+                    width45
                 />
             </div>
 

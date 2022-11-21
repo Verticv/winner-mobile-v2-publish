@@ -305,7 +305,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         <span
                                         // className='mt-1.5'
                                         // style={{ background: 'blue', padding: '0.4rem 1.5rem'}}
-                                        >{truncate('안내', 6, 6)}</span>
+                                        >{truncate('안내안내안내안내안내', 6, 6)}</span>
                                     </div>
                                     : item.type === "이벤트"
                                         ? <div
@@ -315,11 +315,11 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         ><span
                                             style={{ marginLeft: '-0.3rem' }}
                                         //  className='mt-1.5'
-                                        >{truncate('이벤트', 3, 3)}</span></div>
+                                        >{truncate('이벤트이벤트이벤트', 6, 6)}</span></div>
                                         : <div></div>
                             }
                             <p
-                                style={{ wordSpacing: (item.text === '다폴더 이벤트 참여' && item.id === 2802) ? '-0.3rem' : '' }}
+                                style={{ wordSpacing: (item.text === '다폴더 이벤트 참여' && item.id === 2802) ? '-0.3rem' : '', maxWidth: (item.id === 2) || (item.id === 4) ? '40rem' : '' }}
                                 className={`text ${item.type === "안내"
                                     ? "blue-bg"
                                     : item.type === "이벤트"
@@ -332,7 +332,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                             {item.replies && (
                                 <div
                                     style={{
-                                        minWidth: '9.875rem',
+                                        minWidth: '8.5rem',
                                         height: '7.0625rem',
                                         borderWidth: '0.1875rem',
                                         borderStyle: 'solid',
@@ -347,7 +347,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         alignItems: 'center',
                                         background: '#2e2e2e',
                                         color: '#ff6945',
-                                        padding: '0 2.6rem'
+                                        // padding: '0 2.6rem'
                                     }} className="absolute pl-7px pr-8px rounded-full flex items-center justify-center border text-red-d52e2e font-roboto"
                                 >{item.replies}</div>
                             )}
@@ -412,7 +412,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         <p className='flex items-center text-gray-r7b7b7b' style={{
                                             margin: 0, fontSize: '2.61875rem', marginLeft: '0.89rem', letterSpacing: '-0.06rem', marginTop: '0.3rem',
                                             whiteSpace: 'nowrap',
-                                            maxWidth: '33.5rem',
+                                            maxWidth: '31.5rem',
                                             overflow: 'hidden',
                                             textOverflow: 'ellipsis'
                                         }}>{item.author}</p>

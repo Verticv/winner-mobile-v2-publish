@@ -38,10 +38,32 @@ import LeftMenu from "../LeftMenu";
 import AccountProfileComponent from '../AccountProfileComponent'
 import Header from '../Header';
 import NavBottom from '../NavBottom';
+import HorizontalMenu14 from '../HorizontalMenu13'
+import Icon9 from '../../assets/gameresults/1.png'
+import Icon10 from '../../assets/gameresults/2.png'
+import Icon3 from '../../assets/gameresults/3.png'
+import Icon4 from '../../assets/gameresults/4.png'
+import Icon5 from '../../assets/gameresults/5.png'
+import Icon6 from '../../assets/gameresults/6.png'
+import Icon7 from '../../assets/gameresults/7.png'
+import Icon8 from '../../assets/gameresults/8.png'
+import subInactive from '../../assets/gameresults/sub-inactive.png';
+import subActive from '../../assets/gameresults/sub-active.png';
 
 const tabsArray = [
     { text: "스포츠", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/gameresults/all", activeBG: activeBG, inActiveBG: inActiveBG, width: '7.875rem' },
     { text: "미니게임", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/mypage/gameresults/minigame/powerball", activeBG: activeBG, inActiveBG: inActiveBG, width: '7.875rem' },
+];
+
+const tabsArray2 = [
+    { text: "전체", icon: Icon9, id: 0, number: 854, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "축구", icon: Icon10, id: 1, number: 567, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "농구", icon: Icon3, id: 2, number: 227, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "야구", icon: Icon4, id: 3, number: 407, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "배구", icon: Icon5, id: 4, number: 0, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "하키", icon: Icon6, id: 5, number: 0, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "미식축구", icon: Icon7, id: 6, number: 0, subInactive: subInactive, subActive: subActive, path: '#' },
+    { text: "격투기", icon: Icon8, id: 7, number: 9, subInactive: subInactive, subActive: subActive, path: '#' },
 ];
 
 const LeftMenuSubArray = [
@@ -184,7 +206,19 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                             </div>
 
                             <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
-                            <Sports1 subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}/>
+                            {/* <Sports1 subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} /> */}
+                            <div style={{ maxWidth: '1242px' }} className="w-full flex flex-col">
+                                <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
+                                    <div id='scroll-wrapper2'
+                                        style={{ padding: '0.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
+                                    >
+                                        <div className={`bet-history`} style={{}}>
+                                            <HorizontalMenu14 key={15} itemsArray={tabsArray2} isState={selectedTab} setSelectedTab={setSelectedTab} />
+                                        </div>
+                                    </div>
+                                    <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
+                                </div>
+                            </div>
                             <SportsContent checkedState={checkedState} setCheckedState={setCheckedState} />
                             <div style={{
                                 margin: '4rem'

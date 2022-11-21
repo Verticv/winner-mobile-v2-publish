@@ -101,7 +101,7 @@ const CardContent = ({
                 {withCancelButton && (
                     <button
                         onClick={() => cancelHandler(id)}
-                        style={{ width: '9rem', height: '9rem', padding: '1px', background: 'bottom' }}
+                        style={{ width: '9rem', height: '9rem', padding: '1px', background: '#e65454', borderRadius: '1rem' }}
                         className="flex items-center justify-center rounded-2xl hover:opacity-75 bg-brown-r7e3636"
                     >
                         <div

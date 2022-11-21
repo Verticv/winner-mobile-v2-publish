@@ -79,7 +79,7 @@ const BetCombinationPanel = ({
         {
             id: 2,
             type: "언오버",
-            team1: "오버",
+            team1: "오버오버오버오버오버",
             team2: "언더",
             stat1: 2.26,
             stat2: 2.96,
@@ -734,7 +734,7 @@ const BetCombinationPanel = ({
                 <SearchDropdownCell items={filterArray} />
             </div>
             <div style={{ padding: '1.875rem' }} className="searchdropdown-style2">
-                <div className='divsearchdropdown-style3 shadow-to-box'>
+                <div className='divsearchdropdown-style3 shadow-to-box hover'>
                     <button
                         style={{
                             backgroundColor: "#171a1d",
@@ -755,7 +755,7 @@ const BetCombinationPanel = ({
                         </div>
                     </button>
                 </div>
-                <div className='divsearchdropdown-style6 shadow-to-box'>
+                <div className='divsearchdropdown-style6 shadow-to-box hover'>
                     <button
                         style={{
                             backgroundColor: "#cb4343",
@@ -828,7 +828,7 @@ const BetCombinationPanel = ({
                     <div
                         style={{
                             color: "#ffffff",
-                            textShadow: "rgb(0 0 0 / 31%) 0.125rem 0.125rem 0",
+                            textShadow: "rgb(0 0 0 / 31%) 0.325rem 0.325rem 0",
                             // textShadow: 'rgb(0 0 0 / 44%) 0.0625rem 0.0625rem 0',
                             padding: '0 1rem'
                         }}
@@ -864,7 +864,7 @@ const BetCombinationPanel = ({
                         style={{
                             color: "#ffffff",
                             // textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem",
-                            textShadow: "rgb(0 0 0 / 31%) 0.125rem 0.125rem 0",
+                            textShadow: "rgb(0 0 0 / 31%) 0.325rem 0.325rem 0",
                         }}
                         className="event-content5 bg-gradient-to-b"
                     >
@@ -899,7 +899,7 @@ const BetCombinationPanel = ({
                         style={{
                             color: "#ffffff",
                             // textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem",
-                            textShadow: "rgb(0 0 0 / 31%) 0.125rem 0.125rem 0",
+                            textShadow: "rgb(0 0 0 / 31%) 0.325rem 0.325rem 0",
                             padding: '0 1rem'
                         }}
                         className="event-content8 bg-gradient-to-b"
@@ -979,7 +979,7 @@ const BetCombinationPanel = ({
                             }}
                             className="normaloption-content1 bg-gradient-to-b"
                         >
-                            <span className="normaloption-content2">{truncate(team1, 10, 8)}</span>
+                            <span className="normaloption-content2">{hasUp ? truncate(team1, 8, 8) : truncate(team1, 12, 12)}</span>
                             <span style={{ color: stat1Color === "red" && isButtonOn.indexOf(isSubArray?`${items_id}-${id}left`:`${id}left`)===-1 && `${id}left` !== isHover3 ? "#e65454" : "" }} className="normaloption-content3">
                                 {hasUp === true && (
                                     <img className='normaloption-content4' style={{ width: '1.3125rem', height: '1.125rem' }} src={UpIcon} alt="" />
@@ -1252,7 +1252,7 @@ const BetCombinationPanel = ({
                 <img style={{ width: '77.625rem', paddingTop: '0.3rem' }} className="eventoptions-content" src={BonusCell} alt="" />
                 <img style={{ width: '6.75rem' }} className="eventoptions-content1" src={Gift} alt="" />
                 <div className="eventoptions-content2">
-                    <p style={{ color: "#fff", fontSize: '2.625rem', marginTop: "2.3rem", letterSpacing: '-0.07rem', textShadow: "rgb(0 0 0 / 31%) 0.125rem 0.125rem 0", }} className="eventoptions-content3">보너스 이벤트</p>
+                    <p style={{ color: "#fff", fontSize: '2.625rem', marginTop: "2.3rem", letterSpacing: '-0.07rem', textShadow: "rgb(0 0 0 / 31%) 0.325rem 0.325rem 0", }} className="eventoptions-content3">보너스 이벤트</p>
                 </div>
                 <div style={{ marginLeft: '1.9rem' }} className="eventoptions-content4">
                     <EventOptions
@@ -1271,7 +1271,7 @@ const BetCombinationPanel = ({
                         <img style={{ width: '3.9375rem', marginLeft: '1.4425rem' }} className="betpanel-content9" src={FootballIcon} alt="" />
                         <p style={{ fontSize: '2.625rem', marginLeft: '0.6875rem', color: '#ccc2b6' }} className="betpanel-content10">축구</p>
                         <div
-                            style={{ backgroundColor: "#826140", color: '#ffdfbd', fontSize: '2.9375rem', minWidth: '8.125rem', height: '4.5rem', padding: '0.25rem 2rem 0' }}
+                            style={{ backgroundColor: "#826140", color: '#ffdfbd', fontSize: '2.9375rem', minWidth: '8.125rem', height: '4.5rem', padding: '0.15rem 2rem 0' }}
                             className="betpanel-content11"
                         >
                             15

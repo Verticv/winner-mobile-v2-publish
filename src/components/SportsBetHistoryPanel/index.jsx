@@ -23,15 +23,15 @@ const SportsBetHistoryPanel = ({
                                     bet="right"
                                     result="cancel"
                                     score=""
-                                    team1="CF파추카"
-                                    team2="과달하라 차바extra text"
+                                    team1="CF파추카 CF파추카 CF파추카"
+                                    team2="과달하라 차바 과달하라 차바"
                                     // team2="과달하라"
-                                    stat1="2.26"
+                                    stat1="00.00"
                                     stat2="2.96"
-                                    stat3="3.40"
+                                    stat3="00.00"
                                     isAttached={false}
-                                    hasUp={false}
-                                    hasDown={false}
+                                    hasUp={true}
+                                    hasDown={true}
                                 />
                             </div>
                             <CardContent checkedState={checkedState} number="0" setCheckedState={setCheckedState} />

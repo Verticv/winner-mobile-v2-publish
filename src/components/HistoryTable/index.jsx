@@ -117,7 +117,7 @@ const HistoryTable = ({
                                         <span className='font-spoqa' style={{
                                             fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex',
                                             wordBreak: 'break-all',
-                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : firstRowKeysName[0] === '쿠폰명' ? '47rem' : width45 ? '45rem' : '38rem',
+                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : firstRowKeysName[0] === '쿠폰명' ? hasButton ? '43rem' : '47rem' : width45 ? '45rem' : hasButton ? '33rem' : '38rem',
                                             overflow: firstRowKeysName[0] === '아이디' ? 'hidden' : '',
                                             textOverflow: firstRowKeysName[0] === '아이디' ? 'ellipsis' : '',
                                             whiteSpace: firstRowKeysName[0] === '아이디' ? 'nowrap' : '',

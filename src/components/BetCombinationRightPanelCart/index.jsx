@@ -82,11 +82,11 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                         >
                             {item.special === "FK Haugesund" ? '스트룀스고세 IF' : item.value === "right" ? "FC Blau Weiss Linz" : "스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF 스트룀스고세 IF"}
                         </p>
-                        <p style={{ fontSize: '2.4375rem', color: '#c8c8c8', maxWidth: '59rem' }} className="bet-card4">
+                        <p style={{ fontSize: '2.4375rem', color: '#c8c8c8', maxWidth: '53rem' }} className="bet-card4">
                             {item.special === "FK Haugesund" ? '축구 - 승무패 (게임)' : item.value === "right" ? '축구 - 승무패 (게임)' : '축구 - 승무패 (게임) 축구 - 승무패 (게임) 축구 - 승무패 (게임) 축구 - 승무패 (게임)축구 - 승무패 (게임)'}
                         </p>
-                        <img style={{ width: '2.7rem', height: '2.7rem', right: '2rem', top: '2.5rem' }} src={CancelIconGray} alt="" name={item.id} className="bet-card5" onClick={handleRemoveItem} />
-                        <div style={{ fontSize: '2.4375rem', right: '3rem', bottom: '1.5rem', color: '#c8c8c8' }} className="bet-card6">
+                        <img style={{ width: '2.7rem', height: '2.7rem', right: '2rem', top: '' }} src={CancelIconGray} alt="" name={item.id} className="bet-card5" onClick={handleRemoveItem} />
+                        <div style={{ fontSize: '2.4375rem', right: '8rem', bottom: '1.5rem', color: '#c8c8c8' }} className="bet-card6">
                             <p>{item.value === "right" ? "승 @" : "패 @"}</p>
                             <p
                                 style={{ color: item.value === "right" ? "#e65454" : "#4c98ff" }}
@@ -135,6 +135,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                 borderRadius: '0.5rem',
                 padding: '0.1875rem'
             }}
+            className="hover"
         >
             <button
                 style={{
@@ -178,6 +179,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                 borderRadius: '0.5rem',
                 background: 'linear-gradient(to top, #4b3b09, #e8b888)'
             }}
+            className="hover"
         >
             <button
                 style={{
@@ -224,7 +226,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                         <p className="confirmcard-content10">베팅을 선택하세요.</p>
                     </div>
                 ) : (
-                    <div style={{ marginBottom: '2.0625rem' }} className="betcard-content">
+                    <div style={{ marginBottom: '1.0625rem' }} className="betcard-content">
                         <BetCard items={addedCard} />
                     </div>
                 )}
@@ -279,19 +281,19 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
 
                 <div className="betamount-btn1">
                     <div className="betamount-btn2">
-                        <div style={{ marginRight: '0.3rem' }}>
+                        <div style={{ marginRight: '0.6rem' }}>
                             <BetAmountButton amount={5000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
-                        <div style={{ marginRight: '0.35rem' }}>
+                        <div style={{ marginRight: '0.6rem' }}>
                             <BetAmountButton amount={10000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
                         <BetAmountButton amount={50000} inputValue={inputValue} setInputValue={setInputValue} />
                     </div>
-                    <div style={{ marginTop: '0.375rem', marginBottom: '0.375rem' }} className="betamount-btn3">
-                        <div style={{ marginRight: '0.3rem' }}>
+                    <div style={{ marginTop: '0.6rem', marginBottom: '0.6rem' }} className="betamount-btn3">
+                        <div style={{ marginRight: '0.6rem' }}>
                             <BetAmountButton amount={100000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
-                        <div style={{ marginRight: '0.35rem' }}>
+                        <div style={{ marginRight: '0.6rem' }}>
                             <BetAmountButton amount={500000} inputValue={inputValue} setInputValue={setInputValue} />
                         </div>
                         <BetAmountButton amount={1000000} inputValue={inputValue} setInputValue={setInputValue} />
@@ -299,10 +301,10 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                 </div>
 
                 <div style={{ marginBottom: '0.6rem' }} className="betfixedamount-btn">
-                    <div style={{ marginRight: '0.3rem' }} className="betfixedamount-btn1">
+                    <div style={{ marginRight: '0.6rem' }} className="betfixedamount-btn1">
                         <BetFixedAmountButton amount={inputValue / 2} text="하프" />
                     </div>
-                    <div style={{ marginRight: '0.35rem' }} className="betfixedamount-btn1">
+                    <div style={{ marginRight: '0.6rem' }} className="betfixedamount-btn1">
                         <BetFixedAmountButton amount={3522170} text="최대" />
                     </div>
                     <div className="betfixedamount-btn1">
@@ -312,8 +314,10 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                 <div
                     style={{
                         height: '9rem', padding: '0.1875rem', borderRadius: '0.5rem',
-                        background: 'linear-gradient(to top, #3d4a8d, #88d9e8)'
+                        background: 'linear-gradient(to top, #3d4a8d, #88d9e8)',
+                        margin: '0 0.3rem 0 0'
                     }}
+                    className="hover"
                 >
                     <button
                         style={{
@@ -328,7 +332,7 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                     >
                         <div className="div-style flex items-center justify-center">
                             <img style={{ width: '3.1875rem', height: '3.1875rem', marginTop: '0.2rem' }} src={BetIcon} alt="" />
-                            <span style={{ marginLeft: '1.3125rem', color: '#d6f3ff' }} className="span-style shadow-to-text">베팅하기</span>
+                            <span style={{ marginLeft: '0.8125rem', color: '#d6f3ff' }} className="span-style shadow-to-text">베팅하기</span>
                         </div>
                     </button>
                 </div>

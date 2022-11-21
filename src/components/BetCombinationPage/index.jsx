@@ -109,7 +109,7 @@ const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
 
 
 
-            <div className="sport-container" style={{ width: '100%', display: 'flex', position: 'relative', top: '0', marginTop: '1.8rem' }}>
+            <div className="sport-container" style={{ width: '', display: '', overflow: 'hidden', position: 'relative', top: '', marginTop: '1.8rem' }}>
                 {/* <div style={{  }} className="absolute h-full right-0 z-50 nav-shadow"></div> */}
                 {/* <div id='scroll-wrapper2'
                     style={{ padding: '0.1rem 0 0.1rem 1.5rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
@@ -119,7 +119,7 @@ const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
                     </div>
                 </div> */}
                 {/* <div style={{ height: '' }} className="nav-shadow absolute h-full left-0 z-50"></div> */}
-               {/* <HorizontalMenu13 key={5} itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} /> */}
+                {/* <HorizontalMenu13 key={5} itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} /> */}
                 <Sports1 withoutMargin
                 // subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                 />

@@ -60,7 +60,7 @@ const Search = () => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         borderRadius: '0.5rem',
-                        boxShadow: '0px 6px 12px 0px rgba(0, 0, 0, 0.6)'
+                        boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)'
 
                     }}>
                         <img style={{ width: '2.6rem', height: '2.6rem' }} src={SearchIcon} alt="" />
