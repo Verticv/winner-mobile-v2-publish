@@ -38,7 +38,7 @@ import LeftMenu from "../LeftMenu";
 import AccountProfileComponent from '../AccountProfileComponent'
 import Header from '../Header';
 import NavBottom from '../NavBottom';
-import HorizontalMenu14 from '../HorizontalMenu13'
+import HorizontalMenu14 from '../HorizontalMenu14'
 import Icon9 from '../../assets/gameresults/1.png'
 import Icon10 from '../../assets/gameresults/2.png'
 import Icon3 from '../../assets/gameresults/3.png'
@@ -193,21 +193,18 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                 />
                 <Route path="/all/*"
                     element={
-                        <div className='game-result'>
-                            <Header />
-                            {/* hi */}
-                            {/* <img src={img} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
-                            {/* <div className="w-full z-30 flex flex-col items-center"> */}
-                            {/* <NoticeBanner /> */}
-                            {/* <Navbar /> */}
-                            <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
-                            <div id='container-nav'>
-                                <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                        <>
+                            <div className='game-result'>
+                                <Header />
+                                <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
+                                <div id='container-nav'>
+                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                </div>
+
+                                <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
                             </div>
 
-                            <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
-                            {/* <Sports1 subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} /> */}
-                            <div style={{ maxWidth: '1242px' }} className="w-full flex flex-col">
+                            <div style={{ maxWidth: '1242px', margin: '1rem 0rem 0 0rem' }} className="w-full flex flex-col">
                                 <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
                                     <div id='scroll-wrapper2'
                                         style={{ padding: '0.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
@@ -234,7 +231,9 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                 </div>
                             </div> */}
                             <NavBottom />
-                        </div>
+
+
+                        </>
                     }
                 />
 

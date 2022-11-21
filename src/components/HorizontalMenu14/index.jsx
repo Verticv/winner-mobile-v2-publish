@@ -86,7 +86,7 @@ const HorizontalMenu14 = ({
                                 ? "bg-blue-r1b4372"
                                 : "bg-gray-r8c8c8c"
                                 } rounded-full flex items-center justify-center`}>
-                            <p style={{ margin: '0', fontSize: '2rem', marginLeft: '-0.2rem' }} className=" font-roboto text-white">{item.number}</p>
+                            <p style={{ margin: '0', fontSize: '2rem', marginLeft: '-0.2rem', color: '#ccc2b6', fontFamily: 'RobotoMedium' }} className=" font-roboto text-white">{item.number}</p>
                         </div>
                     )}
                 </div>

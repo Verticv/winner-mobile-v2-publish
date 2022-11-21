@@ -490,8 +490,8 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
     const [isAllSelected, setAllSelected] = useState(false)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [page, setPage] = useState(0)
-    const [selectedTab, setSelectedTab] = useState(0)
-    const [selectedSubTab, setSelectedSubTab] = useState(0)
+    const [selectedTab, setSelectedTab] = useState()
+    const [selectedSubTab, setSelectedSubTab] = useState()
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -504,7 +504,7 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
         }
         return (() => {
             if (subActiveButton)
-            setSubActiveButton('/mypage/bet-history/all/minigame')
+                setSubActiveButton('/mypage/bet-history/all/minigame')
         })
     }, [setSubActiveButton, subActiveButton, navigate]);
 
