@@ -29,7 +29,7 @@ import MinigamesMatchResultPanel from '../MinigamesMatchResultPanel';
 import CardHeader from '../CardHeader';
 import PowerballResultsTable from '../PowerballResultsTable';
 import MinigameTab from '../MinigameTab';
-import Sports1 from '../Sports1';
+// import Sports1 from '../Sports1';
 import TableHeader2 from '../TableHeader2';
 import subIcon1 from '../../assets/bigIcons/leftMenu/16.png';
 import subIcon2 from '../../assets/bigIcons/leftMenu/17.png';

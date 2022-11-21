@@ -21,7 +21,7 @@ const HorizontalMenu13 = ({
         if (withoutFirst) {
             horizontalsScroll(itemsArray, 't-sub', 'scroll-wrapper2')
         }
-    }, [itemsArray])
+    }, [itemsArray, withoutFirst])
 
     const navigate = useNavigate();
     const pathname = window.location.pathname
