@@ -278,7 +278,7 @@ const CardResults = ({
                         className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                         <div
                             style={{
-                                textShadow: bet === "right" ? "rgb(0 0 0) 0.1rem 0.1rem 0.1rem;" : "",
+                                textShadow: bet === "right" ? "rgb(0 0 0) 0.1rem 0.1rem 0.1rem" : "",
                                 paddingRight: isFreeboard ? '0.8rem' : team2?.length > 11 ? '0.2rem' :  '0.8rem',
                                 paddingLeft: '',
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',

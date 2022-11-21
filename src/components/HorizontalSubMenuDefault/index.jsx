@@ -54,7 +54,7 @@ const HorizontalSubMenu = ({
             //     </button>
             // </div>
             return (
-                <div className={`nav-button ${ (isSameLink && !popup) || window.location.pathname === item.path ? 'active' : ''}`}
+                <div className={`nav-button ${ (isActive && popup) || (isSameLink && !popup) || window.location.pathname === item.path ? 'active' : ''}`}
                     id={`t-sub${index}`}
                     key={item.id}
                     onPointerDown={() => setHover(item.id)}

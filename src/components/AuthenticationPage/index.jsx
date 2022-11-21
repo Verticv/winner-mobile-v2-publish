@@ -151,13 +151,13 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
 
 
     return (
-        <div className="w-full AuthenticationPage" style={{ background: '#000', width: '77.625rem', height: '100%', overflow: 'hidden', position: 'relative' }}>
+        <div className="w-full AuthenticationPage" style={{ background: '#000', width: '77.625rem', height: '100%', overflow: 'hidden', overflowY: 'scroll', position: 'relative' }}>
             {/* <img src={img28} alt="" style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
             {/* {toSignup === false ? ( */}
             <div style={{ width: '100%', height: '100%', background: 'bottom' }}>
                 <img src={MobileBg} alt="" style={{ width: '77.625rem' }} />
                 <img src={logo} alt="" className='logo-img' />
-                <div className="bg-white w-full z-20 px-44" style={{ background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', zIndex: '0', position: 'absolute', top: '55.5rem', width: '72.552rem', padding: '0.1875rem', margin: '0 2.55rem', borderRadius: '2.25rem' }}>
+                <div className="bg-white w-full z-20 px-44" style={{ background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', overflowY: 'scroll', zIndex: '0', position: 'absolute', top: '55.5rem', width: '72.552rem', padding: '0.1875rem', margin: '0 2.55rem', borderRadius: '2.25rem' }}>
 
                     {/* BREAK */}
                     <div className="w-full h-full flex flex-col items-center justify-end pb-10px" style={{ background: 'linear-gradient(to top, #212121, #323231)', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '5.6rem 7.7rem 1rem', borderRadius: '2.25rem' }}>
@@ -255,9 +255,9 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
 
             {/* ) : ( */}
             {toSignup === true ? (
-                <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', overflowY: 'scroll', top: '0', right: '0', width: '100vw', background: 'rgb(0 0 0 / 30%)', height: '86.5%', display: 'flex', justifyContent: 'center' }}>
-                    <div style={{ zIndex: '20', width: '72.75rem', background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '2.4rem', padding: '0.1875rem', borderRadius: '2rem', paddingBottom: '' }}>
-                        <div style={{ padding: '0 7.6875rem', background: '#323232', width: '100%', height: '', borderRadius: '2rem', paddingBottom: '1.3rem' }} className="w-full h-full z-20">
+                <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', overflow: 'hidden', overflowY: 'scroll',  top: '0', right: '0', width: '100vw', background: 'rgba(0, 0, 0, 0.8)', height: '100%', display: 'flex', justifyContent: 'center' }}>
+                    <div style={{ zIndex: '20', width: '72.75rem', height: '143.1875rem', background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '2.4rem', padding: '0.1875rem', borderRadius: '2rem', paddingBottom: '' }}>
+                        <div style={{ padding: '0 7.6875rem', background: '#323232', width: '100%', height: '143.1875rem', borderRadius: '2rem', paddingBottom: '1.3rem' }} className="w-full h-full z-20">
 
                             {/* BREAK */}
                             <div className="w-full flex flex-col" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -627,6 +627,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                             </div>
 
                         </div>
+                        <div style={{ width: '100%', height: '10rem', background: 'bottom', marginTop: '' }}></div>
                     </div>
 
                 </div>) : (<></>)
