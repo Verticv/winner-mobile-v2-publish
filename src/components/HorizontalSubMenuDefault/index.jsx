@@ -32,7 +32,6 @@ const HorizontalSubMenu = ({
             const isActive = selectedSubTab === item.id
             let isSameLink = pathname === item.path
 
-
             if (item.hasSameParent) {
                 const pagePath = window.location.pathname.split('/')
                 pagePath?.pop()
@@ -55,7 +54,7 @@ const HorizontalSubMenu = ({
             //     </button>
             // </div>
             return (
-                <div className={`nav-button ${(isActive && popup) || (isSameLink && !popup) ? 'active' : ''}`}
+                <div className={`nav-button ${ (isSameLink && !popup) || window.location.pathname === item.path ? 'active' : ''}`}
                     id={`t-sub${index}`}
                     key={item.id}
                     onPointerDown={() => setHover(item.id)}
