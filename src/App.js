@@ -41,6 +41,7 @@ import MinigamesPage from './components/MinigamesPage';
 import ScrollToTop from './helpers/scrollToTop';
 // import img from './1.png';
 import ScrollButton from './components/ScrollButton';
+import HotelCasinoPage from './components/HotelCasinoPage';
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -321,6 +322,20 @@ function App() {
               <>
                 <ScrollButton />
                 <EsportsPage
+                  isAuthenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </>
+            }
+          ></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/hotelcasino/*"
+            element={
+              <>
+                <ScrollButton />
+                <HotelCasinoPage
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}
                 />

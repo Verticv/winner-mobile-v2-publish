@@ -278,6 +278,7 @@ const cardInfo = [{
     text: '이용가이드',
     isActive: false,
     group: '4',
+    path: '/hotelcasino/structure',
     extra: 'true'
 }, {
     id: 22,
