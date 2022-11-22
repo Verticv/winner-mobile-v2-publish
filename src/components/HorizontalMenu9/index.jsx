@@ -7,7 +7,8 @@ import inactiveBtn from '../../assets/sports/inactive-btn.png'
 const HorizontalMenu9 = ({
     itemsArray,
     setSelectedTab,
-    setSelectedSubTab = null
+    setSelectedSubTab = null,
+    isFlex
 }) => {
 
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ const HorizontalMenu9 = ({
                 key={item.id}
                 style={{
                     height: "8.375rem",
-                    width: '25rem',
+                    width: isFlex ? '100%' : '25rem',
                     // background: pathname === item.path ? "linear-gradient(to top, #a6926f, #f9f0d3)" : "linear-gradient(to top, #a6926f, #f9f0d3)",
                     background: `url(${pathname === item.path ? activeBtn : inactiveBtn}) round`,
                     // borderRadius: "10px",
