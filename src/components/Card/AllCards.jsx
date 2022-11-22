@@ -338,7 +338,8 @@ const cardInfo = [{
     text: '화면구성설명',
     isActive: false,
     group: '9',
-    extra: 'true'
+    extra: 'true',
+    path: '/tvbet/structure'
 }, {
     id: 28,
     inactivBackground: bg28,
@@ -347,7 +348,8 @@ const cardInfo = [{
     text: '베팅방법',
     isActive: false,
     group: '9',
-    extra: 'true'
+    extra: 'true',
+    path: '/tvbet/info'
 },
 
 ]

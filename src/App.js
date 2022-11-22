@@ -42,6 +42,7 @@ import ScrollToTop from './helpers/scrollToTop';
 // import img from './1.png';
 import ScrollButton from './components/ScrollButton';
 import HotelCasinoPage from './components/HotelCasinoPage';
+import TvBetPage from './components/TvBetPage';
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -336,6 +337,20 @@ function App() {
               <>
                 <ScrollButton />
                 <HotelCasinoPage
+                  isAuthenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </>
+            }
+          ></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/tvbet/*"
+            element={
+              <>
+                <ScrollButton />
+                <TvBetPage
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}
                 />
