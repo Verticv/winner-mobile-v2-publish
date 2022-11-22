@@ -25,7 +25,7 @@ const HotelCasinoPage = ({ isAuthenticated, setAuthenticated }) => {
 
       <div className="flex flex-col items-start limit:items-center limit1600:mt-92px mt-122px w-full h-full">
         <div style={{ marginTop: '0.1rem' }}>
-          <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
+          <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} isFlex />
         </div>
 
 

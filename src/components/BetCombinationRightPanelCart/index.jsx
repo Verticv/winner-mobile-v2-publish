@@ -315,7 +315,6 @@ const BetCombinationRightPanelCart = ({ addedCard, setAddedCard }) => {
                     style={{
                         height: '9rem', padding: '0.1875rem', borderRadius: '0.5rem',
                         background: 'linear-gradient(to top, #3d4a8d, #88d9e8)',
-                        margin: '0 0.3rem 0 0'
                     }}
                     className="hover"
                 >

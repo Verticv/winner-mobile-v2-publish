@@ -22,7 +22,7 @@ const ScrollButton = () => {
 
     return showUpButton &&
         <div onClick={scrollHandler} style={{ zIndex: '200', right: '1rem', bottom: '30rem', position: 'fixed',  }} className='fixed cursor-pointer'>
-            <div className=''>
+            <div style={{opacity:0.6}} className=''>
                 <img className='object-contain hover' style={{ width: '9.75rem' }} src={upButton} alt='up-button' />
             </div>
         </div>
