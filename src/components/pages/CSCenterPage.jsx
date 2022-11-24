@@ -111,7 +111,6 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
     const MyInfo = () => {
         return (
             <>
-            <ScrollButton />
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu
@@ -138,6 +137,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                 path="/all/*"
                 element={
                     <>
+                        <ScrollButton />
                         <Header />
                         <Routes>
                             {/* <Route index element={<h2>H2</h2>} /> */}

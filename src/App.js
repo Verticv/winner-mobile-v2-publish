@@ -238,7 +238,6 @@ function App() {
             element={
               <>
                 {/* <Header /> */}
-                <ScrollButton />
                 <CSCenterPage />
                 {/* <NavBottom /> */}
               </>
