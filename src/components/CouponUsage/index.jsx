@@ -30,6 +30,7 @@ import subIcon2 from '../../assets/bigIcons/leftMenu/19.png';
 import subIcon3 from '../../assets/bigIcons/leftMenu/20.png';
 import NavBottom from '../NavBottom'
 import Header from '../Header'
+import ScrollButton from '../ScrollButton'
 
 // import subIcon1 from '../../images/newImages/mainPage/coupon/1.png';
 // import subIcon2 from '../../images/newImages/mainPage/coupon/2.png';
@@ -1138,6 +1139,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                 <Route path="/all/*"
                     element={
                         <>
+                            <ScrollButton />
                             <div className="w-full z-30 flex flex-col items-center">
                                 {/* <NoticeBanner /> */}
                                 <Header />

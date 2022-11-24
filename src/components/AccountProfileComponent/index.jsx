@@ -220,7 +220,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated, subActiveB
                             src={KakaoLogo}
                             alt="kakao-icon"
                         />
-                        <span style={{ marginTop: '', marginLeft: '0.3rem', fontSize: '2.25rem', fontFamily: 'RobotoMedium', color: '#ad9e8c', letterSpacing: '0.05rem' }} className="text-brown-r351a1e font-roboto text-4xl leading-snug tracking-wide">
+                        <span style={{ marginTop: '', marginLeft: '0.3rem', fontSize: '2.65rem', fontFamily: 'RobotoMedium', color: '#ad9e8c', letterSpacing: '0.05rem' }} className="text-brown-r351a1e font-roboto text-4xl leading-snug tracking-wide">
                             test1234
                         </span>
                     </div>
@@ -232,7 +232,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated, subActiveB
                             src={TelegramLogo}
                             alt="kakao-icon"
                         />
-                        <span style={{ marginTop: '', marginLeft: '1.8375rem', fontSize: '2.25rem', fontFamily: 'RobotoMedium', color: '#ad9e8c', letterSpacing: '0.05rem' }} className="text-blue-r2aa1d5 font-roboto text-4xl leading-snug tracking-wide">
+                        <span style={{ marginTop: '', marginLeft: '1.8375rem', fontSize: '2.65rem', fontFamily: 'RobotoMedium', color: '#ad9e8c', letterSpacing: '0.05rem' }} className="text-blue-r2aa1d5 font-roboto text-4xl leading-snug tracking-wide">
                             test1234
                         </span>
                     </div>

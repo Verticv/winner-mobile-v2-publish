@@ -28,6 +28,7 @@ import subIcon2 from '../../assets/bigIcons/leftMenu/14.png';
 import subIcon3 from '../../assets/bigIcons/leftMenu/15.png';
 import Header from '../Header';
 import NavBottom from '../NavBottom';
+import ScrollButton from '../ScrollButton';
 // import subIcon2 from '../images/newImages/mainPage/points/2.png';
 // import subIcon3 from '../images/newImages/mainPage/points/3.png';
 // import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
@@ -164,6 +165,7 @@ const PointsPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                 <Route path='/all/*'
                     element={<>
                         <Header />
+                        <ScrollButton />
                         <HomePageTopBanner pageTitle='포인트' toPath='/mypage/points' />
                         <div className='mypage-points' id='container-nav'>
                             <HorizontalMenu1 withSmallMarginTop itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
