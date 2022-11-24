@@ -303,7 +303,7 @@ const cardInfo = [{
     inactivBackground: bg22,
     activeBackground: bga22,
     icon: true,
-    text: '두원카지노',
+    text: '두윈카지노',
     isActive: false,
     group: '4',
     // disable: 'true',
