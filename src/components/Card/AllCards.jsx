@@ -22,6 +22,9 @@ import bga6 from '../../assets/mainPage/active-bg6-card.png';
 import bg7 from '../../assets/mainPage/inactive-bg7-card.png';
 import bga7 from '../../assets/mainPage/active-bg7-card.png';
 
+import bg71 from '../../assets/mainPage/inactive-bg71-card.png';
+import bga71 from '../../assets/mainPage/active-bg71-card.png';
+
 import bg8 from '../../assets/mainPage/inactive-bg8-card.png';
 import bga8 from '../../assets/mainPage/active-bg8-card.png';
 
@@ -63,8 +66,13 @@ import bga20 from '../../assets/mainPage/active-bg20-card.png';
 
 import bg21 from '../../assets/mainPage/inactive-bg21-card.png';
 import bga21 from '../../assets/mainPage/active-bg21-card.png';
+
 import bg22 from '../../assets/mainPage/inactive-bg22-card.png';
-import bga22 from '../../assets/mainPage/inactive-bg22-card.png';
+import bga22 from '../../assets/mainPage/active-bg22-card.png';
+
+import bg221 from '../../assets/mainPage/inactive-bg221-card.png';
+import bga221 from '../../assets/mainPage/active-bg221-card.png';
+
 import bg23 from '../../assets/mainPage/inactive-bg23-card.png';
 import bga23 from '../../assets/mainPage/active-bg23-card.png';
 import bg24 from '../../assets/mainPage/inactive-bg24-card.png';
@@ -143,6 +151,16 @@ const cardInfo = [{
     activeBackground: bga7,
     icon: true,
     text: '빅게이밍',
+    isActive: false,
+    // path: '/live-casino',
+    group: '1'
+},
+{
+    id: 71,
+    inactivBackground: bg71,
+    activeBackground: bga71,
+    icon: true,
+    text: '오리엔탈게임',
     isActive: false,
     // path: '/live-casino',
     group: '1'
@@ -285,10 +303,20 @@ const cardInfo = [{
     inactivBackground: bg22,
     activeBackground: bga22,
     icon: true,
-    text: '호텔카지노',
+    text: '두원카지노',
     isActive: false,
     group: '4',
-    disable: 'true',
+    // disable: 'true',
+    // extra: 'true'
+}, {
+    id: 221,
+    inactivBackground: bg221,
+    activeBackground: bga221,
+    icon: true,
+    text: '이용가이드',
+    isActive: false,
+    group: '4',
+    // disable: 'true',
     extra: 'true'
 }, {
     id: 23,
