@@ -332,7 +332,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                             {item.replies && (
                                 <div
                                     style={{
-                                        minWidth: '8.5rem',
+                                        minWidth: '7.5rem',
                                         height: '7.0625rem',
                                         borderWidth: '0.1875rem',
                                         borderStyle: 'solid',
@@ -348,6 +348,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         background: '#2e2e2e',
                                         color: '#ff6945',
                                         // padding: '0 2.6rem'
+                                        padding: '0 1rem'
                                     }} className="absolute pl-7px pr-8px rounded-full flex items-center justify-center border text-red-d52e2e font-roboto"
                                 >{item.replies}</div>
                             )}

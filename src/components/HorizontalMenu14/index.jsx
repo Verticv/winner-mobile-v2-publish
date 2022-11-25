@@ -34,7 +34,7 @@ const HorizontalMenu14 = ({
                 id={`t-sub${index}`}
                 key={item.id}
                 style={{
-                    background: `url(${pathname === item.path || isState === item.id ? item.subActive : item.subInactive}) round`,
+                    background: `url(${isState === item.id || (typeof (isState) !== 'number' && item.id === 0) ? item.subActive : item.subInactive}) round`,
                     borderRadius: "0",
                     width: '14.1rem',
                     height: '14.4rem',
@@ -70,7 +70,7 @@ const HorizontalMenu14 = ({
 
                     </div>
                     <p
-                        style={{ margin: '0', marginTop: `${imageWidth ? '0.0625rem' : '0.7rem'}`, fontSize: '2.25rem', color: pathname === item.path || isState === item.id ? '#252525' : '#ccc2b6', marginLeft: '0.6rem', fontFamily: 'SpoqaHanSansNeoMedium' }}
+                        style={{ margin: '0', marginTop: `${imageWidth ? '0.0625rem' : '0.7rem'}`, fontSize: '2.25rem', color: isState === item.id || (typeof (isState) !== 'number' && item.id === 0) ? '#252525' : '#ccc2b6', marginLeft: '0.6rem', fontFamily: 'SpoqaHanSansNeoMedium' }}
                         className={`${pathname === item.path || isState === item.id
                             ? "text-white"
                             : "text-gray-r616161"

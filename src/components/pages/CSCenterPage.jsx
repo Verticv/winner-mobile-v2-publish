@@ -78,10 +78,18 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
     ]
 
     const location = useLocation();
-    const [selectedTab, setSelectedTab] = useState(location.pathname)
+    const [selectedTab, setSelectedTab] = useState()
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     const [subActiveButton, setSubActiveButton] = useState();
+    const [activeButton, setActiveButton] =useState();
+    const [cscenterActive, setCscenterActive] =useState();
     console.log(selectedSubTab, selectedTab)
+
+    useEffect(() => {
+        setCscenterActive('/cscenter')
+    }, [setCscenterActive])
+
+    console.log('cscenterActive', cscenterActive);
     // return (
     //     <div>
     //         {/* <Routes > */}
@@ -111,7 +119,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
     const MyInfo = () => {
         return (
             <>
-            <ScrollButton />
+                <ScrollButton />
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu
@@ -121,6 +129,10 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                         setSelectedSubTab={setSelectedSubTab}
                         array={LeftMenuSubArray}
                         subActiveButton={subActiveButton}
+                        activeButton={activeButton}
+                        setActiveButton={setActiveButton}
+                        cscenterActive={cscenterActive}
+                        setCscenterActive={setCscenterActive}
                     />
                 </div>
                 <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>

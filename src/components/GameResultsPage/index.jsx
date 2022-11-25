@@ -137,6 +137,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
     const [checkedState, setCheckedState] = useState(
         new Array(3).fill(false)
     );
+    
     const MyInfo = () => {
         return (
             <>
