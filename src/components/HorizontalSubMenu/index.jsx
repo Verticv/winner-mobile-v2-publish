@@ -18,7 +18,7 @@ const HorizontalSubMenu = ({
         if (withoutFirst && pathname !== '/cscenter/all/contact/all/other') {
             horizontalsScroll(itemsArray, 't', 'scroll-wrapper12')
         }
-    }, [itemsArray, withoutFirst])
+    }, [itemsArray, pathname, withoutFirst])
 
     function TabsList({ items }) {
         return items.map((item, index) => (
