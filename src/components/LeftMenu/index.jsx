@@ -18,7 +18,9 @@ const LeftMenu = ({
     activeButton2,
     setSubActiveButton,
     activeButton, setActiveButton,
-    distributorPageActive, setDistributorPageActive
+    distributorPageActive, setDistributorPageActive,
+    cscenterActive,
+    setCscenterActive
 }) => {
 
     useEffect(() => {
@@ -56,6 +58,11 @@ const LeftMenu = ({
         }, 0)
 
     }, [currentPathname, array]);
+    useEffect(() => {
+        if (cscenterActive) {
+            setCscenterActive('/cscenter');
+        }
+    }, [cscenterActive, setCscenterActive])
 
     const { state } = useLocation();
     console.log(state, 'state');
@@ -66,12 +73,15 @@ const LeftMenu = ({
         }
         if (text === "총판페이지") {
             setDistributorPageActive('/distributor-page')
+            setSelectedTab('')
+            setActiveButton('')
             window.open('/distributor-page');
         } else {
             navigate({
                 pathname: path,
                 state: { fromPage: window.location.pathname }
             })
+            console.log('window.location.pathname2', window.location.pathname);
             setSelectedTab(path)
             if (setSelectedSubTab !== null) {
                 setSelectedSubTab(path)
@@ -161,7 +171,7 @@ const LeftMenu = ({
                             <button
                                 style={{
                                     padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd',
-                                    background: ((((selectedTab) === item?.path) || (distributorPageActive === '/distributor-page' && item.text === '총판페이지') || subActiveButton === item?.path)) ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
+                                    background: ((((selectedTab) === item?.path) || (distributorPageActive === '/distributor-page' && item.text === '총판페이지') || subActiveButton === item?.path)) || item?.path == '' || (state?.path === '/cscenter' && item.text === '고객센터' && distributorPageActive !== '/distributor-page') ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
                                 }}
                                 className={`${selectedTab === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
@@ -173,10 +183,9 @@ const LeftMenu = ({
                                         // setActiveButton('')
                                         setDistributorPageActive('/')
                                     }
-
+                                    console.log('selectedTab', selectedTab === item?.path)
                                     buttonPressed(item.text, item.path)
 
-                                    console.log(subActiveButton, 'distributorPageActive');
                                 }}
                                 onMouseEnter={() => mouseHover(item.path)}
                                 onMouseLeave={() => mouseLeave(item.path)}
@@ -193,7 +202,6 @@ const LeftMenu = ({
                                     }
                                 }}
                             >
-                                {console.log('selectedTab', activeButton)}
                                 <div
                                     className={`${activeButton === item?.path ? 'menu-active' : ''}`}
                                     style={{ background: '', width: '13rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}

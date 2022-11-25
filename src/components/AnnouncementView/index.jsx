@@ -174,7 +174,7 @@ const AnnouncementView = () => {
                                 // background: 'linear gradient(to top, #80603f, #936e48 50%, #a57b52)'
                             }}
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
-                            onClick={() => navigate('/main')}
+                            onClick={() => navigate('/cscenter/all/announcement')}
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
                                 color: '#ffdfbd', marginLeft: '', display: 'flex', marginTop: '0.2rem'

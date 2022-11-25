@@ -80,7 +80,7 @@ const BetCombinationPanel = ({
             id: 2,
             type: "언오버",
             team1: "오버오버오버오버오버",
-            team2: "언더",
+            team2: "언더언더언더언더언더",
             stat1: 2.26,
             stat2: 2.96,
             stat3: 3.47,

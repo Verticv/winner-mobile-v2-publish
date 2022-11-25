@@ -116,8 +116,8 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
             text: "라이브영상",
             icon: Icon7,
             id: 6,
-            path: "/mypage",
-            mainPath: "",
+            path: "#",
+            mainPath: "#",
             width: '9.9375rem'
         },
         {
@@ -169,7 +169,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
             text: "계좌문의",
             icon: Icon13,
             id: 12,
-            path: "",
+            path: "#",
             mainPath: "#",
             width: '9.9375rem'
         },
@@ -177,7 +177,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
             text: "회원정보수정",
             icon: Icon14,
             id: 13,
-            path: "",
+            path: "#",
             mainPath: "#",
             width: '9.9375rem'
         },

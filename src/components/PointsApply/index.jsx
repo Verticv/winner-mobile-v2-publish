@@ -112,7 +112,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                         </div>
                         <div style={{ marginTop: '2.55rem' }} className="form-section">
                             <Title text="전환 포인트 입력" />
-                            <div className="lable-or-input" style={{ paddingLeft: '1rem', paddingTop: '2.3rem' }}>
+                            <div className="lable-or-input" style={{ paddingLeft: '1rem', paddingTop: '1.8rem' }}>
                                 <input
                                     className="w-full font-spoqa text-gray-r585858 outline-none placeholder-gray-bebebe"
                                     style={{ fontSize: '2.625rem', marginBottom: '0.9375rem', letterSpacing: '-0.1rem' }}

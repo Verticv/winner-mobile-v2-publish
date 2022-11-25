@@ -37,7 +37,7 @@ const InboxView = () => {
                                 style={{
                                     backgroundColor: "#00a1e9", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', width: 'fit-content',
                                     display: 'flex', alignItems: 'center', justifyContent: 'center', letterSpacing: '-0.07rem',
-                                    borderRadius: '3rem',
+                                    borderRadius: '3rem', color: '#fff'
                                 }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
@@ -47,7 +47,7 @@ const InboxView = () => {
                         </div>
                         <div style={{ marginBottom: '1.3125rem', display: '', textAlign: 'center', justifyContent: 'center', width: '100%', fontSize: '2.999375rem' }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
                             서버 점검 안내
-                            <div style={{
+                            <span style={{
                                 width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem',
                                 // marginTop: '-0.3rem',
                                 background: '#e9441d',
@@ -60,9 +60,10 @@ const InboxView = () => {
                                 borderRadius: '0.77rem',
                                 color: '#fff',
                                 display: 'inline-block',
+                                verticalAlign: 'text-top'
                             }} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 pt-px">
                                 N
-                            </div>
+                            </span>
                         </div>
                     </div>
 

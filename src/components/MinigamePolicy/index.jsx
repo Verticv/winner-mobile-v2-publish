@@ -151,7 +151,7 @@ const MinigamePolicy = () => {
 
     return (
         <div style={{ overflow: 'hidden'}}>
-            <div style={{ margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem' }}>
+            <div style={{ margin: '1.875rem', marginTop: '0', marginBottom: '2.1rem' }}>
                 <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
             </div>
             <div className="w-full relative top-0">
@@ -165,7 +165,7 @@ const MinigamePolicy = () => {
 
 
 
-            <div style={{ paddingTop: '0.7rem', paddingBottom: '18.3rem' }} className="flex justify-center">
+            <div style={{ paddingTop: '0.7rem', paddingBottom: '6.3rem' }} className="flex justify-center">
                 <Routes>
                     <Route path="/powerball"
                         element={

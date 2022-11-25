@@ -86,6 +86,7 @@ const CardContent = ({
                 {withUploadButton === true && (
                     <div
                         style={{ width: '9rem', height: '9rem', padding: '0.1875rem', margin: '-1.4rem -0.4rem 0 0', background: 'linear-gradient(to top, #3e4c8e, #6393bb 50%, #528bcc)', borderRadius: '1rem' }}
+                        className='shadow-to-box'
                     >
                         <button
                             onClick={() => canUpload === true && uploadHandler(id)}
@@ -101,7 +102,7 @@ const CardContent = ({
                 {withCancelButton && (
                     <button
                         onClick={() => cancelHandler(id)}
-                        style={{ width: '9rem', height: '9rem', padding: '1px', background: '#e65454', borderRadius: '1rem' }}
+                        style={{ width: '10.875rem', height: '10.875rem', padding: '', background: '#e65454', borderRadius: '1rem', boxShadow: 'rgb(0 0 0 / 60%) 0 0.375rem 0 0' }}
                         className="flex items-center justify-center rounded-2xl hover:opacity-75 bg-brown-r7e3636"
                     >
                         <div
