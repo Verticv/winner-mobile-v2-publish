@@ -15,7 +15,7 @@ const HorizontalSubMenu = ({
     const [, setHover] = useState(null)
 
     useEffect(() => {
-        if (withoutFirst) {
+        if (withoutFirst && pathname !== '/cscenter/all/contact/all/other') {
             horizontalsScroll(itemsArray, 't', 'scroll-wrapper12')
         }
     }, [itemsArray, withoutFirst])
@@ -42,7 +42,7 @@ const HorizontalSubMenu = ({
                     onPointerUp={() => {
                         setHover(null)
                         if (pathname !== item.path) {
-                            horizontalsScroll(itemsArray, 't', 'scroll-wrapper12', index)
+                            horizontalsScroll(itemsArray, 't', 'scroll-wrapper12', index, items.length -1 === index ? 200 : null)
                             navigate(item.path)
                             setSelectedTab(item.id)
                             if (setSelectedSubTab !== null) {
