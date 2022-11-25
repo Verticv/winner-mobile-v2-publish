@@ -40,7 +40,15 @@ const DateSearchBar = ({
         )
     }
     return (
-        <div style={{ margin: withMargin ? (!isFreeboard ? '0.9rem 1.875rem' : '1.2rem 1.875rem') : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem', background: '#2e2e2e', borderRadius: '1.1rem', paddingTop: isPoints ? '0' : '0.7rem', marginTop: isPoints ? '1.3rem' : '', marginBottom: isIOS?  '-0.3rem' : '' }} className="date12">
+        <div style={{ 
+            margin: withMargin ? (!isFreeboard ? '0.9rem 1.875rem' : '1.2rem 1.875rem') : '0 3.875rem 0 0', 
+            width: withMargin ? '' : '73.875rem', 
+            background: '#2e2e2e', 
+            borderRadius: '1.1rem', 
+            paddingTop: isPoints ? '0' : '0.65rem', 
+            marginTop: isGameResultsSearch === true ? '1.25rem' : isPoints ? '1.25rem' : '', 
+            marginBottom: isIOS?  '-0.3rem' : '' 
+            }} className="date12">
 
             {isLeagueSearch === true && (
                 <div className="space-x-5px">

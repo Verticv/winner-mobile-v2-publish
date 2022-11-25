@@ -31,6 +31,7 @@ import activeIcon1 from '../../assets/mainPage/icons/recharge-application.png';
 import activeIcon2 from '../../assets/mainPage/icons/active-icon2.png';
 import NavBottom from '../NavBottom';
 import Header from '../Header';
+import ScrollButton from '../ScrollButton';
 // import Icon2 from '../../assets/mainPage/icons/charging-history.png';
 // import Icon1 from '../../assets/mainPage/icons/Icon1.png';
 // import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
@@ -98,6 +99,7 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated, subActiveButton,
                 <Route path="/currency/*"
                     element={
                         <>
+                            <ScrollButton />
                             <div className="w-full z-30 flex flex-col items-center">
                                 {/* <NoticeBanner /> */}
                                 {/* <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} /> */}

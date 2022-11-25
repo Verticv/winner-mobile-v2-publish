@@ -41,6 +41,8 @@ import MinigamesPage from './components/MinigamesPage';
 import ScrollToTop from './helpers/scrollToTop';
 // import img from './1.png';
 import ScrollButton from './components/ScrollButton';
+import HotelCasinoPage from './components/HotelCasinoPage';
+import TvBetPage from './components/TvBetPage';
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -236,7 +238,6 @@ function App() {
             element={
               <>
                 {/* <Header /> */}
-                <ScrollButton />
                 <CSCenterPage />
                 {/* <NavBottom /> */}
               </>
@@ -321,6 +322,34 @@ function App() {
               <>
                 <ScrollButton />
                 <EsportsPage
+                  isAuthenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </>
+            }
+          ></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/hotelcasino/*"
+            element={
+              <>
+                <ScrollButton />
+                <HotelCasinoPage
+                  isAuthenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </>
+            }
+          ></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/tvbet/*"
+            element={
+              <>
+                <ScrollButton />
+                <TvBetPage
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}
                 />

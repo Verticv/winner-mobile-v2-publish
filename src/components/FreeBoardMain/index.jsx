@@ -469,6 +469,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                         >
                             <span
                                 className='shadow-to-text'
+                                style={{ color: '#d6f3ff'}}
                             // style={{ fontSize: "2.8125rem" }} className="font-spoqaMedium tracking-tight text-white"
                             >작성하기</span>
                         </div>

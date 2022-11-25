@@ -11,12 +11,16 @@ import SignedUpPopup from '../SignedUpPopup';
 // import img28 from '../../img28.png'
 import userName from '../../assets/myInfo/userName.png'
 import password from '../../assets/myInfo/password.png'
+import ReactDatePicker from 'react-datepicker'
+import CalendarIcon from '../../assets/myPage/CalendarIcon.png';
 
 const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
 
     const [selectedInput, setSelectedInput] = useState(null)
     const [toSignup, setSignup] = useState(false)
     const [showCompletePopup, setCompletePopup] = useState(false)
+    const [endDate, setEndDate] = useState(null)
+
     const navigate = useNavigate()
 
     // useEffect(() => {
@@ -60,7 +64,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
         "ABN암로",
     ];
 
-    const carrierOptions = ["LGU+", "SKT", "KT"]
+    const carrierOptions = ["통신사", "LGU+", "SKT", "KT"]
 
     // const [selectedCarrier, setSelectedCarrier] = useState("LGU+")
     // const [selectedBank, setSelectedBank] = useState("은행선택")
@@ -255,9 +259,9 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
 
             {/* ) : ( */}
             {toSignup === true ? (
-                <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', overflow: 'hidden', overflowY: 'scroll', top: '0', right: '0', width: '100vw', background: '#000', height: '100%', display: 'flex', justifyContent: 'center' }}>
-                    <div style={{ zIndex: '20', width: '72.75rem', height: '143.1875rem', background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '2.4rem', padding: '0.1875rem', borderRadius: '2rem', paddingBottom: '' }}>
-                        <div style={{ padding: '0 7.6875rem', background: '#323232', width: '100%', height: '143.1875rem', borderRadius: '2rem', paddingBottom: '1.3rem' }} className="w-full h-full z-20">
+                <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', overflow: 'hidden', overflowY: 'scroll', top: '0', right: '0', width: '100vw', background: 'rgba(0, 0, 0, 0.8)', height: '100%', display: 'flex', justifyContent: 'center' }}>
+                    <div style={{ zIndex: '20', width: '72.75rem', height: '151.1875rem', background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '2.4rem', padding: '0.1875rem', borderRadius: '2rem', paddingBottom: '' }}>
+                        <div style={{ padding: '0 7.6875rem', background: '#323232', width: '100%', height: '151.1875rem', borderRadius: '2rem', paddingBottom: '1.3rem' }} className="w-full h-full z-20">
 
                             {/* BREAK */}
                             <div className="w-full flex flex-col" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -443,6 +447,54 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                         </div>
                                     </div>
                                 </div> */}
+                                <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 61 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }} className="w-full flex flex-col space-y-4px space-x-10px">
+                                    <div className='w-full' style={{ position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
+                                        <img src={CalendarIcon} alt="" style={{ width: '3.5rem', position:'absolute', right: '2.5rem', top:'1.5rem' }} className="" />
+                                        <ReactDatePicker
+                                            placeholderText='생년월일'
+                                            customInput={
+                                                <input
+                                                    style={{ width: '100%' }}
+                                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe w-full"
+                                                    placeholder="가입코드"
+                                                    onFocus={(e) => {
+                                                        // e.target.placeholder = ""
+                                                        setSelectedInput(61)
+                                                    }}
+                                                    onBlur={(e) => {
+                                                        // e.target.placeholder = "가입코드"
+                                                        setSelectedInput(false)
+                                                    }}
+                                                />
+                                            }
+                                            locale="ko"
+                                            selected={endDate}
+                                            onChange={(date) => setEndDate(date)}
+                                            dateFormat="yyyy-MM-dd"
+                                            dateFormatCalendar="yyyy년 MM월"
+                                            disabledKeyboardNavigation={true}
+                                            onKeyDown={(e) => {
+                                                e.preventDefault();
+                                            }}
+                                            onChangeRaw={(e) => e.preventDefault()}
+                                            popperPlacement="bottom"
+                                            popperModifiers={{
+                                                flip: {
+                                                    behavior: ["bottom"] // don't allow it to flip to be above
+                                                },
+                                                preventOverflow: {
+                                                    enabled: true // tell it not to try to stay within the view (this prevents the popper from covering the element you clicked)
+                                                },
+                                                hide: {
+                                                    enabled: true // turn off since needs preventOverflow to be enabled
+                                                }
+                                            }}
+                                        />
+                                        <div className='h-1.5'>
+                                            <div className={`${selectedInput === 0 ? "bg-blue-r1ca7ec h-1.5" : "bg-gray-bebebe h-0.75"} w-full`} style={{ width: '100%' }} />
+                                        </div>
+                                    </div>
+                                </div>
                                 <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 6 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }} className="w-full flex flex-col space-y-4px space-x-10px">
                                     <div className='w-full' style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
                                         <input

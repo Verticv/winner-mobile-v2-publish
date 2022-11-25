@@ -150,6 +150,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                 path="/all/*"
                 element={
                     <>
+                        <ScrollButton />
                         <Header />
                         <Routes>
                             {/* <Route index element={<h2>H2</h2>} /> */}

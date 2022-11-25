@@ -12,6 +12,7 @@ import Icon4 from '../../assets/myPage/second-btns/4.png'
 import Icon8 from '../../assets/myPage/second-btns/6.png'
 import Icon9 from '../../assets/myPage/second-btns/7.png'
 import Icon10 from '../../assets/myPage/second-btns/8.png'
+import Icon11 from '../../assets/myPage/second-btns/9.png'
 import activeBG from '../../assets/myPage/second-btns/active-bg.png'
 import { useNavigate } from 'react-router-dom'
 // import HorizontalMenu from '../HorizontalMenu'
@@ -25,6 +26,7 @@ const subTabsArray = [
     { text: "드림게이밍", icon: Icon8, id: 4, activeBG: activeBG, width: '19.375rem', path: '#' },
     { text: "섹시게이밍", icon: Icon9, id: 5, activeBG: activeBG, width: '19.375rem', path: '#' },
     { text: "빅게이밍", icon: Icon10, id: 6, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "오리엔탈게임", icon: Icon11, id: 7, activeBG: activeBG, width: '19.375rem', path: '#' },
 ];
 
 // 베팅번호 => number

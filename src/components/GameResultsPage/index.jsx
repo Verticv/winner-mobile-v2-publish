@@ -49,6 +49,7 @@ import Icon7 from '../../assets/gameresults/7.png'
 import Icon8 from '../../assets/gameresults/8.png'
 import subInactive from '../../assets/gameresults/sub-inactive.png';
 import subActive from '../../assets/gameresults/sub-active.png';
+import ScrollButton from '../ScrollButton';
 
 const tabsArray = [
     { text: "스포츠", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/gameresults/all", activeBG: activeBG, inActiveBG: inActiveBG, width: '7.875rem' },
@@ -195,6 +196,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                 <Route path="/all/*"
                     element={
                         <>
+                            <ScrollButton />
                             <div className='game-result'>
                                 <Header />
                                 <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
@@ -266,6 +268,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                 <Route path="/minigame/*"
                     element={
                         <>
+                            <ScrollButton />
                             <Header />
                             <div className='game-result'>
                                 {/* <img src={img24} alt="" style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}

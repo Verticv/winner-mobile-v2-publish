@@ -2,12 +2,14 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router';
 import activeBtn from '../../assets/sports/active-btn.png'
+import activeBtn2 from '../../assets/sports/active-btn2.png'
 import inactiveBtn from '../../assets/sports/inactive-btn.png'
 
 const HorizontalMenu9 = ({
     itemsArray,
     setSelectedTab,
-    setSelectedSubTab = null
+    setSelectedSubTab = null,
+    isFlex
 }) => {
 
     const navigate = useNavigate();
@@ -22,9 +24,10 @@ const HorizontalMenu9 = ({
                 key={item.id}
                 style={{
                     height: "8.375rem",
-                    width: '25rem',
-                    // background: pathname === item.path ? "linear-gradient(to top, #a6926f, #f9f0d3)" : "linear-gradient(to top, #a6926f, #f9f0d3)",
-                    background: `url(${pathname === item.path ? activeBtn : inactiveBtn}) round`,
+                    width: isFlex ? '100%' : '25rem',
+                    background: pathname === item.path ? "linear-gradient(to top, #a6926f, #f9f0d3)" : "linear-gradient(to top, #a6926f, #f9f0d3)",
+                    background: `url(${items.length === 1 ? activeBtn2 : pathname === item.path ? activeBtn : inactiveBtn}) round`,
+                    backgroundSize: "cover",
                     // borderRadius: "10px",
                     // padding: '0.1875rem'
                 }}

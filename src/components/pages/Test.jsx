@@ -189,7 +189,7 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
         console.log(`location.state`, location.state)
         return (
             <>
-                <ScrollButton />
+                {/* <ScrollButton /> */}
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                 <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu
@@ -239,7 +239,6 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
                 element={
                     <>
                         {/* <Header /> */}
-                        <ScrollButton />
                         <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                         {/* <NavBottom /> */}
@@ -251,7 +250,6 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
             <Route path="/money/exchange/*"
                 element={
                     <>
-                        <ScrollButton />
                         <MoneyExchangePage isAuthenticated={true} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />
@@ -263,7 +261,6 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
                 element={
                     <>
                         {/* <Header /> */}
-                        <ScrollButton />
                         <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />
@@ -289,7 +286,6 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
                 element={
                     <>
                         {/* <Header /> */}
-                        <ScrollButton />
                         <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />
@@ -321,7 +317,6 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
                 element={
                     <>
                         {/* <Header /> */}
-                        <ScrollButton />
                         <CouponUsage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />

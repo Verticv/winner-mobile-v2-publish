@@ -33,6 +33,7 @@ import subIcon1 from '../../assets/bigIcons/leftMenu/11.png';
 import subIcon2 from '../../assets/bigIcons/leftMenu/12.png';
 import Header from '../Header';
 import NavBottom from '../NavBottom';
+import ScrollButton from '../ScrollButton'
 
 
 const tabsArray = [
@@ -127,6 +128,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubA
                     element={
                         <>
                             <Header />
+                            <ScrollButton />
                             <HomePageTopBanner pageTitle='머니충전' toPath='/mypage/money' />
 
                             <div className="flex flex-col items-start limit:items-center w-full h-full" id='container-nav'>
@@ -151,6 +153,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubA
                             <Routes>
                                 <Route path='/charge' element={
                                     <>
+                                        <ScrollButton />
                                         <MoneyCharge subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                         <NavBottom />
                                     </>
@@ -158,6 +161,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubA
                                 <Route path="/charge/history"
                                     element={
                                         <>
+                                            <ScrollButton />
                                             <div style={{ marginTop: '1rem' }}>
                                                 <MoneyChargeHistory subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}/>
                                             </div>
