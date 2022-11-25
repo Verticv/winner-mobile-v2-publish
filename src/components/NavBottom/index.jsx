@@ -57,7 +57,7 @@ export default function NavBottom() {
     let navigate = useNavigate();
     
     return (
-        <div className="nav-bottom">
+        <div className="nav-bottom" id='main-menu'>
             {navInfo?.map(({ id, icon, text, width, isActive, path, activeIcon, includes }) => {
                 let isActiveButton = window.location.pathname.includes(path) || window.location.pathname.includes(includes)
 
