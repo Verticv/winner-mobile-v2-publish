@@ -286,7 +286,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                 <Route path="/powerball"
                                     element={
                                         <>
-                                            <div style={{ background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', padding: '0.1875rem', margin: '-0.1rem 2rem 0 1.9rem', borderRadius: '1rem' }}>
+                                            <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)', padding: '0.1875rem', margin: '0 1.875rem', borderRadius: '1.3rem' }}>
                                                 <div style={{
                                                     width: '100%',
                                                     background: '#323232',
