@@ -451,6 +451,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                     <div className='w-full' style={{ position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
                                         <img src={CalendarIcon} alt="" style={{ width: '3.5rem', position:'absolute', right: '2.5rem', top:'1.5rem' }} className="" />
                                         <ReactDatePicker
+                                            showYearDropdown
+                                            yearDropdownItemNumber={100}
                                             placeholderText='생년월일'
                                             customInput={
                                                 <input

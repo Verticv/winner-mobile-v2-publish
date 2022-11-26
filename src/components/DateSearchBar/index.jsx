@@ -40,15 +40,15 @@ const DateSearchBar = ({
         )
     }
     return (
-        <div style={{ 
-            margin: withMargin ? (!isFreeboard ? '0.9rem 1.875rem' : '1.2rem 1.875rem') : '0 3.875rem 0 0', 
-            width: withMargin ? '' : '73.875rem', 
-            background: '#2e2e2e', 
-            borderRadius: '1.1rem', 
-            paddingTop: isPoints ? '0' : '0.65rem', 
-            marginTop: isGameResultsSearch === true ? '1.25rem' : isPoints ? '1.25rem' : '', 
-            marginBottom: isIOS?  '-0.3rem' : '' 
-            }} className="date12">
+        <div style={{
+            margin: withMargin ? (!isFreeboard ? '0.9rem 1.875rem' : '1.2rem 1.875rem') : '0 3.875rem 0 0',
+            width: withMargin ? '' : '73.875rem',
+            background: '#2e2e2e',
+            borderRadius: '1.1rem',
+            paddingTop: isPoints ? '0' : '0.65rem',
+            marginTop: isGameResultsSearch === true ? '1.25rem' : isPoints ? '1.25rem' : '',
+            marginBottom: isIOS ? '-0.3rem' : ''
+        }} className="date12">
 
             {isLeagueSearch === true && (
                 <div className="space-x-5px">
@@ -107,6 +107,8 @@ const DateSearchBar = ({
             <div className="second-row">
                 <div className="date-picker left-date-picker relative" style={{ position: 'relative' }}>
                     <DatePicker
+                        showYearDropdown
+                        yearDropdownItemNumber={100}
                         customInput={
                             <CustomInput />
                         }
@@ -142,6 +144,8 @@ const DateSearchBar = ({
                         <>
                             <div className=' -ml-8'>
                                 <DatePicker
+                                    showYearDropdown
+                                    yearDropdownItemNumber={100}
                                     customInput={<CustomInput />}
                                     // className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
                                     locale="ko"
