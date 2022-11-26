@@ -18,6 +18,7 @@ const ContactTable = ({
         return items.map(item => (
             <div
                 key={item.id}
+                onClick={() => navigate(item.path)}
                 style={{ background: item.isRead === false ? '#3d3934' : item.id % 2 === 0 ? '#323232' : '#2e2e2e' }}
                 className={`${item.isRead === false
                     ? "bg-gray-e8eff6" :
@@ -26,7 +27,7 @@ const ContactTable = ({
                         : "bg-gray-f8f9fb"
                     } flex contact-card`}
             >
-                <div style={{ width: '9.1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="flex justify-start items-center cursor-pointer" onClick={() => navigate(item.path)}>
+                <div style={{ width: '9.1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="flex justify-start items-center cursor-pointer" >
                     <img className='hover' style={{ width: '4.875rem', height: item.isRead === true ? '4.72625' : '2.945' }} src={item.isRead === true ? MailOpenedIcon : MailIcon} alt="" />
                 </div>
                 <div
@@ -44,7 +45,7 @@ const ContactTable = ({
                                 ? "text-gray-r7b7b7b font-spoqaMedium"
                                 : "text-gray-r454545 font-spoqaMedium"
                                 } flex items-center cursor-pointer`}
-                            onClick={() => navigate(item.path)}
+                            // onClick={() => navigate(item.path)}
                             style={{ display: 'flex', alignItems: 'center', height: '5.4rem' }}
                         >
                             <div
@@ -87,7 +88,7 @@ const ContactTable = ({
                     </div>
 
                 </div>
-                <button className='absolute right-0 ' style={{ position: 'absolute', right: '4.5rem', background: 'bottom' }}>
+                <button className='absolute right-0 ' style={{ position: 'absolute', right: '4.5rem', background: 'bottom', zIndex:5 }} onClick={e => e.stopPropagation() }>
                     <img className='hover' style={{ width: '4rem', height: '4.375rem' }} src={item.isRead ? DeleteDark : Delete} alt="" />
                 </button>
             </div>

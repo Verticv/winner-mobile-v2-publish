@@ -365,7 +365,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                             onFocus={(e) => setSelectedInput(3)}
                                             onBlur={(e) => setSelectedInput(false)}
                                             placeholder="닉네임"
-                                            type="password"
+                                            // type="password"
                                         />
                                         <div className='h-1.5'>
                                             <div className={`${selectedInput === 0 ? "bg-blue-r1ca7ec h-1.5" : "bg-gray-bebebe h-0.75"} w-full`} style={{ width: '100%' }} />
