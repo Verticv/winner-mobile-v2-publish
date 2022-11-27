@@ -55,4 +55,15 @@
         // z-index: 10;
         width: 15.9375rem;
     }
+
+    /* date picker override styling */
+    .react-datepicker {
+        margin-left: -0.8rem;
+        .react-datepicker__month-container {
+            width: 72.75rem !important;
+            background: #323232;
+            border-radius: 1.1rem;
+        }
+    }
+
 }

@@ -447,8 +447,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                         </div>
                                     </div>
                                 </div> */}
-                                <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 61 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }} className="w-full flex flex-col space-y-4px space-x-10px">
-                                    <div className='w-full' style={{ position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
+                                <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 61 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }} className="w-full flex flex-col space-y-4px space-x-10px">
+                                    <div className='w-full' style={{ position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', paddingLeft: '1.8rem', marginTop: '1rem' }}>
                                         <img src={CalendarIcon} alt="" style={{ width: '3.5rem', position:'absolute', right: '2.5rem', top:'1.5rem' }} className="" />
                                         <ReactDatePicker
                                             showYearDropdown
