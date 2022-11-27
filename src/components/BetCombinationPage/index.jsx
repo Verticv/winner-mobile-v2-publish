@@ -83,6 +83,12 @@ const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
     const [openedCart, setOpenedCart] = useState(false)
 
     useEffect(() => {
+        window.onpopstate = () => {
+            console.log('add code to handle the back button if needed')
+        }
+    })
+
+    useEffect(() => {
         setSelectedOption({
             type: "",
             name: "",
