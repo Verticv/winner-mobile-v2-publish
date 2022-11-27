@@ -115,7 +115,11 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                             <div className="lable-or-input" style={{ paddingLeft: '1rem', paddingTop: '1.8rem' }}>
                                 <input
                                     className="w-full font-spoqa text-gray-r585858 outline-none placeholder-gray-bebebe"
-                                    style={{ fontSize: '2.625rem', marginBottom: '0.9375rem', letterSpacing: '-0.1rem' }}
+                                    style={{ fontSize: '2.625rem', marginBottom: '0.9375rem', letterSpacing: '-0.1rem',
+                                    // padding: '0.4rem 2.2rem 0',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                }}
                                     placeholder="직접 입력시 숫자만 입력해 주세요."
                                     value={inputValue !== null ? nf.format(inputValue) : ""}
                                     onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}

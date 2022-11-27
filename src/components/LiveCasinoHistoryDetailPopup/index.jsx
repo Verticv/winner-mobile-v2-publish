@@ -11,7 +11,7 @@ const LiveCasinoHistoryDetailPopup = ({ setPopupOpen }) => {
             >
 
                 <div
-                    style={{ height: "100%", width: "100%", borderRadius: "2.7rem", background: '#323231', overflow: 'hidden' }}
+                    style={{ height: "100%", width: "100%", borderRadius: "2.7rem", background: '#323231', overflow: '' }}
                     className="bg-white overflow-hidden mb-64"
                 >
                     <div className="거래-상세-내역-popup">

@@ -74,7 +74,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                                 >
                                     <input
                                         className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
-                                        style={{ fontSize: '2.625rem', marginBottom: '1.1875rem' }}
+                                        style={{ fontSize: '2.625rem' }}
                                         onFocus={(e) => {
                                             const menu = document.querySelector('#main-menu');
                                             menu.style.marginBottom = '-14.075rem'
@@ -106,7 +106,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                                 >
                                     <input
                                         className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
-                                        style={{ fontSize: '2.625rem', marginBottom: '1.1875rem' }}
+                                        style={{ fontSize: '2.625rem' }}
                                         onFocus={(e) => {
                                             const menu = document.querySelector('#main-menu');
                                             menu.style.marginBottom = '-14.075rem'
@@ -137,7 +137,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                                 >
                                     <input
                                         className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
-                                        style={{ fontSize: '2.625rem', marginBottom: '1.1875rem' }}
+                                        style={{ fontSize: '2.625rem' }}
                                         onFocus={(e) => {
                                             const menu = document.querySelector('#main-menu');
                                             menu.style.marginBottom = '-14.075rem'
@@ -167,7 +167,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                                 >
                                     <input
                                         className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
-                                        style={{ fontSize: '2.625rem', marginBottom: '1.1875rem' }}
+                                        style={{ fontSize: '2.625rem' }}
                                         onFocus={(e) => {
                                             const menu = document.querySelector('#main-menu');
                                             menu.style.marginBottom = '-14.075rem'

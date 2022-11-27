@@ -1,3 +1,5 @@
+import { isIOS } from 'react-device-detect';
+
 export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, buttonIndex, actualElementWidth) {
   const currentPath = window.location.pathname;
   const activeTapId = buttonIndex === 0 ? 0 : buttonIndex || array?.filter((item) => item.path === currentPath)?.[0]?.id
@@ -8,6 +10,9 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
       setTimeout(() => {
         const elementWidth = window.document.querySelector(`#${tapIdPrefix}${activeTapId}`)?.offsetWidth;
         const leftScrollValue = ((activeTapId - 1.5) * (actualElementWidth || elementWidth))
+        if (isIOS) {
+          window.uss.setMinAnimationFrame(20)
+        }
         window.uss.scrollXTo(leftScrollValue, scrollWrapper)
       }, 0)
     } else {

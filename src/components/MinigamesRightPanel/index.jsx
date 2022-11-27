@@ -514,7 +514,8 @@ const MinigamesRightPanel = ({
                                         <img
                                             style={{
                                                 paddingTop: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "0.2rem" : "",
-                                                width: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "10.375rem" : ""
+                                                // width: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "10.375rem" : ""
+                                                width: '11.375rem'
                                             }}
                                             className={`${(selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "rightpanel-content12" : ""
                                                 } rightpanel-content13`}
