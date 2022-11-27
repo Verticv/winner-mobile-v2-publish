@@ -482,7 +482,7 @@ const DistributorPage = ({
         </>
     )
 
-    function RecommendedUserCell({ items }) {
+    function RecommendedUserCell({ items, withPadding }) {
 
         const [isUserCountOpen, setUserCountOpen] = useState(new Array(20).fill(false))
         const [subArrowClicked, setSubArrowClicked] = useState(new Array(8).fill(false))
@@ -550,7 +550,7 @@ const DistributorPage = ({
                         <div className="flex items-center -mt-3.5">{item.login_date}</div>
                         <div className="flex items-center -mt-3.5 font-spoqaMedium">({item.absent_date})</div>
                     </div>
-                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', marginLeft: '', marginRight: '-0.1rem' }}>
+                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', marginLeft: '', marginRight: '-0.1rem', paddingLeft: withPadding ? '2.5rem' : '' }}>
                         <button
                             style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
                             className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} hover flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
@@ -583,7 +583,7 @@ const DistributorPage = ({
                     <div className="w-full h-full flex items-center justify-end text-right" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', textAlign: 'right' }}><p className="pr-32px">{item.added_withdraw_amount}</p></div>
                     <div className="w-full h-full flex items-center justify-end text-right" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', textAlign: 'right' }}><p className="pr-32px">{item.bet_amount}</p></div>
                     <div className="w-full h-full flex items-center justify-end text-right" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', textAlign: 'right' }}><p className="pr-32px">{item.win_lose}</p></div>
-                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative'}}>
+                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
                         <button
                             style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
                             className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} hover flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
@@ -1321,7 +1321,7 @@ const DistributorPage = ({
                                                     <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isArrowUp[7] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[7] === false ? "transform rotate-180" : ""}`} alt="" />
                                                 </button>
                                             </div>
-                                            <RecommendedUserCell items={RecommendedUserArray} />
+                                            <RecommendedUserCell withPadding items={RecommendedUserArray} />
                                         </div>
                                     </div>
                                 </div>
