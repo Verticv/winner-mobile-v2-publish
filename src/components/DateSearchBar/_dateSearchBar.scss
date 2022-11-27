@@ -167,13 +167,14 @@
     }
 }
 
-.react-datepicker__year-dropdown .react-datepicker__year-option:first-child {
+
+.react-datepicker__year-dropdown .react-datepicker__year-option:last-child {
 display: none !important;
 }
 
 .react-datepicker__year-dropdown {
     .react-datepicker__year-option {
-        &:nth-last-child(n + 0):nth-last-child( -n + 101) {
+        &:nth-last-child(n):nth-last-child(n + 103) {
             display: none !important;
         }
 
