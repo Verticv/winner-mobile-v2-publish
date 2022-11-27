@@ -979,12 +979,14 @@ const BetCombinationPanel = ({
                             }}
                             className="normaloption-content1 bg-gradient-to-b"
                         >
-                            <span className="normaloption-content2">{hasUp ? truncate(team1, 8, 8) : truncate(team1, 12, 12)}</span>
+                            <span style={{width:'20rem', textAlign:'start'}} className="normaloption-content2">{hasUp ? truncate(team1, 8, 8) : truncate(team1, 12, 12)}</span>
                             <span style={{ color: stat1Color === "red" && isButtonOn.indexOf(isSubArray?`${items_id}-${id}left`:`${id}left`)===-1 && `${id}left` !== isHover3 ? "#e65454" : "" }} className="normaloption-content3">
                                 {hasUp === true && (
                                     <img className='normaloption-content4' style={{ width: '1.3125rem', height: '1.125rem' }} src={UpIcon} alt="" />
                                 )}
-                                <p>{stat1}</p>
+                                <div style={{width: '5rem', justifyContent: 'center', display:'flex', position:'relative'}}>
+                                    <p>{stat1}</p>
+                                </div>
                             </span>
                         </div>
                         {buttonWithExtraData?.text && (
@@ -1092,12 +1094,14 @@ const BetCombinationPanel = ({
                             className="normaloption-content11 bg-gradient-to-b"
                         >
                             <span className="normaloption-content12">
-                                <p>{stat3}</p>
+                                <div style={{width: '4.9rem', justifyContent: 'center', display:'flex', position:'relative'}}>
+                                    <p>{stat3}</p>
+                                </div>
                                 {hasDown === true && (
                                     <img className='normaloption-content13' style={{ width: '1.3125rem', height: '1.125rem' }} src={DownIcon} alt="" />
                                 )}
                             </span>
-                            <span className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 10, 8) : truncate(team2, 10, 8)}</span>
+                            <span style={{width:'20rem', textAlign:'end'}} className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 10, 8) : truncate(team2, 10, 8)}</span>
                         </div>
                     </button>
                 </div>

@@ -24,7 +24,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "서버 점검 안내",
             isRead: false,
             time: "2021.06.28 15:36",
-            // type: "안내",
+            type: "안내",
+            category: "안내안내안내안내",
             isClicked: true,
             path: '/mypage/inbox/1'
         },
@@ -49,7 +50,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "미니게임 파워볼 동행복권 시스템 정기 점검",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
+            type: "일반",
             path: '/mypage/inbox/4'
         },
         {
@@ -57,7 +58,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "스포츠 & 미니게임 충전 보너스 (21.04.24 변경)",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "이벤트",
+            type: "일반",
             path: '/mypage/inbox/5'
         },
         {
@@ -73,7 +74,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
+            type: "일반",
             path: '/mypage/inbox/7'
         },
         {
@@ -81,7 +82,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
+            type: "일반",
             path: '/mypage/inbox/8'
         },
         {
@@ -89,7 +90,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
+            type: "일반",
             path: '/mypage/inbox/9'
         },
         {
@@ -97,7 +98,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
+            type: "일반",
             path: '/mypage/inbox/10'
         },
         {
@@ -105,7 +106,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
+            type: "일반",
             path: '/mypage/inbox/11'
         },
     ];

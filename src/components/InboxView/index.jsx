@@ -17,7 +17,7 @@ const InboxView = () => {
 
     const navigate = useNavigate();
     const truncate = (str, max, len) => {
-        return str.length > max ? str.substring(0, len) + "..." : str;
+        return str.length > max ? str.substring(0, len) : str;
     }
 
     return (
@@ -71,7 +71,7 @@ const InboxView = () => {
                     <div style={{ height: '7.3125rem', padding: '1.4375rem 1.875rem', borderBottom: '0.1875rem solid #252525', display: 'flex', alignItems: 'center', color: '#929292', background: '#2e2e2e' }} className="bg-gray-fafafa border-b border-gray-dddddd flex items-center">
                         <img style={{ width: '12.0625rem' }} className="w-56 object-contain" src={WinnerSmall} alt="" />
                         <div className='flex mt-2' style={{ display: 'flex' }}>
-                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem', background: '#929292' }} className='bg-gray-dddddd'></div>
+                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem', background: '#555555' }} className='bg-gray-dddddd'></div>
                             <p style={{ fontSize: '2.25rem' }} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
                         </div>
                     </div>
