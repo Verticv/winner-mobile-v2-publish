@@ -43,7 +43,7 @@ const FreeBoardView = () => {
 
     const navigate = useNavigate();
     const truncate = (str, max, len) => {
-        return str.length > max ? str.substring(0, len) + "..." : str;
+        return str.length > max ? str.substring(0, len) : str;
     }
 
     const ReplyCell = ({
@@ -398,7 +398,7 @@ const FreeBoardView = () => {
             </div> */}
 
 
-            <div style={{ marginTop: '3.7rem', paddingBottom: '19.625rem' }} className="w-full flex items-start justify-between">
+            <div style={{ marginTop: '3.9rem', paddingBottom: '19.625rem' }} className="w-full flex items-start justify-between">
                 <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="shadow-to-box shadow-to-box flex hover items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e48 50%, #a57b52)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <div

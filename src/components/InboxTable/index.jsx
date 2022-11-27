@@ -20,7 +20,7 @@ const InboxTable = ({
         setCheckedState(updatedCheckedState);
     };
     const truncate = (str, max, len) => {
-        return str.length > max ? str.substring(0, len) + "..." : str;
+        return str.length > max ? str.substring(0, len) : str;
     }
 
     function InboxList({ items }) {
