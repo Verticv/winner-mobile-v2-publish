@@ -27,7 +27,7 @@ const AnnouncementView = () => {
     return (
         <div className="w-full announcementView">
 
-            <div className='announcementView-1'>
+            <div style={{}} className='announcementView-1'>
                 <div className="announcementView1 rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
                     <div className="announcementView2 bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
@@ -152,7 +152,7 @@ const AnnouncementView = () => {
             </div> */}
             {/* <NavBottom /> */}
 
-            <div style={{ margin: '2.6rem 1.86rem', paddingBottom: '19.225rem' }} className="w-full flex items-start justify-between">
+            <div style={{ margin: '2.2rem 1.86rem', paddingBottom: '19.225rem' }} className="w-full flex items-start justify-between">
                 <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover shadow-to-box">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e48 50%, #a57b52)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <div

@@ -50,7 +50,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "미니게임 파워볼 동행복권 시스템 정기 점검",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "일반",
+            type: "안내",
+            category: "안내",
             path: '/mypage/inbox/4'
         },
         {
