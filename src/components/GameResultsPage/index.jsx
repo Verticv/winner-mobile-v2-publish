@@ -210,7 +210,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                             <div style={{ maxWidth: '1242px', margin: '0.9rem 0rem 0 0rem' }} className="w-full flex flex-col">
                                 <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
                                     <div id='scroll-wrapper2'
-                                        style={{ padding: '0.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
+                                        style={{ padding: '1.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
                                     >
                                         <div className={`bet-history`} style={{}}>
                                             <HorizontalMenu14 key={15} itemsArray={tabsArray2} isState={selectedTab} setSelectedTab={setSelectedTab} />

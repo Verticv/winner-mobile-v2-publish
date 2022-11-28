@@ -255,9 +255,6 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             >
                 <div className='div-button'
                     style={{
-                        // margin: '0',
-                        // padding: '1.75rem 2.2rem',
-                        // paddingBottom: "1.5rem",
                         backgroundColor:
                             item.type === "안내"
                                 ? "#303843"
@@ -267,7 +264,6 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         ? "#2e2e2e"
                                         : "#323232"
                     }}
-                // className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full " 
                 >
 
                     {item.type === "안내" || item.type === "이벤트" ? (
@@ -321,7 +317,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         : <div></div>
                             }
                             <p
-                                style={{ wordSpacing: (item.text === '다폴더 이벤트 참여' && item.id === 2802) ? '-0.3rem' : ''}}
+                                style={{ wordSpacing: (item.text === '다폴더 이벤트 참여' && item.id === 2802) ? '-0.3rem' : '' }}
                                 className={`text ${item.type === "안내"
                                     ? "blue-bg"
                                     : item.type === "이벤트"
@@ -372,7 +368,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                     }}
                                 // className="rounded-full flex items-center justify-center text-white font-spoqaMedium"
                                 >
-                                    <span className='mt-1.5'>베팅내역</span>
+                                    <span className='mt-1.5'>{truncate("베팅내역", 6, 6)}</span>
                                 </div>
                             )}
                             {item.isRead === false && (

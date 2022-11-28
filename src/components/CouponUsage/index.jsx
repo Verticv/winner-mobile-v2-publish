@@ -1042,6 +1042,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                         cardHeight='25.3125rem'
                         isButtonGradient={false}
                         isCoupon
+                        isGift
                         />
                 </div>
                 <div style={{ marginBottom: '2.9375rem', fontFamily: 'SpoqaHanSansNeoMedium', textAlign: 'center', letterSpacing: '-0.07rem', color: '#c8c8c8', marginTop: '3.7rem' }} className='mt-4'>
@@ -1087,11 +1088,11 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
                 <div style={{ marginBottom: '-0.8125rem', display: 'flex', justifyContent: 'center' }} className='mt-4 flex justify-center'>
                     <CouponTitle text='사용가능' number='32' />
-                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
+                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                     <CouponTitle text='사용완료' number='8' numberColor='#4c98ff' />
-                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
+                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                     <CouponTitle text='기간만료' number='0' numberColor='#ffffff' />
-                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
+                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                     <CouponTitle text='회수된쿠폰' number='0' numberColor='#4aca68' />
                 </div>
                 <div className="">
@@ -1214,11 +1215,11 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
                                                         <div style={{ marginBottom: '-0.8125rem', display: 'flex', justifyContent: 'center' }} className='mt-4 flex justify-center'>
                                                             <CouponTitle text='사용가능' number='32' />
-                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                                                             <CouponTitle text='사용완료' number='8' numberColor='#4c98ff' />
-                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                                                             <CouponTitle text='기간만료' number='0' numberColor='#ffffff' />
-                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#323231' }} className='bg-gray-c5c5c5'></div>
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                                                             <CouponTitle text='회수된쿠폰' number='0' numberColor='#4aca68' />
                                                         </div>
                                                         <div className="">

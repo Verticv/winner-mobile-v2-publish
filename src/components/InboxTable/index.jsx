@@ -27,6 +27,7 @@ const InboxTable = ({
         return items.map(item => (
             <div
                 key={item.id}
+                onClick={() => navigate(item.path)}
                 style={{ background: item.isRead === false ? '#3d3934' : item.id % 2 === 0 ? '#323232' : '#2e2e2e' }}
                 // style={{ height: '11.625rem', borderBottomWidth: '0.1875rem' }}
                 className={`${item.isRead === false
@@ -82,7 +83,7 @@ const InboxTable = ({
                                         marginRight: '0.9rem'
                                     }} className="w-max rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2"
 
-                                    ><span className='-mb-1'><span className='mt-1 block'>{truncate('안내안내안내안내안내', 6,6)}</span></span></div>
+                                    ><span className='-mb-1'><span className='mt-1 block'>{truncate(item.category, 6,6)}</span></span></div>
                                     : item.type === "이벤트"
                                         ? <div style={{
                                             // marginTop: '-1.1rem',
@@ -135,7 +136,7 @@ const InboxTable = ({
                     </div>
 
                 </div>
-                <button className='absolute right-0' style={{ position: 'absolute', right: '4.55rem', background: 'bottom' }}>
+                <button className='absolute right-0' style={{ position: 'absolute', right: '4.55rem', background: 'bottom' }} onClick={e => e.stopPropagation() }>
                     <img className='hover' style={{ width: '4rem', height: '4.375rem', marginTop: '0.3rem' }} src={item.isRead ? DeleteDark : Delete} alt="" />
                 </button>
             </div>

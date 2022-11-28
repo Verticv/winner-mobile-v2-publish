@@ -48,7 +48,7 @@ const ContactView = () => {
                         <img style={{ width: "3.4375rem", height: '4.4375rem', marginTop: '0.6rem' }} src={Rank1} alt="" />
                         <p className='flex mt-1.5 items-center text-gray-r585858 font-spoqaMedium' style={{ margin: '0', fontSize: '2.4375rem', marginLeft: '0.875rem', letterSpacing: '-0.07rem', color: '#929292', fontFamily: 'SpoqaHanSansNeoMedium', maxWidth: '52rem', marginTop: '1.1rem' }}>마이마이프로틴화이팅
                             <div className='flex mt-2' style={{ display: 'inline-block' }}>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: '0.5rem 1rem 0px 1.1rem', background: '#7b7b7b',  display: 'inline-block'  }} className='bg-gray-dddddd'></div>
+                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: '0.5rem 1rem 0px 1.1rem', background: '#555555',  display: 'inline-block'  }} className='bg-gray-dddddd'></div>
                                 <p style={{ fontSize: '2.25rem', color: '#7b7b7b', fontFamily: 'SpoqaHanSansNeo', marginTop: '2.8rem', letterSpacing: '-0.05rem', margin: '0',  display: 'inline-block'  }} className="-mt-1 text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
                             </div>
                         </p>
