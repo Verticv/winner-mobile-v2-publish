@@ -19,7 +19,7 @@ const CouponGiftPopupTable = () => {
     }
 
     return (
-        <div style={{ borderRadius: "1.2rem", overflowY: 'scroll', background: '#323232', height: '73.6rem', boxShadow: '0 0 2rem 0 rgba(0, 0, 0, 0.6)' }} className="shadow-subNavbar overflow-y-scroll h-full">
+        <div style={{ borderRadius: "1.2rem", overflowY: 'scroll', background: '#323232', boxShadow: '0 0 2rem 0 rgba(0, 0, 0, 0.6)', height: 'calc(100vh - 58rem)' }} className="shadow-subNavbar overflow-y-scroll h-full">
             <div style={{ height: '7rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', paddingTop: '1.7rem', paddingRight: '' }} className="bg-gray-fafafa font-spoqaMedium w-full tracking-tight text-gray-r585858 border-b border-gray-dddddd flex items-center">
                 <div style={{ fontSize: '2.625rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '2.9rem' }} className='w-full flex justify-between'>
                     <td className="w-1/3 text-center flex justify-center" style={{ width: '20.6125rem', textAlign: 'center', display: 'flex', justifyContent: 'center' }}>선택</td>
@@ -32,7 +32,7 @@ const CouponGiftPopupTable = () => {
                 <td className="w-1/3 text-center" style={{ width: '23.8125rem', textAlign: 'center' }}>아이디</td>
                 <td className="w-1/3 text-center" style={{ width: '26rem', textAlign: 'center' }}>별명</td>
             </div> */}
-            <div style={{ height: "280px", color: '#c8c8c8' }} className="w-full text-585858 text-14px tracking-tight font-spoqa">
+            <div style={{ color: '#c8c8c8', flex: 1 }} className="w-full text-585858 text-14px tracking-tight font-spoqa">
                 <div style={{ height: '8.725rem', fontSize: '2.625rem', display: 'flex', alignItems: 'center', fontFamily: 'SpoqaHanSansNeo', borderTop: '0.1875rem solid #252525', letterSpacing: '-0.07rem', background: '#323232' }} className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 justify-between w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-1/3 text-center flex justify-center" style={{ width: '20.6125rem', textAlign: 'center', display: 'flex', justifyContent: 'center' }}><RadioButton id={0} /></td>
                     <td className="w-1/3 text-center" style={{ width: '23.8125rem', textAlign: 'center', overflow: 'hidden', whiteSpace: 'nowrap' }}>{truncate('louie32louie32louie32louie32louie32louie32louie32louie32', 17, 17)}</td>
