@@ -19,7 +19,7 @@ const ContactView = () => {
     const BodyText9 = "추가적인 문의사항은 언제든지 전화 요청 또는 카카오톡, \n 텔레그램 고객센터로 문의하시면 &nbsp;24시간 항상 친절하게 \n 안내 도와드리겠습니다. \n 앞으로 많은 이용 부탁드립니다."
     const navigate = useNavigate();
     const truncate = (str, max, len) => {
-        return str.length > max ? str.substring(0, len) + "..." : str;
+        return str.length > max ? str.substring(0, len) : str;
     }
 
     return (
@@ -28,7 +28,7 @@ const ContactView = () => {
             <div style={{ margin: ' 1px 1.875rem 1.875rem', background: 'linear-gradient(to top,#1f1f1e, #353534 50%,#4a4a4a)', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ background: '#323232', paddingBottom: '0.1rem', borderRadius: '1.1rem' }} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
-                    <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
+                    <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
                         <div
                             // style={{ margin: '1.9rem 0' }}
                             className='sflex w-full justify-center'>
@@ -48,7 +48,7 @@ const ContactView = () => {
                         <img style={{ width: "3.4375rem", height: '4.4375rem', marginTop: '0.6rem' }} src={Rank1} alt="" />
                         <p className='flex mt-1.5 items-center text-gray-r585858 font-spoqaMedium' style={{ margin: '0', fontSize: '2.4375rem', marginLeft: '0.875rem', letterSpacing: '-0.07rem', color: '#929292', fontFamily: 'SpoqaHanSansNeoMedium', maxWidth: '52rem', marginTop: '1.1rem' }}>마이마이프로틴화이팅
                             <div className='flex mt-2' style={{ display: 'inline-block' }}>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: '0.5rem 1rem 0px 1.1rem', background: '#7b7b7b',  display: 'inline-block'  }} className='bg-gray-dddddd'></div>
+                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: '0.5rem 1rem 0px 1.1rem', background: '#555555',  display: 'inline-block'  }} className='bg-gray-dddddd'></div>
                                 <p style={{ fontSize: '2.25rem', color: '#7b7b7b', fontFamily: 'SpoqaHanSansNeo', marginTop: '2.8rem', letterSpacing: '-0.05rem', margin: '0',  display: 'inline-block'  }} className="-mt-1 text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
                             </div>
                         </p>
@@ -214,7 +214,7 @@ const ContactView = () => {
                     </div>
                 </button>
             </div> */}
-            <div style={{ margin: '3.6rem 1.86rem', paddingBottom: '19.225rem' }} className="w-full flex items-start justify-between">
+            <div style={{ margin: '3.8rem 1.86rem', paddingBottom: '19.225rem' }} className="w-full flex items-start justify-between">
                 <button style={{ height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem', width: '24.125rem', background: 'linear-gradient(to top, #4d3c0a, #9c7b4a 50%, #e7b786)', borderRadius: '1rem' }} className="hover shadow-to-box">
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e48 50%, #a57b52)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <div
@@ -224,7 +224,7 @@ const ContactView = () => {
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.2rem'
                             }}>이전</span>
                         </div>
                     </div>
@@ -239,7 +239,7 @@ const ContactView = () => {
                             onClick={() => navigate('/cscenter/all/contact/all')}
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.2rem'
                             }}>목록보기</span>
                         </div>
                     </div>
@@ -255,7 +255,7 @@ const ContactView = () => {
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.2rem'
                             }}>다음</span>
                         </div>
                     </div>

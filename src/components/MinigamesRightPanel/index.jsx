@@ -505,7 +505,7 @@ const MinigamesRightPanel = ({
                                     <p style={{ color: "#4c98ff", fontSize: '2.25rem', fontFamily: 'SpoqaHanSansNeoBold' }} className="rightpanel-content9">{selectedOption[0].name}</p>
                                 )}
                             </div>
-                            <div style={{ width: "16rem" }} className="rightpanel-content10">
+                            <div style={{ width: "16rem", marginTop: '-0.4rem'}} className="rightpanel-content10">
                                 {selectedOption[0].buttonType && (
                                     <div
                                         style={{ width: "11.375rem" }}

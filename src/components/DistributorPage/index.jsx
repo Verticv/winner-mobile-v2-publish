@@ -216,9 +216,10 @@ const DistributorPage = ({
 
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>PG</span><br /><span className='-mt-3.5'>소프트</span></td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>로얄슬롯</span><br /><span className='-mt-3.5'>게이밍</span></td>
+                                
+                                <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>보타</span><br /><span className='-mt-3.5'>카지노</span></td>
+                                <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>두윈</span><br /><span className='-mt-3.5'>카지노</span></td>
 
-                                <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">보타카지노</td>
-                                <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">두윈카지노</td>
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">e-스포츠</td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>키론</span><br /><span className='-mt-3.5'>가상게임</span></td>
 
@@ -348,8 +349,9 @@ const DistributorPage = ({
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">와즈단</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>PG</span><br /><span className='-mt-3.5'>소프트</span></td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>로얄슬롯</span><br /><span className='-mt-3.5'>게이밍</span></td>
-                                <td style={{ backgroundColor: "#242424e6", width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center h-full flex items-center justify-center">보타카지노</td>
-                                <td style={{ backgroundColor: "#242424e6", width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center h-full flex items-center justify-center">두윈카지노</td>
+                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>보타</span><br /><span className='-mt-3.5'>카지노</span></td>
+                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>두윈</span><br /><span className='-mt-3.5'>카지노</span></td>
+
                                 <td style={{ backgroundColor: "#242424e6", width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center h-full flex items-center justify-center">e-스포츠</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>키론</span><br /><span className='-mt-3.5'>가상게임</span></td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', background: '#1d1e1f' }} className="text-center">합계</td>
@@ -882,8 +884,8 @@ const DistributorPage = ({
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className="text-center">와즈단</td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className="text-center flex flex-col"><span>PG</span><br /><span className='-mt-3.5'>소프트</span></td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className="text-center flex flex-col"><span>로얄슬롯</span><br /><span className='-mt-3.5'>게이밍</span></td>
-                                                    <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className="text-center">보타카지노</td>
-                                                    <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className="text-center">두윈카지노</td>
+                                                    <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className="text-center flex flex-col"><span>보타</span><br /><span className='-mt-3.5'>카지노</span></td>
+                                                    <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className="text-center flex flex-col"><span>두윈</span><br /><span className='-mt-3.5'>카지노</span></td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className="text-center">e-스포츠</td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }} className="text-center flex flex-col"><span>키론</span><br /><span className='-mt-3.5'>가상게임</span></td>
                                                 </tr>
@@ -949,7 +951,7 @@ const DistributorPage = ({
                                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.2rem' }} src={Diamond} alt="" />
                                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                                <span style={{ marginRight: '0.625rem', color: '#ffdfbd', letterSpacing: '-0.07rem' }} className="text-white">입금 :</span>
+                                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">입금 :</span>
                                                 <span className="text-yellow-ffcc00" style={{ color: '#ffd200' }}>2,520,000</span>
                                             </div>
                                         </div>
@@ -959,7 +961,7 @@ const DistributorPage = ({
                                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                                             <img style={{ width: '1.2rem', height: '1.3125rem', marginRight: '1.2rem' }} src={Diamond} alt="" />
                                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                                <span style={{ marginRight: '0.625rem', color: '#ffdfbd', letterSpacing: '-0.07rem' }} className="text-white">출금 :</span>
+                                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">출금 :</span>
                                                 <span className="text-yellow-ffcc000" style={{ color: '#ffd200' }}>5,800,000</span>
                                             </div>
                                         </div>
@@ -972,7 +974,7 @@ const DistributorPage = ({
                                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.3125rem' }} src={Diamond} alt="" />
                                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                                <span style={{ marginRight: '0.625rem', color: '#ffdfbd', letterSpacing: '-0.07rem' }} className="text-white">보너스 :</span>
+                                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">보너스 :</span>
                                                 <span className="text-yellow-ffcc00" style={{ color: '#ffd200' }}>500,000</span>
                                             </div>
                                         </div>
@@ -982,7 +984,7 @@ const DistributorPage = ({
                                         <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
                                             <img style={{ width: '1.2rem', height: '1.3125rem', marginRight: '1.2rem' }} src={Diamond} alt="" />
                                             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                                <span style={{ marginRight: '1.1875rem', color: '#ffdfbd', letterSpacing: '-0.07rem' }} className="text-white">입출금 합계 :</span>
+                                                <span style={{ marginRight: '1.1875rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">입출금 합계 :</span>
                                                 <span className="text-red-f47d7d" style={{ color: '#ff7f7f' }}>-300,200,000</span>
                                             </div>
                                         </div>
@@ -1029,8 +1031,8 @@ const DistributorPage = ({
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">와즈단</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>PG</span><br /><span className='-mt-3.5'>소프트</span></td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>로얄슬롯</span><br /><span className='-mt-3.5'>게이밍</span></td>
-                                                    <td style={{ backgroundColor: "#242424e6", width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center h-full flex items-center justify-center">보타카지노</td>
-                                                    <td style={{ backgroundColor: "#242424e6", width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center h-full flex items-center justify-center">두윈카지노</td>
+                                                    <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>보타</span><br /><span className='-mt-3.5'>카지노</span></td>
+                                                    <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>두윈</span><br /><span className='-mt-3.5'>카지노</span></td>
                                                     <td style={{ backgroundColor: "#242424e6", width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center h-full flex items-center justify-center">e-스포츠</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>키론</span><br /><span className='-mt-3.5'>가상게임</span></td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', background: '#1d1e1f' }} className="text-center">합계</td>
@@ -1218,7 +1220,7 @@ const DistributorPage = ({
                                 <div style={{ maxWidth: '40.6875rem', height: '5.3125rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '0 2rem', marginTop: '0.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                                     <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '0.9rem' }} className="object-contain" src={Diamond} alt="" />
                                     <div style={{ marginTop: '0.15rem' }} className="flex items-center">
-                                        <span className="text-white flex-shrink-0" style={{ color: '#ffdfbd' }}>보유금 총합계 :</span>
+                                        <span className="text-white flex-shrink-0" style={{ color: '#ffffff' }}>보유금 총합계 :</span>
                                         <span className="text-yellow-ffcc00 ml-3" style={{ color: '#ffcc00', letterSpacing: '0', marginLeft: '0.6rem' }}>{truncate("75,000", 15, 15)}</span>
                                     </div>
                                 </div>

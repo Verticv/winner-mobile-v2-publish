@@ -22,7 +22,8 @@ const HistoryTable = ({
     isCoupon,
     color,
     width45,
-    inlineText
+    inlineText,
+    isGift
 }) => {
     function Cells({ cards }) {
         const detailButton = (
@@ -70,9 +71,9 @@ const HistoryTable = ({
                 borderRadius: '1rem',
                 position: 'relative'
             }} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
-                <div style={{ borderRadius: '1rem', width: '100%', height: '100%', background: `${containerBackground && index % 2 ? '#2e2e2e' : '#323232'}`, paddingRight: '1.875rem', padding: '2.125rem 2.7rem', paddingTop: hasLeftInput ? (hasButton ? '2.8rem     ' : '3.3rem') : '2rem', display: 'flex', alignItems: 'center' }} className="flex flex-wrap items-center w-full h-full">
+                <div style={{ borderRadius: '1rem', width: '100%', height: '100%', background: `${containerBackground && index % 2 ? '#2e2e2e' : '#323232'}`, paddingRight: '1.875rem', padding: '2.125rem 2.7rem', paddingTop: hasLeftInput ? (hasButton ? '2.4rem' : '3.3rem') : '2.4rem', display: 'flex', alignItems: 'center' }} className="flex flex-wrap items-center w-full h-full">
                     {hasLeftInput && (
-                        <div style={{ width: '5.8125rem', position: 'relative', marginRight: '-0.15rem', marginTop: '-0.2rem' }} className="relative text-left">
+                        <div style={{ width: '5.8125rem', position: 'relative', marginRight: '1.35rem', marginTop: '-0.2rem' }} className="relative text-left">
                             <label className="form-control">
                                 <input
                                     className='w-12 h-12'
@@ -118,7 +119,7 @@ const HistoryTable = ({
                                         <span className='font-spoqa' style={{
                                             fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex',
                                             wordBreak: 'break-all',
-                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : firstRowKeysName[0] === '쿠폰명' ? hasButton ? '48rem' : '47rem' : width45 ? '45rem' : hasButton ? isCoupon ? '38rem' : '39.8rem' : '39.8rem',
+                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : firstRowKeysName[0] === '쿠폰명' ? isGift ? '43rem' : hasButton ? '48rem' : '47rem' : width45 ? '45rem' : hasButton ? isGift ? '32rem' : isCoupon ? '38rem' : '39.8rem' : '39.8rem',
                                             overflow: firstRowKeysName[0] === '아이디' ? 'hidden' : '',
                                             textOverflow: firstRowKeysName[0] === '아이디' ? 'ellipsis' : '',
                                             whiteSpace: firstRowKeysName[0] === '아이디' ? 'nowrap' : '',

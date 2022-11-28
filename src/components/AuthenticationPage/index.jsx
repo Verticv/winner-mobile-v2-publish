@@ -259,7 +259,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
 
             {/* ) : ( */}
             {toSignup === true ? (
-                <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', overflow: 'hidden', overflowY: 'scroll', top: '0', right: '0', width: '100vw', background: 'rgba(0, 0, 0, 0.8)', height: '100%', display: 'flex', justifyContent: 'center' }}>
+                <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', overflow: 'hidden', overflowY: 'scroll', top: '0', right: '0', width: '100vw', background: 'rgba(0, 0, 0)', height: '100%', display: 'flex', justifyContent: 'center' }}>
                     <div style={{ zIndex: '20', width: '72.75rem', height: '151.1875rem', background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '2.4rem', padding: '0.1875rem', borderRadius: '2rem', paddingBottom: '' }}>
                         <div style={{ padding: '0 7.6875rem', background: '#323232', width: '100%', height: '151.1875rem', borderRadius: '2rem', paddingBottom: '1.3rem' }} className="w-full h-full z-20">
 
@@ -365,7 +365,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                             onFocus={(e) => setSelectedInput(3)}
                                             onBlur={(e) => setSelectedInput(false)}
                                             placeholder="닉네임"
-                                            type="password"
+                                            // type="password"
                                         />
                                         <div className='h-1.5'>
                                             <div className={`${selectedInput === 0 ? "bg-blue-r1ca7ec h-1.5" : "bg-gray-bebebe h-0.75"} w-full`} style={{ width: '100%' }} />

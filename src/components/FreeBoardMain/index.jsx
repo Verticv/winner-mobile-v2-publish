@@ -20,6 +20,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             isRead: false,
             time: "2021.06.29 07:35",
             type: "안내",
+            category: "안내안내안내안내",
             isClicked: true,
             path: '/freeboard/view/0'
         },
@@ -29,6 +30,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             isRead: false,
             time: "2021.06.29 07:35",
             type: "안내",
+            category: "안내",
             path: '/freeboard/view/1'
         },
         {
@@ -37,6 +39,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             isRead: false,
             time: "2021.06.29 07:35",
             type: "안내",
+            category: "안내",
             path: '/freeboard/view/2'
         },
         {
@@ -45,6 +48,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             isRead: false,
             time: "2021.06.29 07:35",
             type: "이벤트",
+            category: "이벤트이벤트이벤트",
             path: '/freeboard/view/3'
         },
         {
@@ -53,6 +57,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             isRead: false,
             time: "2021.06.29 07:35",
             type: "이벤트",
+            category: "이벤트",
             path: '/freeboard/view/4'
         },
         {
@@ -61,6 +66,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             isRead: false,
             time: "2021.06.29 07:35",
             type: "이벤트",
+            category: "이벤트",
             path: '/freeboard/view/5'
         },
         {
@@ -235,7 +241,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
         }
     }, [setActiveButton, activeButton]);
     const truncate = (str, max, len) => {
-        return str.length > max ? str.substring(0, len) + "..." : str;
+        return str.length > max ? str.substring(0, len) : str;
     }
 
     function InboxList({ items }) {
@@ -249,9 +255,6 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             >
                 <div className='div-button'
                     style={{
-                        // margin: '0',
-                        // padding: '1.75rem 2.2rem',
-                        // paddingBottom: "1.5rem",
                         backgroundColor:
                             item.type === "안내"
                                 ? "#303843"
@@ -261,7 +264,6 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         ? "#2e2e2e"
                                         : "#323232"
                     }}
-                // className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full " 
                 >
 
                     {item.type === "안내" || item.type === "이벤트" ? (
@@ -285,14 +287,10 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
 
 
 
-                    <div
-                        className='card-content'
-                    // className='w-full h-full flex flex-wrap'
-                    >
+                    <div className='card-content' >
                         <div
                             style={{ display: 'flex' }}
                             className='type'
-                        // className={`w-full flex items-center font-spoqaMedium text-gray-r585858 group`}
                         >
                             {
                                 item.type === "안내"
@@ -305,7 +303,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         <span
                                         // className='mt-1.5'
                                         // style={{ background: 'blue', padding: '0.4rem 1.5rem'}}
-                                        >{truncate('안내안내안내안내안내', 6, 6)}</span>
+                                        >{truncate(item.category, 6, 6)}</span>
                                     </div>
                                     : item.type === "이벤트"
                                         ? <div
@@ -315,11 +313,11 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         ><span
                                             style={{ marginLeft: '-0.3rem' }}
                                         //  className='mt-1.5'
-                                        >{truncate('이벤트이벤트이벤트', 6, 6)}</span></div>
+                                        >{truncate(item.category, 6, 6)}</span></div>
                                         : <div></div>
                             }
                             <p
-                                style={{ wordSpacing: (item.text === '다폴더 이벤트 참여' && item.id === 2802) ? '-0.3rem' : '', maxWidth: (item.id === 2) || (item.id === 4) ? '40rem' : '' }}
+                                style={{ wordSpacing: (item.text === '다폴더 이벤트 참여' && item.id === 2802) ? '-0.3rem' : '' }}
                                 className={`text ${item.type === "안내"
                                     ? "blue-bg"
                                     : item.type === "이벤트"
@@ -370,7 +368,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                     }}
                                 // className="rounded-full flex items-center justify-center text-white font-spoqaMedium"
                                 >
-                                    <span className='mt-1.5'>베팅내역</span>
+                                    <span className='mt-1.5'>{truncate("베팅내역", 6, 6)}</span>
                                 </div>
                             )}
                             {item.isRead === false && (
@@ -469,7 +467,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                         >
                             <span
                                 className='shadow-to-text'
-                                style={{ color: '#d6f3ff'}}
+                                style={{ color: '#d6f3ff' }}
                             // style={{ fontSize: "2.8125rem" }} className="font-spoqaMedium tracking-tight text-white"
                             >작성하기</span>
                         </div>

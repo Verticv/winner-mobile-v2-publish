@@ -20,7 +20,7 @@ const SportsGamePolicyTable1 = ({ array }) => {
                 )}
             </td>
             {/* {console.log(rows)} */}
-            <td style={{ width: "14.1875rem", color: overtime === null ? "#FF0000" : overtime === true ? "#ffcc00" : "#929292" }} className="font-spoqaMedium text-center">
+            <td style={{ width: "14.1875rem", color: overtime === null ? "#e65454" : overtime === true ? "#ffcc00" : "#929292" }} className="font-spoqaMedium text-center">
                 <p style={{ marginTop: '0.5rem', marginLeft: hasMargin ? '' : '' }}>{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</p>
             </td>
             <td style={{ WebkitTextStroke: "0.2px", textAlign: 'start', padding: rows === '2' ? '1.529rem 0 1.317rem' : (rows === '3' ? '1.25rem 0px 1.009rem' : (rows === '4' ? '1.2rem 0px 0.7rem' : (rows === '1' ? '1.8rem 0 1.6rem' : (rows === '5' ? '0.767rem 0px 0.45rem' : (rows === 'ss' ? '0.9rem 0px 0.75rem' : '0'))))) }} className=''>
@@ -39,7 +39,7 @@ const SportsGamePolicyTable1 = ({ array }) => {
 
 
     return (
-        <div style={{ background: 'linear-gradient(to top, #1f1f1e, #3e3e3d 50%, #4a4a4a)', padding: '0.1875rem', margin: '0 1.875rem', borderRadius: "1.2rem", }}>
+        <div style={{ background: 'linear-gradient(to top, #1f1f1e, #3e3e3d 50%, #4a4a4a)', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)', padding: '0.1875rem', margin: '0 1.875rem', borderRadius: "1.2rem", }}>
             <table style={{ borderRadius: "1.2rem", fontSize: '2.8125rem', background: '#323232', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', borderCollapse: 'collapse' }} className="shadow-subNavbar overflow-hidden">
                 <thead style={{ borderBottomWidth: "0.1875rem", background: '#2e2e2e', borderBottom: '0.1875rem solid #252525', borderTopLeftRadius: '1.3rem', borderTopRightRadius: '1.3rem' }} className="bg-gray-fafafa font-spoqaMedium tracking-tight text-gray-r454545 border-b border-gray-dddddd">
                     <tr style={{ height: '9.1rem', background: '', borderTopLeftRadius: '1.3rem', }}>

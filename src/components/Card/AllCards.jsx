@@ -211,7 +211,17 @@ const cardInfo = [{
     text: '보타카지노',
     isActive: false,
     group: '4'
-},
+},{
+    id: 22,
+    inactivBackground: bg22,
+    activeBackground: bga22,
+    icon: true,
+    text: '두윈카지노',
+    isActive: false,
+    group: '4',
+    // disable: 'true',
+    // extra: 'true'
+}, 
 {
     id: 13,
     inactivBackground: bg13,
@@ -298,16 +308,6 @@ const cardInfo = [{
     group: '4',
     path: '/hotelcasino/structure',
     extra: 'true'
-}, {
-    id: 22,
-    inactivBackground: bg22,
-    activeBackground: bga22,
-    icon: true,
-    text: '두윈카지노',
-    isActive: false,
-    group: '4',
-    // disable: 'true',
-    // extra: 'true'
 }, {
     id: 221,
     inactivBackground: bg221,

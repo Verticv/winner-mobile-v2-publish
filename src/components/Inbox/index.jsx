@@ -24,7 +24,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "서버 점검 안내",
             isRead: false,
             time: "2021.06.28 15:36",
-            // type: "안내",
+            type: "안내",
+            category: "안내안내안내안내",
             isClicked: true,
             path: '/mypage/inbox/1'
         },
@@ -50,6 +51,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             isRead: true,
             time: "2021.06.28 15:36",
             type: "안내",
+            category: "안내",
             path: '/mypage/inbox/4'
         },
         {
@@ -71,9 +73,10 @@ const Inbox = ({ activeButton, setActiveButton }) => {
         {
             id: 6,
             text: "입금계좌변경안내",
-            isRead: true,
+            isRead: false,
             time: "2021.06.28 15:36",
             type: "안내",
+            category: "안내",
             path: '/mypage/inbox/7'
         },
         {
@@ -82,6 +85,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             isRead: true,
             time: "2021.06.28 15:36",
             type: "안내",
+            category: "안내",
             path: '/mypage/inbox/8'
         },
         {
@@ -90,14 +94,16 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             isRead: true,
             time: "2021.06.28 15:36",
             type: "안내",
+            category: "안내",
             path: '/mypage/inbox/9'
         },
         {
             id: 9,
             text: "입금계좌변경안내",
-            isRead: true,
+            isRead: false,
             time: "2021.06.28 15:36",
             type: "안내",
+            category: "안내",
             path: '/mypage/inbox/10'
         },
         {
@@ -106,6 +112,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             isRead: true,
             time: "2021.06.28 15:36",
             type: "안내",
+            category: "안내",
             path: '/mypage/inbox/11'
         },
     ];

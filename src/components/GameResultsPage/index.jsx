@@ -207,10 +207,10 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                 <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
                             </div>
 
-                            <div style={{ maxWidth: '1242px', margin: '1rem 0rem 0 0rem' }} className="w-full flex flex-col">
+                            <div style={{ maxWidth: '1242px', margin: '0.9rem 0rem 0 0rem' }} className="w-full flex flex-col">
                                 <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
                                     <div id='scroll-wrapper2'
-                                        style={{ padding: '0.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
+                                        style={{ padding: '1.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
                                     >
                                         <div className={`bet-history`} style={{}}>
                                             <HorizontalMenu14 key={15} itemsArray={tabsArray2} isState={selectedTab} setSelectedTab={setSelectedTab} />
@@ -286,7 +286,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                 <Route path="/powerball"
                                     element={
                                         <>
-                                            <div style={{ background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', padding: '0.1875rem', margin: '-0.1rem 2rem 0 1.9rem', borderRadius: '1rem' }}>
+                                            <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)', padding: '0.1875rem', margin: '0 1.875rem', borderRadius: '1.3rem' }}>
                                                 <div style={{
                                                     width: '100%',
                                                     background: '#323232',
