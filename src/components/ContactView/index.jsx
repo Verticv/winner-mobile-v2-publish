@@ -224,7 +224,7 @@ const ContactView = () => {
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.2rem'
                             }}>이전</span>
                         </div>
                     </div>
@@ -239,7 +239,7 @@ const ContactView = () => {
                             onClick={() => navigate('/cscenter/all/contact/all')}
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.2rem'
                             }}>목록보기</span>
                         </div>
                     </div>
@@ -255,7 +255,7 @@ const ContactView = () => {
                             className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-white shadow-to-text" style={{
-                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.49rem'
+                                color: '#ffdfbd', marginLeft: '0.3rem', display: 'flex', marginTop: '0.2rem'
                             }}>다음</span>
                         </div>
                     </div>
