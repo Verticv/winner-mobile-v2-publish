@@ -77,7 +77,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
         {
             id: 6,
             text: "충전환전 문의",
-            isRead: true,
+            isRead: false,
             time: "2021.06.28 15:36",
             category: "충전환전",
             path: '/cscenter/all/contact/view/7'
@@ -101,7 +101,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
         {
             id: 9,
             text: "문의드립니다",
-            isRead: true,
+            isRead: false,
             time: "2021.06.28 15:36",
             category: "기타",
             path: '/cscenter/all/contact/view/10'

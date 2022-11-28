@@ -47,7 +47,7 @@ const AnnouncementView = () => {
                     <div className="announcementView6 relative bg-gray-fafafa border-b border-gray-dddddd flex items-center">
                         <img className="h-12 object-contain" src={WinnerLogo} alt="" />
                         <div className='announcementView7 flex mt-5'>
-                            <div className='announcementView8 bg-gray-dddddd'></div>
+                            <div style={{backgroundColor:'#555555'}} className='announcementView8 bg-gray-dddddd'></div>
                             <p className="text-gray-r7b7b7b tracking-tight -mt-1 font-spoqa">2021.06.28</p>
                         </div>
                     </div>

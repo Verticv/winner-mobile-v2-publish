@@ -22,7 +22,8 @@ const HistoryTable = ({
     isCoupon,
     color,
     width45,
-    inlineText
+    inlineText,
+    isGift
 }) => {
     function Cells({ cards }) {
         const detailButton = (
@@ -118,7 +119,7 @@ const HistoryTable = ({
                                         <span className='font-spoqa' style={{
                                             fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex',
                                             wordBreak: 'break-all',
-                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : firstRowKeysName[0] === '쿠폰명' ? hasButton ? '45rem' : '47rem' : width45 ? '45rem' : hasButton ? isCoupon ? '32rem' : '40rem' : '40rem',
+                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : firstRowKeysName[0] === '쿠폰명' ? isGift ? '43rem' : hasButton ? '48rem' : '47rem' : width45 ? '45rem' : hasButton ? isGift ? '32rem' : isCoupon ? '38rem' : '40rem' : '40rem',
                                             overflow: firstRowKeysName[0] === '아이디' ? 'hidden' : '',
                                             textOverflow: firstRowKeysName[0] === '아이디' ? 'ellipsis' : '',
                                             whiteSpace: firstRowKeysName[0] === '아이디' ? 'nowrap' : '',
