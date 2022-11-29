@@ -25,7 +25,7 @@ function Card({ id, inactivBackground, activeBackground, icon, text, isActive, c
                     <div className={`card-btn ${disable ? 'disable-style' : ''}`} id={id}>
                         <button id={id} className={`${(+cardActive === id) ? 'active-btn' : ''}`}>
                             <span className="text-btn" style={{ color: disable ? '#cccccc' : '' }} id={id}>
-                                {disable ? '준비중' : (extra ? '설명보기' : '게임시작')}
+                                {disable ? '준비중' : (text ==="두윈카지노" ? '게임시작' : extra ? '설명보기' : '게임시작')}
                             </span>
                         </button>
                     </div>
