@@ -90,14 +90,14 @@ const FreeBoardCompose = () => {
 
 
             <div className="two-buttons-container">
-                <button style={{ height: '7.3125rem' }} onClick={() => navigate("/freeboard")} className='shadow-to-box'>
+                <button style={{ height: '7.3125rem' }} onClick={() => navigate("/freeboard")} className='shadow-to-box hover'>
                     <div style={{ width: '100%', height: '100%', borderRadius: '1rem', padding: '0.1875rem' }}>
                         <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #3a6287, #4777ab 50%, #518bcb)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <span style={{ color: '#d6f3ff' }}>작성하기</span>
                         </div>
                     </div>
                 </button>
-                <button style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', height: '7.3125rem', padding: '', fontSize: '2.8125rem' }} onClick={() => navigate("/freeboard")} className='shadow-to-box'>
+                <button style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', height: '7.3125rem', padding: '', fontSize: '2.8125rem' }} onClick={() => navigate("/freeboard")} className='shadow-to-box hover'>
                     <div style={{ background: 'linear-gradient(to top, #4e3d0b, #a3814f 50%, #e7b887)', width: '100%', height: '100%', borderRadius: '1rem', padding: '0.1875rem' }}>
                         <div
                             style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #80603f, #936e49 50%, #a57b51)', borderRadius: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
