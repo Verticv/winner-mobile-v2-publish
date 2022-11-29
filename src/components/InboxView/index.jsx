@@ -65,7 +65,7 @@ const InboxView = () => {
                         <img style={{ width: '12.0625rem' }} className="w-56 object-contain" src={WinnerSmall} alt="" />
                         <div className='flex mt-2' style={{ display: 'flex' }}>
                             <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem', background: '#555555' }} className='bg-gray-dddddd'></div>
-                            <p style={{ fontSize: '2.25rem', color:'#7b7b7b' }} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
+                            <p style={{ fontSize: '2.25rem', color:'#7b7b7b', fontFamily: 'SpoqaHanSansNeo', marginBottom:'2.0rem' }} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
                         </div>
                     </div>
 

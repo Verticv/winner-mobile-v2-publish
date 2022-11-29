@@ -70,7 +70,7 @@ const ESportsBetHistory = ({ isState = 0, setState, showSub = false, isPopup = f
 
             {/* <ScrollButton /> */}
 
-            <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', color: '#7b7b7b', margin: '0 1.875rem', marginTop: '1.875rem', padding: '1.875rem', width: '73.875rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', border: '0.1875rem solid #2e2e2e', borderRadius: '1.3rem' }} className=" w-full flex items-center justify-center shadow-subNavbar rounded-2xl font-spoqaMedium">
+            <div style={{ backgroundColor: isPopup && "#1e1e1e", WebkitTextStroke: "0.2px", fontSize: '2.625rem', color: '#7b7b7b', margin: '0 1.875rem', marginTop: '1.875rem', padding: '1.875rem', width: '73.875rem', display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', border: '0.1875rem solid #2e2e2e', borderRadius: '1.3rem' }} className=" w-full flex items-center justify-center shadow-subNavbar rounded-2xl font-spoqaMedium">
                 베팅내역이 없습니다.
             </div>
 

@@ -74,7 +74,7 @@ const ContactTable = ({
                                     }}
                                     className={`rounded-full font-spoqaMedium tracking-tight flex items-center justify-center cursor-pointer`}
                                 >
-                                    <p style={{ marginTop: '0.3rem', letterSpacing: '-0.05rem' }}>{truncate(type, 6, 6)}</p>
+                                    <p style={{ marginTop: '0.45rem', letterSpacing: '-0.05rem' }}>{truncate(type, 6, 6)}</p>
                                 </div>
                                 <p style={{
                                     textOverflow: 'ellipsis', maxWidth: '37rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',

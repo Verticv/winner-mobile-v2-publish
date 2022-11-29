@@ -252,7 +252,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                 </>
                             ) : selectedTab === 4 ? (
                                 <>
-                                    <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                    <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} isPopup />
 
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         {/* <Pagination page={page} setPage={setPage} /> */}
