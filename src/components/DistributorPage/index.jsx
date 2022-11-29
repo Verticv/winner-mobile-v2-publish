@@ -605,7 +605,7 @@ const DistributorPage = ({
                             </div>
                         </button>
                         {isUserCountOpen[item.id + 2] === true && (
-                            <div className="absolute bottom-0 -mb-px" style={{ position: 'absolute', bottom: '-1rem', right: '4rem' }}>
+                            <div className="absolute bottom-0 -mb-px" style={{ position: 'absolute', bottom: '-1rem' }}>
                                 <img style={{ width: '3.111875rem', height: 'auto' }} className='object-contain' src={BlueTriangle} alt="" />
                             </div>
                         )}
