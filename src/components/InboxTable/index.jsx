@@ -126,7 +126,7 @@ const InboxTable = ({
                         <div
                             className={`w-full flex justify-start font-spoqaMedium tracking-tight text-r585858 text-center`} style={{ display: 'flex' }}>
                             <div style={{ marginTop: '0.2rem', display: 'flex', alignItems: 'center' }} className="w-full flex align-center">
-                                <p className='flex items-center text-gray-r7b7b7b' style={{ fontSize: '2.625rem', color: '#929292', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>{item.category}</p>
+                                {/* <p className='flex items-center text-gray-r7b7b7b' style={{ fontSize: '2.625rem', color: '#929292', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>{item.category}</p> */}
                                 {/* <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1rem auto 0.9rem', background: '#929292' }} className='bg-gray-c5c5c5'></div> */}
                                 <div style={{ fontSize: '2.625rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.07rem' }} className="flex items-center text-gray-r7b7b7b font-spoqa">
                                     {item.time}

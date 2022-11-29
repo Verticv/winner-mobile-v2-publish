@@ -29,9 +29,7 @@ const ContactView = () => {
                 <div style={{ background: '#323232', paddingBottom: '0.1rem', borderRadius: '1.1rem' }} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
                     <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
-                        <div
-                            // style={{ margin: '1.9rem 0' }}
-                            className='sflex w-full justify-center'>
+                        <div className='sflex w-full justify-center'>
                             <div
                                 style={{ backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem' }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
@@ -48,14 +46,14 @@ const ContactView = () => {
                         <img style={{ width: "3.4375rem", height: '4.4375rem', marginTop: '0.6rem' }} src={Rank1} alt="" />
                         <p className='flex mt-1.5 items-center text-gray-r585858 font-spoqaMedium' style={{ margin: '0', fontSize: '2.4375rem', marginLeft: '0.875rem', letterSpacing: '-0.07rem', color: '#929292', fontFamily: 'SpoqaHanSansNeoMedium', maxWidth: '52rem', marginTop: '1.1rem' }}>마이마이프로틴화이팅
                             <div className='flex mt-2' style={{ display: 'inline-block' }}>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: '0.5rem 1rem 0px 1.1rem', background: '#555555',  display: 'inline-block'  }} className='bg-gray-dddddd'></div>
-                                <p style={{ fontSize: '2.25rem', color: '#7b7b7b', fontFamily: 'SpoqaHanSansNeo', marginTop: '2.8rem', letterSpacing: '-0.05rem', margin: '0',  display: 'inline-block'  }} className="-mt-1 text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
+                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: '0.5rem 1rem 0px 1.1rem', background: '#555555', display: 'inline-block' }} className='bg-gray-dddddd'></div>
+                                <p style={{ fontSize: '2.25rem', color: '#7b7b7b', fontFamily: 'SpoqaHanSansNeo', marginTop: '2.8rem', letterSpacing: '-0.05rem', margin: '0', display: 'inline-block' }} className="-mt-1 text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
                             </div>
                         </p>
 
                         <div
                             style={{
-                                position: 'absolute', right: '0', top: '1.2rem', backgroundColor: "#7e7564", marginRight: '1.6rem', paddingBottom: '0', width: 'fit-content',
+                                position: 'absolute', right: '0', backgroundColor: "#7e7564", marginRight: '1.6rem', paddingBottom: '0', width: 'fit-content',
                                 fontSize: '2.4375rem', padding: '0.6rem 1.9rem', height: '4.125rem', marginTop: '0.35rem', letterSpacing: '-0.07rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '2rem'
                             }}
                             className="absolute right-0 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
