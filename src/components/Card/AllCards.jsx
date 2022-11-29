@@ -221,6 +221,7 @@ const cardInfo = [{
     group: '4',
     // disable: 'true',
     // extra: 'true'
+    main: true
 }, 
 {
     id: 13,
@@ -308,6 +309,17 @@ const cardInfo = [{
     group: '4',
     path: '/hotelcasino/structure',
     extra: 'true'
+}, 
+{
+    id: 2232,
+    inactivBackground: bg22,
+    activeBackground: bga22,
+    icon: true,
+    text: '두윈카지노',
+    isActive: false,
+    group: '4',
+    // disable: 'true',
+    extra: 'true'
 }, {
     id: 221,
     inactivBackground: bg221,
@@ -392,7 +404,7 @@ export default function AllCards({ btnActive, setBtnActive }) {
                 />
             ))
                 : <>
-                    {true ? cardInfo.filter((a) => a.group === btnActive).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, disable, extra }) => (
+                    {true ? cardInfo.filter((a) => (a.group === btnActive) && !a.main).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, disable, extra }) => (
                         <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
                             icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path} disable={disable} group={group} extra={extra}
                         />
