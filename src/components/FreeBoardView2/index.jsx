@@ -178,7 +178,7 @@ const FreeBoardView2 = () => {
                                     marginTop: '0.5rem'
                                 }} className="font-spoqaMedium tracking-tight text-gray-r585858">하이도1207
                                     <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1rem auto 1.16rem', background: '#555555', display: 'inline-block' }} className='bg-gray-c5c5c5'></div>
-                                    <p style={{ fontSize: '2.4375rem', color: '#929292', marginTop: '2.2rem', fontFamily: 'RobotoRegular', display: 'inline-block', margin: '0' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:49</p>
+                                    <p style={{ fontSize: '2.4375rem', color: '#7b7b7b', marginTop: '2.2rem', fontFamily: 'RobotoRegular', display: 'inline-block', margin: '0' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:49</p>
                                 </p>
                             </div>
                         </div>
@@ -206,18 +206,6 @@ const FreeBoardView2 = () => {
                             <div className="text-red-d52e2e font-roboto flex items-center justify-center mt-1">2</div>
                         </div> */}
                     </div>
-
-                    {/* <div className="bg-gray-fafafa border-b border-gray-dddddd flex items-center">
-                    
-                    <div className="font-spoqaMedium tracking-tight text-gray-r7b7b7b flex items-center"><img className="" src={Rank1} alt="" />하이도1207</div>
-                    <div className="bg-gray-dddddd"/>
-
-                    <div className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">2021.06.28 15:49</div>
-                    
-                    <div className="bg-gray-dddddd" />
-                    <div className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">댓글</div>
-                    <div className="text-white font-roboto flex items-center justify-center rounded-full bg-red-notification">2</div>
-                </div> */}
 
                     <div style={{ marginBottom: '5.625rem', background: '', padding: '', margin: '1.6rem', borderRadius: '1.3rem' }} className="w-full h-full">
                         <div className="" style={{ background: '', borderRadius: '1.3rem' }}>

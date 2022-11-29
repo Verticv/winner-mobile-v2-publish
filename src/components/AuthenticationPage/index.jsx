@@ -221,7 +221,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                             <div style={{ height: '11.8125rem', marginBottom: '4.0625rem', padding: '0.1875rem', background: 'linear-gradient(to top, #4b3b09, #e8b888)', borderRadius: '2rem' }}>
                                 <button
                                     style={{ padding: '0.5625rem', width: '100%', height: '100%', background: 'linear-gradient(to top, #7f5f3f, #a67c52)', borderRadius: '2rem' }}
-                                    className="hover shadow-to-box"
+                                    className="hover shadow-to-box3"
                                     onClick={() => {
                                         setAuthenticated(true)
                                         navigate('/main')
@@ -235,7 +235,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                             <div style={{ height: '11.8125rem', marginBottom: '4.0625rem', padding: '0.1875rem', background: 'linear-gradient(to top, #3f3d37, #a69685)', borderRadius: '2rem' }}>
                                 <button
                                     style={{ padding: '0.5625rem', width: '100%', height: '100%', background: 'linear-gradient(to top, #4b4742, #786d62)', borderRadius: '2rem' }}
-                                    className="hover shadow-to-box"
+                                    className="hover shadow-to-box3"
                                     onClick={() => setSignup(true)}
                                 >
                                     <div style={{ color: "#ffdfbd", fontSize: '3.1875rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="shadow-to-text">
@@ -634,7 +634,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                 <div style={{ height: '11.8125rem', marginBottom: '4.0625rem', padding: '0.1875rem', background: 'linear-gradient(to top, #4b3b09, #e8b888)', borderRadius: '2rem' }}>
                                     <button
                                         style={{ padding: '0.5625rem', width: '100%', height: '100%', background: 'linear-gradient(to top, #7f5f3f, #a67c52)', borderRadius: '2rem' }}
-                                        className="hover shadow-to-box"
+                                        className="hover shadow-to-box3"
                                         onClick={() => setCompletePopup(true)}
                                     >
                                         <div style={{ color: "#ffdfbd", fontSize: '3.1875rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="shadow-to-text">

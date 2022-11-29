@@ -119,7 +119,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
                                     navigate("/mypage/edit-info")
                                     setSelectedTab("/mypage/edit-info")
                                 }}
-                                className="shadow-to-box flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d hover">
+                                className="shadow-to-box3 flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d hover">
                                 <div style={{ width: '100%', height: '100%', borderRadius: '1rem' }}>
                                     <div
                                         style={{

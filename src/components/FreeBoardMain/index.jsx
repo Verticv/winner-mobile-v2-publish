@@ -297,23 +297,26 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                 item.type === "안내"
                                     ? <div
                                         className='aaa'
-                                        style={{ background: '#0469a3' }}
-                                    // style={{ fontSize: '2.4375rem', padding: '0.0625rem 1.65rem', background: 'blue' }}
-                                    //  className="rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2"
+                                        style={{
+                                            background: '#0469a3',
+                                            maxWidth: '17rem',
+                                            overflow: 'hidden',
+                                            lineHeight: '3.3rem'
+                                        }}
                                     >
-                                        <span
-                                        // className='mt-1.5'
-                                        // style={{ background: 'blue', padding: '0.4rem 1.5rem'}}
-                                        >{truncate(item.category, 6, 6)}</span>
+                                        <span>{truncate(item.category, 6, 6)}</span>
                                     </div>
                                     : item.type === "이벤트"
                                         ? <div
                                             className='aaa'
-                                            style={{ background: '#c08029' }}
-                                        //  style={{ fontSize: '2.4375rem', padding: '0.0625rem 1.65rem' }} className="rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"
+                                            style={{
+                                                background: '#c08029', 
+                                                maxWidth: '17rem',
+                                                overflow: 'hidden',
+                                                lineHeight: '3.3rem'
+                                            }}
                                         ><span
                                             style={{ marginLeft: '-0.3rem' }}
-                                        //  className='mt-1.5'
                                         >{truncate(item.category, 6, 6)}</span></div>
                                         : <div></div>
                             }
@@ -366,6 +369,9 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         color: '#fff',
                                         fontFamily: "SpoqaHanSansNeoMedium",
                                         marginBottom: '0.2rem',
+                                        maxWidth: '17rem',
+                                        overflow: 'hidden',
+                                        lineHeight: '3.3rem'
                                     }}
                                 // className="rounded-full flex items-center justify-center text-white font-spoqaMedium"
                                 >

@@ -31,28 +31,21 @@ const InboxView = () => {
             <div className='shadow-to-box' style={{ margin: '1.875rem', padding: '0.1875rem', background: 'linear-gradient(to top, #1f1f1e, #2f2f2e 50%, #4a4a4a)', borderRadius: '1rem', marginTop: '0' }}>
                 <div style={{ fontFamily: "SpoqaHanSansNeoMedium", color: '#c8c8c8', width: '100%', height: '100%', background: '#323232', borderRadius: '1rem' }} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
-                    <div style={{ borderBottom: '0.1875rem solid #252525', display: 'flex', flexWrap: 'wrap', alignItems: 'center', background: '#2e2e2e', borderTopLeftRadius: '1rem', borderTopRightRadius: '1rem', padding: '0 2rem' }} className="bg-gray-fafafa border-b border-gray-dddddd flex flex-wrap  items-center">
-                        <div style={{ margin: '2.0625rem 0', display: 'flex', width: '100%', justifyContent: 'center' }} className='flex w-full justify-center'>
+                    <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
+                        <div className='sflex w-full justify-center'>
                             <div
-                                style={{
-                                    backgroundColor: "#00a1e9", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', width: 'fit-content',
-                                    display: 'flex', alignItems: 'center', justifyContent: 'center', letterSpacing: '-0.07rem',
-                                    borderRadius: '3rem', color: '#fff'
-                                }}
+                                style={{ backgroundColor: "#00a1e9", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem' }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
-
                                 {truncate('안내안내안내안내안내안내안내안내안내', 6, 6)}
                             </div>
                         </div>
-                        <div style={{ marginBottom: '1.3125rem', display: '', textAlign: 'center', justifyContent: 'center', width: '100%', fontSize: '2.999375rem' }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
+                        <div style={{ marginBottom: '0.5rem', display: '', textAlign: 'center', justifyContent: 'center', width: '100%', fontSize: '2.999375rem', }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
                             서버 점검 안내
                             <span style={{
                                 width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem',
-                                // marginTop: '-0.3rem',
                                 background: '#e9441d',
                                 fontFamily: "RobotoMedium",
-                                // fontSize: '2.4375rem',
                                 padding: '0.132rem 0.735rem',
                                 margin: '0',
                                 marginTop: '0.1rem',
@@ -68,11 +61,11 @@ const InboxView = () => {
                     </div>
 
 
-                    <div style={{ height: '7.3125rem', padding: '1.4375rem 1.875rem', borderBottom: '0.1875rem solid #252525', display: 'flex', alignItems: 'center', color: '#929292', background: '#2e2e2e' }} className="bg-gray-fafafa border-b border-gray-dddddd flex items-center">
+                    <div style={{ height: '8.1rem', padding: '1.4375rem 1.875rem', borderBottom: '0.1875rem solid #252525', display: 'flex', alignItems: 'center', color: '#929292', background: '#2e2e2e' }} className="bg-gray-fafafa border-b border-gray-dddddd flex items-center">
                         <img style={{ width: '12.0625rem' }} className="w-56 object-contain" src={WinnerSmall} alt="" />
                         <div className='flex mt-2' style={{ display: 'flex' }}>
                             <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem', background: '#555555' }} className='bg-gray-dddddd'></div>
-                            <p style={{ fontSize: '2.25rem' }} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
+                            <p style={{ fontSize: '2.25rem', color:'#7b7b7b' }} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
                         </div>
                     </div>
 
