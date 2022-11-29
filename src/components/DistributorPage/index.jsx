@@ -493,7 +493,7 @@ const DistributorPage = ({
             );
             setUserCountOpen(updatedCheckedState);
         };
-
+    
         const handleOnChange2 = (position) => {
             const updatedCheckedState = subArrowClicked.map((item, index) =>
                 index === position ? !item : item
@@ -641,7 +641,7 @@ const DistributorPage = ({
                                             onClick={() => handleOnChange2(0)}
                                         >
                                             <p style={{ color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '2.625rem' }}>아이디</p>
-                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isArrowUp[0] === true ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[0] === true ? "transform rotate-180" : ""}`} alt="" />
+                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: subArrowClicked[0] === true ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[0] === true ? "transform rotate-180" : ""}`} alt="" />
                                         </button>
                                         <div style={{ width: '18rem', textAlign: 'center', paddingLeft: '3.4rem', paddingTop: '0.6rem' }} className="text-center -mt-3.5">별명</div>
                                         <button
@@ -653,7 +653,7 @@ const DistributorPage = ({
                                                 <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>하부</div>
                                                 <div className="flex items-center -mt-3.5" style={{ display: 'flex', alignItems: 'center', marginTop: '' }}>유저수</div>
                                             </div>
-                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isArrowUp[1] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[1] === false ? "transform rotate-180" : ""}`} alt="" />
+                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: subArrowClicked[1] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[1] === false ? "transform rotate-180" : ""}`} alt="" />
                                         </button>
                                         <button
                                             style={{ width: '18rem', height: '100%', fontSize: '2.4rem', textAlign: 'center', background: 'bottom', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
@@ -665,7 +665,7 @@ const DistributorPage = ({
                                                 <div style={{ height: '3.29rem', display: 'flex', alignItems: 'center', margin: '-0.5rem 0' }} className="flex items-center -mt-3.5">로그인일시</div>
                                                 <div style={{ height: '3.29rem', display: 'flex', alignItems: 'center' }} className="flex items-center -mt-3.5">(미접속일수)</div>
                                             </div>
-                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', fontSize: '2.4rem', transform: isArrowUp[2] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[2] === false ? "transform rotate-180" : ""}`} alt="" />
+                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', fontSize: '2.4rem', transform: subArrowClicked[2] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[2] === false ? "transform rotate-180" : ""}`} alt="" />
                                         </button>
                                         <div style={{ width: '18rem', textAlign: 'center' }} className="text-center">요율보기</div>
                                         <div style={{ width: '18rem', textAlign: 'center' }} className="text-center -mt-3.5">입금액</div>
@@ -676,7 +676,7 @@ const DistributorPage = ({
                                             onClick={() => handleOnChange2(3)}
                                         >
                                             <p style={{ color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '2.625rem' }}>출금액</p>
-                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isArrowUp[3] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[3] === false ? "transform rotate-180" : ""}`} alt="" />
+                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: subArrowClicked[3] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[3] === false ? "transform rotate-180" : ""}`} alt="" />
                                         </button>
                                         <div style={{ padding: '0', margin: '0', background: 'bottom', width: '18rem', textAlign: 'center' }} className="text-center">입출금액</div>
                                         <button
@@ -685,7 +685,7 @@ const DistributorPage = ({
                                             onClick={() => handleOnChange2(4)}
                                         >
                                             <p style={{ color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '2.625rem' }}>베팅액</p>
-                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isArrowUp[4] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[4] === false ? "transform rotate-180" : ""}`} alt="" />
+                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: subArrowClicked[4] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[4] === false ? "transform rotate-180" : ""}`} alt="" />
                                         </button>
                                         <button
                                             style={{ padding: '0', margin: '0', background: 'bottom', width: '18rem', display: 'flex', height: '100%', textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}
@@ -693,7 +693,7 @@ const DistributorPage = ({
                                             onClick={() => handleOnChange2(5)}
                                         >
                                             <p style={{ color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '2.625rem' }}>윈루즈</p>
-                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isArrowUp[5] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[5] === false ? "transform rotate-180" : ""}`} alt="" />
+                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: subArrowClicked[5] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[5] === false ? "transform rotate-180" : ""}`} alt="" />
                                         </button>
                                         <div style={{ width: '18rem', textAlign: 'center' }} className="text-center">상세내역</div>
                                         <button
@@ -702,7 +702,7 @@ const DistributorPage = ({
                                             onClick={() => handleOnChange2(6)}
                                         >
                                             <p style={{ color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '2.625rem' }}>포인트</p>
-                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isArrowUp[6] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[6] === false ? "transform rotate-180" : ""}`} alt="" />
+                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: subArrowClicked[6] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[6] === false ? "transform rotate-180" : ""}`} alt="" />
                                         </button>
                                         <button
                                             style={{ padding: '0', margin: '0', background: 'bottom', width: '18rem', height: '100%', display: 'flex', textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}
@@ -713,7 +713,7 @@ const DistributorPage = ({
                                                 <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '2.625rem' }}>보유</div>
                                                 <div className="flex items-center -mt-3.5" style={{ display: 'flex', alignItems: 'center', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '2.625rem' }}>금액</div>
                                             </div>
-                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: isArrowUp[7] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[7] === false ? "transform rotate-180" : ""}`} alt="" />
+                                            <img style={{ width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', transform: subArrowClicked[7] === false ? "rotate(180deg)" : "" }} src={WhiteArrow} className={`${isArrowUp[7] === false ? "transform rotate-180" : ""}`} alt="" />
                                         </button>
                                     </div>
                                     <RecommendedUserCell items={RecommendedUserArray2} />
