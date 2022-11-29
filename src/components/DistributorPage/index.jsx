@@ -291,21 +291,21 @@ const DistributorPage = ({
         <>
             <div className="w-full flex">
                 <div style={{ display: 'flex', }}>
-                    <div style={{ width: '38.5rem', height: '6.3rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '', marginTop: '1.8rem', marginLeft: '1rem', fontFamily: 'SpoqaHanSansNeoMedium', marginBottom: '1.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
+                    <div style={{ width: '38.5rem', height: '5.7rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '', marginTop: '1.8rem', marginLeft: '1rem', fontFamily: 'SpoqaHanSansNeoMedium', marginBottom: '1.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                         <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '1.5rem' }} className="object-contain" src={Diamond} alt="" />
                         <div style={{ marginTop: '0.15rem' }} className="flex items-center">
                             <span className="text-white flex-shrink-0" style={{ color: '#ffdfbd' }}>입금 :</span>
                             <span className="text-yellow-ffcc00 ml-3" style={{ color: '#ffcc00', letterSpacing: '0', marginLeft: '0.6rem' }}>{truncate("000,000,000", 15, 15)}</span>
                         </div>
                     </div>
-                    <div style={{ width: '38.5rem', height: '6.3rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '', marginTop: '1.8rem', marginLeft: '1rem', fontFamily: 'SpoqaHanSansNeoMedium', marginBottom: '1.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
+                    <div style={{ width: '38.5rem', height: '5.7rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '', marginTop: '1.8rem', marginLeft: '1rem', fontFamily: 'SpoqaHanSansNeoMedium', marginBottom: '1.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                         <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '1.5rem' }} className="object-contain" src={Diamond} alt="" />
                         <div style={{ marginTop: '0.15rem' }} className="flex items-center">
                             <span className="text-white flex-shrink-0" style={{ color: '#ffdfbd' }}>보너스 : </span>
                             <span className="text-yellow-ffcc00 ml-3" style={{ color: '#ffcc00', letterSpacing: '0', marginLeft: '0.6rem' }}>{truncate("0", 15, 15)}</span>
                         </div>
                     </div>
-                    <div style={{ width: '38.5rem', height: '6.3rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '', marginTop: '1.8rem', marginLeft: '1rem', fontFamily: 'SpoqaHanSansNeoMedium', marginBottom: '1.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
+                    <div style={{ width: '38.5rem', height: '5.7rem', border: '0.1875rem solid #635f5b', fontSize: '2.625rem', borderRadius: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#2e2e2e', padding: '', marginTop: '1.8rem', marginLeft: '1rem', fontFamily: 'SpoqaHanSansNeoMedium', marginBottom: '1.1rem' }} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                         <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '1.5rem' }} className="object-contain" src={Diamond} alt="" />
                         <div style={{ marginTop: '0.15rem' }} className="flex items-center">
                             <span className="text-white flex-shrink-0" style={{ color: '#ffdfbd' }}>출금 : </span>
@@ -321,7 +321,7 @@ const DistributorPage = ({
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">스포츠</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">미니게임</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem' }} className="text-center">에볼루션</td>
-                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '1rem' }} className="text-center flex flex-col"><span>프레그메틱</span><br /><span className='-mt-3.5' >플레이</span></td>
+                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem', letterSpacing:'-0.1rem' }} className="text-center flex flex-col"><span>프레그메틱</span><br /><span className='-mt-3.5' >플레이</span></td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '3rem' }} className="text-center">로얄지</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '2rem' }} className="text-center flex flex-col"><span>아시아</span><br /><span className='-mt-3.5'>게이밍</span></td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '2.5rem' }} className="text-center flex flex-col"><span>드림</span><br /><span className='-mt-3.5'>게이밍</span></td>
