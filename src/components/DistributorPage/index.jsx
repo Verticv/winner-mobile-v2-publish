@@ -844,7 +844,7 @@ const DistributorPage = ({
 
                             <div className='flex relative div-shadow' style={{ display: 'flex', position: 'relative' }}>
                                 <div style={{ padding: '0', width: '114.75rem', background: '#1e1e1e' }} className=''>
-                                    <div style={{ width: '75.925rem', overflowX: 'scroll', background: 'linear-gradient(to top, #1f1f1e, #343434 80%)', padding: '0.1875rem', margin: '0 1.7rem', boxShadow: '0 0.4375rem 3rem 0 #000', borderTopLeftRadius: '1rem', borderBottomLeftRadius: '1rem' }} className="w-full overflow-scroll">
+                                    <div style={{ width: '75.925rem', overflowX: 'scroll', background: 'linear-gradient(to top, #1f1f1e, #343434 80%)', padding: '0.1875rem', margin: '0 1.7rem', boxShadow: '0 0rem 1rem 0 #000', borderTopLeftRadius: '1rem', borderBottomLeftRadius: '1rem' }} className="w-full overflow-scroll">
                                         <table style={{ width: '425.3rem', padding: '', display: 'block', borderCollapse: 'collapse', background: '#2e2e2e', borderTopRightRadius: '1rem', borderTopLeftRadius: '1rem', borderBottomLeftRadius: '1rem' }} className="w-full">
                                             <thead style={{ height: '8.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', borderBottom: '0.1875rem solid #252525' }} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
                                                 <tr style={{ height: '8.8125rem', letterSpacing: '-0.07rem' }} className="flex items-center">
@@ -996,7 +996,7 @@ const DistributorPage = ({
 
                             <div className='flex relative div-shadow' style={{ display: 'flex', position: 'relative' }}>
                                 <div style={{ padding: '0', width: '114.75rem' }} className=''>
-                                    <div style={{ width: '75.625rem', background: 'linear-gradient(to top, #1f1f1e, #343434 80%)', borderTopLeftRadius: '0.4rem', borderBottomLeftRadius: '0.4rem', overflow: 'scroll', height: '35.8rem', marginLeft: '1.875rem', padding: '0.1875rem', boxShadow: 'rgb(0 0 0) 0 0.4375rem 3rem 0' }} className="w-full overflow-scroll">
+                                    <div style={{ width: '75.625rem', background: 'linear-gradient(to top, #1f1f1e, #343434 80%)', borderTopLeftRadius: '0.4rem', borderBottomLeftRadius: '0.4rem', overflow: 'scroll', height: '35.8rem', marginLeft: '1.875rem', padding: '0.1875rem', boxShadow: 'rgb(0 0 0) 0 0rem 1rem 0' }} className="w-full overflow-scroll">
                                         <table style={{ width: '469.625rem', padding: '', display: 'block', background: '', borderCollapse: 'collapse' }} className="w-full">
                                             <thead style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', background: '#242424', color: '#ccc2b6' }} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-white tracking-tight">
                                                 <tr style={{ height: '8.925rem', borderBottom: '0.1875rem solid #252525' }} className="flex items-center border-b">
@@ -1231,7 +1231,7 @@ const DistributorPage = ({
                                 borderTopLeftRadius: '0.4rem',
                                 borderBottomLeftRadius: '0.4rem',
                                 background: 'linear-gradient(to top, rgb(31, 31, 30), rgb(52, 52, 52) 80%)',
-                                boxShadow: 'rgb(0 0 0) 0px 0.4375rem 3rem 0px',
+                                boxShadow: 'rgb(0 0 0) 0px 0rem 1rem 0px',
                                 marginTop: '0.375rem',
                             }}>
                                 <div style={{ padding: '0', width: '114.75rem', background: '' }} className=''>

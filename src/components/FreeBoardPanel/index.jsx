@@ -17,7 +17,7 @@ const FreeBoardPanel = ({
                     <TableHeader smallCard />
                     <div style={{ padding: '0.9rem' }} className="w-full">
                         <div className="w-full rounded-lg" style={{ padding: '0.2875rem 0.1875rem' }}>
-                            <div className='rounded-lg w-full' style={{ border: '0.4rem solid #473b35', borderRadius: '0.4rem' }}>
+                            <div className='rounded-lg w-full shadow-to-box' style={{ border: '0.4rem solid #473b35', borderRadius: '0.4rem' }}>
                                 <CardHeader flag='us' name='MLS' date='2021-06-29 15:45' smallCard />
                                 <CardResults
                                     bet="right"
@@ -47,7 +47,7 @@ const FreeBoardPanel = ({
                     <TableHeader smallCard />
                     <div style={{ padding: '0 0.65rem' }} className="w-full">
                         <div className="w-full rounded-lg" style={{ padding: '0.2875rem 0.1875rem' }}>
-                            <div className='rounded-lg w-full' style={{ background: '', border: '0.4rem solid #473b35', borderRadius: '0.4rem' }}>
+                            <div className='rounded-lg w-full  shadow-to-box' style={{ background: '', border: '0.4rem solid #473b35', borderRadius: '0.4rem' }}>
                                 <CardHeader flag='uk' name='EPL' date='2021-06-29 15:45' smallCard />
                                 <CardResults
                                     bet="left"

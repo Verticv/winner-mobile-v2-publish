@@ -39,33 +39,12 @@ import SlotBetHistory from '../SlotBetHistory';
 import ESportsBetHistory from '../ESportsBetHistory';
 import ARGameBetHistory from '../ARGameBetHistory';
 import DateSearchBar from '../DateSearchBar';
-import MinigameBetHistoryPopup from '../MinigameBetHistory';
+import MinigameBetHistoryPopup from '../MinigameBetHistoryPopup';
+import HotelCasinoBetHistory from '../HotelCasinoBetHistory'
 
 const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
 
-    // const tabsArray = [
-    //     { text: "라이브카지노", icon: Icon2, id: 0 },
-    //     { text: "슬롯게임", icon: Icon3, id: 1 },
-    //     { text: "스포츠", icon: Icon4, id: 2, path: '/freeboard/compose' },
-    //     { text: "e-스포츠", icon: Icon5, id: 3 },
-    //     { text: "미니게임", icon: Icon6, id: 4 },
-    //     { text: "키론가상게임", icon: Icon7, id: 5 },
-    //     { text: "피싱게임", icon: Icon8, id: 6 },
-    //     { text: "로터리게임", icon: Icon9, id: 7 }
-    // ];
     const tabsArray = [{
-        //     id: 0,
-        //     icon: icon1,
-        //     activeIcon: icon1Active,
-        //     text: '전체',
-        //     width: '5.375rem',
-        //     height: '5.375rem',
-        //     marginTop: '0.4rem',
-        //     textMargin: '0.8rem',
-        //     isActive: false,
-        //     path: '/freeboard/compose',
-        // },
-        // {
         id: 0,
         icon: icon2,
         activeIcon: icon2Active,
@@ -169,6 +148,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
     const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
+    const [subActiveButton, setSubActiveButton] = useState(0)
 
     const [page, setPage] = useState(0)
 
@@ -213,7 +193,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                     <div className="w-full">
                         <div
                             style={{
-                                // height: 'calc(var(--vh, 1vh) * 100)',
                                 height: 'auto',
                                 width: '77.625rem',
                             }}
@@ -245,14 +224,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                     </div>
                                 </>
                             ) : selectedTab === 2 ? (
-                                // <div className="-mt-20px space-y-20px">
-                                //     <SportsBetHistory  checkedState={checkedState} setCheckedState={setCheckedState} showSub={false} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen} />
-                                //     <Pagination page={page} setPage={setPage}/>   
-                                // </div>
                                 <div style={{ marginBottom: '5.625rem', paddingBottom: '0.1rem' }} className="w-full h-full">
-                                    {/* <img src={img} alt=''
-                                        style={{ position: 'fixed', top: '0', opacity: '0.5' }}
-                                    /> */}
                                     <div style={{ marginTop: '1rem' }} className='ar-date'>
                                         <DateSearchBar isGameResultsSearch={true} isFreeboard='true' />
                                     </div>
@@ -269,28 +241,35 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                 </div>
                             ) : selectedTab === 3 ? (
                                 <>
-                                    <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                    <HotelCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}
+                                        subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                    />
+                                    <LiveCasinoBetHistory key={100} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} margon1 />
+
                                     <div style={{ marginTop: '1.25rem' }}>
-                                        {/* <Pagination page={page} setPage={setPage} /> */}
+                                        <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
                             ) : selectedTab === 4 ? (
                                 <>
-                                    <MinigameBetHistoryPopup isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                    <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         {/* <Pagination page={page} setPage={setPage} /> */}
                                     </div>
                                 </>
                             ) : selectedTab === 5 ? (
                                 <>
-                                    <ARGameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                    <MinigameBetHistoryPopup isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
                             ) : selectedTab === 6 ? (
                                 <>
-                                    <SlotBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                    <ARGameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
@@ -298,12 +277,14 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                             ) : selectedTab === 7 ? (
                                 <>
                                     <SlotBetHistory key={20} isState={selectedSubTab} setState={setSelectedSubTab} />
+
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
                             ) : selectedTab === 8 ? (
                                 <>
+
                                     <LiveCasinoBetHistory key={100} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} margon1 />
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />

@@ -1,30 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
-// import SubHorizontalMenu from '../SubHorizontalMenu'
 import HistoryTable from '../HistoryTable'
-// import ScrollButton from '../ScrollButton'
 import SelectAllButton from '../SelectAllButton'
 import Icon1 from '../../assets/myPage/second-btns/1.png'
 import Icon2 from '../../assets/myPage/second-btns/icon5.png'
 import Icon3 from '../../assets/myPage/second-btns/icon7.png'
 import Icon4 from '../../assets/myPage/second-btns/icon6.png'
-// import Icon7 from '../../assets/myPage/second-btns/5.png'
-// import Icon8 from '../../assets/myPage/second-btns/6.png'
-// import Icon9 from '../../assets/myPage/second-btns/7.png'
-// import Icon10 from '../../assets/myPage/second-btns/8.png'
 import activeBG from '../../assets/myPage/second-btns/active-bg.png'
 import HorizontalSubMenu from '../HorizontalSubMenuDefault'
 import { useNavigate } from 'react-router-dom'
-// import img22 from '../../img22.png'
 
 const subTabsArray = [
     { text: "전체", icon: Icon1, id: 0, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
     { text: "보타카지노", icon: Icon2, id: 1, activeBG: activeBG, width: '19.375rem', path: '#' },
     { text: "두윈카지노", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
     { text: "준비중", icon: Icon4, id: 3, activeBG: activeBG, width: '19.375rem', path: '#' },
-    // { text: "드림게이밍", icon: Icon8, id: 4, activeBG: activeBG, width: '19.375rem', path: '#' },
-    // { text: "섹시게이밍", icon: Icon9, id: 5, activeBG: activeBG, width: '19.375rem', path: '#' },
-    // { text: "빅게이밍", icon: Icon10, id: 6, activeBG: activeBG, width: '19.375rem', path: '#' },
 ];
 
 // 베팅번호 => number

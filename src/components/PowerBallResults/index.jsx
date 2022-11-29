@@ -14,9 +14,9 @@ const PowerBallResults = ({ array }) => {
                 className="powerballresult-content7"
             >
                 <div style={{ width: "10.875rem", paddingRight: '0.3rem' }} className="powerballresult-content8"><div className='powerballresult-content9'><p>{item.count}</p><p>{item.powerball}</p></div></div>
-                <div style={{ width: "20.0625rem" }} className="powerballresult-content8"><div className='powerballresult-content9'><p>{item.chosenNum}</p><p style={{ color: "#0056a6" }}>{item.powerballOdd ? "홀" : "짝"}</p></div></div>
+                <div style={{ width: "20.0625rem" }} className="powerballresult-content8"><div className='powerballresult-content9'><p>{item.chosenNum}</p><p style={{ color: "#4c98ff" }}>{item.powerballOdd ? "홀" : "짝"}</p></div></div>
                 <div style={{ width: "20.0625rem", paddingLeft: '0.5rem' }} className="powerballresult-content8"><div className='powerballresult-content9'><p>{item.numberSum}</p><p>{item.size}</p></div></div>
-                <div style={{ width: "20.0625rem", color: "#e9441d", paddingLeft: '0.5rem' }} className="powerballresult-content8"><div className='powerballresult-content9'><p>{item.odd ? "홀" : "짝"}</p><p className='powerballresult-content10'>{item.range}</p></div></div>
+                <div style={{ width: "20.0625rem", color: "#e65454", paddingLeft: '0.5rem' }} className="powerballresult-content8"><div className='powerballresult-content9'><p>{item.odd ? "홀" : "짝"}</p><p className='powerballresult-content10'>{item.range}</p></div></div>
 
                 {/* <div style={{width: "10.875rem"}} className="text-center">{item.powerball}</div> */}
                 {/* <div style={{width: "20.0625rem", color:"#0056a6"}} className="text-center">{item.powerballOdd ? "홀" : "짝"}</div> */}

@@ -558,7 +558,6 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
                 />
                 <Route path="/powerladder"
                     element={
-
                         <PowerLadderBetHistoryPanel isPopup={isPopup} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} />
                     }
                 >
