@@ -434,7 +434,8 @@ const DistributorPage = ({
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right pr-4">0</td>
-                                <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'center', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right pr-4 h-full flex items-center justify-end"></td>
+                                <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'right', paddingRight: '3.8rem', paddingBottom: '0.4rem' }} className="text-right pr-4 h-full flex items-center justify-end">0</td>
+
                             </tr>
                             <tr style={{ height: '8.925rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem', background: '#323232' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
                                 <td style={{ width: '13.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', textAlign: 'center', padding: '0.3rem 0 0 0.5rem', background: '#2c2c2c ' }} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">정산금액</td>
@@ -473,7 +474,7 @@ const DistributorPage = ({
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right">0</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right">0</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right pr-4">0</td>
-                                <td style={{ backgroundColor: "#2c2c2c", color: "#", width: '13.8125rem', textAlign: 'center', paddingRight: '0.8rem', }} className="text-right pr-4 h-full flex items-center justify-end"></td>
+                                <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'right', paddingRight: '3.8rem', paddingBottom: '0.4rem' }} className="text-right pr-4 h-full flex items-center justify-end">0</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1115,7 +1116,7 @@ const DistributorPage = ({
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
                                                     {/* <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right pr-4">0</td> */}
-                                                    <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'center', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right pr-4 h-full flex items-center justify-end"></td>
+                                                    <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'right', paddingRight: '3.8rem', paddingBottom: '0.2rem' }} className="text-right pr-4 h-full flex items-center justify-end">0</td>
                                                 </tr>
                                                 <tr style={{ height: '8.925rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem', background: '#323232' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
                                                     <td style={{ width: '13.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', textAlign: 'center', padding: '0.3rem 0 0 0.5rem', background: '#2c2c2c ' }} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">정산금액</td>
@@ -1154,7 +1155,7 @@ const DistributorPage = ({
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right">0</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right">0</td>
                                                     {/* <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0rem' }} className="text-right pr-4">0</td> */}
-                                                    <td style={{ backgroundColor: "#2c2c2c", color: "#", width: '13.8125rem', textAlign: 'center', paddingRight: '0.8rem', }} className="text-right pr-4 h-full flex items-center justify-end"></td>
+                                                    <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'right', paddingRight: '3.8rem', paddingBottom: '0.2rem' }} className="text-right pr-4 h-full flex items-center justify-end">0</td>
                                                 </tr>
                                             </tbody>
                                         </table>
