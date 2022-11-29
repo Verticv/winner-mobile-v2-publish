@@ -13,9 +13,16 @@ const ContactTable = ({
 }) => {
 
     const navigate = useNavigate();
+    const truncate = (str, max, len) => {
+        return str.length > max ? str.substring(0, len) : str;
+    }
 
     function InboxList({ items }) {
-        return items.map(item => (
+
+        return items.map(item => {
+
+            const type = item.isRead === true ? "답변완료" : "답변대기"
+            return (
             <div
                 key={item.id}
                 onClick={() => navigate(item.path)}
@@ -64,10 +71,12 @@ const ContactTable = ({
                                 }}
                                 className={`rounded-full font-spoqaMedium tracking-tight flex items-center justify-center cursor-pointer`}
                             >
-                                <p style={{ marginTop: '0.3rem', letterSpacing: '-0.05rem' }}>{item.isRead === true ? "답변완료" : "답변대기"}</p>
+                                <p style={{ marginTop: '0.3rem', letterSpacing: '-0.05rem' }}>{truncate(type, 6, 6)}</p>
                             </div>
-                            <p style={{ textOverflow: 'ellipsis', maxWidth: '37rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
-                                color: item.isRead === true ? '#a0a0a0' : '#c8c8c8', marginTop: '0.5rem' }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap mt-1">{item.text}</p>
+                            <p style={{
+                                textOverflow: 'ellipsis', maxWidth: '37rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
+                                color: item.isRead === true ? '#a0a0a0' : '#c8c8c8', marginTop: '0.5rem'
+                            }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap mt-1">{item.text}</p>
                             {item.isRead === false && (
                                 <div className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto n-div">
                                     N
@@ -88,11 +97,11 @@ const ContactTable = ({
                     </div>
 
                 </div>
-                <button className='absolute right-0 ' style={{ position: 'absolute', right: '4.5rem', background: 'bottom', zIndex:5 }} onClick={e => e.stopPropagation() }>
+                <button className='absolute right-0 ' style={{ position: 'absolute', right: '4.5rem', background: 'bottom', zIndex: 5 }} onClick={e => e.stopPropagation()}>
                     <img className='hover' style={{ width: '4rem', height: '4.375rem' }} src={item.isRead ? DeleteDark : Delete} alt="" />
                 </button>
             </div>
-        ));
+        )});
     }
 
     return (

@@ -229,6 +229,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
 
     ];
 
+    const category = "베팅내역"
     const navigate = useNavigate();
     const [page, setPage] = useState(0)
     useEffect(() => {
@@ -368,7 +369,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                     }}
                                 // className="rounded-full flex items-center justify-center text-white font-spoqaMedium"
                                 >
-                                    <span className='mt-1.5'>{truncate("베팅내역", 6, 6)}</span>
+                                    <span className='mt-1.5'>{truncate(category, 6, 6)}</span>
                                 </div>
                             )}
                             {item.isRead === false && (
@@ -415,7 +416,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                             overflow: 'hidden',
                                             textOverflow: 'ellipsis'
                                         }}>{item.author}</p>
-                                        <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#929292' }} className='bg-gray-c5c5c5'></div>
+                                        <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                                         {item.type === "일반" && (
                                             <div style={{ fontSize: '2.61875rem', fontFamily: 'SpoqaHanSansNeo', marginLeft: '-0.1rem', letterSpacing: '-0.059rem' }} className="flex items-center text-gray-r7b7b7b font-spoqa">
                                                 {item.time}

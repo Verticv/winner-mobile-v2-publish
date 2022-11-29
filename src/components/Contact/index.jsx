@@ -52,10 +52,10 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
         },
         {
             id: 3,
-            text: "가상게임 문의",
+            text: "키론가상게임 문의",
             isRead: true,
             time: "2021.06.28 15:36",
-            category: "가상게임",
+            category: "키론가상게임",
             path: '/cscenter/all/contact/view/4'
         },
         {

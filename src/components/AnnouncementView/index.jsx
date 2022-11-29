@@ -30,24 +30,24 @@ const AnnouncementView = () => {
             <div style={{}} className='announcementView-1'>
                 <div className="announcementView1 rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
-                    <div className="announcementView2 bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
-                        <div className='announcementView3 flex w-full justify-center'>
+                    <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
+                        <div className='sflex w-full justify-center'>
                             <div
-                                // style={{ backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', paddingBottom: '0', width: 'fit-content' }}
+                                style={{ backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem' }}
                                 className="announcementView4 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
                                 {truncate('스포츠스포츠스포츠', 6, 6)}
                             </div>
                         </div>
-                        <div className="announcementView5 flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
+                        <div style={{ color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '3rem', letterSpacing: '-0.07rem', marginLeft: '0.2rem' }}  className="announcementView5 flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
                             농구[쿼터]/배구[세트] 스페셜 규정
                         </div>
                     </div>
 
-                    <div className="announcementView6 relative bg-gray-fafafa border-b border-gray-dddddd flex items-center">
+                    <div style={{minHeight: '8.18rem', padding: '1.4375rem 1.65rem'}} className="announcementView6 relative bg-gray-fafafa border-b border-gray-dddddd flex items-center">
                         <img className="h-12 object-contain" src={WinnerLogo} alt="" />
                         <div className='announcementView7 flex mt-5'>
-                            <div style={{backgroundColor:'#555555'}} className='announcementView8 bg-gray-dddddd'></div>
+                            <div style={{ backgroundColor: '#555555' }} className='announcementView8 bg-gray-dddddd'></div>
                             <p className="text-gray-r7b7b7b tracking-tight -mt-1 font-spoqa">2021.06.28</p>
                         </div>
                     </div>

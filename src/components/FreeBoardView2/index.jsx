@@ -121,7 +121,7 @@ const FreeBoardView2 = () => {
                     <img style={{ width: '2.25625rem', height: '2.25625rem', marginRight: '1.65rem', marginLeft: '-0.2rem' }} src={ReplyArrow} alt="" />
                     <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.6125rem', marginTop: '-0.1rem' }} className='object-contain' src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
                     <p style={{ fontSize: '2.624375rem', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">{username}</p>
-                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#929292', }} className='bg-gray-c5c5c5'></div>
+                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555', }} className='bg-gray-c5c5c5'></div>
                     <p style={{ fontSize: '2.25rem', color: '#929292' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
                 </div>
             </div>
@@ -177,7 +177,7 @@ const FreeBoardView2 = () => {
                                     margin: '0',
                                     marginTop: '0.5rem'
                                 }} className="font-spoqaMedium tracking-tight text-gray-r585858">하이도1207
-                                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1rem auto 1.16rem', background: '#929292', display: 'inline-block' }} className='bg-gray-c5c5c5'></div>
+                                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1rem auto 1.16rem', background: '#555555', display: 'inline-block' }} className='bg-gray-c5c5c5'></div>
                                     <p style={{ fontSize: '2.4375rem', color: '#929292', marginTop: '2.2rem', fontFamily: 'RobotoRegular', display: 'inline-block', margin: '0' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:49</p>
                                 </p>
                             </div>
@@ -353,7 +353,7 @@ const FreeBoardView2 = () => {
                             }}>
                                 <img style={{ width: '3.450625rem', height: '4.436875rem', marginRight: '0.5625rem', marginLeft: '-0.3rem' }} className='object-contain' src={Rank2} alt="" />
                                 <p style={{ fontSize: '2.624375rem', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#929292' }} className='bg-gray-c5c5c5'></div>
+                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                                 <p style={{ fontSize: '2.25rem', color: '#929292' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
                             </div>
                         </div>
@@ -415,7 +415,7 @@ const FreeBoardView2 = () => {
                             <div className="flex items-center" style={{ display: 'flex', color: '#929292', alignItems: 'center', height: '4.85rem', letterSpacing: '-0.07rem' }}>
                                 <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.5625rem', marginLeft: '-0.1rem' }} className='object-contain' src={Rank2} alt="" />
                                 <p style={{ fontSize: '2.624375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#929292' }} className='bg-gray-c5c5c5'></div>
+                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                                 <p style={{ fontSize: '2.25rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#929292' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
                             </div>
                         </div>
@@ -445,7 +445,7 @@ const FreeBoardView2 = () => {
                             <div className="flex items-center" style={{ display: 'flex', color: '#929292', alignItems: 'center', height: '4.85rem', letterSpacing: '-0.07rem' }}>
                                 <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.6725rem', marginLeft: '-0.25rem' }} className='object-contain' src={Rank2} alt="" />
                                 <p style={{ fontSize: '2.624375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#929292' }} className='bg-gray-c5c5c5'></div>
+                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555' }} className='bg-gray-c5c5c5'></div>
                                 <p style={{ fontSize: '2.25rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#929292' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
                             </div>
                         </div>

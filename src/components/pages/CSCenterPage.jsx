@@ -197,7 +197,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                             setSubActiveButton('/cscenter')
                                         }, [setSubActiveButton])
                                         }
-                                        <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
+                                        <HomePageTopBanner pageTitle='공지사항' toPath='/cscenter' />
                                         <div style={{ marginBottom: '19.625rem', paddingBottom: '0.1rem' }}>
                                             <AnnouncementView />
                                         </div>
