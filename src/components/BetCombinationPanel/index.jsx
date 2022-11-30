@@ -858,8 +858,7 @@ const BetCombinationPanel = ({
                     <div
                         style={{
                             color: "#ffffff",
-                            // textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem",
-                            textShadow: "rgb(0 0 0 / 31%) 0.325rem 0.325rem 0",
+                            textShadow: "rgb(0 0 0 / 31%) 0.225rem 0.225rem 0",
                         }}
                         className="event-content5 bg-gradient-to-b"
                     >
@@ -893,8 +892,7 @@ const BetCombinationPanel = ({
                     <div
                         style={{
                             color: "#ffffff",
-                            // textShadow: "rgb(0 0 0) 0rem 0rem 0.3rem",
-                            textShadow: "rgb(0 0 0 / 31%) 0.325rem 0.325rem 0",
+                            textShadow: "rgb(0 0 0 / 31%) 0.225rem 0.225rem 0",
                             padding: '0 1rem'
                         }}
                         className="event-content8 bg-gradient-to-b"
@@ -974,12 +972,12 @@ const BetCombinationPanel = ({
                             }}
                             className="normaloption-content1 bg-gradient-to-b"
                         >
-                            <span style={{width:'20rem', textAlign:'start'}} className="normaloption-content2">{hasUp ? truncate(team1, 8, 8) : truncate(team1, 12, 12)}</span>
-                            <span style={{ color: stat1Color === "red" && isButtonOn.indexOf(isSubArray?`${items_id}-${id}left`:`${id}left`)===-1 && `${id}left` !== isHover3 ? "#e65454" : "" }} className="normaloption-content3">
+                            <span style={{ width: '20rem', textAlign: 'start' }} className="normaloption-content2">{hasUp ? truncate(team1, 8, 8) : truncate(team1, 12, 12)}</span>
+                            <span style={{ color: stat1Color === "red" && isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) === -1 && `${id}left` !== isHover3 ? "#e65454" : "" }} className="normaloption-content3">
                                 {hasUp === true && (
                                     <img className='normaloption-content4' style={{ width: '1.3125rem', height: '1.125rem' }} src={UpIcon} alt="" />
                                 )}
-                                <div style={{width: '5rem', justifyContent: 'center', display:'flex', position:'relative'}}>
+                                <div style={{ width: '5rem', justifyContent: 'center', display: 'flex', position: 'relative' }}>
                                     <p>{stat1}</p>
                                 </div>
                             </span>
@@ -987,7 +985,7 @@ const BetCombinationPanel = ({
                         {buttonWithExtraData?.text && (
                             <p style={{ fontSize: '1.875rem', marginLeft: '1.4875rem' }} className="normaloption-content5">
                                 <img style={{ maxWidth: '2.5625rem', maxHeight: '2.5625rem', marginRight: '0.1875rem' }} className="" src={buttonWithExtraData?.img} alt="" />
-                                <span style={{ color: isButtonOn.indexOf(isSubArray?`${items_id}-${id}left`:`${id}left`)===-1 && `${id}left` !== isHover3 ? "#7b7b7b" : "#fadcdc" }} className='normaloption-content6'>{buttonWithExtraData?.text}</span>
+                                <span style={{ color: isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) === -1 && `${id}left` !== isHover3 ? "#7b7b7b" : "#fadcdc" }} className='normaloption-content6'>{buttonWithExtraData?.text}</span>
                             </p>
                         )}
                     </button>
@@ -1053,7 +1051,7 @@ const BetCombinationPanel = ({
                         // background: 'linear-gradient(to top, #3c3c3b, #6b6865)',
                         marginRight: '0.45rem',
                         borderRadius: '0.5rem',
-                        background: (isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3)
+                        background: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}right` : `${id}right`) > -1 || `${id}right` === isHover3)
                             ? "linear-gradient(to bottom, #4f4a41, #2f2c28)"
                             : isSubButton ? 'linear-gradient(to top, #2a2a2a, #434343)' : "linear-gradient(to top, #3c3c3b, #6b6865)",
                     }}
@@ -1065,7 +1063,7 @@ const BetCombinationPanel = ({
                             // padding: '1px',
                             fontSize: '2.625rem',
                             // marginRight: '0.45rem',
-                            backgroundColor:(isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3"
+                            backgroundColor: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}right` : `${id}right`) > -1 || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3"
                         }}
                         className="normaloption-content10"
                         onClick={() => {
@@ -1080,23 +1078,23 @@ const BetCombinationPanel = ({
                         <div
                             style={{
                                 padding: '0 0.7875rem',
-                                background: (isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3)
+                                background: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}right` : `${id}right`) > -1 || `${id}right` === isHover3)
                                     ? "linear-gradient(to top, #634d38, #987959)"
                                     : isSubButton ? 'linear-gradient(to top, #262626, #333333)' : "linear-gradient(to bottom, #545452, #373736)",
-                                color: (isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3) ? "#ffdfbd" : "#c8c8c8",
-                                textShadow: (isButtonOn.indexOf(isSubArray?`${items_id}-${id}right`:`${id}right`)>-1 || `${id}right` === isHover3) ? "1px 1px 0px #00000070" : ""
+                                color: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}right` : `${id}right`) > -1 || `${id}right` === isHover3) ? "#ffdfbd" : "#c8c8c8",
+                                textShadow: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}right` : `${id}right`) > -1 || `${id}right` === isHover3) ? "1px 1px 0px #00000070" : ""
                             }}
                             className="normaloption-content11 bg-gradient-to-b"
                         >
                             <span className="normaloption-content12">
-                                <div style={{width: '4.9rem', justifyContent: 'center', display:'flex', position:'relative'}}>
+                                <div style={{ width: '4.9rem', justifyContent: 'center', display: 'flex', position: 'relative' }}>
                                     <p>{stat3}</p>
                                 </div>
                                 {hasDown === true && (
                                     <img className='normaloption-content13' style={{ width: '1.3125rem', height: '1.125rem' }} src={DownIcon} alt="" />
                                 )}
                             </span>
-                            <span style={{width:'20rem', textAlign:'end'}} className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 10, 8) : truncate(team2, 10, 8)}</span>
+                            <span style={{ width: '20rem', textAlign: 'end' }} className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 10, 8) : truncate(team2, 10, 8)}</span>
                         </div>
                     </button>
                 </div>
@@ -1251,7 +1249,7 @@ const BetCombinationPanel = ({
                 <img style={{ width: '77.625rem', paddingTop: '0.3rem' }} className="eventoptions-content" src={BonusCell} alt="" />
                 <img style={{ width: '6.75rem' }} className="eventoptions-content1" src={Gift} alt="" />
                 <div className="eventoptions-content2">
-                    <p style={{ color: "#fff", fontSize: '2.625rem', marginTop: "2.3rem", letterSpacing: '-0.07rem', textShadow: "rgb(0 0 0 / 31%) 0.325rem 0.325rem 0", }} className="eventoptions-content3">보너스 이벤트</p>
+                    <p style={{ color: "#fff", fontSize: '2.625rem', marginTop: "2.3rem", letterSpacing: '-0.07rem', textShadow: "rgb(0 0 0 / 31%) 0.225rem 0.225rem 0" }} className="eventoptions-content3">보너스 이벤트</p>
                 </div>
                 <div style={{ marginLeft: '1.9rem' }} className="eventoptions-content4">
                     <EventOptions
@@ -1291,7 +1289,7 @@ const BetCombinationPanel = ({
             </div>
 
 
-        </div>
+        </div >
     )
 }
 
