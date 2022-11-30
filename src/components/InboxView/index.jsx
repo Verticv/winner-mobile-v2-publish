@@ -28,7 +28,7 @@ const InboxView = () => {
                 <HomePageTopBanner pageTitle='쪽지관리' toPath='/mypage/inbox' />
             </div>
 
-            <div className='shadow-to-box' style={{ margin: '1.875rem', padding: '0.1875rem', background: 'linear-gradient(to top, #1f1f1e, #2f2f2e 50%, #4a4a4a)', borderRadius: '1rem', marginTop: '0' }}>
+            <div className='shadow-to-box' style={{ margin: '1.875rem', padding: '0.1875rem', background: 'linear-gradient(to top, #1f1f1e, #2f2f2e 50%, #4a4a4a)', borderRadius: '1.2rem', marginTop: '0' }}>
                 <div style={{ fontFamily: "SpoqaHanSansNeoMedium", color: '#c8c8c8', width: '100%', height: '100%', background: '#323232', borderRadius: '1rem' }} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
                     <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
@@ -44,7 +44,7 @@ const InboxView = () => {
                                 {truncate('안내안내안내안내안내안내안내안내안내', 6, 6)}
                             </div>
                         </div>
-                        <div style={{ marginBottom: '0.5rem', display: '', textAlign: 'center', justifyContent: 'center', width: '100%', fontSize: '2.999375rem', }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
+                        <div style={{ marginBottom: '0.3rem', display: '', textAlign: 'center', justifyContent: 'center', width: '100%', fontSize: '2.999375rem', }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
                             서버 점검 안내
                             <span style={{
                                 width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem',

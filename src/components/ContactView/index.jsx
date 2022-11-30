@@ -25,7 +25,7 @@ const ContactView = () => {
     return (
         <div className="w-full">
 
-            <div style={{ margin: ' 1px 1.875rem 1.875rem', background: 'linear-gradient(to top,#1f1f1e, #353534 50%,#4a4a4a)', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
+            <div style={{ margin: ' 0px 1.875rem 1.875rem', background: 'linear-gradient(to top,#1f1f1e, #353534 50%,#4a4a4a)', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ background: '#323232', paddingBottom: '0.1rem', borderRadius: '1.1rem' }} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
                     <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">

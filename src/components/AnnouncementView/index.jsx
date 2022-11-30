@@ -46,7 +46,7 @@ const AnnouncementView = () => {
                         </div>
                     </div>
 
-                    <div style={{minHeight: '8.18rem', padding: '1.4375rem 1.65rem'}} className="announcementView6 relative bg-gray-fafafa border-b border-gray-dddddd flex items-center">
+                    <div style={{minHeight: '8.1rem', padding: '1.4375rem 1.65rem'}} className="announcementView6 relative bg-gray-fafafa border-b border-gray-dddddd flex items-center">
                         <img className="h-12 object-contain" src={WinnerLogo} alt="" />
                         <div className='announcementView7 flex mt-5'>
                             <div style={{ backgroundColor: '#555555' }} className='announcementView8 bg-gray-dddddd'></div>
