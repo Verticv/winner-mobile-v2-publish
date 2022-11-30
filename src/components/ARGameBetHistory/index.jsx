@@ -157,8 +157,8 @@ const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = fal
                 </>
 
             )}
-            <div style={{ marginTop: '1.0rem' }} className='ar-date'>
-                <DateSearchBar isLeagueSearch={false} isGameResultsSearch={true} />
+            <div style={{ marginTop: '1.0rem' }} className='ar-date SportsBetHistory'>
+                <DateSearchBar isGameResultsSearch={true} />
             </div>
 
             {/* <ScrollButton /> */}

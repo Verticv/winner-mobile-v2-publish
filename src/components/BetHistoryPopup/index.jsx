@@ -225,7 +225,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                 </>
                             ) : selectedTab === 2 ? (
                                 <div style={{ marginBottom: '5.625rem', paddingBottom: '0.1rem' }} className="w-full h-full">
-                                    <div style={{ marginTop: '1rem' }} className='ar-date'>
+                                    <div style={{ marginTop: '1rem' }} className='ar-date SportsBetHistory'>
                                         <DateSearchBar isGameResultsSearch={true} isFreeboard='true' />
                                     </div>
                                     <div style={{ paddingBottom: '0.1rem', margin: '0 1.8rem' }}>

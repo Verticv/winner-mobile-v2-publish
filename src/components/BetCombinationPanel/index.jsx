@@ -38,8 +38,6 @@ import Medal from '../../assets/betCombinationPanel/Medal.png'
 import Jewel from '../../assets/betCombinationPanel/jewel.png'
 import _uniqueId from 'lodash/uniqueId';
 import './_betCombinationPanel.scss';
-// import Dropdown from 'components/common/Dropdown/Dropdown'
-// import DropDownInput from 'components/common/DropDownInput'
 
 const BetCombinationPanel = ({
     addedCard,
@@ -715,12 +713,10 @@ const BetCombinationPanel = ({
                 <div onPointerUp={() => handleOnChange(item.id)} style={{ height: '8rem', paddingLeft: '3rem', paddingRight: '3rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0' }} className="searchcell-style">
                     <p>{item.text}</p>
                     <input
-                        // style={{right: '1.875rem', top: '2.5rem'}}
                         className='input-style w-12 h-12'
                         type="checkbox"
                         checked={isChecked}
                         name={item.text}
-                    // onChange={() => handleOnChange(item.id)}
                     />
                 </div>
 
@@ -828,8 +824,7 @@ const BetCombinationPanel = ({
                     <div
                         style={{
                             color: "#ffffff",
-                            textShadow: "rgb(0 0 0 / 31%) 0.325rem 0.325rem 0",
-                            // textShadow: 'rgb(0 0 0 / 44%) 0.0625rem 0.0625rem 0',
+                            textShadow: "rgb(0 0 0 / 31%) 0.225rem 0.225rem 0",
                             padding: '0 1rem'
                         }}
                         className="event-content1 bg-gradient-to-b"
