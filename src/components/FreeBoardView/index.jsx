@@ -65,11 +65,9 @@ const FreeBoardView = () => {
                 </div>
             </div>
             <div style={{ marginLeft: '3.8rem', marginTop: '2.83rem', minHeight: '8.625rem', borderRadius: '0.8rem', width: '66.15rem', background: '#272726' }} className="">
-                <div style={{ borderRadius: "1.625rem", fontSize: '2.8125rem', paddingLeft: '3.6625rem', paddingRight: '3.6625rem', borderWidth: '0.1875rem', display: 'flex', paddingBottom: '2rem' }} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
+                <div style={{ borderRadius: "1.625rem", fontSize: '2.8125rem', paddingLeft: '3.6625rem', paddingRight: '3.6625rem', borderWidth: '0.1875rem', display: 'flex', paddingBottom: '2rem', }} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
                     <div className="flex font-spoqa" style={{ display: '', marginTop: '2.2rem' }}>
-                        {tag && (<span style={{ fontSize: '2.8125rem', color: '#4c98ff', marginRight: '0.8rem', flexShrink: '0' }} className="text-blue-r0056a6 font-spoqa mr-4">@{truncate(tag, 6, 6)}</span>)}
-                        {/* <div style={{ WebkitTextStroke: "0.2px", fontSize: '2.8125rem' }} className="text-gray-r585858 font-spoqa">{text}</div>
-                         */}
+                        {tag && (<span style={{ fontSize: '2.8125rem', color: '#4c98ff', marginRight: '0.8rem', flexShrink: '0', }} className="text-blue-r0056a6 font-spoqa mr-4">@{truncate(tag, 6, 6)}</span>)}
                         {text}
                     </div>
                 </div>
@@ -97,11 +95,20 @@ const FreeBoardView = () => {
                         >
                             <div
                                 className="button"
+                                style={{
+                                    maxWidth: '17.5rem',
+                                    overflow: 'hidden',
+                                    lineHeight: '3.3rem'
+                                }}
                             >
                                 <span>{truncate('공지공지공지공지', 6, 6)}</span>
                             </div>
                             <div
-                                style={{ backgroundColor: "#00a1e9" }}
+                                style={{
+                                    backgroundColor: "#00a1e9", maxWidth: '17.5rem',
+                                    overflow: 'hidden',
+                                    lineHeight: '3.3rem'
+                                }}
                                 className="button"
                             >
                                 <span>{truncate('안내안내안내안내', 6, 6)}</span>
@@ -231,7 +238,7 @@ const FreeBoardView = () => {
                                 <img style={{ width: '3.450625rem', height: '4.436875rem', marginRight: '0.5625rem', marginLeft: '-0.3rem' }} className='object-contain' src={Rank2} alt="" />
                                 <p style={{ fontSize: '2.624375rem', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
                                 <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555' }} className='bg-gray-c5c5c5'></div>
-                                <p style={{ fontSize: '2.25rem', color: '#929292' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
+                                <p style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
                             </div>
                         </div>
 

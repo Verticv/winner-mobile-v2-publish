@@ -111,12 +111,16 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
                 }}
             >
                 <img
-                    // style={{ width: '5.5625rem', height: '5.0625rem', marginLeft: '2.375rem' }}
                     className="q-icon" src={QIcon} alt="" />
                 <div style={{ marginLeft: '1.75rem' }} className="w-full h-full flex-col flex flex-wrap justify-center items-start">
                     <div
-                        // style={{ backgroundColor: "#8494a4", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', paddingBottom: '0.125rem', width: '13.5rem', marginBottom: '0.7rem' }}
                         className="q-type"
+                        style={{
+                            maxWidth: '16rem',
+                            overflow: 'hidden',
+                            lineHeight: '3.3rem',
+                            height: '4.1rem',
+                        }}
                     >
                         {type}
                     </div>

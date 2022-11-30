@@ -33,7 +33,9 @@ const AnnouncementView = () => {
                     <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
                         <div className='sflex w-full justify-center'>
                             <div
-                                style={{ backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem' }}
+                                style={{ backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem',maxWidth: '16.5rem',
+                                overflow: 'hidden',
+                                lineHeight: '3.3rem', }}
                                 className="announcementView4 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
                                 {truncate('스포츠스포츠스포츠', 6, 6)}

@@ -178,7 +178,7 @@ const FreeBoardView2 = () => {
                                     marginTop: '0.5rem'
                                 }} className="font-spoqaMedium tracking-tight text-gray-r585858">하이도1207
                                     <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1rem auto 1.16rem', background: '#555555', display: 'inline-block' }} className='bg-gray-c5c5c5'></div>
-                                    <p style={{ fontSize: '2.4375rem', color: '#7b7b7b', marginTop: '2.2rem', fontFamily: 'RobotoRegular', display: 'inline-block', margin: '0' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:49</p>
+                                    <p style={{ fontSize: '2.4375rem', color: '#7b7b7b', marginTop: '2.2rem', fontFamily: 'SpoqaHanSansNeo', display: 'inline-block', margin: '0' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:49</p>
                                 </p>
                             </div>
                         </div>

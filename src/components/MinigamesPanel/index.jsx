@@ -1,4 +1,3 @@
-// import HorizontalMenu4 from 'components/horizontalMenus/HorizontalMenu4'
 import React, { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router'
 import KinoLadderPanel from '../KinoLadderPanel'
@@ -6,9 +5,7 @@ import PowerballPanel from '../PowerballPanel'
 import PowerLadderPanel from '../PowerLadderPanel'
 import RefreshIcon from '../../assets/minigames/refresh_icon.png'
 import ClockIcon from '../../assets/minigames/clock_blue.png'
-// import CheckIcon from '../../images/minigames/checkbox.png'
 import SpeedKinoPanel from '../SpeedKinoPanel'
-// import { he, ko } from "date-fns/locale"
 import { ko } from "date-fns/locale"
 import { format } from 'date-fns'
 import {
@@ -16,7 +13,6 @@ import {
     PowerballResultsArray,
     PowerLadderResultsArray
 } from '../arrays'
-// import { Route, useHistory } from 'react-router'
 import './_minigamesPanel.scss';
 
 const MinigamesPanel = ({
@@ -27,41 +23,23 @@ const MinigamesPanel = ({
     setSelectedOption
 }) => {
 
-    // const history = useHistory();
     const [checkedState, setCheckedState] = useState(
         new Array(PowerballHistoryArray.length).fill(false)
     );
-    const [isAllSelected, setAllSelected] = useState(false)
     const dateFormat = "MM월 dd일"
     const dateFormat1 = "H:mm:ss"
 
     const [time, setTime] = useState(Date.now());
 
     useEffect(() => {
-        setTime(Date.now())
-    }, [])
-
-    // useEffect(() => {
-    //     const interval = setInterval(() => setTime(Date.now()), 1000);
-    //     return () => {
-    //         clearInterval(interval);
-    //     };
-    // }, []);
-
-
-    const MenuArray = [
-        { id: 0, text: "게임하기" },
-        { id: 1, text: "회차결과" },
-        { id: 2, text: "베팅내역" },
-    ]
-
-    console.log(PowerLadderResultsArray, isAllSelected, setAllSelected, MenuArray)
+        const interval = setInterval(() => setTime(Date.now()), 1000);
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     return (
         <div className="container">
-            {/* <div className="relative flex z-10 px-3px">
-                <HorizontalMenu4 itemsArray={MenuArray} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-            </div> */}
 
             <div
                 style={{

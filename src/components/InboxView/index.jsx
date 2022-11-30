@@ -34,7 +34,11 @@ const InboxView = () => {
                     <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
                         <div className='sflex w-full justify-center'>
                             <div
-                                style={{ backgroundColor: "#00a1e9", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem' }}
+                                style={{
+                                    backgroundColor: "#00a1e9", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem', overflow: 'hidden',
+                                    lineHeight: '3.4rem', maxWidth: '17.5rem',
+
+                                }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
                                 {truncate('안내안내안내안내안내안내안내안내안내', 6, 6)}
@@ -65,7 +69,7 @@ const InboxView = () => {
                         <img style={{ width: '12.0625rem' }} className="w-56 object-contain" src={WinnerSmall} alt="" />
                         <div className='flex mt-2' style={{ display: 'flex' }}>
                             <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem', background: '#555555' }} className='bg-gray-dddddd'></div>
-                            <p style={{ fontSize: '2.25rem', color:'#7b7b7b', fontFamily: 'SpoqaHanSansNeo', marginBottom:'2.0rem' }} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
+                            <p style={{ fontSize: '2.25rem', color: '#7b7b7b', fontFamily: 'SpoqaHanSansNeo', marginBottom: '2.0rem' }} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
                         </div>
                     </div>
 
