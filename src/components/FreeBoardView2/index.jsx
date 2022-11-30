@@ -12,33 +12,6 @@ const FreeBoardView2 = () => {
 
     const navigate = useNavigate();
 
-    // const SendMessage = ({ placeholder, buttonText }) => {
-    //     return (
-    //         <div style={{ height: "17.4375rem", borderRadius: "1.625rem", marginTop: '1.875rem', fontSize: '2.8125rem', borderWidth: '0.1875rem' }} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
-
-    //             <textarea
-    //                 style={{ width: "60.9375rem", padding: '3.5625rem', paddingTop: '2.6875rem', paddingLeft: '3.75rem', paddingRight: '6.5625rem', resize: "none", lineHeight: '1.3', WebkitTextStroke: "0.2px" }}
-    //                 className="place-color-grey overflow-hidden outline-none w-full font-spoqa tracking-tight placeholder-gray-r8f8f8f"
-    //                 placeholder={placeholder}
-    //                 onFocus={() => {
-    //                     const menu = document.querySelector('#main-menu');
-    //                     menu.style.marginBottom = '-14.075rem'
-    //                 }}
-    //                 onBlur={() => {
-    //                     const menu = document.querySelector('#main-menu');
-    //                     menu.style.marginBottom = '0'
-    //                 }}
-    //             />
-
-    //             <button style={{ borderRadius: "1.625rem", width: '10.5625rem', padding: '1px' }} className="right-0 absolute flex items-center justify-center h-full bg-blue-r013d74 hover:opacity-75">
-    //                 <div style={{ borderRadius: "1.625rem" }} className="flex items-center justify-center h-full w-full bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-    //                     <span className="font-spoqaMedium tracking-tight text-white">{buttonText}</span>
-    //                 </div>
-    //             </button>
-    //         </div>
-    //     )
-    // }
-
     const SendMessage = ({ placeholder, buttonText }) => {
         return (
             <div style={{ height: "17.4375rem", borderRadius: "1.625rem", marginTop: '-0.4rem', fontSize: '2.8125rem', borderWidth: '0.1875rem', display: 'flex', position: 'relative' }} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
@@ -68,45 +41,6 @@ const FreeBoardView2 = () => {
         )
     }
 
-
-    // const ReplyCell = ({
-    //     text = "이벤트 참여 감사합니다.",
-    //     rank = 1,
-    //     username = "쇼유",
-    //     isEdit = false,
-    //     tag = null,
-    //     isOneButton = false
-    // }) => (
-    //     <div style={{ paddingTop: '2.251rem' }} className="w-full">
-    //         <div className="w-full items-center flex justify-between">
-    //             <div className="flex items-center">
-    //                 <img style={{ width: '2.25625rem', height: '2.25625rem', marginRight: '2rem' }} src={ReplyArrow} alt="" />
-    //                 <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.8125rem' }} className='object-contain' src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
-    //                 <p style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-gray-r585858">{username}</p>
-    //                 <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem' }} className='bg-gray-c5c5c5'></div>
-    //                 <p style={{ fontSize: '2.25rem' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
-    //             </div>
-    //         </div>
-    //         <div style={{ marginLeft: '4.125rem', marginTop: '2.43rem', height: '8.625rem' }} className="">
-    //             <div style={{ borderRadius: "1.625rem", fontSize: '2.8125rem', paddingLeft: '3.5625rem', borderWidth: '0.1875rem' }} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
-    //                 <div className="flex font-spoqa">
-    //                     {tag && (<p style={{ fontSize: '2.8125rem' }} className="text-blue-r0056a6 font-spoqa mr-4">@{tag}</p>)}
-    //                     <p style={{ WebkitTextStroke: "0.2px", fontSize: '2.8125rem' }} className="text-gray-r585858">{text}</p>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //         <div style={{ marginTop: '1.1875rem', marginLeft: '4.125rem' }} className='flex'>
-    //             <button style={{ borderRadius: "0.8rem", width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem' }} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-    //                 <div className={`${isOneButton ? "text-gray-r7b7b7b" : "text-red-d52e2e"} font-spoqaMedium flex items-center justify-center mt-2`}>{isOneButton ? "답글" : "수정"}</div>
-    //             </button>
-    //             {!isOneButton && (
-    //                 <button style={{ borderRadius: "0.8rem", width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem' }} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-    //                     <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2">삭제</div>
-    //                 </button>
-    //             )}
-    //         </div>
-    //     </div>
-    // )
     const ReplyCell = ({
         text = "이벤트 참여 감사합니다.",
         rank = 1,
@@ -146,7 +80,7 @@ const FreeBoardView2 = () => {
         </div>
     )
     return (
-        <div style={{ padding: '0 1.875rem', marginTop: '0.1rem' }} className="free-board-view2">
+        <div style={{ padding: '0 1.875rem' }} className="free-board-view2">
             <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ borderRadius: "1rem" }} className="title-div">
                     <div className="title">
@@ -155,12 +89,7 @@ const FreeBoardView2 = () => {
 
                     <div style={{ minHeight: '7.3rem', padding: '1.4375rem 1.875rem', borderBottomWidth: '0.1875rem', marginBottom: '5.7rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '0.1875rem solid #252525', background: '#2e2e2e' }} className="bg-gray-fafafa border-b border-gray-dddddd flex justify-between items-center">
                         <div className="w-full flex items-center justify-between">
-                            {/* <div className="flex items-center">
-                                <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.9rem' }} className='object-contain' src={Rank1} alt="" />
-                                <p style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">하이도1207</p>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem' }} className='bg-gray-dddddd'></div>
-                                <p style={{ fontSize: '2.25rem' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:49</p>
-                            </div> */}
+
                             <div className="flex items-center" style={{
                                 display: 'flex', alignItems: 'flex-start', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.3rem',
                                 // height: '9rem',

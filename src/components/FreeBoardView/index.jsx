@@ -90,9 +90,7 @@ const FreeBoardView = () => {
             <div className="border-div">
                 <div className='content' >
                     <div className="first-card" style={{ width: '100%' }}>
-                        <div
-                            className='buttons'
-                        >
+                        <div className='buttons' >
                             <div
                                 className="button"
                                 style={{

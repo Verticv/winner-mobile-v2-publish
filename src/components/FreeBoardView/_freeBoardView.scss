@@ -3,22 +3,22 @@
     border-radius: 1rem;
 
     .border-div {
-        border-radius: 1rem;
+        border-radius: 1.2rem;
         margin-top: -2.01rem;
         background: linear-gradient(to top, #1f1f1e, #2f2f2e 50%, #4a4a4a);
         padding: 0.1875rem;
         box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.6);
 
         .content {
-            border-radius: 1rem;
+            border-radius: 1.1rem;
             background: #323232;
 
             .first-card {
-                min-height: 13.0625rem;
-                border-top-right-radius: 1rem;
-                border-top-left-radius: 1rem;
+                min-height: 13rem;
+                border-top-right-radius: 1.1rem;
+                border-top-left-radius: 1.1rem;
                 text-align: center;
-                padding: 2rem;
+                padding: 1rem;
                 border-bottom: 0.1875rem solid #252525;
                 background: #2e2e2e;
 
@@ -26,6 +26,7 @@
                     display: flex;
                     justify-content: center;
                     gap: 1rem;
+                    margin-top: 0.65rem;
 
                     .button {
                         background-color: #02569c;
@@ -56,7 +57,7 @@
             }
 
             .second-card {
-                height: 7.3125rem;
+                height: 8.1rem;
                 padding: 1.4375rem 1.875rem;
                 display: flex;
                 justify-content: space-between;
@@ -66,8 +67,6 @@
 
                 img {
                     width: 12.0625rem;
-                    margin-top: 0.1rem;
-                    margin-left: -0.1rem;
                 }
 
                 .댓글-container {
