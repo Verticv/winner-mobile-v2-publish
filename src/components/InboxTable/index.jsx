@@ -80,10 +80,14 @@ const InboxTable = ({
                                         background: '#0469a3',
                                         marginTop: '0.5rem',
                                         marginLeft: '0.1rem',
-                                        marginRight: '0.9rem'
+                                        marginRight: '0.9rem',
+                                        maxWidth: '17.5rem',
+                                        overflow: 'hidden',
+                                        lineHeight: '3.3rem',
+                                        height:'4.2rem'
                                     }} className="w-max rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2"
 
-                                    ><span className='-mb-1'><span className='mt-1 block'>{truncate(item.category, 6,6)}</span></span></div>
+                                    ><span className='-mb-1'><span className='mt-1 block'>{truncate(item.category, 6, 6)}</span></span></div>
                                     : item.type === "이벤트"
                                         ? <div style={{
                                             // marginTop: '-1.1rem',
@@ -95,9 +99,13 @@ const InboxTable = ({
                                             background: '#c08029',
                                             marginTop: '0.53rem',
                                             marginLeft: '0.1rem',
-                                            marginRight: '0.9rem'
+                                            marginRight: '0.9rem',
+                                            maxWidth: '17.5rem',
+                                            overflow: 'hidden',
+                                            lineHeight: '3.3rem',
+                                            height:'4.2rem'
                                         }}
-                                            className="w-max rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'><span className='mt-1 block'>{truncate('이벤트이벤트이벤트', 6,6)}</span></span></div>
+                                            className="w-max rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'><span className='mt-1 block'>{truncate('이벤트이벤트이벤트', 6, 6)}</span></span></div>
                                         : <div></div>
                             }
                             <p style={{
@@ -136,7 +144,7 @@ const InboxTable = ({
                     </div>
 
                 </div>
-                <button className='absolute right-0' style={{ position: 'absolute', right: '4.55rem', background: 'bottom' }} onClick={e => e.stopPropagation() }>
+                <button className='absolute right-0' style={{ position: 'absolute', right: '4.55rem', background: 'bottom' }} onClick={e => e.stopPropagation()}>
                     <img className='hover' style={{ width: '4rem', height: '4.375rem', marginTop: '0.3rem' }} src={item.isRead ? DeleteDark : Delete} alt="" />
                 </button>
             </div>

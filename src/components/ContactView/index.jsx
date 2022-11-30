@@ -31,7 +31,11 @@ const ContactView = () => {
                     <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
                         <div className='sflex w-full justify-center'>
                             <div
-                                style={{ backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem' }}
+                                style={{
+                                    backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem', maxWidth: '17rem',
+                                    overflow: 'hidden',
+                                    lineHeight: '3.3rem',
+                                }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
                                 {truncate('계좌문의계좌문의', 6, 6)}
@@ -54,7 +58,9 @@ const ContactView = () => {
                         <div
                             style={{
                                 position: 'absolute', right: '0', backgroundColor: "#7e7564", marginRight: '1.6rem', paddingBottom: '0', width: 'fit-content',
-                                fontSize: '2.4375rem', padding: '0.6rem 1.9rem', height: '4.125rem', marginTop: '0.35rem', letterSpacing: '-0.07rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '2rem'
+                                fontSize: '2.4375rem', padding: '0.6rem 1.9rem', height: '4.125rem', marginTop: '0.35rem', letterSpacing: '-0.07rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '2rem', maxWidth: '17rem',
+                                overflow: 'hidden',
+                                lineHeight: '3.3rem',
                             }}
                             className="absolute right-0 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                         >
