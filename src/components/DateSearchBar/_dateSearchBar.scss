@@ -7,7 +7,6 @@
         outline: none;
         background: #1a1a1a;
         border: 0;
-        padding: 0;
         height: 7rem;
         width: 34.06rem;
         font-size: 2.624375rem;
@@ -16,11 +15,8 @@
         border-radius: 0.5rem;
         color: #ccc2b6;
         font-family: 'SpoqaHanSansNeoMedium';
-        padding-left: 1.65rem;
         letter-spacing: -0.07rem;
-        padding-top: 0.15rem;
-
-
+        padding: 0.35rem 0 0 1.65rem;
     }
 
     ::placeholder {

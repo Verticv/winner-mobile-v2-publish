@@ -23,8 +23,6 @@ const DropDownInput = ({ isLeagueSelection = true, isBetCombination = false, wit
                 >
 
                     <Dropdown withArrow multiple={true} labelStyle={{ marginLeft: '1.75rem', color: '#7b7b7b' }} options={carrierOptions3} isLeagueSelection={isLeagueSelection} labelClasses="pl-16">
-                        {/* <img style={{ width: '4rem', height: '4rem' }} className="object-contain absolute ml-8 -mr-3 flex-shrink-0" src={GlobeIcon} alt="arrow" /> */}
-                        {/* <img style={{ width: '1.5625rem', marginRight: '1.875rem', height: '1rem', position: 'absolute', top: '0' }} className="object-contain" src={DownArrowIcon} alt="arrow" /> */}
                     </Dropdown>
                 </div>
             </div>

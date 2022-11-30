@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import HorizontalMenu1 from '../HorizontalMenu1'
-// import AccountProfileComponent from 'components/common/AccountProfileComponent'
-// import LeftMenu from "components/myPage/LeftMenu";
 import HorizontalSubMenu from '../HorizontalSubMenu2';
 import Icon1 from '../../assets/gameresults/sport-1.png';
 import Icon2 from '../../assets/gameresults/sport-2.png';
@@ -9,27 +7,16 @@ import Icon1Active from '../../assets/gameresults/sport-1-active.png';
 import Icon2Active from '../../assets/gameresults/sport-2-active.png';
 import activeBG from '../../assets/gameresults/active-bg.png';
 import inActiveBG from '../../assets/gameresults/inactive-bg.png';
-// import img from '../../img23.png';
-// import img24 from '../../img24.png';
 import HomePageTopBanner from '../HomePageTopBanner'
-// import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import Pagination from '../Pagination'
 import SportsContent from '../SportsContent'
 import { Route, Routes } from 'react-router'
 
-
-// import Navbar from '../mainPage/Navbar'
-// import NoticeBanner from '../mainPage/NoticeBanner'
-// import subIcon1 from '../../images/newImages/mainPage/results/1.png';
-// import subIcon3 from '../../images/newImages/mainPage/results/3.png';
-// import Logo from "../../images/newImages/mainPage/icons/logo.png";
-// import ScrollButton from 'components/common/ScrollButton';
 import DateSearchBar from '../DateSearchBar';
 import MinigamesMatchResultPanel from '../MinigamesMatchResultPanel';
 import CardHeader from '../CardHeader';
 import PowerballResultsTable from '../PowerballResultsTable';
 import MinigameTab from '../MinigameTab';
-// import Sports1 from '../Sports1';
 import TableHeader2 from '../TableHeader2';
 import subIcon1 from '../../assets/bigIcons/leftMenu/16.png';
 import subIcon2 from '../../assets/bigIcons/leftMenu/17.png';
@@ -138,7 +125,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
     const [checkedState, setCheckedState] = useState(
         new Array(3).fill(false)
     );
-    
+
     const MyInfo = () => {
         return (
             <>
@@ -164,35 +151,8 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
     return (
         <div style={{ maxWidth: '1242px', paddingBottom: '0.01rem' }} className="w-full flex flex-col">
-            {/* <ScrollButton /> */}
             <Routes>
-                {/* <Route path="/gameresults"
-                    element={
-                        <>
-                            hi
-                        </>
-                    }
-                > */}
-                {/* <AccountProfileComponent isAuthenticated={isAuthenticated} />
-                <div style={{ marginTop: '1.875rem', marginBottom: '36.375rem' }} className="flex w-full">
-                    <LeftMenu
-                        selectedTab={selectedTab}
-                        setSelectedTab={setSelectedTab}
-                        selectedSubTab={selectedSubTab}
-                        setSelectedSubTab={setSelectedSubTab}
-                        array={LeftMenuSubArray}
-                    />
-                </div>
-                <div className="flex justify-center mb-40">
-                    <img style={{ width: '22.3125rem' }} className="object-contain" src={Logo} alt="logo" />
-                </div> */}
-                {/* </Route> */}
-                <Route index element={
-                    <>
-                        <MyInfo />
-                    </>
-                }
-                />
+                <Route index element={<MyInfo />} />
                 <Route path="/all/*"
                     element={
                         <>
@@ -225,45 +185,12 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                             }}>
                                 <Pagination page={page} setPage={setPage} />
                             </div>
-                            {/* </div> */}
-
-                            {/* <div className="w-full relative top-0">
-                                <div style={{ padding: '1.875rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                                    <div className=" flex flex-shrink-0 w-full">
-                                    </div>
-                                </div>
-                            </div> */}
                             <NavBottom />
-
-
                         </>
                     }
                 />
 
-                <Route path="/all/*"
-                    element={
-                        <>
-                            {/* hi */}
-                        </>
-                    }
-                >
-                    {/* <>
-                        <div id='scroll-wrapper1' style={{ paddingLeft: '1.875rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                            <div className=" flex flex-shrink-0 w-full">
-                                <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
-                            </div>
-                        </div>
-
-                        <Sports1 />
-                        <SportsContent checkedState={checkedState} setCheckedState={setCheckedState} />
-                        <div style={{ marginTop: '1.875rem' }}>
-                            <Pagination page={page} setPage={setPage} />
-                        </div>
-                        <BottomNavbar />
-                    </> */}
-                </Route>
-
-                {/* </Route> */}
+                <Route path="/all/*" element={<></>}></Route>
 
                 <Route path="/minigame/*"
                     element={
@@ -271,7 +198,6 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                             <ScrollButton />
                             <Header />
                             <div className='game-result'>
-                                {/* <img src={img24} alt="" style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
                                 <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
                                 <div id='container-nav'>
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
@@ -351,90 +277,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                         </>
                     }
                 >
-
                 </Route>
-
-                {/* <div className="w-full relative top-0">
-                    <div style={{ padding: '1.875rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                        <div className=" flex flex-shrink-0 w-full">
-                            <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
-                        </div>
-                    </div>
-                </div> */}
-
-                {/* <div className="w-full flex relative top-0">
-                    <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
-                    <div id='scroll-wrapper1' style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                        <div className=" flex flex-shrink-0 w-full">
-                            <SubHorizontalMenu2 itemsArray={subTabsArray} isState={isState} setState={setState} isMinigame={true}/>
-                        </div>
-                    </div>
-                    <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
-                </div> */}
-
-                {/* <DateSearchBar isLeagueSearch={false} withBlackButton hasDateSuggestion={false} /> */}
-
-                {/* <Route exact path="/minigame/powerball"
-                    element={
-                        <>
-                            hiiiii
-                        </>
-                    }
-                > */}
-                {/* <div style={{ borderRadius: "1em", margin: '1.875rem', marginTop: '1.9rem' }} className="shadow-subNavbar overflow-hidden bg-gray-fafafa">
-                        <TableHeader2 isMinigame={true} />
-                        <div className="flex flex-col w-full px-4 pb-4">
-                            <CardHeader flag='us' name='파워볼' date='2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
-                            <PowerballResultsTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray} />
-                        </div>
-                        <div className="flex flex-col w-full p-4">
-                            <CardHeader flag='us' name='파워볼' date='2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
-                            <PowerballResultsTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray} />
-                        </div>
-                    </div> */}
-                {/* </Route> */}
-                {/* 
-                <Route exact path="/mypage/gameresults/minigame/speedkino">
-                    <MinigamesMatchResultPanel type="speedkino" />
-                </Route>
-                <Route exact path="/mypage/gameresults/minigame/kinoladder">
-                    <MinigamesMatchResultPanel type="kinoladder" />
-                </Route> */}
-
-
-                {/* {isState === 0 
-                ? (
-                    <div style={{borderRadius:"1em", margin: '1.875rem', marginTop: '1.8rem'}} className="shadow-subNavbar overflow-hidden">
-                        <div className="flex flex-col w-full p-4">
-                            <CardHeader flag = 'us' name = '파워볼' date = '2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
-                            <PowerballResultsTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray}/>
-                        </div>
-                        <div className="flex flex-col w-full p-4">
-                            <CardHeader flag = 'us' name = '파워볼' date = '2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
-                            <PowerballResultsTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray}/>
-                        </div>
-                    </div>
-                ) : isState === 1 ? (
-                    <>
-                        <MinigamesMatchResultPanel />
-                    </>
-                ) : isState === 2 ? (
-                    <>
-                        <MinigamesMatchResultPanel type="speedkino" />
-                    </>
-                ) : (
-                    <>
-                        <MinigamesMatchResultPanel type="kinoladder" />
-                    </>
-                )} */}
-
-                {/* <div style={{ marginTop: '1.875rem' }}>
-                        <Pagination page={page} setPage={setPage} />
-                    </div> */}
-                {/* <BottomNavbar /> */}
-
-                {/* </Route> */}
-
             </Routes>
         </div>
     )
