@@ -82,7 +82,7 @@ const FreeBoardView2 = () => {
     return (
         <div style={{ padding: '0 1.875rem' }} className="free-board-view2">
             <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
-                <div style={{ borderRadius: "1rem" }} className="title-div">
+                <div style={{ borderRadius: "1.1rem" }} className="title-div">
                     <div className="title">
                         <div className="text font-spoqaMedium tracking-tight text-5xl text-gray-r454545">이벤트 신청합니다.</div>
                     </div>
