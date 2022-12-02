@@ -15,7 +15,7 @@ function MainPage() {
             <Slider />
             <NoticeBanner />
             <Jackpot />
-            <div style={{ display: 'flex', paddingBottom: '15rem', justifyContent: '', alignItems: 'start' }}>
+            <div style={{ display: 'flex', paddingBottom: '12rem', justifyContent: '', alignItems: 'start' }}>
                 <NavButtons btnActive={btnActive} setBtnActive={setBtnActive} />
                 <AllCards btnActive={btnActive} setBtnActive={setBtnActive} />
             </div>
