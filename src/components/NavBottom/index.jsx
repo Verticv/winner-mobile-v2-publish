@@ -71,7 +71,7 @@ export default function NavBottom() {
                             navigate(path);
                         }}
                     >
-                        <img id={id} src={isActiveButton ? activeIcon : icon} alt="" style={{ width: '6.625rem' }} />
+                        <img id={id} src={isActiveButton ? activeIcon : icon} alt="" style={{ width: '6.025rem' }} />
                         <span id={id} className="text">{text}</span>
                     </div>
                 )

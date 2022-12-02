@@ -60,7 +60,7 @@ export default function Slider() {
                             <div
                                 key={obj.id}
                                 className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
-                                style={{ background: `url(${visual}) 77.625rem 29.6875rem round` }}
+                                style={{ background: `url(${visual}) 77.625rem 25.938rem round` }}
                                 onClick={() => navigate('/bet-combination')}
                             >
                                 {/* {slideIndex === 1 ? <p style={{ postion: 'absolute' }}>다양하고 멋진 경기들이 준비되어 있습니다. <br /> 더 쉽고 재미있는 스포츠베팅의 세계를 경험하세요!</p> : null} */}
@@ -68,7 +68,7 @@ export default function Slider() {
                             : <div
                                 key={obj.id}
                                 className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
-                                style={{ background: `url(${visual2}) 77.625rem 29.6875rem round` }}
+                                style={{ background: `url(${visual2}) 77.625rem 25.938rem round` }}
                                 // onClick={() => navigate('/live-casino')}
                             >
                                 {/* {slideIndex === 1 ? <p style={{ postion: 'absolute' }}>다양하고 멋진 경기들이 준비되어 있습니다. <br /> 더 쉽고 재미있는 스포츠베팅의 세계를 경험하세요!</p> : null} */}
