@@ -38,7 +38,7 @@ const AnnouncementView = () => {
                                 lineHeight: '3.3rem', }}
                                 className="announcementView4 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
-                                {truncate('스포츠스포츠스포츠', 6, 6)}
+                                {truncate('스포츠', 6, 6)}
                             </div>
                         </div>
                         <div style={{ color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '3rem', letterSpacing: '-0.07rem', marginLeft: '0.2rem' }}  className="announcementView5 flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">

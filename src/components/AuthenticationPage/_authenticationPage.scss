@@ -1,4 +1,9 @@
 .AuthenticationPage {
+    background: #000;
+    width: 77.625rem;
+    height: 100vh;
+    position: relative;
+
     .first-dropdown {
         border-radius: 0.7rem;
 
@@ -74,6 +79,13 @@
     .react-datepicker-popper[data-placement^='top'] .react-datepicker__triangle::after,
     .react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle::after {
         left: -2.1375rem !important;
+    }
+
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #828282;
+        opacity: 1;
+        /* Firefox */
     }
 
 }

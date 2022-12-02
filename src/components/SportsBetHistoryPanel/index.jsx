@@ -25,7 +25,6 @@ const SportsBetHistoryPanel = ({
                                     score=""
                                     team1="CF파추카 CF파추카 CF파추카"
                                     team2="과달하라 차바 과달하라 차바"
-                                    // team2="과달하라"
                                     stat1="00.00"
                                     stat2="2.96"
                                     stat3="00.00"
@@ -49,7 +48,6 @@ const SportsBetHistoryPanel = ({
                                 <CardResults
                                     bet="left"
                                     result="win"
-                                    // choice="home"
                                     score="5:0"
                                     team1="맨유"
                                     team2="첼시"
@@ -64,7 +62,6 @@ const SportsBetHistoryPanel = ({
                                 <CardResults
                                     bet="right"
                                     result="lose"
-                                    // choice="away"
                                     score="1:2"
                                     team1="아스널"
                                     team2="맨시티"
@@ -92,7 +89,6 @@ const SportsBetHistoryPanel = ({
                                 <CardResults
                                     bet="left"
                                     result="win"
-                                    // choice="home" 
                                     score="5:0"
                                     team1="맨유"
                                     team2="첼시"
@@ -109,8 +105,7 @@ const SportsBetHistoryPanel = ({
                                 <CardResults
                                     bet="left"
                                     result="win"
-                                    // choice="home" 
-                                    score="2:1"
+                                    score="100:100"
                                     team1="바르셀로나"
                                     team2="레알마드리드"
                                     stat1="1.80"

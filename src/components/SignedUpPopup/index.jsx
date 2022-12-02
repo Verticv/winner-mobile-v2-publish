@@ -95,12 +95,6 @@ const SignedUpPopup = ({ setCompletePopup, setSignup }) => {
                         </button>
                     </div> */}
                     <div style={{ marginTop: '6.45rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }} className={`w-full flex flex-col items-center`}>
-                        {/* <button
-                                    className="mb-32 w-full h-48 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  font-spoqaBold text-white hover:opacity-75 pt-2px"
-                                    onClick={() => setCompletePopup(true)}
-                                >
-                                    회원가입
-                                </button> */}
 
                         <div className='shadow-to-box3' style={{ height: '8.456875rem', width: '56.476875rem', marginBottom: '4.0625rem', padding: '0.1875rem', background: 'linear-gradient(to top, #4b3b09, #e8b888)', borderRadius: '1.6rem' }}>
                             <button

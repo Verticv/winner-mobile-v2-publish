@@ -71,8 +71,6 @@ const LeftMenuSubArray = [
     }
 ]
 
-
-
 const inboxArray = [
     {
         id: 0,
@@ -163,26 +161,19 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                 <div id='container-nav'>
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                 </div>
-
                                 <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
                             </div>
 
-                            <div style={{ maxWidth: '1242px', margin: '0.9rem 0rem 0 0rem' }} className="w-full flex flex-col">
+                            <div style={{ maxWidth: '1242px', margin: '0.9rem 0rem 0 0rem' }}>
                                 <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
-                                    <div id='scroll-wrapper2'
-                                        style={{ padding: '1.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
-                                    >
-                                        <div className={`bet-history`} style={{}}>
-                                            <HorizontalMenu14 key={15} itemsArray={tabsArray2} isState={selectedTab} setSelectedTab={setSelectedTab} />
-                                        </div>
+                                    <div id='scroll-wrapper2 bet-history' style={{ padding: '1.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll' }} >
+                                        <HorizontalMenu14 key={15} itemsArray={tabsArray2} isState={selectedTab} setSelectedTab={setSelectedTab} />
                                     </div>
-                                    <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
+                                    <div style={{ height: '12.1rem' }}></div>
                                 </div>
                             </div>
                             <SportsContent checkedState={checkedState} setCheckedState={setCheckedState} />
-                            <div style={{
-                                margin: '4rem'
-                            }}>
+                            <div style={{ margin: '4rem' }}>
                                 <Pagination page={page} setPage={setPage} />
                             </div>
                             <NavBottom />
@@ -205,7 +196,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
                                 <MinigameTab subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                 <div style={{ marginTop: '1rem' }} className='test'>
-                                    <DateSearchBar isLeagueSearch={false} withBlackButton hasDateSuggestion={false} />
+                                    <DateSearchBar isLeagueSearch={false} withBlackButton hasDateSuggestion={false} disableRange />
                                 </div>
                             </div>
                             <Routes>

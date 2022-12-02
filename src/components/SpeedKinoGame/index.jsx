@@ -222,18 +222,10 @@ const SpeedKinoGame = ({ setSelectedOption }) => {
 
                     <div style={{
                         height: '17.375rem',
-                        // borderTopWidth: '0.1875rem',
-                        // borderTopColor: 'white',
                         borderTop: '0.1875rem solid #886666',
                         padding: '0.1rem 2.6rem 0px 2.5rem',
-                        // paddingLeft: `${extraLeftPadding + 3.875}rem`,
-                        // paddingRight: `${extraRightPadding + 3.875}rem`,
-                        // borderRight: (missingBorder !== "both" && missingBorder === "left") || missingBorder === 'none' ? `0.1875rem solid #cf9494` : '',
-                        // borderTop: `0.1875rem solid #cf9494`,
-                        // borderBottom: `0.1875rem solid #cf9494`,
-                        // borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #cf9494` : '',
                     }} className="threecard-content2">
-                        <div style={{ marginRight: '' }} className="threecard-content3">
+                        <div style={{ marginRight: '' }} className="threecard-content8">
                             <div
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
@@ -243,15 +235,14 @@ const SpeedKinoGame = ({ setSelectedOption }) => {
                                         setSelectedOption([{ type: "스피드키노", name: "홀짝/언오버", selection: "홀언더", buttonType: "blue" }])
                                     }
                                 }}
-                                // style={{paddingTop: "3px"}} 
                                 style={{ height: '11.375rem' }}
-                                className="threecard-content4"
+                                className="threecard-content9"
                             >
-                                <img style={{ width: '11.375rem', maxWidth: 'unset' }} className="threecard-content5" src={state === `${titleNumber}-1` ? BlueSMButtonPressed : BlueSMButton} alt="" />
-                                <p style={{ textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem' }} className="threecard-content6">홀언더</p>
+                                <img style={{ width: '11.375rem', maxWidth: 'unset' }} className="threecard-content10" src={state === `${titleNumber}-1` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                <p style={{ textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem' }} className="threecard-content11">홀언더</p>
                             </div>
                             <div style={{ height: '3.65rem' }}>
-                                <p style={{ fontSize: '2.4375rem' }} className="threecard-content7">3.75</p>
+                                <p style={{ fontSize: '2.4375rem' }} className="threecard-content12">3.75</p>
                             </div>
                         </div>
 

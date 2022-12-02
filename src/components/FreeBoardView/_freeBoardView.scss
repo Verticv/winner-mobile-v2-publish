@@ -41,7 +41,7 @@
                         span {
                             margin-top: 0.4rem;
                             display: flex;
-                            padding-left: 0.3rem;
+                            // padding-left: 0.3rem;
                         }
 
                     }
@@ -147,6 +147,12 @@
 
     textarea::-webkit-scrollbar {
         display: none;
-
     }
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #c8c8c8;
+        opacity: 1;
+        /* Firefox */
+    }
+    
 }

@@ -22,7 +22,8 @@ const DateSearchBar = ({
     isFreeboard,
     isPoints,
     isDistributorPage,
-    withArrow
+    withArrow,
+    disableRange
 }) => {
 
     const [startDate, setStartDate] = useState(new Date())
@@ -133,7 +134,7 @@ const DateSearchBar = ({
                     />
                     <img src={CalendarIcon} alt="" style={{ width: '3.5rem' }} className="w-14 absolute right-8" />
                 </div>
-                <span className='Signal'>~</span>
+                {!disableRange && <span className='Signal'>~</span>}
                 <div className="date-picker right-date-picker relative " style={{ position: 'relative' }}>
                     {hasDateSuggestion ? (
                         <>

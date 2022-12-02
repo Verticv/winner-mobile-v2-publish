@@ -255,7 +255,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                                     </div>
                                 </div>
                                 <div style={{ height: '3.65rem' }}>
-                                    <p style={{ fontSize: '2.4375rem' }} className="betoption-content8"></p>
+                                    <p style={{ fontSize: '2.4375rem' }} className="betoption-content8">3.75</p>
                                 </div>
                             </div>
                             <div className="betoption-content1">
@@ -283,7 +283,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                                     </div>
                                 </div>
                                 <div style={{ height: '3.65rem' }}>
-                                    <p style={{ fontSize: '2.4375rem' }} className="betoption-content8">3.15</p>
+                                    <p style={{ fontSize: '2.4375rem' }} className="betoption-content8">3.75</p>
                                 </div>
                             </div>
                             <div className="betoption-content1">
@@ -311,7 +311,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                                     </div>
                                 </div>
                                 <div style={{ height: '3.65rem' }}>
-                                    <p style={{ fontSize: '2.4375rem' }} className="betoption-content8">3.15</p>
+                                    <p style={{ fontSize: '2.4375rem' }} className="betoption-content8">3.75</p>
                                 </div>
                             </div>
                             <div className="betoption-content1">
@@ -339,7 +339,7 @@ const PowerballGame = ({ state, setChosen, setSelectedOption }) => {
                                     </div>
                                 </div>
                                 <div style={{ height: '3.65rem' }}>
-                                    <p style={{ fontSize: '2.4375rem' }} className="betoption-content8">4.10</p>
+                                    <p style={{ fontSize: '2.4375rem' }} className="betoption-content8">3.75</p>
                                 </div>
                             </div>
                         </div>

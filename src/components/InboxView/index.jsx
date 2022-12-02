@@ -35,13 +35,13 @@ const InboxView = () => {
                         <div className='sflex w-full justify-center'>
                             <div
                                 style={{
-                                    backgroundColor: "#00a1e9", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem', overflow: 'hidden',
+                                    backgroundColor: "#0469a3", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem', overflow: 'hidden',
                                     lineHeight: '3.4rem', maxWidth: '17.5rem',
 
                                 }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
-                                {truncate('안내안내안내안내안내안내안내안내안내', 6, 6)}
+                                {truncate('안내', 6, 6)}
                             </div>
                         </div>
                         <div style={{ marginBottom: '0.3rem', display: '', textAlign: 'center', justifyContent: 'center', width: '100%', fontSize: '2.999375rem', }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">

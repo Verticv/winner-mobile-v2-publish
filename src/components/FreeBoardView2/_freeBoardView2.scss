@@ -26,6 +26,12 @@
         }
     }
 
+    .font-spoqa {
+        font-size: 2.811875rem;
+        font-family: 'SpoqaHanSansNeo';
+        color: #b4b4b4;
+    }
+
     .two-buttons {
         margin: 3.7rem 0 3.6rem;
         display: flex;
@@ -72,4 +78,11 @@ textarea {
 textarea::-webkit-scrollbar {
     display: none;
 
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #c8c8c8;
+    opacity: 1;
+    /* Firefox */
 }

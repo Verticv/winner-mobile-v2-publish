@@ -19,8 +19,8 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             text: "입금규정 필독",
             isRead: false,
             time: "2021.06.29 07:35",
-            type: "안내",
-            category: "안내안내안내안내",
+            type: "공지",
+            category: "공지",
             isClicked: true,
             path: '/freeboard/view/0'
         },
@@ -29,8 +29,8 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             text: "메신저 고객센터 사칭주의",
             isRead: false,
             time: "2021.06.29 07:35",
-            type: "안내",
-            category: "안내",
+            type: "공지",
+            category: "공지",
             path: '/freeboard/view/1'
         },
         {
@@ -38,8 +38,8 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             text: "슬롯 롤링 보너스 요율 X2배 증가 안내",
             isRead: false,
             time: "2021.06.29 07:35",
-            type: "안내",
-            category: "안내",
+            type: "공지",
+            category: "공지",
             path: '/freeboard/view/2'
         },
         {
@@ -48,7 +48,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
             isRead: false,
             time: "2021.06.29 07:35",
             type: "이벤트",
-            category: "이벤트이벤트이벤트",
+            category: "이벤트",
             path: '/freeboard/view/3'
         },
         {
@@ -257,7 +257,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                 <div className='div-button'
                     style={{
                         backgroundColor:
-                            item.type === "안내"
+                            item.type === "공지"
                                 ? "#303843"
                                 : item.type === "이벤트"
                                     ? "#473c37"
@@ -267,13 +267,13 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                     }}
                 >
 
-                    {item.type === "안내" || item.type === "이벤트" ? (
+                    {item.type === "공지" || item.type === "이벤트" ? (
                         <div
                             className='speaker'
                         // style={{ marginRight: '2.375rem' }}
                         // className="font-spoqaMedium tracking-tight text-gray-r585858 flex items-center justify-center"
                         >
-                            {item.type === "안내"
+                            {item.type === "공지"
                                 ? <img
                                     // style={{ width: '3.3125rem' }} 
                                     src={BlueSpeaker} alt="" />
@@ -294,7 +294,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                             className='type'
                         >
                             {
-                                item.type === "안내"
+                                item.type === "공지"
                                     ? <div
                                         className='aaa'
                                         style={{
@@ -322,7 +322,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                             }
                             <p
                                 style={{ wordSpacing: (item.text === '다폴더 이벤트 참여' && item.id === 2802) ? '-0.3rem' : '' }}
-                                className={`text ${item.type === "안내"
+                                className={`text ${item.type === "공지"
                                     ? "blue-bg"
                                     : item.type === "이벤트"
                                         ? "yellow-bg"

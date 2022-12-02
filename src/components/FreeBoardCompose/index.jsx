@@ -41,8 +41,8 @@ const FreeBoardCompose = () => {
                         className='input-div'
                     >
                         <input
-                            className="bg-gray-fafafa outline-none w-full h-full font-spoqaMedium tracking-tight place-color-grey-1"
                             placeholder="제목을 입력하세요."
+                            style={{color:'#c8c8c8'}}
                             onFocus={() => {
                                 const menu = document.querySelector('#main-menu');
                                 menu.style.marginBottom = '-14.075rem'
@@ -69,12 +69,8 @@ const FreeBoardCompose = () => {
                     <div style={{ height: "70.25rem", paddingTop: '2.4rem', paddingLeft: '2.4875rem', fontSize: '2.8125rem', background: '#323232', borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem' }} className="w-full bg-white">
                         <textarea
                             className='textarea'
-                            // style={{
-                            //     resize: "none", wordBreak: "keep-all", height: '100%',
-                            //     width: '100%'
-                            // }}
-                            // className="outline-none w-full h-full font-spoqa tracking-tight placeholder-gray-r454545 place-color-grey-1"
                             placeholder="욕설  상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제 되며 사이트 이용에 제한을 받을 수 있습니다."
+                            style={{color:'#c8c8c8'}}
                             onFocus={() => {
                                 const menu = document.querySelector('#main-menu');
                                 menu.style.marginBottom = '-14.075rem'

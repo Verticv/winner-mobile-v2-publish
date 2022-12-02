@@ -23,7 +23,6 @@ const PowerLadderBetHistoryPanel = ({
                                 <CardResults
                                     bet="right"
                                     result="lose"
-                                    score=""
                                     team1="홀 [200회]"
                                     team2="[200회] 짝"
                                     // team2="과달하라"

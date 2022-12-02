@@ -963,7 +963,6 @@ const BetCombinationPanel = ({
                         <div
                             style={{
                                 padding: '0 0.7875rem',
-                                // borderColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ff7982" : "#ffffff",
                                 background: (`${id}left` === isHover3 || isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) > -1)
                                     ? "linear-gradient(to top, #634d38, #987959)"
                                     : isSubButton ? 'linear-gradient(to top, #262626, #333333)' : "linear-gradient(to bottom, #545452, #373736)",
@@ -977,9 +976,7 @@ const BetCombinationPanel = ({
                                 {hasUp === true && (
                                     <img className='normaloption-content4' style={{ width: '1.3125rem', height: '1.125rem' }} src={UpIcon} alt="" />
                                 )}
-                                <div style={{ width: '5rem', justifyContent: 'center', display: 'flex', position: 'relative' }}>
-                                    <p>{stat1}</p>
-                                </div>
+                                <p>{stat1}</p>
                             </span>
                         </div>
                         {buttonWithExtraData?.text && (
@@ -1087,9 +1084,7 @@ const BetCombinationPanel = ({
                             className="normaloption-content11 bg-gradient-to-b"
                         >
                             <span className="normaloption-content12">
-                                <div style={{ width: '4.9rem', justifyContent: 'center', display: 'flex', position: 'relative' }}>
-                                    <p>{stat3}</p>
-                                </div>
+                                <p>{stat3}</p>
                                 {hasDown === true && (
                                     <img className='normaloption-content13' style={{ width: '1.3125rem', height: '1.125rem' }} src={DownIcon} alt="" />
                                 )}

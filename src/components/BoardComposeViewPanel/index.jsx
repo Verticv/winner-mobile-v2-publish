@@ -7,8 +7,6 @@ import CardContent from '../../components/CardContent'
 import SelectAllButton from '../SelectAllButton'
 
 const BoardComposeViewPanel = ({
-    // checkedState,
-    // setCheckedState,
     setAttachedArray = null,
     setPopupOpen
 }) => {
@@ -112,7 +110,7 @@ const BoardComposeViewPanel = ({
     return (
         <>
             <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)', padding: '0.1875rem', borderRadius: '1.3rem' }}>
-                <div style={{ borderRadius: "1em", paddingBottom: '0.5625rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', background: '#323232' }} className="shadow-subNavbar bg-gray-fafafa">
+                <div style={{ borderRadius: "1em", paddingBottom: '0.5625rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', background: '#323232' }} className="shadow-subNavbar">
                     <TableHeader />
                     <div style={{ padding: '0 0.9rem' }} className="w-full">
                         <div className="w-full rounded-lg">
@@ -124,7 +122,6 @@ const BoardComposeViewPanel = ({
                                     score="1:2"
                                     team1="CF파추카"
                                     team2="과달하라 차바extra text"
-                                    // team2="과달하라"
                                     stat1="2.26"
                                     stat2="2.96"
                                     stat3="3.40"
@@ -139,7 +136,7 @@ const BoardComposeViewPanel = ({
                 </div>
             </div>
             <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)', padding: '0.1875rem', borderRadius: '1.3rem', marginTop: '2.3rem' }}>
-                <div style={{ borderRadius: "1em", paddingBottom: '0.5625rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', background: '#323232' }} className="shadow-subNavbar bg-gray-fafafa">
+                <div style={{ borderRadius: "1em", paddingBottom: '0.5625rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', background: '#323232' }} className="shadow-subNavbar">
                     <TableHeader smallCard />
                     <div style={{ padding: '0 1rem' }} className="w-full">
                         <div className="w-full rounded-lg">
@@ -148,7 +145,6 @@ const BoardComposeViewPanel = ({
                                 <CardResults
                                     bet="left"
                                     result="win"
-                                    // choice="home"
                                     score="5:0"
                                     team1="맨유"
                                     team2="첼시"
@@ -183,7 +179,7 @@ const BoardComposeViewPanel = ({
                 </div>
             </div>
             <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)', padding: '0.1875rem', borderRadius: '1.3rem', marginTop: '2.3rem' }}>
-                <div style={{ borderRadius: "1em", paddingBottom: '0.5625rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', background: '#323232' }} className="shadow-subNavbar bg-gray-fafafa">
+                <div style={{ borderRadius: "1em", paddingBottom: '0.5625rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', background: '#323232' }} className="shadow-subNavbar">
                     <TableHeader />
                     <div style={{ padding: '0 1rem' }} className="w-full">
                         <div className="w-full rounded-lg">
@@ -191,8 +187,7 @@ const BoardComposeViewPanel = ({
                                 <CardHeader flag='uk' name='EPL' date='2021-06-29 15:45' />
                                 <CardResults
                                     bet="left"
-                                    result="win"
-                                    // choice="home" 
+                                    result="win" 
                                     score="5:0"
                                     team1="맨유"
                                     team2="첼시"
@@ -204,13 +199,12 @@ const BoardComposeViewPanel = ({
                                     hasDown={false}
                                 />
                             </div>
-                            <div className='rounded-lg w-full shadow-to-box' style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem', marginTop: '1.875rem' }}>
+                            <div className='shadow-to-box' style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem', marginTop: '1.875rem' }}>
                                 <CardHeader flag='spain' name='라리가' date='2021-06-29 15:45' />
                                 <CardResults
                                     bet="left"
-                                    result="win"
-                                    // choice="home" 
-                                    score="2:1"
+                                    result="win" 
+                                    score="100:100"
                                     team1="바르셀로나"
                                     team2="레알마드리드"
                                     stat1="1.80"

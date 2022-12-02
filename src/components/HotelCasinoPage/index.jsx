@@ -19,7 +19,7 @@ const HotelCasinoPage = ({ isAuthenticated, setAuthenticated }) => {
 
       <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
         <Header isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-        <HomePageTopBanner pageTitle='보타카지노' toPath='/main' />
+        <HomePageTopBanner pageTitle='호텔카지노' toPath='/main' />
       </div>
 
 

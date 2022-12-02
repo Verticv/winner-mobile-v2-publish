@@ -25,7 +25,7 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             isRead: false,
             time: "2021.06.28 15:36",
             type: "안내",
-            category: "안내안내안내안내",
+            category: "안내",
             isClicked: true,
             path: '/mypage/inbox/1'
         },

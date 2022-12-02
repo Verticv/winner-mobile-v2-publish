@@ -105,7 +105,7 @@ const InboxTable = ({
                                             lineHeight: '3.3rem',
                                             height:'4.2rem'
                                         }}
-                                            className="w-max rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'><span className='mt-1 block'>{truncate('이벤트이벤트이벤트', 6, 6)}</span></span></div>
+                                            className="w-max rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'><span className='mt-1 block'>{truncate('이벤트', 6, 6)}</span></span></div>
                                         : <div></div>
                             }
                             <p style={{

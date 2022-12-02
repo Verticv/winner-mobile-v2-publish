@@ -52,7 +52,7 @@ const subTabsArray = [
     { text: "레드타이거", icon: Icon15, id: 15, width: '19.375rem', path: '#' },
     { text: "플레이텍", icon: Icon17, id: 16, width: '19.375rem', path: '#' },
     { text: "스카이윈드", icon: Icon18, id: 17, width: '19.375rem', path: '#' },
-    { text: "CQ9", icon: Icon19, id: 18, width: '19.375rem', path: '#' },
+    { text: "씨큐나인", icon: Icon19, id: 18, width: '19.375rem', path: '#' },
     { text: "올웨이스핀", icon: Icon20, id: 19, width: '19.375rem', path: '#' },
     { text: "와즈단", icon: Icon21, id: 20, width: '19.375rem', path: '#' },
     { text: "PG소프트", icon: Icon22, id: 21, width: '19.375rem', path: '#' },

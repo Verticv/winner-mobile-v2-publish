@@ -1,9 +1,7 @@
 import './assets/sass/global.scss';
 import React, { useEffect, useState } from 'react';
-// import { Helmet } from 'react-helmet';
 import {
   BrowserRouter as Router,
-  // Outlet,
   Route,
   Routes,
 } from 'react-router-dom';
@@ -14,9 +12,6 @@ import Header from './components/Header';
 import NavBottom from './components/NavBottom';
 import MyPageTest from './components/pages/Test';
 import { getCookie, setCookie } from './utils';
-// import img20 from './img20.png';
-// import img14 from './img14.png';
-// import img from './1.png';
 import AttendPage from './components/AttendPage';
 import FreeBoardCompose from './components/FreeBoardCompose';
 import HomePageTopBanner from './components/HomePageTopBanner';
@@ -25,21 +20,11 @@ import FreeBoardView2 from './components/FreeBoardView2';
 import CSCenterPage from './components/pages/CSCenterPage';
 import LiveCasinoPage from './components/LiveCasinoPage';
 import EsportsPage from './components/EsportsPage';
-// import ContactViewPage from './components/pages/ContactViewPage';
-// import ContactCompose from './components/ContactCompose';
-// import Faq from './components/Faq';
-// import MinigamePolicy from './components/MinigamePolicy';
-// import EditInfo from './components/EditInfo';
-// import Inbox from './components/Inbox';
-// import MoneyPage from './components/MoneyPage';
-// import PointsPage from './components/PointsPage';
-// import PointsAccumulateHistory from './components/PointsAccumulateHistory';
 import DistributorPage from './components/DistributorPage';
 import AuthenticationPage from './components/AuthenticationPage';
 import BetCombinationPage from './components/BetCombinationPage';
 import MinigamesPage from './components/MinigamesPage';
 import ScrollToTop from './helpers/scrollToTop';
-// import img from './1.png';
 import ScrollButton from './components/ScrollButton';
 import HotelCasinoPage from './components/HotelCasinoPage';
 import TvBetPage from './components/TvBetPage';
@@ -48,8 +33,6 @@ function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
   const pathname = window.location.pathname;
 
-  // const { pathname } = useLocation();
-  // console.log(pathname, 'aaaaaaaaaaa');
   useEffect(() => {
     const datePickerInput = document.querySelectorAll(
       '.react-datepicker__input-container input'
@@ -64,6 +47,7 @@ function App() {
       });
     });
   }, []);
+
   useEffect(() => {
     const previousUrl = getCookie('previousUrl');
     const currentUrl = getCookie('currentUrl');
@@ -92,6 +76,7 @@ function App() {
       }
     });
   }, []);
+
   useEffect(() => {
     const body = document.querySelector('body');
     console.log(window.location.pathname, 'window.location.pathname');
@@ -104,16 +89,8 @@ function App() {
 
   const [distributorPageActive, setDistributorPageActive] = useState();
 
-  console.log(distributorPageActive);
-
   return (
     <>
-      {/* <Helmet>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
-      </Helmet> */}
       <Router>
         <ScrollToTop />
         <Routes>
@@ -129,7 +106,7 @@ function App() {
           <Route
             path="/main"
             element={
-              <div style={{}}>
+              <div>
                 <Header />
                 <MainPage />
               </div>
@@ -154,12 +131,6 @@ function App() {
             path="/freeboard/compose"
             element={
               <>
-                {/* <img
-                className="img"
-                src={img2}
-                alt=""
-                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
-              /> */}
                 <Header />
                 <HomePageTopBanner
                   pageTitle="게시판"
@@ -182,11 +153,6 @@ function App() {
             path="/freeboard/view/*"
             element={
               <>
-                {/* <img
-                src={img}
-                alt=""
-                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
-              /> */}
                 <Header />
                 <HomePageTopBanner
                   pageTitle="게시판"
@@ -209,11 +175,6 @@ function App() {
             path="/freeboard/view2/*"
             element={
               <>
-                {/* <img
-                src={img2}
-                alt=""
-                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
-              /> */}
                 <Header />
                 <HomePageTopBanner
                   pageTitle="게시판"
@@ -237,9 +198,7 @@ function App() {
             path="/cscenter/*"
             element={
               <>
-                {/* <Header /> */}
                 <CSCenterPage />
-                {/* <NavBottom /> */}
               </>
             }
           />
@@ -250,11 +209,6 @@ function App() {
             path="/mypage/*"
             element={
               <>
-                {/* <img
-                src={img20}
-                alt=""
-                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
-              /> */}
                 <MyPageTest
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}
@@ -270,11 +224,6 @@ function App() {
             path="/distributor-page"
             element={
               <>
-                {/* <img
-                src={img26}
-                alt=""
-                style={{ position: 'absolute', top: '0', opacity: '0.5' }}
-              /> */}
                 <Header />
                 <DistributorPage
                   isAuthenticated={isAuthenticated}
@@ -296,7 +245,6 @@ function App() {
                   isAuthenticated={isAuthenticated}
                   setAuthenticated={setAuthenticated}
                 />
-                {/* hello */}
               </>
             }
           ></Route>
@@ -376,12 +324,6 @@ function App() {
             path="/minigame/*"
             element={
               <>
-                {/* <img
-                  className="img"
-                  src={img}
-                  alt=""
-                  style={{ position: 'absolute', top: '0', opacity: '0.5' }}
-                /> */}
                 <ScrollButton />
                 <MinigamesPage
                   isAuthenticated={isAuthenticated}

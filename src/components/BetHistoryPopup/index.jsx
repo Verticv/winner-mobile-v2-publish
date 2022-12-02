@@ -1,16 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BoardComposeViewPanel from '../../components/BoardComposeViewPanel';
 import CloseIcon from '../../assets/close-btn.png'
-// import Icon2 from '../../assets/icon1.png';
-// import Icon3 from '../../assets/icon2.png';
-// import Icon4 from '../../assets/icon3.png';
-// import Icon5 from '../../assets/icon4.png';
-// import Icon6 from '../../assets/icon5.png';
-// import Icon7 from '../../assets/icon6.png';
-// import Icon8 from '../../assets/icon7.png';
-// import Icon9 from '../../assets/icon8.png';
-// import img from '../../img5.png';
-// import icon1 from '../../assets/bigIcons/1.png';
 import icon2 from '../../assets/bigIcons/2.png';
 import icon3 from '../../assets/bigIcons/3.png';
 import icon4 from '../../assets/bigIcons/4.png';
@@ -20,7 +10,6 @@ import icon7 from '../../assets/bigIcons/7.png';
 import icon8 from '../../assets/bigIcons/8.png';
 import icon9 from '../../assets/bigIcons/9.png';
 import icon10 from '../../assets/icon10.png';
-// import icon1Active from '../../assets/bigIcons/1-active.png';
 import icon2Active from '../../assets/bigIcons/2-active.png';
 import icon3Active from '../../assets/bigIcons/3-active.png';
 import icon4Active from '../../assets/bigIcons/4-active.png';
@@ -30,7 +19,6 @@ import icon7Active from '../../assets/bigIcons/7-active.png';
 import icon8Active from '../../assets/bigIcons/8-active.png';
 import icon9Active from '../../assets/bigIcons/9-active.png';
 import icon10Active from '../../assets/icon10-active.png';
-
 
 import HorizontalMenu from '../HorizontalMenu';
 import LiveCasinoBetHistory from '../LiveCasinoBetHistory';
@@ -50,9 +38,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         activeIcon: icon2Active,
         text: '라이브카지노',
         width: '7.875rem',
-        // height: '6.24rem',
         marginTop: '0.4rem',
-        // textMargin: '0.6rem',
         isActive: false,
         path: '/freeboard/compose',
     },
@@ -62,7 +48,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         activeIcon: icon3Active,
         text: '슬롯',
         width: '7.875rem',
-        // height: '5.4375rem',
         marginTop: '0.5rem',
         textMargin: '0.4rem',
         isActive: false,
@@ -74,7 +59,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         activeIcon: icon4Active,
         text: '스포츠',
         width: '7.875rem',
-        // height: '5.18125rem',
         marginTop: '0.4rem',
         textMargin: '0.7rem',
         isActive: true,
@@ -86,7 +70,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         activeIcon: icon5Active,
         text: '호텔카지노',
         width: '7.875rem',
-        // height: '6.35625rem',
         marginTop: '0.4rem',
         textMargin: '0.4rem',
         isActive: false,
@@ -97,7 +80,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         activeIcon: icon6Active,
         text: 'e-스포츠',
         width: '7.875rem',
-        // height: '4.625rem',
         marginTop: '0.4rem',
         isActive: false,
         path: '/freeboard/compose',
@@ -107,7 +89,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         activeIcon: icon7Active,
         text: '미니게임',
         width: '7.875rem',
-        // height: '5.375rem',
         marginTop: '0.4rem',
         isActive: false,
         path: '/freeboard/compose',
@@ -117,7 +98,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         activeIcon: icon8Active,
         text: '키론가상게임',
         width: '7.875rem',
-        // height: '5rem',
         marginTop: '0.4rem',
         isActive: false,
         path: '/freeboard/compose',
@@ -127,7 +107,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         activeIcon: icon9Active,
         text: '피싱게임',
         width: '7.875rem',
-        // height: '5rem',
         marginTop: '0.4rem',
         isActive: false,
         path: '/freeboard/compose',
@@ -137,7 +116,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
         activeIcon: icon10Active,
         text: '티비벳',
         width: '5.875rem',
-        // height: '5.375rem',
         marginTop: '0.4rem',
         isActive: false,
         path: '/freeboard/compose',
@@ -244,7 +222,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                     <HotelCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}
                                         subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                                     />
-                                    <LiveCasinoBetHistory key={100} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} margon1 />
 
                                     <div style={{ marginTop: '1.25rem' }}>
                                         <Pagination page={page} setPage={setPage} />
@@ -261,10 +238,6 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                             ) : selectedTab === 5 ? (
                                 <>
                                     <MinigameBetHistoryPopup isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
-
-                                    <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
-                                        <Pagination page={page} setPage={setPage} />
-                                    </div>
                                 </>
                             ) : selectedTab === 6 ? (
                                 <>
