@@ -46,6 +46,7 @@ const BetCombinationRightPanel = ({
     ];
 
     const dateFormat1 = "HH:mm:ss";
+    const dateFormat2 = "yyyy-MM-dd (eee)"
 
     const [time, setTime] = useState(Date.now());
 
@@ -88,7 +89,8 @@ const BetCombinationRightPanel = ({
                         style={{ marginRight: "1.7rem", fontSize: "2.625rem" }}
                         className="content-RP3"
                     >
-                        2021-08-02 (월)
+                        {format(Date.now(), dateFormat2, { locale: ko })}
+                        {/* 2021-08-02 (월) */}
                     </p>
                     <div
                         style={{ color: "#ffe672", fontSize: "3.375rem" }}
