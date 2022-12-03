@@ -25,7 +25,9 @@ const AnnouncementTable = ({
                             className="announcementTable4"
                             onClick={() => navigate(item.path)}
                         >
-                            <p>{item.title}</p>
+                            <p style={{
+                                textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap'
+                            }}>{item.title}</p>
                             {item.isNew && (<div className="n-div">N</div>)}
                         </div>
                         <div className='announcementTable5' >

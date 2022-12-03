@@ -4,41 +4,11 @@ import parse from 'html-react-parser';
 import ArrowDown from '../../assets/myPage/contact/down-arrow.png'
 import arrowUp from '../../assets/myPage/contact/up-arrow.png'
 import QIcon from '../../assets/myPage/contact/qa.png'
-// import Icon1 from '../../assets/cscenter/leftMenu/icon_1.png'
-// import Icon2 from '../../assets/cscenter/leftMenu/icon_2.png'
-// import Icon3 from '../../assets/cscenter/leftMenu/icon_3.png'
-// import Icon4 from '../../assets/cscenter/leftMenu/icon_4.png'
-// import Icon5 from '../../assets/cscenter/leftMenu/icon_5.png'
-// import Icon1Active from '../../assets/cscenter/leftMenu/icon_1-active.png'
-// import Icon2Active from '../../assets/cscenter/leftMenu/icon_2-active.png'
-// import Icon3Active from '../../assets/cscenter/leftMenu/icon_3-active.png'
-// import Icon4Active from '../../assets/cscenter/leftMenu/icon_4-active.png'
-// import Icon5Active from '../../assets/cscenter/leftMenu/icon_5-active.png'
-// import Icon1 from '../../images/myPage/betHistory/ico_1.png'
-// import Icon2 from '../../images/myPage/betHistory/ico_2.png'
-// import Icon3 from '../../images/myPage/betHistory/ico_3.png'
-// import Icon4 from '../../images/myPage/betHistory/ico_4.png'
-// import Icon5 from '../../images/myPage/betHistory/ico_5.png'
-// import Icon6 from '../../images/myPage/betHistory/ico_6.png'
-// import Icon7 from '../../images/myPage/betHistory/ico_7.png'
-// import Icon8 from '../../images/cscenter/8.png'
-// import Icon9 from '../../images/cscenter/9.png'
-// import Icon10 from '../../images/cscenter/10.png'
 import HorizontalSubMenu from '../HorizontalSubMenu';
-// import HorizontalMenu1 from '../HorizontalMenu1';
-// import HomePageTopBanner from '../HomePageTopBanner';
-// import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
-// import img from '../../img9.png'
+
 
 const Faq = ({ subActiveButton, setSubActiveButton }) => {
 
-    // const tabsArray = [
-    //     { text: "문의하기", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true, width: '5rem' },
-    //     { text: "공지사항", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/cscenter/all/announcement", width: '5.625rem', marginLeft: '0.2rem' },
-    //     { text: "자주묻는질문", icon: Icon3, activeIcon: Icon3Active, id: 2, path: "/cscenter/all/faq", hasSameParent: true, width: '5.375rem', marginLeft: '0.2rem' },
-    //     { text: "계좌문의", icon: Icon4, activeIcon: Icon4Active, id: 3, path: "#", width: '5.1875rem', marginLeft: '0.1rem' },
-    //     { text: "베팅규정", icon: Icon5, activeIcon: Icon5Active, id: 4, path: "/cscenter/all/policy/sportsgame/soccer", hasSameParent: true, width: '4.875rem', marginLeft: '0.1rem' },
-    // ];
     const tabsArray2 = [
         { text: "전체", id: 0, width: '11.5625rem', path: "/cscenter/all/faq" },
         { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/faq/live-casino" },
@@ -116,7 +86,7 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
                     <div
                         className="q-type"
                         style={{
-                            maxWidth: '17.5rem',
+                            maxWidth: '51.5rem',
                             overflow: 'hidden',
                             lineHeight: '3.3rem',
                             height: '4.1rem',
@@ -124,17 +94,12 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
                     >
                         {type}
                     </div>
-                    <p
-                        // style={{ fontSize: '2.625rem', lineHeight: '1.2' }} 
-                        className="q-text">{parse(text)}</p>
+                    <p className="q-text">{parse(text)}</p>
                 </div>
                 <img style={{ width: '3.1875rem', marginRight: '4.45rem', marginLeft: '3.125rem' }} className={`${openedCell === cellId && "transform rotate-180"} q-down-arrow`} src={openedCell === cellId ? arrowUp : ArrowDown} alt="" />
             </button>
             {openedCell === cellId && (
-                <div
-                    // style={{ zIndex: 1, backgroundColor: "#fcfcfc", paddingLeft: '1.875rem', paddingRight: '1.875rem', marginBottom: '1.875rem', borderRadius: '2.8125rem' }}
-                    className="opened-cell"
-                >
+                <div className="opened-cell" >
                     <div className="flex flex-col">
                         <div style={{ marginBottom: '6.1rem' }} className="font-spoqa tracking-tight text-gray-r585858">
                             <span className="no1" >
@@ -202,9 +167,6 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
 
     return (
         <div>
-            {/* <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
-            {/* <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' /> */}
-            {/* <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} /> */}
             <div style={{ margin: '1rem 1.85rem' }}>
 
 
@@ -219,21 +181,10 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
                 </div>
                 <div style={{ height: '98%', top: '2rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
             </div>
-            {/* <div className="w-full flex relative top-0"> */}
-            {/* <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div> */}
-            {/* <div id="scroll-wrapper12" style={{ paddingLeft: '1.875rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                    <div className=" flex flex-shrink-0 w-full">
-                
-                    </div>
-                </div> */}
-            {/* <div style={{ background: "linear-gradient(to left, #ffffff00, #ffffff", width: '2.3rem' }} className="absolute h-full left-0 z-50"></div> */}
-            {/* </div> */}
 
             <div style={{ margin: '1.875rem', paddingBottom: '14rem' }} className="">
                 <MenuList items={questionArray} />
             </div>
-
-            {/* <BottomNavbar /> */}
         </div>
     )
 }

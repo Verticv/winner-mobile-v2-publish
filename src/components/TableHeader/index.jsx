@@ -3,11 +3,11 @@ import React from 'react';
 const TableHeader = ({ smallCard = false, isMinigame = false, middleText = "무" }) => {
 
     if (isMinigame === true) return (
-        <div style={{ paddingTop: '1.7625rem', paddingBottom: '1.375rem', display: 'flex', justifyContent: 'right', alignItems: 'center', paddingRight: smallCard ? '1.8rem' : '11rem', letterSpacing: '-0.07rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', background: '', marginBottom: '0.3rem' }} className="flex w-full pb-8 font-spoqaMedium text-14px tracking-tight text-gray-r454545">
+        <div style={{ paddingTop: '1.7625rem', paddingBottom: '1.375rem', display: 'flex', justifyContent: 'right', alignItems: 'center', paddingRight: smallCard ? '1.8rem' : '10.5rem', letterSpacing: '-0.07rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', background: '', marginBottom: '0.3rem' }} className="flex w-full pb-8 font-spoqaMedium text-14px tracking-tight text-gray-r454545">
             <div style={{ fontSize: '2.625rem', marginLeft: smallCard ? '11rem' : '', flexShrink:0 }}>회차</div>
-            <div style={{ fontSize: '2.625rem', marginLeft: smallCard ? '13.5rem' : '11.1rem', flexShrink:0 }}>승(홈)</div>
-            <div style={{ fontSize: '2.625rem', marginLeft: smallCard ? '12.25rem' : '14.3rem', flexShrink:0 }}>VS</div>
-            <div style={{ fontSize: '2.625rem', marginLeft: smallCard ? '9rem' : '12.6rem', flexShrink:0 }}>패(원정)</div>
+            <div style={{ fontSize: '2.625rem', marginLeft: smallCard ? '13.5rem' : '11.5rem', flexShrink:0 }}>승(홈)</div>
+            <div style={{ fontSize: '2.625rem', marginLeft: smallCard ? '12.25rem' : '14rem', flexShrink:0 }}>VS</div>
+            <div style={{ fontSize: '2.625rem', marginLeft: smallCard ? '9rem' : '13rem', flexShrink:0 }}>패(원정)</div>
         </div>
     )
     else return (

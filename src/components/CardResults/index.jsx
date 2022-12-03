@@ -288,13 +288,13 @@ const CardResults = ({
                                             style={{
                                                 marginBottom: score.length > 4 ? '-0.5rem' : '-1.4rem',
                                                 fontFamily: 'SpoqaHanSansNeoMedium',
-                                                marginLeft: '0.45rem',
+                                                marginLeft: '-0.2rem',
                                                 color: result === "win" ? '#e65454' : result === "lose" ? '#c8c8c8' : result === 'equality' ? '#44bb60' : ''
                                             }}
                                         >
                                             {result === "win" ? "승" : result === "lose" ? "패" : result === "equality" ? "무" : ""}
                                         </p>
-                                        <p style={{ margin: '0', fontFamily: 'RobotoMedium', letterSpacing: score.length > 4 ? '-0.2rem' : '-0.07rem', marginBottom: '2.2rem', marginLeft: '0.45rem', fontSize: score.length > 4 ? '2rem' : '', lineHeight: score.length > 4 ? '2.3rem' : '' }}>{score}</p>
+                                        <p style={{ margin: '0 0 2.2rem -0.4rem', fontFamily: 'RobotoMedium', letterSpacing: score.length > 4 ? '-0.2rem' : '-0.07rem', fontSize: score.length > 4 ? '2rem' : '', lineHeight: score.length > 4 ? '2.3rem' : '' }}>{score}</p>
                                     </>
                                 )
                                 : "결과없음"

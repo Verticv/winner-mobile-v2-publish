@@ -618,39 +618,16 @@ const SportsGamePolicy = ({ setSelectedTab, subActiveButton, setSubActiveButton 
             </Routes>
 
             <Routes >
-
-
-                <Route path="/soccer"
-                    element={
-                        <SportsGamePolicyTable2 array={SoccerSubArray} />
-                    }
-                >
-                </Route>
+                <Route path="/soccer" element={<SportsGamePolicyTable2 array={SoccerSubArray} />}/>
+                <Route path="/basketball" element={<SportsGamePolicyTable2 array={BasketballSubArray} />}/>
+                <Route path="/baseball" element={<SportsGamePolicyTable2 array={BaseballSubArray} />}/>
+                <Route path="/volleyball" element={<SportsGamePolicyTable2 array={VolleyballSubArray} />}/>
+                <Route path="/tennis" element={<SportsGamePolicyTable2 array={TennisSubArray} />}/>
+                <Route path="/hockey" element={<SportsGamePolicyTable2 array={HockeySubArray} />}/>
+                <Route path="/handball" element={<SportsGamePolicyTable2 array={HandballSubArray} />}/>
+                <Route path="/football" element={<SportsGamePolicyTable2 array={FootballSubArray} />}/>
+                <Route path="/e-sports" element={<SportsGamePolicyTable2 array={ESportsSubArray} />}/>
             </Routes>
-            {/*<Route path="/cscenter/all/policy/sportsgame/basketball">
-                <SportsGamePolicyTable2 array={BasketballSubArray} />
-            </Route>
-            <Route path="/cscenter/all/policy/sportsgame/baseball">
-                <SportsGamePolicyTable2 array={BaseballSubArray} />
-            </Route>
-            <Route path="/cscenter/all/policy/sportsgame/volleyball">
-                <SportsGamePolicyTable2 array={VolleyballSubArray} />
-            </Route>
-            <Route path="/cscenter/all/policy/sportsgame/tennis">
-                <SportsGamePolicyTable2 array={TennisSubArray} />
-            </Route>
-            <Route path="/cscenter/all/policy/sportsgame/hockey">
-                <SportsGamePolicyTable2 array={HockeySubArray} />
-            </Route>
-            <Route path="/cscenter/all/policy/sportsgame/handball">
-                <SportsGamePolicyTable2 array={HandballSubArray} />
-            </Route>
-            <Route path="/cscenter/all/policy/sportsgame/football">
-                <SportsGamePolicyTable2 array={FootballSubArray} />
-            </Route>
-            <Route path="/cscenter/all/policy/sportsgame/e-sports">
-                <SportsGamePolicyTable2 array={ESportsSubArray} />
-            </Route> */}
 
             <div style={{ marginBottom: '14rem' }} />
 

@@ -971,7 +971,7 @@ const BetCombinationPanel = ({
                             }}
                             className="normaloption-content1 bg-gradient-to-b"
                         >
-                            <span style={{ width: '20rem', textAlign: 'start' }} className="normaloption-content2">{hasUp ? truncate(team1, 8, 8) : truncate(team1, 12, 12)}</span>
+                            <span style={{ width: '19rem', textAlign: 'start' }} className="normaloption-content2">{hasUp ? truncate(team1, 8, 8) : truncate(team1, 12, 12)}</span>
                             <span style={{ color: stat1Color === "red" && isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) === -1 && `${id}left` !== isHover3 ? "#e65454" : "" }} className="normaloption-content3">
                                 {hasUp === true && (
                                     <img className='normaloption-content4' style={{ width: '1.3125rem', height: '1.125rem' }} src={UpIcon} alt="" />
@@ -1164,7 +1164,7 @@ const BetCombinationPanel = ({
                                     }}
                                     className="leaguecell-content5"
                                 >
-                                    <span style={{ textShadow: "1px 1px 1px #00000070", marginTop: isOpen[items.id] === true ? '-0.3rem' : '' }} className="leaguecell-content6" >
+                                    <span style={{ textShadow: "1px 1px 1px #00000070", marginTop: isOpen[items.id] === true ? '0.3rem' : '0.3rem' }} className="leaguecell-content6" >
                                         {isOpen[items.id] === true ? (
                                             <img className='leaguecell-content7' src={Minus} alt="" />
                                         ) : (

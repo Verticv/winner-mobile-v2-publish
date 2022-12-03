@@ -38,7 +38,7 @@ const ContactView = () => {
                                 }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
-                                {truncate('계좌문의계좌문의', 6, 6)}
+                                {truncate('계좌문의', 6, 6)}
                             </div>
                         </div>
                         <div style={{ color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '3rem', letterSpacing: '-0.07rem', marginLeft: '0.2rem' }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
@@ -64,7 +64,7 @@ const ContactView = () => {
                             }}
                             className="absolute right-0 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                         >
-                            {truncate('답변대기답변대기', 6, 6)}
+                            {truncate('답변대기', 6, 6)}
                         </div>
                     </div>
 

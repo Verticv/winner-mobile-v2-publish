@@ -565,7 +565,6 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
 
                 <Route path="/speedkino"
                     element={
-
                         <KinoLadderBetHistoryPanel isPopup={isPopup} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} isMinigame={true} gameType="speedkino" />
                     }
                 >

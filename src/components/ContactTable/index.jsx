@@ -46,22 +46,16 @@ const ContactTable = ({
                         }}
                         className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full" >
 
-                        <div className='w-full h-full flex flex-wrap' style={{ display: 'flex', flexDirection: 'column', marginTop: '-0.3rem' }}>
-                            <div
-                                className={`${item.isRead === true
-                                    ? "text-gray-r7b7b7b font-spoqaMedium"
-                                    : "text-gray-r454545 font-spoqaMedium"
-                                    } flex items-center cursor-pointer`}
-                                // onClick={() => navigate(item.path)}
-                                style={{ display: 'flex', alignItems: 'center', height: '5.4rem' }}
-                            >
+                        <div style={{ display: 'flex', flexDirection: 'column', marginTop: '-0.3rem' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', height: '5.4rem' }} >
                                 <div
                                     style={{
-                                         marginRight: '1rem', fontSize: '2.4375rem',
+                                        marginRight: '1rem', fontSize: '2.4375rem',
                                         padding: '0rem 1.35rem',
                                         fontFamily: 'SpoqaHanSansNeoMedium',
                                         paddingBottom: '0',
-                                        backgroundColor: item.isRead === true ? "#494745" : "#7e7564", color: item.isRead === true ? "#ccc2b6" : "#ffffff",
+                                        backgroundColor: item.isRead === true ? "#494745" : "#7e7564", 
+                                        color: item.isRead === true ? "#c8c8c8" : "#f1e7d5",
                                         borderRadius: '2rem',
                                         height: '4.1rem',
                                         marginTop: '0.3rem',
@@ -78,8 +72,8 @@ const ContactTable = ({
                                 </div>
                                 <p style={{
                                     textOverflow: 'ellipsis', maxWidth: '37rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
-                                    color: item.isRead === true ? '#a0a0a0' : '#c8c8c8', marginTop: '0.5rem'
-                                }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap mt-1">{item.text}</p>
+                                    color: item.isRead === true ? '#a0a0a0' : '#c8c8c8', marginTop: '0.5rem', overflow: 'hidden', whiteSpace: 'nowrap'
+                                }}>{item.text}</p>
                                 {item.isRead === false && (
                                     <div className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto n-div">
                                         N

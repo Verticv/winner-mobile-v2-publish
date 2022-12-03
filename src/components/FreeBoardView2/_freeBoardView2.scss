@@ -74,6 +74,7 @@
 
 textarea {
     outline: none;
+    color: #b4b4b4;
 }
 textarea::-webkit-scrollbar {
     display: none;
@@ -82,7 +83,7 @@ textarea::-webkit-scrollbar {
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #c8c8c8;
+    color: #b4b4b4;
     opacity: 1;
     /* Firefox */
 }

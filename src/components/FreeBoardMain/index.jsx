@@ -338,7 +338,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         height: '7.0625rem',
                                         borderWidth: '0.1875rem',
                                         borderStyle: 'solid',
-                                        borderColor: '#3b3b3b',
+                                        borderColor: '#454545',
                                         borderRadius: '1.5rem',
                                         fontSize: "2.6rem",
                                         top: '2.375rem',
