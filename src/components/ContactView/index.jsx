@@ -58,9 +58,9 @@ const ContactView = () => {
                         <div
                             style={{
                                 position: 'absolute', right: '0', backgroundColor: "#7e7564", marginRight: '1.6rem', paddingBottom: '0', width: 'fit-content',
-                                fontSize: '2.4375rem', padding: '0.6rem 1.9rem', height: '4.125rem', marginTop: '0.35rem', letterSpacing: '-0.07rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '2rem', maxWidth: '17rem',
+                                fontSize: '2.4375rem', padding: '0.6rem 1.9rem', height: '4.125rem', marginTop: '0.35rem', letterSpacing: '-0.07rem', color: '#f1e7d5', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '2rem', maxWidth: '17rem',
                                 overflow: 'hidden',
-                                lineHeight: '3.3rem',
+                                lineHeight: '3.3rem'
                             }}
                             className="absolute right-0 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                         >

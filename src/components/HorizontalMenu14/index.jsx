@@ -98,6 +98,7 @@ const HorizontalMenu14 = ({
         <>
             <div id="container" className="HorizontalMenu flex justify-start items-start">
                 <TabsList items={itemsArray} />
+                <div style={{ height: '14.4rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
             </div>
         </>
     )

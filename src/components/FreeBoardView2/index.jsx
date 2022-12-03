@@ -71,11 +71,11 @@ const FreeBoardView2 = () => {
                 </div>
             </div>
             <div style={{ marginTop: '1.1rem', marginLeft: '3.8rem', display: 'flex', marginBottom: '-0.2rem' }} className='flex'>
-                <button style={{ borderRadius: "0.8rem", width: '9.2rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', color: isOneButton ? '#ccc2b6' : '#ff6945', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid rgb(59, 59, 59)' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                <button style={{ borderRadius: "0.8rem", width: '9.2rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', color: isOneButton ? '#ccc2b6' : '#ff6945', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid #454545' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                     <div className={`${isOneButton ? "text-gray-r7b7b7b" : "text-red-d52e2e"} font-spoqaMedium flex items-center justify-center mt-2`}>{isOneButton ? "답글" : "수정"}</div>
                 </button>
                 {!isOneButton && (
-                    <div style={{ borderRadius: "0.8rem", width: '9.26rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid rgb(59, 59, 59)' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                    <div style={{ borderRadius: "0.8rem", width: '9.26rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid #454545' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                         <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5" style={{ color: '#ff6945', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%' }}>삭제</div>
                     </div>
                 )}
@@ -277,7 +277,7 @@ const FreeBoardView2 = () => {
                             <p style={{ marginLeft: '3.6875rem', paddingRight: '3.6875rem', marginTop: '2.5rem', fontSize: '2.811875rem', color: '', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         </div>
                         <div style={{ marginTop: '-0.1rem', marginLeft: '-0.2rem', display: 'flex', marginBottom: '-0.2rem' }} className='flex'>
-                            <button style={{ borderRadius: "0.8rem", width: '9.4rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', color: '#ccc2b6', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid rgb(59, 59, 59)', marginBottom: '1.1rem' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <button style={{ borderRadius: "0.8rem", width: '9.4rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.55rem', background: '#2e2e2e', color: '#ccc2b6', paddingTop: '0.2rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', border: '0.1875rem solid #454545', marginBottom: '1.1rem' }} className='hover flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
                                 <div>답글</div>
                             </button>
                         </div>

@@ -2,18 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import { Route, useNavigate, useLocation, Routes } from 'react-router';
 import HorizontalSubMenu1 from '../HorizontalSubMenu1'
-// import Icon1 from '../../images/cscenter/sportsPolicy/1.png'
-// import Icon2 from '../../images/cscenter/sportsPolicy/2.png'
-// import Icon3 from '../../images/cscenter/sportsPolicy/3.png'
-// import Icon4 from '../../images/cscenter/sportsPolicy/4.png'
-// import Icon5 from '../../images/cscenter/sportsPolicy/5.png'
-// import Icon6 from '../../images/cscenter/sportsPolicy/6.png'
-// import Icon7 from '../../images/cscenter/sportsPolicy/7.png'
-// import Icon8 from '../../images/cscenter/sportsPolicy/8.png'
-// import Icon9 from '../../images/cscenter/sportsPolicy/9.png'
 import SportsGamePolicyTable1 from '../SportsGamePolicyTable1';
 import SportsGamePolicyTable2 from '../SportsGamePolicyTable2';
-// import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 
 const SoccerArray = [
     { id: 0, type: "승무패", typeColor: "#4c98ff", overtime: true, hasMargin: true, ruleText: "승리가 예상되는 팀 또는 무승부를 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 선택하여 베팅하는 방식", rows: '2' },
@@ -581,7 +571,6 @@ const SportsGamePolicy = ({ setSelectedTab, subActiveButton, setSubActiveButton 
             </div>
 
             <Routes >
-
                 <Route path="/soccer" element={<SportsGamePolicyTable1 array={SoccerArray} />} />
                 <Route path="/basketball" element={<SportsGamePolicyTable1 array={BasketballArray} />} />
                 <Route path="/baseball" element={<SportsGamePolicyTable1 array={BaseballArray} />} />
@@ -591,30 +580,6 @@ const SportsGamePolicy = ({ setSelectedTab, subActiveButton, setSubActiveButton 
                 <Route path="/handball" element={<SportsGamePolicyTable1 array={HandballArray} />} />
                 <Route path="/football" element={<SportsGamePolicyTable1 array={FootballArray} />} />
                 <Route path="/e-sports" element={<SportsGamePolicyTable1 array={ESportsArray} />} />
-                {/* <Route path="/cscenter/all/policy/sportsgame/basketball">
-                <SportsGamePolicyTable1 array={BasketballArray} />
-            </Route> */}
-                {/* <Route path="/cscenter/all/policy/sportsgame/baseball">
-                <SportsGamePolicyTable1 array={BaseballArray} />
-            </Route> */}
-                {/* <Route path="/cscenter/all/policy/sportsgame/volleyball">
-                <SportsGamePolicyTable1 array={VolleyballArray} />
-            </Route> */}
-                {/* <Route path="/cscenter/all/policy/sportsgame/tennis">
-                <SportsGamePolicyTable1 array={TennisArray} />
-            </Route> */}
-                {/* <Route path="/cscenter/all/policy/sportsgame/hockey">
-                <SportsGamePolicyTable1 array={HockeyArray} />
-            </Route> */}
-                {/* <Route path="/cscenter/all/policy/sportsgame/handball">
-                <SportsGamePolicyTable1 array={HandballArray} />
-            </Route> */}
-                {/* <Route path="/cscenter/all/policy/sportsgame/football">
-                <SportsGamePolicyTable1 array={FootballArray} />
-            </Route> */}
-                {/* <Route path="/cscenter/all/policy/sportsgame/e-sports">
-                <SportsGamePolicyTable1 array={ESportsArray} />
-            </Route> */}
             </Routes>
 
             <Routes >
