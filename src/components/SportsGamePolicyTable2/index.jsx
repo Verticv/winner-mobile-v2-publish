@@ -24,7 +24,7 @@ const SportsGamePolicyTable2 = ({ array }) => {
 
     return (
         <div style={{ background: 'linear-gradient(to top, #1f1f1e, #3e3e3d 50%, #4a4a4a)', padding: '0.1875rem', margin: '2.5rem 1.875rem', borderRadius: "1.2rem", }}>
-            <table style={{ borderRadius: "1.2rem", fontSize: '2.8125rem', background: '#323232', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', borderCollapse: 'collapse' }} className="shadow-subNavbar overflow-hidden">
+            <table style={{ borderRadius: "1.2rem", fontSize: '2.8125rem', background: '#323232', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', borderCollapse: 'collapse', width:'100%' }} className="shadow-subNavbar overflow-hidden">
                 <thead style={{ borderBottomWidth: "0.1875rem", background: '#2e2e2e', borderBottom: '0.1875rem solid #252525', borderTopLeftRadius: '1.3rem', borderTopRightRadius: '1.3rem' }} className="bg-gray-fafafa font-spoqaMedium tracking-tight text-gray-r454545 border-b border-gray-dddddd">
                     <tr style={{ height: '9.1rem', background: '', borderTopLeftRadius: '1.3rem', }}>
                         <td style={{ width: "14.8125rem", color: '#c8c8c8', textAlign: 'center', borderTopLeftRadius: '1.3rem', }} className="text-center"><p style={{ margin: '-0.1rem 0px 0px 0.1rem', letterSpacing: '-0.07rem' }}>타입 및 경기시간</p></td>
@@ -32,7 +32,7 @@ const SportsGamePolicyTable2 = ({ array }) => {
                         <td className="text-center" style={{ color: '#c8c8c8', textAlign: 'center', borderTopRightRadius: '1.3rem' }}><p style={{ margin: '-0.1rem 0 0 -2.2rem ' }}>결과적용 기준</p></td>
                     </tr>
                 </thead>
-                <tbody style={{ fontSize: '2.625rem', color: '#c8c8c8' }} className="w-full text-585858 tracking-tight font-spoqa">
+                <tbody style={{ fontSize: '2.625rem', color: '#c8c8c8' }}>
 
                     <Cells items={array} />
 
