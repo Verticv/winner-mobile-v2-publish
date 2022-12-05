@@ -11,6 +11,7 @@ const SportsGamePolicyTable1 = ({ array }) => {
         ruleText,
         ruleText2 = null,
         ruleText3 = null,
+        ruleText4 = null,
         hasMargin,
         rows
     }) => (
@@ -27,13 +28,14 @@ const SportsGamePolicyTable1 = ({ array }) => {
                 <p>{parse(ruleText)}</p>
                 <p>{ruleText2}</p>
                 <p>{ruleText3}</p>
+                <p>{ruleText4}</p>
             </td>
         </tr>
     )
 
     function Cells({ items }) {
         return items.map(item => (
-            <Cell type={item.type} typeColor={item.typeColor} overtime={item.overtime} ruleText={item.ruleText} ruleText2={item.ruleText2} ruleText3={item.ruleText3} hasMargin={item.hasMargin} rows={item.rows} />
+            <Cell type={item.type} typeColor={item.typeColor} overtime={item.overtime} ruleText={item.ruleText} ruleText2={item.ruleText2} ruleText3={item.ruleText3} ruleText4={item.ruleText4} hasMargin={item.hasMargin} rows={item.rows} />
         )
         )
     }
