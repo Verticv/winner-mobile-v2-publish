@@ -15,6 +15,7 @@ const SportsGamePolicyTable2 = ({ array }) => {
                 <td style={{ padding: '1.2rem 0px 1.1rem 0rem', WebkitTextStroke: "0.2px", textAlign: 'start' }} className="">
                     <p>{parse(item.text)}</p>
                     <p>{item.text2}</p>
+                    <p>{item.text3}</p>
                 </td>
             </tr>
         )
