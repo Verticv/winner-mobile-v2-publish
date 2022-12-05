@@ -9,7 +9,7 @@ const TvBetStructure = () => {
 
   const TitleText = ({ number = "01", titleText = "화면구성", noNumber }) => (
     <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '3.41188rem', paddingTop: '2rem', paddingBottom: '1.8rem' }}>
-      <img src={icon} alt="" style={{ marginLeft: '1.6rem', marginRight: '0.2rem', width: '2rem' }} />
+      <img src={icon} alt="" style={{ marginLeft: '1.6rem', marginRight: '0.2rem', width: '2.5rem' }} />
       <div style={{ background: "linear-gradient(120deg, #2087f0, #1873cf", borderRadius: "3px" }} className="w-8px h-20px"></div>
       <span className="text-22px font-spoqaBold tracking-tight text-gray-r585858 ml-3px h-22px flex items-center" style={{ letterSpacing: '-0.07rem', marginTop: '0.1rem', marginRight: '1rem', color: '#ccc2b6' }}>{titleText}</span>
       <div style={{ backgroundColor: "#494745", borderRadius: "100%", fontFamily: 'RobotoBold', padding: '0.4rem 0.5rem', color: '#ccc2b6', visibility: noNumber ? "hidden" : "visible" }} className="w-36px h-36px ml-3px flex items-center justify-center text-white text-22px font-roboto">

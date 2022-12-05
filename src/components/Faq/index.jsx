@@ -87,6 +87,7 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
                         className="q-type"
                         style={{
                             maxWidth: '51.5rem',
+                            minWidth: '17.5rem',
                             overflow: 'hidden',
                             lineHeight: '3.3rem',
                             height: '4.1rem',

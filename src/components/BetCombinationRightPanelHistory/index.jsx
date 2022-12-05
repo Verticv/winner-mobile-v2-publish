@@ -32,7 +32,6 @@ const BetCombinationRightPanelHistory = () => {
                     borderRightWidth: "0.1875rem",
                     borderTopLeftRadius: "1.3125rem",
                     borderTopRightRadius: "1.3125rem",
-                    // paddingBottom: '0.1rem'
                 }}
                 className="historycard-content2"
             >

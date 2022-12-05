@@ -66,10 +66,10 @@ const FreeBoardCompose = () => {
                     <BoardViewPanel isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
 
 
-                    <div style={{ height: "70.25rem", paddingTop: '2.4rem', paddingLeft: '2.4875rem', fontSize: '2.8125rem', background: '#323232', borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem' }} className="w-full bg-white">
+                    <div style={{ height: "70.25rem", paddingTop: '2.4rem', paddingLeft: '2.4875rem', fontSize: '2.8125rem', background: '#323232', borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem' }} className="placeholder-white">
                         <textarea
                             className='textarea'
-                            placeholder="욕설  상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제 되며 사이트 이용에 제한을 받을 수 있습니다."
+                            placeholder="욕설 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제 되며 사이트 이용에 제한을 받을 수 있습니다."
                             style={{color:'#c8c8c8'}}
                             onFocus={() => {
                                 const menu = document.querySelector('#main-menu');

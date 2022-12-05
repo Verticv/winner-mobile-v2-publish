@@ -5,7 +5,7 @@ const SportsGamePolicyTable2 = ({ array }) => {
 
     function Cells({ items }) {
         return items.map((item, index) => (
-            <tr style={{ borderBottomWidth: `${items.length - 1 !== index ? "0.1875rem" : ""}`, fontFamily: 'SpoqaHanSansNeo', borderBottom: "0.1875rem solid #252525", textAlign: 'center' }} className="bg-gray-fefefe font-spoqa tracking-tight text-gray-r585858 w-full border-b border-gray-dddddd">
+            <tr style={{ borderBottomWidth: `${items.length - 1 !== index ? "0.1875rem" : ""}`, fontFamily: 'SpoqaHanSansNeoMedium', borderBottom: "0.1875rem solid #252525", textAlign: 'center' }} className="bg-gray-fefefe font-spoqa tracking-tight text-gray-r585858 w-full border-b border-gray-dddddd">
                 <td style={{ padding: '0.875rem 0', width: "29.375rem", paddingLeft: '2.5rem', paddingRight: '1.5rem' }} className="font-spoqaMedium  text-center">
                     <span style={{ color: item.color, marginLeft: item.isFirst ? '' : '-0.6rem' }}>{item.title}</span>
                     {item.title2 && (

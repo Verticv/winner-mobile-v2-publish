@@ -935,7 +935,6 @@ const BetCombinationPanel = ({
                         width: "29.6875rem",
                         height: `${isSubButton ? "9.9375rem" : "7.4375rem"}`,
                         padding: '0.1875rem',
-                        // background: 'linear-gradient(to top, #3c3c3b, #6b6865)',
                         marginRight: '0.45rem',
                         borderRadius: '0.5rem',
                         background: (`${id}left` === isButtonClicked || `${id}left` === isHover3)
@@ -948,7 +947,6 @@ const BetCombinationPanel = ({
                             width: "100%",
                             height: "100%",
                             fontSize: '2.625rem',
-                            // backgroundColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#cb4343" : "#b3b3b3"
                         }}
                         className="normaloption-content"
                         onClick={() => {
@@ -994,7 +992,6 @@ const BetCombinationPanel = ({
                         width: "10rem",
                         height: `${isSubButton ? "9.9375rem" : "7.4375rem"}`,
                         padding: '0.1875rem',
-                        // background: 'linear-gradient(to top, #3c3c3b, #6b6865)',
                         marginRight: '0.35rem',
                         borderRadius: '0.5rem',
                         background: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}middle` : `${id}middle`) > -1 || `${id}middle` === isHover3)
@@ -1007,9 +1004,7 @@ const BetCombinationPanel = ({
                         style={{
                             width: "100%",
                             height: "100%",
-                            // padding: '1px',
                             fontSize: '2.625rem',
-                            // marginRight: '0.45rem',
                             backgroundColor: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}middle` : `${id}middle`) > -1 || `${id}middle` === isHover3) ? "#cb4343" : "#b3b3b3"
                         }}
                         className="normaloption-content7"
@@ -1045,7 +1040,6 @@ const BetCombinationPanel = ({
                         width: "29.6875rem",
                         height: `${isSubButton ? "9.9375rem" : "7.4375rem"}`,
                         padding: '0.1875rem',
-                        // background: 'linear-gradient(to top, #3c3c3b, #6b6865)',
                         marginRight: '0.45rem',
                         borderRadius: '0.5rem',
                         background: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}right` : `${id}right`) > -1 || `${id}right` === isHover3)
@@ -1057,9 +1051,7 @@ const BetCombinationPanel = ({
                         style={{
                             width: "100%",
                             height: "100%",
-                            // padding: '1px',
                             fontSize: '2.625rem',
-                            // marginRight: '0.45rem',
                             backgroundColor: (isButtonOn.indexOf(isSubArray ? `${items_id}-${id}right` : `${id}right`) > -1 || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3"
                         }}
                         className="normaloption-content10"
@@ -1089,7 +1081,7 @@ const BetCombinationPanel = ({
                                     <img className='normaloption-content13' style={{ width: '1.3125rem', height: '1.125rem' }} src={DownIcon} alt="" />
                                 )}
                             </span>
-                            <span style={{ width: '20rem', textAlign: 'end' }} className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 10, 8) : truncate(team2, 10, 8)}</span>
+                            <span style={{ width: '20rem', textAlign: 'end' }} className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 13, 13) : truncate(team2, 10, 8)}</span>
                         </div>
                     </button>
                 </div>
@@ -1215,7 +1207,6 @@ const BetCombinationPanel = ({
                         </p>
                     </div>
                 </div>
-                {/* <div className="h-px w-full bg-gray-dddddd" /> */}
 
                 <div style={{ paddingBottom: `${isLastElement ? "1.125rem" : ""}`, borderBottomWidth: `${isLastElement ? "0.1875rem" : ""}` }} className={`leaguegroup-content7 ${isLastElement ? "leaguegroup-content8" : "leaguegroup-content9"} shadow-to-box shadow`}>
                     <LeagueCell array={array} />

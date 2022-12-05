@@ -8,7 +8,7 @@ const EsportsStructure = () => {
 
     const TitleText = ({ number = "01" }) => (
         <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '3.41188rem', paddingTop: '2rem', paddingBottom: '1.8rem' }}>
-            <img src={icon} alt="" style={{ marginLeft: '1.6rem', marginRight: '0.2rem', width: '2rem' }} />
+            <img src={icon} alt="" style={{ marginLeft: '1.6rem', marginRight: '0.2rem', width: '2.5rem' }} />
             <div style={{ background: "linear-gradient(120deg, #2087f0, #1873cf", borderRadius: "3px" }} className="w-8px h-20px"></div>
             <span className="text-22px font-spoqaBold tracking-tight text-gray-r585858 ml-3px h-22px flex items-center" style={{ letterSpacing: '-0.07rem', marginTop: '0.1rem', marginRight: '1rem', color: '#ccc2b6' }}>화면구성</span>
             <div style={{ backgroundColor: "#494745", borderRadius: "100%", fontFamily: 'RobotoBold', padding: '0.4rem 0.5rem', color: '#ccc2b6' }} className="w-36px h-36px ml-3px flex items-center justify-center text-white text-22px font-roboto">
@@ -112,7 +112,7 @@ const EsportsStructure = () => {
                         <Item number="2." title="베팅타입 정렬" text="베팅타입 별로 배당판이 정렬됩니다." marginTop='-0.6rem' />
                         <Item number="3." title="라이브 배당률" text="경기가 시작되면 라이브 배당률을 확인할 수 있습니다." text2="" marginTop='-0.6rem' />
                         <Item number="4." title="배당판" text="다양한 배당정보가 표시됩니다." marginTop='-0.6rem' />
-                        <Item number="5." title="+버튼" text="각 팀의 좌/우 가장자리에 있는" color1="[+] " color2="[+]" color3="버튼을 누르면" text2="선택한 경기가 팔레이(다폴더) 리스트에 추가됩니다" marginTop='-0.5rem' isflex />
+                        <Item number="5." title="+버튼" text="각 팀의 좌/우 가장자리에 있는" color1="[+] " color2="[+]" color3="버튼을 누르면" text2="선택한 경기가 팔레이(다폴더) 리스트에 추가됩니다." marginTop='-0.5rem' isflex />
                         <Item number="6." title="경기영상" text="라이브경기는 실시간으로 경기영상을 제공하며" text2="대기중인 경기는 경기정보가 표시됩니다." marginTop='1.5rem' withoutP='true' />
                         <Item number="7." title="통계" text="경기플레이어, 게임통계, 팀순위 등" text2="다양한 경기정보를 제공합니다." withoutP marginTop='1.4rem' />
                         <LongItem2 marginTop='1.3rem' marginBottom='0.7rem' />
