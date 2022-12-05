@@ -43,7 +43,7 @@ const SportsGamePolicyTable1 = ({ array }) => {
 
     return (
         <div style={{ background: 'linear-gradient(to top, #1f1f1e, #3e3e3d 50%, #4a4a4a)', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)', padding: '0.1875rem', margin: '0 1.875rem', borderRadius: "1.2rem", }}>
-            <table style={{ borderRadius: "1.2rem", fontSize: '2.8125rem', background: '#323232', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', borderCollapse: 'collapse' }} className="shadow-subNavbar overflow-hidden">
+            <table style={{ borderRadius: "1.2rem", fontSize: '2.8125rem', background: '#323232', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium', borderCollapse: 'collapse', width:'100%' }} className="shadow-subNavbar overflow-hidden">
                 <thead style={{ borderBottomWidth: "0.1875rem", background: '#2e2e2e', borderBottom: '0.1875rem solid #252525', borderTopLeftRadius: '1.3rem', borderTopRightRadius: '1.3rem' }} className="bg-gray-fafafa font-spoqaMedium tracking-tight text-gray-r454545 border-b border-gray-dddddd">
                     <tr style={{ height: '9.1rem', background: '', borderTopLeftRadius: '1.3rem', }}>
                         <td style={{ width: "14.8125rem", color: '#c8c8c8', textAlign: 'center', borderTopLeftRadius: '1.3rem', }} className="text-center"><p style={{ margin: '-0.1rem 0 0 1.3rem ' }}>베팅타입</p></td>
