@@ -260,7 +260,7 @@ const HandballArray = [
 ]
 
 const FootballArray = [
-    { id: 0, type: "승패 \n (풀타임)", typeColor: "#4c98ff", overtime: null, ruleText: "승리가 예상되는 팀을 선택하여 베팅하는", ruleText2:"방식" rows: '2' },
+    { id: 0, type: "승패 \n (풀타임)", typeColor: "#4c98ff", overtime: null, ruleText: "승리가 예상되는 팀을 선택하여 베팅하는", ruleText2:"방식", rows: '2' },
     { id: 0, type: "승패 (무X) \n (1쿼터)", typeColor: "#4c98ff", overtime: false, ruleText: "1쿼터만의 양팀이 득점한 경기결과로", ruleText2:"승리가 예상되는 팀을 선택하여 베팅하는", ruleText3:"방식 (무승부 적중특례)", rows: '3' },
     { id: 0, type: "승패 (무X) \n (2쿼터)", typeColor: "#4c98ff", overtime: false, ruleText: "2쿼터만의 양팀이 득점한 경기결과로", ruleText2:"승리가 예상되는 팀을 선택하여 베팅하는", ruleText3:"방식 (무승부 적중특례)", rows: '3' },
     { id: 0, type: "승패 (무X) \n (3쿼터)", typeColor: "#4c98ff", overtime: false, ruleText: "3쿼터만의 양팀이 득점한 경기결과로", ruleText2:"승리가 예상되는 팀을 선택하여 베팅하는", ruleText3:"방식 (무승부 적중특례)", rows: '3' },
