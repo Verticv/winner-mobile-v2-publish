@@ -6,12 +6,12 @@ import SportsGamePolicyTable1 from '../SportsGamePolicyTable1';
 import SportsGamePolicyTable2 from '../SportsGamePolicyTable2';
 
 const SoccerArray = [
-    { id: 0, type: "승무패", typeColor: "#4c98ff", overtime: true, hasMargin: true, ruleText: "승리가 예상되는 팀 또는 무승부를 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 선택하여 베팅하는 방식", rows: '2' },
-    { id: 1, type: "승무패 \n (전반전)", typeColor: "#4c98ff", overtime: false, hasMargin: true, ruleText: "전반전만의 양팀이 득점한 경기결과로 &nbsp; &nbsp; &nbsp; 승리가 예상되는 팀 또는 무승부를 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 선택하여 베팅하는 방식", rows: '3' },
-    { id: 2, type: "승무패 \n (후반전)", typeColor: "#4c98ff", overtime: false, hasMargin: true, ruleText: "후반전만의 양팀이 득점한 경기결과로 &nbsp; &nbsp; &nbsp; 승리가 예상되는 팀 또는 무승부를 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 선택하여 베팅하는 방식", rows: '3' },
-    { id: 3, type: "승패 (무X)", typeColor: "#4c98ff", overtime: false, ruleText: "승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '2' },
-    { id: 4, type: "승패 (무X) \n (전반전)", typeColor: "#4c98ff", overtime: false, ruleText: "전반전만의 양팀이 득점한 경기결과로 &nbsp; &nbsp; &nbsp; 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3' },
-    { id: 5, type: "승패 (무X) \n (후반전)", typeColor: "#4c98ff", overtime: false, ruleText: "후반전만의 양팀이 득점한 경기결과로 &nbsp; &nbsp; &nbsp; 승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3' },
+    { id: 0, type: "승무패", typeColor: "#4c98ff", overtime: true, hasMargin: true, ruleText: "승리가 예상되는 팀 또는 무승부를", ruleText2:"선택하여 베팅하는 방식", rows: '2' },
+    { id: 1, type: "승무패 \n (전반전)", typeColor: "#4c98ff", overtime: false, hasMargin: true, ruleText: "전반전만의 양팀이 득점한 경기결과로", ruleText2: "승리가 예상되는 팀 또는 무승부를", ruleText3:"선택하여 베팅하는 방식", rows: '3' },
+    { id: 2, type: "승무패 \n (후반전)", typeColor: "#4c98ff", overtime: false, hasMargin: true, ruleText: "후반전만의 양팀이 득점한 경기결과로", ruleText2: "승리가 예상되는 팀 또는 무승부를", ruleText3:"선택하여 베팅하는 방식", rows: '3' },
+    { id: 3, type: "승패 (무X)", typeColor: "#4c98ff", overtime: false, ruleText: "승리가 예상되는 팀을 선택하여 베팅하는", ruleText2:"방식 (무승부 적중특례)", rows: '2' },
+    { id: 4, type: "승패 (무X) \n (전반전)", typeColor: "#4c98ff", overtime: false, ruleText: "전반전만의 양팀이 득점한 경기결과로", ruleText2:"승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3' },
+    { id: 5, type: "승패 (무X) \n (후반전)", typeColor: "#4c98ff", overtime: false, ruleText: "후반전만의 양팀이 득점한 경기결과로", ruleText2:"승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", rows: '3' },
     { id: 6, type: "무실점 \n 완승", typeColor: "#4c98ff", overtime: true, ruleText: "무실점으로 승리가 예상되는 팀을 선택 &nbsp; &nbsp; &nbsp; &nbsp; 하여 베팅하는 방식 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (상대팀 무득점이어야 함)", rows: '3' },
     { id: 7, type: "전반 & \n 전후반", typeColor: "#4c98ff", overtime: true, ruleText: "전반전만의 결과와 최종(전후반포함) &nbsp; &nbsp; &nbsp; &nbsp; 각각의 양팀이 득점한 경기결과로 승리가 예상되는 팀 또는 무승부를 선택하여 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 베팅하는 방식", rows: '4' },
     { id: 8, type: "더블찬스", typeColor: "#4c98ff", overtime: true, ruleText: "두개의 결과를 예측하여 베팅하는 방식", rows: '1' },

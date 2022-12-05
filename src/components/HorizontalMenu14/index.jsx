@@ -19,7 +19,7 @@ const HorizontalMenu14 = ({
 
     useEffect(() => {
         if (withoutFirst) {
-            horizontalsScroll(itemsArray, 't-sub', 'scroll-wrapper2')
+            horizontalsScroll(itemsArray, 't-sub', 'scroll-wrapper')
         }
     }, [itemsArray, withoutFirst])
 

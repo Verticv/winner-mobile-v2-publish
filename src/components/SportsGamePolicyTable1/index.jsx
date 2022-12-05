@@ -10,6 +10,7 @@ const SportsGamePolicyTable1 = ({ array }) => {
         overtime,
         ruleText,
         ruleText2 = null,
+        ruleText3 = null,
         hasMargin,
         rows
     }) => (
@@ -23,15 +24,16 @@ const SportsGamePolicyTable1 = ({ array }) => {
                 <p style={{ marginTop: '0.5rem', marginLeft: hasMargin ? '' : '' }}>{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</p>
             </td>
             <td style={{ wordBreak:'break-word', WebkitTextStroke: "0.2px", textAlign: 'start', padding: rows === '2' ? '1.529rem 0 1.317rem' : (rows === '3' ? '1.25rem 0px 1.009rem' : (rows === '4' ? '1.2rem 0px 0.7rem' : (rows === '1' ? '1.8rem 0 1.6rem' : (rows === '5' ? '0.767rem 0px 0.45rem' : (rows === 'ss' ? '0.9rem 0px 0.75rem' : '0'))))) }} className=''>
-                <p style={{wordBreak:'break-word'}}>{parse(ruleText)}</p>
+                <p>{parse(ruleText)}</p>
                 <p>{ruleText2}</p>
+                <p>{ruleText3}</p>
             </td>
         </tr>
     )
 
     function Cells({ items }) {
         return items.map(item => (
-            <Cell type={item.type} typeColor={item.typeColor} overtime={item.overtime} ruleText={item.ruleText} ruleText2={item.ruleText2} hasMargin={item.hasMargin} rows={item.rows} />
+            <Cell type={item.type} typeColor={item.typeColor} overtime={item.overtime} ruleText={item.ruleText} ruleText2={item.ruleText2} ruleText3={item.ruleText3} hasMargin={item.hasMargin} rows={item.rows} />
         )
         )
     }
