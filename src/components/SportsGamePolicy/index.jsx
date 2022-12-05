@@ -143,7 +143,7 @@ const VolleyballArray = [
 ]
 
 const TennisArray = [
-    { id: 0, type: "승패 \n (풀타임)", typeColor: "#4c98ff", overtime: null, ruleText: "승리가 예상되는 팀(선수)을 선택하여 베팅하는", ruleText2: "방식", ruleText3: "", rows: '2' },
+    { id: 0, type: "승패 \n (풀타임)", typeColor: "#4c98ff", overtime: null, ruleText: "승리가 예상되는 팀(선수)을 선택하여", ruleText2: " 방식", ruleText3: "", rows: '2' },
     { id: 0, type: "승패 \n (1세트)", typeColor: "#4c98ff", overtime: null, ruleText: "1세트만의 양팀(선수)이 득점한", ruleText2: "경기결과로 승리가 예상되는 팀을", ruleText3: "선택하여 베팅하는 방식", rows: '3' },
     { id: 0, type: "승패 \n (2세트)", typeColor: "#4c98ff", overtime: null, ruleText: "2세트만의 양팀(선수)이 득점한", ruleText2: "경기결과로 승리가 예상되는 팀을", ruleText3: "선택하여 베팅하는 방식", rows: '3' },
     { id: 0, type: "승패 \n (3세트)", typeColor: "#4c98ff", overtime: null, ruleText: "3세트만의 양팀(선수)이 득점한", ruleText2: "경기결과로 승리가 예상되는 팀을", ruleText3: "선택하여 베팅하는 방식", rows: '3' },
@@ -175,7 +175,7 @@ const HockeyArray = [
     { id: 0, type: "더블찬스 \n (2피리어드)", typeColor: "#4c98ff", overtime: false, ruleText: "2피어리드만의 양팀이 득점한 경기결과로 두개의 결과를 예측하여 베팅하는 방식", ruleText2: "", ruleText3: "", rows: '2' },
     { id: 0, type: "더블찬스 \n (3피리어드)", typeColor: "#4c98ff", overtime: false, ruleText: "3피어리드만의 양팀이 득점한 경기결과로 두개의 결과를 예측하여 베팅하는 방식", ruleText2: "", ruleText3: "", rows: '2' },
 
-    { id: 0, type: "핸디캡", typeColor: "#d9a36d", overtime: true, ruleText: "상대적으로 전력이 우수한 팀에게 불리한 조건을 주어 경기의 균형을 맞추고 승리가 예상되는 팀을 선택하여", ruleText2:"조건을 주어 경기의 균형을 맞추고 승리가 예상되는 팀을 선택하여", ruleText3: "베팅하는 방식 홈팀(왼쪽)기준으로 +,-의 핸디캡 기준점수가 표기됨", rows: '5' },
+    { id: 0, type: "핸디캡", typeColor: "#d9a36d", overtime: true, ruleText: "상대적으로 전력이 우수한 팀에게 불리한 조건을 주어 경기의 균형을 맞추고 승리가 예상되는 팀을 선택하여 조건을 주어 경기의", ruleText2:"균형을 맞추고 승리가 예상되는 팀을 선택하여 베팅하는 방식", ruleText3: "홈팀(왼쪽)기준으로 +,-의 핸디캡 기준점수가 표기됨", rows: '5' },
     { id: 0, type: "핸디캡 \n (1피리어드)", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 1피리어드만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을", ruleText2: "선택하여 베팅하는 방식", ruleText3: "", rows: '3' },
     { id: 0, type: "핸디캡 \n (2피리어드)", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 2피리어드만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을", ruleText2: "선택하여 베팅하는 방식", ruleText3: "", rows: '3' },
     { id: 0, type: "핸디캡 \n (3피리어드)", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 3피리어드만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을", ruleText2: "선택하여 베팅하는 방식", ruleText3: "", rows: '3' },
@@ -217,7 +217,7 @@ const HandballArray = [
     { id: 0, type: "승무패", typeColor: "#4c98ff", overtime: true, ruleText: "승리가 예상되는 팀 또는 무승부를", ruleText2: "선택하여 베팅하는 방식", ruleText3: "", rows: '2' },
     { id: 0, type: "승무패 \n (전반전)", typeColor: "#4c98ff", overtime: false, ruleText: "전반전만의 양팀이 득점한 경기결과로", ruleText2: "승리가 예상되는 팀 또는 무승부를", ruleText3: "선택하여 베팅하는 방식", rows: '3' },
     { id: 0, type: "승무패 \n (후반전)", typeColor: "#4c98ff", overtime: false, ruleText: "후반전만의 양팀이 득점한 경기결과로", ruleText2: "승리가 예상되는 팀 또는 무승부를", ruleText3: "선택하여 베팅하는 방식", rows: '3' },
-    { id: 0, type: "승패 (무X)", typeColor: "#4c98ff", overtime: false, ruleText: "승리가 예상되는 팀을 선택하여 베팅하는 방식 (무승부 적중특례)", ruleText2: "", ruleText3: "", rows: '2' },
+    { id: 0, type: "승패 (무X)", typeColor: "#4c98ff", overtime: false, ruleText: "승리가 예상되는 팀을 선택하여 베팅하는", ruleText2: "방식 (무승부 적중특례)", ruleText3: "", rows: '2' },
     { id: 0, type: "승패 (무X) \n (전반전)", typeColor: "#4c98ff", overtime: false, ruleText: "전반전만의 양팀이 득점한 경기결과로", ruleText2: "승리가 예상되는 팀을 선택하여 베팅하는", ruleText3: "방식 (무승부 적중특례)", rows: '3' },
     { id: 0, type: "승패 (무X) \n (후반전)", typeColor: "#4c98ff", overtime: false, ruleText: "후반전만의 양팀이 득점한 경기결과로", ruleText2: "승리가 예상되는 팀을 선택하여 베팅하는", ruleText3: "방식 (무승부 적중특례)", rows: '3' },
     { id: 0, type: "무실점 완승", typeColor: "#4c98ff", overtime: true, ruleText: "무실점으로 승리가 예상되는 팀을 선택하여 베팅하는 방식 (상대팀 무득점이어야 함)", ruleText2: "", ruleText3: "", rows: '3' },
@@ -226,7 +226,7 @@ const HandballArray = [
     { id: 0, type: "더블찬스 \n (전반전)", typeColor: "#4c98ff", overtime: false, ruleText: "전반전만의 양팀이 득점한 경기결과로", ruleText2: "두개의 결과를 예측하여 베팅하는 방식", ruleText3: "", rows: '2' },
     { id: 0, type: "더블찬스 \n (후반전)", typeColor: "#4c98ff", overtime: false, ruleText: "후반전만의 양팀이 득점한 경기결과로", ruleText2: "두개의 결과를 예측하여 베팅하는 방식", ruleText3: "", rows: '2' },
 
-    { id: 0, type: "핸디캡", typeColor: "#d9a36d", overtime: true, ruleText: "상대적으로 전력이 우수한 팀에게 불리한", ruleText2:"조건을 주어 경기의 균형을 맞추고 승리가 예상되는 팀을 선택하여", ruleText3: "베팅하는 방식 홈팀(왼쪽)기준으로 +,-의 핸디캡 기준점수가 표기됨", rows: '5' },
+    { id: 0, type: "핸디캡", typeColor: "#d9a36d", overtime: true, ruleText: "상대적으로 전력이 우수한 팀에게 불리한", ruleText2:"조건을 주어 경기의 균형을 맞추고 승리가 예상되는 팀을 선택하여 베팅하는 방식", ruleText3: "홈팀(왼쪽)기준으로 +,-의 핸디캡 기준점수가 표기됨", rows: '5' },
     { id: 0, type: "핸디캡 \n (전반전)", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 전반전만의 양팀이", ruleText2: "득점한 경기결과로 승리가 예상되는 팀을", ruleText3: "선택하여 베팅하는 방식", rows: '3' },
     { id: 0, type: "핸디캡 \n (후반전)", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 후반전만의 양팀이", ruleText2: "득점한 경기결과로 승리가 예상되는 팀을", ruleText3: "선택하여 베팅하는 방식", rows: '3' },
     { id: 0, type: "핸디캡 승무패", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 승리가 예상되는 팀", ruleText2: "또는 무승부를 선택하여 베팅하는 방식", ruleText3: "", rows: '2' },
