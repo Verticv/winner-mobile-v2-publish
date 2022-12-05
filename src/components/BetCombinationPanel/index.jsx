@@ -1156,7 +1156,7 @@ const BetCombinationPanel = ({
                                     }}
                                     className="leaguecell-content5"
                                 >
-                                    <span style={{ textShadow: "1px 1px 1px #00000070", marginTop: isOpen[items.id] === true ? '-0.2rem' : '0.3rem' }} className="leaguecell-content6" >
+                                    <span style={{ textShadow: "1px 1px 1px #00000070", marginTop: isOpen[items.id] === true ? '-0.4rem' : '0.3rem' }} className="leaguecell-content6" >
                                         {isOpen[items.id] === true ? (
                                             <img className='leaguecell-content7' src={Minus} alt="" />
                                         ) : (
