@@ -24,6 +24,7 @@ const HorizontalSubMenu = ({
         if (withoutFirst && pathname === '/cscenter/all/contact/all/other' && pathname === '/cscenter/all/contact/all/ar-game' && pathname === '/cscenter/all/contact/all/ar-game1') {
             horizontalsScroll(itemsArray, 't', 'scroll-wrapper12')
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     function TabsList({ items }) {
