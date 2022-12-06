@@ -163,6 +163,8 @@
 }
 .react-datepicker-popper {
   padding-top: 0rem;
+  inset: 0px auto auto 0px !important;
+  transform: translate(-63px, 62px) !important;
 }
 
 /* .react-datepicker-popper[data-placement^=bottom] {
