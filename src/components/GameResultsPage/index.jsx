@@ -168,9 +168,9 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                 <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
                             </div>
 
-                            <div style={{ maxWidth: '1242px', margin: '0.9rem 0rem 0 0rem' }}>
-                                <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
-                                    <div id='scroll-wrapper2 bet-history' style={{ padding: '1.1rem 0 0 1.2rem', paddingRight: '0', overflowX: 'scroll' }} >
+                            <div style={{ maxWidth: '1242px', margin: '0.9rem 0rem 0 0rem', position: 'relative', top: '0' }}>
+                                <div id='scroll-wrapper2' className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', overflowX: 'scroll' }}>
+                                    <div id='bet-history' style={{ padding: '1.1rem 0 0 1.2rem', paddingRight: '0'}} >
                                         <HorizontalMenu14 key={15} itemsArray={tabsArray2} isState={selectedTab} setSelectedTab={setSelectedTab} />
                                     </div>
                                     <div style={{ height: '12.1rem' }}></div>
