@@ -15,10 +15,16 @@ const HorizontalSubMenu = ({
     const [, setHover] = useState(null)
 
     useEffect(() => {
-        if (withoutFirst && pathname !== '/cscenter/all/contact/all/other') {
+        if (withoutFirst && pathname !== '/cscenter/all/contact/all/other' && pathname !== '/cscenter/all/contact/all/ar-game' && pathname !== '/cscenter/all/contact/all/ar-game1') {
             horizontalsScroll(itemsArray, 't', 'scroll-wrapper12')
         }
     }, [itemsArray, pathname, withoutFirst])
+
+    useEffect(() => {
+        if (withoutFirst && pathname === '/cscenter/all/contact/all/other' && pathname === '/cscenter/all/contact/all/ar-game' && pathname === '/cscenter/all/contact/all/ar-game1') {
+            horizontalsScroll(itemsArray, 't', 'scroll-wrapper12')
+        }
+    }, [])
 
     function TabsList({ items }) {
         return items.map((item, index) => (
@@ -42,7 +48,8 @@ const HorizontalSubMenu = ({
                     onPointerUp={() => {
                         setHover(null)
                         if (pathname !== item.path) {
-                            horizontalsScroll(itemsArray, 't', 'scroll-wrapper12', index, items.length -1 === index ? 200 : null)
+                            console.log('ssssssssssssss');
+                            horizontalsScroll(itemsArray, 't', 'scroll-wrapper12', index, items.length -1 === index ? 200 : null, item.additionLeftScroll || 0)
                             navigate(item.path)
                             setSelectedTab(item.id)
                             if (setSelectedSubTab !== null) {
