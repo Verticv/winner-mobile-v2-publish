@@ -15,13 +15,13 @@ const HorizontalSubMenu = ({
     const [, setHover] = useState(null)
 
     useEffect(() => {
-        if (withoutFirst && pathname !== '/cscenter/all/contact/all/other' && pathname !== '/cscenter/all/contact/all/ar-game' && pathname !== '/cscenter/all/contact/all/ar-game1') {
+        if (withoutFirst && pathname !== '/cscenter/all/contact/all/other' && pathname !== '/cscenter/all/contact/all/ar-game' && pathname !== '/cscenter/all/contact/all/ar-game1' && pathname !== '/cscenter/all/announcement/ar-game' && pathname !== '/cscenter/all/announcement/other') {
             horizontalsScroll(itemsArray, 't', 'scroll-wrapper12')
         }
     }, [itemsArray, pathname, withoutFirst])
 
     useEffect(() => {
-        if (withoutFirst && pathname === '/cscenter/all/contact/all/other' && pathname === '/cscenter/all/contact/all/ar-game' && pathname === '/cscenter/all/contact/all/ar-game1') {
+        if (withoutFirst && pathname === '/cscenter/all/contact/all/other' && pathname === '/cscenter/all/contact/all/ar-game' && pathname === '/cscenter/all/contact/all/ar-game1' && pathname === '/cscenter/all/announcement/ar-game' && pathname === '/cscenter/all/announcement/other') {
             horizontalsScroll(itemsArray, 't', 'scroll-wrapper12')
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps

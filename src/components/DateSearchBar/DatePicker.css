@@ -164,7 +164,7 @@
 .react-datepicker-popper {
   padding-top: 0rem;
   inset: 0px auto auto 0px !important;
-  transform: translate(-63px, 62px) !important;
+  transform: translate(-7.6rem,62px)!important;
 }
 
 /* .react-datepicker-popper[data-placement^=bottom] {
@@ -751,8 +751,8 @@
   text-align: center;
   border-radius: 0.3rem;
   border: 1px solid #aeaeae;
-  display: flex;
-  flex-direction: column-reverse;
+  /* display: flex;
+  flex-direction: column-reverse; */
 }
 .react-datepicker__year-dropdown:hover,
 .react-datepicker__month-dropdown:hover,
