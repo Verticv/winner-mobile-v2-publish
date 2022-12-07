@@ -68,7 +68,7 @@ export default function NavBottom() {
                 return (
                     <div key={id} className={`nav-content ${isActiveButton ? 'active' : ''}`} id={id}
                         onClick={(event) => {
-                            navigate(path);
+                            navigate(path, {state: {from: window.location.pathname}});
                         }}
                     >
                         <img id={id} src={isActiveButton ? activeIcon : icon} alt="" style={{ width: '6.025rem' }} />

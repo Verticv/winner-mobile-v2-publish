@@ -1,5 +1,5 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom';
 import MailIcon from '../../assets/myPage/mail.png'
 import MailOpenedIcon from '../../assets/myPage/mail_opened.png'
 import Delete from '../../assets/myPage/delete.png'
@@ -13,9 +13,19 @@ const ContactTable = ({
 }) => {
 
     const navigate = useNavigate();
+    const location = useLocation();
     const truncate = (str, max, len) => {
         return str.length > max ? str.substring(0, len) : str;
     }
+
+    useEffect(() => {
+        if (location?.state?.from === '/main') {
+            window.onpopstate = () => {
+                navigate('/main')
+            }
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     function InboxList({ items }) {
 
@@ -25,7 +35,7 @@ const ContactTable = ({
             return (
                 <div
                     key={item.id}
-                    onClick={() => navigate(item.path)}
+                    onClick={() => navigate(item.path, {state: {from: location?.state?.from === '/main' ? '/main' :  ''}})}
                     style={{ background: item.isRead === false ? '#3d3934' : item.id % 2 === 0 ? '#323232' : '#2e2e2e' }}
                     className={`${item.isRead === false
                         ? "bg-gray-e8eff6" :

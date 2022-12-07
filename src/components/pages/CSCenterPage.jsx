@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, useLocation, Routes } from "react-router-dom";
+import { Route, useLocation, Routes, useNavigate } from "react-router-dom";
 import HomePageTopBanner from '../HomePageTopBanner';
 import Icon1 from '../../assets/cscenter/leftMenu/icon_1.png'
 import Icon2 from '../../assets/cscenter/leftMenu/icon_2.png'
@@ -78,6 +78,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
     ]
 
     const location = useLocation();
+    const navigate = useNavigate()
     const [selectedTab, setSelectedTab] = useState()
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     const [subActiveButton, setSubActiveButton] = useState();
@@ -90,6 +91,17 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
     }, [setCscenterActive])
 
     console.log('cscenterActive', cscenterActive);
+    useEffect(() => {
+        if (location?.state?.from === '/main') {
+            window.onpopstate = () => {
+                navigate('/main')
+            }
+        }
+        console.log('location.state :>> ', location?.state);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location?.state])
+
+
     // return (
     //     <div>
     //         {/* <Routes > */}

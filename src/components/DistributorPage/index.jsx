@@ -216,7 +216,7 @@ const DistributorPage = ({
 
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>PG</span><br /><span className='-mt-3.5'>소프트</span></td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>로얄슬롯</span><br /><span className='-mt-3.5'>게이밍</span></td>
-                                
+
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>보타</span><br /><span className='-mt-3.5'>카지노</span></td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>두윈</span><br /><span className='-mt-3.5'>카지노</span></td>
 
@@ -321,7 +321,7 @@ const DistributorPage = ({
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">스포츠</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">미니게임</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem' }} className="text-center">에볼루션</td>
-                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem', letterSpacing:'-0.1rem' }} className="text-center flex flex-col"><span>프레그메틱</span><br /><span className='-mt-3.5' >플레이</span></td>
+                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem', letterSpacing: '-0.1rem' }} className="text-center flex flex-col"><span>프레그메틱</span><br /><span className='-mt-3.5' >플레이</span></td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '3rem' }} className="text-center">로얄지</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '2rem' }} className="text-center flex flex-col"><span>아시아</span><br /><span className='-mt-3.5'>게이밍</span></td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '2.5rem' }} className="text-center flex flex-col"><span>드림</span><br /><span className='-mt-3.5'>게이밍</span></td>
@@ -493,7 +493,7 @@ const DistributorPage = ({
             );
             setUserCountOpen(updatedCheckedState);
         };
-    
+
         const handleOnChange2 = (position) => {
             const updatedCheckedState = subArrowClicked.map((item, index) =>
                 index === position ? !item : item
@@ -504,10 +504,11 @@ const DistributorPage = ({
         return items.map(item => (
             <>
                 <div style={{
-                    fontSize: '2.625rem', height: '11.2rem', display: 'flex', alignItems: 'center', justifyContent: '', fontFamily: 'RobotoRegular',
+                    fontSize: '2.625rem', height: '11.2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', fontFamily: 'RobotoRegular',
                     padding: '0.6rem 5.875rem 0px 1.875rem',
                     background: item.id % 2 === 1 ? '#242424' : '#323232',
-                    letterSpacing: '-0.07rem'
+                    letterSpacing: '-0.07rem',
+                    paddingLeft: withPadding ? '1.875rem' : '0',
                 }} className={`${item.id % 2 === 1 ? "bg-white" : "bg-gray-f8f9fb"} ${item.isLast ? "border-b" : "border-b"} w-full flex items-center justify-evenly font-roboto text-gray-r585858 tracking-tight border-l border-r border-gray-dddddd`}>
                     <div className="w-full h-full flex items-center justify-center" style={{ width: '13rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: '2.7rem' }}>{item.number}</div>
                     <div className="w-full h-full flex items-center justify-center" style={{ width: '21.7rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', paddingLeft: '0.2rem' }}>{item.username}</div>
@@ -551,7 +552,7 @@ const DistributorPage = ({
                         <div className="flex items-center -mt-3.5">{item.login_date}</div>
                         <div className="flex items-center -mt-3.5 font-spoqaMedium">({item.absent_date})</div>
                     </div>
-                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', marginLeft: '', marginRight: '-0.1rem', paddingLeft: withPadding ? '2.5rem' : '' }}>
+                    <div className="test relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', marginLeft: '', marginRight: '-0.1rem', paddingLeft: withPadding ? '2.5rem' : '5.1rem' }}>
                         <button
                             style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
                             className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} hover flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
@@ -584,9 +585,9 @@ const DistributorPage = ({
                     <div className="w-full h-full flex items-center justify-end text-right" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', textAlign: 'right' }}><p className="pr-32px">{item.added_withdraw_amount}</p></div>
                     <div className="w-full h-full flex items-center justify-end text-right" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', textAlign: 'right' }}><p className="pr-32px">{item.bet_amount}</p></div>
                     <div className="w-full h-full flex items-center justify-end text-right" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', textAlign: 'right' }}><p className="pr-32px">{item.win_lose}</p></div>
-                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative',  paddingLeft: withPadding ? '5rem' : '' }}>
+                    <div className="relative w-full h-full flex items-center justify-center" style={{ width: '18rem', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', paddingLeft: withPadding ? '5rem' : '' }}>
                         <button
-                            style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem' }}
+                            style={{ width: "11rem", height: '6.375rem', fontSize: '2.4375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(to top, #4b3b09, #e8b888)', padding: '0.1875rem', borderRadius: '0.5625rem', marginRight: !withPadding ? '-8rem' : '' }}
                             className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} hover flex items-center justify-center rounded-lg hover:opacity-75 shadow-to-box shadow-to-text`}
                             onClick={() => {
                                 handleOnChange1(item.id + 2)
@@ -633,7 +634,7 @@ const DistributorPage = ({
                                 <div className=" w-full flex flex-col"
                                     style={{ display: 'flex', flexDirection: 'column', marginBottom: '1rem', width: '100%' }}
                                 >
-                                    <div style={{ height: '8.9625rem', fontSize: '2.625rem', background: 'rgb(36,36,36)', padding: '0px 1.875rem', borderBottomWidth: '0.1875rem', display: 'flex', alignItems: 'center', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }} className="w-full bg-gray-r8e9296 border-b border-r border-l border-gray-dddddd flex items-center justify-evenly font-spoqaMedium text-white tracking-tight">
+                                    <div style={{ height: '8.9625rem', fontSize: '2.625rem', background: 'rgb(36,36,36)', padding: !withPadding ? '0' : '0px 1.875rem', borderBottomWidth: '0.1875rem', display: 'flex', alignItems: 'center', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', justifyContent: 'space-evenly' }} className="test w-full bg-gray-r8e9296 border-b border-r border-l border-gray-dddddd flex items-center justify-evenly font-spoqaMedium text-white tracking-tight">
                                         <div style={{ width: '13rem', paddingLeft: '2.6rem', textAlign: '', paddingTop: '0.6rem' }} className="text-center">번호</div>
                                         <button
                                             style={{ padding: '0', margin: '0', background: 'bottom', width: '21.7rem', letterSpacing: '-0.07rem', paddingTop: '0.7rem', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}

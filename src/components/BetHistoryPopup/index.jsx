@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import BoardComposeViewPanel from '../../components/BoardComposeViewPanel';
 import CloseIcon from '../../assets/close-btn.png'
 import icon2 from '../../assets/bigIcons/2.png';
@@ -122,11 +123,19 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
     }
     ]
 
+    const navigate = useNavigate();
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
     const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
     const [subActiveButton, setSubActiveButton] = useState(0)
+
+    useEffect(() => {
+        window.onpopstate = () => {
+            navigate('/freeboard/compose')
+        }
+    })
+
 
     const [page, setPage] = useState(0)
 
