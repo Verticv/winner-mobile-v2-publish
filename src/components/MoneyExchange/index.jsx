@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BankTable from '../BankTable'
-// import NavBottom from '../NavBottom'
-// import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import WarningMessage from '../WarningMessage'
 
 const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
@@ -32,7 +30,6 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
     const Title = ({ text }) => (
         <div style={{ width: "21rem", marginRight: '1.7rem', background: '#272726', flexShrink: '0', borderRadius: '0.5rem' }} className="form-Title">
             <div style={{ fontSize: '2.8125rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '1.6rem 0 0 1.1rem', letterSpacing: '-0.25rem' }} className="text-gray-r454545 font-spoqaMedium">{text}</div>
-            {/* <div style={{ height: '0.1875rem', marginTop: '1.1875rem' }} className="w-full bg-gray-bebebe"></div> */}
         </div>
     )
 
@@ -41,15 +38,17 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
 
             <WarningMessage
                 title='확인 / 필독사항'
-                message1='환전 신청 시 현재 보유머니에서 차감되며, 회원님의 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;계좌번호로 입금됩니다.'
-                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 &nbsp; &nbsp; &nbsp;시간을 피해 신청해 주시기 바랍니다.'
-                mr2='7.8rem'
+                message1='환전 신청 시 현재 보유머니에서 차감되며, 회원님의'
+                message1_1='계좌번호로 입금됩니다.'
+                mr1='0rem'
+                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후'
+                message2_1='점검 시간을 피해 신청해 주시기 바랍니다.'
+                mr2='0rem'
                 message3='자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
             />
             <div style={{
                 padding: '0.1875rem', paddingBottom: '2.0625rem', marginTop: '1.975rem',
                 background: 'linear-gradient(to top, #1f1f1e, #3e3e3e 50%, #4a4a4a)',
-                // background: 'red',
                 borderRadius: '1.3rem', letterSpacing: '-0.07rem'
             }} className="w-full rounded-2xl shadow-subNavbar">
                 <div style={{ padding: '0.7375rem 0.89rem', background: '#323232', borderRadius: '1.3rem' }} className="w-full rounded-2xl shadow-subNavbar">
@@ -58,15 +57,15 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
                             style={{ fontSize: '2.8125rem', color: '#ffdfbd', marginLeft: '-0.2rem' }}
                             className="font-spoqaMedium tracking-tight text-gray-r393e41 flex items-center"
                         >
-                            입금 계좌 정보 확인
+                            환전금액 입력
                         </div>
                         <div
-                            style={{ fontSize: '2.625rem', marginRight: '2.875rem', color: '#c8c8c8', marginTop: '0.8rem', lineHeight: '1.42', marginLeft: '-0.2rem' }}
+                            style={{ fontSize: '2.625rem', color: '#c8c8c8', marginTop: '0.8rem', lineHeight: '1.42', marginLeft: '-0.2rem' }}
                             className="font-spoqa tracking-tight text-gray-r7c7c7c flex items-center"
                         >
-                            입금 계좌번호는 쪽지로 발송되며, 발송한 계좌번호로 선입금
+                            환전 신청을 완료하게 되면 보유머니에서 신청한 금액만큼
                             <br />
-                            바랍니다.
+                            차감되며 고객님의 계좌번호로 입금됩니다.
                         </div>
 
                     </div>
@@ -85,7 +84,7 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
                             </div>
                         </div>
                         <div style={{ marginTop: '2.6rem' }} className="form-section">
-                            <Title text="충전금액 입력" />
+                            <Title text="환전금액 입력" />
                             <div className="lable-or-input">
                                 <input
                                     className="w-full font-spoqa text-gray-r585858 outline-none placeholder-gray-bebebe"

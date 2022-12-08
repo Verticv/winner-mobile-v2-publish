@@ -24,20 +24,17 @@ const HorizontalSubMenu = ({
             return (
                 <>
                     <button
-                        className={`${activeButton
-                            ? "bg-blue-r0056a6"
-                            : "bg-white  border border-gray-b7b7b7"
-                            } rounded-full min-w-fit`}
                         style={{
-                            height: '6.375rem', width: isSameWidth ? '17.625rem' : '', minWidth: item?.width ? item.width : 'fit-content', fontSize: '2.8125rem', marginRight: '1.125rem', borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`,
-
+                            height: '6.375rem', width: isSameWidth ? '17.625rem' : '',
+                            minWidth: item?.width ? item.width : 'fit-content',
+                            fontSize: '2.8125rem',
+                            marginRight: '1.125rem',
+                            borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`,
                             color: activeButton ? 'rgb(255, 223, 189)' : '',
-                            // min-width: 11.5625rem;
                             border: activeButton ? '0' : '',
                             background: activeButton ? ' rgb(130, 97, 64)' : '',
                         }}
                         key={item.id}
-
                         onPointerDown={() => setHover(item.id)}
                         onPointerUp={() => {
                             setSelectedTab(item.id)
@@ -50,12 +47,7 @@ const HorizontalSubMenu = ({
                     >
                         <div style={{ margin: item?.width ? '0' : '0 2.6875rem' }} >
                             <div>
-                                <span
-                                    className={`${activeButton
-                                        ? "text-white"
-                                        : "text-gray-r7b7b7b"
-                                        } font-spoqaMedium`}
-                                >{item.text}</span>
+                                <span>{item.text}</span>
                             </div>
                         </div>
                     </button>

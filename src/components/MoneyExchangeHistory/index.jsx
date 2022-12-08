@@ -4,7 +4,6 @@ import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 import SelectAllButton from '../SelectAllButton'
 import { useNavigate } from 'react-router-dom'
-// import ScrollButton from 'components/common/ScrollButton'
 
 const tableData = [
     [
@@ -134,14 +133,10 @@ const tableData = [
 const MoneyExchangeHistory = ({ subActiveButton, setSubActiveButton }) => {
 
     const [page, setPage] = useState(0)
-    // const [inputValue, setInputValue] = useState(null)
-    // const [passwordValue, setPasswordValue] = useState("")
-    // const [inputClicked, setInputClicked] = useState(null)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
     const navigate = useNavigate()
-    // var nf = new Intl.NumberFormat();
 
     useEffect(() => {
         window.onpopstate = e => {
@@ -160,7 +155,6 @@ const MoneyExchangeHistory = ({ subActiveButton, setSubActiveButton }) => {
         <div className="flex flex-col items-center" style={{ marginTop: '1rem'}}>
 
             <DateSearchBar isLeagueSearch={false} withBlackButton />
-            {/* <ScrollButton /> */}
             <div className="h-full">
                 <HistoryTable
                     containerBackground='#f7f9fc'
@@ -175,7 +169,6 @@ const MoneyExchangeHistory = ({ subActiveButton, setSubActiveButton }) => {
             </div>
 
             <div className='w-full'>
-                {/* <SelectAllButton buttonsNumber={2} count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} /> */}
                 <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 

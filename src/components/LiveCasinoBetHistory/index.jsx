@@ -2,31 +2,29 @@ import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HorizontalSubMenu from '../HorizontalSubMenuDefault'
 import HistoryTable from '../HistoryTable'
-// import ScrollButton from '../ScrollButton'
 import SelectAllButton from '../SelectAllButton'
 import Icon1 from '../../assets/myPage/second-btns/1.png'
 import Icon2 from '../../assets/myPage/second-btns/2.png'
 import Icon3 from '../../assets/myPage/second-btns/3.png'
 import Icon4 from '../../assets/myPage/second-btns/4.png'
-// import Icon7 from '../../assets/myPage/second-btns/5.png'
+import Icon5 from '../../assets/myPage/second-btns/5.png'
 import Icon8 from '../../assets/myPage/second-btns/6.png'
 import Icon9 from '../../assets/myPage/second-btns/7.png'
 import Icon10 from '../../assets/myPage/second-btns/8.png'
 import Icon11 from '../../assets/myPage/second-btns/9.png'
 import activeBG from '../../assets/myPage/second-btns/active-bg.png'
 import { useNavigate } from 'react-router-dom'
-// import HorizontalMenu from '../HorizontalMenu'
-// import img22 from '../../img22.png'
 
 const subTabsArray = [
     { text: "전체", icon: Icon1, id: 0, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
     { text: "에볼루션", icon: Icon2, id: 1, activeBG: activeBG, width: '19.375rem', path: '#' },
     { text: "프레그메틱플레이", icon: Icon3, id: 2, activeBG: activeBG, marginIcon: '', width: '19.375rem', path: '#' },
     { text: "로얄지", icon: Icon4, id: 3, activeBG: activeBG, width: '19.375rem', path: '#' },
-    { text: "드림게이밍", icon: Icon8, id: 4, activeBG: activeBG, width: '19.375rem', path: '#' },
-    { text: "섹시게이밍", icon: Icon9, id: 5, activeBG: activeBG, width: '19.375rem', path: '#' },
-    { text: "빅게이밍", icon: Icon10, id: 6, activeBG: activeBG, width: '19.375rem', path: '#' },
-    { text: "오리엔탈게임", icon: Icon11, id: 7, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "아시아게이밍", icon: Icon5, id: 4, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "드림게이밍", icon: Icon8, id: 5, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "섹시게이밍", icon: Icon9, id: 6, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "빅게이밍", icon: Icon10, id: 7, activeBG: activeBG, width: '19.375rem', path: '#' },
+    { text: "오리엔탈게임", icon: Icon11, id: 8, activeBG: activeBG, width: '19.375rem', path: '#' },
 ];
 
 // 베팅번호 => number
@@ -235,7 +233,6 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
 
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
-    // const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -247,12 +244,6 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
             },0)
         }
         window.addEventListener('popstate', test);
-        // window.onpopstate = e => {
-        //     setTimeout(() => {
-        //         navigate('/mypage/bet-history')
-        //         setSubActiveButton(path)
-        //     }, 0)
-        // }
         return (() => {
             if (subActiveButton)
             setSubActiveButton(path)
@@ -275,12 +266,8 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
                     </div>
                 </>
             )}
-            {/* <img src={img22} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
             <DateSearchBar isLeagueSearch={false} isPoints />
-
-            {/* <ScrollButton /> */}
-
-            <div className="h-full" style={{ marginTop: '-0.2rem', marginBottom: '-0.4rem' }}>
+            <div style={{ marginTop: '-0.2rem', marginBottom: '-0.4rem' }}>
                 <HistoryTable
                     containerBackground='#f7f9fc'
                     tableData={tableData}

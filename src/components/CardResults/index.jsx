@@ -180,7 +180,8 @@ const CardResults = ({
                                 fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem', whiteSpace: 'nowrap',
                                 maxWidth: hasUp ? '15.6rem' : '15.6rem',
                                 overflow: 'hidden',
-                                textOverflow: 'ellipsis', display: 'flex'
+                                textOverflow: 'ellipsis', 
+                                display: 'flex'
                             }} >{shouldTruncate ? truncate(team1, 7, 7) : team1}</span>
                             <div style={{ marginRight: '0.6rem' }}>
                                 {hasUp && <img style={{ marginRight: '0.4375rem', width: '2rem', height: '1.75rem' }} src={UpIcon} alt="" />}

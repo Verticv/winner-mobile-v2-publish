@@ -1,8 +1,6 @@
 .HorizontalMenu {
     display: flex;
     flex-direction: row;
-    // overflow: scroll hidden;
-    // gap: 0.1rem;
 
     &::-webkit-scrollbar {
         display: none;
@@ -10,29 +8,22 @@
 
     .nav-button {
         margin: 0;
-        // background: linear-gradient(to top, #3b3a37, #504e4b 50%, #696763);
-        // background: url('../../assets/bigIcons/inactive-btn.png');
         width: 19.2rem;
         height: 14.1rem;
-        // margin-left: -1rem;
         padding: 0;
         flex-shrink: 0;
         margin-right: -0.15rem;
 
         &.active {
-            // background: linear-gradient(to top, #aa9674, #daccb2 50%, #fdfbf2);
-
             button {
                 background: url('../../assets/bigIcons/shadow-active-btn.png') round;
             }
-
             .text {
                 color: #252525;
             }
         }
 
         button {
-            // background: linear-gradient(to top, #333332, #454543 50%, #545452);
             background: url('../../assets/bigIcons/inactive-btn.png') round;
             margin: 0;
             padding: 0;
@@ -44,7 +35,7 @@
         .text {
             margin-bottom: 0;
             margin-right: 0.35rem;
-            // margin-top: 0;
+            font-size: 2.5rem;
         }
     }
 }

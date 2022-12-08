@@ -124,9 +124,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [page, setPage] = useState(0)
-    const [checkedState, setCheckedState] = useState(
-        new Array(3).fill(false)
-    );
+    const [checkedState, setCheckedState] = useState(new Array(3).fill(false));
 
     const MyInfo = () => {
         return (

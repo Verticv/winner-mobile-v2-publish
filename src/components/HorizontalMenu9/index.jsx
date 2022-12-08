@@ -14,7 +14,6 @@ const HorizontalMenu9 = ({
 
     const navigate = useNavigate();
     const pathname = window.location.pathname
-    const [isHover, setHover] = useState(null)
 
     console.log(pathname)
 
@@ -28,8 +27,6 @@ const HorizontalMenu9 = ({
                     background: pathname === item.path ? "linear-gradient(to top, #a6926f, #f9f0d3)" : "linear-gradient(to top, #a6926f, #f9f0d3)",
                     background: `url(${items.length === 1 ? activeBtn2 : pathname === item.path ? activeBtn : inactiveBtn}) round`,
                     backgroundSize: "cover",
-                    // borderRadius: "10px",
-                    // padding: '0.1875rem'
                 }}
                 className={`${pathname === item.path
                     ? "bg-blue-r58baf7"
@@ -42,31 +39,11 @@ const HorizontalMenu9 = ({
                         setSelectedSubTab(0)
                     }
                 }}
-                onMouseOver={() => setHover(item.path)}
-                onMouseLeave={() => setHover(null)}
             >
-                {/* <div
-                    style={{
-                        height: "100%",
-                        width: "100%",
-                        borderRadius: "9px",
-                    }}
-                    className={`flex w-full justify-end items-end ${pathname === item.path
-                        ? "bg-blue-r58baf7"
-                        : "bg-white "
-                        }`}
-                > */}
                 <div
                     style={{
                         width: '100%',
                         height: '100%',
-                        // background: pathname === item.path
-                        //     ? "linear-gradient(to bottom, #2087f0, #1873cf)"
-                        //     : isHover === item.path
-                        //         ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
-                        //         : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff )",
-                        // height: "54px",
-                        // background: pathname === item.path ? 'linear-gradient(to top, #8d7752, #dabe82)' : '',
                         borderBottomLeftRadius: "9px",
                         borderBottomRightRadius: "9px",
                         borderTopLeftRadius: "8px",
@@ -78,16 +55,17 @@ const HorizontalMenu9 = ({
                 >
                     <span
                         style={{
-                            fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '2.25rem', color: pathname === item.path ? '#252525' : '#ccc2b6', height: '100%',
-                            display: 'flex', justifyContent: 'center', alignItems: 'center', letterSpacing: '-0.07rem', 
+                            fontFamily: 'SpoqaHanSansNeoMedium', 
+                            fontSize: '2.5rem', 
+                            color: pathname === item.path ? '#252525' : '#ccc2b6', 
+                            height: '100%',
+                            display: 'flex', 
+                            justifyContent: 'center', 
+                            alignItems: 'center', 
+                            letterSpacing: '-0.07rem',
                             marginTop: '-0.9rem'
                         }}
-                        className={`${pathname === item.path
-                            ? "text-white"
-                            : "text-gray-r616161"}
-                                text-20px font-spoqaBold tracking-tight -mt-2px`}
                     >{item.text}</span>
-                    {/* </div> */}
                 </div>
             </button>
         ));

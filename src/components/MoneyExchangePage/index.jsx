@@ -1,26 +1,10 @@
 import MoneyExchange from '../MoneyExchange'
 import MoneyExchangeHistory from '../MoneyExchangeHistory'
-// import Navbar from '/Navbar'
-// import NoticeBanner from 'components/mainPage/NoticeBanner'
 import AccountProfileComponent from '../AccountProfileComponent'
 import LeftMenu from "../LeftMenu";
-// import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu'
 import HorizontalMenu1 from '../HorizontalMenu1'
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router'
-// import MoneyChargeBanner from '../images/money/money_charge.png'
-// import MoneyExchangeBanner from '../images/money/money_exchange.png'
-// import Icon1 from '../images/money/leftMenu/icon_1.png'
-// import Icon2 from '../images/money/leftMenu/icon_2.png'
-// import IconHighlight1 from '../images/money/leftMenu/icon_1_highlight.png'
-// import IconHighlight2 from '../images/money/leftMenu/icon_2_highlight.png'
-// import Icon1 from '../images/newImages/exchange.png'
-// import Icon2 from '../images/newImages/mainPage/Recharge-application3.png'
-// import subIcon1 from '../images/newImages/mainPage/money/3.png';
-// import subIcon2 from '../images/newImages/mainPage/money/4.png';
-// import Logo from "../images/newImages/mainPage/icons/logo.png";
-// import activeIcon1 from '../../assets/mainPage/icons/recharge-application.png';
-// import activeIcon2 from '../../assets/mainPage/icons/active-icon2.png';
 import Icon2 from '../../assets/mainPage/icons/charging-history.png';
 import Icon1 from '../../assets/mainPage/icons/Icon1.png';
 import HomePageTopBanner from '../HomePageTopBanner';
@@ -32,9 +16,6 @@ import activeIcon2 from '../../assets/mainPage/icons/active-icon2.png';
 import NavBottom from '../NavBottom';
 import Header from '../Header';
 import ScrollButton from '../ScrollButton';
-// import Icon2 from '../../assets/mainPage/icons/charging-history.png';
-// import Icon1 from '../../assets/mainPage/icons/Icon1.png';
-// import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
 
 // currency exchange
 const tabsArray = [
@@ -101,8 +82,6 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated, subActiveButton,
                         <>
                             <ScrollButton />
                             <div className="w-full z-30 flex flex-col items-center">
-                                {/* <NoticeBanner /> */}
-                                {/* <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} /> */}
                                 <Header />
                                 <HomePageTopBanner pageTitle='머니환전' toPath='/mypage/money/exchange' />
                             </div>
@@ -113,11 +92,6 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated, subActiveButton,
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full"  id='container-nav'>
                                             <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isMoneyPage='true' />
-                                            {/* {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
-                                    <div style={{marginLeft: `${selectedTab * 116 + 49}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
-                                        <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
-                                    </div>
-                                )} */}
                                         </div>
                                     </div>
                                 </div>
@@ -130,7 +104,6 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated, subActiveButton,
                                                 element={
                                                     <>
                                                         <MoneyExchangeHistory subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
-                                                        {/* <BottomNavbar /> */}
                                                         <NavBottom />
                                                     </>
                                                 }
@@ -138,13 +111,10 @@ const MoneyExchangePage = ({ isAuthenticated, setAuthenticated, subActiveButton,
                                             </Route>
                                             <Route index
                                                 element={
-
                                                     <>
-                                                        {/* hi */}
                                                         <MoneyExchange subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                                                         <NavBottom />
                                                     </>
-
                                                 }
                                             >
                                             </Route>

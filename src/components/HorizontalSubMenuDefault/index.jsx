@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
 import horizontalsScroll from '../../utils/horizontalsScroll';
 import inactive from '../../assets/inactive-bg.png';
-// import Botton from '../NavButtons';
 
 const HorizontalSubMenu = ({
     itemsArray,
