@@ -193,22 +193,22 @@ const WinLoseSettlementContent = ({ activeButton, setActiveButton }) => {
             <DateSearchBar isLeagueSearch={false} withBlackButton />
             <div style={{ width: '73.875rem', height: '6.7rem', borderWidth: '0.1875rem', borderRadius: '3.1875rem', padding: '1.6rem 2rem', margin: '1.875rem 0', marginLeft: '1.875rem', display: 'flex', flexWrap: 'wrap', flexDirection: 'column', background: '#2e2e2e', border: '0.1875rem solid #635f5b', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                 <div style={{
-                    display: 'flex', alignItems: 'center', marginLeft: '0.2rem', width: '50%',
+                    display: 'flex', alignItems: 'center', marginLeft: '0.2rem', width: '50%', justifyContent: 'center'
                 }}>
-                    <div style={{ fontSize: '2.4rem', marginBottom: '1.55rem' }}>
+                    <div style={{ fontSize: '2.625rem', marginBottom: '1.55rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.2rem' }} src={Diamond} alt="" />
                             <div style={{ display: 'flex', alignItems: 'center' }}>
                                 <span style={{
                                     marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.12rem'
-                                }}>진행중인 금액 : <span style={{ color: '#ffd200' }}>2,520,000</span></span>
+                                }}>진행중인 금액 : <span style={{ color: '#ffd200' }}>200,520,000</span></span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div style={{ width: '50%', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-                    <div style={{ fontSize: '2.4rem', marginBottom: '1.55rem' }}>
+                    <div style={{ fontSize: '2.625rem', marginBottom: '1.55rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.3125rem' }} src={Diamond} alt="" />
                             <div style={{ display: 'flex', alignItems: 'center' }}>
