@@ -32,13 +32,8 @@ const HorizontalSubMenu = ({
             <>
                 <button className='btn'
                     id={`t${index}`}
-                    // className={`${pathname === item.path
-                    //     ? "bg-blue-r0056a6"
-                    //     : "bg-white  border border-gray-b7b7b7"
-                    //     } rounded-full min-w-fit`}
                     style={{
                         color: pathname === item.path ? '#ffdfbd' : '#ccc2b6',
-                        // width: item.width,
                         minWidth: item?.width ? item.width : 'fit-content',
                         background: pathname === item.path ? '#826140' : '#1e1e1e',
                         border: `${pathname !== item.path ? '0.1875rem solid #555555' : ''}`
@@ -49,7 +44,6 @@ const HorizontalSubMenu = ({
                     onPointerUp={() => {
                         setHover(null)
                         if (pathname !== item.path) {
-                            console.log('ssssssssssssss');
                             horizontalsScroll(itemsArray, 't', 'scroll-wrapper12', index, items.length -1 === index ? 200 : null, item.additionLeftScroll || 0)
                             navigate(item.path)
                             setSelectedTab(item.id)

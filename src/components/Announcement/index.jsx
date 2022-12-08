@@ -20,12 +20,12 @@ const Announcement = ({
         { text: "호텔카지노", id: 4, width: '18.3125rem', path: "/cscenter/all/announcement/e-sportsa" },
         { text: "e-스포츠", id: 5, width: '15.3125rem', path: "/cscenter/all/announcement/e-sports" },
         { text: "미니게임", id: 6, width: '15.3125rem', path: "/cscenter/all/announcement/minigame" },
-        { text: "키론가상게임", width: '20.3125rem', id: 7, path: "/cscenter/all/announcement/ar-game", additionLeftScroll: -200 },
-        { text: "피싱게임 ", width: '16.3125rem', id: 8, path: "/cscenter/all/announcement/other2" },
+        { text: "키론가상게임", width: '20.3125rem', id: 7, path: "/cscenter/all/announcement/ar-game", additionLeftScroll: -90 },
+        { text: "피싱게임 ", width: '16.3125rem', id: 8, path: "/cscenter/all/announcement/other2", additionLeftScroll: -90 },
         { text: "티비벳 ", width: '16.3125rem', id: 9, path: "/cscenter/all/announcement/other3" },
         { text: "충전/환전", width: '16.3125rem', id: 10, path: "/cscenter/all/announcement/transaction" },
         { text: "베팅관련", width: '15.3125rem', id: 11, path: "/cscenter/all/announcement/about-betting" },
-        { text: "기타", width: '10.3125rem', id: 12, path: "/cscenter/all/announcement/other" ,additionLeftScroll: -200 },
+        { text: "기타", width: '10.3125rem', id: 12, path: "/cscenter/all/announcement/other", additionLeftScroll: -200 },
     ];
 
     const inboxArray = [
