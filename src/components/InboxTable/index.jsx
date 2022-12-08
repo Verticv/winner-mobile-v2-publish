@@ -110,7 +110,7 @@ const InboxTable = ({
                             }
                             <p style={{
                                 textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: item.type === '이벤트' ? '31rem' : item.type === "안내" ? '29rem' : !item.isRead ? '44rem' : '47rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
-                                color: item.isRead !== true ? '#c8c8c8' : '#a0a0a0', marginTop: '0.5rem',
+                                color: item.isRead !== true ? '#eeeeee' : '#a0a0a0', marginTop: '0.5rem',
                             }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap">{item.text}</p>
                             {item.isRead === false && (
                                 <div

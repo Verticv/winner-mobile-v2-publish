@@ -38,13 +38,39 @@ const subTabsArray = [
 const tableData = [
     [
         {
-            0: { 베팅번호: 1891241599 },
+            0: { 베팅번호: 7193915 },
         },
         {
-            0: { 베팅시간: "2021-06-29 15:45" }
+            0: { 베팅시간: "2021-06-29 15:46:13" }
         },
         {
-            0: { 게임종류: "프레그메틱플레이" }
+            0: { 게임종류: "에볼루션" }
+        },
+        {
+            0: { 게임구분: "바카라" }
+        },
+        {
+            0: { 베팅금액: "12,000" }
+        },
+        {
+            0: { '적중/손실금액': "-12,000" }
+        },
+        {
+            0: { 상태: "패" }
+        },
+        {
+            buttonColor: '#0056a6'
+        }
+    ],
+    [
+        {
+            0: { 베팅번호: 7193914 }
+        },
+        {
+            0: { 베팅시간: "2021-06-29 15:45:41" }
+        },
+        {
+            0: { 게임종류: "에볼루션" }
         },
         {
             0: { 게임구분: "바카라" }
@@ -57,29 +83,26 @@ const tableData = [
         },
         {
             0: { 상태: "승" }
-        },
-        {
-            buttonColor: '#0056a6'
         }
     ],
     [
         {
-            0: { 베팅번호: 1891241599 }
+            0: { 베팅번호: 7193913 }
         },
         {
-            0: { 베팅시간: "2021-06-29 15:45" }
+            0: { 베팅시간: "2021-06-29 15:45:41" }
         },
         {
-            0: { 게임종류: "아시아게이밍" }
+            0: { 게임종류: "프레그메틱플레이" }
         },
         {
-            0: { 게임구분: "바카라" }
+            0: { 게임구분: "블랙잭" }
         },
         {
-            0: { 베팅금액: "12,000" }
+            0: { 베팅금액: "800,000" }
         },
         {
-            0: { '적중/손실금액': "-12,000" }
+            0: { '적중/손실금액': "-800,000" }
         },
         {
             0: { 상태: "패" }
@@ -87,45 +110,22 @@ const tableData = [
     ],
     [
         {
-            0: { 베팅번호: 1891241599 }
+            0: { 베팅번호: 7193913 }
         },
         {
-            0: { 베팅시간: "2021-06-29 15:45" }
+            0: { 베팅시간: "2021-06-29 15:45:41" }
         },
         {
-            0: { 게임종류: "에볼루션" }
+            0: { 게임종류: "프레그메틱플레이" }
         },
         {
-            0: { 게임구분: "바카라" }
+            0: { 게임구분: "블랙잭" }
         },
         {
-            0: { 베팅금액: "12,000" }
+            0: { 베팅금액: "800,000" }
         },
         {
-            0: { '적중/손실금액': "+12,000" }
-        },
-        {
-            0: { 상태: "승" }
-        }
-    ],
-    [
-        {
-            0: { 베팅번호: 1891241599 }
-        },
-        {
-            0: { 베팅시간: "2021-06-29 15:45" }
-        },
-        {
-            0: { 게임종류: "아시아게이밍" }
-        },
-        {
-            0: { 게임구분: "바카라" }
-        },
-        {
-            0: { 베팅금액: "12,000" }
-        },
-        {
-            0: { '적중/손실금액': "-12,000" }
+            0: { '적중/손실금액': "-800,000" }
         },
         {
             0: { 상태: "패" }
@@ -133,45 +133,22 @@ const tableData = [
     ],
     [
         {
-            0: { 베팅번호: 1891241599 }
+            0: { 베팅번호: 7193913 }
         },
         {
-            0: { 베팅시간: "2021-06-29 15:45" }
+            0: { 베팅시간: "2021-06-29 15:45:41" }
         },
         {
-            0: { 게임종류: "아시아게이밍" }
+            0: { 게임종류: "프레그메틱플레이" }
         },
         {
-            0: { 게임구분: "바카라" }
+            0: { 게임구분: "블랙잭" }
         },
         {
-            0: { 베팅금액: "12,000" }
+            0: { 베팅금액: "800,000" }
         },
         {
-            0: { '적중/손실금액': "-12,000" }
-        },
-        {
-            0: { 상태: "패" }
-        }
-    ],
-    [
-        {
-            0: { 베팅번호: 1891241599 }
-        },
-        {
-            0: { 베팅시간: "2021-06-29 15:45" }
-        },
-        {
-            0: { 게임종류: "아시아게이밍" }
-        },
-        {
-            0: { 게임구분: "바카라" }
-        },
-        {
-            0: { 베팅금액: "12,000" }
-        },
-        {
-            0: { '적중/손실금액': "-12,000" }
+            0: { '적중/손실금액': "-800,000" }
         },
         {
             0: { 상태: "패" }
@@ -179,22 +156,22 @@ const tableData = [
     ],
     [
         {
-            0: { 베팅번호: 1891241599 }
+            0: { 베팅번호: 7193913 }
         },
         {
-            0: { 베팅시간: "2021-06-29 15:45" }
+            0: { 베팅시간: "2021-06-29 15:45:41" }
         },
         {
-            0: { 게임종류: "아시아게이밍" }
+            0: { 게임종류: "프레그메틱플레이" }
         },
         {
-            0: { 게임구분: "바카라" }
+            0: { 게임구분: "블랙잭" }
         },
         {
-            0: { 베팅금액: "12,000" }
+            0: { 베팅금액: "800,000" }
         },
         {
-            0: { '적중/손실금액': "-12,000" }
+            0: { '적중/손실금액': "-800,000" }
         },
         {
             0: { 상태: "패" }
@@ -202,22 +179,45 @@ const tableData = [
     ],
     [
         {
-            0: { 베팅번호: 1891241599 }
+            0: { 베팅번호: 7193913 }
         },
         {
-            0: { 베팅시간: "2021-06-29 15:45" }
+            0: { 베팅시간: "2021-06-29 15:45:41" }
         },
         {
-            0: { 게임종류: "아시아게이밍" }
+            0: { 게임종류: "프레그메틱플레이" }
         },
         {
-            0: { 게임구분: "바카라" }
+            0: { 게임구분: "블랙잭" }
         },
         {
-            0: { 베팅금액: "12,000" }
+            0: { 베팅금액: "800,000" }
         },
         {
-            0: { '적중/손실금액': "-12,000" }
+            0: { '적중/손실금액': "-800,000" }
+        },
+        {
+            0: { 상태: "패" }
+        }
+    ],
+    [
+        {
+            0: { 베팅번호: 7193913 }
+        },
+        {
+            0: { 베팅시간: "2021-06-29 15:45:41" }
+        },
+        {
+            0: { 게임종류: "프레그메틱플레이" }
+        },
+        {
+            0: { 게임구분: "블랙잭" }
+        },
+        {
+            0: { 베팅금액: "800,000" }
+        },
+        {
+            0: { '적중/손실금액': "-800,000" }
         },
         {
             0: { 상태: "패" }
@@ -225,7 +225,7 @@ const tableData = [
     ],
 ]
 
-const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false, subActiveButton, setSubActiveButton, key, path, margon1 }) => {
+const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup = false, subActiveButton, setSubActiveButton, key, path }) => {
 
     const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -239,30 +239,28 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
 
         function test() {
             setTimeout(() => {
-            navigate('/mypage/bet-history')
-            setSubActiveButton(path)
-            },0)
+                navigate('/mypage/bet-history')
+                setSubActiveButton(path)
+            }, 0)
         }
         window.addEventListener('popstate', test);
         return (() => {
             if (subActiveButton)
-            setSubActiveButton(path)
-            window.removeEventListener('popstate',test)
+                setSubActiveButton(path)
+            window.removeEventListener('popstate', test)
         })
     }, [setSubActiveButton, path, subActiveButton, navigate]);
 
 
     return (
-        <div className="LiveCasinoBetHistory" style={{ marginBottom: margon1 ? '3rem' : '12rem' }}>
+        <div className="LiveCasinoBetHistory" style={{ marginBottom: '3rem' }}>
             {showSub === true && (
                 <>
-                    <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
-                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0', overflowX: 'scroll' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                            <div className=" flex flex-shrink-0 w-full">
-                                <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
-                            </div>
+                    <div style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
+                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0', overflowX: 'scroll' }}>
+                            <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
                         </div>
-                        <div style={{ height: '10.8rem', top: '1.6rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
+                        <div style={{ height: '10.8rem', top: '1.6rem' }}></div>
                     </div>
                 </>
             )}

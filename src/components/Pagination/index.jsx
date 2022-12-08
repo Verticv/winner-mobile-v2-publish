@@ -16,7 +16,6 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
             <img style={{
                 width: '1.3125rem', height: '2.1875rem',
                 marginLeft: '1rem',
-                // marginTop: '-0.2rem'
             }} className="cursor-pointer object-contain max-w-none ddddddddddddd" src={LeftIcon} alt="arrow" />
         </button>
     )
@@ -33,7 +32,7 @@ const Pagination = ({ page, setPage, withMarginBottom = true }) => {
     const [selectedPage, setSelectedPage] = useState(1)
 
     return (
-        <div style={{ marginBottom: withMarginBottom ? '19.625rem' : '0', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="relative flex items-center justify-center">
+        <div style={{ marginBottom: withMarginBottom ? '19.625rem' : '0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <button
                 style={{ width: '2.125rem', height: '2.125rem', marginRight: '5rem', background: 'bottom' }}
                 className='hover'

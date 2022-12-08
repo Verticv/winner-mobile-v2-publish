@@ -75,12 +75,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubA
         <div style={{ maxWidth: '1242px', paddingBottom: '16rem' }} className="relative w-full flex flex-col justify-center overflow-hidden money-page">
 
             <Routes>
-                <Route index element={
-                    <>
-                        <MyInfo />
-                    </>
-                }
-                />
+                <Route index element={<MyInfo />}/>
                 <Route path="/*"
                     element={
                         <>
@@ -88,7 +83,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSubA
                             <ScrollButton />
                             <HomePageTopBanner pageTitle='머니충전' toPath='/mypage/money' />
 
-                            <div className="flex flex-col items-start limit:items-center w-full h-full" id='container-nav'>
+                            <div id='container-nav'>
                                 <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isMoneyPage='true' />
                             </div>
                             <Routes>

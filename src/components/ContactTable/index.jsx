@@ -82,7 +82,7 @@ const ContactTable = ({
                                 </div>
                                 <p style={{
                                     textOverflow: 'ellipsis', maxWidth: '37rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
-                                    color: item.isRead === true ? '#a0a0a0' : '#c8c8c8', marginTop: '0.5rem', overflow: 'hidden', whiteSpace: 'nowrap'
+                                    color: item.isRead === true ? '#a0a0a0' : '#eeeeee', marginTop: '0.5rem', overflow: 'hidden', whiteSpace: 'nowrap'
                                 }}>{item.text}</p>
                                 {item.isRead === false && (
                                     <div className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto n-div">

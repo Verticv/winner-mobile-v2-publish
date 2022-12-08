@@ -48,7 +48,7 @@
                     .lable-or-input {
                         background: rgb(25, 24, 23);
                         width: 42rem;
-                        padding: 2.2rem 1.3rem;
+                        padding: 0 2.2rem 0rem;
                         letter-spacing: -0.07rem;
                         border-radius: 0.5rem;
                         padding: 0.4rem 2.2rem 0;
@@ -74,9 +74,17 @@
                     color: #828282;
                     display: flex;
                     font-family: "SpoqaHanSansNeoMedium";
-                    font-size: 2.4375rem;
+                    font-size: 2.2rem;
                     line-height: 1.2;
                     margin-top: 1.7rem;
+                    letter-spacing: -0.047rem;
+                }
+                .text-under-input1 {
+                    color: #828282;
+                    display: flex;
+                    font-family: "SpoqaHanSansNeoMedium";
+                    font-size: 2.2rem;
+                    line-height: 1.2;
                     letter-spacing: -0.047rem;
                 }
             }

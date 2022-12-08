@@ -157,12 +157,12 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
     const [historySelectedSubTab4, setHistorySelectedSubTab4] = useState(0)
 
     const [page, setPage] = useState(0)
-    const [checkedState, setCheckedState] = useState(
-        new Array(3).fill(false)
-    );
+    const [checkedState, setCheckedState] = useState(new Array(3).fill(false));
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+
     const MyInfo = () => {
         return (
             <>
@@ -190,11 +190,7 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
 
             <Routes>
                 <Route index
-                    element={
-                        <>
-                            <MyInfo />
-                        </>
-                    }
+                    element={<MyInfo />}
                 >
                 </Route>
                 <Route index path="/all/*"
@@ -224,9 +220,7 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                                             path="/mypage/bet-history/all"
                                         />
-                                        <div style={{ marginTop: '3.85rem' }}>
-                                            <Pagination page={page} setPage={setPage} />
-                                        </div>
+                                        <Pagination page={page} setPage={setPage} />
                                         <NavBottom />
                                     </>
                                 }
@@ -252,9 +246,7 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                                                 subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                                                 path='/mypage/bet-history/all/live-casino'
                                             />
-                                            <div style={{ marginTop: '3.85rem' }}>
-                                                <Pagination page={page} setPage={setPage} />
-                                            </div>
+                                            <Pagination page={page} setPage={setPage} />
                                             <NavBottom />
                                         </>
                                     }
