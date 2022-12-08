@@ -22,7 +22,7 @@ const HistoryTable = ({
     color,
     width45,
     inlineText,
-    isGift
+    isGift,
 }) => {
     function Cells({ cards }) {
         const detailButton = (
@@ -94,16 +94,16 @@ const HistoryTable = ({
                                     firstColumnColor = row[0][firstRowKeysName[0]].includes("+") ? "#e65454" : "#c8c8c8"
                                 }
                                 if (firstRowKeysName[0] === '금액') {
-                                    firstColumnColor = row[0][firstRowKeysName[0]].includes("+") ? "#e65454" : row[0][firstRowKeysName[0]].includes("-") ? '#e65454' : "#c8c8c8"
+                                    firstColumnColor = row[0][firstRowKeysName[0]].includes("+") ? "#e65454" : row[0][firstRowKeysName[0]].includes("-") ? '#4c98ff' : "#c8c8c8"
                                 }
                                 if (secondRowKeysName[0] === '적립포인트') {
                                     secondColumnColor = '#4c98ff'
                                 }
                                 if (firstRowKeysName[0] === '쿠폰금액') {
-                                    firstColumnColor = '#e65454'
+                                    firstColumnColor = '#e9441d'
                                 }
                                 if (firstRowKeysName[0] === '처리상태') {
-                                    firstColumnColor = row[0][firstRowKeysName[0]] === '사용가능' ? "#c65337" : "#7b7b7b"
+                                    firstColumnColor = row[0][firstRowKeysName[0]] === '사용가능' ? "#e65454" : "#7b7b7b"
                                 }
                                 return (
                                     <div key={index} style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', color: firstColumnColor, letterSpacing: '-0.07rem', marginLeft: '0.14rem', display: '', width: '100%' }} className="w-full font-spoqa text-left text-gray-r7b7b7b">
@@ -118,7 +118,7 @@ const HistoryTable = ({
                                         }}>
                                             {firstRowKeysName[0] === '아이디' ? truncate(row[0][firstRowKeysName[0]], 16, 16) : row[0][firstRowKeysName[0]]}
                                         </span>
-                                        {secondRowKeysName?.length > 0 && <><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '3.725rem' }}>{secondRowKeysName[0]} : </span><span style={{ fontFamily: 'SpoqaHanSansNeo', color: secondColumnColor }} className='text-blue-r0056a6'> {row[1][secondRowKeysName[0]]}</span></>}
+                                        {secondRowKeysName?.length > 0 && <><span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '3.725rem' }}>{secondRowKeysName[0]} : </span><span style={{ fontFamily: 'SpoqaHanSansNeo', color: secondColumnColor }}> {row[1][secondRowKeysName[0]]}</span></>}
                                     </div>
                                 )
                             }
@@ -126,43 +126,63 @@ const HistoryTable = ({
 
                         })}
                     </div>
-
-                    {
-                        isButtonGradient ?
-                            hasButton && (
-                                <div className="text-center">
-                                    {isPopup ? (
-                                        <button
-                                            style={{ width: '9rem', height: '9rem', padding: '1px', }}
-                                            className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
-                                        >
-                                            <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
-                                            </div>
-                                        </button>
-                                    ) : (
-                                        <>
-                                            {!isCouponUsage ? (
-                                                <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent : detailButton}
-                                                    isPopupOpen={isPopupOpen}
-                                                    setPopupOpen={setPopupOpen}
-                                                    hasMargin='true'>
-                                                    {isPopupOpen ? <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} /> : ''}
-
-                                                </PopupControls>
-                                            ) : (
-                                                <>{wideDetailButtonComponent}</>
-                                            )}
-                                        </>
-                                    )}
-                                </div>
-                            ) : hasButton &&
-                            <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '', right: '1.9rem', borderRadius: '1.1rem', boxShadow: 'rgb(0 0 0 / 60%) 0px 0.375rem 0px 0px' }} className="hover change-top">
-                                <div style={{ padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
-                                    {console.log(card[card.length - 1].Proceeding, 'aaaaa')}
-                                    <span style={{ fontSize: '2.7rem', lineHeight: '1.25', width: '10.875rem', marginTop: '0.2375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: card[card.length - 1].textColor ? card[card.length - 1].textColor : '#ffdfbd' }} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length - 1].buttonColor === '#e65454' ? <div> {card[card.length - 1].buttonText ? card[card.length - 1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length - 1].buttonText || '진행중'} </span>
+                    {isCouponUsage ? (
+                        <div style={{ height: '14rem', width: '24rem', padding: '0.1875rem', background: 'linear-gradient(to top, #4b3b09, #e8b888)', borderRadius: '1.1rem' }}>
+                            <button
+                                style={{ padding: '0.5625rem', width: '100%', height: '100%', background: 'linear-gradient(to top, #7f5f3f, #a67c52)', borderRadius: '1rem' }}
+                                className="hover shadow-to-box3"
+                            >
+                                <div style={{ color: "#ffdfbd", fontSize: '2.7rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="shadow-to-text">
+                                    <p>사용하기</p>
                                 </div>
                             </button>
-                    }
+                        </div>
+                    ) : isButtonGradient ?
+                        hasButton && (
+                            <div className="text-center">
+                                {isPopup ? (
+                                    <button
+                                        style={{ width: '9rem', height: '9rem', padding: '1px', }}
+                                        className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
+                                    >
+                                        <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
+                                        </div>
+                                    </button>
+                                ) : (
+                                    <>
+                                        {!isCouponUsage ? (
+                                            <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent : detailButton}
+                                                isPopupOpen={isPopupOpen}
+                                                setPopupOpen={setPopupOpen}
+                                                hasMargin='true'>
+                                                {isPopupOpen ? <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} /> : ''}
+
+                                            </PopupControls>
+                                        ) : (
+                                            <>{wideDetailButtonComponent}</>
+                                        )}
+                                    </>
+                                )}
+                            </div>
+                        ) : hasButton &&
+                        <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '', right: '1.9rem', borderRadius: '1.1rem', boxShadow: 'rgb(0 0 0 / 60%) 0px 0.375rem 0px 0px' }} className="hover change-top">
+                            <div style={{
+                                padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : '2.2rem 2rem 2rem 2.2rem' : card[card.length - 1].winLoseComplete ? '2.2rem 2rem 2rem 2.2rem' : ''}`
+                            }}>
+                                <span
+                                    style={{
+                                        fontSize: '2.7rem',
+                                        lineHeight: '1.25',
+                                        width: '10.875rem',
+                                        marginTop: '0.2375rem',
+                                        fontFamily: 'SpoqaHanSansNeoMedium',
+                                        color: card[card.length - 1].textColor ? card[card.length - 1].textColor : '#ffdfbd',
+                                    }}
+                                >{card[card.length - 1].buttonText || '진행중'}
+                                </span>
+                            </div>
+                        </button>}
+
                 </div>
             </div >
         ))

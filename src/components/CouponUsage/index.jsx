@@ -582,9 +582,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#5a2867',
+            buttonColor: '#703380',
             buttonText: '선물 완료',
-            textColor: '#c697d3'
+            textColor: '#e0b5ec'
         }
     ],
     [
@@ -607,9 +607,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#5a2867',
+            buttonColor: '#703380',
             buttonText: '선물 완료',
-            textColor: '#c697d3'
+            textColor: '#e0b5ec'
         }
     ],
     [
@@ -632,9 +632,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#5a2867',
+            buttonColor: '#703380',
             buttonText: '선물 완료',
-            textColor: '#c697d3'
+            textColor: '#e0b5ec'
         }
     ],
     [
@@ -657,9 +657,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#5a2867',
+            buttonColor: '#703380',
             buttonText: '선물 완료',
-            textColor: '#c697d3'
+            textColor: '#e0b5ec'
         }
     ],
     [
@@ -682,9 +682,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#5a2867',
+            buttonColor: '#703380',
             buttonText: '선물 완료',
-            textColor: '#c697d3'
+            textColor: '#e0b5ec'
         }
     ],
     [
@@ -707,9 +707,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#5a2867',
+            buttonColor: '#703380',
             buttonText: '선물 완료',
-            textColor: '#c697d3'
+            textColor: '#e0b5ec'
         }
     ],
     [
@@ -732,9 +732,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#5a2867',
+            buttonColor: '#703380',
             buttonText: '선물 완료',
-            textColor: '#c697d3'
+            textColor: '#e0b5ec'
         }
     ],
     [
@@ -757,9 +757,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#5a2867',
+            buttonColor: '#703380',
             buttonText: '선물 완료',
-            textColor: '#c697d3'
+            textColor: '#e0b5ec'
         }
     ],
 ]
@@ -845,12 +845,12 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
     const CouponTitle = ({ text = '사용 가능한 쿠폰', number = '10', numberColor = '#e65454' }) => {
         return (
-            <div className="flex items-center space-x-20px" style={{ display: 'flex', justifyContent: 'center', marginTop: "2.6rem" }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: "2.6rem" }}>
                 <div style={{
-                    fontSize: '2.624375rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.6rem'
-                }} className="font-spoqaMedium tracking-tight text-gray-r8c8c8c">
+                    fontSize: '2.5rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0rem', letterSpacing: '-0.07rem'
+                }}>
                     <span>{text} </span>
-                    <span style={{ color: numberColor, fontFamily: 'RobotoBold' }} className="font-robotoBold">&nbsp;{number}</span>
+                    <span style={{ color: numberColor, fontFamily: 'RobotoBold' }}>{number}</span>
                     <span>장</span>
                 </div>
             </div>
@@ -937,7 +937,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
         }, [])
         return (
             <>
-                <div style={{ marginBottom: '-0.8125rem' }} className='mt-4 flex justify-center'>
+                <div style={{ marginBottom: '-0.8125rem' }}>
                     <CouponTitle text='사용 가능한 쿠폰' number='10' />
                 </div>
                 <div className="">
@@ -990,7 +990,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                     marginTop: '2.6rem',
                     letterSpacing: '-0.07rem',
                     marginLeft: '-0.7rem',
-                }} className='mt-4 flex justify-center'>
+                }}>
                     <CouponTitle text='선물 가능한 쿠폰' number='7' />
                 </div>
                 <div className="">
@@ -1029,30 +1029,29 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
         useEffect(() => {
             window.onpopstate = e => {
-
                 setTimeout(() => {
                     navigate('/mypage/coupon')
                     setSubActiveButton('/mypage/coupon/all/coupon-history')
                 }, 0)
             }
-
             return (() => {
                 setSubActiveButton('/mypage/coupon/all/coupon-history')
             })
         }, [])
+
         return (
             <>
                 <div style={{ margin: '1.875rem', marginTop: '0.5rem', marginBottom: '0' }}>
                     <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
                 </div>
 
-                <div style={{ marginBottom: '-0.8125rem', display: 'flex', justifyContent: 'center' }} className='mt-4 flex justify-center'>
+                <div style={{ marginBottom: '-0.8125rem', display: 'flex', justifyContent: 'center' }} >
                     <CouponTitle text='사용가능' number='32' />
-                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
+                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.6rem 0', background: '#555555' }}></div>
                     <CouponTitle text='사용완료' number='8' numberColor='#4c98ff' />
-                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
+                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.6rem 0', background: '#555555' }}></div>
                     <CouponTitle text='기간만료' number='0' numberColor='#ffffff' />
-                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
+                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.6rem 0', background: '#555555' }}></div>
                     <CouponTitle text='회수된쿠폰' number='0' numberColor='#4aca68' />
                 </div>
                 <div className="">
@@ -1077,6 +1076,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
             </>
         )
     }
+
     return (
         <div style={{ maxWidth: '1242px' }}>
             <Routes>
@@ -1112,11 +1112,11 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
 
                                                         <div style={{ marginBottom: '-0.8125rem', display: 'flex', justifyContent: 'center' }} className='mt-4 flex justify-center'>
                                                             <CouponTitle text='사용가능' number='32' />
-                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.6rem 0', background: '#555555' }}></div>
                                                             <CouponTitle text='사용완료' number='8' numberColor='#4c98ff' />
-                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.6rem 0', background: '#555555' }}></div>
                                                             <CouponTitle text='기간만료' number='0' numberColor='#ffffff' />
-                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.9375rem 0', background: '#555555' }} className='bg-gray-c5c5c5'></div>
+                                                            <div style={{ height: '1.75rem', width: '0.1875rem', margin: '3.3rem 0.6rem 0', background: '#555555' }}></div>
                                                             <CouponTitle text='회수된쿠폰' number='0' numberColor='#4aca68' />
                                                         </div>
                                                         <div className="">
