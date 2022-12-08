@@ -12,7 +12,7 @@ const tableData = [
             0: { 적립일: '2021-06-30' },
         },
         {
-            0: { 제목: "Rolling Bouns Rolling Bouns Rolling Bouns Rolling Bouns Rolling Bouns Rolling BounsRolling Bouns Rolling Bouns Rolling BounsRolling Bouns Rolling Bouns Rolling Bouns" }
+            0: { 제목: "Rolling Bouns" }
         },
         {
             0: { 아이디: "eric123 eric123 eric123 eric123 eric123 eric123 " },

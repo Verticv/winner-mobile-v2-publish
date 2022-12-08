@@ -224,29 +224,21 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
             <Route path="/bet-history/*"
                 element={
                     <>
-                        {/* <Header /> */}
                         <BetHistory isAuthenticated={isAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
-                        // activeButton={activeButton} setActiveButton={setActiveButton}
                         />
-                        {/* <NavBottom /> */}
                     </>
                 }
             >
             </Route>
-            {/* <Routes> */}
             <Route path="/money/*"
                 element={
                     <>
-                        {/* <Header /> */}
                         <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
-                        {/* <NavBottom /> */}
                     </>
                 }
             />
-            {/* </Route> */}
-            {/* </Routes> */}
             <Route path="/money/exchange/*"
                 element={
                     <>
@@ -260,11 +252,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
             <Route path="/points/*"
                 element={
                     <>
-                        {/* <Header /> */}
                         <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />
-                        {/* <NavBottom /> */}
                     </>
                 }
             >
@@ -285,11 +275,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
             <Route path="/gameresults/*"
                 element={
                     <>
-                        {/* <Header /> */}
                         <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />
-                        {/* <NavBottom /> */}
                     </>
                 }
             >
@@ -302,7 +290,6 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
                         <div>
                             <ScrollButton />
                             <FreeBoardMain key={14}
-                                // isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
                                 activeButton={activeButton}
                                 setActiveButton={setActiveButton}
                             />
@@ -316,11 +303,9 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
             <Route path="/coupon/*"
                 element={
                     <>
-                        {/* <Header /> */}
                         <CouponUsage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}
                             subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                         />
-                        {/* <NavBottom /> */}
                     </>
                 }
             >

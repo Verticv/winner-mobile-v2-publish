@@ -120,16 +120,16 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                     }} className="flex flex-col">
                         <div className="form-section">
                             <Title text="현재 보유머니" />
-                            <div className="lable-or-input">
-                                <div style={{ fontSize: '2.625rem' }} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
+                            <div className="lable-or-input" style={{ backgroundColor: '#191817' }}>
+                                <div style={{ fontSize: '2.625rem' }}>
                                     <span className="font-robotoBold text-red-e9441d" style={{ color: '#e9441d', fontFamily: 'RobotoBold' }}>487,240</span>
                                 </div>
-                                <div style={{ height: '0.1875rem', marginTop: '0.9375rem' }} className="w-full bg-gray-bebebe"></div>
+                                <div style={{ height: '0.1875rem', marginTop: '0.9375rem' }}></div>
                             </div>
                         </div>
                         <div style={{ marginTop: '2.6rem' }} className="form-section">
                             <Title text="충전금액 입력" />
-                            <div className="lable-or-input">
+                            <div className="lable-or-input" style={{ backgroundColor: '#191817' }}>
                                 <input
                                     className="w-full font-spoqa text-gray-r585858 outline-none placeholder-gray-bebebe"
                                     style={{ fontSize: '2.625rem', marginBottom: '0.9375rem', letterSpacing: '-0.1rem' }}
@@ -255,8 +255,8 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                         <div className="form-section">
                             <Title text="보너스 금액" />
                             <div className="lable-or-input">
-                                <div style={{ fontSize: '2.625rem' }} className="text-gray-r393e41 font-spoqaMedium text-16px text-gray-r585858 ">
-                                    <span className="font-robotoBold text-blue-r0056a6" style={{ color: '#4c98ff', fontFamily: 'RobotoBold', letterSpacing: '-0.03rem' }}>100,000,000</span>
+                                <div style={{ fontSize: '2.625rem' }}>
+                                    <span style={{ color: '#4c98ff', fontFamily: 'RobotoBold', letterSpacing: '-0.03rem' }}>100,000,000</span>
                                 </div>
                                 <div style={{ height: '0.1875rem', marginTop: '0.9375rem' }} className="w-full bg-gray-bebebe"></div>
                             </div>

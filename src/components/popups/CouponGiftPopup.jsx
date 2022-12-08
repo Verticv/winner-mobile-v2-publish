@@ -5,12 +5,10 @@ import Step1 from '../../assets/coupon/step-1.png'
 import Step2 from '../../assets/coupon/step-2.png'
 import './Scrollbars.css'
 import '../BoardComposeViewPanel/RadioButton.css'
-// import img18 from '../../img19.png'
 
 const CouponGiftPopup = ({ setPopupOpen }) => {
     return (
         <div style={{ height: "100vh", width: '77.625rem', borderTopLeftRadius: '2.8rem', borderTopRightRadius: '2.8rem', background: 'linear-gradient(to top, #1f1f1e, #2c2c2b 80% , #343434)', padding: '0.1875rem', position: '', zIndex: '201', overflowY: 'scroll' }}>
-            {/* <img src={img18} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
             <div style={{ width: '100%', height: '100%', borderTopLeftRadius: '2.8rem', borderTopRightRadius: '2.8rem', background: '#323231', marginTop: '' }} className="flex flex-col rounded-lg overflow-hidden">
                 <div style={{ height: '9.3rem', background: '#272726', borderTopLeftRadius: '2.8rem', borderTopRightRadius: '2.8rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="relative bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
                     <label style={{ fontSize: '3.75rem', color: '#ad9e8c', fontFamily: 'SpoqaHanSansNeoBold', letterSpacing: '-0.07rem', marginLeft: '0.65rem', marginTop: '-0.1rem' }} className="font-spoqaBold text-white tracking-tight">쿠폰 선물하기</label>

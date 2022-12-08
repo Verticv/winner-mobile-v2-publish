@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
 import horizontalsScroll from '../../utils/horizontalsScroll';
 import inactive from '../../assets/inactive-bg.png';
@@ -15,9 +15,6 @@ const HorizontalSubMenu = ({
 
     const navigate = useNavigate();
     const { pathname } = useLocation();
-    const [isHover, setHover] = useState(null)
-
-    console.log('selectedSubTab', selectedSubTab);
 
     useEffect(() => {
         if (withoutFirst) {
@@ -46,18 +43,13 @@ const HorizontalSubMenu = ({
                 <div className={`nav-button ${(isActive && popup) || (isSameLink && !popup) || window.location.pathname === item.path ? 'active' : ''}`}
                     id={`t-sub${index}`}
                     key={item.id}
-                    onPointerDown={() => setHover(item.id)}
                     onPointerUp={() => {
-                        setHover(null)
                         horizontalsScroll(itemsArray, 't-sub', 'scroll-wrapper1', index)
                         navigate(item.path)
                         setSelectedSubTab(item.id)
                         setSelectedTab(item.id)
                     }}
-                    onPointerOut={() => setHover(null)}
-                    onPointerCancel={() => setHover(null)}
                 >
-                    {console.log(item.id, 'withoutFirst')}
                     <button
                         id={`t-sub${index}`}
                         key={item.id}
@@ -65,19 +57,19 @@ const HorizontalSubMenu = ({
                             background: `url(${inactive})`,
                             backgroundRepeat: 'round',
                             width: '20.9rem',
-                            height: '13.6rem',
+                            height: '11.18rem',
                             marginLeft: '0',
                             paddingTop: '0'
                         }}
                     >
 
-                        <div style={{ width: '100%', textAlign: 'center', height: '6.2rem', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: item.marginIcon ? item.marginIcon : '' }}>
+                        <div style={{ width: '100%', textAlign: 'center', height: '6.2rem', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: item.marginIcon ? item.marginIcon : '0.6rem' }}>
                             <img id={item.id} className='icon' src={((isActive && popup) || (isSameLink && !popup)) ? (item.activeIcon ? item.activeIcon : item.icon) : item.icon} alt='' style={{ width: item.width || '7.875rem', height: item.height, marginTop: item.marginTop }} />
                         </div>
                         <div style={{ width: '100%', textAlign: 'center', height: '4.97rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <span
                                 id={item.id}
-                                style={{ marginTop: item.marginTop, marginLeft: item.textMargin }}
+                                style={{ marginTop: '0rem', marginLeft: item.textMargin }}
                                 className='text'>{item.text}</span>
                         </div>
                     </button>
@@ -87,7 +79,7 @@ const HorizontalSubMenu = ({
     }
 
     return (
-        <div id="container" className="HorizontalMenu flex justify-start items-start">
+        <div id="container" className="HorizontalMenu">
             <TabsList items={itemsArray} />
         </div>
     )

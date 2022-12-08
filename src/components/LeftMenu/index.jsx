@@ -6,7 +6,6 @@ import ArrowRight from '../../assets/myInfo/right-arrow2.png'
 import ArrowRightWhite from '../../assets/myInfo/right-arrow-active.png'
 import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from '../ReauthenticatePopup'
-import { getCookie, setCookie } from '../../utils'
 
 const LeftMenu = ({
     selectedTab,
@@ -17,8 +16,10 @@ const LeftMenu = ({
     subActiveButton,
     activeButton2,
     setSubActiveButton,
-    activeButton, setActiveButton,
-    distributorPageActive, setDistributorPageActive,
+    activeButton,
+    setActiveButton,
+    distributorPageActive,
+    setDistributorPageActive,
     cscenterActive,
     setCscenterActive
 }) => {
@@ -30,42 +31,28 @@ const LeftMenu = ({
     })
 
     const { currentPathname } = useLocation();
-    const pathname = window.location.pathname
+    const { state } = useLocation();
     const navigate = useNavigate();
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [isExpanded, setExpanded] = useState(window.location.pathname)
     const [isMouseHover, setMouseHover] = useState("")
 
-    // console.log('fff', activeButton, 'sss');
-    // const [activeButton, setActiveButton] = useState()
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         const isFromPreviousPage = array.find(ele => ele.path === getCookie('previousUrl'))
-    //         if (isFromPreviousPage) {
-    //             setActiveButton(getCookie('previousUrl'))
-    //         }
-    //     }, 0)
-
-    // }, [currentPathname, array])
-
     useEffect(() => {
         setTimeout(() => {
             const isFromPreviousPage = state?.path
+
             if (isFromPreviousPage) {
                 setActiveButton(isFromPreviousPage)
             }
         }, 0)
 
-    }, [currentPathname, array]);
+    }, [currentPathname, array, state?.path]);
+
     useEffect(() => {
         if (cscenterActive) {
             setCscenterActive('/cscenter');
         }
     }, [cscenterActive, setCscenterActive])
-
-    const { state } = useLocation();
-    console.log(state, 'state');
 
     function buttonPressed(text, path) {
         if (distributorPageActive) {
@@ -81,7 +68,6 @@ const LeftMenu = ({
                 pathname: path,
                 state: { fromPage: window.location.pathname }
             })
-            console.log('window.location.pathname2', window.location.pathname);
             setSelectedTab(path)
             if (setSelectedSubTab !== null) {
                 setSelectedSubTab(path)
@@ -126,11 +112,8 @@ const LeftMenu = ({
                         <img
                             style={{
                                 height: '', width: '7.875rem',
-                                // marginTop: '-1.15rem'
                                 marginLeft: '0.5rem'
-                                // boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)' 
                             }}
-                            className="bg-white rounded-full flex items-center justify-center"
                             src={icon}
                             alt="icon" />
                     </div>
@@ -171,7 +154,8 @@ const LeftMenu = ({
                             <button
                                 style={{
                                     padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd',
-                                    background: ((((selectedTab) === item?.path) || (distributorPageActive === '/distributor-page' && item.text === '총판페이지') || subActiveButton === item?.path)) || item?.path == '' || (state?.path === '/cscenter' && item.text === '고객센터' && distributorPageActive !== '/distributor-page') ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', borderRadius: '1rem'
+                                    background: ((((selectedTab) === item?.path) || (distributorPageActive === '/distributor-page' && item.text === '총판페이지') || subActiveButton === item?.path)) || item?.path == '' || (state?.path === '/cscenter' && item.text === '고객센터' && distributorPageActive !== '/distributor-page') ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', 
+                                    borderRadius: '1rem'
                                 }}
                                 className={`${selectedTab === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2"
@@ -179,13 +163,9 @@ const LeftMenu = ({
                                     } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l hover:opacity-75 focus:from-blue-gradDark focus:to-blue-r2088f0`}
                                 onClick={(e) => {
                                     if (item.text === '총판페이지') {
-                                        //     setCookie('previousUrl', '/distributor-page');
-                                        // setActiveButton('')
                                         setDistributorPageActive('/')
                                     }
-                                    console.log('selectedTab', selectedTab === item?.path)
                                     buttonPressed(item.text, item.path)
-
                                 }}
                                 onMouseEnter={() => mouseHover(item.path)}
                                 onMouseLeave={() => mouseLeave(item.path)}
@@ -211,9 +191,6 @@ const LeftMenu = ({
                                             height: 'auto',
                                             width: item.width,
                                             marginTop: item.id === 0 ? '-0.9rem' : '-1.15rem'
-                                            // margin: item.margin,
-                                            // width: '7.8rem',
-                                            // boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)' 
                                         }}
                                         className="bg-white rounded-full flex items-center justify-center shadow-plain9 first-img"
                                         src={item.icon}
@@ -238,11 +215,8 @@ const LeftMenu = ({
                                         )}
                                         {item.hasArrow && (
                                             <img
-                                                className="object-contain absolute right-1"
                                                 style={{ width: '1.9375rem', height: '3.1875rem', top: '0.2rem', right: '0.3rem', position: 'absolute' }}
-                                                src={activeButton === item?.path ? ArrowRightWhite : ArrowRight}
-                                                // src={ArrowRight}
-
+                                                src={((((selectedTab) === item?.path) || (distributorPageActive === '/distributor-page' && item.text === '총판페이지') || subActiveButton === item?.path)) || item?.path == '' || (state?.path === '/cscenter' && item.text === '고객센터' && distributorPageActive !== '/distributor-page') ? ArrowRightWhite : ArrowRight}
                                                 alt="icon" />
                                         )}
                                     </div>
