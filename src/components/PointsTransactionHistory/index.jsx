@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import HistoryTable from '../HistoryTable'
 import { useNavigate } from 'react-router-dom'
-// import ScrollButton from '../ScrollButton'
 
 const tableData = [
     [
@@ -154,8 +153,6 @@ const tableData = [
 
 ]
 
-
-
 const PointsTransactionHistory = ({ SubMenuList, subActiveButton, setSubActiveButton }) => {
     const [page, setPage] = useState(0)
     const [isPopupOpen, setPopupOpen] = useState(true)
@@ -196,17 +193,11 @@ const PointsTransactionHistory = ({ SubMenuList, subActiveButton, setSubActiveBu
                 <span className="" style={{ color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium' }}>님의 포인트적립 정보입니다.</span>
             </div>
 
-
-
             {SubMenuList}
 
-            <div className='date-div'
-                style={{ marginTop: '-1.1rem' }}
-            >
-
+            <div className='date-div' style={{ marginTop: '-1.1rem' }}>
                 <DateSearchBar isLeagueSearch={false} withBlackButton isPoints='true' />
             </div>
-            {/* <ScrollButton /> */}
             <div className="h-full w-full">
                 <HistoryTable
                     containerBackground='#f7f9fc'

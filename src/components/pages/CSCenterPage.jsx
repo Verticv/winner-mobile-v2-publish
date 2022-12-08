@@ -14,7 +14,6 @@ import Icon5Active from '../../assets/cscenter/leftMenu/icon_5-active.png'
 import Contact from '../Contact';
 import HorizontalMenu1 from '../HorizontalMenu1';
 import ContactView from '../ContactView';
-// import ContactViewPage from "./ContactViewPage";
 import ContactCompose from "../ContactCompose";
 import Faq from "../Faq";
 import MinigamePolicy from "../MinigamePolicy";
@@ -22,11 +21,9 @@ import SportsGamePolicy from "../SportsGamePolicy";
 import AccountProfileComponent from '../AccountProfileComponent'
 import LeftMenu from "../LeftMenu";
 import Logo from "../../assets/myInfo/Logo.png";
-// import img from '../../img10.png'
 import subIcon1 from '../../assets/bigIcons/leftMenu/21.png';
 import subIcon2 from '../../assets/bigIcons/leftMenu/22.png';
 import subIcon3 from '../../assets/bigIcons/leftMenu/23.png';
-// import subIcon4 from '../../assets/bigIcons/leftMenu/24.png';
 import subIcon5 from '../../assets/bigIcons/leftMenu/25.png';
 import Header from "../Header";
 import NavBottom from "../NavBottom";
@@ -82,8 +79,8 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
     const [selectedTab, setSelectedTab] = useState()
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     const [subActiveButton, setSubActiveButton] = useState();
-    const [activeButton, setActiveButton] =useState();
-    const [cscenterActive, setCscenterActive] =useState();
+    const [activeButton, setActiveButton] = useState();
+    const [cscenterActive, setCscenterActive] = useState();
     console.log(selectedSubTab, selectedTab)
 
     useEffect(() => {
@@ -98,35 +95,8 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
             }
         }
         console.log('location.state :>> ', location?.state);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location?.state])
-
-
-    // return (
-    //     <div>
-    //         {/* <Routes > */}
-
-    //         <Route path="/aa"
-    //             element={
-    //                 <Outlet />
-    //             }
-    //         >
-    //             <Route index element={<>
-    //                 <h1>sssssss</h1>
-    //                 {console.log('ssssssssssss')}
-    //             </>} />
-    //             <Route path='/cc' element={<h1>hi {console.log('aaaaaaaa')}</h1>} />
-
-    //         </Route>
-    //         {/* <Outlet /> */}
-    //         {/* </Routes> */}
-
-    //         <div style={{ background: 'red', width: "10rem", height: '10rem' }} >
-    //             {/* <Outlet /> */}
-    //         </div>
-    //     </div>
-
-    // )
 
     const MyInfo = () => {
         return (
@@ -165,7 +135,6 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                         <ScrollButton />
                         <Header />
                         <Routes>
-                            {/* <Route index element={<h2>H2</h2>} /> */}
                             <Route
                                 path="/contact/all/*"
                                 element={
@@ -173,7 +142,6 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
 
                                         <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                         <div id='container-nav'>
-
                                             <HorizontalMenu1 key={1} withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                                         </div>
                                         <Contact subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
@@ -227,12 +195,6 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                     </>
                                 }
                             />
-                            {/* <Route path="/announcement"
-                            element={ }
-                        /> */}
-                            {/* <Route path="/announcement/view"
-                            element={ }
-                        /> */}
                             <Route path="/faq/*"
                                 element={
                                     <>
@@ -247,14 +209,14 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                                 }
                             />
                             <Route path="/policy/sportsgame/*"
-                                element={<>
-                                    {/* <img src={img} alt='' style={{ opacity: '0.5', position: 'absolute', top: '0' }} /> */}
-                                    <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
-                                    <div id='container-nav'>
-                                        <HorizontalMenu1 key={4} withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
-                                    </div>
-                                    <SportsGamePolicy setSelectedTab={setSelectedTab} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
-                                </>}
+                                element={
+                                    <>
+                                        <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
+                                        <div id='container-nav'>
+                                            <HorizontalMenu1 key={4} withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                        </div>
+                                        <SportsGamePolicy setSelectedTab={setSelectedTab} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
+                                    </>}
                             />
                             <Route path="/policy/minigame/*"
                                 element={

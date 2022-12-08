@@ -14,14 +14,7 @@ import icon8 from '../../assets/bigIcons/8.png';
 import icon9 from '../../assets/bigIcons/9.png';
 import icon10 from '../../assets/bigIcons/10.png';
 import HotelCasinoBetHistory from '../HotelCasinoBetHistory'
-// import icon10 from '../../assets/bigIcons/10.png';
-// import icon4 from '../../assets/icon4.png';
-// import icon5 from '../../assets/icon5.png';
-// import icon6 from '../../assets/icon6.png';
-// import icon7 from '../../assets/icon7.png';
-// import icon8 from '../../assets/icon8.png';
-// import icon9 from '../../assets/icon9.png';
-// import icon10 from '../../assets/icon10.png';
+
 import icon1Active from '../../assets/bigIcons/1-active.png';
 import icon2Active from '../../assets/bigIcons/2-active.png';
 import icon3Active from '../../assets/bigIcons/3-active.png';
@@ -32,35 +25,16 @@ import icon7Active from '../../assets/bigIcons/7-active.png';
 import icon8Active from '../../assets/bigIcons/8-active.png';
 import icon9Active from '../../assets/bigIcons/9-active.png';
 import icon10Active from '../../assets/bigIcons/10-active.png';
-// import icon2Active from '../../assets/icon2-active.png';
-// import icon3Active from '../../assets/icon3-active.png';
-// import icon4Active from '../../assets/icon4-active.png';
-// import icon5Active from '../../assets/icon5-active.png';
-// import icon6Active from '../../assets/icon6-active.png';
-// import icon7Active from '../../assets/icon7-active.png';
-// import icon8Active from '../../assets/icon8-active.png';
-// import icon9Active from '../../assets/icon9-active.png';
-// import icon10Active from '../../assets/icon10-active.png';
+
 import SportsBetHistory from '../SportsBetHistory';
 import Logo from "../../assets/myInfo/Logo.png";
-// import img21 from '../../img21.png'
 
-
-
-// import Logo from "../../assets/myInfo/Logo.png";
 import HomePageTopBanner from '../HomePageTopBanner'
 import LeftMenu from "../LeftMenu";
-// import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import Pagination from '../Pagination'
 import LiveCasinoBetHistory from '../LiveCasinoBetHistory'
-// import SportsBetHistory from './betHistory/SportsBetHistory'
-// import AllBetHistory from './betHistory/AllBetHistory'
 import SlotBetHistory from '../SlotBetHistory'
-// import ARGameBetHistory from './betHistory/ARGameBetHistory'
 import { Route, Routes } from 'react-router'
-// import Navbar from '../mainPage/Navbar'
-// import NoticeBanner from '../mainPage/NoticeBanner'
-// import SlotBetHistory from './betHistory/SlotBetHistory'
 import ESportsBetHistory from '../ESportsBetHistory'
 import MinigameBetHistory from '../MinigameBetHistory';
 import ARGameBetHistory from '../ARGameBetHistory'
@@ -164,21 +138,13 @@ const LeftMenuBetHistoryArray = [
         width: '9.9375rem'
     },
     {
-        text: "로터리게임",
+        text: "티비벳",
         icon: subIcon9,
         id: 7,
         path: "/mypage/bet-history/all/bet",
         mainPath: "/mypage/bet-history",
         width: '9.9375rem'
     },
-    // {
-    //     text: "티비벳",
-    //     icon: subIcon9,
-    //     id: 7,
-    //     path: "#",
-    //     mainPath: "/mypage/bet-history",
-    //     width: '9.9375rem'
-    // },
 ];
 
 
@@ -198,7 +164,6 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
         window.scrollTo(0, 0);
     }, [])
     const MyInfo = () => {
-        // console.log(`location.state`, location.state)
         return (
             <>
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
@@ -236,14 +201,11 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                     element={
                         <>
                             <div className="w-full z-30 flex flex-col items-center">
-                                {/* <NoticeBanner /> */}
-                                {/* <Navbar /> */}
                                 <Header />
                                 <HomePageTopBanner pageTitle='베팅내역' toPath='/mypage/bet-history' />
                             </div>
 
                             <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
-                                {/* <div style={{  }} className="absolute h-full right-0 z-50 nav-shadow"></div> */}
                                 <div id='scroll-wrapper'
                                     style={{ padding: '0.1rem 0 0.1rem 1.2rem', paddingRight: '0', overflowX: 'scroll', }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar"
                                 >
@@ -273,7 +235,6 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                                     element={
                                         <>
                                             <ScrollButton />
-                                            {/* <img src={img21} alt="" style={{ position: 'absolute', top: '0', opacity: '0.5' }} /> */}
                                             <SportsBetHistory key={55} checkedState={checkedState} setCheckedState={setCheckedState}
                                                 subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                                             />
@@ -282,13 +243,6 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                                         </>
                                     }
                                 >
-                                    <>
-                                        {/* <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} /> */}
-                                        {/* <div style={{ marginTop: '1.25rem' }}>
-                                            
-                                        </div> */}
-                                        {/* <BottomNavbar /> */}
-                                    </>
                                 </Route>
                                 <Route path="/live-casino/*"
                                     element={
@@ -302,8 +256,6 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                                                 <Pagination page={page} setPage={setPage} />
                                             </div>
                                             <NavBottom />
-                                            {/* <BottomNavbar /> */}
-                                            {/* <h1>hi</h1> */}
                                         </>
                                     }
                                 >
@@ -319,8 +271,6 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                                                 <Pagination page={page} setPage={setPage} />
                                             </div>
                                             <NavBottom />
-                                            {/* <BottomNavbar /> */}
-                                            {/* <h1>hi</h1> */}
                                         </>
                                     }
                                 >
@@ -330,11 +280,6 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                                     element={
                                         <>
                                             <ScrollButton />
-                                            {/* <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-                                                <div style={{ marginTop: '1.25rem' }}>
-                                                    <Pagination page={page} setPage={setPage} />
-                                                </div>
-                                                <BottomNavbar /> */}
                                             <SlotBetHistory key={1} isState={selectedSubTab} setState={setSelectedSubTab}
                                                 subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} path='/mypage/bet-history/all/slot-game'
                                             />
@@ -351,15 +296,9 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                                     element={
                                         <>
                                             <ScrollButton />
-                                            {/* <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
-                                    <div style={{ marginTop: '1.25rem' }}>
-                                        <Pagination page={page} setPage={setPage} />
-                                    </div>
-                                    <BottomNavbar /> */}
                                             <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}
                                                 subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                                             />
-                                            {/* <DateSearchBar isLeagueSearch={false} /> */}
                                             <NavBottom />
                                         </>
                                     }
@@ -372,9 +311,7 @@ const BetHistory = ({ isAuthenticated, setAuthenticated, subActiveButton, setSub
                                             <MinigameBetHistory isState={historySelectedSubTab2} setState={setHistorySelectedSubTab2}
                                                 subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
                                             />
-                                            <div style={{ marginTop: '1.25rem' }}>
-                                                {/* <Pagination page={page} setPage={setPage} /> */}
-                                            </div>
+                                            <div style={{ marginTop: '1.25rem' }} />
                                             <NavBottom />
                                         </>
                                     }

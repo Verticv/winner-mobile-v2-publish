@@ -4,8 +4,6 @@
     width: 100%;
     padding: 0 1.6rem;
 
-    // overflow-x: scroll;
-    // gap: 0.3rem;
     #container {
         display: flex;
         flex-direction: row;
@@ -15,27 +13,15 @@
             border: 0;
             padding: 0;
             background: url('../../assets/cscenter/leftMenu/inactive-btn.png') round;
-            // width: 15.1rem;
             width: 100%;
             height: 14.1rem;
-            // margin-right: -0.24rem;
             border-radius: 1rem;
-            // flex-shrink: 0;
-            // padding: 0.1875rem;
 
-            //  {
-            //     width: 100%;
-            //     height: 100%;
-            // }
             .btn-content {
                 width: 95.9%;
-                // height: 100%;
-                // background: red;
-                // height: 10rem;
                 margin: auto;
 
                 .img {
-                    // background: green;
                     height: 7rem;
                     display: flex;
                     justify-content: center;
@@ -43,10 +29,9 @@
                 }
 
                 .text {
-                    // background: pink;
                     height: 4.4rem;
                     font-family: 'SpoqaHanSansNeoMedium';
-                    font-size: 2.25rem;
+                    font-size: 2.5rem;
                     letter-spacing: -0.14rem;
                     display: flex;
                     justify-content: center;

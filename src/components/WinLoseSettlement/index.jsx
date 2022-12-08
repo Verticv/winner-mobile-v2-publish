@@ -170,43 +170,28 @@ const WinLoseSettlementContent = ({ activeButton, setActiveButton }) => {
             <Header />
             <HomePageTopBanner pageTitle='윈루즈정산' />
             <DateSearchBar isLeagueSearch={false} withBlackButton />
-            {/* <ScrollButton /> */}
-            {/* <div style={{ width: '73.875rem', height: '7.3125rem', marginTop: '1.875rem', fontSize: '2.625rem', borderRadius: '3.5rem', borderWidth: '0.1875rem' }} className="flex w-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
-                <div className='w-1/2 flex items-center justify-center'>
-                    <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '1.3125rem' }} src={Diamond} alt="" />
-                    <div className="flex items-center space-x-4px pt-2px">
-                        <span className="text-white">진행중인 금액:</span>
-                        <span className="text-yellow-ffcc00 font-spoqaBold">2,520,000</span>
-                    </div>
-                </div>
-                <div className='w-1/2 flex items-center justify-center'>
-                    <img style={{ width: '1.3125rem', height: '1.3125rem', marginRight: '1.3125rem' }} src={Diamond} alt="" />
-                    <div className="flex items-center space-x-4px pt-2px">
-                        <span className="text-white">정산 총 금액:</span>
-                        <span className="text-yellow-ffcc00 font-spoqaBold">500,000</span>
-                    </div>
-                </div>
-            </div> */}
-            <div style={{ width: '73.875rem', height: '6.7rem', borderWidth: '0.1875rem', borderRadius: '3.1875rem', padding: '1.6rem 2.75rem', margin: '1.875rem 0', marginLeft: '1.875rem', display: 'flex', flexWrap: 'wrap', flexDirection: 'column', background: '#2e2e2e', border: '0.1875rem solid #635f5b', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex flex-wrap w-full border-2 border-gray-b4b4b4 bg-gray-r5a6067">
-                <div className='w-1/2 flex flex-wrap items-center justify-center' style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', marginLeft: '0.2rem', width: '50%' }}>
-                    <div style={{ fontSize: '2.624375rem', marginBottom: '1.55rem' }} className="w-full font-spoqaMedium tracking-tight">
-                        <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ width: '73.875rem', height: '6.7rem', borderWidth: '0.1875rem', borderRadius: '3.1875rem', padding: '1.6rem 2.75rem', margin: '1.875rem 0', marginLeft: '1.875rem', display: 'flex', flexWrap: 'wrap', flexDirection: 'column', background: '#2e2e2e', border: '0.1875rem solid #635f5b', fontFamily: 'SpoqaHanSansNeoMedium' }}>
+                <div style={{
+                    display: 'flex', alignItems: 'center', marginLeft: '0.2rem', width: '50%',
+                }}>
+                    <div style={{ fontSize: '2.4rem', marginBottom: '1.55rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.2rem' }} src={Diamond} alt="" />
-                            <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">진행중인 금액 :</span>
-                                <span className="text-yellow-ffcc00" style={{ color: '#ffd200' }}>2,520,000</span>
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <span style={{
+                                    marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.15rem'
+                                }}>진행중인 금액 : <span style={{ color: '#ffd200' }}>2,520,000</span></span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className='w-1/2 flex flex-wrap items-center justify-center' style={{ width: '50%', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-                    <div style={{ fontSize: '2.624375rem', marginBottom: '1.55rem' }} className="w-full font-spoqaMedium tracking-tight">
-                        <div className='flex items-center' style={{ display: 'flex', alignItems: 'center' }}>
+                <div style={{ width: '50%', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
+                    <div style={{ fontSize: '2.4rem', marginBottom: '1.55rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
                             <img style={{ width: '1.2rem', height: '1.2rem', marginRight: '1.3125rem' }} src={Diamond} alt="" />
-                            <div className="flex items-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.07rem' }} className="text-white">정산 총 금액 :</span>
-                                <span className="text-yellow-ffcc00" style={{ color: '#ffd200' }}>500,000</span>
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <span style={{ marginRight: '0.625rem', color: '#ffffff', letterSpacing: '-0.15rem' }}>정산 총 금액 : <span style={{ color: '#ffd200' }}>500,000</span></span>
                             </div>
                         </div>
                     </div>
@@ -240,7 +225,7 @@ const WinLoseSettlementContent = ({ activeButton, setActiveButton }) => {
                 <Pagination page={page} setPage={setPage} />
             </div>
             <NavBottom />
-        </div>
+        </div >
     )
 }
 

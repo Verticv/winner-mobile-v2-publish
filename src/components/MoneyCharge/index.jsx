@@ -3,7 +3,6 @@ import Step1 from '../../assets/mainPage/icons/step-1.png'
 import Step2 from '../../assets/mainPage/icons/step-2.png'
 import Step3 from '../../assets/mainPage/icons/step-3.png'
 import BankTable from '../BankTable'
-// import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import WarningMessage from '../WarningMessage'
 import info from '../../assets/mainPage/icons/info.png';
 import AlertIcon from '../../assets/mainPage/icons/warning.png'
@@ -25,7 +24,6 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
         })
     }, [setSubActiveButton, subActiveButton, navigate]);
 
-    // const [page, setPage] = useState(0)
     const [inputValue, setInputValue] = useState(null)
     const [inputClicked, setInputClicked] = useState(false)
     const [radioValue, setRadioValue] = useState("1")
@@ -34,7 +32,6 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
     const Title = ({ text }) => (
         <div style={{ width: "21rem", marginRight: '1.7rem', background: '#272726', flexShrink: '0', borderRadius: '0.5rem' }} className="form-Title">
             <div style={{ fontSize: '2.8125rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '1.6rem 0 0 1.1rem', letterSpacing: '-0.25rem' }} className="text-gray-r454545 font-spoqaMedium">{text}</div>
-            {/* <div style={{ height: '0.1875rem', marginTop: '1.1875rem' }} className="w-full bg-gray-bebebe"></div> */}
         </div>
     )
 
@@ -48,17 +45,16 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                 title='확인 / 필독사항'
                 message1='입금 시 반드시 회원님의 성함으로 입금 바랍니다.'
                 isFirstMessageDark
-                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 점검 시간을 피해 신청해 주시기 바랍니다.'
-                mr2='11rem'
-                message3='입금계좌는 수시로 변경되오니 &nbsp;반드시 계좌번호 문의 신청을 &nbsp; &nbsp; &nbsp; &nbsp;통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.'
-                mr3='4.875rem'
-                message4='&nbsp;자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
+                message2=' 입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후'
+                message2_1=' 점검 시간을 피해 신청해 주시기 바랍니다.'
+                message3='입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을'
+                message3_1='통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.'
+                message4=' 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
             />
 
             <div style={{
                 padding: '0.1875rem', paddingBottom: '2.0625rem', marginTop: '1.975rem',
                 background: 'linear-gradient(to top, #1f1f1e, #3e3e3e 50%, #4a4a4a)',
-                // background: 'red',
                 borderRadius: '1.3rem', letterSpacing: '-0.07rem'
             }} className="w-full rounded-2xl shadow-subNavbar">
                 <div style={{ padding: '0.7375rem 0.89rem', background: '#323232', borderRadius: '1.3rem' }}>
@@ -70,7 +66,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                             입금 계좌 정보 확인
                         </div>
                         <div
-                            style={{ fontSize: '2.625rem', marginRight: '2.875rem', color: '#c8c8c8', marginTop: '0.8rem', lineHeight: '1.42', marginLeft: '-0.2rem' }}
+                            style={{ fontSize: '2.625rem', color: '#c8c8c8', marginTop: '0.8rem', lineHeight: '1.42', marginLeft: '-0.2rem' }}
                             className="font-spoqa tracking-tight text-gray-r7c7c7c flex items-center"
                         >
                             입금 계좌번호는 쪽지로 발송되며, 발송한 계좌번호로 선입금
@@ -117,7 +113,6 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                             </div>
                         </div>
                     </div>
-                    {/* </div> */}
 
                     <div style={{
                         marginTop: '1.8rem',
@@ -171,7 +166,6 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                         <div className="f-div">
                             <div className='div-range-border'>
                                 <button
-                                    // style={{  }}
                                     className="hover"
                                     onClick={() => setInputValue(inputValue + 10000)}
                                 >
@@ -183,14 +177,9 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                             <div className='div-range-border'>
                                 <button
                                     className="hover"
-                                    // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 30000)}
                                 >
-                                    <div
-                                        className="s-div"
-                                    //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
-                                    >
+                                    <div className="s-div" >
                                         <span className='shadow-to-text'>3만원</span>
                                     </div>
                                 </button>
@@ -198,8 +187,6 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                             <div className='div-range-border'>
                                 <button
                                     className="hover"
-                                    // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 50000)}
                                 >
                                     <div className="s-div">
@@ -212,10 +199,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                     className="hover"
                                     onClick={() => setInputValue(inputValue + 100000)}
                                 >
-                                    <div
-                                        className="s-div"
-                                    //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
-                                    >
+                                    <div className="s-div" >
                                         <span style={{ fontSize: '2.625rem' }} className='shadow-to-text'>10만원</span>
                                     </div>
                                 </button>
@@ -225,9 +209,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                         <div className="f-div">
                             <div className='div-range-border'>
                                 <button
-                                    // style={{  }}
                                     className="hover"
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 300000)}
                                 >
                                     <div className="s-div">
@@ -238,14 +220,9 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                             <div className='div-range-border'>
                                 <button
                                     className="hover"
-                                    // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 500000)}
                                 >
-                                    <div
-                                        className="s-div"
-                                    //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
-                                    >
+                                    <div className="s-div">
                                         <span className='shadow-to-text'>50만원</span>
                                     </div>
                                 </button>
@@ -253,8 +230,6 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                             <div className='div-range-border'>
                                 <button
                                     className="hover"
-                                    // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 1000000)}
                                 >
                                     <div className="s-div">
@@ -268,57 +243,12 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                     style={{ background: 'linear-gradient(to top, #80603f, #956f4a 50%, #a57b52)' }}
                                     onClick={() => setInputValue(0)}
                                 >
-                                    <div
-                                        className="s-div"
-                                    //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
-                                    >
+                                    <div className="s-div" >
                                         <span style={{ paddingRight: '0' }} className='shadow-to-text'>정정</span>
                                     </div>
                                 </button>
                             </div>
                         </div>
-                        {/* <div className="f-div">
-                        <button
-                            style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                            className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
-                            onClick={() => setInputValue(inputValue + 300000)}
-                        >
-                            <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
-                                <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">30만원</span>
-                            </div>
-                        </button>
-
-                        <button
-                            style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                            className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
-                            onClick={() => setInputValue(inputValue + 500000)}
-                        >
-                            <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                                <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">50만원</span>
-                            </div>
-                        </button>
-
-                        <button
-                            style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                            className="flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75"
-                            onClick={() => setInputValue(inputValue + 1000000)}
-                        >
-                            <div className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
-                                <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">100만원</span>
-                            </div>
-                        </button>
-
-                        <button
-                            style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                            className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
-                            onClick={() => setInputValue(0)}
-                        >
-                            <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">정정</span>
-                            </div>
-                        </button>
-                    </div> */}
-
                     </div>
 
                     <div style={{ padding: '0 1rem', display: 'flex', flexDirection: 'column' }} className="flex flex-col">
@@ -333,55 +263,12 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                         </div>
                         <div style={{ marginTop: '2.45rem' }} className="form-section">
                             <Title text="보너스 혜택" />
-                            {/* <h1>hello</h1> */}
-                            {/* <div style={{ marginLeft: '1.875rem' }} className="flex w-full h-full">
-                            <button
-                                style={{ height: '7.3125rem', padding: '1px', marginRight: '0.9375rem' }}
-                                className="flex w-1/2 items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
-                                onClick={() => setRadioValue("yes")}
-                            >
-                                <div className="flex items-center h-full w-full rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
-                                    <div className='flex justify-end' style={{ paddingLeft: '1.6875rem' }}>
-                                        <label className="form-control mt-1.5">
-                                            <input
-                                                className='w-12 h-12'
-                                                type="checkbox"
-                                                checked={radioValue === "yes"}
-                                                name="gender"
-                                            />
-                                        </label>
-                                    </div>
-                                    <span style={{ fontSize: '2.625rem' }} className="mt-1.5 font-spoqaMedium tracking-tight text-white w-full text-center">받기</span>
-                                </div>
-                            </button>
-                            <button
-                                style={{ height: '7.3125rem', padding: '1px' }}
-                                className="flex w-1/2 items-center justify-center rounded-lg bg-red-cb4343 hover:opacity-75"
-                                onClick={() => setRadioValue("no")}
-                            >
-                                <div className="flex items-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
-                                    <div className='flex justify-end' style={{ paddingLeft: '1.6875rem' }}>
-                                        <label className="mt-1.5">
-                                            <input
-                                                className='w-12 h-12'
-                                                type="checkbox"
-                                                checked={radioValue === "no"}
-                                                name="gender"
-                                            />
-                                        </label>
-                                    </div>
-                                    <span style={{ fontSize: '2.625rem' }} className="mt-1.5 font-spoqaMedium tracking-tight text-white w-full text-center">받지않기</span>
-                                </div>
-                            </button>
-                        </div> */}
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', marginTop: '2.2rem', marginBottom: '1.9rem' }}>
                             <div style={{ width: '3.6rem', marginTop: '-3rem' }}>
-                                <img src={info} alt="" style={{
-                                    width: '2.8125rem'
-                                }} />
+                                <img src={info} alt="" style={{ width: '2.8125rem' }} />
                             </div>
-                            <p style={{ margin: '0', color: '#828282', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.1rem' }}>첫 충전 보너스 머니를 받으실 경우 아래 버튼을  <span style={{ color: '#4c98ff' }}>선택</span>해 주세요.
+                            <p style={{ margin: '0', color: '#828282', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeo', letterSpacing: '-0.125rem' }}>첫 충전 보너스 머니를 받으실 경우 아래 버튼을 <span style={{ color: '#4c98ff' }}>선택</span>해 주세요.
                                 <br />
                                 보너스를 받지 않을 경우 <span style={{ color: '#e65454' }}>받지않기 </span>버튼을 선택하세요.</p>
                         </div>
@@ -415,7 +302,6 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                 className='shadow-to-box'
                                 style={{
                                     height: '7.3125rem', width: '22.6rem', padding: '0.1875rem',
-                                    // marginRight: '0.9375rem',
                                     background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', borderRadius: '0.6rem',
                                     marginLeft: '0.9rem',
                                 }}
@@ -497,7 +383,6 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                 className='shadow-to-box'
                                 style={{
                                     height: '7.3125rem', width: '22.6rem', padding: '0.1875rem',
-                                    // marginRight: '0.9375rem',
                                     background: 'linear-gradient(to top, #4d0a25, #a34f63 50%, #e78694 )', borderRadius: '0.6rem',
                                     marginLeft: '0.9rem',
                                 }}
@@ -507,7 +392,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                     onClick={() => setRadioValue("5")}
                                     className="hover"
                                 >
-                                    <div style={{ display: 'flex',  alignItems: 'center', width: '100%', height: '100%' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', width: '100%', height: '100%' }}>
                                         <div style={{ paddingLeft: '1.7875rem', width: '8.8rem' }}>
                                             <label style={{ marginTop: '0.4rem', marginRight: '4.1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                                 <input
@@ -524,94 +409,6 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
 
                             </div>
                         </div>
-                        {/* <div style={{ marginLeft: '1.875rem' }} className="flex w-full h-full">
-                        <button
-                            style={{ height: '7.3125rem', padding: '1px', marginRight: '0.9375rem' }}
-                            className="flex w-1/2 items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
-                            onClick={() => setRadioValue("yes")}
-                        >
-                            <div className="flex items-center h-full w-full rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
-                                <div className='flex justify-end' style={{ paddingLeft: '1.6875rem' }}>
-                                    <label className="form-control mt-1.5">
-                                        <input
-                                            className='w-12 h-12'
-                                            type="checkbox"
-                                            checked={radioValue === "yes"}
-                                            name="gender"
-                                        />
-                                    </label>
-                                </div>
-                                <span style={{ fontSize: '2.625rem' }} className="mt-1.5 font-spoqaMedium tracking-tight text-white w-full text-center">받기</span>
-                            </div>
-                        </button>
-                        <button
-                            style={{ height: '7.3125rem', padding: '1px' }}
-                            className="flex w-1/2 items-center justify-center rounded-lg bg-red-cb4343 hover:opacity-75"
-                            onClick={() => setRadioValue("no")}
-                        >
-                            <div className="flex items-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
-                                <div className='flex justify-end' style={{ paddingLeft: '1.6875rem' }}>
-                                    <label className="mt-1.5">
-                                        <input
-                                            className='w-12 h-12'
-                                            type="checkbox"
-                                            checked={radioValue === "no"}
-                                            name="gender"
-                                        />
-                                    </label>
-                                </div>
-                                <span style={{ fontSize: '2.625rem' }} className="mt-1.5 font-spoqaMedium tracking-tight text-white w-full text-center">받지않기</span>
-                            </div>
-                        </button>
-                    </div> */}
-                        {/* <div style={{ display: 'flex', marginTop: '1rem' }}>
-                        <div
-                            style={{ height: '7.3125rem', width: '22.6rem', padding: '0.1875rem', marginLeft: '0.8rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', borderRadius: '0.6rem' }}
-                        >
-                            <button
-                                style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
-                                onClick={() => setRadioValue("yes")}
-                            >
-                                <div style={{ display: 'flex', alignItems: 'baseline' }}>
-                                    <div style={{ paddingLeft: '1.7875rem', width: '6.5rem' }}>
-                                        <label style={{ marginTop: '0.4rem', marginRight: '4.1rem' }}>
-                                            <input
-                                                className='w-12 h-12'
-                                                type="checkbox"
-                                                checked={radioValue === "yes"}
-                                                name="gender"
-                                            />
-                                        </label>
-                                    </div>
-                                    <span style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>키론가상게임</span>
-                                </div>
-                            </button>
-
-                        </div>
-                        <div
-                            style={{ height: '7.3125rem', width: '22.6rem', padding: '0.1875rem', marginLeft: '0.8rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', borderRadius: '0.6rem' }}
-                        >
-                            <button
-                                style={{ width: '100%', height: '100%', borderRadius: '0.6rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', paddingTop: '0.8rem' }}
-                                onClick={() => setRadioValue("yes")}
-                            >
-                                <div style={{ display: 'flex', alignItems: 'baseline' }}>
-                                    <div style={{ paddingLeft: '1.7875rem', width: '6.5rem' }}>
-                                        <label style={{ marginTop: '0.4rem', marginRight: '4.1rem' }}>
-                                            <input
-                                                className='w-12 h-12'
-                                                type="checkbox"
-                                                checked={radioValue === "yes"}
-                                                name="gender"
-                                            />
-                                        </label>
-                                    </div>
-                                    <span style={{ fontSize: '2.625rem', color: '#d6f3ff', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', marginTop: '0.3rem' }}>키론가상게임</span>
-                                </div>
-                            </button>
-
-                        </div>
-                    </div> */}
                     </div>
 
 
@@ -649,14 +446,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                 </button>
             </div>
 
-            {/* <button style={{ width: "36.4375rem", height: '7.3125rem', padding: '1px', marginTop: '3.75rem', marginBottom: '5.8125rem' }} className="flex items-center justify-center h-52px rounded-2xl bg-blue-r0070d9 hover:opacity-75">
-                <div className="flex items-center justify-center rounded-2xl w-full h-full border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                    <span style={{ fontSize: '2.8125rem' }} className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
-                </div>
-            </button> */}
-
             <BankTable />
-            {/* <BottomNavbar /> */}
 
         </div >
     )

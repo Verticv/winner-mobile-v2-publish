@@ -58,10 +58,32 @@
             }
         }
 
+        .second-span2 {
+            color: rgb(204, 194, 182);
+            font-size: 2.625rem;
+            margin-right: 6.875rem;
+            line-height: 1.37;
+
+            span {
+                margin-right: 0.6rem;
+                margin-left: -0.1rem;
+            }
+        }
         .third-span {
             color: rgb(204, 194, 182);
             font-size: 2.625rem;
             margin-top: 1.3rem;
+            line-height: 1.3;
+
+            span {
+                margin-right: 0.6rem;
+                margin-left: 0.2rem;
+            }
+        }
+
+        .third-span2 {
+            color: rgb(204, 194, 182);
+            font-size: 2.625rem;
             line-height: 1.3;
 
             span {

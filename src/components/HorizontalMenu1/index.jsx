@@ -55,14 +55,8 @@ const HorizontalMenu1 = ({
                     id={`t${index}`}
                     key={item.id}
                     style={{
-                        // {isSameLink ? '' : ''}
                         background: !isMoneyPage ? `url(${isSameLink ? (item.activeBG ? item.activeBG : activeBG) : (item.inActiveBG ? item.inActiveBG : inactive)}) round` : `url(${isSameLink ? moneyActive : moneyInactive}) round`,
                         backgroundSize: 'cover',
-                        // borderRadius: "1.625rem",
-                        // width: '60%',
-                        // height: '13.18rem',
-                        // marginRight: items?.length - 1 === index ? '' : '1px',
-                        // padding: '1px'
                         marginRight: index === 0 ? '0.1rem' : ''
                     }}
                     className={`${isSameLink
@@ -83,44 +77,17 @@ const HorizontalMenu1 = ({
                     onPointerCancel={() => setHover(null)}
                 >
                     <div
-                        style={{
-                            // width: "100%",
-                            // borderRadius: "1.625rem",
-                            // paddingTop: '0.5rem',
-                        }}
                         className={`flex w-full justify-end h-full items-end bg-white ${isSameLink
                             ? "bg-blue-r58baf7"
                             : "bg-white"
                             }`}
                     >
-                        <div
-                            // style={{
-                            //     background: isSameLink
-                            //         ? "linear-gradient(to bottom, #2087f0, #1873cf)"
-                            //         : isHover === item.id ? "#d0e8ff"
-                            //             : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
-                            //     borderRadius: "1.625rem",
-                            //     borderTopLeftRadius: "1.625rem 1.3rem",
-                            //     borderTopRightRadius: "1.625rem 1.3rem",
-                            //     borderColor: isSameLink ? "#1a73ce" : "#d6dfe8",
-                            //     boxShadow: 'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset',
-                            // }}
-                            className='btn-content'
-                        >
+                        <div className='btn-content' >
                             <div className='img'>
                                 <Image icon={item.icon} activeIcon={item.activeIcon} width={item.width} marginLeft={item.marginLeft} isSameLink={isSameLink} />
                             </div>
-                            {/* <img style={{width: '6.9rem', marginLeft: '0.5625rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className="mt-5 object-contain select-none" src={item.icon} alt="" /> */}
                             <div className='text'>
-                                <span
-                                    // className='text'
-                                    // style={{ marginTop: withSmallMarginTop ? '0.25rem' : '' }}
-                                    // className={`${isSameLink
-                                    //     ? "text-white"
-                                    //     : "text-gray-r616161"
-                                    style={{ color: isSameLink ? '#252525' : '#ccc2b6' }}
-                                //     } text-4xl font-spoqaMedium tracking-tight select-none`}
-                                >{item.text}</span>
+                                <span style={{ color: isSameLink ? '#252525' : '#ccc2b6' }}>{item.text}</span>
                             </div>
                         </div>
                     </div>
