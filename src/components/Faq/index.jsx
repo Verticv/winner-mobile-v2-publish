@@ -17,12 +17,12 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
         { text: "호텔카지노", id: 4, width: '18.3125rem', path: "/cscenter/all/faq/e-sports1" },
         { text: "e-스포츠", id: 5, width: '15.3125rem', path: "/cscenter/all/faq/e-sports" },
         { text: "미니게임", id: 6, width: '15.3125rem', path: "/cscenter/all/faq/minigame" },
-        { text: "키론가상게임", width: '20.3125rem', id: 7, path: "/cscenter/all/faq/ar-game" },
-        { text: "피싱게임", width: '16.3125rem', id: 8, path: "/cscenter/all/faq/ar-game1" },
+        { text: "키론가상게임", width: '20.3125rem', id: 7, path: "/cscenter/all/faq/ar-game", additionLeftScroll: -90 },
+        { text: "피싱게임", width: '16.3125rem', id: 8, path: "/cscenter/all/faq/ar-game1", additionLeftScroll: -90 },
         { text: "티비벳", width: '16.3125rem', id: 9, path: "/cscenter/all/faq/ar-game2" },
         { text: "충전/환전", width: '16.3125rem', id: 10, path: "/cscenter/all/faq/transaction" },
         { text: "베팅관련", width: '15.3125rem', id: 11, path: "/cscenter/all/faq/about-betting" },
-        { text: "기타", width: '10.3125rem', id: 12, path: "/cscenter/all/faq/other" },
+        { text: "기타", width: '10.3125rem', id: 12, path: "/cscenter/all/faq/other", additionLeftScroll: -200 },
     ];
 
     const location = useLocation();
@@ -177,7 +177,7 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
 
                 <div id='scroll-wrapper12' style={{ paddingLeft: '1.875rem', overflowX: 'scroll', display: 'flex', marginTop: '1.08rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full" style={{ overflowX: 'scroll', display: 'flex', flexShrink: '0' }}>
-                        <HorizontalSubMenu itemsArray={tabsArray2} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                        <HorizontalSubMenu key={201} itemsArray={tabsArray2} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                     </div>
                 </div>
                 <div style={{ height: '98%', top: '2rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
