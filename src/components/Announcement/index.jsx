@@ -128,7 +128,6 @@ const Announcement = ({
     useEffect(() => {
         window.onpopstate = e => {
             setTimeout(() => {
-                navigate('/cscenter')
                 setSubActiveButton('/cscenter/all/announcement')
             }, 0)
         }
