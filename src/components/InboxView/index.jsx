@@ -41,7 +41,7 @@ const InboxView = () => {
                                 }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
-                                {truncate('안내', 6, 6)}
+                                {truncate('공지', 6, 6)}
                             </div>
                         </div>
                         <div style={{ marginBottom: '0.3rem', display: '', textAlign: 'center', justifyContent: 'center', width: '100%', fontSize: '2.999375rem', }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">

@@ -69,7 +69,7 @@ const InboxTable = ({
                             style={{ display: 'flex', alignItems: 'center', height: '5.4rem' }}
                         >
                             {
-                                item.type === "안내"
+                                item.type === "공지"
                                     ? <div style={{
                                         // marginTop: '-1.1rem',
                                         fontSize: '2.4375rem',
@@ -84,10 +84,11 @@ const InboxTable = ({
                                         maxWidth: '17.5rem',
                                         overflow: 'hidden',
                                         lineHeight: '3.3rem',
-                                        height:'4.2rem'
+                                        height:'4.2rem',
+                                        flexShrink:0
                                     }} className="w-max rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2"
 
-                                    ><span className='-mb-1'><span className='mt-1 block'>{truncate(item.category, 6, 6)}</span></span></div>
+                                    ><span>{truncate(item.category, 6, 6)}</span></div>
                                     : item.type === "이벤트"
                                         ? <div style={{
                                             // marginTop: '-1.1rem',
@@ -109,7 +110,7 @@ const InboxTable = ({
                                         : <div></div>
                             }
                             <p style={{
-                                textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: item.type === '이벤트' ? '31rem' : item.type === "안내" ? '29rem' : !item.isRead ? '44rem' : '47rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
+                                textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: item.type === '이벤트' ? '31rem' : item.type === "공지" ? '39rem' : !item.isRead ? '44rem' : '47rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
                                 color: item.isRead !== true ? '#eeeeee' : '#a0a0a0', marginTop: '0.5rem',
                             }} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap">{item.text}</p>
                             {item.isRead === false && (

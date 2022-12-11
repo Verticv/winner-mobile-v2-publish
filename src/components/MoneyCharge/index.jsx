@@ -429,22 +429,24 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                     </div>
                 </div>
             </div>
-            <div className='shadow-to-box' style={{ width: "36.4375rem", height: '7.3125rem', marginLeft: '18.7rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '1.6rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', marginTop: '1.8rem' }}>
-                <button
-                    style={{ width: "100%", height: '100%', marginBottom: '1.5625rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', borderRadius: '1rem' }}
-                    className="hover"
-                >
-                    <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
-                        <span style={{ fontSize: '2.8125rem', color: '#d6f3ff', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }} className='shadow-to-text'>신청하기</span>
-                    </div>
-                </button>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', marginBottom: '1.6rem', height: '7.3125rem', marginTop: '1.8rem' }}>
+                <div className='shadow-to-box' style={{ width: "36.4375rem", height: '7.3125rem', borderRadius: '1rem', padding: '0.1875rem', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )' }}>
+                    <button
+                        style={{ width: "100%", height: '100%', marginBottom: '1.5625rem', background: 'linear-gradient(to top, #3a6186, #4676a8 50%, #518aca)', borderRadius: '1rem' }}
+                        className="hover"
+                    >
+                        <div style={{ borderColor: "#ff8f63" }} className="w-full h-full flex items-center justify-center rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-orange-ff7a45 via-orange-f56032 to-orange-e9441d cursor-pointer">
+                            <span style={{ fontSize: '2.8125rem', color: '#d6f3ff', display: 'inline-block', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }} className='shadow-to-text'>신청하기</span>
+                        </div>
+                    </button>
+                </div>
             </div>
-
-            <div style={{ margin: '4.75rem 0 0 12.3rem' }}>
+            <div style={{ marginTop: '4.75rem', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                 <button style={{ background: '#272726', width: '52rem', height: '6.5rem', borderRadius: '3.3rem', paddingTop: '0.15rem' }} className="">
                     <span className='' style={{ color: '#ad9e8c', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>은행점검시간</span>
                 </button>
             </div>
+
 
             <BankTable />
 

@@ -24,8 +24,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "서버 점검 안내",
             isRead: false,
             time: "2021.06.28 15:36",
-            type: "안내",
-            category: "안내",
+            type: "공지",
+            category: "공지",
             isClicked: true,
             path: '/mypage/inbox/1'
         },
@@ -50,8 +50,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "미니게임 파워볼 동행복권 시스템 정기 점검",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
-            category: "안내",
+            type: "공지",
+            category: "공지",
             path: '/mypage/inbox/4'
         },
         {
@@ -75,8 +75,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: false,
             time: "2021.06.28 15:36",
-            type: "안내",
-            category: "안내",
+            type: "공지",
+            category: "공지",
             path: '/mypage/inbox/7'
         },
         {
@@ -84,8 +84,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
-            category: "안내",
+            type: "공지",
+            category: "공지",
             path: '/mypage/inbox/8'
         },
         {
@@ -93,8 +93,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
-            category: "안내",
+            type: "공지",
+            category: "공지",
             path: '/mypage/inbox/9'
         },
         {
@@ -102,8 +102,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: false,
             time: "2021.06.28 15:36",
-            type: "안내",
-            category: "안내",
+            type: "공지",
+            category: "공지",
             path: '/mypage/inbox/10'
         },
         {
@@ -111,8 +111,8 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             text: "입금계좌변경안내",
             isRead: true,
             time: "2021.06.28 15:36",
-            type: "안내",
-            category: "안내",
+            type: "공지",
+            category: "공지",
             path: '/mypage/inbox/11'
         },
     ];
@@ -152,7 +152,6 @@ const Inbox = ({ activeButton, setActiveButton }) => {
 
 
             <HomePageTopBanner pageTitle='쪽지관리' />
-            {/* <MyPageTitle title="쪽지관리" inboxCount="7"/> */}
             <div style={{ margin: '1.875rem', marginBottom: '1.4rem', marginTop: '0rem', background: '', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#c8c8c8' }} className='mt-4 flex justify-between'>
                 <CouponTitle text='전체 받은 쪽지' number='7' endText='건' />
                 <div className='flex' style={{ display: 'flex', marginRight: '-0.6rem' }}>
@@ -163,53 +162,9 @@ const Inbox = ({ activeButton, setActiveButton }) => {
             <div style={{ borderRadius: "1em", margin: '1.875rem', marginTop: '0' }} className="shadow-subNavbar overflow-hidden">
                 <div className="flex flex-col w-full">
                     <InboxTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray} />
-                    {/* <ContactTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray} /> */}
                 </div>
             </div>
 
-
-            {/* <div style={{ margin: '3.75rem 1.875rem' }} className="flex items-center justify-between">
-                <div className="flex w-full">
-                    <button
-                        style={{ padding: '1px', height: '7.3125rem' }}
-                        className="flex flex-1 items-center justify-center mr-4 rounded-2xl bg-gray-r171a1d hover:opacity-75"
-                        onClick={() => AllSelectButtonPressed()}
-                    >
-                        <div
-                            style={{
-                                background: "linear-gradient(to bottom, #555555, #333333)",
-                            }}
-                            className="flex items-center justify-center h-full w-full rounded-2xl border border-gray-r737579 cursor-pointer"
-                        >
-                            <span style={{ fontSize: '2.8125rem' }} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">{isAllSelected ? "선택해제" : "전체선택"}</span>
-                        </div>
-                    </button>
-                    <button
-                        style={{ padding: '1px', height: '7.3125rem' }}
-                        className="flex flex-1 items-center justify-center mr-4 rounded-2xl bg-red-cb4343 hover:opacity-75"
-                    >
-                        <div
-                            style={{
-                                background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-                            }}
-                            className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 cursor-pointer"
-                        >
-                            <span style={{ fontSize: '2.8125rem' }} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">선택삭제</span>
-                        </div>
-                    </button>
-                    <button
-                        style={{ padding: '1px', height: '7.3125rem' }}
-                        className="flex flex-1 items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
-                    // onClick={() => AllSelectButtonPressed()}
-                    >
-                        <div
-                            className="flex items-center justify-center h-full w-full rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db"
-                        >
-                            <span style={{ fontSize: '2.8125rem' }} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">전체읽음처리</span>
-                        </div>
-                    </button>
-                </div>
-            </div> */}
 
             <div style={{ margin: '3.7rem 1.9rem 2.5rem' }} className="flex items-center justify-between flex-shrink-0">
                 <div className="flex w-full" style={{ display: 'flex' }}>

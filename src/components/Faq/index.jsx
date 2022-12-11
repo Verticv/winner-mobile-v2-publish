@@ -168,16 +168,12 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
 
     return (
         <div>
-            <div style={{ margin: '1rem 1.85rem' }}>
-
-
-            </div>
             <div className="w-full flex relative top-0" style={{ position: 'relative' }}>
                 <div style={{ background: "linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem' }} className="absolute h-full right-0 z-50"></div>
 
                 <div id='scroll-wrapper12' style={{ paddingLeft: '1.875rem', overflowX: 'scroll', display: 'flex', marginTop: '1.08rem' }} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full" style={{ overflowX: 'scroll', display: 'flex', flexShrink: '0' }}>
-                        <HorizontalSubMenu key={201} itemsArray={tabsArray2} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                        <HorizontalSubMenu key={40} itemsArray={tabsArray2} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                     </div>
                 </div>
                 <div style={{ height: '98%', top: '2rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
