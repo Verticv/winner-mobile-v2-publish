@@ -72,12 +72,7 @@ const Search = () => {
 
 
     return (
-        <div style={{
-            // margin: '0 1.875rem',
-            // marginBottom: '19.625rem'
-        }}
-            className='search-container'
-        >
+        <div className='search-container'>
             {InboxSearch}
         </div>
     )

@@ -431,9 +431,7 @@ const MinigamesRightPanel = ({
                 </div>
             </div>
 
-            <div
-                className="rightpanel-container"
-            >
+            <div className="rightpanel-container" >
 
                 <div
                     style={{
@@ -515,7 +513,7 @@ const MinigamesRightPanel = ({
                                             style={{
                                                 paddingTop: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "0.2rem" : "",
                                                 // width: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "10.375rem" : ""
-                                                width: '11.375rem'
+                                                width: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? '10.375rem' : '11.375rem'
                                             }}
                                             className={`${(selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "rightpanel-content12" : ""
                                                 } rightpanel-content13`}
@@ -638,13 +636,13 @@ const MinigamesRightPanel = ({
 
                     <div style={{ marginBottom: '0.6rem' }} className="betfixedamount-btn">
                         <div style={{ marginRight: '0.6rem', width: '24.375rem', height: '7.5rem' }} className="betfixedamount-btn1">
-                            <BetFixedAmountButton amount={inputValue / 2} text="하프" />
+                            <BetFixedAmountButton amount={22170} text="잔돈" />
                         </div>
                         <div style={{ marginRight: '0.6rem', width: '24.375rem', height: '7.5rem' }} className="betfixedamount-btn1">
-                            <BetFixedAmountButton amount={3522170} text="최대" />
+                            <BetFixedAmountButton amount={0} text="초기화" />
                         </div>
                         <div className="betfixedamount-btn1" style={{ width: '24.375rem', height: '7.5rem' }}>
-                            <BetFixedAmountButton amount={0} text="정정" />
+                            <BetFixedAmountButton amount={3522170} text="최대" />
                         </div>
                     </div>
 
@@ -668,12 +666,6 @@ const MinigamesRightPanel = ({
                             </div>
                         </button>
                     </div>
-
-
-
-
-
-
                 </div>
 
 
@@ -737,35 +729,7 @@ const MinigamesRightPanel = ({
                             }
                         />
                     </Routes>
-                    {/* <Route path="/minigame/powerball">
-                <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                    <RoundResultPopup setPopupOpen={setPopupOpen} />
-                </PopupControls> 
-            </Route>
-
-            <Route path="/minigame/powerladder">    
-                <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                    <PowerLadderRoundResultPopup setPopupOpen={setPopupOpen} />
-                </PopupControls> 
-            </Route>
-
-            <Route path="/minigame/speedkino">
-                <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                    <SpeedKinoRoundResultPopup setPopupOpen={setPopupOpen} />
-                </PopupControls> 
-            </Route>
-                            
-            <Route path="/minigame/kinoladder">
-                <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                    <PowerLadderRoundResultPopup setPopupOpen={setPopupOpen} />
-                </PopupControls> 
-            </Route>
-         */}
-
                 </div>
-                {/* <div onPointerUp={handleRedirect}>
-                <GrayButton text='전체베팅내역' />
-            </div> */}
 
                 <Link to={redirectPath} style={{ textDecoration: 'none', zIndex: '200' }}>
                     <GrayButton text='전체베팅내역' />

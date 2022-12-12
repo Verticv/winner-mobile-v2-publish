@@ -150,13 +150,13 @@ const Announcement = ({
                 <div style={{ height: '88%' }} className="nav-shadow absolute h-full left-0 z-50"></div>
             </div>
 
-            <div style={{ borderRadius: "1em", margin: '1.875rem', marginTop: '0' }} className="shadow-subNavbar overflow-hidden">
-                <div className="flex flex-col w-full announcementTable-container">
+            <div style={{ borderRadius: "1em", margin: '1.875rem', marginBottom: '', marginTop: '0' }} className="shadow-subNavbar overflow-hidden">
+                <div className="announcementTable-container">
                     <AnnouncementTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray} />
                 </div>
             </div>
 
-            <div style={{ margin: '3.75rem 0' }} className="flex w-full justify-center">
+            <div style={{ marginBottom: '3.75rem' }}>
                 <Pagination withMarginBottom={false} page={page} setPage={setPage} />
             </div>
 

@@ -284,7 +284,7 @@ const FreeBoardView = () => {
                     </div>
 
                     <div style={{ padding: '0 1.5rem', marginTop: '2.3rem', marginBottom: '1.35rem' }}>
-                        <SendMessage placeholder='욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다.' buttonText='등록' />
+                        <SendMessage placeholder='두개의 이벤트 모두 참여하였습니다.' buttonText='등록' />
                     </div>
                 </div>
             </div>

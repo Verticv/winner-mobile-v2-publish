@@ -17,11 +17,11 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import Pagination from '../Pagination'
 
 const subTabsArray = [
-    { text: "전체", path: "/mypage/bet-history/all/minigame", icon: Icon1, id: 0, width: '19.375rem', marginIcon: '', },
-    { text: "파워볼", path: "/mypage/bet-history/all/minigame/powerball", icon: Icon3, id: 1, width: '8.5625rem' },
-    { text: "파워사다리", path: "/mypage/bet-history/all/minigame/powerladder", icon: Icon4, id: 2, width: '8.5625rem' },
-    { text: "스피드키노", path: "/mypage/bet-history/all/minigame/speedkino", icon: Icon5, id: 3, custom: "mt-8px", width: '8.5625rem' },
-    { text: "키노사다리", path: "/mypage/bet-history/all/minigame/kinoladder", icon: Icon6, id: 4, width: '8.5625rem' },
+    { text: "전체", path: "/mypage/bet-history/all/minigame", icon: Icon1, id: 0, width: '16.375rem', marginIcon: '', },
+    { text: "파워볼", path: "/mypage/bet-history/all/minigame/powerball", icon: Icon3, id: 1, width: '7.2rem' },
+    { text: "파워사다리", path: "/mypage/bet-history/all/minigame/powerladder", icon: Icon4, id: 2, width: '7.2rem' },
+    { text: "스피드키노", path: "/mypage/bet-history/all/minigame/speedkino", icon: Icon5, id: 3, custom: "mt-8px", width: '7.2rem' },
+    { text: "키노사다리", path: "/mypage/bet-history/all/minigame/kinoladder", icon: Icon6, id: 4, width: '7.2rem' },
 ];
 
 // 베팅번호 => number

@@ -175,7 +175,7 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
                 </button>
             </div>
 
-            <div style={{ marginBottom: '3.75rem' }} className="flex w-full justify-center mt-4px">
+            <div style={{ marginBottom: '3.75rem' }}>
                 <Pagination page={page} setPage={setPage} withMarginBottom={false} />
             </div>
 

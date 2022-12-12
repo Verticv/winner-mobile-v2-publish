@@ -20,18 +20,18 @@ import './_argame.scss'
 import { useNavigate } from 'react-router-dom';
 
 const subTabsArray = [
-    { text: "전체", icon: Icon1, id: 0, width: '19.375rem', marginIcon: '', path: '#' },
-    { text: "축구", icon: Icon2, id: 1, width: '19.375rem', path: '#' },
-    { text: "경마", icon: Icon3, id: 2, width: '19.375rem', path: '#' },
-    { text: "개경주", icon: Icon4, id: 3, custom: "mt-8px", width: '19.375rem', path: '#' },
-    { text: "레이싱", icon: Icon5, id: 4, width: '19.375rem', path: '#' },
-    { text: "탁구", icon: Icon6, id: 5, width: '19.375rem', path: '#' },
-    { text: "배드민턴", icon: Icon7, id: 6, width: '19.375rem', path: '#' },
-    { text: "양궁", icon: Icon8, id: 8, width: '19.375rem', path: '#' },
-    { text: "마구", icon: Icon9, id: 9, width: '19.375rem', path: '#' },
-    { text: "레이싱룰렛", icon: Icon10, id: 10, width: '19.375rem', path: '#' },
-    { text: "농구", icon: Icon11, id: 11, width: '19.375rem', path: '#' },
-    { text: "아이스하키", icon: Icon12, id: 12, width: '19.375rem', path: '#' },
+    { text: "전체", icon: Icon1, id: 0, width: '16.375rem', marginIcon: '', path: '#' },
+    { text: "축구", icon: Icon2, id: 1, width: '16.375rem', path: '#' },
+    { text: "경마", icon: Icon3, id: 2, width: '16.375rem', path: '#' },
+    { text: "개경주", icon: Icon4, id: 3, custom: "mt-8px", width: '16.375rem', path: '#' },
+    { text: "레이싱", icon: Icon5, id: 4, width: '16.375rem', path: '#' },
+    { text: "탁구", icon: Icon6, id: 5, width: '16.375rem', path: '#' },
+    { text: "배드민턴", icon: Icon7, id: 6, width: '16.375rem', path: '#' },
+    { text: "양궁", icon: Icon8, id: 8, width: '16.375rem', path: '#' },
+    { text: "마구", icon: Icon9, id: 9, width: '16.375rem', path: '#' },
+    { text: "레이싱룰렛", icon: Icon10, id: 10, width: '16.375rem', path: '#' },
+    { text: "농구", icon: Icon11, id: 11, width: '16.375rem', path: '#' },
+    { text: "아이스하키", icon: Icon12, id: 12, width: '16.375rem', path: '#' },
 ];
 
 // 베팅번호 => number
