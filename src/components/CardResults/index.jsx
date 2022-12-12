@@ -281,7 +281,7 @@ const CardResults = ({
                 >
                     {
                         result === "cancel"
-                            ? <p style={{ color: result === "cancel" ? '#4c98ff' : '', marginLeft: '0.45rem' }}>취소</p>
+                            ? <p style={{ color: result === "cancel" ? '#4c98ff' : '', marginLeft: '0.45rem',letterSpacing:'-0.06rem' }}>취소</p>
                             : (result === "win" || result === "lose" || result === "equality")
                                 ? (
                                     <>
@@ -318,7 +318,7 @@ const CardResults = ({
                 >
                     {
                         result === "cancel"
-                            ? <p style={{ color: result === "cancel" ? '#4c98ff' : '', marginLeft: '0.45rem' }}>취소</p>
+                            ? <p style={{ color: result === "cancel" ? '#4c98ff' : '', marginLeft: '0.45rem',letterSpacing:'-0.06rem' }}>취소</p>
                             : (result === "win" || result === "lose" || result === "equality")
                                 ? (
                                     <p

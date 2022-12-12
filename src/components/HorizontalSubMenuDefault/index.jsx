@@ -79,8 +79,11 @@ const HorizontalSubMenu = ({
     }
 
     return (
-        <div id="container" className="HorizontalMenu">
+        <div id="container" className="HorizontalMenu" >
+            <div style={{ width: '0.6rem', height: '10rem', flexShrink: 0 }}></div>
             <TabsList items={itemsArray} />
+            <div style={{ width: '1rem', height: '10rem', flexShrink: 0 }}></div>
+
         </div>
     )
 }

@@ -137,7 +137,7 @@ const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = fal
         }
         return (() => {
             if (subActiveButton)
-            setSubActiveButton('/mypage/bet-history/all/ar-game')
+                setSubActiveButton('/mypage/bet-history/all/ar-game')
         })
     }, [setSubActiveButton, subActiveButton, navigate]);
 
@@ -175,8 +175,9 @@ const ARGameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = fal
                     isPopup={isPopup}
                 />
             </div>
-
-            <SelectAllButton buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+            <div style={{ margin: '0 1.9rem', marginBottom: '3rem' }}>
+                <SelectAllButton buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+            </div>
         </div>
     )
 }

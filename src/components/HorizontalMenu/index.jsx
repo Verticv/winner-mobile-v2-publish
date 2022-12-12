@@ -83,6 +83,7 @@ const HorizontalMenu = ({
     return (
         <div id="container" className="HorizontalMenu flex justify-start items-start">
             <TabsList items={itemsArray} />
+            <div style={{ width: '1.6rem', height: '10rem', flexShrink: 0 }}></div>
         </div>
     )
 }

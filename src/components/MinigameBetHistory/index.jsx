@@ -513,10 +513,8 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
             {showSub === true && (
                 <>
                     <div className="w-full flex relative top-0" style={{ width: '100%', display: 'flex', position: 'relative', top: '0' }}>
-                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingRight: '0', paddingTop: '0', overflowX: 'scroll' }} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                            <div className=" flex flex-shrink-0 w-full">
-                                <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
-                            </div>
+                        <div id='scroll-wrapper1' style={{ padding: '1.875rem', paddingTop: '0', overflowX: 'scroll', flexDirection: 'row' }}>
+                            <HorizontalSubMenu key={6} itemsArray={subTabsArray} setSelectedTab={setSelectedTab} selectedTab={selectedTab} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} popup />
                         </div>
                         <div style={{ height: '12.1rem' }} className="nav-shadow absolute h-full left-0 z-50"></div>
                     </div>
@@ -577,80 +575,12 @@ const MinigameBetHistory = ({ isState = 0, setState, showSub = true, isPopup = f
                 </Route>
 
             </Routes>
-            <SelectAllButton buttonsNumber={3} count={20} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+            <div style={{ margin: '0 1.9rem', marginBottom: '3rem' }}>
+                <SelectAllButton buttonsNumber={3} count={20} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+            </div>
             <Pagination page={page} setPage={setPage} />
 
-            {/* <Routes>
-                <Route index
-                    element={
-                       
-                    }
-                />
-            </Routes> */}
 
-
-            {/* <DateSearchBar isLeagueSearch={false} isPoints/> */}
-
-            {/* <ScrollButton /> */}
-
-            <div className="h-full">
-                {/* <Routes>
-                    <Route path='/powerball'
-                        element={
-                            <>jjjjjjjjj</>
-                        }
-                    />
-                </Routes> */}
-                {/* <Routes>
-                    <Route index element={<>
-                        <HistoryTable
-                            containerBackground='#f7f9fc'
-                            tableData={tableData}
-                            checkedState={checkedState}
-                            setCheckedState={setCheckedState}
-                            isPopupOpen={isPopupOpen}
-                            setPopupOpen={setPopupOpen}
-                            cardHeight='42.15rem'
-                            isPopup={isPopup}
-                        />
-                    </>} />
-                </Routes> */}
-                {/* <Route exact path="/mypage/bet-history/all/minigame">
-                    <HistoryTable
-                        containerBackground='#f7f9fc'
-                        tableData={tableData}
-                        checkedState={checkedState}
-                        setCheckedState={setCheckedState}
-                        isPopupOpen={isPopupOpen}
-                        setPopupOpen={setPopupOpen}
-                        cardHeight='42.15rem'
-                        isPopup={isPopup}
-                    />
-                </Route> */}
-                {/* <Route path="/mypage/bet-history/all/minigame/powerball">
-                    <HistoryTable
-                        containerBackground='#f7f9fc'
-                        tableData={tableData1}
-                        checkedState={checkedState}
-                        setCheckedState={setCheckedState}
-                        isPopupOpen={isPopupOpen}
-                        setPopupOpen={setPopupOpen}
-                        cardHeight='37.75rem'
-                        isPopup={isPopup}
-                    />
-                </Route>
-                <Route path="/mypage/bet-history/all/minigame/powerladder">
-                    <PowerLadderBetHistoryPanel isPopup={isPopup} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} />
-                </Route>
-                <Route path="/mypage/bet-history/all/minigame/speedkino">
-                    <KinoLadderBetHistoryPanel isPopup={isPopup} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} isMinigame={true} gameType="speedkino" />
-                </Route>
-                <Route path="/mypage/bet-history/all/minigame/kinoladder">
-                    <KinoLadderBetHistoryPanel isPopup={isPopup} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} isMinigame={true} gameType="kinoladder" />
-                </Route> */}
-            </div>
-
-            {/* <SelectAllButton buttonsNumber={3} count={20} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} /> */}
         </div>
     )
 }

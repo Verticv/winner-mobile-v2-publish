@@ -29,8 +29,8 @@ const SportsBetHistoryPanel = ({
                                     stat2="2.96"
                                     stat3="3.40"
                                     isAttached={false}
-                                    hasUp={true}
-                                    hasDown={true}
+                                    hasUp={false}
+                                    hasDown={false}
                                 />
                             </div>
                             <CardContent checkedState={checkedState} number="0" setCheckedState={setCheckedState} />

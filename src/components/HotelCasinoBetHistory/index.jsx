@@ -272,7 +272,7 @@ const LiveCasinoBetHistory = ({ isState = 0, setState, showSub = true, isPopup =
                 />
             </div>
 
-            <div style={{ margin: '0 1.9rem' }}>
+            <div style={{ margin: '0 1.9rem', marginBottom: '3rem' }}>
                 <SelectAllButton buttonsNumber={3} count={20} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
         </div>

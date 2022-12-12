@@ -78,7 +78,7 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
                             <Title text="현재 보유머니" />
                             <div className="lable-or-input">
                                 <div style={{ fontSize: '2.625rem' }} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
-                                    <span className="font-robotoBold text-red-e9441d" style={{ color: '#e9441d', fontFamily: 'RobotoBold' }}>487,240</span>
+                                    <span className="font-robotoBold text-red-e9441d" style={{ color: '#e9441d', fontFamily: 'RobotoBold' }}>478,000</span>
                                 </div>
                                 <div style={{ height: '0.1875rem', marginTop: '0.9375rem' }} className="w-full bg-gray-bebebe"></div>
                             </div>
