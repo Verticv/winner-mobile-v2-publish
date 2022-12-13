@@ -17,13 +17,13 @@ const SportsMatchResultPanel = ({
                         <div style={{ border: '0.45rem solid #473b35', borderRadius: '0.4rem', marginBottom: '2rem' }} className='shadow-to-box'>
                             <CardHeader flag='us' name='MLS' date='2021-06-29 15:45' />
                             <CardResults
-                                bet="right"
+                                bet="middle"
                                 result="equality"
                                 score="4:4"
                                 team1="CF파추카"
                                 team2="과달하라 차바하아"
                                 stat1="2.26"
-                                stat2="VS"
+                                stat2="2.96"
                                 stat3="3.47"
                                 isAttached={false}
                                 hasUp={false}

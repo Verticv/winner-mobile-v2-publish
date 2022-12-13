@@ -81,8 +81,8 @@ const ContactTable = ({
                                     <p style={{ marginTop: '0.45rem', letterSpacing: '-0.05rem' }}>{truncate(type, 6, 6)}</p>
                                 </div>
                                 <p style={{
-                                    textOverflow: 'ellipsis', maxWidth: '37rem', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
-                                    color: item.isRead === true ? '#a0a0a0' : '#eeeeee', marginTop: '0.5rem', overflow: 'hidden', whiteSpace: 'nowrap'
+                                    textOverflow: 'ellipsis', maxWidth: '37rem', overflow: 'hidden', whiteSpace: 'nowrap', fontSize: '3rem', letterSpacing: '-0.07rem', fontFamily: 'SpoqaHanSansNeoMedium',
+                                    color: item.isRead === true ? '#a0a0a0' : '#eeeeee', marginTop: '0.5rem'
                                 }}>{item.text}</p>
                                 {item.isRead === false && (
                                     <div className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto n-div">

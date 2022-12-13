@@ -36,6 +36,7 @@
   z-index: -1;
   border-width: 2.1875rem;
   left: -7.1375rem;
+  margin-top: 0.1rem;
 }
 
 /* .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::after, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {

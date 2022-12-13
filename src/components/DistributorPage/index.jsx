@@ -798,8 +798,8 @@ const DistributorPage = ({
             <div style={{ margin: '0', marginTop: '0', overflowX: 'hidden', marginRight: '0', marginBottom: '0' }} className="relative overflow-hidden flex flex-col h-full">
                 <div style={{ marginLeft: '1.875rem', height: '11.1875rem', fontSize: '3rem', paddingTop: '' }} className='flex flex-col items-center'>
                     <div style={{ margin: 'auto', marginBottom: '0.25rem', background: '#272726', display: 'flex', width: '52rem', marginTop: '1.6rem', letterSpacing: '-0.07rem', height: '5rem', paddingTop: '0.7rem', borderRadius: '3rem', justifyContent: 'center' }} className="tracking-tight flex items-center">
-                        <p className="font-spoqaMedium text-blue-r0056a6" style={{ margin: '0', color: '#aa9264', fontFamily: 'SpoqaHanSansNeoMedium', marginRight: '1rem', marginLeft: '1.4rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '' }}>{truncate('Louie3', 12, 12)}</p>
-                        <p className="font-spoqaMedium ml-2 text-gray-r454545" style={{ margin: '0', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium' }}>님의 총판 정보입니다.</p>
+                        <p style={{ margin: '0', color: '#aa9264', fontFamily: 'SpoqaHanSansNeoMedium', marginRight: '1rem', marginLeft: '1.4rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '21.4rem' }}>{truncate('Louie3', 12, 12)}</p>
+                        <p style={{ margin: '0', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium' }}>님의 총판 정보입니다.</p>
                     </div>
                 </div>
 

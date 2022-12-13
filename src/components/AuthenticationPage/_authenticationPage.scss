@@ -64,6 +64,27 @@
     /* date picker override styling */
     .react-datepicker {
         margin-left: -0.8rem;
+        margin-top: -0rem;
+
+        @media screen and (min-width: 200px) and (max-width: 300px) {
+            margin-top: -10rem;
+        }
+        @media screen and (min-width: 300px) and (max-width: 350px) {
+            margin-top: -8.4rem;
+        }
+        @media screen and (min-width: 350px) and (max-width: 400px) {
+            margin-top: -5.4rem;
+        }
+        @media screen and (min-width: 400px) and (max-width: 450px) {
+            margin-top: -4.4rem;
+        }
+        @media screen and (min-width: 450px) and (max-width: 500px) {
+            margin-top: -3.4rem;
+        }
+        @media screen and (min-width: 500px) and (max-width: 600px) {
+            margin-top: -2.4rem;
+        }
+
 
         .react-datepicker__month-container {
             width: 72.75rem !important;
@@ -79,6 +100,7 @@
     .react-datepicker-popper[data-placement^='top'] .react-datepicker__triangle::after,
     .react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle::after {
         left: -2.1375rem !important;
+        top: -0.8rem;
     }
 
     ::placeholder {

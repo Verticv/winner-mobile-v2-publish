@@ -242,7 +242,7 @@ const WinLoseSettlementContent = ({ activeButton, setActiveButton }) => {
                 <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
-            <div style={{ marginTop: '1.4375rem', paddingBottom: '0.4rem' }} className="">
+            <div style={{ paddingBottom: '0.1rem' }} className="">
                 <Pagination page={page} setPage={setPage} />
             </div>
             <NavBottom />

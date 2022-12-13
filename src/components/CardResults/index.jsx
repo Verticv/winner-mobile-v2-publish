@@ -180,7 +180,7 @@ const CardResults = ({
                                 fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem', whiteSpace: 'nowrap',
                                 maxWidth: hasUp ? '15.6rem' : '15.6rem',
                                 overflow: 'hidden',
-                                textOverflow: 'ellipsis', 
+                                textOverflow: 'ellipsis',
                                 display: 'flex'
                             }} >{shouldTruncate ? truncate(team1, 7, 7) : team1}</span>
                             <div style={{ marginRight: '0.6rem' }}>
@@ -193,31 +193,25 @@ const CardResults = ({
 
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '10rem' : '10rem', height: '7.4375rem', marginRight: '0.375rem',
-                    textShadow: bet === "left" ? "rgb(0 0 0) 0.1rem 0.1rem 0.1rem" : "", borderRadius: '0.6rem',
+                    borderRadius: '0.6rem',
                     boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
                 }}>
                     <button
                         style={{
                             width: '100%',
                             height: '100%',
-                            backgroundColor: bet === "left" ? "#252525" : "#252525",
+                            background: bet === "middle" ? "linear-gradient(to top,  #654f39,  #7d6348 50%, #977859)" : "#252525",
+                            textShadow: bet === "middle" ? "rgb(0 0 0) 0.1rem 0.1rem 0.1rem" : "",
                             borderRadius: '0.6rem',
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
                             fontFamily: 'RobotoMedium',
-                            color: '#c8c8c8',
+                            color: bet === "middle" ? '#ffdfbd' : '#c8c8c8',
                             cursor: 'pointer'
                         }}
-                        className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
                     >
-                        <div
-                            style={{ paddingLeft: '0rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: bet === "middle" ? '' : '0.1rem' }}
-                            className={`${bet === "middle"
-                                ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f"
-                                : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"}
-                    pt-px flex items-center justify-center h-full w-full rounded-lg border border-white cursor-pointer pr-3.5`}
-                        >
+                        <div style={{ paddingLeft: '0rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: bet === "middle" ? '' : '0.1rem' }}>
                             <span style={{ fontSize: '2.625rem' }} className="font-roboto tracking-tight text-14px">{stat2}</span>
                         </div>
                     </button>
@@ -237,8 +231,7 @@ const CardResults = ({
                         alignItems: 'center',
                         fontFamily: 'RobotoMedium',
                         color: bet === "right" ? '#ffdfbd' : '#c8c8c8'
-                    }}
-                        className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
+                    }}>
                         <div
                             style={{
                                 textShadow: bet === "right" ? "rgb(0 0 0) 0.1rem 0.1rem 0.1rem" : "",
@@ -257,7 +250,7 @@ const CardResults = ({
                                 fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : hasDown ? '15.6rem' : '15.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem', whiteSpace: 'nowrap',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
-                            }} className="font-spoqaMedium tracking-tight text-right overflow-hidden">{team2}</span>
+                            }}>{team2}</span>
                         </div>
                     </button>
                 </div>
@@ -281,7 +274,7 @@ const CardResults = ({
                 >
                     {
                         result === "cancel"
-                            ? <p style={{ color: result === "cancel" ? '#4c98ff' : '', marginLeft: '0.45rem',letterSpacing:'-0.06rem' }}>취소</p>
+                            ? <p style={{ color: result === "cancel" ? '#4c98ff' : '', marginLeft: '0.45rem', letterSpacing: '-0.06rem' }}>취소</p>
                             : (result === "win" || result === "lose" || result === "equality")
                                 ? (
                                     <>
@@ -318,7 +311,7 @@ const CardResults = ({
                 >
                     {
                         result === "cancel"
-                            ? <p style={{ color: result === "cancel" ? '#4c98ff' : '', marginLeft: '0.45rem',letterSpacing:'-0.06rem' }}>취소</p>
+                            ? <p style={{ color: result === "cancel" ? '#4c98ff' : '', marginLeft: '0.45rem', letterSpacing: '-0.06rem' }}>취소</p>
                             : (result === "win" || result === "lose" || result === "equality")
                                 ? (
                                     <p

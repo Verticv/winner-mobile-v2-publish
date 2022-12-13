@@ -310,7 +310,7 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         ? <div
                                             className='aaa'
                                             style={{
-                                                background: '#c08029', 
+                                                background: '#c08029',
                                                 maxWidth: '17rem',
                                                 overflow: 'hidden',
                                                 lineHeight: '3.3rem'
@@ -349,7 +349,6 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         alignItems: 'center',
                                         background: '#2e2e2e',
                                         color: '#ff6945',
-                                        // padding: '0 2.6rem'
                                         padding: '0 1rem'
                                     }} className="absolute pl-7px pr-8px rounded-full flex items-center justify-center border text-red-d52e2e font-roboto"
                                 >{item.replies}</div>
@@ -359,8 +358,6 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                     className='aaa'
                                     style={{
                                         backgroundColor: "#41b06c",
-                                        // fontSize: '2.4375rem',
-                                        // padding: '0.0625rem 1.65rem',
                                         marginLeft: '1rem',
                                         marginTop: '-1.3rem',
                                         fontSize: '2.4375rem',
@@ -373,36 +370,24 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
                                         overflow: 'hidden',
                                         lineHeight: '3.3rem'
                                     }}
-                                // className="rounded-full flex items-center justify-center text-white font-spoqaMedium"
                                 >
                                     <span className='mt-1.5'>{truncate(category, 6, 6)}</span>
                                 </div>
                             )}
                             {item.isRead === false && (
-                                <div
-                                // style={{ width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem' }} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4"
-                                >
-                                    <p
-                                        className='N'
-                                    // className="flex items-center"
-                                    >N</p>
+                                <div>
+                                    <p className='N'>N</p>
                                 </div>
                             )}
                         </div>
 
-                        <div
-                            className='logo-div'
-                        // className={`w-full flex justify-start font-spoqaMedium tracking-tight text-r585858 text-center`} 
-                        >
+                        <div className='logo-div'>
                             {item.type !== "일반"
                                 ? <img
                                     style={{ width: '12.0625rem', height: '3rem' }}
                                     src={WinnerLogo} alt="" />
                                 : (
-                                    <div
-                                        className='card-with-rank'
-                                    // className="w-full flex space-x-2px align-center"
-                                    >
+                                    <div className='card-with-rank' >
                                         {
                                             item.level === 1
                                                 ? <img
@@ -440,52 +425,24 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
 
     return (
         <>
-            <div
-                // className="w-full"
-                className='button-card'
-            >
-
-                <div className='div-2'
-                // style={{ borderRadius: "1em", margin: '1.875rem' }} className="shadow-subNavbar overflow-hidden"
-                // style={{}}
-                >
-
-                    <div className='div-3'
-                    // style={{ background: 'green', borderRadius: '1.3rem'}}
-                    // className="flex flex-col w-full"
-                    >
+            <div className='button-card'>
+                <div className='div-2'>
+                    <div className='div-3'>
                         <InboxList items={cellArray} />
                     </div>
                 </div>
 
 
-                <div
-                    // style={{ margin: 'auto', marginTop: '3.7rem', marginBottom: '3.75rem', width: 'fit-content' }} 
-                    className='button-class-div shadow-to-box'
-                >
-                    <button className='button-class hover'
-                        // style={{ width: '36.4375rem', height: '7.3125rem',border: '0.1875rem solid', padding: '0', borderRadius: '1rem' }}
-                        onClick={() => navigate('/freeboard/compose')}
-                    //  className="flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
-                    >
-                        <div
-                            style={{ marginTop: '0.2rem' }}
-                        // className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer"
-                        >
-                            <span
-                                className='shadow-to-text'
-                                style={{ color: '#d6f3ff' }}
-                            // style={{ fontSize: "2.8125rem" }} className="font-spoqaMedium tracking-tight text-white"
-                            >작성하기</span>
+                <div className='button-class-div shadow-to-box'>
+                    <button className='button-class hover' onClick={() => navigate('/freeboard/compose')}>
+                        <div style={{ marginTop: '0.2rem' }}>
+                            <span className='shadow-to-text' style={{ color: '#d6f3ff' }}>작성하기</span>
                         </div>
                     </button>
                 </div>
 
 
-                <div
-                    style={{ marginBottom: '3.75rem', display: 'flex', justifyContent: 'center' }}
-                    className="flex w-full justify-center"
-                >
+                <div style={{ marginBottom: '3.75rem'}}>
                     <Pagination withMarginBottom={false} page={page} setPage={setPage} />
                 </div>
 

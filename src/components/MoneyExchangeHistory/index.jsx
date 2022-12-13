@@ -152,7 +152,7 @@ const MoneyExchangeHistory = ({ subActiveButton, setSubActiveButton }) => {
     }, [setSubActiveButton, subActiveButton, navigate]);
 
     return (
-        <div className="flex flex-col items-center" style={{ marginTop: '1rem'}}>
+        <div className="flex flex-col items-center" style={{ marginTop: '1rem' }}>
 
             <DateSearchBar isLeagueSearch={false} withBlackButton />
             <div className="h-full">
@@ -168,11 +168,9 @@ const MoneyExchangeHistory = ({ subActiveButton, setSubActiveButton }) => {
                 />
             </div>
 
-            <div className='w-full'>
-                <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
-            </div>
+            <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
 
-            <div style={{ paddingBottom: '0.01rem', marginBottom: '-20rem' }}>
+            <div style={{marginTop:'-0.2rem', marginBottom:'-16rem'}}>
                 <Pagination page={page} setPage={setPage} />
             </div>
 
