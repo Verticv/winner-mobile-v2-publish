@@ -25,6 +25,9 @@ import bga7 from '../../assets/mainPage/active-bg7-card.png';
 import bg71 from '../../assets/mainPage/inactive-bg71-card.png';
 import bga71 from '../../assets/mainPage/active-bg71-card.png';
 
+import bg72 from '../../assets/mainPage/inactive-bg72-card.png';
+import bga72 from '../../assets/mainPage/active-bg72-card.png';
+
 import bg8 from '../../assets/mainPage/inactive-bg8-card.png';
 import bga8 from '../../assets/mainPage/active-bg8-card.png';
 
@@ -161,6 +164,16 @@ const cardInfo = [{
     activeBackground: bga71,
     icon: true,
     text: '오리엔탈게임',
+    isActive: false,
+    // path: '/live-casino',
+    group: '1'
+},
+{
+    id: 72,
+    inactivBackground: bg72,
+    activeBackground: bga72,
+    icon: true,
+    text: '이주기',
     isActive: false,
     // path: '/live-casino',
     group: '1'
