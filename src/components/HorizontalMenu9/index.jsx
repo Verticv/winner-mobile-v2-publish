@@ -55,7 +55,7 @@ const HorizontalMenu9 = ({
                 >
                     <span
                         style={{
-                            fontFamily: 'SpoqaHanSansNeoMedium', 
+                            fontFamily: 'SpoqaHanSansNeoBold', 
                             fontSize: '2.5rem', 
                             color: pathname === item.path ? '#252525' : '#ccc2b6', 
                             height: '100%',

@@ -55,10 +55,10 @@ const FreeBoardView2 = () => {
         <div style={{ paddingTop: '0.451rem' }} className="w-full">
             <div style={{ minHeight: '5.8rem', display: 'flex', alignItems: 'flex-start', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>
                 <img style={{ width: '2.25625rem', height: '2.25625rem', marginRight: '1.65rem', marginLeft: '-0.2rem', marginTop: '3.1rem' }} src={ReplyArrow} alt="" />
-                <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.6125rem',marginTop: '2rem' }} src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
+                <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.6125rem', marginTop: '2rem' }} src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
                 <p style={{ fontSize: '2.624375rem', color: '#ccc2b6' }}>{username}</p>
                 <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', marginTop: '3.3rem', background: '#555555' }}></div>
-                <p style={{ fontSize: '2.25rem', color: '#929292', marginTop: '2.7rem' }}>2021.06.28 15:36</p>
+                <p style={{ fontSize: '2.25rem', color: '#929292', marginTop: '2.7rem', flexShrink: 0 }}>2021.06.28 15:36</p>
             </div>
             <div style={{ marginLeft: '3.8rem', minHeight: '8.625rem', borderRadius: '0.8rem', width: '66.15rem', background: '#272726' }} className="">
                 <div style={{ borderRadius: "1.625rem", fontSize: '2.8125rem', paddingLeft: '3.6625rem', paddingRight: '3.6625rem', borderWidth: '0.1875rem', display: 'flex', paddingBottom: '2rem', }} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
@@ -80,7 +80,6 @@ const FreeBoardView2 = () => {
             </div>
         </div>
     )
-
     return (
         <div style={{ padding: '0 1.875rem' }} className="free-board-view2">
             <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
@@ -205,7 +204,7 @@ const FreeBoardView2 = () => {
                             <img style={{ width: '3.450625rem', height: '4.436875rem', marginRight: '0.5625rem', marginLeft: '-0.3rem', marginTop: '2.6rem' }} src={Rank2} alt="" />
                             <p style={{ fontSize: '2.624375rem', color: '#ccc2b6', paddingTop: '0.4rem' }}>신풍사우나</p>
                             <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', marginTop: '3.7rem', background: '#555555' }}></div>
-                            <p style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '3.2rem' }}>2021.06.28 15:36</p>
+                            <p style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '3.2rem', flexShrink: 0 }}>2021.06.28 15:36</p>
                         </div>
 
                         <div style={{ borderRadius: "0.8rem", WebkitTextStroke: "0.2px", minHeight: '8.5625rem', paddingBottom: '0.01rem', marginTop: '-2.85rem', marginBottom: '1rem', borderWidth: '0.1875rem', background: '#272726' }} className="w-full h-full bg-white border border-gray-dddddd flex items-center justify-between">
@@ -235,7 +234,7 @@ const FreeBoardView2 = () => {
                             <img style={{ width: '3.450625rem', marginRight: '0.5625rem', marginLeft: '-0.3rem', marginTop: '0.2rem' }} src={Rank2} alt="" />
                             <span style={{ fontSize: '2.624375rem', color: '#ccc2b6', marginTop: '0.8rem' }}>신풍사우나</span>
                             <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', background: '#555', marginTop: '1.4rem' }}></div>
-                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem' }}>2021.06.28 15:36</span>
+                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem', flexShrink: 0 }}>2021.06.28 15:36</span>
                         </div>
 
                         <div style={{ borderRadius: "0.625rem", WebkitTextStroke: "0.2px", minHeight: '8.6rem', marginTop: '2.03rem', marginBottom: '0.95rem', borderWidth: '0.1875rem', display: 'flex', background: '#272726' }} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
@@ -263,7 +262,7 @@ const FreeBoardView2 = () => {
                             <img style={{ width: '3.450625rem', marginRight: '0.5625rem', marginLeft: '-0.3rem', marginTop: '0.2rem' }} src={Rank2} alt="" />
                             <span style={{ fontSize: '2.624375rem', color: '#ccc2b6', marginTop: '0.8rem' }}>신풍사우나</span>
                             <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', background: '#555', marginTop: '1.4rem' }}></div>
-                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem' }}>2021.06.28 15:36</span>
+                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem', flexShrink: 0 }}>2021.06.28 15:36</span>
                         </div>
 
 
@@ -282,6 +281,7 @@ const FreeBoardView2 = () => {
                     </div>
                 </div>
             </div>
+
 
             {/* FOOTER BUTTONS */}
             <div style={{ marginTop: '3.9rem', paddingBottom: '19.625rem' }} className="w-full flex items-start justify-between">

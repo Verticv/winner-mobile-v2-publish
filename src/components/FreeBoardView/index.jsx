@@ -60,7 +60,7 @@ const FreeBoardView = () => {
                 <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.6125rem', marginTop: '-0.1rem', marginTop: '2rem' }} src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
                 <p style={{ fontSize: '2.624375rem', color: '#ccc2b6' }}>{username}</p>
                 <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', marginTop: '3.3rem', background: '#555555' }}></div>
-                <p style={{ fontSize: '2.25rem', color: '#929292', marginTop: '2.7rem' }}>2021.06.28 15:36</p>
+                <p style={{ fontSize: '2.25rem', color: '#929292', marginTop: '2.7rem', flexShrink:0 }}>2021.06.28 15:36</p>
             </div>
             <div style={{ marginLeft: '3.8rem', minHeight: '8.625rem', borderRadius: '0.8rem', width: '66.15rem', background: '#272726' }} className="">
                 <div style={{ borderRadius: "1.625rem", fontSize: '2.8125rem', paddingLeft: '3.6625rem', paddingRight: '3.6625rem', borderWidth: '0.1875rem', display: 'flex', paddingBottom: '2rem', }} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
@@ -232,7 +232,7 @@ const FreeBoardView = () => {
                             <img style={{ width: '3.450625rem', height: '4.436875rem', marginRight: '0.5625rem', marginLeft: '-0.3rem', marginTop: '2.6rem' }} src={Rank2} alt="" />
                             <p style={{ fontSize: '2.624375rem', color: '#ccc2b6', paddingTop: '0.4rem' }}>신풍사우나</p>
                             <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', marginTop: '3.7rem', background: '#555555' }}></div>
-                            <p style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '3.2rem' }}>2021.06.28 15:36</p>
+                            <p style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '3.2rem', flexShrink: 0 }}>2021.06.28 15:36</p>
                         </div>
 
                         <div style={{ borderRadius: "0.8rem", WebkitTextStroke: "0.2px", minHeight: '8.5625rem', paddingBottom: '0.01rem', marginTop: '-2.85rem', marginBottom: '1rem', borderWidth: '0.1875rem', background: '#272726' }} className="w-full h-full bg-white border border-gray-dddddd flex items-center justify-between">
@@ -262,7 +262,7 @@ const FreeBoardView = () => {
                             <img style={{ width: '3.450625rem', marginRight: '0.5625rem', marginLeft: '-0.3rem', marginTop: '0.2rem' }} src={Rank2} alt="" />
                             <span style={{ fontSize: '2.624375rem', color: '#ccc2b6', marginTop: '0.8rem' }}>신풍사우나</span>
                             <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', background: '#555', marginTop: '1.4rem' }}></div>
-                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem' }}>2021.06.28 15:36</span>
+                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem', flexShrink: 0 }}>2021.06.28 15:36</span>
                         </div>
 
                         <div style={{ borderRadius: "0.625rem", WebkitTextStroke: "0.2px", minHeight: '8.6rem', marginTop: '2.03rem', marginBottom: '0.95rem', borderWidth: '0.1875rem', display: 'flex', background: '#272726' }} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
@@ -290,7 +290,7 @@ const FreeBoardView = () => {
                             <img style={{ width: '3.450625rem', marginRight: '0.5625rem', marginLeft: '-0.3rem', marginTop: '0.2rem' }} src={Rank2} alt="" />
                             <span style={{ fontSize: '2.624375rem', color: '#ccc2b6', marginTop: '0.8rem' }}>신풍사우나</span>
                             <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', background: '#555', marginTop: '1.4rem' }}></div>
-                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem' }}>2021.06.28 15:36</span>
+                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem', flexShrink: 0 }}>2021.06.28 15:36</span>
                         </div>
 
 

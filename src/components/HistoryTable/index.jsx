@@ -149,12 +149,12 @@ const HistoryTable = ({
                                     firstColumnColor = row[0][firstRowKeysName[0]] === '사용가능' ? "#e65454" : "#7b7b7b"
                                 }
                                 return (
-                                    <div key={index} style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', color: firstColumnColor, letterSpacing: '-0.07rem', marginLeft: '0.14rem', display: '', width: '100%' }} className="w-full font-spoqa text-left text-gray-r7b7b7b">
-                                        <span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium' }}>{firstRowKeysName[0]} : </span>
+                                    <div key={index} style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', color: firstColumnColor, letterSpacing: '-0.07rem', marginLeft: '0.14rem', display: 'flex', width: '100%' }}>
+                                        <span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', flexShrink:0, marginRight:'0.8rem' }}>{firstRowKeysName[0]} : </span>
                                         <span className='font-spoqa' style={{
                                             fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex',
                                             wordBreak: 'break-all',
-                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : (firstRowKeysName[0] === '쿠폰명' || firstRowKeysName[0] === "보낸회원아이디") ? isGift ? '42rem' : hasButton ? '48rem' : '47rem' : width45 ? '45rem' : hasButton ? isGift ? '32rem' : isCoupon ? '38rem' : '39.7rem' : '39.7rem',
+                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : (firstRowKeysName[0] === '쿠폰명') ? isGift ? '42rem' : hasButton ? '48rem' : '47rem' : width45 ? '45rem' : hasButton ? isGift ? '32rem' : isCoupon ? '38rem' : '39.7rem' : '39.7rem',
                                             overflow: firstRowKeysName[0] === '아이디' ? 'hidden' : '',
                                             textOverflow: firstRowKeysName[0] === '아이디' ? 'ellipsis' : '',
                                             whiteSpace: firstRowKeysName[0] === '아이디' ? 'nowrap' : '',
