@@ -66,7 +66,7 @@ const HistoryTable = ({
                             }}
                         >
                             <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="상세보기-div">
-                                <span className="상세보기-span"> 상세 <br /> 보기</span>
+                                <span className="상세보기-span shadow-to-text"> 상세 <br /> 보기</span>
                             </div>
                         </div>
                     </div>
