@@ -1,6 +1,6 @@
 import Pagination from '../Pagination';
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import BlueSpeaker from '../../assets/myPage/speaker/blue_speaker.png';
 import YellowSpeaker from '../../assets/myPage/speaker/yellow_speaker.png';
 import WinnerLogo from '../../assets/myPage/speaker/LOGO.png';
@@ -231,7 +231,18 @@ const FreeBoardMain = ({ activeButton, setActiveButton, path = '/mypage/freeboar
 
     const category = "베팅내역"
     const navigate = useNavigate();
+    const location = useLocation()
     const [page, setPage] = useState(0)
+
+    useEffect(() => {
+        window.onpopstate = () => {
+            if (location.pathname === '/freeboard/compose') {
+                navigate('/main')
+            }
+        }
+    })
+
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])

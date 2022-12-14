@@ -132,7 +132,9 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
 
     useEffect(() => {
         window.onpopstate = () => {
-            navigate('/freeboard/compose')
+            if (window.location.pathname === '/freeboard/compose') {
+                navigate('/freeboard')
+            }
         }
     })
 
