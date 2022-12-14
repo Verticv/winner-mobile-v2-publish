@@ -43,7 +43,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
             height: '4rem',
             justifyContent: 'center'
         }}>
-            <p style={{ fontFamily: 'SpoqaHanSansNeoBold', textAlign: 'center', fontSize: '2.6rem', paddingTop:'0.2rem' }}>{selectedYear}년</p>
+            <p style={{ fontFamily: 'SpoqaHanSansNeoBold', textAlign: 'center', fontSize: '2.6rem', paddingTop: '0.2rem' }}>{selectedYear}년</p>
         </div>
     );
 
@@ -59,7 +59,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
             height: '4rem',
             justifyContent: 'center'
         }}>
-            <p style={{ fontFamily: 'SpoqaHanSansNeoBold', textAlign: 'center', fontSize: '2.6rem', paddingTop:'0.2rem' }}>{selectedMonth}월</p>
+            <p style={{ fontFamily: 'SpoqaHanSansNeoBold', textAlign: 'center', fontSize: '2.6rem', paddingTop: '0.2rem' }}>{selectedMonth}월</p>
         </div>
     );
 
@@ -380,8 +380,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                             onMonthChange={(date) => {
                                                 setSelectedMonth(months[getMonth(date)]);
                                                 setSelectedYear(getYear(date));
-                                              }}
-                                              onYearChange={(date) => setSelectedYear(getYear(date))}
+                                            }}
+                                            onYearChange={(date) => setSelectedYear(getYear(date))}
                                             popperModifiers={{
                                                 flip: {
                                                     behavior: ["bottom"] // don't allow it to flip to be above
