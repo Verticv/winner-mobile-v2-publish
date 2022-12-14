@@ -189,7 +189,6 @@ const MyPage = ({ setAuthenticated, isAuthenticated, distributorPageActive, setD
         console.log(`location.state`, location.state)
         return (
             <>
-                {/* <ScrollButton /> */}
                 <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} />
                 <div style={{ marginTop: '1.9rem', marginBottom: '36.675rem' }} className="flex w-full">
                     <LeftMenu

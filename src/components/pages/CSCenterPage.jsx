@@ -81,20 +81,17 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
     const [subActiveButton, setSubActiveButton] = useState();
     const [activeButton, setActiveButton] = useState();
     const [cscenterActive, setCscenterActive] = useState();
-    console.log(selectedSubTab, selectedTab)
 
     useEffect(() => {
         setCscenterActive('/cscenter')
     }, [setCscenterActive])
 
-    console.log('cscenterActive', cscenterActive);
     useEffect(() => {
         if (location?.state?.from === '/main') {
             window.onpopstate = () => {
                 navigate('/main')
             }
         }
-        console.log('location.state :>> ', location?.state);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location?.state])
 
@@ -117,17 +114,15 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                         setCscenterActive={setCscenterActive}
                     />
                 </div>
-                <div className="w-full flex justify-center mb-40" style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
-                    <img style={{ width: '20.375rem' }} className="object-contain" src={Logo} alt="logo" />
+                <div style={{ display: 'flex', justifyContent: 'center', marginLeft: '0.2rem', paddingBottom: '5rem' }}>
+                    <img style={{ width: '20.375rem' }} src={Logo} alt="logo" />
                 </div>
             </>
         )
     }
     return (
         <Routes>
-            <Route index element={<>
-                <MyInfo />
-            </>} />
+            <Route index element={<MyInfo />} />
             <Route
                 path="/all/*"
                 element={

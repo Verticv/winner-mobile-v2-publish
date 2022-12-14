@@ -582,9 +582,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#703380',
+            buttonColor: '#5b3e82',
             buttonText: '선물 완료',
-            textColor: '#e0b5ec'
+            textColor: '#eac3f5'
         }
     ],
     [
@@ -607,9 +607,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#703380',
+            buttonColor: '#5b3e82',
             buttonText: '선물 완료',
-            textColor: '#e0b5ec'
+            textColor: '#eac3f5'
         }
     ],
     [
@@ -632,9 +632,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#703380',
+            buttonColor: '#5b3e82',
             buttonText: '선물 완료',
-            textColor: '#e0b5ec'
+            textColor: '#eac3f5'
         }
     ],
     [
@@ -657,9 +657,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#703380',
+            buttonColor: '#5b3e82',
             buttonText: '선물 완료',
-            textColor: '#e0b5ec'
+            textColor: '#eac3f5'
         }
     ],
     [
@@ -682,9 +682,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#703380',
+            buttonColor: '#5b3e82',
             buttonText: '선물 완료',
-            textColor: '#e0b5ec'
+            textColor: '#eac3f5'
         }
     ],
     [
@@ -707,9 +707,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#703380',
+            buttonColor: '#5b3e82',
             buttonText: '선물 완료',
-            textColor: '#e0b5ec'
+            textColor: '#eac3f5'
         }
     ],
     [
@@ -732,9 +732,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#703380',
+            buttonColor: '#5b3e82',
             buttonText: '선물 완료',
-            textColor: '#e0b5ec'
+            textColor: '#eac3f5'
         }
     ],
     [
@@ -757,9 +757,9 @@ const sentHistoryTableData = [
             0: { 만료일: "2021-07-29" },
         },
         {
-            buttonColor: '#703380',
+            buttonColor: '#5b3e82',
             buttonText: '선물 완료',
-            textColor: '#e0b5ec'
+            textColor: '#eac3f5'
         }
     ],
 ]
@@ -847,7 +847,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
         return (
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: "2.6rem" }}>
                 <div style={{
-                    fontSize: '2.625rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0rem', letterSpacing: '-0.05rem'
+                    fontSize: '2.625rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0rem', letterSpacing: '-0.15rem'
                 }}>
                     <span>{text} </span>
                     <span style={{ color: numberColor, fontFamily: 'RobotoBold' }}>{number}</span>
@@ -865,7 +865,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
     console.log(selectedTab, selectedSubTab)
 
     const tabsArray = [
-        { text: "쿠폰사용", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/coupon/all", activeBG: couponActive,inActiveBG : '', width: '7.875rem' },
+        { text: "쿠폰사용", icon: Icon1, activeIcon: Icon1Active, id: 0, path: "/mypage/coupon/all", activeBG: couponActive, inActiveBG: '', width: '7.875rem' },
         { text: "쿠폰선물", icon: Icon2, activeIcon: Icon2Active, id: 1, path: "/mypage/coupon/all/coupon-gift", activeBG: couponActive, width: '7.875rem' },
         { text: "쿠폰내역", icon: Icon3, activeIcon: Icon3Active, id: 2, path: "/mypage/coupon/all/coupon-history", hasSameParent: true, activeBG: couponActive, width: '7.875rem' },
     ];
@@ -966,17 +966,15 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
             </>
         )
     }
-    const Gift = () => {
 
+    const Gift = () => {
         useEffect(() => {
             window.onpopstate = e => {
-
                 setTimeout(() => {
                     navigate('/mypage/coupon')
                     setSubActiveButton('/mypage/coupon/all/coupon-gift')
                 }, 0)
             }
-
             return (() => {
                 setSubActiveButton('/mypage/coupon/all/coupon-gift')
             })
@@ -993,21 +991,19 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                 }}>
                     <CouponTitle text='선물 가능한 쿠폰' number='7' />
                 </div>
-                <div className="">
-                    <HistoryTable
-                        containerBackground='#f7f9fc'
-                        wrapButtonText
-                        tableData={giftsTableData}
-                        checkedState={checkedState}
-                        setCheckedState={setCheckedState}
-                        isPopupOpen={isPopupOpen}
-                        setPopupOpen={setPopupOpen}
-                        cardHeight='25.3125rem'
-                        isButtonGradient={false}
-                        isCoupon
-                        isGift
-                        />
-                </div>
+                <HistoryTable
+                    containerBackground='#f7f9fc'
+                    wrapButtonText
+                    tableData={giftsTableData}
+                    checkedState={checkedState}
+                    setCheckedState={setCheckedState}
+                    isPopupOpen={isPopupOpen}
+                    setPopupOpen={setPopupOpen}
+                    cardHeight='25.3125rem'
+                    isButtonGradient={false}
+                    isCoupon
+                    isGift
+                />
                 <div style={{ marginBottom: '2.9375rem', fontFamily: 'SpoqaHanSansNeoMedium', textAlign: 'center', letterSpacing: '-0.07rem', color: '#c8c8c8', marginTop: '3.7rem' }} className='mt-4'>
                     <p className='font-spoqaMedium text-gray-r7c7c7c text-center' style={{ fontSize: '2.625rem' }}>
                         <span className='text-blue-r0056a6 font-spoqaBold' style={{ fontFamily: 'SpoqaHanSansNeoBold', color: '#4c98ff' }}>쿠폰선물하기</span> 버튼을 클릭하여 쿠폰받을 회원을 선택하세요.
@@ -1065,9 +1061,9 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                         isPopupOpen={isPopupOpen}
                         setPopupOpen={setPopupOpen}
                         cardHeight='25.3125rem'
-                        isButtonGradient={false} 
+                        isButtonGradient={false}
                         isCoupon
-                        />
+                    />
                 </div>
                 <div style={{ marginTop: '1.875rem', paddingBottom: '0.01rem' }}>
                     <Pagination page={page} setPage={setPage} />

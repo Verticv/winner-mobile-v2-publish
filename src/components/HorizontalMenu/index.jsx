@@ -58,7 +58,6 @@ const HorizontalMenu = ({
                     onPointerOut={() => setHover(null)}
                     onPointerCancel={() => setHover(null)}
                 >
-                    {console.log(item.id, 'withoutFirst')}
                     <button
                         id={`t${index}`}
                         key={item.id}
@@ -71,7 +70,7 @@ const HorizontalMenu = ({
                         <div style={{ width: '100%', textAlign: 'center', height: '4.97rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <span
                                 id={item.id}
-                                style={{ marginTop: item.marginTop, marginLeft: item.textMargin }}
+                                style={{ marginTop: item.marginTop, marginLeft: item.textMargin, fontFamily:'SpoqaHanSansNeoBold' }}
                                 className='text'>{item.text}</span>
                         </div>
                     </button>

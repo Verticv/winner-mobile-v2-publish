@@ -142,7 +142,6 @@ const DateSearchBar = ({
                                     showYearDropdown
                                     yearDropdownItemNumber={100}
                                     customInput={<CustomInput />}
-                                    // className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
                                     locale="ko"
                                     selected={endDate}
                                     onChange={(date) => setEndDate(date)}

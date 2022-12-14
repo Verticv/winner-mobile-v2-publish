@@ -154,7 +154,7 @@ const LeftMenu = ({
                             <button
                                 style={{
                                     padding: '2.3125rem 0 1.3125rem 1.3125rem', paddingRight: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ffdfbd',
-                                    background: ((((selectedTab) === item?.path) || (distributorPageActive === '/distributor-page' && item.text === '총판페이지') || subActiveButton === item?.path)) || item?.path == '' || (state?.path === '/cscenter' && item.text === '고객센터' && distributorPageActive !== '/distributor-page') ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom', 
+                                    background: ((((selectedTab) === item?.path) || (distributorPageActive === '/distributor-page' && item.text === '총판페이지') || subActiveButton === item?.path)) || item?.path == '' || (state?.path === '/cscenter' && item.text === '고객센터' && distributorPageActive !== '/distributor-page') ? 'linear-gradient(#a67c52, #7f5f3f)' : 'bottom',
                                     borderRadius: '1rem'
                                 }}
                                 className={`${selectedTab === item?.path
@@ -231,9 +231,7 @@ const LeftMenu = ({
     }
 
     return (
-        <div className="bg-white space-y-px w-full">
-            <MenuList items={array} />
-        </div>
+        <MenuList items={array} />
     )
 }
 

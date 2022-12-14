@@ -9,7 +9,7 @@ import Dropdown from '../Dropdown'
 import SignedUpPopup from '../SignedUpPopup';
 import userName from '../../assets/myInfo/userName.png'
 import password from '../../assets/myInfo/password.png'
-import ReactDatePicker from 'react-datepicker'
+import DatePicker from 'react-datepicker'
 import CalendarIcon from '../../assets/myPage/CalendarIcon.png';
 import CloseIcon from "../../assets/myInfo/close.png";
 
@@ -60,7 +60,19 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
         window.scrollTo(0, 0)
     }, [toSignup])
 
-
+    const CustomInput = (props) => {
+        return (
+            <input
+                onClick={props.onClick}
+                // onFocus={() => setSelectedInput(61)}
+                // onBlur={() => setSelectedInput(false)}
+                value={props.value}
+                type="text"
+                readOnly={true}
+                placeholder="생년월일"
+            />
+        )
+    }
     return (
         <div className="AuthenticationPage">
 
@@ -238,23 +250,19 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                 <div style={{ marginLeft: '0.4rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 61 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }} >
                                     <div style={{ position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', paddingLeft: '1.8rem', marginTop: '1rem' }}>
                                         <img src={CalendarIcon} alt="" style={{ width: '3.5rem', position: 'absolute', right: '2.5rem', top: '1.5rem' }} />
-                                        <ReactDatePicker
+                                        <DatePicker
                                             showYearDropdown
                                             yearDropdownItemNumber={100}
                                             placeholderText='생년월일'
-                                            customInput={
-                                                <input
-                                                    placeholder="가입코드"
-                                                    onFocus={(e) => setSelectedInput(61)}
-                                                    onBlur={(e) => setSelectedInput(false)}
-                                                />
-                                            }
+                                            customInput={<CustomInput />}
                                             locale="ko"
                                             selected={endDate}
                                             onChange={(date) => setEndDate(date)}
                                             dateFormat="yyyy-MM-dd"
                                             dateFormatCalendar="yyyy년 MM월"
                                             disabledKeyboardNavigation={true}
+                                            onFocus={e=> e.onClick}
+                                            onBlur={() => setSelectedInput(false)}
                                             onKeyDown={(e) => {
                                                 e.preventDefault();
                                             }}

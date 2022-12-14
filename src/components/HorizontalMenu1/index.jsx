@@ -59,10 +59,6 @@ const HorizontalMenu1 = ({
                         backgroundSize: 'cover',
                         marginRight: index === 0 ? '0.1rem' : ''
                     }}
-                    className={`${isSameLink
-                        ? "display-active"
-                        : "display-inactive"
-                        } overflow-hidden flex items-end w-1/2`}
                     onPointerDown={() => setHover(item.id)}
                     onPointerUp={() => {
                         setHover(null)
@@ -76,19 +72,12 @@ const HorizontalMenu1 = ({
                     onPointerOut={() => setHover(null)}
                     onPointerCancel={() => setHover(null)}
                 >
-                    <div
-                        className={`flex w-full justify-end h-full items-end bg-white ${isSameLink
-                            ? "bg-blue-r58baf7"
-                            : "bg-white"
-                            }`}
-                    >
-                        <div className='btn-content' >
-                            <div className='img'>
-                                <Image icon={item.icon} activeIcon={item.activeIcon} width={item.width} marginLeft={item.marginLeft} isSameLink={isSameLink} />
-                            </div>
-                            <div className='text'>
-                                <span style={{ color: isSameLink ? '#252525' : '#ccc2b6' }}>{item.text}</span>
-                            </div>
+                    <div className='btn-content' >
+                        <div className='img'>
+                            <Image icon={item.icon} activeIcon={item.activeIcon} width={item.width} marginLeft={item.marginLeft} isSameLink={isSameLink} />
+                        </div>
+                        <div className='text'>
+                            <span style={{ color: isSameLink ? '#252525' : '#ccc2b6', fontFamily: 'SpoqaHanSansNeoBold' }}>{item.text}</span>
                         </div>
                     </div>
                 </button>

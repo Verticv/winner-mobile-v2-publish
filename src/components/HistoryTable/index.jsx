@@ -1,6 +1,7 @@
 import React from 'react'
 import PopupControls from '../popups/PopupControls';
 import LiveCasinoHistoryDetailPopup from '../LiveCasinoHistoryDetailPopup';
+import UploadIcon from '../../assets/myPage/upload.png';
 
 const HistoryTable = ({
     isPopup,
@@ -25,12 +26,54 @@ const HistoryTable = ({
     isGift,
 }) => {
     function Cells({ cards }) {
-        const detailButton = (
-            <button className="상세보기" onClick={() => setPopupOpen(true)}>
-                <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="상세보기-div">
-                    <span className="상세보기-span"> 상세 <br /> 보기</span>
+        const DetailButton = () => (
+            isPopup ? (
+                <div
+                    style={{ width: '9rem', height: '9rem', padding: '0.1875rem', margin: '-1.4rem -0.4rem 0 0', background: 'linear-gradient(to top, #3e4c8e, #6393bb 50%, #528bcc)', borderRadius: '1rem' }}
+                    className='shadow-to-box hover'
+                >
+                    <button
+                        style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #3a6185, #4575a8 50%, #528bcc)', borderRadius: '0.7rem' }}
+                        className="hover"
+                    >
+                        <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
+                            <img style={{ width: '3.1875rem', height: '3.25rem', marginTop: '0.1rem' }} className="object-contain" src={UploadIcon} alt="" />
+                        </div>
+                    </button>
                 </div>
-            </button>
+            ) : (
+                <button className="상세보기" onClick={() => setPopupOpen(true)}>
+                    <div
+                        style={{
+                            background: 'linear-gradient(to top, #4d3c0a, #997947 50%, #e6b786)',
+                            height: '100%',
+                            padding: ' 0.1825rem',
+                            borderRadius: '0.6rem',
+                            boxShadow: '0 0.312rem 0.625rem 0 rgba(0, 0, 0, 0.3)',
+                            cursor: 'pointer',
+                            overflow: 'hidden'
+                        }}
+                    >
+                        <div
+                            style={{
+                                background: 'linear-gradient(to top, #805f3f, #936e49 50%, #a57b52)',
+                                width: '100%',
+                                height: '100%',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                borderRadius: ' 0.4rem',
+                            }}
+                        >
+                            <div style={{ padding: `${wrapButtonText ? '2.2rem 2rem 2rem 2.1rem' : ''}` }} className="상세보기-div">
+                                <span className="상세보기-span"> 상세 <br /> 보기</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </button>
+            )
+
         )
 
         const wideDetailButtonComponent = (
@@ -111,7 +154,7 @@ const HistoryTable = ({
                                         <span className='font-spoqa' style={{
                                             fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex',
                                             wordBreak: 'break-all',
-                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : firstRowKeysName[0] === '쿠폰명' ? isGift ? '42rem' : hasButton ? '48rem' : '47rem' : width45 ? '45rem' : hasButton ? isGift ? '32rem' : isCoupon ? '38rem' : '39.7rem' : '39.7rem',
+                                            maxWidth: firstRowKeysName[0] === '아이디' ? '' : isPointPage ? '57rem' : (firstRowKeysName[0] === '쿠폰명' || firstRowKeysName[0] === "보낸회원아이디") ? isGift ? '42rem' : hasButton ? '48rem' : '47rem' : width45 ? '45rem' : hasButton ? isGift ? '32rem' : isCoupon ? '38rem' : '39.7rem' : '39.7rem',
                                             overflow: firstRowKeysName[0] === '아이디' ? 'hidden' : '',
                                             textOverflow: firstRowKeysName[0] === '아이디' ? 'ellipsis' : '',
                                             whiteSpace: firstRowKeysName[0] === '아이디' ? 'nowrap' : '',
@@ -141,17 +184,11 @@ const HistoryTable = ({
                         hasButton && (
                             <div className="text-center">
                                 {isPopup ? (
-                                    <button
-                                        style={{ width: '9rem', height: '9rem', padding: '1px', }}
-                                        className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
-                                    >
-                                        <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
-                                        </div>
-                                    </button>
+                                    <DetailButton />
                                 ) : (
                                     <>
                                         {!isCouponUsage ? (
-                                            <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent : detailButton}
+                                            <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent : <DetailButton />}
                                                 isPopupOpen={isPopupOpen}
                                                 setPopupOpen={setPopupOpen}
                                                 hasMargin='true'>

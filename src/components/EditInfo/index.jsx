@@ -181,7 +181,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
 
                             <div className="form-section">
                                 <div style={{ width: "24rem", marginRight: '2.7rem', background: '#272726', flexShrink: '0', borderRadius: '0.5rem', height: '10rem' }}>
-                                    <div style={{ fontSize: '2.8125rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '1.9rem 0 0 1.25rem', letterSpacing: '-0.07rem' }}>레벨</div>
+                                    <div style={{ fontSize: '2.8125rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '1.5rem 0 0 1.25rem', letterSpacing: '-0.07rem' }}>레벨</div>
                                 </div>
                                 <div className="lable-or-input" style={{ height: '10rem', padding: '1.5rem 1.4rem' }}>
                                     <label style={{ letterSpacing: '-0.02rem' }}>

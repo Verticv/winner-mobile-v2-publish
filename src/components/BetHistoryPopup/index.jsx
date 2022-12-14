@@ -198,14 +198,14 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
 
                             {selectedTab === 0 ? (
                                 <>
-                                    <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} checkedState={checkedState} setCheckedState={setCheckedState} margon1 />
+                                    <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} checkedState={checkedState} setCheckedState={setCheckedState} margon1 isPopup />
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
                                 </>
                             ) : selectedTab === 1 ? (
                                 <>
-                                    <SlotBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                    <SlotBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} isPopup />
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>
@@ -229,7 +229,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                             ) : selectedTab === 3 ? (
                                 <>
                                     <HotelCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}
-                                        subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton}
+                                        subActiveButton={subActiveButton} setSubActiveButton={setSubActiveButton} isPopup
                                     />
 
                                     <div style={{ marginTop: '1.25rem' }}>
@@ -246,11 +246,11 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                 </>
                             ) : selectedTab === 5 ? (
                                 <>
-                                    <MinigameBetHistoryPopup isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                    <MinigameBetHistoryPopup isState={historySelectedSubTab} setState={setHistorySelectedSubTab} isPopup />
                                 </>
                             ) : selectedTab === 6 ? (
                                 <>
-                                    <ARGameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                    <ARGameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} isPopup />
 
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
@@ -258,7 +258,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                                 </>
                             ) : selectedTab === 7 ? (
                                 <>
-                                    <SlotBetHistory key={20} isState={selectedSubTab} setState={setSelectedSubTab} />
+                                    <SlotBetHistory key={20} isState={selectedSubTab} setState={setSelectedSubTab} isPopup />
 
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
@@ -267,7 +267,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                             ) : selectedTab === 8 ? (
                                 <>
 
-                                    <LiveCasinoBetHistory key={100} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} margon1 />
+                                    <LiveCasinoBetHistory key={100} showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} margon1 isPopup />
                                     <div style={{ marginTop: '1.25rem', paddingBottom: '0.1rem' }}>
                                         <Pagination page={page} setPage={setPage} />
                                     </div>

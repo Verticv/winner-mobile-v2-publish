@@ -26,7 +26,6 @@ const CountryDropDown = ({ setCountry, country, isBig }) => {
                         : "bg-white"
                     } flex items-center rounded-full button-height`}
 
-                // className="flex items-center shadow-inner p-2"
                 onMouseOver={() => { setHoveredTab(item.id) }}
                 onMouseLeave={() => setHoveredTab(null)}
                 onMouseDown={
@@ -39,14 +38,14 @@ const CountryDropDown = ({ setCountry, country, isBig }) => {
                 <div style={{ width: '5rem', height: '0.4rem', marginRight: '8px' }} className="rounded-full flex items-center justify-center">
                     <img className="" src={item.text === "KR" ? isBig ? Koreaflag2 : Koreaflag : isBig ? UKflag2 : UKflag} alt="flag" style={{ width: isBig ? '7.0625rem' : '5.625rem', marginTop: isBig ? '-0.7rem' : '' }}></img>
                 </div>
-                <label style={{ fontSize: '2.4rem', color: 'rgb(255, 223, 189)', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '6.4rem'}} className={`${(selectedTab === item.id) ? "text-white" : "text-gray-subNavbar"} font-spoqaBold cursor-pointer`}>{item.text}</label>            
+                <label style={{ fontSize: isBig ? '3rem' : '2.4rem', color: 'rgb(255, 223, 189)', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '6.4rem' }} className={`${(selectedTab === item.id) ? "text-white" : "text-gray-subNavbar"} font-spoqaBold cursor-pointer`}>{item.text}</label>
             </div>
         ));
     }
     return (
         <div style={{ borderRadius: '0.3rem', width: "13.9rem", height: '10.2rem', border: '0.1875rem solid #2c2c2c', background: '#1f1f1e', zIndex: '100' }} className="popup-country p-2px relative flex flex-col items-center bg-white shadow-plain">
-            <div style={{ width: '3rem', height: '5px', marginTop: '-5px', marginLeft: '7px' }} className="absolute top-0 overflow-hidden inline-block">
-                <div style={{ width: '10px', height: '5px' }} className="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
+            <div style={{ width: '3rem', height: '5px', marginTop: '-5px', marginLeft: '7px' }}>
+                <div style={{ width: '10px', height: '5px' }}></div>
             </div>
             <CountriesList items={countriesArray} />
         </div>

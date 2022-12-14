@@ -96,44 +96,15 @@ const CardContent = ({
                 {withCancelButton && (
                     <button
                         onClick={() => cancelHandler(id)}
-                        style={{ width: '10.875rem', height: '10.875rem', padding: '', background: '#e65454', borderRadius: '1rem', boxShadow: 'rgb(0 0 0 / 60%) 0 0.375rem 0 0' }}
-                        className="flex items-center justify-center rounded-2xl hover:opacity-75 bg-brown-r7e3636 hover"
+                        style={{ width: '9rem', height: '9rem', padding: '0.1875rem', margin: '-1.4rem -0.4rem 0 0', background: 'linear-gradient(to top, #4d0a25, #a75366 50%, #e78795)', borderRadius: '1rem' }}
+                        className='shadow-to-box hover'
                     >
-                        <div
-                            className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
-                        >
-                            <img style={{ width: '2.5rem', height: '2.5rem' }} className="object-contain" src={CloseIcon} alt="" />
+                        <div style={{ width: '100%', height: '100%', background: 'linear-gradient(to top, #98351e, #c45236 50%, #df6345)', borderRadius: '0.7rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img style={{ width: '2.5rem', height: '2.5rem' }} src={CloseIcon} alt="" />
                         </div>
                     </button>
                 )}
             </div>
-            {/* {withButtons && (
-                <div style={{ margin: '3.75rem 0.875rem', marginTop: '1.875rem', marginBottom: '0' }} className="flex items-center justify-between">
-                    <div className="flex w-full">
-                        <button
-                            style={{ padding: '1px', height: '7.3125rem' }}
-                            className="flex flex-1 items-center justify-center mr-4 rounded-2xl bg-blue-r0070d9 hover:opacity-75"
-                        // onClick={() => allSelectButtonPressed()}
-                        >
-                            <div
-                                className="flex items-center justify-center h-full w-full rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db"
-                            >
-                                <span style={{ fontSize: '2.8125rem' }} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">내역올리기</span>
-                            </div>
-                        </button>
-                        <button
-                            style={{ padding: '1px', height: '7.3125rem' }}
-                            className="flex flex-1 items-center justify-center m-0 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
-                        >
-                            <div
-                                className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
-                            >
-                                <span style={{ fontSize: '2.8125rem' }} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">내역삭제</span>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            )} */}
             {withButtons && (
                 <div className="two-buttons-container">
                     <button style={{ height: '7.3125rem' }}

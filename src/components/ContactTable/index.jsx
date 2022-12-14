@@ -76,7 +76,6 @@ const ContactTable = ({
                                         overflow: 'hidden',
                                         lineHeight: '3.4rem'
                                     }}
-                                    className={`rounded-full font-spoqaMedium tracking-tight flex items-center justify-center cursor-pointer`}
                                 >
                                     <p style={{ marginTop: '0.45rem', letterSpacing: '-0.05rem' }}>{truncate(type, 6, 6)}</p>
                                 </div>
@@ -85,7 +84,7 @@ const ContactTable = ({
                                     color: item.isRead === true ? '#a0a0a0' : '#eeeeee', marginTop: '0.5rem'
                                 }}>{item.text}</p>
                                 {item.isRead === false && (
-                                    <div className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto n-div">
+                                    <div className="n-div">
                                         N
                                     </div>
                                 )}

@@ -52,17 +52,15 @@ const FreeBoardView2 = () => {
         tag = null,
         isOneButton = false
     }) => (
-        <div style={{ paddingTop: '2.251rem' }} className="w-full">
-            <div className="w-full items-center flex justify-between" style={{ marginTop: '-1.8rem', height: '5.8rem' }}>
-                <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>
-                    <img style={{ width: '2.25625rem', height: '2.25625rem', marginRight: '1.65rem', marginLeft: '-0.2rem' }} src={ReplyArrow} alt="" />
-                    <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.6125rem', marginTop: '-0.1rem' }} className='object-contain' src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
-                    <p style={{ fontSize: '2.624375rem', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">{username}</p>
-                    <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555', }} className='bg-gray-c5c5c5'></div>
-                    <p style={{ fontSize: '2.25rem', color: '#929292' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
-                </div>
+        <div style={{ paddingTop: '0.451rem' }} className="w-full">
+            <div style={{ minHeight: '5.8rem', display: 'flex', alignItems: 'flex-start', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>
+                <img style={{ width: '2.25625rem', height: '2.25625rem', marginRight: '1.65rem', marginLeft: '-0.2rem', marginTop: '3.1rem' }} src={ReplyArrow} alt="" />
+                <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.6125rem',marginTop: '2rem' }} src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
+                <p style={{ fontSize: '2.624375rem', color: '#ccc2b6' }}>{username}</p>
+                <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', marginTop: '3.3rem', background: '#555555' }}></div>
+                <p style={{ fontSize: '2.25rem', color: '#929292', marginTop: '2.7rem' }}>2021.06.28 15:36</p>
             </div>
-            <div style={{ marginLeft: '3.8rem', marginTop: '2.83rem', minHeight: '8.625rem', borderRadius: '0.8rem', width: '66.15rem', background: '#272726' }} className="">
+            <div style={{ marginLeft: '3.8rem', minHeight: '8.625rem', borderRadius: '0.8rem', width: '66.15rem', background: '#272726' }} className="">
                 <div style={{ borderRadius: "1.625rem", fontSize: '2.8125rem', paddingLeft: '3.6625rem', paddingRight: '3.6625rem', borderWidth: '0.1875rem', display: 'flex', paddingBottom: '2rem', }} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
                     <div className="flex font-spoqa" style={{ display: '', marginTop: '2.2rem' }}>
                         {tag && (<span style={{ fontSize: '2.8125rem', color: '#4c98ff', marginRight: '0.8rem', flexShrink: '0', }} className="text-blue-r0056a6 font-spoqa mr-4">@{truncate(tag, 6, 6)}</span>)}
@@ -82,7 +80,7 @@ const FreeBoardView2 = () => {
             </div>
         </div>
     )
-    
+
     return (
         <div style={{ padding: '0 1.875rem' }} className="free-board-view2">
             <div style={{ background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
@@ -203,13 +201,11 @@ const FreeBoardView2 = () => {
             <div style={{ borderRadius: "1.1875rem", marginTop: '3.75rem', padding: '0.1875rem', background: 'linear-gradient(to top,#1f1f1e, #383838 50%, #4a4a4a )' }} className="w-full bg-gray-fafafa shadow-subNavbar shadow-to-box ">
                 <div style={{ width: '100%', height: '100%', background: '#323232', borderRadius: '1.1875rem', paddingBottom: '1.8rem' }}>
                     <div style={{ padding: '0 1.7rem', borderBottomWidth: '0.1875rem', background: '#323232', borderTopLeftRadius: "1.1875rem", borderTopRightRadius: "1.1875rem", borderBottom: '0.1875rem solid #252525' }} className="border-b border-gray-dddddd">
-                        <div className="w-full flex items-center justify-between">
-                            <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.3rem', height: '9rem', letterSpacing: '-0.07rem' }}>
-                                <img style={{ width: '3.450625rem', height: '4.436875rem', marginRight: '0.5625rem', marginLeft: '-0.3rem' }} className='object-contain' src={Rank2} alt="" />
-                                <p style={{ fontSize: '2.624375rem', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555' }} className='bg-gray-c5c5c5'></div>
-                                <p style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
-                            </div>
+                        <div style={{ display: 'flex', alignItems: 'flex-start', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.3rem', minHeight: '9rem', letterSpacing: '-0.07rem' }}>
+                            <img style={{ width: '3.450625rem', height: '4.436875rem', marginRight: '0.5625rem', marginLeft: '-0.3rem', marginTop: '2.6rem' }} src={Rank2} alt="" />
+                            <p style={{ fontSize: '2.624375rem', color: '#ccc2b6', paddingTop: '0.4rem' }}>신풍사우나</p>
+                            <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', marginTop: '3.7rem', background: '#555555' }}></div>
+                            <p style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '3.2rem' }}>2021.06.28 15:36</p>
                         </div>
 
                         <div style={{ borderRadius: "0.8rem", WebkitTextStroke: "0.2px", minHeight: '8.5625rem', paddingBottom: '0.01rem', marginTop: '-2.85rem', marginBottom: '1rem', borderWidth: '0.1875rem', background: '#272726' }} className="w-full h-full bg-white border border-gray-dddddd flex items-center justify-between">
@@ -233,14 +229,13 @@ const FreeBoardView2 = () => {
             </div>
             <div style={{ borderRadius: "1.1875rem", marginTop: '3.75rem', padding: '0.1875rem', background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ borderRadius: "1.1875rem", marginTop: '', padding: '0.1875rem', paddingTop: '2.07rem', background: '#323232' }} className="w-full bg-gray-fafafa shadow-subNavbar">
-                    <div style={{ padding: '0 1.5rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #252525' }} className="border-b border-gray-dddddd">
-                        <div className="w-full items-center flex justify-between">
-                            <div className="flex items-center" style={{ display: 'flex', color: '#929292', alignItems: 'center', height: '4.85rem', letterSpacing: '-0.07rem' }}>
-                                <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.5625rem', marginLeft: '-0.1rem' }} className='object-contain' src={Rank2} alt="" />
-                                <p style={{ fontSize: '2.624375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555' }} className='bg-gray-c5c5c5'></div>
-                                <p style={{ fontSize: '2.25rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#929292' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
-                            </div>
+                    <div style={{ padding: '0 1.5rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #252525' }}>
+
+                        <div style={{ display: 'flex', alignItems: 'flex-start', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.3rem', minHeight: '4.8rem', letterSpacing: '-0.07rem' }}>
+                            <img style={{ width: '3.450625rem', marginRight: '0.5625rem', marginLeft: '-0.3rem', marginTop: '0.2rem' }} src={Rank2} alt="" />
+                            <span style={{ fontSize: '2.624375rem', color: '#ccc2b6', marginTop: '0.8rem' }}>신풍사우나</span>
+                            <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', background: '#555', marginTop: '1.4rem' }}></div>
+                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem' }}>2021.06.28 15:36</span>
                         </div>
 
                         <div style={{ borderRadius: "0.625rem", WebkitTextStroke: "0.2px", minHeight: '8.6rem', marginTop: '2.03rem', marginBottom: '0.95rem', borderWidth: '0.1875rem', display: 'flex', background: '#272726' }} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
@@ -264,14 +259,13 @@ const FreeBoardView2 = () => {
             <div style={{ borderRadius: "1.1875rem", marginTop: '3.9rem', padding: '0.1875rem', background: 'linear-gradient(to top,#20201f, #343433 50%, #494949 )', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ borderRadius: "1.1875rem", marginTop: '', padding: '0.1875rem', paddingTop: '', background: '#323232' }} className="w-full bg-gray-fafafa shadow-subNavbar">
                     <div style={{ padding: '2.1rem 1.5rem 0', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #252525' }} className="border-b border-gray-dddddd">
-                        <div className="w-full items-center flex justify-between">
-                            <div className="flex items-center" style={{ display: 'flex', color: '#929292', alignItems: 'center', height: '4.85rem', letterSpacing: '-0.07rem' }}>
-                                <img style={{ width: '3.825rem', height: '4.6375rem', marginRight: '0.6725rem', marginLeft: '-0.25rem' }} className='object-contain' src={Rank2} alt="" />
-                                <p style={{ fontSize: '2.624375rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6' }} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
-                                <div style={{ height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1rem', background: '#555555' }} className='bg-gray-c5c5c5'></div>
-                                <p style={{ fontSize: '2.25rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#929292' }} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
-                            </div>
+                        <div style={{ display: 'flex', alignItems: 'flex-start', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '0.3rem', minHeight: '4.8rem', letterSpacing: '-0.07rem' }}>
+                            <img style={{ width: '3.450625rem', marginRight: '0.5625rem', marginLeft: '-0.3rem', marginTop: '0.2rem' }} src={Rank2} alt="" />
+                            <span style={{ fontSize: '2.624375rem', color: '#ccc2b6', marginTop: '0.8rem' }}>신풍사우나</span>
+                            <div style={{ height: '1.75rem', width: '0.1875rem', marginLeft: '1.1rem', marginRight: '1.1rem', background: '#555', marginTop: '1.4rem' }}></div>
+                            <span style={{ fontSize: '2.25rem', color: '#929292', fontFamily: 'SpoqaHanSansNeo', marginTop: '1rem' }}>2021.06.28 15:36</span>
                         </div>
+
 
                         <div style={{ borderRadius: "0.625rem", WebkitTextStroke: "0.2px", minHeight: '8.5625rem', marginTop: '2.06rem', marginBottom: '1.1rem', borderWidth: '0.1875rem', display: 'flex', background: '#272726' }} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
                             <p style={{ marginLeft: '3.6875rem', paddingRight: '3.6875rem', marginTop: '2.5rem', fontSize: '2.811875rem', color: '', fontFamily: 'SpoqaHanSansNeo' }} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>

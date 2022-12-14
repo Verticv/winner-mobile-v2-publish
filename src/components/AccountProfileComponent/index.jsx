@@ -2,14 +2,11 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import DropDownControls from "../MyPageCountriesDropDownControls";
-// import CountryDropDown from "components/dropdowns/MyPageMobileCountryDropDown";
 import CloseIcon from "../../assets/myInfo/close.png";
 import ProfileIcon from "../../assets/myInfo/profile.png";
 import big_1 from "../../assets/myInfo/lv3.png";
 import big_2 from "../../assets/myInfo/lv3.png";
 import big_3 from "../../assets/myInfo/lv3.png";
-// import big_4 from "../../images/newImages/lv_4.png";
-// import big_5 from "../../images/newImages/lv_5.png";
 import Logout from "../../assets/myInfo/logout.png";
 import InboxIcon from "../../assets/myInfo/inbox.png";
 import calendar from "../../assets/myInfo/calendar.png";
@@ -22,7 +19,6 @@ import TelegramLogo from "../../assets/myInfo/telegram.png";
 import ArrowUpWhite from "../../assets/myInfo/down-arrow.png";
 import ArrowDown from "../../assets/myInfo/down-arrow.png";
 import ArrowUp from "../../assets/myInfo/down-arrow.png";
-// import ArrowDownWhite from "../../images/arrows/arrow_down_white.png";
 import LeftArrowIcon from '../../assets/myInfo/left-arrow.png'
 import CountryDropDown from '../CountryDropDown';
 import { isIOS } from 'react-device-detect';
@@ -94,24 +90,17 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated, subActiveB
 
     const CountryButton = (
         <div style={{
-            // height: '9.375rem',
-            // width: '23.75rem',
             paddingBottom: '0.6875rem', paddingTop: '0.875rem', paddingLeft: '0.9rem',
-            // height: '9.3125rem', width: '23.75rem',
             width: '100%', height: '100%',
-            // marginRight: '0.9375rem',
             display: 'flex', alignItems: 'center', justifyContent: '',
             background: 'linear-gradient(to top, #7f5f3f, #a67c52)',
-            // paddingLeft: '2.4rem',
             paddingRight: '1.8rem',
-            // marginTop: '0.15rem',
             borderRadius: '0.7rem',
-            // marginLeft: '0.5rem'
-        }} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-4 shadow-plain2">
-            <div style={{ marginRight: '1.7rem', marginTop: '0.1rem', marginLeft: '2rem' }} className="rounded-full h-full flex items-center justify-center">
-                <img style={{ width: '7.0625rem', height: '' }} className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
+        }}>
+            <div style={{ marginRight: '1.7rem', marginTop: '0.1rem', marginLeft: '2rem' }}>
+                <img style={{ width: '7.0625rem'}} className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label style={{ marginRight: '2.45rem', fontSize: '3rem', marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', textShadow: '#000000 0rem 0rem 1rem' }} className="font-spoqaBold text-white cursor-pointer">{country}</label>
+            <label style={{ marginRight: '2.45rem', fontSize: '3rem', marginTop: '0.225rem', fontFamily: 'SpoqaHanSansNeoBold', color: '#ffdfbd', textShadow: '#000000 0rem 0rem 1rem' }}>{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen} />
         </div>
     )
@@ -128,7 +117,6 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated, subActiveB
                     <button onClick={() => navigate("/mypage", { state: { path } })
                     } className="absolute cursor-pointer" style={{ top:  isIOS ? '2.6375rem' :  '2.9375rem', left: '3.6875rem', position: 'absolute', background: 'bottom' }}>
                         <img
-                            // onClick={() => history.push('/main')}
                             style={{ height: '3.625rem', width: '2.3125rem', transform: 'rotate(180deg)' }}
                             className="w-9"
                             src={LeftArrowIcon}
@@ -206,7 +194,7 @@ const AccountProfileComponent = ({ isAuthenticated, setAuthenticated, subActiveB
                         <div className='dropdown-mypage' onClick={() => setCountryOpen((prev => !prev))}>
 
                             <DropDownControls buttonChild={CountryButton} isDropdownOpen={isCountryOpen} setDropdownOpen={setCountryOpen} >
-                                <div className="absolute" style={{ right: "0rem", top: '11rem', position: 'absolute', zIndex: '40' }}>
+                                <div style={{ right: "0rem", top: '11rem', position: 'absolute', zIndex: '40' }}>
                                     <CountryDropDown setCountry={setCountry} country={country} isBig='true' />
                                 </div>
                             </DropDownControls>

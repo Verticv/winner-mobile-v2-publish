@@ -45,8 +45,8 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                 title='확인 / 필독사항'
                 message1='입금 시 반드시 회원님의 성함으로 입금 바랍니다.'
                 isFirstMessageDark
-                message2=' 입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후'
-                message2_1=' 점검 시간을 피해 신청해 주시기 바랍니다.'
+                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후'
+                message2_1='점검 시간을 피해 신청해 주시기 바랍니다.'
                 message3='입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을'
                 message3_1='통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.'
                 message4=' 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
