@@ -12,6 +12,7 @@ import password from '../../assets/myInfo/password.png'
 import DatePicker from 'react-datepicker'
 import CalendarIcon from '../../assets/myPage/CalendarIcon.png';
 import CloseIcon from "../../assets/myInfo/close.png";
+import { getMonth, getYear } from 'date-fns'
 
 const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
 
@@ -19,6 +20,48 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
     const [toSignup, setSignup] = useState(false)
     const [showCompletePopup, setCompletePopup] = useState(false)
     const [endDate, setEndDate] = useState(null)
+
+    const months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+    const [selectedYear, setSelectedYear] = useState(getYear(new Date()));
+    const [selectedMonth, setSelectedMonth] = useState(
+        months[getMonth(new Date())]
+    );
+
+    const getCurrentYear = new Date().getFullYear(); // current year
+    const listOfYears = Array.from({ length: 101 }, (_, i) => getCurrentYear - i);
+
+    const YearButton = () => (
+        <div style={{
+            backgroundColor: "#3b3b3b",
+            borderColor: "transparent",
+            display: 'flex',
+            alignItems: 'center',
+            borderWidth: '0.4rem',
+            color: '#ccc2b6',
+            width: '10rem',
+            height: '4rem',
+            justifyContent: 'center'
+        }}>
+            <p style={{ fontFamily: 'SpoqaHanSansNeoBold', textAlign: 'center', fontSize: '2.6rem', paddingTop:'0.2rem' }}>{selectedYear}년</p>
+        </div>
+    );
+
+    const MonthButton = ({ selectedMonth }) => (
+        <div style={{
+            backgroundColor: "#3b3b3b",
+            borderColor: "transparent",
+            display: 'flex',
+            alignItems: 'center',
+            borderWidth: '0.4rem',
+            color: '#ccc2b6',
+            width: '7rem',
+            height: '4rem',
+            justifyContent: 'center'
+        }}>
+            <p style={{ fontFamily: 'SpoqaHanSansNeoBold', textAlign: 'center', fontSize: '2.6rem', paddingTop:'0.2rem' }}>{selectedMonth}월</p>
+        </div>
+    );
 
     const navigate = useNavigate()
 
@@ -257,17 +300,88 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                             customInput={<CustomInput />}
                                             locale="ko"
                                             selected={endDate}
-                                            onChange={(date) => setEndDate(date)}
                                             dateFormat="yyyy-MM-dd"
                                             dateFormatCalendar="yyyy년 MM월"
                                             disabledKeyboardNavigation={true}
-                                            onFocus={e=> e.onClick}
                                             onBlur={() => setSelectedInput(false)}
-                                            onKeyDown={(e) => {
-                                                e.preventDefault();
-                                            }}
-                                            onChangeRaw={(e) => e.preventDefault()}
+                                            // onKeyDown={(e) => {
+                                            //     e.preventDefault();
+                                            // }}
+                                            // onChangeRaw={(e) => e.preventDefault()}
                                             popperPlacement="bottom"
+                                            renderCustomHeader={({
+                                                date,
+                                                changeYear,
+                                                changeMonth,
+                                                decreaseMonth,
+                                                increaseMonth,
+                                                prevMonthButtonDisabled,
+                                                nextMonthButtonDisabled,
+                                            }) => {
+                                                return (
+                                                    <div
+                                                        style={{
+                                                            display: "flex",
+                                                            justifyContent: "center",
+                                                            height: '4rem'
+                                                        }}
+                                                    >
+                                                        <button
+                                                            type="button"
+                                                            className="react-datepicker__navigation react-datepicker__navigation--next"
+                                                            aria-label="Next Month"
+                                                            onClick={increaseMonth}
+                                                            disabled={nextMonthButtonDisabled}
+                                                        >
+                                                            <span className="react-datepicker__navigation-icon react-datepicker__navigation-icon--next">
+                                                                Next Month
+                                                            </span>
+                                                        </button>
+                                                        <div style={{ position: 'relative' }}>
+                                                            <YearButton />
+                                                            <select
+                                                                style={{ width: '10rem', height: '4rem', backgroundColor: '#fff', position: 'absolute', top: 0, left: 0, opacity: 0 }}
+                                                                value={selectedYear}
+                                                                onChange={e => {
+                                                                    setSelectedYear(e.currentTarget.value)
+                                                                    changeYear(e.currentTarget.value);
+                                                                }}
+                                                            >
+                                                                {listOfYears.map(item => (
+                                                                    <option key={item} value={item}>
+                                                                        {item}
+                                                                    </option>
+                                                                ))}
+                                                            </select>
+                                                        </div>
+                                                        <div style={{ position: 'relative' }}>
+                                                            <MonthButton selectedMonth={selectedMonth} />
+                                                        </div>
+
+                                                        <button
+                                                            type="button"
+                                                            className="react-datepicker__navigation react-datepicker__navigation--previous"
+                                                            aria-label="Previous Month"
+                                                            onClick={decreaseMonth}
+                                                            disabled={prevMonthButtonDisabled}
+                                                        >
+                                                            <span className="react-datepicker__navigation-icon react-datepicker__navigation-icon--previous">
+                                                                Previous Month
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                )
+                                            }}
+                                            onChange={(date) => {
+                                                setEndDate(date)
+                                                setSelectedYear(getYear(date));
+                                                setSelectedMonth(months[getMonth(date)]);
+                                            }}
+                                            onMonthChange={(date) => {
+                                                setSelectedMonth(months[getMonth(date)]);
+                                                setSelectedYear(getYear(date));
+                                              }}
+                                              onYearChange={(date) => setSelectedYear(getYear(date))}
                                             popperModifiers={{
                                                 flip: {
                                                     behavior: ["bottom"] // don't allow it to flip to be above
