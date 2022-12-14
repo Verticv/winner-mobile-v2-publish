@@ -444,7 +444,6 @@ const SportsGamePolicy = ({ setSelectedTab, subActiveButton, setSubActiveButton 
     useEffect(() => {
         window.onpopstate = e => {
             setTimeout(() => {
-                navigate('/cscenter')
                 setSubActiveButton('/cscenter/all/policy/sportsgame/soccer')
             }, 0)
 

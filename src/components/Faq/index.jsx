@@ -40,7 +40,6 @@ const Faq = ({ subActiveButton, setSubActiveButton }) => {
         window.onpopstate = e => {
 
             setTimeout(() => {
-                navigate('/cscenter')
                 setSubActiveButton('/cscenter/all/faq')
             }, 0)
         }

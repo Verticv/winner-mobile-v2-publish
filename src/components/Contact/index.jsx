@@ -124,7 +124,6 @@ const Contact = ({ subActiveButton, setSubActiveButton }) => {
     useEffect(() => {
         window.onpopstate = e => {
             setTimeout(() => {
-                navigate('/cscenter')
                 setSubActiveButton('/cscenter/all/contact/all')
             }, 0)
         }
