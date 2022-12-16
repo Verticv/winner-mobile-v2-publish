@@ -6,7 +6,7 @@
     border: 0.1875rem solid rgb(89, 76, 73);
     margin-bottom: 0.625rem;
     background: rgb(65, 57, 55);
-    letter-spacing: -0.07rem;
+    letter-spacing: -0.17rem;
     font-family: 'SpoqaHanSansNeoMedium';
 
     .alert-icon-and-text {
@@ -37,43 +37,8 @@
         .first-span {
             color: rgb(255, 223, 189);
             font-size: 2.625rem;
-            margin-right: 13.5rem;
-
-            span {
-                margin-right: 0.8rem;
-                margin-left: 0.2rem;
-            }
-        }
-
-        .second-span {
-            color: rgb(204, 194, 182);
-            font-size: 2.625rem;
-            margin-right: 6.875rem;
-            margin-top: 1.6rem;
-            line-height: 1.37;
-
-            span {
-                margin-right: 0.6rem;
-                margin-left: 0.2rem;
-            }
-        }
-
-        .second-span2 {
-            color: rgb(204, 194, 182);
-            font-size: 2.625rem;
-            margin-right: 6.875rem;
-            line-height: 1.37;
-
-            span {
-                margin-right: 0.6rem;
-                margin-left: 0.2rem;
-            }
-        }
-        .third-span {
-            color: rgb(204, 194, 182);
-            font-size: 2.625rem;
-            margin-top: 1.3rem;
             line-height: 1.3;
+            display: flex;
 
             span {
                 margin-right: 0.6rem;
@@ -81,24 +46,15 @@
             }
         }
 
-        .third-span2 {
+        .next-span {
             color: rgb(204, 194, 182);
-            font-size: 2.625rem;
-            line-height: 1.3;
-
-            span {
-                margin-right: 0.6rem;
-                margin-left: 0.2rem;
-            }
-        }
-
-        .forth-span {
-            color: #ccc2b6;
             font-size: 2.625rem;
             margin-top: 1.6rem;
+            line-height: 1.3;
+            display: flex;
 
             span {
-                margin-right: 0.3rem;
+                margin-right: 0.6rem;
                 margin-left: 0.2rem;
             }
         }

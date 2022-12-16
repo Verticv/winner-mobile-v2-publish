@@ -1,7 +1,6 @@
 import React from 'react'
 import DownArrowIcon from '../../assets/down-arrow1.png'
 import Dropdown from '../../components/Dropdown';
-// import GlobeIcon from '../../images/newImages/world.png'
 
 const DropDownInput = ({ isLeagueSelection = true, isBetCombination = false, withArrow }) => {
 
@@ -29,23 +28,24 @@ const DropDownInput = ({ isLeagueSelection = true, isBetCombination = false, wit
         </div>
     )
 
-    return (
+    else return (
         <div
             style={{
-                width: withArrow ? '34.06rem' : '', height: withArrow ? '7rem' : '', fontSize: withArrow ? '2.625rem' : '',
+                width: withArrow ? '34.06rem' : '',
+                height: withArrow ? '7rem' : '',
+                fontSize: withArrow ? '2.625rem' : '',
+                background: withArrow ? '#1a1a1a' : '',
+                border: withArrow ? '0.1875rem solid #404040' : '',
+                position: withArrow ? 'relative' : '',
+                borderRadius: withArrow ? '0.5rem' : '',
                 marginLeft: '1.875rem',
-                background: withArrow ? '#1a1a1a' : '', border: withArrow ? '0.1875rem solid #404040' : '', position: withArrow ? 'relative' : '', borderRadius: withArrow ? '0.5rem' : '',
-                marginTop: '0.1rem'
+                marginTop:'0.04rem'
             }}
-            className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-between items-center tracking-minus05"
         >
-            <div style={{ width: '34.06rem', height: '7rem', fontSize: '2.625rem' }} className="w-full rounded-2xl flex h-full bg-white group">
-                <div
-                    style={{ borderWidth: '1px' }}
-                    className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight"
-                >
+            <div style={{ width: '34.06rem', height: '7rem', fontSize: '2.625rem' }}>
+                <div style={{ borderWidth: '1px' }} >
                     <Dropdown labelStyle={{ marginLeft: '1.75rem', color: '#7b7b7b' }} options={isLeagueSelection === true ? carrierOptions1 : carrierOptions2} isLeagueSelection={isLeagueSelection}>
-                        <img style={{ width: '1.5625rem', marginRight: '1.875rem', height: '1rem', position: 'absolute', right: '0', top: '4.2rem' }} className="object-contain" src={DownArrowIcon} alt="arrow" />
+                        <img style={{ width: '1.5625rem', marginRight: '1.875rem', height: '1rem', position: 'absolute', right: '0', top: '4.2rem' }} src={DownArrowIcon} alt="arrow" />
                     </Dropdown>
                 </div>
             </div>

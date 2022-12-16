@@ -38,12 +38,8 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
 
             <WarningMessage
                 title='확인 / 필독사항'
-                message1='환전 신청 시 현재 보유머니에서 차감되며, 회원님의'
-                message1_1='계좌번호로 입금됩니다.'
-                mr1='0rem'
-                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후'
-                message2_1='점검 시간을 피해 신청해 주시기 바랍니다.'
-                mr2='0rem'
+                message1='환전 신청 시 현재 보유머니에서 차감되며, 회원님의 계좌번호로 입금됩니다.'
+                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.'
                 message3='자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
             />
             <div style={{
@@ -59,12 +55,8 @@ const MoneyExchange = ({ subActiveButton, setSubActiveButton }) => {
                         >
                             환전금액 입력
                         </div>
-                        <div
-                            style={{ fontSize: '2.625rem', color: '#c8c8c8', marginTop: '0.8rem', lineHeight: '1.42', marginLeft: '-0.2rem' }}
-                            className="font-spoqa tracking-tight text-gray-r7c7c7c flex items-center"
-                        >
+                        <div style={{ fontSize: '2.625rem', color: '#c8c8c8', marginTop: '0.8rem', lineHeight: '1.42', marginLeft: '-0.2rem', marginRight: '6rem' }} >
                             환전 신청을 완료하게 되면 보유머니에서 신청한 금액만큼
-                            <br />
                             차감되며 고객님의 계좌번호로 입금됩니다.
                         </div>
 

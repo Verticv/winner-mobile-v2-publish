@@ -140,17 +140,15 @@ const DateSearchBar = ({
             )}
 
             <div className="second-row">
-                <div className="date-picker left-date-picker relative" style={{ position: 'relative' }}>
+                <div className="date-picker left-date-picker" style={{ position: 'relative' }}>
                     <DatePicker
                         showYearDropdown
                         yearDropdownItemNumber={100}
                         customInput={
                             <CustomInput />
                         }
-                        className="place-color-grey date-picker left-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b"
                         locale="ko"
                         selected={startDate}
-                        // onChange={(date) => setStartDate(date)}
                         dateFormat="yyyy-MM-dd"
                         dateFormatCalendar="yyyy년 MM월"
                         disabledKeyboardNavigation={true}
@@ -247,122 +245,118 @@ const DateSearchBar = ({
                     <img src={CalendarIcon} alt="" style={{ width: '3.5rem' }} className="w-14 absolute right-8" />
                 </div>
                 {!disableRange && <span className='Signal'>~</span>}
-                <div className="date-picker right-date-picker relative " style={{ position: 'relative' }}>
+                <div className="date-picker right-date-picker" style={{ position: 'relative' }}>
                     {hasDateSuggestion ? (
                         <>
-                            <div className=' -ml-8'>
-                                <DatePicker
-                                    showYearDropdown
-                                    yearDropdownItemNumber={100}
-                                    customInput={<CustomInput />}
-                                    locale="ko"
-                                    selected={endDate}
-                                    dateFormat="yyyy-MM-dd"
-                                    dateFormatCalendar="yyyy년 MM월"
-                                    disabledKeyboardNavigation={true}
-                                    onKeyDown={(e) => {
-                                        e.preventDefault();
-                                    }}
-                                    onChangeRaw={(e) => e.preventDefault()}
-                                    popperPlacement="bottom"
-                                    renderCustomHeader={({
-                                        date,
-                                        changeYear,
-                                        changeMonth,
-                                        decreaseMonth,
-                                        increaseMonth,
-                                        prevMonthButtonDisabled,
-                                        nextMonthButtonDisabled,
-                                    }) => {
-                                        return (
-                                            <div
-                                                style={{
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    height: '4rem'
-                                                }}
+                            <DatePicker
+                                showYearDropdown
+                                yearDropdownItemNumber={100}
+                                customInput={<CustomInput />}
+                                locale="ko"
+                                selected={endDate}
+                                dateFormat="yyyy-MM-dd"
+                                dateFormatCalendar="yyyy년 MM월"
+                                disabledKeyboardNavigation={true}
+                                onKeyDown={(e) => {
+                                    e.preventDefault();
+                                }}
+                                onChangeRaw={(e) => e.preventDefault()}
+                                popperPlacement="bottom"
+                                renderCustomHeader={({
+                                    date,
+                                    changeYear,
+                                    changeMonth,
+                                    decreaseMonth,
+                                    increaseMonth,
+                                    prevMonthButtonDisabled,
+                                    nextMonthButtonDisabled,
+                                }) => {
+                                    return (
+                                        <div
+                                            style={{
+                                                display: "flex",
+                                                justifyContent: "center",
+                                                height: '4rem'
+                                            }}
+                                        >
+                                            <button
+                                                type="button"
+                                                className="react-datepicker__navigation react-datepicker__navigation--next"
+                                                aria-label="Next Month"
+                                                onClick={increaseMonth}
+                                                disabled={nextMonthButtonDisabled}
                                             >
-                                                <button
-                                                    type="button"
-                                                    className="react-datepicker__navigation react-datepicker__navigation--next"
-                                                    aria-label="Next Month"
-                                                    onClick={increaseMonth}
-                                                    disabled={nextMonthButtonDisabled}
+                                                <span className="react-datepicker__navigation-icon react-datepicker__navigation-icon--next">
+                                                    Next Month
+                                                </span>
+                                            </button>
+                                            <div style={{ position: 'relative' }}>
+                                                <YearButton />
+                                                <select
+                                                    style={{ width: '10rem', height: '4rem', backgroundColor: '#fff', position: 'absolute', top: 0, left: 0, opacity: 0 }}
+                                                    value={selectedYear}
+                                                    onChange={e => {
+                                                        setSelectedYear(e.currentTarget.value)
+                                                        changeYear(e.currentTarget.value);
+                                                    }}
                                                 >
-                                                    <span className="react-datepicker__navigation-icon react-datepicker__navigation-icon--next">
-                                                        Next Month
-                                                    </span>
-                                                </button>
-                                                <div style={{ position: 'relative' }}>
-                                                    <YearButton />
-                                                    <select
-                                                        style={{ width: '10rem', height: '4rem', backgroundColor: '#fff', position: 'absolute', top: 0, left: 0, opacity: 0 }}
-                                                        value={selectedYear}
-                                                        onChange={e => {
-                                                            setSelectedYear(e.currentTarget.value)
-                                                            changeYear(e.currentTarget.value);
-                                                        }}
-                                                    >
-                                                        {listOfYears.map(item => (
-                                                            <option key={item} value={item}>
-                                                                {item}
-                                                            </option>
-                                                        ))}
-                                                    </select>
-                                                </div>
-                                                <div style={{ position: 'relative' }}>
-                                                    <MonthButton selectedMonth={selectedMonth} />
-                                                </div>
-
-                                                <button
-                                                    type="button"
-                                                    className="react-datepicker__navigation react-datepicker__navigation--previous"
-                                                    aria-label="Previous Month"
-                                                    onClick={decreaseMonth}
-                                                    disabled={prevMonthButtonDisabled}
-                                                >
-                                                    <span className="react-datepicker__navigation-icon react-datepicker__navigation-icon--previous">
-                                                        Previous Month
-                                                    </span>
-                                                </button>
+                                                    {listOfYears.map(item => (
+                                                        <option key={item} value={item}>
+                                                            {item}
+                                                        </option>
+                                                    ))}
+                                                </select>
                                             </div>
-                                        )
-                                    }}
-                                    onChange={(date) => {
-                                        setEndDate(date)
-                                        setSelectedYear(getYear(date));
-                                        setSelectedMonth(months[getMonth(date)]);
-                                    }}
-                                    onMonthChange={(date) => {
-                                        setSelectedMonth(months[getMonth(date)]);
-                                        setSelectedYear(getYear(date));
-                                    }}
-                                    onYearChange={(date) => setSelectedYear(getYear(date))}
-                                    popperModifiers={{
-                                        flip: {
-                                            behavior: ["bottom"] // don't allow it to flip to be above
-                                        },
-                                        preventOverflow: {
-                                            enabled: true // tell it not to try to stay within the view (this prevents the popper from covering the element you clicked)
-                                        },
-                                        hide: {
-                                            enabled: true // turn off since needs preventOverflow to be enabled
-                                        }
-                                    }}
-                                />
-                            </div>
+                                            <div style={{ position: 'relative' }}>
+                                                <MonthButton selectedMonth={selectedMonth} />
+                                            </div>
+
+                                            <button
+                                                type="button"
+                                                className="react-datepicker__navigation react-datepicker__navigation--previous"
+                                                aria-label="Previous Month"
+                                                onClick={decreaseMonth}
+                                                disabled={prevMonthButtonDisabled}
+                                            >
+                                                <span className="react-datepicker__navigation-icon react-datepicker__navigation-icon--previous">
+                                                    Previous Month
+                                                </span>
+                                            </button>
+                                        </div>
+                                    )
+                                }}
+                                onChange={(date) => {
+                                    setEndDate(date)
+                                    setSelectedYear(getYear(date));
+                                    setSelectedMonth(months[getMonth(date)]);
+                                }}
+                                onMonthChange={(date) => {
+                                    setSelectedMonth(months[getMonth(date)]);
+                                    setSelectedYear(getYear(date));
+                                }}
+                                onYearChange={(date) => setSelectedYear(getYear(date))}
+                                popperModifiers={{
+                                    flip: {
+                                        behavior: ["bottom"] // don't allow it to flip to be above
+                                    },
+                                    preventOverflow: {
+                                        enabled: true // tell it not to try to stay within the view (this prevents the popper from covering the element you clicked)
+                                    },
+                                    hide: {
+                                        enabled: true // turn off since needs preventOverflow to be enabled
+                                    }
+                                }}
+                            />
                             <img style={{ top: '3.44rem', right: '2rem', width: '3.5rem' }} src={CalendarIcon} alt="" className="w-14 absolute" />
                         </>
                     ) : (
-                        <div className='mt-7 -ml-8 text-15px'>
-                            <DropDownInput isLeagueSelection={false} />
-                        </div>
+                        <DropDownInput isLeagueSelection={false} />
                     )}
                 </div>
             </div>
+
             {hasDateSuggestion ? (
                 <div
-                    // style={{ margin: '0.75rem 1.875rem', marginBottom: withBlackButton ? '0.75rem' : '0' }} 
                     className="buttons-container2">
                     <div className="common-button12">
                         <div className="text-con">

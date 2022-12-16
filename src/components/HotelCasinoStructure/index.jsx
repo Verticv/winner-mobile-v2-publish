@@ -21,93 +21,94 @@ const HotelCasinoStructure = () => {
   )
 
   const Item = ({ number = "1.", title = "게임종류선택", text = "다양한 게임을 선택할 수 있습니다.", marginTop, text2 = null, text3 = null, color1 = null, color2 = null, color3 = null, isflex, withoutP }) => (
-    <div className="flex flex-col space-y-4px" style={{ fontFamily: 'SpoqaHanSansNeoMedium', lineHeight: '1.4', marginTop: marginTop }}>
-      <div className="flex text-18px tracking-tight font-spoqaBold space-x-2px flex h-18px items-center" style={{ fontFamily: 'SpoqaHanSansNeoBold', fontSize: '2.825rem' }}>
-        <span className="text-blue-r0056a6" style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
-        <span className="text-gray-r585858" style={{ color: '#ccc2b6' }}>{title}</span>
+    <div style={{ fontFamily: 'SpoqaHanSansNeoMedium', lineHeight: '1.4', marginTop: marginTop }}>
+      <div style={{ fontFamily: 'SpoqaHanSansNeoBold', fontSize: '2.825rem' }}>
+        <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
+        <span style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <span style={{ color: "#828282", fontSize: '2.625rem', display: isflex ? 'flex' : '' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text} <span className="ml-2px text-blue-r0056a6" style={{ color: '#4c98ff', marginLeft: '0.5rem', marginRight: '0.2rem' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem' }} className="mr-2px">{color2}</span><p style={{ margin: isflex || withoutP ? '0' : '' }}>{color3}</p></span>
+      <span style={{ color: "#828282", fontSize: '2.625rem', display: isflex ? 'flex' : '' }}>{text} <span style={{ color: '#4c98ff', marginLeft: '0.5rem', marginRight: '0.2rem' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem' }}>{color2}</span><p style={{ margin: isflex || withoutP ? '0' : '' }}>{color3}</p></span>
       {text2 && (
-        <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: isflex ? '-0.2rem' : '' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text2}</span>
+        <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: isflex ? '-0.2rem' : '' }}>{text2}</span>
       )}
       {text3 && (
-        <span style={{ color: "#8c8c8c", display: 'flex' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text3}</span>
+        <span style={{ color: "#8c8c8c", display: 'flex' }}>{text3}</span>
       )}
     </div>
   )
 
   const LongItem = ({ number = "4.", title = "메뉴", marginTop, text = "결과 : 경기결과 확인 가능", text2 = "팔레이 : 팔레이(다폴더) 리스트 확인 가능", text3 = "내베팅 : 상세한 베팅내역 확인 가능  ", text4 = "베팅규정 : 베팅규정 확인 가능", text5 }) => (
-    <div className="flex flex-col space-y-4px" style={{ fontFamily: 'SpoqaHanSansNeoMedium', lineHeight: '1.4', marginTop: marginTop, fontSize: '2.625rem' }}>
-      <div className="flex text-18px tracking-tight font-spoqaBold space-x-2px flex h-18px items-center" style={{ fontFamily: 'SpoqaHanSansNeoBold', fontSize: '2.825rem' }}>
-        <span className="text-blue-r0056a6" style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
-        <span className="text-gray-r585858" style={{ color: '#ccc2b6' }}>{title}</span>
+    <div style={{ fontFamily: 'SpoqaHanSansNeoMedium', lineHeight: '1.4', marginTop: marginTop, fontSize: '2.625rem' }}>
+      <div style={{ fontFamily: 'SpoqaHanSansNeoBold', fontSize: '2.825rem' }}>
+        <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
+        <span style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-        <img src={Dot} className="object-none mr-4px" alt="" style={{ marginRight: '0.6rem', marginTop: '-0.2', width: '0.75rem' }} />
-        <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text}</span>
+      <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
+        <img src={Dot} alt="" style={{ marginRight: '0.6rem', marginTop: '-0.2', width: '0.75rem' }} />
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text}</span>
       </div>
-      <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text2}</span>
+      <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
+        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text2}</span>
       </div>
-      <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text3}</span>
+      <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
+        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text3}</span>
       </div>
-      <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text4}</span>
+      <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
+        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text4}</span>
       </div>
       {text5 && (
-        <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-          <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-          <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text5}</span>
+        <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
+          <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
+          <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text5}</span>
         </div>
       )}
     </div>
   )
   const LongItem2 = ({ number = "8.", title = "메뉴", marginTop, text = "내베팅 : 상세한 베팅내역 확인 가능", text2 = "팔레이 : 팔레이(다폴더) 리스트 확인 가능", text1_1, marginBottom }) => (
-    <div className="flex flex-col space-y-4px" style={{ fontFamily: 'SpoqaHanSansNeoMedium', lineHeight: '1.4', marginTop: marginTop, fontSize: '2.625rem', marginBottom: marginBottom }}>
-      <div className="flex text-18px tracking-tight font-spoqaBold space-x-2px flex h-18px items-center" style={{ fontFamily: 'SpoqaHanSansNeoBold', fontSize: '2.825rem' }}>
-        <span className="text-blue-r0056a6" style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
-        <span className="text-gray-r585858" style={{ color: '#ccc2b6' }}>{title}</span>
+    <div style={{ fontFamily: 'SpoqaHanSansNeoMedium', lineHeight: '1.4', marginTop: marginTop, marginBottom: marginBottom }}>
+      <div style={{ fontFamily: 'SpoqaHanSansNeoBold', fontSize: '2.825rem' }}>
+        <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
+        <span style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-        <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem', marginTop: '-0.2' }} />
-        <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text}</span>
+      <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
+        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem', marginTop: '-0.2' }} />
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text}</span>
       </div>
       {text1_1 && (
-        <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-          <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem', marginTop: '-0.2', visibility: 'hidden' }} />
-          <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text1_1}</span>
+        <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
+          <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem', marginTop: '-0.2', visibility: 'hidden' }} />
+          <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text1_1}</span>
         </div>
       )}
-      <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text2}</span>
+      <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
+        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text2}</span>
       </div>
     </div>
   )
 
   return (
-    <div style={{ borderRadius: "1em", }} className="w-full bg-gray-fafafa border border-gray-dddddd p-30px space-y-30px">
+    <div style={{ borderRadius: "1em" }}>
 
-      <div className="flex space-x-20px items-start" style={{ marginTop: '-0.3rem' }}>
-        <img className="object-none" src={Image1} alt="" style={{ width: '70rem' }} />
-        <div style={{ backgroundColor: "#2b2b2a", height: "", marginTop: '1.5rem', borderRadius: '0.5rem' }} className="w-full h-full rounded-xl p-20px">
+      <div style={{ marginTop: '-0.3rem' }}>
+        <img src={Image1} alt="" style={{ width: '70rem' }} />
+        <div style={{ backgroundColor: "#2b2b2a", marginTop: '1.5rem', borderRadius: '0.5rem' }}>
           <TitleText titleText='로비화면' noNumber />
           <div style={{ background: '#494745', height: '0.1875rem', width: '94.5%', margin: 'auto' }} />
-          {/* <div className="mt-20px w-full h-px bg-gray-dddddd"></div> */}
-          <div className="pt-20px space-y-23px" style={{ padding: '1.8rem', letterSpacing: '-0.06rem' }}>
+          <div style={{ padding: '1.8rem', letterSpacing: '-0.06rem' }}>
             <Item title="아이디&보유머니" text="본인의 아이디와 보유머니 표시" marginTop='-0.6rem' />
             <Item number="2." title="언어설정" text="한국어, 중국어, 영어, 일본어 설정 가능" marginTop='-0.6rem' />
             <LongItem2 number='3.' text='화면설정 : 전체화면/축소화면 설정 가능' text2='메인으로 : 메인으로 이동 가능' marginTop='-0.5rem' />
             <Item number="4." title="업체별 정렬" text="카지노 업체별 테이블 정렬 가능" marginTop='1.5rem' />
             <Item number="5." title="베팅한도" text="테이블의 ▼ 버튼을 누르면" text2="해당 테이블의 상세 베팅한도 확인 가능" isflex />
             <Item number="6." title="게임입장" text="원하는 테이블의 [입장]버튼을 누르면" text2="게임테이블로 이동됩니다." isflex marginTop='1.4rem' />
-            <div style={{ width: "fit-content", padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }} className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px mt-60px">알아두세요!</div>
-            <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', marginTop: '0.35rem' }}>
-              <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">※ 스피드게임 : 45초 베팅시간 제공
+            <div style={{ width: "15.8rem", flexShrink: 0, padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }}>
+              알아두세요!
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.35rem' }}>
+              <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>※ 스피드게임 : 45초 베팅시간 제공
               </span>
             </div>
           </div>
@@ -150,7 +151,7 @@ const HotelCasinoStructure = () => {
             <Item title="베팅구역" text="플레이어, 뱅커, 타이, 플레이어페어, 뱅커페어 등" text2="각 베팅구역을 누르면 베팅이 가능합니다." isflex />
             <Item number="2." title="베팅시간" text="베팅 가능한 시간을 표시합니다." marginTop='1.5rem' />
             <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', marginTop: '-2.1rem' }}>
-              <span style={{ color: "#f45400", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+              <span style={{ color: "#f45400", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                 ※ 45초 베팅시간 제공
               </span>
             </div>

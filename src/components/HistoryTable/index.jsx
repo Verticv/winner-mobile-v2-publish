@@ -104,11 +104,21 @@ const HistoryTable = ({
                 background: 'linear-gradient(to top, #1f1f1e, #3b3b3b 50%, #4a4a4a)',
                 boxShadow: '0 0 0.5rem 0 rgba(0, 0, 0, 0.6)',
                 borderRadius: '1rem',
-                position: 'relative'
-            }} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
-                <div style={{ borderRadius: '1rem', width: '100%', height: '100%', background: `${containerBackground && index % 2 ? '#2e2e2e' : '#323232'}`, paddingRight: '1.875rem', padding: '2.125rem 2.7rem', paddingTop: hasLeftInput ? (hasButton ? '2.4rem' : '3.3rem') : '2.4rem', display: 'flex', alignItems: 'center' }} className="flex flex-wrap items-center w-full h-full">
+            }}>
+                <div style={{
+                    borderRadius: '1rem',
+                    width: '100%',
+                    height: '100%',
+                    background: containerBackground && index % 2 ? '#2e2e2e' : '#323232',
+                    paddingRight: '1.875rem',
+                    padding: '2.125rem 2.7rem',
+                    paddingTop: hasLeftInput ? (hasButton ? '2.4rem' : '3.3rem') : '2.4rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    position: 'relative'
+                }}>
                     {hasLeftInput && (
-                        <div style={{ width: '5.8125rem', position: 'relative', marginRight: '1.35rem', marginTop: '-0.2rem' }} className="relative text-left">
+                        <div style={{ width: '5.8125rem', position: 'relative', marginRight: '1.35rem', marginTop: '-0.2rem' }}>
                             <label className="form-control">
                                 <input
                                     className='w-12 h-12'
@@ -150,7 +160,7 @@ const HistoryTable = ({
                                 }
                                 return (
                                     <div key={index} style={{ WebkitTextStroke: "0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', color: firstColumnColor, letterSpacing: '-0.07rem', marginLeft: '0.14rem', display: 'flex', width: '100%' }}>
-                                        <span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', flexShrink:0, marginRight:'0.8rem' }}>{firstRowKeysName[0]} : </span>
+                                        <span className='font-spoqaMedium text-gray-r585858' style={{ fontSize: '2.624375rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', flexShrink: 0, marginRight: '0.8rem' }}>{firstRowKeysName[0]} : </span>
                                         <span className='font-spoqa' style={{
                                             fontFamily: 'SpoqaHanSansNeo', color: '', display: 'inline-flex',
                                             wordBreak: 'break-all',
@@ -202,23 +212,30 @@ const HistoryTable = ({
                                 )}
                             </div>
                         ) : hasButton &&
-                        <button style={{ width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length - 1].buttonColor || 'red', position: 'absolute', top: '', right: '1.9rem', borderRadius: '1.1rem', boxShadow: 'rgb(0 0 0 / 60%) 0px 0.375rem 0px 0px' }} className="hover change-top">
-                            <div style={{
-                                padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : '2.2rem 2rem 2rem 2.2rem' : card[card.length - 1].winLoseComplete ? '2.2rem 2rem 2rem 2.2rem' : ''}`
+                        <div style={{ position: 'absolute', right: '1.9rem', height: '100%', display: 'flex', alignItems: 'center' }}>
+                            <button className="hover change-top" style={{
+                                width: '10.875rem',
+                                height: '10.875rem',
+                                backgroundColor: card[card.length - 1].buttonColor || 'red',
+                                borderRadius: '1.1rem',
+                                boxShadow: 'rgb(0 0 0 / 60%) 0px 0.375rem 0px 0px'
                             }}>
-                                <span
-                                    style={{
-                                        fontSize: '2.7rem',
-                                        lineHeight: '1.25',
-                                        width: '10.875rem',
-                                        marginTop: '0.2375rem',
-                                        fontFamily: 'SpoqaHanSansNeoMedium',
-                                        color: card[card.length - 1].textColor ? card[card.length - 1].textColor : '#ffdfbd',
-                                    }}
-                                >{card[card.length - 1].buttonText || '진행중'}
-                                </span>
-                            </div>
-                        </button>}
+                                <div style={{ padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : '2.2rem 2rem 2rem 2.2rem' : card[card.length - 1].winLoseComplete ? '2.2rem 2rem 2rem 2.2rem' : ''}` }}>
+                                    <span
+                                        style={{
+                                            fontSize: '2.7rem',
+                                            lineHeight: '1.25',
+                                            width: '10.875rem',
+                                            marginTop: '0.2375rem',
+                                            fontFamily: 'SpoqaHanSansNeoMedium',
+                                            color: card[card.length - 1].textColor ? card[card.length - 1].textColor : '#ffdfbd',
+                                        }}
+                                    >{card[card.length - 1].buttonText || '진행중'}
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    }
 
                 </div>
             </div >

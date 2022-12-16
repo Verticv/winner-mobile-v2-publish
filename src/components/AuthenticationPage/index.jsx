@@ -201,12 +201,11 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
 
             {/* SIGNUP POPUP COMPONENTS */}
             {toSignup === true && (
-                <div className='bg-register-background bg-repeat-round' style={{ position: 'fixed', overflow: 'hidden', overflowY: 'scroll', top: '0', right: '0', width: '100vw', background: 'rgba(0, 0, 0)', height: '100%', display: 'flex', justifyContent: 'center' }}>
+                <div style={{ position: 'fixed', overflow: 'hidden', overflowY: 'scroll', top: '0', right: '0', width: '100vw', background: 'rgba(0, 0, 0)', height: '100%', display: 'flex', justifyContent: 'center' }}>
                     <div style={{ zIndex: '20', width: '72.75rem', background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginTop: '2.4rem', padding: '0.1875rem', borderRadius: '2rem', height: '168.1875rem' }}>
                         <div style={{ padding: '0 7.6875rem', background: '#323232', width: '100%', height: '168rem', borderRadius: '2rem', paddingBottom: '1.3rem' }}>
                             <img
                                 onClick={() => setSignup(false)}
-                                className="absolute right-12 top-12 w-14"
                                 src={CloseIcon}
                                 alt="close_icon"
                                 style={{ position: 'absolute', right: '6rem', top: '6rem', width: '3.5rem' }}
@@ -219,8 +218,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                     <label style={{ fontSize: '2.3rem', width: '100%', color: '#c9c9c9', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', textAlign: 'center' }}>회원데이터는 안전한 서버에서 안전하게 보관됩니다.</label>
                                 </div>
                                 {/* BREAK */}
-                                <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 0 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }}>
-                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.6rem', marginTop: '1rem' }}>
+                                <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 0 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
+                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.6rem', height: '100%' }}>
                                         <input
                                             style={{ letterSpacing: '0' }}
                                             onFocus={(e) => setSelectedInput(0)}
@@ -231,8 +230,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                 </div>
                                 <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>영문, 숫자만 입력가능하며 최소 4자이상 입력하세요.</label>
                                 {/* BREAK */}
-                                <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 1 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }}>
-                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
+                                <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 1 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
+                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                         <input
                                             onFocus={(e) => setSelectedInput(1)}
                                             onBlur={(e) => setSelectedInput(false)}
@@ -244,8 +243,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                 <label style={{ marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '99%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 </label>
                                 <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '99%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>입력해주세요. (특수문자 사용불가)</label>
                                 {/* BREAK */}
-                                <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 2 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }}>
-                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
+                                <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 2 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
+                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                         <input
                                             style={{ letterSpacing: '0' }}
                                             onFocus={(e) => setSelectedInput(2)}
@@ -258,8 +257,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                 <label style={{ marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로</label>
                                 <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>입력해주세요. (특수문자 사용불가)</label>
                                 {/* BREAK */}
-                                <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 3 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }}>
-                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
+                                <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 3 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
+                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                         <input
                                             className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none"
                                             onFocus={(e) => setSelectedInput(3)}
@@ -276,10 +275,10 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                             <img style={{ marginRight: '20%', width: '1.5625rem' }} className="h-4 object-contain" src={DownArrowIcon} alt="arrow" />
                                         </Dropdown>
                                     </div>
-                                    <div style={{ marginBottom: '1.5rem', width: '37.75rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 5 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }}>
-                                        <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
+                                    <div style={{ marginBottom: '1.5rem', width: '37.75rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 5 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
+                                        <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                             <input
-                                                style={{ width: '94%', letterSpacing: '-0.01rem', marginTop: '-0.1rem' }}
+                                                style={{ width: '94%', letterSpacing: '-0.01rem' }}
                                                 placeholder="휴대폰번호(숫자만 입력)"
                                                 type='number'
                                                 pattern="\d*"
@@ -290,8 +289,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                     </div>
                                 </div>
                                 {/* BREAK */}
-                                <div style={{ marginLeft: '0.4rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 61 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }} >
-                                    <div style={{ position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', paddingLeft: '1.8rem', marginTop: '1rem' }}>
+                                <div style={{ marginLeft: '0.4rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 61 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }} >
+                                    <div style={{ position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', paddingLeft: '1.8rem', height: '100%' }}>
                                         <img src={CalendarIcon} alt="" style={{ width: '3.5rem', position: 'absolute', right: '2.5rem', top: '1.5rem' }} />
                                         <DatePicker
                                             showYearDropdown
@@ -304,10 +303,6 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                             dateFormatCalendar="yyyy년 MM월"
                                             disabledKeyboardNavigation={true}
                                             onBlur={() => setSelectedInput(false)}
-                                            // onKeyDown={(e) => {
-                                            //     e.preventDefault();
-                                            // }}
-                                            // onChangeRaw={(e) => e.preventDefault()}
                                             popperPlacement="bottom"
                                             renderCustomHeader={({
                                                 date,
@@ -399,8 +394,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                 <label style={{ marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>수기로 작성시 아이디 생성이 불가합니다.</label>
                                 <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>(달력으로 선택해주세요.)</label>
                                 {/* BREAK */}
-                                <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 6 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }} >
-                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
+                                <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 6 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }} >
+                                    <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                         <input
                                             placeholder="가입코드"
                                             onFocus={(e) => setSelectedInput(6)}
@@ -416,8 +411,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                                 <img style={{ marginRight: '20%', width: '1.5625rem' }} src={DownArrowIcon} alt="arrow" />
                                             </Dropdown>
                                         </div>
-                                        <div style={{ marginBottom: '1.5rem', width: '28.7rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 8 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '1.8rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }}>
-                                            <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
+                                        <div style={{ marginBottom: '1.5rem', width: '28.7rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 8 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '1.8rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
+                                            <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                                 <input
                                                     placeholder="예금주"
                                                     onFocus={(e) => setSelectedInput(8)}
@@ -426,8 +421,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 9 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center' }}>
-                                        <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', marginTop: '1rem' }}>
+                                    <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 9 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
+                                        <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                             <input
                                                 style={{ letterSpacing: '-0.02rem' }}
                                                 type='number'

@@ -32,7 +32,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
 
                 <div style={{ fontSize: '2.625rem' }} className="edit-info-text">
                     <div className="flex items-center h-14">
-                        <span style={{textOverflow: 'ellipsis', maxWidth: '25rem', overflow: 'hidden', whiteSpace: 'nowrap', display: 'inline-block', height:'2.625rem'}} className="input-with-text">{truncate('louie3', 10, 16)}</span>
+                        <span style={{ textOverflow: 'ellipsis', maxWidth: '25rem', overflow: 'hidden', whiteSpace: 'nowrap', display: 'inline-block', height: '2.625rem' }} className="input-with-text">{truncate('louie3', 10, 16)}</span>
                         <span>님의 회원정보를 수정합니다.</span>
                     </div>
                     <span className="flex items-center h-14" style={{ margin: '0.5rem 0 0 0.5rem' }}>아이디와 비밀번호 보안에 신경써주십시오.</span>
@@ -180,8 +180,8 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
 
 
                             <div className="form-section">
-                                <div style={{ width: "24rem", marginRight: '2.7rem', background: '#272726', flexShrink: '0', borderRadius: '0.5rem', height: '10rem' }}>
-                                    <div style={{ fontSize: '2.8125rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '1.5rem 0 0 1.25rem', letterSpacing: '-0.07rem' }}>레벨</div>
+                                <div style={{ width: "24rem", marginRight: '2.7rem', background: '#272726', flexShrink: '0', borderRadius: '0.5rem', height: '10rem', display: 'flex', alignItems: 'center' }}>
+                                    <div style={{ fontSize: '2.8125rem', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', padding: '0 0 0 1.25rem', letterSpacing: '-0.07rem' }}>레벨</div>
                                 </div>
                                 <div className="lable-or-input" style={{ height: '10rem', padding: '1.5rem 1.4rem' }}>
                                     <label style={{ letterSpacing: '-0.02rem' }}>

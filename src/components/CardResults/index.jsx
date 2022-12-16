@@ -64,8 +64,7 @@ const CardResults = ({
                             style={{ paddingLeft: bet === "left" ? '0.7rem' : '0.8rem', letterSpacing: '-0.07rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: bet === "left" ? '' : '0.1rem', paddingRight: bet === "left" ? '' : '0.15rem' }}
                             className={`${bet === "left"
                                 ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f"
-                                : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"} 
-                    flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer pr-3.5`
+                                : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"}`
                             }>
                             <span style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem' }} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{shouldTruncate ? truncate(team1, 10, 7) : team1}</span>
                             <div className="flex items-center" style={{ width: '7rem', textAlign: 'center' }}>
@@ -151,8 +150,8 @@ const CardResults = ({
     )
 
     return (
-        <div style={{ borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem', display: 'flex', alignItems: 'center', height: '8.8rem', padding: '1rem 0.3rem 0.4rem 0.4rem', paddingTop: secondCard ? '0.5rem' : '1rem', marginBottom: secondCard ? '0.05rem' : '', borderTop: secondCard ? '0.1875rem solid #252525' : '', marginTop: secondCard ? '0.5rem' : '' }} className={`flex items-center w-full p-3 pr-0 bg-gray-fefefe shadow-plain11`}>
-            <div className="flex" style={{ display: 'flex', width: width92 ? '92%' : '' }} >
+        <div style={{ borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem', display: 'flex', alignItems: 'center', height: '8.8rem', padding: '1rem 0.3rem 0.4rem 0.4rem', paddingTop: secondCard ? '0.5rem' : '1rem', marginBottom: secondCard ? '0.05rem' : '', borderTop: secondCard ? '0.1875rem solid #252525' : '', marginTop: secondCard ? '0.5rem' : '' }}>
+            <div style={{ display: 'flex', width: width92 ? '92%' : '' }} >
                 <div style={{
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '26.875rem' : '26.875rem', height: '7.4375rem', marginRight: '0.375rem',
                     textShadow: bet === "left" ? "rgb(0 0 0) 0.1rem 0.1rem 0.1rem" : "", borderRadius: '0.6rem',
@@ -168,7 +167,6 @@ const CardResults = ({
                             textShadow: bet === 'left' ? "rgb(0 0 0) 0.1rem 0.1rem 0.1rem" : "",
                             cursor: 'pointer'
                         }}
-                        className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
                     >
                         <div
                             style={{
@@ -178,10 +176,12 @@ const CardResults = ({
                         >
                             <span style={{
                                 fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem', whiteSpace: 'nowrap',
-                                maxWidth: hasUp ? '15.6rem' : '15.6rem',
+                                maxWidth: hasUp ? '15.6rem' : '18.6rem',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
-                            }}>{truncate(team1, 7, 7)}</span>
+                            }}>
+                                {team1}
+                            </span>
                             <div style={{ marginRight: '0.6rem' }}>
                                 {hasUp && <img style={{ marginRight: '0.4375rem', width: '2rem', height: '1.75rem' }} src={UpIcon} alt="" />}
                                 <span style={{ fontSize: '2.625rem', fontFamily: 'RobotoMedium', marginRight: '0.2rem', textAlign: 'right' }}>{stat1}</span>
@@ -246,7 +246,7 @@ const CardResults = ({
                                 {hasDown && <img style={{ marginLeft: '0.4375rem', width: '2rem' }} src={DownIcon} alt="" />}
                             </div>
                             <span style={{
-                                fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : hasDown ? '15.6rem' : '15.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem', whiteSpace: 'nowrap',
+                                fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : hasDown ? '15.6rem' : '18.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem', whiteSpace: 'nowrap',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                             }}>{team2}</span>
@@ -267,7 +267,6 @@ const CardResults = ({
                     fontFamily: 'SpoqaHanSansNeoMedium',
                     textAlign: 'center',
                     width: '5.5rem',
-                    // backgroundColor:'#fff',
                     flexShrink: 0
                 }}
                 >
@@ -287,7 +286,34 @@ const CardResults = ({
                                         >
                                             {result === "win" ? "승" : result === "lose" ? "패" : result === "equality" ? "무" : ""}
                                         </p>
-                                        <p style={{ margin: '0 0 2.2rem -0.4rem', fontFamily: 'RobotoMedium', letterSpacing: score.length > 4 ? '-0.2rem' : '-0.07rem', fontSize: score.length > 4 ? '2rem' : '', lineHeight: score.length > 4 ? '2.3rem' : '' }}>{score}</p>
+                                        {score.length > 4 ? (
+                                            <div style={{display:'flex', justifyContent:'center', width:'100%'}}>
+                                                <p
+                                                    style={{
+                                                        margin: '0 0 2.2rem -0.4rem',
+                                                        fontFamily: 'RobotoMedium',
+                                                        letterSpacing: '-0.07rem',
+                                                        lineHeight:'2.3rem',
+                                                        textAlign:'start',
+                                                        paddingLeft:'0.8rem',
+                                                        // fontSize:'2.1rem',
+                                                        marginBottom: '3.2rem'
+                                                    }}
+                                                >{score.split(':')[0]}:{'\n'}{score.split(':')[1]}</p>
+                                            </div>
+
+                                        ) : (
+                                            <p
+                                                style={{
+                                                    margin: '0 0 2.2rem -0.4rem',
+                                                    fontFamily: 'RobotoMedium',
+                                                    letterSpacing: score.length > 4 ? '-0.2rem' : '-0.07rem',
+                                                    fontSize: score.length > 4 ? '2rem' : '',
+                                                    lineHeight: score.length > 4 ? '2.3rem' : ''
+                                                }}
+                                            >{score}</p>
+                                        )}
+
                                     </>
                                 )
                                 : "결과없음"
@@ -301,11 +327,11 @@ const CardResults = ({
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    lineHeight: '1.6',
                     fontFamily: 'SpoqaHanSansNeoMedium',
                     textAlign: 'center',
                     width: '5.5rem',
-                    flexShrink: 0
+                    height:'100%',
+                    paddingTop:'0.1rem'
                 }}
                 >
                     {

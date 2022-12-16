@@ -2,9 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import Rank1 from '../../assets/myPage/freeboard/1.png';
 import parse from 'html-react-parser';
-// import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
-
-
 
 const ContactView = () => {
 
@@ -28,17 +25,17 @@ const ContactView = () => {
             <div style={{ margin: ' 0px 1.875rem 1.875rem', background: 'linear-gradient(to top,#1f1f1e, #353534 50%,#4a4a4a)', padding: '0.1875rem', borderRadius: '1.2rem', boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.6)' }}>
                 <div style={{ background: '#323232', paddingBottom: '0.1rem', borderRadius: '1.1rem' }} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                     {/* TITLE */}
-                    <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }} className="bg-gray-fafafa border-b border-gray-ededed flex flex-wrap  items-center">
+                    <div style={{ borderBottom: '0.1875rem solid #252525', background: '#2e2e2e', display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '13rem', gap: '1.5rem', borderTopRightRadius: '1.1rem', borderTopLeftRadius: '1.1rem', padding: '1rem 2rem', textAlign: 'center' }}>
                         <div className='sflex w-full justify-center'>
                             <div
                                 style={{
-                                    backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem', maxWidth: '17rem',
+                                    backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.8rem 1.73rem', height: '4.5rem', marginTop: '0.65rem', letterSpacing: '-0.07rem', width: 'fit-content', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoMedium', borderRadius: '3rem',
                                     overflow: 'hidden',
                                     lineHeight: '3.3rem',
                                 }}
                                 className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                             >
-                                {truncate('계좌문의', 6, 6)}
+                                계좌문의
                             </div>
                         </div>
                         <div style={{ color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', fontSize: '3rem', letterSpacing: '-0.07rem', marginLeft: '0.2rem' }} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">

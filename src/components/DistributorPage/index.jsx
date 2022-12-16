@@ -183,8 +183,8 @@ const DistributorPage = ({
                                 <td style={{ width: '13.8125rem', textAlign: 'center', background: '#1a1b1c' }} className="bg-gray-r676e76 h-full flex items-center justify-center">구분</td>
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingRight: '1rem', paddingTop: '' }} className="text-center">스포츠</td>
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '' }} className="text-center">미니게임</td>
-                                <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">에볼루션</td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span style={{letterSpacing:'-0.24rem'}}>프레그메틱</span><br /><span className='-mt-3.5'>플레이</span></td>
+                                <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">에볼루션</td>
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">로얄지</td>
                                 <td style={{ width: '16.5rem', fontSize: '2.625rem', textAlign: 'center', display: 'flex', flexDirection: 'column', paddingTop: '1.2rem', paddingLeft: '0.7rem' }} className="text-center flex flex-col"><span>아시아</span><span className='-mt-3.5'>게이밍</span></td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center flex flex-col"><span>드림</span><br /><span className='-mt-3.5'>게이밍</span></td>
@@ -320,8 +320,8 @@ const DistributorPage = ({
                                 <td style={{ width: '13.8125rem', textAlign: 'center', background: 'rgb(29, 30, 31)' }} className="bg-gray-r676e76 h-full flex items-center justify-center">구분</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">스포츠</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">미니게임</td>
-                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem' }} className="text-center">에볼루션</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem', letterSpacing: '-0.1rem' }} className="text-center flex flex-col"><span style={{letterSpacing:'-0.24rem'}}>프레그메틱</span><br /><span className='-mt-3.5' >플레이</span></td>
+                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem' }} className="text-center">에볼루션</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '3rem' }} className="text-center">로얄지</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '2rem' }} className="text-center flex flex-col"><span>아시아</span><br /><span className='-mt-3.5'>게이밍</span></td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '2.5rem' }} className="text-center flex flex-col"><span>드림</span><br /><span className='-mt-3.5'>게이밍</span></td>
@@ -857,8 +857,8 @@ const DistributorPage = ({
                                                 <tr style={{ height: '8.8125rem', letterSpacing: '-0.07rem' }} className="flex items-center">
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingRight: '1rem', paddingTop: '' }} className="text-center">스포츠</td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '' }} className="text-center">미니게임</td>
-                                                    <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">에볼루션</td>
                                                     <td style={{ width: '16.5rem', fontSize: '2.625rem', textAlign: 'center', paddingLeft: '1rem' }} className="text-center flex flex-col"><span style={{letterSpacing:'-0.24rem'}}>프레그메틱</span><br /><span className='-mt-3.5'>플레이</span></td>
+                                                    <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">에볼루션</td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }} className="text-center">로얄지</td>
                                                     <td style={{ width: '16.5rem', fontSize: '2.625rem', textAlign: 'center', paddingLeft: '1rem' }} className="text-center flex flex-col"><span style={{letterSpacing:'-0.24rem'}}>아시아</span><br /><span className='-mt-3.5'>게이밍</span></td>
                                                     <td style={{ width: '16.5rem', fontSize: '2.625rem', textAlign: 'center', paddingLeft: '1rem' }} className="text-center flex flex-col"><span style={{letterSpacing:'-0.24rem'}}>드림</span><br /><span className='-mt-3.5'>게이밍</span></td>
@@ -1009,8 +1009,8 @@ const DistributorPage = ({
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', background: 'rgb(29, 30, 31)' }} className="bg-gray-r676e76 h-full flex items-center justify-center">구분</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">스포츠</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center">미니게임</td>
-                                                    <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem' }} className="text-center">에볼루션</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '1rem' }} className="text-center flex flex-col"><span style={{letterSpacing:'-0.24rem'}}>프레그메틱</span><br /><span className='-mt-3.5' >플레이</span></td>
+                                                    <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '0.5rem' }} className="text-center">에볼루션</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '3rem' }} className="text-center">로얄지</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '2.5rem' }} className="text-center flex flex-col"><span>드림</span><br /><span className='-mt-3.5'>게이밍</span></td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', paddingRight: '2.5rem' }} className="text-center flex flex-col"><span>섹시</span><br /><span className='-mt-3.5'>게이밍</span></td>
