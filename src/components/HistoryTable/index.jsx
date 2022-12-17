@@ -212,7 +212,7 @@ const HistoryTable = ({
                                 )}
                             </div>
                         ) : hasButton &&
-                        <div style={{ position: 'absolute', right: '1.9rem', height: '100%', display: 'flex', alignItems: 'center' }}>
+                        <div style={{ position: 'absolute', right: '1.9rem', height: '100%', display: 'flex', alignItems: 'center', top: '-0.1875rem' }}>
                             <button className="hover change-top" style={{
                                 width: '10.875rem',
                                 height: '10.875rem',
@@ -230,7 +230,8 @@ const HistoryTable = ({
                                             fontFamily: 'SpoqaHanSansNeoMedium',
                                             color: card[card.length - 1].textColor ? card[card.length - 1].textColor : '#ffdfbd',
                                         }}
-                                    >{card[card.length - 1].buttonText || '진행중'}
+                                    >
+                                        {card[card.length - 1].buttonText || '진행중'}
                                     </span>
                                 </div>
                             </button>
