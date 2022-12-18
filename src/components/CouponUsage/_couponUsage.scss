@@ -1,14 +1,22 @@
 .coupon-usage {
+    margin-top: 0.1rem;
+
+
     #container-nav {
         padding: 0 0rem 0 1.4rem;
         margin-top: 0.1rem;
-
         button {
-
-            width: 25.25rem;
-            margin-right: -0.45rem;
-
+            width: 25rem;
         }
+        .text {
+            margin-top: -0.4rem;
+            margin-left: -0.15rem;
+        }
+
+    }
+
+    #container {
+        margin-left: 0 !important;
     }
 }
 
@@ -97,10 +105,5 @@
         }
     }
 
-
-}
-
-.popup-style {
-    .popup-page {}
 
 }

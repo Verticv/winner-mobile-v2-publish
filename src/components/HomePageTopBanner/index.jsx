@@ -15,16 +15,12 @@ const HomePageTopBanner = ({ pageTitle, toPath = "/mypage", isFreeboard = false 
                     isFreeboard ? navigate(-1) : navigate(toPath)
                 }}
                 className='left-arrow'
-                // style={{ height: '3.375rem', width: '2.1875rem', top: '1.875rem', left: '3.6875rem' }}
-                // className="absolute w-9 cursor-pointer"
                 src={LeftArrowIcon}
                 alt="left_arrow_icon"
             />
             <span className='page-title'>{pageTitle}</span>
             <img
                 onClick={() => navigate('/main')}
-                // style={{ width: '3.875rem', height: '3.875rem', top: '1.875rem', right: '4.0625rem' }}
-                // className="absolute cursor-pointer"
                 className='home-icon'
                 src={HomeIcon}
                 alt="home_icon"

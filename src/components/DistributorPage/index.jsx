@@ -178,7 +178,7 @@ const DistributorPage = ({
             <div>
                 <div style={{ padding: '0', width: '100%', overflowX: 'scroll', marginBottom: '1rem' }}>
                     <table style={{ width: '513.2rem', padding: '', display: 'block', borderCollapse: 'collapse', background: 'rgba(36,36,36)' }}>
-                        <thead style={{ height: '8.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', borderBottom: '0.1875rem solid #242424' }}>
+                        <thead style={{ height: '8.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', borderBottom: '0.1875rem solid #202020' }}>
                             <tr style={{ height: '8.8125rem', letterSpacing: '-0.07rem' }}>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', background: '#1a1b1c' }}>구분</td>
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingRight: '1rem', paddingTop: '' }}>스포츠</td>
@@ -315,7 +315,7 @@ const DistributorPage = ({
                 <div style={{ padding: '0', width: '100%', overflowX: 'scroll', marginBottom: '1rem' }}>
                     <table style={{ width: '474.625rem', padding: '', display: 'block', background: '', borderCollapse: 'collapse' }}>
                         <thead style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', background: '#242424', color: '#ccc2b6' }}>
-                            <tr style={{ height: '8.925rem', borderBottom: '0.1875rem solid #242424' }}>
+                            <tr style={{ height: '8.925rem', borderBottom: '0.1875rem solid #202020' }}>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', background: 'rgb(29, 30, 31)' }}>구분</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}>스포츠</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}>미니게임</td>
@@ -359,7 +359,7 @@ const DistributorPage = ({
                             </tr>
                         </thead>
                         <tbody style={{ fontSize: '2.625rem', fontFamily: 'RobotoRegular', color: '#c8c8c8' }} className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                            <tr style={{ height: '8.925rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #242424', letterSpacing: '-0.07rem', background: '#323232', color: '#c8c8c8' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
+                            <tr style={{ height: '8.925rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #202020', letterSpacing: '-0.07rem', background: '#323232', color: '#c8c8c8' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
                                 <td style={{ width: '13.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', textAlign: 'center', background: '#2c2c2c', color: '#ccc2b6' }} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">베팅금</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.9rem', paddingBottom: '0.2rem' }} className="text-right">1.09M</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right">33K</td>
@@ -399,7 +399,7 @@ const DistributorPage = ({
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right pr-4">0</td>
                                 <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'center', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right pr-4 h-full flex items-center justify-end">7.14M</td>
                             </tr>
-                            <tr style={{ height: '8.625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #242424', background: '#2e2e2e' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
+                            <tr style={{ height: '8.625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #202020', background: '#2e2e2e' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
                                 <td style={{ width: '13.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', textAlign: 'center', background: '#2c2c2c' }} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">승패</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.6rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
@@ -852,7 +852,7 @@ const DistributorPage = ({
                                 <div style={{ padding: '0', width: '114.75rem', background: '#1e1e1e' }}>
                                     <div style={{ width: '75.925rem', overflowX: 'scroll', background: 'linear-gradient(to top, #1f1f1e, #343434 80%)', padding: '0.1875rem', margin: '0 1.7rem', boxShadow: '0 0rem 1rem 0 #000', borderTopLeftRadius: '1rem', borderBottomLeftRadius: '1rem' }} className="w-full overflow-scroll">
                                         <table style={{ width: '425.3rem', padding: '', display: 'block', borderCollapse: 'collapse', background: '#2e2e2e', borderTopRightRadius: '1rem', borderTopLeftRadius: '1rem', borderBottomLeftRadius: '1rem' }}>
-                                            <thead style={{ height: '8.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', borderBottom: '0.1875rem solid #242424' }} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
+                                            <thead style={{ height: '8.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', borderBottom: '0.1875rem solid #202020' }} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
                                                 <tr style={{ height: '8.8125rem', letterSpacing: '-0.07rem' }}>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingRight: '1rem', paddingTop: '' }}>스포츠</td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '' }}>미니게임</td>
@@ -1004,7 +1004,7 @@ const DistributorPage = ({
                                     <div style={{ width: '75.625rem', background: 'linear-gradient(to top, #1f1f1e, #343434 80%)', borderTopLeftRadius: '0.4rem', borderBottomLeftRadius: '0.4rem', overflow: 'scroll', height: '35.8rem', marginLeft: '1.875rem', padding: '0.1875rem', boxShadow: 'rgb(0 0 0) 0 0rem 1rem 0' }} className="w-full overflow-scroll">
                                         <table style={{ width: '469.625rem', padding: '', display: 'block', background: '', borderCollapse: 'collapse' }}>
                                             <thead style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', background: '#242424', color: '#ccc2b6' }}>
-                                                <tr style={{ height: '8.925rem', borderBottom: '0.1875rem solid #242424' }}>
+                                                <tr style={{ height: '8.925rem', borderBottom: '0.1875rem solid #202020' }}>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', background: 'rgb(29, 30, 31)' }}>구분</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}>스포츠</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}>미니게임</td>
@@ -1046,7 +1046,7 @@ const DistributorPage = ({
                                                 </tr>
                                             </thead>
                                             <tbody style={{ fontSize: '2.625rem', fontFamily: 'RobotoRegular', color: '#c8c8c8' }} className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                                                <tr style={{ height: '8.925rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #242424', letterSpacing: '-0.07rem', background: '#323232', color: '#c8c8c8' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
+                                                <tr style={{ height: '8.925rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #202020', letterSpacing: '-0.07rem', background: '#323232', color: '#c8c8c8' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
                                                     <td style={{ width: '13.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', textAlign: 'center', background: '#2c2c2c', color: '#ccc2b6' }} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">베팅금</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.9rem', paddingBottom: '0.2rem' }} className="text-right">1.09M</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right">33K</td>
@@ -1086,7 +1086,7 @@ const DistributorPage = ({
                                                     {/* <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right pr-4">0</td> */}
                                                     <td style={{ backgroundColor: "#2c2c2c", color: "", width: '13.8125rem', textAlign: 'center', paddingRight: '1.2rem', paddingBottom: '0.2rem' }} className="text-right pr-4 h-full flex items-center justify-end">7.14M</td>
                                                 </tr>
-                                                <tr style={{ height: '8.625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #242424', background: '#2e2e2e' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
+                                                <tr style={{ height: '8.625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem', borderBottom: '0.1875rem solid #202020', background: '#2e2e2e' }} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
                                                     <td style={{ width: '13.8125rem', fontFamily: 'SpoqaHanSansNeoMedium', color: '#ccc2b6', textAlign: 'center', background: '#2c2c2c' }} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">승패</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.6rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'right', paddingRight: '0.8rem', paddingBottom: '0.4rem' }} className="text-right">0</td>
@@ -1247,7 +1247,7 @@ const DistributorPage = ({
                                 <div style={{ padding: '0', width: '114.75rem', background: '' }}>
                                     <div style={{ width: '75.625rem', borderRightWidth: '0', display: 'flex', flexDirection: 'column', overflow: 'scroll', background: '#1e1e1e' }}>
                                         <div style={{ width: '290.125rem', padding: '', display: 'flex', flexDirection: 'column', fontSize: '2.625rem' }}>
-                                            <div style={{ height: '8.9625rem', fontSize: '2.625rem', background: '#2e2e2e', padding: '0px 1.875rem', borderBottom: '0.1875rem solid #242424', display: 'flex', alignItems: 'center', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>
+                                            <div style={{ height: '8.9625rem', fontSize: '2.625rem', background: '#2e2e2e', padding: '0px 1.875rem', borderBottom: '0.1875rem solid #202020', display: 'flex', alignItems: 'center', color: '#ccc2b6', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>
                                                 <div style={{ width: '13rem', paddingLeft: '2.6rem', textAlign: '', paddingTop: '0.6rem' }}>번호</div>
                                                 <button
                                                     style={{ padding: '0', margin: '0', background: 'bottom', width: '21.7rem', letterSpacing: '-0.07rem', paddingTop: '0.7rem', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}

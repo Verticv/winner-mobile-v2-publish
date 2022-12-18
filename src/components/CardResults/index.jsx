@@ -196,7 +196,7 @@ const CardResults = ({
                         }}
                     >
                         <div style={{ paddingLeft: '0rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: bet === "middle" ? '' : '0.1rem' }}>
-                            <span style={{ fontSize: '2.625rem' }} className="font-roboto tracking-tight text-14px">{stat2}</span>
+                            <span style={{ fontSize: '2.625rem' }}>{stat2}</span>
                         </div>
                     </button>
                 </div>
@@ -223,19 +223,22 @@ const CardResults = ({
                                 paddingLeft: '',
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                                 width: '100%',
-                                marginTop: bet === "right" ? '0.1rem' : ''
+                                marginTop: bet === "right" ? '0.1rem' : ''                             
                             }}
                         >
                             <div style={{ marginLeft: '0.6rem' }}>
-                                <span style={{ fontSize: '2.625rem', width: '6rem', textAlign: 'center' }} >{stat3}</span>
+                                <span style={{ fontSize: '2.625rem', width: '6rem', textAlign: 'center', display: 'flex', alignItems: 'center' }} >{stat3}</span>
                                 {hasDown && <img style={{ marginLeft: '0.4375rem', width: '2rem' }} src={DownIcon} alt="" />}
                             </div>
                             <span style={{
-                                fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : hasDown ? '15.6rem' : '19.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem', whiteSpace: 'nowrap',
+                                fontSize: '2.625rem', 
+                                maxWidth: smallContent ? '17.4rem' : hasDown ? '15.6rem' : '21rem', 
+                                fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem', 
+                                whiteSpace: 'nowrap',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                             }}>
-                                {truncate(team2, 9, 9)}
+                                {truncate(team2, 7, 7)}
                             </span>
                         </div>
                     </button>

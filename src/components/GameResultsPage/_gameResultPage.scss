@@ -18,16 +18,13 @@
     }
 
     #container {
-        margin: 1rem 0rem 0 2rem;
+        margin: 0rem 0rem 0 2rem;
         overflow-x: scroll;
         display: flex;
         flex-shrink: 0;
 
 
         button {
-            // color: rgb(255, 223, 189);
-            // min-width: 11.5625rem;
-            // background: rgb(130, 97, 64);
             color: rgb(204, 194, 182);
             min-width: 13.4375rem;
             background: rgb(30, 30, 30);
@@ -35,16 +32,10 @@
             height: 6.375rem;
             min-width: 11.5625rem;
             font-size: 2.8125rem;
-            margin-right: 1.125rem;
+            // margin-right: 1.125rem;
             border-radius: 3.2rem;
             font-family: "SpoqaHanSansNeoMedium";
         }
-    }
-
-    #container {
-        // margin: 0;
-        // margin-left: 0 !important;
-        // margin-right: 0 !important;
     }
 
     #scroll-wrapper {

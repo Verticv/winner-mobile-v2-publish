@@ -150,7 +150,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
     console.log(selectedTab, selectedSubTab)
 
     return (
-        <div style={{ maxWidth: '1242px', paddingBottom: '0.01rem' }} className="w-full flex flex-col">
+        <div style={{ maxWidth: '1242px', paddingBottom: '0.01rem' }}>
             <Routes>
                 <Route index element={<MyInfo />} />
                 <Route path="/all/*"
@@ -161,7 +161,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                 <Header />
                                 <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
                                 <div id='container-nav'>
-                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
+                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isMoneyPage="true" />
                                 </div>
                                 <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
                             </div>

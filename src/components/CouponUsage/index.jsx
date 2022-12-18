@@ -1086,7 +1086,7 @@ const CouponUsage = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                 <HomePageTopBanner pageTitle='쿠폰관리' />
                             </div>
 
-                            <div className="flex flex-col items-start limit:items-center w-full h-full">
+                            <div>
                                 <div className='coupon-usage' id='container-nav'>
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isCouponPage='true' />
                                 </div>

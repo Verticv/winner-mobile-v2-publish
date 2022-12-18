@@ -1,7 +1,7 @@
 import React from 'react'
 import AlertIcon from '../../assets/mainPage/icons/warning.png'
 
-const WarningMessage = ({ title, message1, message1_1, message2, message2_1, message3, message3_1, message4 }) => {
+const WarningMessage = ({ title, message1, message1_1, message2, message2_1, message3, message3_1, message4, isExchange }) => {
 
     return (
         <div className="WarningMessageClass">
@@ -10,18 +10,18 @@ const WarningMessage = ({ title, message1, message1_1, message2, message2_1, mes
                 <span>{title}</span>
             </div>
             <div className="alert-messages">
-                <div style={{ marginRight: '16.5rem' }} className="first-span">
+                <div style={{ marginRight: isExchange ? '13rem' : '6.5rem' }} className="first-span">
                     <span style={{ color: '#ffdfbd' }} className='correct'>✓</span>
                     {message1 && <span style={{ color: '#ffdfbd' }} className="first-span">{message1} {message1_1}</span>}
                 </div>
                 {message2 &&
-                    <div style={{ alignItems: 'flex-start', marginRight: '13.5rem' }} className="next-span">
+                    <div style={{ alignItems: 'flex-start', marginRight: isExchange ? '10rem' : '3.5rem' }} className="next-span">
                         <span className='correct'>✓</span>
                         <span style={{ marginTop: '0' }}>{message2} {message2_1}</span>
                     </div>
                 }
                 {message3 &&
-                    <div style={{ alignItems: 'flex-start', marginRight: '8.5rem' }} className="next-span">
+                    <div style={{ alignItems: 'flex-start', marginRight: isExchange ? '8.5rem' : '1.5rem' }} className="next-span">
                         <span className='correct'>✓</span>
                         <span style={{ marginTop: '0' }}>{message3} {message3_1}</span>
                     </div>

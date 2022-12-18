@@ -967,9 +967,9 @@ const BetCombinationPanel = ({
                                 color: (`${id}left` === isHover3 || isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) > -1) ? "#ffdfbd" : "#c8c8c8",
                                 textShadow: (`${id}left` === isHover3 || isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) > -1) ? "1px 1px 0px #00000070" : ""
                             }}
-                            className="normaloption-content1 bg-gradient-to-b"
+                            className="normaloption-content1"
                         >
-                            <span style={{ width: '21rem', textAlign: 'start' }} className="normaloption-content2">{hasUp ? truncate(team1, 8, 8) : truncate(team1, 11, 11)}</span>
+                            <span style={{ width: '21rem', textAlign: 'start' }} className="normaloption-content2">{hasUp ? truncate(team1, 8, 8) : team1 === "FK Haugesund" ? truncate(team1, 12, 12) : truncate(team1, 11, 11)}</span>
                             <span style={{ color: stat1Color === "red" && isButtonOn.indexOf(isSubArray ? `${items_id}-${id}left` : `${id}left`) === -1 && `${id}left` !== isHover3 ? "#e65454" : "" }} className="normaloption-content3">
                                 {hasUp === true && (
                                     <img className='normaloption-content4' style={{ width: '1.3125rem', height: '1.125rem' }} src={UpIcon} alt="" />
@@ -1081,7 +1081,7 @@ const BetCombinationPanel = ({
                                     <img className='normaloption-content13' style={{ width: '1.3125rem', height: '1.125rem' }} src={DownIcon} alt="" />
                                 )}
                             </span>
-                            <span style={{ width: '20rem', textAlign: 'end' }} className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 13, 13) : truncate(team2, 8, 8)}</span>
+                            <span style={{ width: '21rem', textAlign: 'end' }} className="normaloption-content14">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 13, 13) : team2 === "스트룀스고세 IF" ? truncate(team2, 9, 9) : truncate(team2, 8, 8)}</span>
                         </div>
                     </button>
                 </div>
