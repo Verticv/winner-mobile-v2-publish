@@ -22,7 +22,8 @@ const CardResults = ({
     secondCard,
     withTopBorder,
     width92,
-    isFreeboard
+    isFreeboard,
+    isCompose
 }) => {
 
     const truncate = (str, max, len) => {
@@ -161,7 +162,7 @@ const CardResults = ({
                         >
                             <span style={{
                                 fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem', whiteSpace: 'nowrap',
-                                maxWidth: isFreeboard ? '17rem': hasUp ? '15.6rem' : '21rem',
+                                maxWidth: isCompose ? "17rem" : isFreeboard ? '17rem': hasUp ? '15.6rem' : '21rem',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                             }}>
@@ -233,7 +234,7 @@ const CardResults = ({
                             </div>
                             <span style={{
                                 fontSize: '2.625rem', 
-                                maxWidth: isFreeboard ? '17rem': hasDown ? '15.6rem' : '21rem', 
+                                maxWidth: isCompose ? "17rem" : isFreeboard ? '17rem': hasDown ? '15.6rem' : '21rem', 
                                 fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem', 
                                 whiteSpace: 'nowrap',
                                 overflow: 'hidden',

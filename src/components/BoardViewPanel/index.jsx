@@ -41,6 +41,7 @@ const BoardViewPanel = ({
                                         smallCard
                                         smallContent
                                         width92
+                                        isCompose
                                     />
                                 </div>
                                 <CardContent winAmount={card.winAmount} id={card.id} withButtons={false} withInput={false} withCancelButton={true} cancelHandler={handleRemoveItem} checkedState={checkedState} type={0} setCheckedState={setCheckedState} />

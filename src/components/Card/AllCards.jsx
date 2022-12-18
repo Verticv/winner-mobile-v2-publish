@@ -414,26 +414,24 @@ const cardInfo = [
 export default function AllCards({ btnActive, setBtnActive }) {
     const [cardActive, setCardActive] = useState('');
     return (
-        <div style={{ position: 'relative' }}>
-            {cardInfo.map(({ best }) => best && (
-                <img src={Best} alt="" style={{ position: 'absolute', width: '12rem', top: '-3rem', left: '-2rem', zIndex: 50 }} />
-            ))}
-            <div className="cards" >
 
-                {btnActive === '0' ? cardInfo.filter((a) => !a.extra).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, best }) => (
-                    <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
-                        icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path} best={best}
-                    />
-                ))
-                    : <>
-                        {true ? cardInfo.filter((a) => (a.group === btnActive) && !a.main).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, disable, extra, best }) => (
-                            <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
-                                icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path} disable={disable} group={group} extra={extra} best={best}
-                            />
-                        ))
-                            : <></>}
-                    </>}
-            </div>
+        <div className="cards" style={{position:'relative'}} >
+            {cardInfo.map(({ best }) => best && (
+                <img src={Best} alt="" style={{ position: 'absolute', width: '11rem', top: '-2.3rem', left: '-2rem', zIndex: 50 }} />
+            ))}
+            {btnActive === '0' ? cardInfo.filter((a) => !a.extra).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, best }) => (
+                <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
+                    icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path} best={best}
+                />
+            ))
+                : <>
+                    {true ? cardInfo.filter((a) => (a.group === btnActive) && !a.main).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, disable, extra, best }) => (
+                        <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
+                            icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path} disable={disable} group={group} extra={extra} best={best}
+                        />
+                    ))
+                        : <></>}
+                </>}
         </div>
     )
 }
