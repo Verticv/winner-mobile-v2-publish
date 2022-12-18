@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Card from './index';
-import Best from '../../assets/best.png'
 
 
 import bg1 from '../../assets/mainPage/inactive-bg1-card.png'
@@ -416,9 +415,7 @@ export default function AllCards({ btnActive, setBtnActive }) {
     return (
 
         <div className="cards" style={{position:'relative'}} >
-            {cardInfo.map(({ best }) => best && (
-                <img src={Best} alt="" style={{ position: 'absolute', width: '11rem', top: '-2.3rem', left: '-2rem', zIndex: 50 }} />
-            ))}
+
             {btnActive === '0' ? cardInfo.filter((a) => !a.extra).map(({ id, inactivBackground, activeBackground, icon, text, isActive, path, group, best }) => (
                 <Card key={id} id={id} inactivBackground={inactivBackground} activeBackground={activeBackground}
                     icon={icon} text={text} isActive={isActive} cardActive={cardActive} setCardActive={setCardActive} path={path} best={best}
