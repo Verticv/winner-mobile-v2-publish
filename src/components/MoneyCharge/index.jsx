@@ -408,7 +408,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                                 <span style={{ color: '#e65454', fontSize: '2.8125rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>알아두세요</span>
                             </div>
                         </div>
-                        <div style={{ alignItems: 'flex-start', marginRight: '3.5rem', color: 'rgb(204, 194, 182)', fontSize: '2.625rem', lineHeight: '1.3', display: 'flex', marginTop: '2rem' }} >
+                        <div style={{ alignItems: 'flex-start', marginRight: '7.6rem', color: 'rgb(204, 194, 182)', fontSize: '2.625rem', lineHeight: '1.3', display: 'flex', marginTop: '2rem' }} >
                             <span style={{ marginRight: ' 0.6rem', marginLeft: '0.2rem' }}>✓</span>
                             <span style={{ marginRight: ' 0.6rem', marginLeft: '0.2rem' }}>첫충전을 받으신 경우 선택하신 게임에서 롤링을 먼저 충족하셔야 합니다.</span>
                         </div>

@@ -15,13 +15,13 @@ const WarningMessage = ({ title, message1, message1_1, message2, message2_1, mes
                     {message1 && <span style={{ color: '#ffdfbd' }} className="first-span">{message1} {message1_1}</span>}
                 </div>
                 {message2 &&
-                    <div style={{ alignItems: 'flex-start', marginRight: isExchange ? '10rem' : '3.5rem' }} className="next-span">
+                    <div style={{ alignItems: 'flex-start', marginRight: isExchange ? '10rem' : '6.5rem' }} className="next-span">
                         <span className='correct'>✓</span>
                         <span style={{ marginTop: '0' }}>{message2} {message2_1}</span>
                     </div>
                 }
                 {message3 &&
-                    <div style={{ alignItems: 'flex-start', marginRight: isExchange ? '8.5rem' : '1.5rem' }} className="next-span">
+                    <div style={{ alignItems: 'flex-start', marginRight: isExchange ? '0' : '6.5rem' }} className="next-span">
                         <span className='correct'>✓</span>
                         <span style={{ marginTop: '0' }}>{message3} {message3_1}</span>
                     </div>

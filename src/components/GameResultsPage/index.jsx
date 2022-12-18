@@ -163,6 +163,7 @@ const GameResults = ({ isAuthenticated, setAuthenticated, subActiveButton, setSu
                                 <div id='container-nav'>
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} isMoneyPage="true" />
                                 </div>
+                                <div style={{height:'0.9rem'}} />
                                 <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab} />
                             </div>
 

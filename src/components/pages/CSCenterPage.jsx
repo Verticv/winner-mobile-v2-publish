@@ -121,6 +121,7 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
         )
     }
     return (
+        <div className="cscenter-page">
         <Routes>
             <Route index element={<MyInfo />} />
             <Route
@@ -230,5 +231,6 @@ export default function Test({ isAuthenticated, setAuthenticated }) {
                 }
             />
         </Routes>
+        </div>
     )
 }   

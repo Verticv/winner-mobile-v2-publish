@@ -150,7 +150,7 @@ const CardResults = ({
                             borderRadius: '0.6rem',
                             color: bet === "left" ? '#ffdfbd' : '#c8c8c8',
                             textShadow: bet === 'left' ? "rgb(0 0 0) 0.1rem 0.1rem 0.1rem" : "",
-                            cursor: 'pointer'
+                            cursor: 'pointer',
                         }}
                     >
                         <div
@@ -161,7 +161,7 @@ const CardResults = ({
                         >
                             <span style={{
                                 fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem', whiteSpace: 'nowrap',
-                                maxWidth: hasUp ? '15.6rem' : '21rem',
+                                maxWidth: isFreeboard ? '17rem': hasUp ? '15.6rem' : '21rem',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                             }}>
@@ -179,6 +179,7 @@ const CardResults = ({
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '10rem' : '10rem', height: '7.4375rem', marginRight: '0.375rem',
                     borderRadius: '0.6rem',
                     boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
+                    flexShrink:0
                 }}>
                     <button
                         style={{
@@ -226,13 +227,13 @@ const CardResults = ({
                                 marginTop: bet === "right" ? '0.1rem' : ''                             
                             }}
                         >
-                            <div style={{ marginLeft: '0.6rem' }}>
-                                <span style={{ fontSize: '2.625rem', width: '6rem', textAlign: 'center', display: 'flex', alignItems: 'center' }} >{stat3}</span>
-                                {hasDown && <img style={{ marginLeft: '0.4375rem', width: '2rem' }} src={DownIcon} alt="" />}
+                            <div style={{ marginLeft: '0.6rem', flexShrink:0, display:'flex', alignItems:'center' }}>
+                                <span style={{ fontSize: '2.625rem', textAlign: 'center', display: 'flex', alignItems: 'center', flexShrink:0 }} >{stat3}</span>
+                                {hasDown && <img style={{ width: '2rem', objectFit:'contain', marginLeft: '0.4375rem', height: '1.75rem' }} src={DownIcon} alt="" />}
                             </div>
                             <span style={{
                                 fontSize: '2.625rem', 
-                                maxWidth: smallContent ? '17.4rem' : hasDown ? '15.6rem' : '21rem', 
+                                maxWidth: isFreeboard ? '17rem': hasDown ? '15.6rem' : '21rem', 
                                 fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem', 
                                 whiteSpace: 'nowrap',
                                 overflow: 'hidden',
