@@ -13,7 +13,7 @@ function Card({ id, inactivBackground, activeBackground, icon, text, isActive, c
 
         >
             {best && (
-                <img src={Best} alt="" style={{ position: 'absolute', width: '11rem', top: '-2.4rem', left: '-2rem', zIndex: 50 }} />
+                <img src={Best} alt="" style={{ position: 'absolute', width: '11rem', top: '-1.8rem', left: '-1.8rem', zIndex: 50 }} />
             )}
             <div id={id} className={`main-div ${(+cardActive === id) ? 'active' : ''}`}
                 style={{ background: `url(${inactivBackground}) round`, position: 'relative' }}
