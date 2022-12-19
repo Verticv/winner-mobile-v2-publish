@@ -68,7 +68,7 @@ const EsportsMulti = () => {
                         title="배당항목선택"
                         text="가. ①"
                         color1="[+]"
-                        color2="[+]"
+                        color2="[-]"
                         color3="버튼을 눌러서 원하는 배당을 선택합니다,"
                         text3="나. 선택한 경기(배당)가 ② 팔레이 리스트에 추가됩니다."
                         text5="-최소 2개 이상 각각 다른 경기를 &nbsp;추가하세요."
@@ -79,7 +79,7 @@ const EsportsMulti = () => {
                         알아두세요!
                     </div>
                     <div style={{ alignItems: 'center', marginTop: '0.35rem' }}>
-                        <p style={{ color: "#8c8c8c", margin: 0, fontSize: '2.625rem' }}>※ 각 팀의 좌/우 가장자리에 있는 ①<span style={{ margin: '0 0.5rem 0 0', color: '#4c98ff', fontWeight: '600' }}>[+]</span><span style={{ color: "#e65454", margin: '0 0.5rem 0 0', fontWeight: '600' }}>[+]</span> 버튼을 누르면</p>
+                        <p style={{ color: "#8c8c8c", margin: 0, fontSize: '2.625rem' }}>※ 각 팀의 좌/우 가장자리에 있는 ①<span style={{ margin: '0 0.5rem 0 0', color: '#4c98ff', fontWeight: '600' }}>[+]</span><span style={{ color: "#e65454", margin: '0 0.5rem 0 0', fontWeight: '600' }}>[-]</span> 버튼을 누르면</p>
                     </div>
                     <div style={{ color: '#8c8c8c', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>
                         <p style={{ color: "#8c8c8c", margin: 0 }}> 선택한 경기(배당)가 ②팔레이 리스트에 추가됩니다.</p>
