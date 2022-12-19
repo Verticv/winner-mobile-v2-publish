@@ -17,22 +17,22 @@ const EsportsMulti = () => {
                 <span style={{ color: "#828282", fontSize: '2.625rem' }}>{text} <span style={{ color: '#4c98ff', marginLeft: '0.1rem', marginRight: '0.2rem', fontWeight: '600' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem', fontWeight: '600' }}>{color2}</span><p style={{ margin: '0', display: 'inline-block' }}>{color3}</p></span>
             )}
             {text1 && (
-                <span style={{ color: "#828282", fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text1}</span>
+                <span style={{ color: "#828282", display: 'flex', fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text1}</span>
             )}
             {text2 && (
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text2}</span>
+                <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text2}</span>
             )}
             {text3 && (
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text3}</span>
+                <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text3}</span>
             )}
             {text4 && (
                 <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text4}</span>
             )}
             {text5 && (
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem', margin: '-0.25rem 0 0 0.4rem' }}>{text5}</span>
+                <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', margin: '-0.25rem 0 0 0.4rem' }}>{text5}</span>
             )}
             {text6 && (
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text6}</span>
+                <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text6}</span>
             )}
             {text7 && (
                 <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text7}</span>
@@ -46,17 +46,7 @@ const EsportsMulti = () => {
             <div>
                 <img src={Image8} alt="" style={{ width: '70rem' }} />
                 <div style={{ backgroundColor: "#2b2b2a", padding: "2.15rem 1.8rem", marginTop: '2.3rem', borderRadius: '0.5rem' }}>
-
-                    <div>
-                        <div style={{ fontFamily: 'SpoqaHanSansNeoBold', fontSize: '2.825rem' }}>
-                            <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>1.</span>
-                            <span style={{ color: '#ccc2b6' }}>종목 및 경기선택</span>
-                        </div>
-                        <span style={{ fontFamily: 'SpoqaHanSansNeoMedium', color: "#828282", fontSize: '2.625rem', lineHeight: '1.4', letterSpacing: '-0.05rem' }}>가. ① 게임종류를 선택합니다.</span>
-                        <span style={{ fontFamily: 'SpoqaHanSansNeoMedium', color: "#828282", fontSize: '2.625rem', lineHeight: '1.4', letterSpacing: '-0.05rem' }}>나. ② 경기를 선택합니다.</span>
-                    </div>
-
-                    {/* <Item number="1." title="종목 및 경기선택" text="가. ① 게임종류를 선택합니다." text1="나. ② 경기를 선택합니다." withoutP /> */}
+                    <Item number="1." title="종목 및 경기선택" text="가. ① 게임종류를 선택합니다." text1="나. ② 경기를 선택합니다." withoutP />
                 </div>
             </div>
 

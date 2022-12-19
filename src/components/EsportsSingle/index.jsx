@@ -15,10 +15,10 @@ const EsportsSingle = () => {
             </div>
             <span style={{ color: "#828282", fontSize: '2.625rem' }}>{text} <span style={{ color: '#2980b9', marginLeft: '0.5rem', marginRight: '0.2rem' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem' }}>{color2}</span><p style={{ margin: withoutP ? '0' : '' }}>{color3}</p></span>
             {text2 && (
-                <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text2}</span>
+                <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text2}</span>
             )}
             {text3 && (
-                <span style={{ color: "#8c8c8c", display: 'flex' }}>{text3}</span>
+                <span style={{ color: "#8c8c8c" }}>{text3}</span>
             )}
         </div>
     )
