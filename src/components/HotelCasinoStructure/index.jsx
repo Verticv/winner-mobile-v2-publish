@@ -92,7 +92,7 @@ const HotelCasinoStructure = () => {
             <div style={{ width: "15.8rem", flexShrink: 0, padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }}>
               알아두세요!
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.35rem' }}>
+            <div style={{ marginTop: '0.35rem' }}>
               <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }}>
                 ※ 스피드게임 : 45초 베팅시간 제공
               </p>
