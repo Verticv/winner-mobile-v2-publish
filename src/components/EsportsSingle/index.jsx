@@ -59,13 +59,13 @@ const EsportsSingle = () => {
                     <div style={{ width: "15.8rem", flexShrink: 0, padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }}>
                         알아두세요!
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
+                    <div style={{ marginTop: '0.5rem' }}>
                         <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• 1/8 최대 : 최대 한도금액을 8로 나눈 금액 베팅</p>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.1rem' }}>
+                    <div style={{ marginTop: '0.1rem' }}>
                         <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• 1/4 최대 : 최대 한도금액을 4로 나눈 금액 베팅</p>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.2rem' }}>
+                    <div style={{ marginTop: '0.2rem' }}>
                         <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• 1/2 최대 : 최대 한도금액을 2로 나눈 금액 베팅</p>
                     </div>
                 </div>
