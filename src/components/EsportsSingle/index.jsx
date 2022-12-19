@@ -37,12 +37,7 @@ const EsportsSingle = () => {
                         </div>
                         <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>가. ① 게임종류를 선택합니다.</p>
                         <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.3rem', margin: 0 }}>나. ② 경기를 선택합니다.</p>
-
-
-
-
                     </div>
-                    {/* <Item number="1." title="종목 및 경기선택" text="가. ① 게임종류를 선택합니다." text2="나. ② 경기를 선택합니다." withoutP /> */}
                 </div>
             </div>
 
@@ -65,13 +60,13 @@ const EsportsSingle = () => {
                         알아두세요!
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>• 1/8 최대 : 최대 한도금액을 8로 나눈 금액 베팅</span>
+                        <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• 1/8 최대 : 최대 한도금액을 8로 나눈 금액 베팅</p>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.1rem' }}>
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>• 1/4 최대 : 최대 한도금액을 4로 나눈 금액 베팅</span>
+                        <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• 1/4 최대 : 최대 한도금액을 4로 나눈 금액 베팅</p>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.2rem' }}>
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>• 1/2 최대 : 최대 한도금액을 2로 나눈 금액 베팅 </span>
+                        <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• 1/2 최대 : 최대 한도금액을 2로 나눈 금액 베팅</p>
                     </div>
                 </div>
             </div>

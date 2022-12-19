@@ -40,16 +40,16 @@ const EsportsStructure = () => {
                 <span style={{ color: '#ccc2b6' }}>{title}</span>
             </div>
             <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text}</span>
+                <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• {text}</p>
             </div>
             <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text2}</span>
+                <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• {text2}</p>
             </div>
             <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text3}</span>
+                <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• {text3}</p>
             </div>
             <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text4}</span>
+                <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• {text4}</p>
             </div>
         </div>
     )
