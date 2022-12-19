@@ -25,12 +25,12 @@ const HotelCasinoStructure = () => {
         <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
         <span style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <span style={{ color: "#828282", fontSize: '2.625rem', display: isflex ? 'flex' : '' }}>{text} <span style={{ color: '#4c98ff', marginLeft: '0.5rem', marginRight: '0.2rem' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem' }}>{color2}</span><p style={{ margin: isflex || withoutP ? '0' : '' }}>{color3}</p></span>
+      <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>{text} <span style={{ color: '#4c98ff', marginLeft: '0.5rem', marginRight: '0.2rem' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem' }}>{color2}</span><span style={{ margin: isflex || withoutP ? '0' : '' }}>{color3}</span></p>
       {text2 && (
-        <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: isflex ? '-0.2rem' : '' }}>{text2}</span>
+        <p style={{ color: "#8c8c8c", fontSize: '2.625rem', margin: 0 }}>{text2}</p>
       )}
       {text3 && (
-        <span style={{ color: "#8c8c8c", display: 'flex' }}>{text3}</span>
+        <p style={{ color: "#8c8c8c", margin: 0 }}>{text3}</p>
       )}
     </div>
   )
@@ -41,21 +41,21 @@ const HotelCasinoStructure = () => {
         <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
         <span style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text}</span>
+      <div style={{ marginTop: '-0.2rem', margin: 0, fontSize: '2.625rem' }}>
+        <p style={{ color: "#8c8c8c", fontSize: '2.625rem', margin: 0 }}>• {text}</p>
       </div>
-      <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text2}</span>
+      <div style={{ marginTop: '-0rem', margin: 0, fontSize: '2.625rem' }}>
+        <p style={{ color: "#8c8c8c", fontSize: '2.625rem', margin: 0 }}>• {text2}</p>
       </div>
-      <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text3}</span>
+      <div style={{ marginTop: '-0rem', margin: 0, fontSize: '2.625rem' }}>
+        <p style={{ color: "#8c8c8c", fontSize: '2.625rem', margin: 0 }}>• {text3}</p>
       </div>
-      <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text4}</span>
+      <div style={{ marginTop: '-0rem', margin: 0, fontSize: '2.625rem' }}>
+        <p style={{ color: "#8c8c8c", fontSize: '2.625rem', margin: 0 }}>• {text4}</p>
       </div>
       {text5 && (
-        <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-          <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text5}</span>
+        <div style={{ marginTop: '-0rem', margin: 0, fontSize: '2.625rem' }}>
+          <p style={{ color: "#8c8c8c", fontSize: '2.625rem', margin: 0 }}>• {text5}</p>
         </div>
       )}
     </div>
@@ -66,11 +66,11 @@ const HotelCasinoStructure = () => {
         <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
         <span style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.2rem' }}>• {text}</span>
+      <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.2rem', margin: 0 }}>• {text}</p>
       {text1_1 && (
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.2rem' }}>• {text1_1}</span>
+        <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.2rem', margin: 0 }}>• {text1_1}</p>
       )}
-      <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0rem' }}>• {text2}</span>
+      <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0rem', margin: 0 }}>• {text2}</p>
     </div>
   )
 
@@ -83,11 +83,11 @@ const HotelCasinoStructure = () => {
           <TitleText titleText='로비화면' noNumber />
           <div style={{ background: '#494745', height: '0.1875rem', width: '94.5%', margin: 'auto' }} />
           <div style={{ padding: '1.8rem', letterSpacing: '-0.06rem' }}>
-            <Item title="아이디&보유머니" text="본인의 아이디와 보유머니 표시" marginTop='-0.6rem' />
-            <Item number="2." title="언어설정" text="한국어, 중국어, 영어, 일본어 설정 가능" marginTop='-0.6rem' />
-            <LongItem2 number='3.' text='화면설정 : 전체화면/축소화면 설정 가능' text2='메인으로 : 메인으로 이동 가능' marginTop='-0.5rem' />
+            <Item title="아이디&보유머니" text="본인의 아이디와 보유머니 표시" />
+            <Item number="2." title="언어설정" text="한국어, 중국어, 영어, 일본어 설정 가능" marginTop='1.4rem' />
+            <LongItem2 number='3.' text='화면설정 : 전체화면/축소화면 설정 가능' text2='메인으로 : 메인으로 이동 가능' marginTop='1.4rem' />
             <Item number="4." title="업체별 정렬" text="카지노 업체별 테이블 정렬 가능" marginTop='1.5rem' />
-            <Item number="5." title="베팅한도" text="테이블의 ▼ 버튼을 누르면" text2="해당 테이블의 상세 베팅한도 확인 가능" isflex />
+            <Item number="5." title="베팅한도" text="테이블의 ▼ 버튼을 누르면" text2="해당 테이블의 상세 베팅한도 확인 가능" isflex marginTop='1.4rem' />
             <Item number="6." title="게임입장" text="원하는 테이블의 [입장]버튼을 누르면" text2="게임테이블로 이동됩니다." isflex marginTop='1.4rem' />
             <div style={{ width: "15.8rem", flexShrink: 0, padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }}>
               알아두세요!
@@ -113,9 +113,9 @@ const HotelCasinoStructure = () => {
           <div className="pt-20px space-y-23px" style={{ padding: '1.8rem', letterSpacing: '-0.06rem' }}>
             <Item title="테이블정보" text="카지노업체, 게임회차, 베팅한도 등" text2="다양한 게임정보가 표시됩니다." isflex />
             <Item number="2." title="라이브 딜러영상" text="실제 호텔카지노의 라이브영상 제공" marginTop='1.5rem' />
-            <Item number="3." title="금액표시" text="베팅금액/이긴금액/보유금액 표시" text2="" marginTop='-0.6rem' />
-            <Item number="4." title="슈통계" text="현재 슈를 토대로 한 다음 통계 표시" marginTop='-0.6rem' />
-            <Item number="5." title="로드탐구표" text="다음 라운드에서 뱅커 또는 플레이어가 이길 경우" text2="세 개의 중국점에 추가되는 아이콘 표시" marginTop='-0.5rem' isflex />
+            <Item number="3." title="금액표시" text="베팅금액/이긴금액/보유금액 표시" text2="" marginTop='1.5rem' />
+            <Item number="4." title="슈통계" text="현재 슈를 토대로 한 다음 통계 표시" marginTop='1.5rem' />
+            <Item number="5." title="로드탐구표" text="다음 라운드에서 뱅커 또는 플레이어가 이길 경우" text2="세 개의 중국점에 추가되는 아이콘 표시" marginTop='1.5rem' isflex />
             <Item number="6." title="스코어보드" text="6매, 본매, 중국점(1군~3군) 등" text2="다양한 종류 제공" marginTop='1.5rem' isflex />
           </div>
 
@@ -135,15 +135,13 @@ const HotelCasinoStructure = () => {
           <div className="pt-20px space-y-23px" style={{ padding: '1.8rem', letterSpacing: '-0.06rem' }}>
             <Item title="베팅구역" text="플레이어, 뱅커, 타이, 플레이어페어, 뱅커페어 등" text2="각 베팅구역을 누르면 베팅이 가능합니다." isflex />
             <Item number="2." title="베팅시간" text="베팅 가능한 시간을 표시합니다." marginTop='1.5rem' />
-            <div className="flex items-center" style={{ display: 'flex', alignItems: 'center', marginTop: '-2.1rem' }}>
-              <span style={{ color: "#f45400", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>
-                ※ 45초 베팅시간 제공
-              </span>
-            </div>
+            <p style={{ color: "#f45400", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }}>
+              ※ 45초 베팅시간 제공
+            </p>
             <Item number="3." title="베팅칩" text="베팅 시 칩을 선택할 수 있습니다." text2="" marginTop='1.5rem' />
-            <LongItem2 number="4." title='버튼' text='베팅하기 : ① 베팅구역에 베팅한 후' text1_1='해당 버튼을 누르면 베팅이 완료됩니다.' text2='베팅취소 : 베팅을 취소할 수 있습니다.' marginBottom='0.7rem' />
+            <LongItem2 number="4." title='버튼' text='베팅하기 : ① 베팅구역에 베팅한 후' text1_1='해당 버튼을 누르면 베팅이 완료됩니다.' text2='베팅취소 : 베팅을 취소할 수 있습니다.' marginTop='1.5rem' />
             <Item number="5." title="칩설정" text="테이블에 표시되는 ③ 칩을 설정할 수 있습니다." marginTop='1.5rem' />
-            <Item number="6." title="테이블이동" text="다른 테이블로 이동 가능합니다." marginTop='-0.5rem' isflex />
+            <Item number="6." title="테이블이동" text="다른 테이블로 이동 가능합니다." marginTop='1.5rem' isflex />
           </div>
         </div>
       </div>
@@ -184,7 +182,7 @@ const HotelCasinoStructure = () => {
             <Item number="2." title="[S]버튼" text="[S]버튼을 선택합니다." marginTop='1.5rem' />
             <Item number="3." title="환경설정" text="각 항목에 원하는 금액을 설정합니다." text2="- 1번~5번 항목 금액입력(③ 예시화면 참조)" marginTop='1.5rem' isflex />
             <Item number="4." title="확인버튼" text="[확인] 버튼을 누릅니다." marginTop='1.5rem' />
-            <Item number="5." title="베팅하기" text="숫자(1~5)버튼 선택 시 베팅이 가능합니다." text2='- 예) 1번 버튼 선택 시 플레이어 10,000 베팅' marginTop='-0.5rem' isflex />
+            <Item number="5." title="베팅하기" text="숫자(1~5)버튼 선택 시 베팅이 가능합니다." text2='- 예) 1번 버튼 선택 시 플레이어 10,000 베팅'  marginTop='1.5rem' isflex />
           </div>
         </div>
       </div>
