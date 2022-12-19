@@ -17,22 +17,22 @@ const EsportsMulti = () => {
                 <span style={{ color: "#828282", fontSize: '2.625rem' }}>{text} <span style={{ color: '#4c98ff', marginLeft: '0.1rem', marginRight: '0.2rem', fontWeight: '600' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem', fontWeight: '600' }}>{color2}</span><p style={{ margin: '0', display: 'inline-block' }}>{color3}</p></span>
             )}
             {text1 && (
-                <span style={{ color: "#828282", display: 'flex', fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text1}</span>
+                <span style={{ color: "#828282", fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text1}</span>
             )}
             {text2 && (
-                <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text2}</span>
+                <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text2}</span>
             )}
             {text3 && (
-                <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text3}</span>
+                <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text3}</span>
             )}
             {text4 && (
                 <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text4}</span>
             )}
             {text5 && (
-                <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', margin: '-0.25rem 0 0 0.4rem' }}>{text5}</span>
+                <span style={{ color: "#8c8c8c", fontSize: '2.625rem', margin: '-0.25rem 0 0 0.4rem' }}>{text5}</span>
             )}
             {text6 && (
-                <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text6}</span>
+                <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.3rem' }}>{text6}</span>
             )}
             {text7 && (
                 <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text7}</span>

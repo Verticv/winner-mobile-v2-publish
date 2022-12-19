@@ -66,17 +66,11 @@ const HotelCasinoStructure = () => {
         <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
         <span style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text}</span>
-      </div>
+      <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.2rem' }}>• {text}</span>
       {text1_1 && (
-        <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-          <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text1_1}</span>
-        </div>
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.2rem' }}>• {text1_1}</span>
       )}
-      <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text2}</span>
-      </div>
+      <span style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0rem' }}>• {text2}</span>
     </div>
   )
 
