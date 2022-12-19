@@ -78,17 +78,17 @@ const EsportsMulti = () => {
                     <div style={{ width: "15.8rem", flexShrink: 0, padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }}>
                         알아두세요!
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.35rem' }}>
-                        <span style={{ color: "#8c8c8c", fontSize: '2.625rem', display: 'flex' }}>※ 각 팀의 좌/우 가장자리에 있는 ①<p style={{ margin: '0 0.5rem 0 0', color: '#4c98ff', fontWeight: '600' }}>[+]</p><p style={{ color: "#e65454", margin: '0 0.5rem 0 0', fontWeight: '600' }}>[+]</p> 버튼을 누르면</span>
+                    <div style={{ alignItems: 'center', marginTop: '0.35rem' }}>
+                        <p style={{ color: "#8c8c8c", margin: 0, fontSize: '2.625rem' }}>※ 각 팀의 좌/우 가장자리에 있는 ①<span style={{ margin: '0 0.5rem 0 0', color: '#4c98ff', fontWeight: '600' }}>[+]</span><span style={{ color: "#e65454", margin: '0 0.5rem 0 0', fontWeight: '600' }}>[+]</span> 버튼을 누르면</p>
                     </div>
                     <div style={{ color: '#8c8c8c', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>
-                        <span style={{ color: "#8c8c8c" }}> 선택한 경기(배당)가 ②팔레이 리스트에 추가됩니다.</span>
+                        <p style={{ color: "#8c8c8c", margin: 0 }}> 선택한 경기(배당)가 ②팔레이 리스트에 추가됩니다.</p>
                     </div>
                     <div style={{ color: '#8c8c8c', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>
-                        <span style={{ color: "#8c8c8c" }}>※ 팔레이베팅은 최소 2개 이상 각각 다른 경기를 조합하여 </span>
+                        <p style={{ color: "#8c8c8c", margin: 0 }}>※ 팔레이베팅은 최소 2개 이상 각각 다른 경기를 조합하여 </p>
                     </div>
                     <div style={{ color: '#8c8c8c', fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>
-                        <span style={{ color: "#8c8c8c" }}>베팅할 수 있습니다. (같은 게임 팔레이베팅 불가) </span>
+                        <p style={{ color: "#8c8c8c", margin: 0 }}>베팅할 수 있습니다. (같은 게임 팔레이베팅 불가) </p>
                     </div>
                 </div>
             </div>
@@ -102,14 +102,14 @@ const EsportsMulti = () => {
                     <div style={{ width: "15.8rem", flexShrink: 0, padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }}>
                         알아두세요!
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>• 1/8 최대 : 최대 한도금액을 8로 나눈 금액 베팅</span>
+                    <div style={{ marginTop: '0.5rem' }}>
+                        <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• 1/8 최대 : 최대 한도금액을 8로 나눈 금액 베팅</p>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.1rem' }}>
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>• 1/4 최대 : 최대 한도금액을 4로 나눈 금액 베팅</span>
+                    <div style={{ marginTop: '0.1rem' }}>
+                        <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• 1/4 최대 : 최대 한도금액을 4로 나눈 금액 베팅</p>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.2rem' }}>
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>• 1/2 최대 : 최대 한도금액을 2로 나눈 금액 베팅 </span>
+                    <div style={{ marginTop: '0.2rem' }}>
+                        <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• 1/2 최대 : 최대 한도금액을 2로 나눈 금액 베팅 </p>
                     </div>
                 </div>
             </div>
