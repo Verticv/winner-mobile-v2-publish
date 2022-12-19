@@ -31,6 +31,7 @@ const MinigamesMatchResultPanel = ({
                                     hasDown={false}
                                     isMinigame={true}
                                     withoutRadius={true}
+                                    minigame
 
                                 />
                                 <CardResults
@@ -49,6 +50,7 @@ const MinigamesMatchResultPanel = ({
                                     withoutRadius={type !== "speedkino" && true}
                                     withTopBorder={true}
                                     secondCard={true}
+                                    minigame
                                 />
                                 {type !== "speedkino" && (
                                     <CardResults
@@ -65,6 +67,7 @@ const MinigamesMatchResultPanel = ({
                                         hasDown={false}
                                         isMinigame={true}
                                         withTopBorder={true}
+                                        minigame
                                     />
                                 )}
 

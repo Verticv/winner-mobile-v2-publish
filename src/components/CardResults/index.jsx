@@ -65,7 +65,7 @@ const CardResults = ({
                             paddingTop: bet === "left" ? '' : '0.1rem',
                             paddingRight: bet === "left" ? '' : '0.15rem'
                         }}>
-                            <span style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem' }}>{shouldTruncate ? truncate(team1, 8, 8) : team1}</span>
+                            <span style={{ fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem' }}>{shouldTruncate ? truncate(team1, 11, 11) : team1}</span>
                             <div style={{ width: '7rem', textAlign: 'center' }}>
                                 {hasUp && <img style={{ marginRight: '0.4375rem', width: '2rem', height: '1.75rem' }} src={UpIcon} alt="" />}
                                 <span style={{ fontSize: '2.625rem', fontFamily: 'RobotoMedium', marginRight: '0.3rem' }}>{stat1}</span>
@@ -128,7 +128,7 @@ const CardResults = ({
                                 <span style={{ fontSize: '2.625rem' }} className="font-roboto tracking-tight">{stat3}</span>
                                 {hasDown && <img style={{ marginLeft: '0.4375rem' }} src={DownIcon} alt="" />}
                             </div>
-                            <span style={{ fontSize: '2.625rem', maxWidth: smallContent ? '15.6rem' : '15.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '1.4rem', letterSpacing: '-0.07rem' }}>{shouldTruncate ? truncate(team2, 10, 10) : team2}</span>
+                            <span style={{ fontSize: '2.625rem', maxWidth: smallContent ? '15.6rem' : '15.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '1.4rem', letterSpacing: '-0.07rem' }}>{shouldTruncate ? truncate(team2, 11, 11) : team2}</span>
                         </div>
                     </button>
                 </div>
