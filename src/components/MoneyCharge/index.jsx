@@ -63,7 +63,7 @@ const MoneyCharge = ({ subActiveButton, setSubActiveButton }) => {
                             입금 계좌 정보 확인
                         </div>
                         <div style={{ fontSize: '2.625rem', color: '#c8c8c8', marginTop: '0.8rem', lineHeight: '1.42', marginLeft: '-0.2rem', letterSpacing: '-0.07rem', marginRight: '3rem' }} >
-                            입금 계좌번호는 쪽지로 발송되며, 발송한 계좌번호로 선입금 바랍니다.
+                            입금 계좌번호는 쪽지로 발송되며, 발송된 계좌번호로 선입금 바랍니다.
                         </div>
                         <div style={{ height: '0.1875rem', margin: '1.16rem 0rem 1.89rem', background: '#494745' }} className="w-full bg-gray-bebebe my-5" />
 

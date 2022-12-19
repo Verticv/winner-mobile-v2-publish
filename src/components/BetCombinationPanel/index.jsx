@@ -739,12 +739,7 @@ const BetCombinationPanel = ({
                         className="searchdropdown-style3"
                         onClick={() => setDropdownOpen(false)}
                     >
-                        <div
-                            style={{
-                                // borderColor: "#737579"
-                            }}
-                            className="searchdropdown-style4"
-                        >
+                        <div className="searchdropdown-style4">
                             <span style={{ fontSize: '2.8125rem' }} className="searchdropdown-style5 shadow-to-text" >
                                 확인
                             </span>

@@ -218,17 +218,21 @@ const cardInfo = [
         isActive: false,
         path: '/bet-combination',
         group: '3'
-    },
+    },    
+    // {
+    //     id: 22,
+    //     inactivBackground: bg22,
+    //     activeBackground: bga22,
+    //     icon: true,
+    //     text: '두윈카지노',
+    //     isActive: false,
+    //     group: '4',
+    //     // disable: 'true',
+    //     // extra: 'true'
+    //     main: true
+    // },
     {
-        id: 12,
-        inactivBackground: bg12,
-        activeBackground: bga12,
-        icon: true,
-        text: '보타카지노',
-        isActive: false,
-        group: '4'
-    }, {
-        id: 22,
+        id: 2232,
         inactivBackground: bg22,
         activeBackground: bga22,
         icon: true,
@@ -237,7 +241,26 @@ const cardInfo = [
         group: '4',
         // disable: 'true',
         // extra: 'true'
-        main: true
+    }, 
+    {
+        id: 221,
+        inactivBackground: bg221,
+        activeBackground: bga221,
+        icon: true,
+        text: '이용가이드',
+        isActive: false,
+        group: '4',
+        disable: 'true',
+        extra: 'true'
+    }, 
+    {
+        id: 12,
+        inactivBackground: bg12,
+        activeBackground: bga12,
+        icon: true,
+        text: '보타카지노',
+        isActive: false,
+        group: '4'
     },
     {
         id: 13,
@@ -326,27 +349,8 @@ const cardInfo = [
         path: '/hotelcasino/structure',
         extra: 'true'
     },
+
     {
-        id: 2232,
-        inactivBackground: bg22,
-        activeBackground: bga22,
-        icon: true,
-        text: '두윈카지노',
-        isActive: false,
-        group: '4',
-        // disable: 'true',
-        extra: 'true'
-    }, {
-        id: 221,
-        inactivBackground: bg221,
-        activeBackground: bga221,
-        icon: true,
-        text: '이용가이드',
-        isActive: false,
-        group: '4',
-        // disable: 'true',
-        extra: 'true'
-    }, {
         id: 23,
         inactivBackground: bg23,
         activeBackground: bga23,

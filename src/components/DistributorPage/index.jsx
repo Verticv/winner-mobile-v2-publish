@@ -215,8 +215,8 @@ const DistributorPage = ({
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>PG</span><br /><span>소프트</span></td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>로얄슬롯</span><br /><span>게이밍</span></td>
 
-                                <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>보타</span><br /><span>카지노</span></td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>두윈</span><br /><span>카지노</span></td>
+                                <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>보타</span><br /><span>카지노</span></td>
 
                                 <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '', paddingLeft: '1.4rem' }}>e-스포츠</td>
                                 <td style={{ width: '14.8rem', fontSize: '2.625rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>키론</span><br /><span>가상게임</span></td>
@@ -350,8 +350,8 @@ const DistributorPage = ({
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}>와즈단</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>PG</span><br /><span>소프트</span></td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>로얄슬롯</span><br /><span>게이밍</span></td>
-                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>보타</span><br /><span>카지노</span></td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>두윈</span><br /><span>카지노</span></td>
+                                <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>보타</span><br /><span>카지노</span></td>
 
                                 <td style={{ backgroundColor: "#242424e6", width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center h-full flex items-center justify-center">e-스포츠</td>
                                 <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>키론</span><br /><span>가상게임</span></td>
@@ -888,8 +888,8 @@ const DistributorPage = ({
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }}>와즈단</td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }}><span>PG</span><br /><span>소프트</span></td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }}><span>로얄슬롯</span><br /><span>게이밍</span></td>
-                                                    <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }}><span>보타</span><br /><span>카지노</span></td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }}><span>두윈</span><br /><span>카지노</span></td>
+                                                    <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }}><span>보타</span><br /><span>카지노</span></td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }}>e-스포츠</td>
                                                     <td style={{ width: '14.5rem', fontSize: '2.625rem', textAlign: 'center' }}><span>키론</span><br /><span>가상게임</span></td>
                                                 </tr>
@@ -1038,8 +1038,8 @@ const DistributorPage = ({
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}>와즈단</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>PG</span><br /><span>소프트</span></td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>로얄슬롯</span><br /><span>게이밍</span></td>
-                                                    <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>보타</span><br /><span>카지노</span></td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>두윈</span><br /><span>카지노</span></td>
+                                                    <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>보타</span><br /><span>카지노</span></td>
                                                     <td style={{ backgroundColor: "#242424e6", width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }} className="text-center h-full flex items-center justify-center">e-스포츠</td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem' }}><span>키론</span><br /><span>가상게임</span></td>
                                                     <td style={{ width: '13.8125rem', textAlign: 'center', paddingTop: '0.5rem', background: '#1d1e1f' }}>합계</td>
