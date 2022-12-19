@@ -38,27 +38,29 @@ const TvBetInfo = () => {
           <div style={{ padding: '1.8rem', letterSpacing: '-0.06rem', paddingTop: '2.8rem' }}>
             <LongItem2 number='1.' title='게임 및 배당선택' text='① 게임종류를 선택합니다.' text2='원하는 ② ③ 배당을 선택합니다.' marginTop='-0.5rem' />
 
-            <div style={{ width: "fit-content", padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }} className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px mt-60px">알아두세요!</div>
-            <div className="flex flex-col" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '0.35rem' }}>
-              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+            <div style={{ width: "15.8rem", flexShrink: 0, padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }}>
+              알아두세요!
+            </div>
+            <div className="flex flex-col" style={{ marginTop: '0.35rem' }}>
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }}>
                 ※ ④[이벤트정보] 화면에서 현재 ‘라이브’ 중인 게임과
               </p>
               <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium">
                 ‘예정된’ 게임이벤트를 확인할 수 있습니다.
               </p>
-              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }}>
                 원하는 이벤트를 선택하면 ‘배당판’이 활성화되며
               </p>
-              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }}>
                 배당을 선택하면 베팅이 가능합니다.
               </p>
             </div>
 
-            <div className="flex flex-col" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '3rem' }}>
-              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+            <div className="flex flex-col" style={{ marginTop: '3rem' }}>
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }}>
                 ※ ⑤[플레이방법] 메뉴에서 각 게임별 이용방법과
               </p>
-              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }}>
                 규정 등 확인 가능합니다.
               </p>
             </div>
