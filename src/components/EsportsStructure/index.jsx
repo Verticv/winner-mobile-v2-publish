@@ -23,12 +23,12 @@ const EsportsStructure = () => {
                 <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
                 <span style={{ color: '#ccc2b6' }}>{title}</span>
             </div>
-            <p style={{ color: "#828282", fontSize: '2.625rem', display: isflex ? 'flex' : '', margin:0 }}>{text} <p style={{ color: '#4c98ff', marginLeft: '0.5rem', marginRight: '0.2rem', margin:0 }}>{color1}</p><p style={{ color: "#e65454", marginRight: '0.5rem', margin:0 }}>{color2}</p><p style={{ margin: isflex || withoutP ? '0' : '' }}>{color3}</p></p>
+            <p style={{ color: "#828282", fontSize: '2.625rem', display: isflex ? 'flex' : '', margin: 0 }}>{text} <p style={{ color: '#4c98ff', marginLeft: '0.5rem', marginRight: '0.2rem', margin: 0 }}>{color1}</p><p style={{ color: "#e65454", marginRight: '0.5rem', margin: 0 }}>{color2}</p><p style={{ margin: isflex || withoutP ? '0' : '' }}>{color3}</p></p>
             {text2 && (
-                <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: isflex ? '-0.2rem' : '', margin:0 }}>{text2}</p>
+                <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: isflex ? '-0.2rem' : '', margin: 0 }}>{text2}</p>
             )}
             {text3 && (
-                <p style={{ color: "#8c8c8c", margin:0 }}>{text3}</p>
+                <p style={{ color: "#8c8c8c", margin: 0 }}>{text3}</p>
             )}
         </div>
     )
@@ -59,11 +59,12 @@ const EsportsStructure = () => {
                 <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
                 <span style={{ color: '#ccc2b6' }}>{title}</span>
             </div>
-            <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text}</span>
+            <div style={{ marginTop: '-0.2rem', fontSize: '2.625rem' }}>
+                <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• {text}</p>
+
             </div>
-            <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-                <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text2}</span>
+            <div style={{ marginTop: '-0rem', fontSize: '2.625rem' }}>
+            <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>• {text2}</p>
             </div>
         </div>
     )
