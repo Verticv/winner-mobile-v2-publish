@@ -23,7 +23,7 @@ const TvBetStructure = () => {
         <span className="text-blue-r0056a6" style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
         <span className="text-gray-r585858" style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <span style={{ color: "#828282", fontSize: '2.625rem', display: isflex ? 'flex' : '' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text} <span className="ml-2px text-blue-r0056a6" style={{ color: '#4c98ff', marginLeft: '0.5rem', marginRight: '0.2rem' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem' }} className="mr-2px">{color2}</span><p style={{ margin: isflex || withoutP ? '0' : '' }}>{color3}</p></span>
+      <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text} <span className="ml-2px text-blue-r0056a6" style={{ color: '#4c98ff', marginLeft: '0.5rem', marginRight: '0.2rem' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem' }} className="mr-2px">{color2}</span><span style={{ margin: isflex || withoutP ? '0' : '' }}>{color3}</span></p>
       {text2 && (
         <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: isflex ? '-0.2rem' : '' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text2}</span>
       )}
@@ -42,21 +42,21 @@ const TvBetStructure = () => {
         <span className="text-blue-r0056a6" style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
         <span className="text-gray-r585858" style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-        <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text}</span>
+      <div className="flex" style={{ marginTop: '-0.2rem' }}>
+        <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text}</p>
       </div>
-      <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text2}</span>
+      <div className="flex" style={{ marginTop: '-0rem' }}>
+        <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text2}</p>
       </div>
-      <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text3}</span>
+      <div className="flex" style={{ marginTop: '-0rem' }}>
+        <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text3}</p>
       </div>
-      <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text4}</span>
+      <div className="flex" style={{ marginTop: '-0rem' }}>
+        <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text4}</p>
       </div>
       {text5 && (
-        <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-          <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text5}</span>
+        <div className="flex" style={{ marginTop: '-0rem' }}>
+          <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text5}</p>
         </div>
       )}
     </div>
@@ -67,20 +67,20 @@ const TvBetStructure = () => {
         <span className="text-blue-r0056a6" style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
         <span className="text-gray-r585858" style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-        <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text}</span>
+      <div className="flex" style={{ marginTop: '-0.2rem' }}>
+        <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text}</p>
       </div>
       {text1_1 && (
-        <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-          <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text1_1}</span>
+        <div className="flex" style={{ marginTop: '-0.2rem' }}>
+          <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text1_1}</p>
         </div>
       )}
-      <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text2}</span>
+      <div className="flex" style={{ marginTop: '-0rem' }}>
+        <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text2}</p>
       </div>
       {text3 && (
-        <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-          <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text3}</span>
+        <div className="flex" style={{ marginTop: '-0rem' }}>
+          <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text3}</p>
         </div>
       )}
     </div>
@@ -97,9 +97,9 @@ const TvBetStructure = () => {
           <div className="pt-20px space-y-23px" style={{ padding: '1.8rem', letterSpacing: '-0.06rem' }}>
             <LongItem number='1.' text='로비 : 전체 게임리스트 확인 및 게임선택 가능' text2='플레이방법 : 게임별 이용방법 및 규정 확인 가능' text3='게임 : 딜러영상 및 배당판을 제공하며 실제 베팅 가능' text4='베팅기록 : 상세 베팅내역 확인 가능' text5='결과 : 상세 경기결과 확인 가능' marginTop='-0.5rem' />
             <Item number='2.' title="보유머니" text="본인의 보유머니가 표시됩니다." marginTop='1.5rem' />
-            <Item number="3." title="게임종류선택" text="다양한 게임을 선택할 수 있습니다." marginTop='-0.6rem' />
+            <Item number="3." title="게임종류선택" text="다양한 게임을 선택할 수 있습니다." marginTop='1.5rem' />
             <Item number="4." title="라이브영상" text="각 게임별 라이브영상을 제공합니다." marginTop='1.5rem' />
-            <Item number="5." title="설정" text="영상 내에 표시되는 배당정보설정, 음향설정," text2="전체/기본화면설정, 영상화질설정 등 제공합니다." isflex />
+            <Item number="5." title="설정" text="영상 내에 표시되는 배당정보설정, 음향설정," text2="전체/기본화면설정, 영상화질설정 등 제공합니다." marginTop='1.5rem' />
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@ const TvBetStructure = () => {
             <Item number="2." title="다양한 베팅종류 제공" text="다양한 베팅 종류가 표시되며 배당 선택 시" text2='베팅이 가능합니다.' marginTop='1.5rem' isflex />
             <Item number="3." title="이벤트정보" text="현재 라이브 중인 게임과 예정된 게임이벤트를" text2="확인할 수 있습니다. 원하는 이벤트를 선택하면" text3='배당판이 활성화되며 배당을 선택하면' text4='베팅이 가능합니다.' marginTop='1.5rem' isflex />
             <Item number="4." title="베팅기록" text="진행중인 베팅 및 베팅 결과를 확인할 수 있습니다." marginTop='1.5rem' />
-            <Item number="5." title="최근결과" text="최근 게임 결과정보를 확인할 수 있습니다." marginTop='-0.5rem' />
+            <Item number="5." title="최근결과" text="최근 게임 결과정보를 확인할 수 있습니다." marginTop='1.5rem' />
             <Item number="6." title="최근우승" text="최근 게임 우승자의 승리금액을 확인할 수 있습니다." marginTop='1.5rem' />
             <Item number="7." title="베팅슬립 버튼" text="버튼을 누르면 베팅슬립이 나타납니다." marginTop='1.5rem' />
           </div>

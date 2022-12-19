@@ -93,8 +93,9 @@ const HotelCasinoStructure = () => {
               알아두세요!
             </div>
             <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.35rem' }}>
-              <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }}>※ 스피드게임 : 45초 베팅시간 제공
-              </span>
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }}>
+                ※ 스피드게임 : 45초 베팅시간 제공
+              </p>
             </div>
           </div>
         </div>
@@ -182,7 +183,7 @@ const HotelCasinoStructure = () => {
             <Item number="2." title="[S]버튼" text="[S]버튼을 선택합니다." marginTop='1.5rem' />
             <Item number="3." title="환경설정" text="각 항목에 원하는 금액을 설정합니다." text2="- 1번~5번 항목 금액입력(③ 예시화면 참조)" marginTop='1.5rem' isflex />
             <Item number="4." title="확인버튼" text="[확인] 버튼을 누릅니다." marginTop='1.5rem' />
-            <Item number="5." title="베팅하기" text="숫자(1~5)버튼 선택 시 베팅이 가능합니다." text2='- 예) 1번 버튼 선택 시 플레이어 10,000 베팅'  marginTop='1.5rem' isflex />
+            <Item number="5." title="베팅하기" text="숫자(1~5)버튼 선택 시 베팅이 가능합니다." text2='- 예) 1번 버튼 선택 시 플레이어 10,000 베팅' marginTop='1.5rem' isflex />
           </div>
         </div>
       </div>
