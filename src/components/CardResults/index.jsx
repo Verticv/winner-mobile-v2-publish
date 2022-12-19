@@ -279,7 +279,7 @@ const CardResults = ({
                                         >
                                             {result === "win" ? "승" : result === "lose" ? "패" : result === "equality" ? "무" : ""}
                                         </p>
-                                        {score.length > 4 ? (
+                                        {score.length > 5 ? (
                                             <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
                                                 <p
                                                     style={{

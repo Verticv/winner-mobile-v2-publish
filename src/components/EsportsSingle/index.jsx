@@ -29,7 +29,20 @@ const EsportsSingle = () => {
             <div>
                 <img src={Image3} alt="" style={{ width: '70rem' }} />
                 <div style={{ backgroundColor: "#2b2b2a", padding: "2.15rem 1.8rem", marginTop: '2.3rem', borderRadius: '0.5rem' }}>
-                    <Item number="1." title="종목 및 경기선택" text="가. ① 게임종류를 선택합니다." text2="나. ② 경기를 선택합니다." withoutP />
+
+                    <div style={{ fontFamily: 'SpoqaHanSansNeoMedium', lineHeight: '1.4', letterSpacing: '-0.04rem' }}>
+                        <div style={{ fontFamily: 'SpoqaHanSansNeoBold', fontSize: '2.825rem' }}>
+                            <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>1.</span>
+                            <span style={{ color: '#ccc2b6' }}>종목 및 경기선택</span>
+                        </div>
+                        <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }}>가. ① 게임종류를 선택합니다.</p>
+                        <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.3rem', margin: 0 }}>나. ② 경기를 선택합니다.</p>
+
+
+
+
+                    </div>
+                    {/* <Item number="1." title="종목 및 경기선택" text="가. ① 게임종류를 선택합니다." text2="나. ② 경기를 선택합니다." withoutP /> */}
                 </div>
             </div>
 
