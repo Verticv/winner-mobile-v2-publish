@@ -10,20 +10,20 @@ const TvBetInfo = () => {
         <span className="text-blue-r0056a6" style={{ color: '#a67c52', marginRight: '0.4rem' }}>{number}</span>
         <span className="text-gray-r585858" style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
-      <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-        <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text}</span>
+      <div className="flex" style={{ marginTop: '-0.2rem' }}>
+        <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text}</p>
       </div>
       {text1_1 && (
-        <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-          <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text1_1}</span>
+        <div className="flex" style={{ marginTop: '-0.2rem' }}>
+          <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text1_1}</p>
         </div>
       )}
-      <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text2}</span>
+      <div className="flex" style={{ marginTop: '-0rem' }}>
+        <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text2}</p>
       </div>
       {text3 && (
-        <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-          <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text3}</span>
+        <div className="flex" style={{ marginTop: '-0rem' }}>
+          <p style={{ color: "#8c8c8c", margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text3}</p>
         </div>
       )}
     </div>
@@ -40,27 +40,27 @@ const TvBetInfo = () => {
 
             <div style={{ width: "fit-content", padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }} className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px mt-60px">알아두세요!</div>
             <div className="flex flex-col" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '0.35rem' }}>
-              <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
                 ※ ④[이벤트정보] 화면에서 현재 ‘라이브’ 중인 게임과
-              </span>
-              <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium">
+              </p>
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium">
                 ‘예정된’ 게임이벤트를 확인할 수 있습니다.
-              </span>
-              <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+              </p>
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
                 원하는 이벤트를 선택하면 ‘배당판’이 활성화되며
-              </span>
-              <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+              </p>
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
                 배당을 선택하면 베팅이 가능합니다.
-              </span>
+              </p>
             </div>
 
             <div className="flex flex-col" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '3rem' }}>
-              <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
                 ※ ⑤[플레이방법] 메뉴에서 각 게임별 이용방법과
-              </span>
-              <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
+              </p>
+              <p style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
                 규정 등 확인 가능합니다.
-              </span>
+              </p>
             </div>
           </div>
 

@@ -25,13 +25,13 @@ const TvBetStructure = () => {
       </div>
       <p style={{ color: "#828282", fontSize: '2.625rem', margin: 0 }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text} <span className="ml-2px text-blue-r0056a6" style={{ color: '#4c98ff', marginLeft: '0.5rem', marginRight: '0.2rem' }}>{color1}</span><span style={{ color: "#e65454", marginRight: '0.5rem' }} className="mr-2px">{color2}</span><span style={{ margin: isflex || withoutP ? '0' : '' }}>{color3}</span></p>
       {text2 && (
-        <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: isflex ? '-0.2rem' : '' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text2}</span>
+        <p style={{ color: "#8c8c8c", margin: 0, fontSize: '2.625rem' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text2}</p>
       )}
       {text3 && (
-        <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: isflex ? '-0.2rem' : '' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text3}</span>
+        <p style={{ color: "#8c8c8c", margin: 0, fontSize: '2.625rem' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text3}</p>
       )}
       {text4 && (
-        <span style={{ color: "#8c8c8c", display: 'flex', fontSize: '2.625rem', marginTop: isflex ? '-0.2rem' : '' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text4}</span>
+        <p style={{ color: "#8c8c8c", margin: 0, fontSize: '2.625rem' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text4}</p>
       )}
     </div>
   )
