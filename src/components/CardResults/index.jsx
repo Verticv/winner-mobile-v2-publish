@@ -23,7 +23,8 @@ const CardResults = ({
     withTopBorder,
     width92,
     isFreeboard,
-    isCompose
+    isCompose,
+    minigame
 }) => {
 
     const truncate = (str, max, len) => {
@@ -127,7 +128,7 @@ const CardResults = ({
                                 <span style={{ fontSize: '2.625rem' }} className="font-roboto tracking-tight">{stat3}</span>
                                 {hasDown && <img style={{ marginLeft: '0.4375rem' }} src={DownIcon} alt="" />}
                             </div>
-                            <span style={{ fontSize: '2.625rem', maxWidth: smallContent ? '15.6rem' : '15.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '1.4rem', letterSpacing: '-0.07rem' }}>{shouldTruncate ? truncate(team2, 10, 7) : team2}</span>
+                            <span style={{ fontSize: '2.625rem', maxWidth: smallContent ? '15.6rem' : '15.6rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '1.4rem', letterSpacing: '-0.07rem' }}>{shouldTruncate ? truncate(team2, 10, 10) : team2}</span>
                         </div>
                     </button>
                 </div>
@@ -162,11 +163,11 @@ const CardResults = ({
                         >
                             <span style={{
                                 fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium', marginTop: '0.1rem', whiteSpace: 'nowrap',
-                                maxWidth: isCompose ? "17rem" : isFreeboard ? '17rem': hasUp ? '15.6rem' : '21rem',
+                                maxWidth: isCompose ? "17rem" : isFreeboard ? '17rem' : hasUp ? '15.6rem' : '21rem',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                             }}>
-                                {truncate(team1, 9, 9)}
+                                {minigame ? truncate(team1, 11, 11) : truncate(team1, 9, 9)}
                             </span>
                             <div style={{ marginRight: '0.6rem' }}>
                                 {hasUp && <img style={{ marginRight: '0.4375rem', width: '2rem', height: '1.75rem' }} src={UpIcon} alt="" />}
@@ -180,7 +181,7 @@ const CardResults = ({
                     background: 'linear-gradient(to top, #2f2d29, #2f2d29 50%, #4f4a41)', padding: '0.1875rem', width: smallCard ? '10rem' : '10rem', height: '7.4375rem', marginRight: '0.375rem',
                     borderRadius: '0.6rem',
                     boxShadow: '0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.5)',
-                    flexShrink:0
+                    flexShrink: 0
                 }}>
                     <button
                         style={{
@@ -225,22 +226,22 @@ const CardResults = ({
                                 paddingLeft: '',
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                                 width: '100%',
-                                marginTop: bet === "right" ? '0.1rem' : ''                             
+                                marginTop: bet === "right" ? '0.1rem' : ''
                             }}
                         >
-                            <div style={{ marginLeft: '0.6rem', flexShrink:0, display:'flex', alignItems:'center' }}>
-                                <span style={{ fontSize: '2.625rem', textAlign: 'center', display: 'flex', alignItems: 'center', flexShrink:0 }} >{stat3}</span>
-                                {hasDown && <img style={{ width: '2rem', objectFit:'contain', marginLeft: '0.4375rem', height: '1.75rem' }} src={DownIcon} alt="" />}
+                            <div style={{ marginLeft: '0.6rem', flexShrink: 0, display: 'flex', alignItems: 'center' }}>
+                                <span style={{ fontSize: '2.625rem', textAlign: 'center', display: 'flex', alignItems: 'center', flexShrink: 0 }} >{stat3}</span>
+                                {hasDown && <img style={{ width: '2rem', objectFit: 'contain', marginLeft: '0.4375rem', height: '1.75rem' }} src={DownIcon} alt="" />}
                             </div>
                             <span style={{
-                                fontSize: '2.625rem', 
-                                maxWidth: isCompose ? "17rem" : isFreeboard ? '17rem': hasDown ? '15.6rem' : '21rem', 
-                                fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem', 
+                                fontSize: '2.625rem',
+                                maxWidth: isCompose ? "17rem" : isFreeboard ? '17rem' : hasDown ? '15.6rem' : '21rem',
+                                fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '', letterSpacing: '-0.07rem',
                                 whiteSpace: 'nowrap',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                             }}>
-                                {truncate(team2, 7, 7)}
+                                {minigame ? truncate(team2, 11, 11) : truncate(team2, 7, 7)}
                             </span>
                         </div>
                     </button>

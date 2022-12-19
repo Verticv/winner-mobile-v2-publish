@@ -35,6 +35,7 @@ const KinoLadderBetHistoryPanel = ({
                                     hasUp={false}
                                     hasDown={false}
                                     shouldTruncate={false}
+                                    minigame
                                 />
                             </div>
                             <CardContent number='1' isPopup={isPopup} withButtons={!isPopup} withInput={true} withUploadButton={isPopup} checkedState={checkedState} type={0} setCheckedState={setCheckedState} hasHistory=" 짝" time=" 2021-06-29 15:45:05" />
@@ -63,6 +64,7 @@ const KinoLadderBetHistoryPanel = ({
                                     hasDown={false}
                                     withoutRadius
                                     shouldTruncate={false}
+                                    minigame
                                 />
                             </div>
                             <CardContent number='2' isPopup={isPopup} withButtons={!isPopup} withInput={true} withUploadButton={isPopup} winAmount="+900,000,000" checkedState={checkedState} type={1} setCheckedState={setCheckedState} hasHistory=" 홀" time=" 2021-06-29 15:45:05" />
