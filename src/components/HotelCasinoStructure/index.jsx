@@ -5,7 +5,6 @@ import Image3 from '../../assets/hotelCasino/bota1_g03m.png'
 import Image4 from '../../assets/hotelCasino/bota1_g04m.png'
 import Image5 from '../../assets/hotelCasino/bota1_g05m.png'
 import icon from '../../assets/sports/Icon.png'
-import Dot from '../../assets/sports/dot.png'
 
 const HotelCasinoStructure = () => {
 
@@ -43,25 +42,20 @@ const HotelCasinoStructure = () => {
         <span style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
       <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <img src={Dot} alt="" style={{ marginRight: '0.6rem', marginTop: '-0.2', width: '0.75rem' }} />
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text}</span>
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text}</span>
       </div>
       <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text2}</span>
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text2}</span>
       </div>
       <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text3}</span>
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text3}</span>
       </div>
       <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text4}</span>
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text4}</span>
       </div>
       {text5 && (
         <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-          <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-          <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text5}</span>
+          <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text5}</span>
         </div>
       )}
     </div>
@@ -73,18 +67,15 @@ const HotelCasinoStructure = () => {
         <span style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
       <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem', marginTop: '-0.2' }} />
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text}</span>
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text}</span>
       </div>
       {text1_1 && (
         <div style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-          <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem', marginTop: '-0.2', visibility: 'hidden' }} />
-          <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text1_1}</span>
+          <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text1_1}</span>
         </div>
       )}
       <div style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center', fontSize: '2.625rem' }}>
-        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>{text2}</span>
+        <span style={{ color: "#8c8c8c", fontSize: '2.625rem' }}>• {text2}</span>
       </div>
     </div>
   )

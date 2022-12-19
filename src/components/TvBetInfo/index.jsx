@@ -1,7 +1,6 @@
 import React from 'react'
 import Image1 from '../../assets/tvBet/tv2_1.png'
 import Image2 from '../../assets/tvBet/tv2_2.png'
-import Dot from '../../assets/sports/dot.png'
 
 const TvBetInfo = () => {
 
@@ -12,23 +11,19 @@ const TvBetInfo = () => {
         <span className="text-gray-r585858" style={{ color: '#ccc2b6' }}>{title}</span>
       </div>
       <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-        <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem', marginTop: '-0.2' }} />
-        <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text}</span>
+        <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text}</span>
       </div>
       {text1_1 && (
         <div className="flex" style={{ marginTop: '-0.2rem', display: 'flex', alignItems: 'center' }}>
-          <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem', marginTop: '-0.2', visibility: 'hidden' }} />
-          <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text1_1}</span>
+          <span style={{ color: "#8c8c8c", }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text1_1}</span>
         </div>
       )}
       <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-        <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text2}</span>
+        <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text2}</span>
       </div>
       {text3 && (
         <div className="flex" style={{ marginTop: '-0rem', display: 'flex', alignItems: 'center' }}>
-          <img src={Dot} className="object-none mr-4px" alt="" style={{ width: '0.75rem', marginRight: '0.6rem' }} />
-          <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">{text3}</span>
+          <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">• {text3}</span>
         </div>
       )}
     </div>

@@ -4,7 +4,6 @@ import Image4 from '../../assets/sports/4.png'
 import Image5 from '../../assets/sports/5.png'
 import Image6 from '../../assets/sports/6.png'
 import Image7 from '../../assets/sports/7.png'
-import Dot from '../../assets/sports/dot.png'
 
 const EsportsSingle = () => {
 
@@ -53,16 +52,13 @@ const EsportsSingle = () => {
                         알아두세요!
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
-                        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.8rem', marginTop: '-0.2' }} />
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>1/8 최대 : 최대 한도금액을 8로 나눈 금액 베팅</span>
+                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>• 1/8 최대 : 최대 한도금액을 8로 나눈 금액 베팅</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.1rem' }}>
-                        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.8rem', marginTop: '-0.2' }} />
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>1/4 최대 : 최대 한도금액을 4로 나눈 금액 베팅</span>
+                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>• 1/4 최대 : 최대 한도금액을 4로 나눈 금액 베팅</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.2rem' }}>
-                        <img src={Dot} alt="" style={{ width: '0.75rem', marginRight: '0.8rem', marginTop: '-0.2' }} />
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>1/2 최대 : 최대 한도금액을 2로 나눈 금액 베팅 </span>
+                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>• 1/2 최대 : 최대 한도금액을 2로 나눈 금액 베팅 </span>
                     </div>
                 </div>
             </div>
