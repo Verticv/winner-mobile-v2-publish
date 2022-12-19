@@ -47,13 +47,13 @@ const EsportsMulti = () => {
                 <img src={Image8} alt="" style={{ width: '70rem' }} />
                 <div style={{ backgroundColor: "#2b2b2a", padding: "2.15rem 1.8rem", marginTop: '2.3rem', borderRadius: '0.5rem' }}>
 
-                    <div style={{ fontFamily: 'SpoqaHanSansNeoMedium', lineHeight: '1.4', letterSpacing: '-0.05rem', fontSize: '2.625rem' }}>
+                    <div>
                         <div style={{ fontFamily: 'SpoqaHanSansNeoBold', fontSize: '2.825rem' }}>
                             <span style={{ color: '#a67c52', marginRight: '0.4rem' }}>1.</span>
                             <span style={{ color: '#ccc2b6' }}>종목 및 경기선택</span>
                         </div>
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>가. ① 게임종류를 선택합니다.</span>
-                        <span style={{ color: "#828282", fontSize: '2.625rem' }}>나. ② 경기를 선택합니다.</span>
+                        <span style={{ fontFamily: 'SpoqaHanSansNeoMedium', color: "#828282", fontSize: '2.625rem', lineHeight: '1.4', letterSpacing: '-0.05rem' }}>가. ① 게임종류를 선택합니다.</span>
+                        <span style={{ fontFamily: 'SpoqaHanSansNeoMedium', color: "#828282", fontSize: '2.625rem', lineHeight: '1.4', letterSpacing: '-0.05rem' }}>나. ② 경기를 선택합니다.</span>
                     </div>
 
                     {/* <Item number="1." title="종목 및 경기선택" text="가. ① 게임종류를 선택합니다." text1="나. ② 경기를 선택합니다." withoutP /> */}
