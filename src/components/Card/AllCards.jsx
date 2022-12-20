@@ -75,7 +75,7 @@ import bg22 from '../../assets/mainPage/inactive-bg22-card.png';
 import bga22 from '../../assets/mainPage/active-bg22-card.png';
 
 import bg221 from '../../assets/mainPage/inactive-bg221-card.png';
-import bga221 from '../../assets/mainPage/active-bg221-card.png';
+// import bga221 from '../../assets/mainPage/active-bg221-card.png';
 
 import bg23 from '../../assets/mainPage/inactive-bg23-card.png';
 import bga23 from '../../assets/mainPage/active-bg23-card.png';
@@ -245,7 +245,8 @@ const cardInfo = [
     {
         id: 221,
         inactivBackground: bg221,
-        activeBackground: bga221,
+        // activeBackground: bga221,
+        activeBackground: bg221,
         icon: true,
         text: '이용가이드',
         isActive: false,
