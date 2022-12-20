@@ -89,7 +89,7 @@ const HotelCasinoStructure = () => {
             <Item number="4." title="업체별 정렬" text="카지노 업체별 테이블 정렬 가능" marginTop='1.5rem' />
             <Item number="5." title="베팅한도" text="테이블의 ▼ 버튼을 누르면" text2="해당 테이블의 상세 베팅한도 확인 가능" isflex marginTop='1.4rem' />
             <Item number="6." title="게임입장" text="원하는 테이블의 [입장]버튼을 누르면" text2="게임테이블로 이동됩니다." isflex marginTop='1.4rem' />
-            <div style={{ width: "15.8rem", flexShrink: 0, padding: '0.2rem 0.9rem', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }}>
+            <div style={{ width: "15.8rem", flexShrink: 0, paddingTop: '0.2rem', paddingBottom: '0.2rem', display: 'flex', justifyContent: 'center', marginTop: "3.2rem", backgroundColor: "#f45400", fontSize: '2.825rem', color: '#ffffff', fontFamily: 'SpoqaHanSansNeoBold', marginLeft: '0.1rem', letterSpacing: '-0.03rem' }}>
               알아두세요!
             </div>
             <div style={{ marginTop: '0.35rem' }}>
