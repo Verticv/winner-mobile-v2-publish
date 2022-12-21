@@ -29,6 +29,7 @@ const PointsApplyPopup = ({ setPopupOpen }) => {
                         message2='최소 10,000P 이상 신청 가능합니다.'
                         mr2='6.875rem'
                         message3='자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
+                        isExchange
                     />
 
                     <div style={{ margin: '1.6rem 0px 1.4rem -1.1rem', fontSize: '2.8125rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'SpoqaHanSansNeoMedium', color: '#929292', letterSpacing: '-0.2rem', marginLeft: '-1.1rem' }} className="flex items-center justify-center font-spoqaMedium text-gray-r7c7c7c tracking-tight">
