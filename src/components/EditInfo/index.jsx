@@ -4,6 +4,8 @@ import HomePageTopBanner from '../HomePageTopBanner'
 const EditInfo = ({ activeButton, setActiveButton }) => {
 
     const [selectedInput, setSelectedInput] = useState();
+    const getIsMobile = () => window.innerWidth <= 305;
+    const [isMobile, setIsMobile] = useState(getIsMobile());
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -12,6 +14,16 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
     useEffect(() => {
         setActiveButton('/mypage/edit-info')
     }, [setActiveButton]);
+
+    useEffect(() => {
+        const onResize = () => {
+            setIsMobile(getIsMobile());
+        }
+        window.addEventListener("resize", onResize);
+        return () => {
+            window.removeEventListener("resize", onResize);
+        }
+    }, []);
 
     const truncate = (str, max, len) => {
         return str.length > max ? str.substring(0, len) + "..." : str;
@@ -78,8 +90,8 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                                     <div style={{ height: '0.1875rem' }} className={`${selectedInput === 0 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                                 </div>
                             </div>
-                            <span className="text-under-input">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요.</span>
-                            <span className="text-under-input1">(특수문자 사용불가)</span>
+                            <span style={{letterSpacing: isMobile && "-0.31rem"}} className="text-under-input">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요.</span>
+                            <span style={{letterSpacing: isMobile && "-0.31rem"}} className="text-under-input1">(특수문자 사용불가)</span>
                         </div>
 
 
@@ -142,8 +154,8 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                                     <div style={{ height: '0.1875rem' }} className={`${selectedInput === 2 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                                 </div>
                             </div>
-                            <span className="text-under-input">영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로 입력해주세요.</span>
-                            <span className="text-under-input1">(특수문자 사용불가)</span>
+                            <span style={{letterSpacing: isMobile && "-0.31rem"}} className="text-under-input">영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로 입력해주세요.</span>
+                            <span style={{letterSpacing: isMobile && "-0.31rem"}} className="text-under-input1">(특수문자 사용불가)</span>
                         </div>
 
                         {/* BREAK */}
