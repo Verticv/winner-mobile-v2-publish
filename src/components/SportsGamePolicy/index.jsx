@@ -306,7 +306,7 @@ const ESportsArray = [
 
 const SoccerSubArray = [
     { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", isFirst: 'true', text: "정규시간 (전반전/후반전)의 경기결과만",text2:"적용 합니다.", text3:"(연장전 및 승부차기는 제외됩니다.)"},
-    { id: 0, title: "핸디캡 \n (전체)", color: "#d9a36d", text: "선택한 기준점수는 미만 또는 초과 이므로,", text2:"연장을 포함하여 핸디캡 적용.", text3:"결과가 무승부일 경우는 미당첨 처리됨" },
+    { id: 0, title: "핸디캡 \n (전체)", color: "#d9a36d", text: "선택한 기준점수는 미만 또는 초과 이므로, 연장을 포함하여 핸디캡 적용.", text2:"결과가 무승부일 경우는 미당첨 처리됨", text3:"" },
     { id: 0, title: "언더오버 \n (전체)", color: "#75942d", text: "선택한 기준점수는 연장을 포함하여", text2:"동일한 기준점수로 종료 될 경우", text3:"적중특례 처리됨" },
 ]
 
