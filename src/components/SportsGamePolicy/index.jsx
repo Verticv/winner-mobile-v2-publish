@@ -178,7 +178,7 @@ const HockeyArray = [
     { id: 0, type: "핸디캡", typeColor: "#d9a36d", overtime: true, ruleText: "상대적으로 전력이 우수한 팀에게 불리한 조건을 주어 경기의 균형을 맞추고 승리가 예상되는 팀을 선택하여 조건을 주어 경기의", ruleText2:"균형을 맞추고 승리가 예상되는 팀을 선택하여 베팅하는 방식", ruleText3: "홈팀(왼쪽)기준으로 +,-의 핸디캡 기준점수가 표기됨", rows: '5' },
     { id: 0, type: "핸디캡 \n (1피리어드)", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 1피리어드만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을", ruleText2: "선택하여 베팅하는 방식", ruleText3: "", rows: '3' },
     { id: 0, type: "핸디캡 \n (2피리어드)", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 2피리어드만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을", ruleText2: "선택하여 베팅하는 방식", ruleText3: "", rows: '3' },
-    { id: 0, type: "핸디캡 \n (3피리어드)", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 3피리어드만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을", ruleText2: "선택하여 베팅하는 방식", ruleText3: "", rows: '3' },
+    { id: 0, type: "핸디캡 \n (3피리어드)", typeColor: "#d9a36d", overtime: false, ruleText: "핸디캡을 적용하여 3피리어드만의 양팀이 득점한 경기결과로 승리가 예상되는 팀을 선택하여 베팅하는 방식", ruleText2: "", ruleText3: "", rows: '3' },
     { id: 0, type: "핸디캡 승무패", typeColor: "#d9a36d", overtime: true, ruleText: "핸디캡을 적용하여 승리가 예상되는 팀", ruleText2: "또는 무승부를 선택하여 베팅하는 방식", ruleText3: "", rows: '2' },
 
 
@@ -312,7 +312,7 @@ const SoccerSubArray = [
 
 const BasketballSubArray = [
     { id: 0, title: "연장포함", color: "#e65454", text: "정규(4쿼터)까지 승부 결과가 나지 않을", text2:"경우 연장전의 경기 결과 적용됩니다.", text3:"(승부치기가 있는경우 승부치기의 결과가 적용됩니다.)" },
-    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (4쿼터)까지의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다)", text3:"" },
+    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (4쿼터)까지의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다.)", text3:"" },
     { id: 0, title: "승패 \n (풀타임)", color: "#4c98ff", text: "연장을 포함하여 무승부일 경우는 미당첨 처리됨", text2:"", text3:"" },
     { id: 0, title: "핸디캡 \n (전체)", color: "#d9a36d", text: "선택한 기준점수는 미만 또는 초과 이므로, 연장을 포함하여 핸디캡 적용 결과가", text2:"무승부일 경우는 미당첨 처리됨", text3:"" },
     { id: 0, title: "언더오버 \n (전체)", color: "#75942d", text: "선택한 기준점수는 연장을 포함하여", text2:"동일한 기준점수로 종료 될 경우", text3:"적중특례 처리됨" },
@@ -320,7 +320,7 @@ const BasketballSubArray = [
 
 const BaseballSubArray = [
     { id: 0, title: "연장포함", color: "#e65454", text: "정규(9이닝)까지 승부 결과가 나지 않을", text2:"경우 연장전의 경기 결과 적용됩니다.", text3:"(승부치기가 있는경우 승부치기의 결과가 적용됩니다.)" },
-    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (9이닝)까지의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다)", text3:""  },
+    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (9이닝)까지의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다.)", text3:""  },
     { id: 0, title: "승패 \n (풀타임)", color: "#4c98ff", text: "연장을 포함하여 무승부일 경우는 미당첨 처리됨", text2:"", text3:""  },
     { id: 0, title: "핸디캡 \n (전체)", color: "#d9a36d", text: "선택한 기준점수는 미만 또는 초과 이므로, 연장을 포함하여 핸디캡 적용", text2:"결과가 무승부일 경우는 미당첨 처리됨", text3:""  },
     { id: 0, title: "언더오버 \n (전체)", color: "#75942d", text: "선택한 기준점수는 연장을 포함하여", text2:"동일한 기준점수로 종료 될 경우 적중특례 처리됨", text3:""  },
@@ -330,35 +330,35 @@ const BaseballSubArray = [
 
 const VolleyballSubArray = [
     { id: 0, title: "연장포함", color: "#e65454", text: "정규(3세트)까지 승부 결과가 나지 않을", text2:"경우 연장전의 경기 결과 적용됩니다.", text3:"(승부치기가 있는경우 승부치기의 결과가 적용됩니다.)" },
-    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (3세트)까지의 경기결과만 적용 합니다. (연장전 및 승부차기는 제외", text2:"됩니다)" },
+    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (3세트)까지의 경기결과만 적용 합니다. (연장전 및 승부차기는 제외", text2:"됩니다.)" },
     { id: 0, title: "승패 \n (풀타임)", color: "#4c98ff", text: "연장을 포함하여 무승부일 경우는 미당첨 처리됨" },
     { id: 0, title: "언더오버 \n (전체)", color: "#75942d", text: "선택한 기준점수는 연장을 포함하여 동일한 기준점수로 종료 될 경우 적중특례", text2:"처리됨" },
 ]
 
 const TennisSubArray = [
     { id: 0, title: "연장포함", color: "#e65454", text: "정규(3세트,5세트)까지 승부 결과가", text2:"나지 않을 경우 연장전의 경기 결과가", text3:"적용됩니다. (승부치기가 있는경우 승부차기의 결과가 적용됩니다.)" },
-    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규(3세트,5세트)까지의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다)" },
+    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규(3세트,5세트)까지의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다.)" },
     { id: 0, title: "승패 \n (풀타임)", color: "#4c98ff", text: "연장을 포함하여 무승부일 경우는 미당첨 처리됨" },
     { id: 0, title: "언더오버 \n (전체)", color: "#75942d", text: "선택한 기준점수는 연장을 포함하여", text2:"동일한 기준점수로 종료 될 경우 적중특례 처리됨" },
 ]
 
 const HockeySubArray = [
     { id: 0, title: "연장포함", color: "#e65454", text: "정규(3피리어드)까지 승부 결과가 나지", text2:"않을 경우 연장전의 경기 결과 적용됩니다. (승부치기가 있는경우 승부치기의 결과가 적용됩니다.)", text3:"" },
-    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규(3피리어드)까지의 경기결과만 적용 합니다. (연장전 및 승부차기는", text2:"제외 됩니다)" },
+    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규(3피리어드)까지의 경기결과만 적용 합니다. (연장전 및 승부차기는", text2:"제외 됩니다.)" },
     { id: 0, title: "승패 \n (풀타임)", color: "#4c98ff", text: "연장을 포함하여 무승부일 경우는 미당첨 처리됨" },
     { id: 0, title: "핸디캡 \n (전체)", color: "#d9a36d", text: "선택한 기준점수는 미만 또는 초과 이므로, 연장을 포함하여 핸디캡 적용 결과가", text2:"무승부일 경우는 미당첨 처리됨" },
     { id: 0, title: "언더오버 \n (전체)", color: "#75942d", text: "선택한 기준점수는 연장을 포함하여", text2:"동일한 기준점수로 종료 될 경우 적중특례 처리됨" },
 ]
 
 const HandballSubArray = [
-    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (전반전/후반전)의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다)" },
+    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (전반전/후반전)의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다.)" },
     { id: 0, title: "핸디캡 \n (전체)", color: "#d9a36d", text: "선택한 기준점수는 미만 또는 초과 이므로, 연장을 포함하여 핸디캡 적용 결과가", text2:"무승부일 경우는 미당첨 처리됨" },
     { id: 0, title: "언더오버 \n (전체)", color: "#75942d", text: "선택한 기준점수는 연장을 포함하여", text2:"동일한 기준점수로 종료 될 경우 적중특례 처리됨" },
 ]
 
 const FootballSubArray = [
     { id: 0, title: "연장포함", color: "#e65454", text: "정규(4쿼터)까지 승부 결과가 나지 않을", text2:"경우 연장전의 경기 결과 적용됩니다.", text3:"(승부치기가 있는경우 승부치기의 결과가 적용됩니다.)" },
-    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (4쿼터)까지의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다)" },
+    { id: 0, title: "연장제외", title2: "연장없음", color: "#ffcc00", text: "정규시간 (4쿼터)까지의 경기결과만", text2:"적용 합니다. (연장전 및 승부차기는 제외 됩니다.)" },
     { id: 0, title: "승패 \n (풀타임)", color: "#4c98ff", text: "연장을 포함하여 무승부일 경우는 미당첨 처리됨" },
     { id: 0, title: "핸디캡 \n (전체)", color: "#d9a36d", text: "선택한 기준점수는 미만 또는 초과 이므로, 연장을 포함하여 핸디캡 적용 결과가", text2:"무승부일 경우는 미당첨 처리됨" },
     { id: 0, title: "언더오버 \n (전체)", color: "#75942d", text: "선택한 기준점수는 연장을 포함하여", text2:"동일한 기준점수로 종료 될 경우 적중특례 처리됨" },
