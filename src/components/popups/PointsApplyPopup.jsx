@@ -1,13 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CloseIcon from '../../assets/mainPage/points/close-btn.png'
 import { useNavigate } from 'react-router-dom'
 import WarningMessage from '../WarningMessage'
 
 const PointsApplyPopup = ({ setPopupOpen }) => {
+    const getIsMobile = () => window.innerWidth <= 305;
+    const [isMobile, setIsMobile] = useState(getIsMobile());
 
     const navigate = useNavigate()
     var nf = new Intl.NumberFormat();
     const [inputValue, setInputValue] = useState(null)
+
+    useEffect(() => {
+        const onResize = () => {
+            setIsMobile(getIsMobile());
+        }
+        window.addEventListener("resize", onResize);
+        return () => {
+            window.removeEventListener("resize", onResize);
+        }
+    }, []);
 
     return (
         <div style={{ height: '100vh', flexDirection: 'row', display: 'flex', alignItems: 'center' }}>
@@ -62,7 +74,7 @@ const PointsApplyPopup = ({ setPopupOpen }) => {
 
 
                     {/* </div> */}
-                    <div style={{ display: 'flex', marginTop: '4rem' }}>
+                    <div style={{ display: 'flex', marginTop: isMobile ? '3rem' : '4rem' }}>
                         <div
                             className='shadow-to-box'
                             style={{ width: "36.4375rem", height: '7.3125rem', marginRight: '1rem', borderRadius: '1rem', padding: '0.1875rem', marginBottom: '', background: 'linear-gradient(to top, #3e4c8e, #679ac0 50%, #87d8e7 )', marginTop: '' }}>
@@ -89,30 +101,6 @@ const PointsApplyPopup = ({ setPopupOpen }) => {
                             </button>
                         </div>
                     </div>
-
-                    {/* <div style={{ marginTop: '3.75rem', marginBottom: '1.875rem' }} className="flex w-full">
-                    <button style={{ padding: '1px', height: '7.3125rem', fontSize: '2.8125rem' }} className="flex items-center justify-center mr-4 w-1/2 rounded-lg bg-blue-r0070d9 hover:opacity-75">
-                        <div
-                            style={{ background: "linear-gradient(to bottom, #1491fc, #0675db)" }}
-                            className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r3ba3fc cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-white">포인트전환</span>
-                        </div>
-                    </button>
-                    <button
-                        style={{ padding: '1px', height: '7.3125rem', fontSize: '2.8125rem' }}
-                        className="flex items-center justify-center w-1/2 rounded-lg bg-blue-r004b8a hover:opacity-75"
-                        onClick={() => navigate('/mypage/points/all/points-transaction-history')}
-                    >
-                        <div
-                            style={{ background: "linear-gradient(to bottom, #004b8a, #012d53)" }}
-                            className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-white">상세내역</span>
-                        </div>
-                    </button>
-                </div> */}
-                    {/* <div className='modal-overlay'></div> */}
                 </div>
 
 
