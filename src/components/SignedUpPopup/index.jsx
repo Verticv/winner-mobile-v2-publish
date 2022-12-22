@@ -5,12 +5,12 @@ import img2 from '../../assets/myInfo/signed_up_2.png'
 import img3 from '../../assets/myInfo/signed_up_3.png'
 import { useNavigate } from 'react-router-dom'
 
-const SignedUpPopup = ({ setCompletePopup, setSignup }) => {
+const SignedUpPopup = ({ setCompletePopup, setSignup,isMobile }) => {
 
     const navigate = useNavigate()
 
     return (
-        <div style={{ width: '72.9rem', borderRadius: "2.25rem", height: '88.625rem', padding: "0.1875rem", background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginLeft: '0.2rem', boxShadow: '0 0rem 2.75rem 0 rgb(0 0 0 / 60%)' }} className="relative bg-white rounded-xl shadow-popup">
+        <div style={{ width: '72.9rem', borderRadius: "2.25rem", height: isMobile ? '97rem' : '88.625rem', padding: "0.1875rem", background: 'linear-gradient(to top, #1f1f1e, #4a4a4a)', marginLeft: '0.2rem', boxShadow: '0 0rem 2.75rem 0 rgb(0 0 0 / 60%)' }} className="relative bg-white rounded-xl shadow-popup">
             <div style={{ paddingBottom: "", background: '#323232', width: '100%', height: '100%', borderRadius: "2.25rem" }} >
 
                 <div style={{ width: '72.75rem', position: 'absolute', display: 'flex', justifyContent: 'center' }} className="absolute flex justify-center">
@@ -31,69 +31,42 @@ const SignedUpPopup = ({ setCompletePopup, setSignup }) => {
                         </div>
                     </div>
                     {/* BREAK */}
-                    <div style={{ fontSize: '2.625rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '5rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.015rem' }} className="text-gray-r393e41 font-spoqaMedium flex flex-col items-center justify-center pt-14 tracking-tighter">
+                    <div style={{ fontSize: '2.625rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '5rem', color: '#c8c8c8', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.015rem' }}>
                         <span style={{ fontSize: '2.625rem' }}>관리자 승인 후 로그인 하시면</span>
                         <span style={{ fontSize: '2.625rem', marginTop: '-0.15rem' }} className='-mt-3'>정상적으로 서비스 이용이 가능합니다.</span>
                         <span style={{ fontSize: '2.625rem', marginTop: '3rem' }} className="mt-10 text-center">당사 사이트는 깨끗하고 안전한 운영을 자랑합니다. </span>
                     </div>
                     {/* BREAK */}
-                    <div style={{ paddingLeft: "3rem", paddingRight: "3rem", display: 'flex', position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '1.875rem', fontFamily: 'SpoqaHanSansNeoMedium', textAlign: 'center', marginTop: '5.6rem' }} className="relative flex w-full mt-30px">
-                        <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22.3125rem', height: '22.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '0.5rem' }}>
+                    <div style={{ paddingLeft: "3rem", paddingRight: "3rem", display: 'flex', position: 'relative', width: '100%', color: '#c8c8c8', fontSize: '1.875rem', fontFamily: 'SpoqaHanSansNeoMedium', textAlign: 'center', marginTop: '5.6rem' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22.3125rem', height: isMobile ? '31rem' : '22.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '0.5rem' }}>
                             <img className="h-26px object-contain" src={img1} alt="" style={{ marginTop: '2.4rem', marginLeft: '-0.6rem', marginBottom: '3rem', width: '6.125rem' }} />
-                            <div className="w-full text-center mt-20px" style={{ letterSpacing: '-0.025em', marginTop: '-0.1rem' }}>
-                                <div style={{ wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">회원님의 모든 데이터는</div>
-                                <div style={{ wordBreak: "keep-all", marginTop: '-0.1rem' }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">암호화되어 안전하게 </div>
-                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">보관됩니다.</div>
+                            <div className="w-full text-center mt-20px" style={{ letterSpacing: '-0.027em', marginTop: '-0.1rem' }}>
+                                <div style={{ wordBreak: "keep-all" }}>회원님의 모든 데이터는</div>
+                                <div style={{ wordBreak: "keep-all", marginTop: '-0.1rem' }}>암호화되어 안전하게 </div>
+                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }}>보관됩니다.</div>
                             </div>
                         </div>
-                        {/* <div className="w-1/3 flex-shrink-0 flex flex-col items-center border-l border-r" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '33.3%' }}>
-                            <img className="h-26px object-contain" src={img2} alt="" />
-                            <div className="w-full text-center mt-20px">
-                                <div style={{ fontSize: '1.7rem', wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">아이디/비밀번호를</div>
-                                <div style={{ fontSize: '1.7rem', wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">분실되지 않도록 보안에 </div>
-                                <div style={{ fontSize: '1.7rem', wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">신경 써 주세요.</div>
-                            </div>
-                        </div> */}
-                        <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22.3125rem', height: '22.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '0.5rem' }}>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22.3125rem', height: isMobile ? '31rem' : '22.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '0.5rem' }}>
                             <img className="h-26px object-contain" src={img2} alt="" style={{ marginTop: '2.7rem', marginLeft: '-0.3rem', marginBottom: '3.3rem', width: '3.6875rem' }} />
-                            <div className="w-full text-center mt-20px" style={{ letterSpacing: '-0.025em', marginTop: '-0.1rem', marginLeft: '-0.1rem' }}>
-                                <div style={{ wordBreak: "keep-all", }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">아이디/비밀번호를</div>
-                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">분실되지 않도록 보안에 </div>
-                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">신경 써 주세요.</div>
+                            <div className="w-full text-center mt-20px" style={{ letterSpacing: '-0.027em', marginTop: '-0.1rem', marginLeft: '-0.1rem' }}>
+                                <div style={{ wordBreak: "keep-all", }}>아이디/비밀번호를</div>
+                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }}>분실되지 않도록 보안에 </div>
+                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }}>신경 써 주세요.</div>
                             </div>
                         </div>
-                        {/* <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '33.3%' }}>
-                            <img className="mt-2px h-23px object-contain" src={img3} alt="" />
-                            <div className="w-full text-center mt-21px">
-                                <div style={{ fontSize: '1.7rem', wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">회원 탈퇴 후</div>
-                                <div style={{ fontSize: '1.7rem', wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">회원님의 정보는 </div>
-                                <div style={{ fontSize: '1.7rem', wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">완전히 삭제됩니다.</div>
-                            </div>
-                        </div> */}
-                        <div className="w-1/3 flex-shrink-0 flex flex-col items-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22.3125rem', height: '22.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '' }}>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '22.3125rem', height: isMobile ? '31rem' : '22.4375rem', background: '#272726', borderRadius: '0.5rem', marginRight: '' }}>
                             <img className="h-26px object-contain" src={img3} alt="" style={{ marginTop: '3.1rem', marginLeft: '-0.6rem', marginBottom: '3.6rem', width: '3.875rem' }} />
-                            <div className="w-full text-center mt-20px" style={{ letterSpacing: '-0.025em', marginTop: '-0.1rem', marginLeft: '-0.5rem' }}>
-                                <div style={{ wordBreak: "keep-all" }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">회원 탈퇴 후</div>
-                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">회원님의 정보는 </div>
-                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">완전히 삭제됩니다.</div>
+                            <div className="w-full text-center mt-20px" style={{ letterSpacing: '-0.027em', marginTop: '-0.1rem', marginLeft: '-0.5rem' }}>
+                                <div style={{ wordBreak: "keep-all" }}>회원 탈퇴 후</div>
+                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }}>회원님의 정보는 </div>
+                                <div style={{ wordBreak: "keep-all", marginTop: '-0.15rem' }}>완전히 삭제됩니다.</div>
                             </div>
                         </div>
                     </div>
                     {/* BREAK */}
 
-                    {/* <div style={{ width: '54rem' }}>
-                        <button
-                            style={{ height: '8.4375rem', fontSize: '3rem', borderRadius: '0.5625rem', marginTop: '7rem' }}
-                            className="w-full rounded-2xl bg-gradient-to-r from-blue-gradLight to-blue-gradDark font-spoqaMedium text-white hover:opacity-75"
-                            onClick={() => {
-                                navigate('/')
-                                setCompletePopup(false)
-                                setSignup(false)
-                            }}
-                        >
-                            <span className='block mt-1.5'>로그인</span>
-                        </button>
-                    </div> */}
                     <div style={{ marginTop: '6.45rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }} className={`w-full flex flex-col items-center`}>
 
                         <div className='shadow-to-box3' style={{ height: '8.456875rem', width: '56.476875rem', marginBottom: '4.0625rem', padding: '0.1875rem', background: 'linear-gradient(to top, #4b3b09, #e8b888)', borderRadius: '1.6rem' }}>

@@ -15,6 +15,8 @@ import CloseIcon from "../../assets/myInfo/close.png";
 import { getMonth, getYear } from 'date-fns'
 
 const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
+    const getIsMobile = () => window.innerWidth <= 305;
+    const [isMobile, setIsMobile] = useState(getIsMobile());
 
     const [selectedInput, setSelectedInput] = useState(null)
     const [toSignup, setSignup] = useState(false)
@@ -102,6 +104,16 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [toSignup])
+
+    useEffect(() => {
+        const onResize = () => {
+            setIsMobile(getIsMobile());
+        }
+        window.addEventListener("resize", onResize);
+        return () => {
+            window.removeEventListener("resize", onResize);
+        }
+    }, []);
 
     const CustomInput = (props) => {
         return (
@@ -214,8 +226,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                             <div style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
                                 <div style={{ width: '100%', marginTop: '11.8125rem', marginBottom: '2.8rem', paddingLeft: '0.6rem', paddingRight: '0.6rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                     <label style={{ fontSize: '4.375rem', width: '100%', color: '#ad9e8c', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', textAlign: 'center' }}>회원가입</label>
-                                    <label style={{ fontSize: '2.3rem', width: '100%', color: '#c9c9c9', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', textAlign: 'center' }}>회원가입 시 모든 항목을 정확하게 기재하시기 바랍니다.</label>
-                                    <label style={{ fontSize: '2.3rem', width: '100%', color: '#c9c9c9', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem', textAlign: 'center' }}>회원데이터는 안전한 서버에서 안전하게 보관됩니다.</label>
+                                    <label style={{ fontSize: '2.3rem', width: '100%', color: '#c9c9c9', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing:  isMobile ? '-0.27rem' : '-0.07rem', textAlign: 'center' }}>회원가입 시 모든 항목을 정확하게 기재하시기 바랍니다.</label>
+                                    <label style={{ fontSize: '2.3rem', width: '100%', color: '#c9c9c9', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: isMobile ? '-0.27rem' : '-0.07rem', textAlign: 'center' }}>회원데이터는 안전한 서버에서 안전하게 보관됩니다.</label>
                                 </div>
                                 {/* BREAK */}
                                 <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 0 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
@@ -228,7 +240,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                         />
                                     </div>
                                 </div>
-                                <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>영문, 숫자만 입력가능하며 최소 4자이상 입력하세요.</label>
+                                <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing:  isMobile ? '-0.27rem' : '-0.07rem' }}>영문, 숫자만 입력가능하며 최소 4자이상 입력하세요.</label>
                                 {/* BREAK */}
                                 <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 1 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
                                     <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
@@ -240,7 +252,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                         />
                                     </div>
                                 </div>
-                                <label style={{ marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '99%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 </label>
+                                <label style={{ marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '99%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing:  isMobile ? '-0.27rem' : '-0.07rem' }}>영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 </label>
                                 <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '99%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>입력해주세요. (특수문자 사용불가)</label>
                                 {/* BREAK */}
                                 <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 2 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
@@ -254,8 +266,8 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                         />
                                     </div>
                                 </div>
-                                <label style={{ marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로</label>
-                                <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>입력해주세요. (특수문자 사용불가)</label>
+                                <label style={{ marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: isMobile ? '-0.27rem' : '-0.07rem' }}>영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로</label>
+                                <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: isMobile ? '-0.27rem' : '-0.07rem' }}>입력해주세요. (특수문자 사용불가)</label>
                                 {/* BREAK */}
                                 <div style={{ width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 3 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
                                     <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
@@ -267,7 +279,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                         />
                                     </div>
                                 </div>
-                                <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>한글, 영문, 숫자를 포함한 4~16자로 입력해주세요.</label>
+                                <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: isMobile ? '-0.27rem' : '-0.07rem' }}>한글, 영문, 숫자를 포함한 4~16자로 입력해주세요.</label>
                                 {/* BREAK */}
                                 <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 0.4rem' }} >
                                     <div className="first-dropdown">
@@ -275,7 +287,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                             <img style={{ marginRight: '20%', width: '1.5625rem' }} className="h-4 object-contain" src={DownArrowIcon} alt="arrow" />
                                         </Dropdown>
                                     </div>
-                                    <div style={{ marginBottom: '1.5rem', width: '37.75rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 5 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
+                                    <div style={{ marginBottom:  isMobile ? '1rem' : '1.5rem', width: '37.75rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 5 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
                                         <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                             <input
                                                 style={{ width: '94%', letterSpacing: '-0.01rem' }}
@@ -391,10 +403,10 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                         />
                                     </div>
                                 </div>
-                                <label style={{ marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>수기로 작성시 아이디 생성이 불가합니다.</label>
-                                <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: '-0.07rem' }}>(달력으로 선택해주세요.)</label>
+                                <label style={{ marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: isMobile ? '-0.27rem' : '-0.07rem' }}>수기로 작성시 아이디 생성이 불가합니다.</label>
+                                <label style={{ marginBottom: '1.5rem', marginLeft: '0.4rem', marginTop: '0.4rem', fontSize: '2.2rem', width: '100%', color: '#828282', fontFamily: 'SpoqaHanSansNeoMedium', letterSpacing: isMobile ? '-0.27rem' : '-0.07rem' }}>(달력으로 선택해주세요.)</label>
                                 {/* BREAK */}
-                                <div style={{ marginBottom: '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 6 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }} >
+                                <div style={{ marginBottom:  isMobile ? '1rem' : '1.5rem', width: '56.25rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 6 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '0.4rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }} >
                                     <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                         <input
                                             placeholder="가입코드"
@@ -411,7 +423,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                                 <img style={{ marginRight: '20%', width: '1.5625rem' }} src={DownArrowIcon} alt="arrow" />
                                             </Dropdown>
                                         </div>
-                                        <div style={{ marginBottom: '1.5rem', width: '28.7rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 8 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: '1.8rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
+                                        <div style={{ marginBottom:  isMobile ? '1rem' : '1.5rem', width:isMobile ? '29.5rem' : '28.7rem', height: '7.3125rem', display: 'flex', flexDirection: 'column', background: '#191817', borderBottom: selectedInput === 8 ? '0.375rem solid #a67c52' : '0.375rem solid #191817', marginLeft: isMobile ? '1rem' : '1.8rem', borderRadius: '0.6rem', alignItems: 'center', justifyContent: 'center', paddingTop: '0.375rem' }}>
                                             <div style={{ width: '100%', color: '#c8c8c8', fontSize: '3rem', fontFamily: 'SpoqaHanSansNeoMedium', marginLeft: '2.5rem', height: '100%' }}>
                                                 <input
                                                     placeholder="예금주"
@@ -436,7 +448,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                 </div>
                             </div>
                             {/* BREAK */}
-                            <div style={{ marginTop: '2.1rem' }} className={`w-full flex flex-col items-center`}>
+                            <div style={{ marginTop: isMobile ? '1rem' : '2.1rem' }} className={`w-full flex flex-col items-center`}>
 
                                 <div style={{ height: '11.8125rem', marginBottom: '4.0625rem', padding: '0.1875rem', background: 'linear-gradient(to top, #4b3b09, #e8b888)', borderRadius: '2rem' }}>
                                     <button
@@ -449,7 +461,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
                                         </div>
                                     </button>
                                 </div>
-                                <div style={{ borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem', height: '24.875rem', paddingBottom: '5.3125rem', marginTop: '-6.3rem', paddingTop: '9.3125rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="flex w-full justify-between items-center pt-16 rounded-3xl bg-gray-d9e6f2 ">
+                                <div style={{ borderBottomRightRadius: '1.1rem', borderBottomLeftRadius: '1.1rem', height: '24.875rem', paddingBottom: '5.3125rem', marginTop: isMobile ? '-9.5rem' : '-6.3rem', paddingTop: '9.3125rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="flex w-full justify-between items-center pt-16 rounded-3xl bg-gray-d9e6f2 ">
                                     <div style={{ marginTop: '-1.3rem', display: 'flex', alignItems: 'center' }} className="flex items-center ml-32">
                                         <img
                                             style={{ width: '7.375rem', margin: '0 1.75rem 0 0' }}
@@ -485,7 +497,7 @@ const AuthenticationPage = ({ isAuthenticated, setAuthenticated }) => {
             {/* SIGNUP COMPLETE POPUP COMPONENTS */}
             {showCompletePopup === true && (
                 <div style={{ position: 'fixed', top: '0', right: '0', width: '100vw', background: 'rgba(0, 0, 0, 0.5)', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <SignedUpPopup setCompletePopup={setCompletePopup} setSignup={setSignup} />
+                    <SignedUpPopup setCompletePopup={setCompletePopup} setSignup={setSignup} isMobile={isMobile} />
                 </div>
             )}
         </div >
