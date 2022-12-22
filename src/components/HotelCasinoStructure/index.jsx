@@ -68,7 +68,7 @@ const HotelCasinoStructure = () => {
       </div>
       <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.2rem', margin: 0 }}>• {text}</p>
       {text1_1 && (
-        <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.2rem', margin: 0 }}>• {text1_1}</p>
+        <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0.2rem', margin: 0 }}><span style={{opacity:0}}>•</span> {text1_1}</p>
       )}
       <p style={{ color: "#8c8c8c", fontSize: '2.625rem', marginTop: '-0rem', margin: 0 }}>• {text2}</p>
     </div>
@@ -117,7 +117,7 @@ const HotelCasinoStructure = () => {
             <Item number="3." title="금액표시" text="베팅금액/이긴금액/보유금액 표시" text2="" marginTop='1.5rem' />
             <Item number="4." title="슈통계" text="현재 슈를 토대로 한 다음 통계 표시" marginTop='1.5rem' />
             <Item number="5." title="로드탐구표" text="다음 라운드에서 뱅커 또는 플레이어가 이길 경우" text2="세 개의 중국점에 추가되는 아이콘 표시" marginTop='1.5rem' isflex />
-            <Item number="6." title="스코어보드" text="6매, 본매, 중국점(1군~3군) 등" text2="다양한 종류 제공" marginTop='1.5rem' isflex />
+            <Item number="6." title="스코어보드" text="6매, 본매, 중국점(1군~3군) 등 다양한 종류 제공"  marginTop='1.5rem' isflex />
           </div>
 
         </div>

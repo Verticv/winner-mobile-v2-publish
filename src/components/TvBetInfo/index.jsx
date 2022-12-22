@@ -78,10 +78,7 @@ const TvBetInfo = () => {
           marginTop: '1.5rem', borderRadius: '0.5rem'
         }} className="w-full h-full rounded-xl p-20px">
           <div style={{ padding: '1.8rem', letterSpacing: '-0.06rem', paddingTop: '2.8rem' }}>
-            <LongItem2 number='2.' title='금액입력 및 베팅완료' text='① 베팅금액을 입력합니다.' text2='② [베팅하기] 버튼을 누르면 베팅이 완료됩니다.' text3='③ [베팅기록] 메뉴에서 베팅내역을' marginTop='-0.5rem' />
-            <span style={{ color: "#8c8c8c", fontSize: '2.625rem', fontFamily: 'SpoqaHanSansNeoMedium' }} className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ">
-              확인 할 수 있습니다.
-            </span>
+            <LongItem2 number='2.' title='금액입력 및 베팅완료' text='① 베팅금액을 입력합니다.' text2='② [베팅하기] 버튼을 누르면 베팅이 완료됩니다.' text3='③ [베팅기록] 메뉴에서 베팅내역을 확인 할 수 있습니다.' marginTop='-0.5rem' />
           </div>
         </div>
       </div>
