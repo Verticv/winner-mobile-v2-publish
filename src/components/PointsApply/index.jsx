@@ -145,100 +145,11 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                         </div>
                     </div>
 
-
-                    {/* <div style={{ marginTop: '1.875rem', marginBottom: '0', padding: '0px 1.125rem' }} className="">
-                        <div style={{ marginBottom: '0.9375rem' }} className="flex w-full h-full items-center justify-between">
-                            <button
-                                style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
-                                onClick={() => setInputValue(inputValue + 1000)}
-                            >
-                                <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
-                                    <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">1천P</span>
-                                </div>
-                            </button>
-
-                            <button
-                                style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
-                                onClick={() => setInputValue(inputValue + 5000)}
-                            >
-                                <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
-                                    <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">5천P</span>
-                                </div>
-                            </button>
-
-                            <button
-                                style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
-                                onClick={() => setInputValue(inputValue + 10000)}
-                            >
-                                <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
-                                    <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">1만P</span>
-                                </div>
-                            </button>
-
-                            <button
-                                style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                className="flex items-center justify-center rounded-lg bg-blue-r2068b2 hover:opacity-75"
-                                onClick={() => setInputValue(inputValue + 50000)}
-                            >
-                                <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-                                    <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">5만P</span>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div className="flex w-full h-full items-center justify-between">
-                            <button
-                                style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
-                                onClick={() => setInputValue(inputValue + 100000)}
-                            >
-                                <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
-                                    <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white pt-1">10만P</span>
-                                </div>
-                            </button>
-
-                            <button
-                                style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
-                                onClick={() => setInputValue(inputValue + 500000)}
-                            >
-                                <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                                    <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white pt-1">50만P</span>
-                                </div>
-                            </button>
-
-                            <button
-                                style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                className="flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75"
-                                onClick={() => setInputValue(inputValue + 1000000)}
-                            >
-                                <div className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
-                                    <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white pt-1">100만P</span>
-                                </div>
-                            </button>
-
-                            <button
-                                style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
-                                onClick={() => setInputValue(0)}
-                            >
-                                <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                    <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white pt-1">정정</span>
-                                </div>
-                            </button>
-                        </div>
-
-                    </div> */}
                     <div className="range-btn">
                         <div className="f-div">
                             <div className='div-range-border'>
                                 <button
                                     className="hover"
-                                    // style={{  }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 1000)}
                                 >
                                     <div className="s-div">
@@ -249,14 +160,9 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                             <div className='div-range-border'>
                                 <button
                                     className="hover"
-                                    // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 5000)}
                                 >
-                                    <div
-                                        className="s-div"
-                                    //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
-                                    >
+                                    <div className="s-div" >
                                         <span className='shadow-to-text'>5천P</span>
                                     </div>
                                 </button>
@@ -264,8 +170,6 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                             <div className='div-range-border'>
                                 <button
                                     className="hover"
-                                    // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 10000)}
                                 >
                                     <div className="s-div">
@@ -278,10 +182,7 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                     className="hover"
                                     onClick={() => setInputValue(inputValue + 50000)}
                                 >
-                                    <div
-                                        className="s-div"
-                                    //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
-                                    >
+                                    <div className="s-div" >
                                         <span style={{ fontSize: '2.625rem' }} className='shadow-to-text'>5만P</span>
                                     </div>
                                 </button>
@@ -292,8 +193,6 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                             <div className='div-range-border'>
                                 <button
                                     className="hover"
-                                    // style={{  }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 100000)}
                                 >
                                     <div className="s-div">
@@ -304,25 +203,15 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                             <div className='div-range-border'>
                                 <button
                                     className="hover"
-                                    // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                                     onClick={() => setInputValue(inputValue + 500000)}
                                 >
-                                    <div
-                                        className="s-div"
-                                    //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
-                                    >
+                                    <div className="s-div">
                                         <span className='shadow-to-text'>50만P</span>
                                     </div>
                                 </button>
                             </div>
                             <div className='div-range-border'>
-                                <button
-                                    className="hover"
-                                    // style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                                    // className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
-                                    onClick={() => setInputValue(inputValue + 1000000)}
-                                >
+                                <button className="hover" onClick={() => setInputValue(inputValue + 1000000)}>
                                     <div className="s-div">
                                         <span className='shadow-to-text'>100만P</span>
                                     </div>
@@ -334,60 +223,12 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
                                     style={{ background: 'linear-gradient(to top, #80603f, #956f4a 50%, #a57b52)' }}
                                     onClick={() => setInputValue(0)}
                                 >
-                                    <div
-                                        className="s-div"
-                                    //  className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer"
-                                    >
+                                    <div className="s-div">
                                         <span className='shadow-to-text' style={{ paddingRight: '0' }}>정정</span>
                                     </div>
                                 </button>
                             </div>
                         </div>
-
-
-
-
-                        {/* <div className="f-div">
-                        <button
-                            style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                            className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
-                            onClick={() => setInputValue(inputValue + 300000)}
-                        >
-                            <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
-                                <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">30만원</span>
-                            </div>
-                        </button>
-
-                        <button
-                            style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                            className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
-                            onClick={() => setInputValue(inputValue + 500000)}
-                        >
-                            <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                                <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">50만원</span>
-                            </div>
-                        </button>
-
-                        <button
-                            style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                            className="flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75"
-                            onClick={() => setInputValue(inputValue + 1000000)}
-                        >
-                            <div className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
-                                <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">100만원</span>
-                            </div>
-                        </button>
-
-                        <button
-                            style={{ width: '16.75rem', height: '7.3125rem', padding: '1px' }}
-                            className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
-                            onClick={() => setInputValue(0)}
-                        >
-                            <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                <span style={{ fontSize: '2.625rem' }} className="font-spoqaMedium tracking-tight text-white">정정</span>
-                            </div>
-                        </button>
-                    </div> */}
 
                     </div>
 
@@ -397,7 +238,6 @@ const PointsApply = ({ subActiveButton, setSubActiveButton }) => {
             {/* use PupUp here */}
             <div className='pop-up' style={{ paddingBottom: '15rem' }}>
                 <PopupControls isNotFullScreen buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                    {/* <img src={img18} alt='' style={{ position: 'absolute', top: '0', opacity: '0.52' }} /> */}
                     <div style={{
                         background: '#000000cc', width: '100vw', height: '100vh', transform: 'translate(-50%)', left: '50%',
                         position: 'fixed', margin: 'auto', display: 'flex', justifyContent: 'center', top: '-1rem'

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PopupControls from '../popups/PopupControls';
 import LiveCasinoHistoryDetailPopup from '../LiveCasinoHistoryDetailPopup';
 import UploadIcon from '../../assets/myPage/upload.png';
@@ -26,6 +26,21 @@ const HistoryTable = ({
     isGift,
 }) => {
     function Cells({ cards }) {
+
+        const getIsMobile = () => window.innerWidth <= 305;
+        const [isMobile, setIsMobile] = useState(getIsMobile());
+
+
+        useEffect(() => {
+            const onResize = () => {
+                setIsMobile(getIsMobile());
+            }
+            window.addEventListener("resize", onResize);
+            return () => {
+                window.removeEventListener("resize", onResize);
+            }
+        }, []);
+
         const DetailButton = () => (
             isPopup ? (
                 <div
@@ -220,7 +235,10 @@ const HistoryTable = ({
                                 borderRadius: '1.1rem',
                                 boxShadow: 'rgb(0 0 0 / 60%) 0px 0.375rem 0px 0px'
                             }}>
-                                <div style={{ padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : '2.2rem 2rem 2rem 2.2rem' : card[card.length - 1].winLoseComplete ? '2.2rem 2rem 2rem 2.2rem' : ''}` }}>
+                                <div style={{
+                                    padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : isMobile ? '1.2rem 2rem 2rem 2.2rem' : '2.2rem 2rem 2rem 2.2rem'
+                                            : card[card.length - 1].winLoseComplete ? isMobile ? '1.2rem 2rem 2rem 2.2rem' : '2.2rem 2rem 2rem 2.2rem' : ''}`
+                                }}>
                                     <span
                                         style={{
                                             fontSize: '2.7rem',

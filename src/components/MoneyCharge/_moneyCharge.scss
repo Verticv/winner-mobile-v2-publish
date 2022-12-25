@@ -56,7 +56,9 @@
         .s-div {
             margin-top: 0rem;
             margin-left: 0.125rem;
-
+            @media screen and (min-width: 200px) and (max-width: 305px) {
+                margin-top: 0rem;
+            }
 
             span {
                 font-family: 'SpoqaHanSansNeoMedium';
