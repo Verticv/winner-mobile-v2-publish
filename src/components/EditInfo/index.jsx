@@ -247,7 +247,7 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
 
                 <div className='button-class-div shadow-to-box hover'>
                     <button className='button-class'>
-                        <div style={{ marginTop: isMobile ? '-0.4rem' : '0.2rem' }}>
+                        <div style={{ marginTop: isMobile ? '-2rem' : '0.2rem' }}>
                             <span className='shadow-to-text'>수정하기</span>
                         </div>
                     </button>
