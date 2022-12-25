@@ -90,8 +90,8 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                                     <div style={{ height: '0.1875rem' }} className={`${selectedInput === 0 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                                 </div>
                             </div>
-                            <span style={{letterSpacing: isMobile && "-0.31rem"}} className="text-under-input">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요.</span>
-                            <span style={{letterSpacing: isMobile && "-0.31rem"}} className="text-under-input1">(특수문자 사용불가)</span>
+                            <span style={{ letterSpacing: isMobile && "-0.31rem" }} className="text-under-input">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요.</span>
+                            <span style={{ letterSpacing: isMobile && "-0.31rem" }} className="text-under-input1">(특수문자 사용불가)</span>
                         </div>
 
 
@@ -154,8 +154,8 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                                     <div style={{ height: '0.1875rem' }} className={`${selectedInput === 2 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                                 </div>
                             </div>
-                            <span style={{letterSpacing: isMobile && "-0.31rem"}} className="text-under-input">영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로 입력해주세요.</span>
-                            <span style={{letterSpacing: isMobile && "-0.31rem"}} className="text-under-input1">(특수문자 사용불가)</span>
+                            <span style={{ letterSpacing: isMobile && "-0.31rem" }} className="text-under-input">영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로 입력해주세요.</span>
+                            <span style={{ letterSpacing: isMobile && "-0.31rem" }} className="text-under-input1">(특수문자 사용불가)</span>
                         </div>
 
                         {/* BREAK */}
@@ -246,15 +246,27 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
                 </div>
 
                 <div className='button-class-div shadow-to-box hover'>
-                    <button className='button-class'>
+                    <button style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }} className='button-class'>
                         <div style={{ marginTop: isMobile ? '-0.4rem' : '0' }}>
-                            <p className='shadow-to-text'>수정하기</p>
+                            <p style={{
+                                fontSize: '2.80625rem',
+                                color: '#ffd2d2',
+                                fontFamily: "SpoqaHanSansNeoMedium",
+                                marginRight: '-0.19rem',
+                                letterSpacing: '-0.06rem',
+                                textAlign: 'center',
+                                width: ' 36.4375rem',
+                            }} className='shadow-to-text'>수정하기</p>
                         </div>
                     </button>
                 </div>
-            </div>
+            </div >
 
-        </div>
+        </div >
     )
 }
 

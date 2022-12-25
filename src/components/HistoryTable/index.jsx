@@ -239,7 +239,7 @@ const HistoryTable = ({
                                     padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : isMobile ? '1.2rem 2rem 2rem 2.2rem' : '2.2rem 2rem 2rem 2.2rem'
                                             : card[card.length - 1].winLoseComplete ? isMobile ? '1.2rem 2rem 2rem 2.2rem' : '2.2rem 2rem 2rem 2.2rem' : ''}`
                                 }}>
-                                    <span
+                                    <p
                                         style={{
                                             fontSize: '2.7rem',
                                             lineHeight: '1.25',
@@ -250,7 +250,7 @@ const HistoryTable = ({
                                         }}
                                     >
                                         {card[card.length - 1].buttonText || '진행중'}
-                                    </span>
+                                    </p>
                                 </div>
                             </button>
                         </div>
