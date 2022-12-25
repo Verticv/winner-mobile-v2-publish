@@ -4,7 +4,7 @@ import HomePageTopBanner from '../HomePageTopBanner'
 const EditInfo = ({ activeButton, setActiveButton }) => {
 
     const [selectedInput, setSelectedInput] = useState();
-    const getIsMobile = () => window.innerWidth <= 305;
+    const getIsMobile = () => window.innerWidth <= 322;
     const [isMobile, setIsMobile] = useState(getIsMobile());
 
     useEffect(() => {
@@ -247,8 +247,8 @@ const EditInfo = ({ activeButton, setActiveButton }) => {
 
                 <div className='button-class-div shadow-to-box hover'>
                     <button className='button-class'>
-                        <div style={{ marginTop: isMobile ? '-2rem' : '0.2rem' }}>
-                            <span className='shadow-to-text'>수정하기</span>
+                        <div style={{ marginTop: isMobile ? '-0.4rem' : '0' }}>
+                            <p className='shadow-to-text'>수정하기</p>
                         </div>
                     </button>
                 </div>
