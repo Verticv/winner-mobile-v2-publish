@@ -237,15 +237,16 @@ const HistoryTable = ({
                             }}>
                                 <div style={{
                                     padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : isMobile ? '1.2rem 2rem 2rem 2.2rem' : '2.2rem 2rem 2rem 2.2rem'
-                                            : card[card.length - 1].winLoseComplete ? isMobile ? '1.2rem 2rem 2rem 2.2rem' : '2.2rem 2rem 2rem 2.2rem' : ''}`
+                                        : card[card.length - 1].winLoseComplete ? isMobile ? '1.2rem 2rem 2rem 2.2rem' : '2.2rem 2rem 2rem 2.2rem' : ''}`
                                 }}>
                                     <p
                                         style={{
                                             fontSize: '2.7rem',
                                             lineHeight: '1.25',
-                                            width: '10.875rem',
+                                            width: '6.2rem',
                                             marginTop: '0.2375rem',
                                             fontFamily: 'SpoqaHanSansNeoMedium',
+                                            textAlign: 'center',
                                             color: card[card.length - 1].textColor ? card[card.length - 1].textColor : '#ffdfbd',
                                         }}
                                     >

@@ -4,7 +4,7 @@ import HomePageTopBanner from '../HomePageTopBanner'
 const EditInfo = ({ activeButton, setActiveButton }) => {
 
     const [selectedInput, setSelectedInput] = useState();
-    const getIsMobile = () => window.innerWidth <= 322;
+    const getIsMobile = () => window.innerWidth <= 305;
     const [isMobile, setIsMobile] = useState(getIsMobile());
 
     useEffect(() => {
