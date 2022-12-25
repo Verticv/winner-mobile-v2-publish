@@ -237,7 +237,7 @@ const HistoryTable = ({
                             }}>
                                 <div style={{
                                     padding: `${wrapButtonText ? inlineText ? '2.2rem 1rem 2rem 1rem' : isMobile ? '2rem 2rem 2rem 2.2rem' : '2rem 2rem 2rem 2.2rem'
-                                        : card[card.length - 1].winLoseComplete ? isMobile ? '1.2rem 2rem 2rem 2.2rem' : '2.2rem 2rem 2rem 2.2rem' : ''}`
+                                        : card[card.length - 1].winLoseComplete ? isMobile ? '2rem 2rem 2rem 2.2rem' : '2rem 2rem 2rem 2.2rem' : '2rem 0 0 0'}`
                                 }}>
                                     <p
                                         style={{
