@@ -29,6 +29,9 @@ import bga71 from '../../assets/mainPage/active-bg71-card.png';
 import bg72 from '../../assets/mainPage/inactive-bg72-card.png';
 import bga72 from '../../assets/mainPage/active-bg72-card.png';
 
+import bg73 from '../../assets/mainPage/inactive-bg73-card.png';
+import bga73 from '../../assets/mainPage/active-bg73-card.png';
+
 import bg8 from '../../assets/mainPage/inactive-bg8-card.png';
 import bga8 from '../../assets/mainPage/active-bg8-card.png';
 
@@ -177,6 +180,16 @@ const cardInfo = [
         activeBackground: bga72,
         icon: true,
         text: '이주기',
+        isActive: false,
+        // path: '/live-casino',
+        group: '1'
+    },
+    {
+        id: 73,
+        inactivBackground: bg73,
+        activeBackground: bga73,
+        icon: true,
+        text: '마이크로게이밍',
         isActive: false,
         // path: '/live-casino',
         group: '1'
